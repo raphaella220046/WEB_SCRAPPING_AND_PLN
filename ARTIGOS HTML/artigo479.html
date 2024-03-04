@@ -1,0 +1,2207 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples"/>
+<meta property="og:description" content="A monitoragão eletrônica usando redes de sensores sem fio é uma área do conhecimento humano que..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Piza, Luciana Vieira">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_author" content="Arce, Aldo Ivan Céspedes">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_author" content="Tech, Adriano Rogério Bruno">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_author" content="Costa, Ernane José Xavier">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="35"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="01"></meta>
+    <meta name="citation_lastpage" content="07"></meta>
+    <meta name="citation_doi" content="10.1590/S1806-11172013000100023"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="A monitoragão eletrônica usando redes de sensores sem fio é uma área do conhecimento humano que vêm sendo investigada sob diversos aspectos tanto paxa averiguar seu funcionamento a priori quanto para avaliar suas aplicagões futuras. Este artigo visa, apresentar um projeto simples que permite explorar os conceitos físicos envolvidos na transmissão da informação via tecnologia sem fio."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2013-03"></meta>
+<meta name="citation_keywords" content="eletromagnetismo"></meta><meta name="citation_keywords" content="antenas"></meta><meta name="citation_keywords" content="transdutores"></meta><meta name="citation_keywords" content="instrumentação eletrônica"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2013.v35n1/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2013.v35n1/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172013000100023 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Desenvolvimento em Ensino de Física</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 35 
+                (1)
+            <span class="_separator"> • </span>Mar 2013</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172013000100023" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172013000100023</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172013000100023"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Teaching wireless sensor networks fundamentals using a simple system</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Luciana Vieira Piza </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Pirassununga,  
+          ,  SP,  
+        ,  Universidade de São Paulo,  Departamento de Ciências Básicas ,  Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Aldo Ivan Céspedes Arce </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Pirassununga,  
+          ,  SP,  
+        ,  Universidade de São Paulo,  Departamento de Ciências Básicas ,  Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Adriano Rogério Bruno Tech </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>
+          ,  Pirassununga,  
+          ,  SP,  
+        ,  Universidade de São Paulo,  Departamento de Ciências Básicas ,  Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Ernane José Xavier Costa </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>
+          ,  Pirassununga,  
+          ,  SP,  
+        ,  Universidade de São Paulo,  Departamento de Ciências Básicas ,  Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>A monitoragão eletrônica usando redes de sensores sem fio é uma área do conhecimento humano que vêm sendo investigada sob diversos aspectos tanto paxa averiguar seu funcionamento a priori quanto para avaliar suas aplicagões futuras. Este artigo visa, apresentar um projeto simples que permite explorar os conceitos físicos envolvidos na transmissão da informação via tecnologia sem fio.</p>
+<p>eletromagnetismo; antenas; transdutores; instrumentação eletrônica</p>
+</div>
+<hr>
+<div>
+<p>The electronic monitoring using wireless sensor network is a human knowledge that has boon investigated in order to improve their functional capabilities and incoming applications. This paper aim to present an educational system that able basic physics concept, concerned to the wireless sensor communications, to be more comprehensive.</p>
+<p>electromagnetism; antennas; transducers; eletronic instrumentation</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>DESENVOLVIMENTO EM ENSINO DE FÍSICA </b>
+    </p>
+<p></p>
+<p>
+      <b>Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples </b>
+    </p>
+<p></p>
+<p>
+      <b>Teaching wireless sensor networks fundamentals using a simple system</b>
+    </p>
+<p></p>
+<p>Luciana Vieira Piza; Aldo Ivan Céspedes Arce; Adriano Rogério Bruno Tech; Ernane José Xavier Costa<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        ernane@usp.br. 
+      </span></span></span> </p>
+<p></p>
+<p>Departamento de Ciências Básicas, Universidade de São Paulo, Pirassununga, SP, Brasil </p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>A monitoragão eletrônica usando redes de sensores sem fio é uma área do conhecimento humano que vêm sendo investigada sob diversos aspectos tanto paxa averiguar seu funcionamento a priori quanto para avaliar suas aplicagões futuras. Este artigo visa, apresentar um projeto simples que permite explorar os conceitos físicos envolvidos na transmissão da informação via tecnologia sem fio.</p>
+<p></p>
+<p><b>Palavras-chave:</b> eletromagnetismo, antenas, transdutores, instrumentação eletrônica. </p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>The electronic monitoring using wireless sensor network is a human knowledge that has boon investigated in order to improve their functional capabilities and incoming applications. This paper aim to present an educational system that able basic physics concept, concerned to the wireless sensor communications, to be more comprehensive.</p>
+<p></p>
+<p><b>Keywords:</b> electromagnetism, antennas, transducers, eletronic instrumentation.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>O uso da tecnologia sem fio em sistemas de medidas tornou-se na última década um diferencial na área de física experimental) principalmente no que diz respeito à instrumentação eletrônica [1]. Inerentes a esta tecnologia estão conceitos físicos importantes que dão suporte à tecnologia de transmissão sem fio desde os experimentos pioneiros nesta área [2]. </p>
+<p></p>
+<p>Os conceitos de transmissão da informação à distância residem basicamente dentro da teoria eletromagnética) em especial na forma como as ondas irradiam através de antenas. Na prática a informação é transmitida entre uma antena emissora e uma antena receptora e todo o processo pode ser modelado usando-se as equações de Maxwell) que explicam o comportamento da propagação de ondas eletromagnéticas. Outro conceito importante é o da codificação da informação em ondas eletromagnéticas. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga23fig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a> ilustra um processo de transmissão da informação. Nesta figura a informação a ser transmitida é gerada) codificada e a seguir transmitida usando-se uma antena. O codificador usa técnicas de modulação em frequência (FM) ou amplitude (AM) e gera uma tensão ou corrente variante no tempo) e os elétrons livres da antena são acelerados. A radiação) ou a onda eletromagnética produzida neste processo é consequência da aceleração desses elétrons. Considerando-se a antena uma fonte pontual a onda gerada propaga-se uniformemente em todas as direções. </p>
+<p></p>
+<p>
+      <div class="row fig" id="a23fig01">
+<a name="a23fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFiga23fig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<p></p>
+<p>As equações de Maxwell permitem concluir que a velocidade de propagação da onda segue a relação </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ01">
+<a name="equ01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/ec596ea4d6292a8249829d646f7dacf67b460fea.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>µ<sub>o</sub></i> = permeabilidade do espaço livre (4π x 10<sup>-7</sup>H/m<i>) </i>e ε<sub>o</sub> = permissividade do espaço livre (1/36π x 10<sup>-9</sup> F/m). </p>
+<p></p>
+<p>A antena é um elemento essencial na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga23fig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>, pois é na antena que o fenômeno físico da radiação ocorre. Pode-se dizer que a antena é o dispositivo que assegura a transformação da energia eletromagnética gerada no sistema codificador em energia eletromagnética irradiada ou vice-versa. A antena esta relacionada com o conceito de dipolo e um modelo de antena ideal é o dipolo Hertziano que consiste de um pedaço de condutor retilíneo de pequena dimensão. </p>
+<p></p>
+<p>Apesar de não haver distinção conceitual na teoria eletromagnética, na prática, as antenas dependem da frequência da onda eletromagnética a ser trammitida e do ganho da antena. De uma forma geral, o ganho de uma antena está baseado na medida de quanto uma antena é melhor que a outra, ou seja, aquela que entrega mais potência ao meio ou maior quantidade de energia irradiada. </p>
+<p></p>
+<p>Para se definir o ganho de uma antena, basica mente adota-sa uma antena como antena padrão, permitindo comparações entre antenas que trabalham em frequências diferentes. Utiliza-se uma fonte isotrópica para definir o ganho. Tal fonte apresenta ganho unitário de 0 dB por não apresentar direção preferencial de irradiação. Sendo resim, o ganho pode ser enunciado da forma </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ02">
+<a name="equ02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/87a0f3398f3efe0080995dd680a48364af8a1f98.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Como na prática não existem fontes isotrópica, deve-se utilizar uma antena de referência ou um dipolo de referência. Desta forma, o ganho <i>(G) </i>está relacionado com a direção em que a antena irradia a máxima potência (fator de diretividade <i>D) </i>e por um fator de ajuste <i>k, </i>relacionado com a frequência natural do material do qual é feito a antena. Para uma antena ideal o fator <i>k </i>aproxima-se de 1 em altas frequências. Assim o ganho da antena pode ser escrito como</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ03">
+<a name="equ03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2c7b41f72804ec127c18c51269c2e10953e052dc.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Desta forma o falor <i>k </i>representa todas as limitações que fazem o ganho ser menor que a diretividade <i>D. </i>Na prática o ganho eslá diretamente relacionado com outras grandezas envolvidas no processo como: eficiência. de irradiação, casamento e perdas ôhmicas e é medido em decibéis. </p>
+<p></p>
+<p>Uma forma de caracterizar a antena é relacionar seu ganho e a perda na potência do sinal transmitido em espaço livre, ou seja, quando não existem fenômenos de absorção refração e reflexão. A propagação de ondas, neste espaço livre, ocorre em linha reta, e a atenuação que ocorre é somente geométrica, pois a energia irradiada espalha-se em frente esféricas conforme ilustrado na. <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a> e ao se percorrer uma distância <i>r</i>, a potência do transmissor <i>(W<sub>t</sub>) </i>ficará espalhada sobre a superfície da esfera (4πr<sup>2</sup>). A potência da onda em <i>P (</i>Watt/m<sup>2</sup>) dependerá da distancia radial <i>r</i> conforme a Eq. (4) </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ04">
+<a name="equ04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/85eef6df751743a3e616959ff781896098ce1db8.jpg">
+      </div></div>
+</div>
+    </p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Na prática essa potência não é irradiada da mesma forma em todas as direções, sendo assim, a área atingida não é a área total da esfera já que a antena transmissora concentra sua radiação numa direção preferida, consequentemente a potência nessa zona será maior. </p>
+<p></p>
+<p>O ganho <i>G<sub>t</sub></i>que proporciona a antena transmissora é definido pela relação entre a potência resultante da antena dirigida e a potência de uma antena não direcional, e pode-se ter a relação </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ05">
+<a name="equ05"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/74df82a221b3f9be2f17d9fbdff696b4d3fd83de.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Considerando uma antena receptora com potência <i>W<sub>r</sub></i> e área de captação de <i>A<sub>r</sub></i>, a potência recebida será </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ06">
+<a name="equ06"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/f74b15fa8d9d46cb2532ddc54d590790d4f2e416.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>que é a equação que representa a relação entre as potências das antenas receptoras e transmissoras em se tratando de propagação em espaço livre. </p>
+<p></p>
+<p>O ganho e a área de uma antena podem ser relacionados pela equação </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ07">
+<a name="equ07"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/d059b97eb35ffbe4df42a71115302ada358437e1.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde λ é o comprimento de onda. Assim a Eq. (7) pode ser reescrita como </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ08_09">
+<a name="equ08_09"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/d44bc3104f659c9c28db4a790db3e5ffaa94658f.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>O termo perda em espaço livre ou path loss <i>(PL), </i>refere-se à perda de espalhamento do sinal radiado entre a antena emissora e a antena receptora. Desta forma, a partir da Eq. (9) obtem-se o <i>PL </i>na Eq. (10) </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ10">
+<a name="equ10"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/fa46b7634da8fb24c0ef281b5894f17f5cc59ab8.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Equipamentos simples construídos com emissores e transmissores acoplados a um sistema de medidas podem auxiliar na compreensão básica de alguns princípios da comunicação sem fio. Do ponto de vista da arte da medida, as redes de sensores sem fio são projetadas de tal forma que permitam medir grandezas físicas à distância ou em condições bem específicas do ambiente, como exemplo, a temperatura de um alimento durante sua produção [3] usando ondas eletromagnéticas. </p>
+<p></p>
+<p>Uma rede de sensores wireless (WSN -Wireless Sensor Network) é uma rede de pequenos nós computacionais com sensores de grandezas físicas e dispositivos de transmissões telemétricos devidamente acoplados [4]. </p>
+<p></p>
+<p>Basicamente, uma WSN é composta de um micro controlador, um sistema de transmissão e recepção usando rádio frequência, uma fonte de alimentação e um ou mais sensores [5] e um protocolo de comunicação. Um protocolo de comunicação estabelece um padrão de como as informações serão codificadas e transmitidas pelo sistema. </p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a> ilustra um modelo genérico de um nó WSN. Nesta figura o sinal do sensor é amostrado por um conversor Analógico-Digital (A/D) que por sua vez está conectado na unidade de controle. Na mesma unidade de controle podem-se interligar outros dispositivos como uma memória EEPROM (memória que pode armazenar dados de forma dinâmica apagando e gravando sem a necessidade de parar o funcionamento do circuito) e sensores com saída digital. A interligação entre os dispositivos digitais é realizada por uma linha de conexão ou barramento denominado de barramento 12C ou protocolo 12C. O protocolo 12C foi desenvolvido pela Philips na década de 80 para comunicar dispositivos em um mesmo circuito impresso daí o nome 12C. O protocolo estabelece o uso de dois barramentos o SDA (Serial Data Line) por onde os dados são transmitidos e o SCL (Serial Clock Line) que fornece a sincronização da comunicação.</p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A tecnologia de redes sem fios é capaz de realizar a interligação de pequenas unidades de comunicações de dados em áreas muito limitadas. Seu princípio de funcionamento é comparável às redes wi-fi e bluetooth e diferencia-se por um menor consumo, por um alcance reduzido (cerca de 10 m) e as comunicações entre duas unidades poder ser repetida sucessivamente pelas unidades existentes na rede até atingir o destino final. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga23fig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a> é possível visualizar as arquiteturas possíveis dos nós de uma rede sem fio com tecnologia ZigBee. </p>
+<p></p>
+<p>
+      <div class="row fig" id="a23fig04">
+<a name="a23fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFiga23fig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<p></p>
+<p>Desta forma, alguns pontos da rede podem funcionar como retransmissores de informação. O sistema desenvolvido neste artigo usa o protocolo FBSN, proposto por [6], onde uma rede de sensores permite a coleta remota de dados, permitindo assim, a fixação por parte dos alunos dos conceitos de transmissão da informação sem fio. </p>
+<p></p>
+<p>
+      <b>2. Materiais e métodos </b>
+    </p>
+<p></p>
+<p>
+      <b>2.1. Desenvolvimento do módulo sensor </b>
+    </p>
+<p></p>
+<p>Para que o conceito de transmissor e receptor fique claro ao aluno que esta usando a tecnologia foi projetado um módulo sensor, onde suas funcionalidades ficam bem caracterizada fisicamente. </p>
+<p></p>
+<p>Sendo assim, o módulo sensor foi projetado para que se evidencie o sistema de transmissão da medida realizada e o dispositivo sensor responsável pela medida propriamente dita. </p>
+<p></p>
+<p>Operacionalmente, o sistema consta de duas etapas: uma de controle do sensor de temperatura e outra de armazenamento e transmissão dos dados. Os dados coletados são armazenados e periodicamente transmitidos. O módulo sensor opera com uma bateria tipo "button" CR2032 e as dimensões da placa de circuito impresso são de 25 mm x 45 mm. Incluindo o invólucro, o módulo 2 tem 15 mm de altura, 30 mm de largura e 50mm de comprimento. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a> mostra um diagrama esquemático do módulo 2. </p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O sensor de temperatura TMP100 fabricado pela Texas Instruments, é um integrado com 1,5 mm de largura por 3 mm de comprimento (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig06"><span class="sci-ico-fileFigure"></span>Fig. 6</a>), que opera na faixa de temperatura de -55ºC a 125ºC. A comunicação entre este dispositivo e a eletrônica que o controla é feita através de um protocolo de comunicação denominado 12C. Com uma resolução programável de 9 a 12 bits (0.5 ºc a 0.0625 ºC), encapsulamento reduzido e baixo custo, é amplamente utilizado em instrumentação. O TMP100 pode ser operado através de endereços binários o que facilita a manipulação por parte do aluno que está trabalhando com o dispositivo. </p>
+<div class="row fig" id="fig06">
+<a name="fig06"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O acesso ao dispositivo é feito através de um endereço de 8 bits, sendo que 3 bits deste endereço são configurados fisicamente através dos pinos ADD0 e ADD1 do integrado e o oitavo bit define o tipo de acesso a ser efetuado (R/W "0" para escrita "1" para leitura). A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig07"><span class="sci-ico-fileFigure"></span>Fig. 7</a> mostra a tabela de configuração dos bits e um diagrama esquemático do TMP100. </p>
+<div class="row fig" id="fig07">
+<a name="fig07"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O sensor TMP100 é automaticamente calibrado durante a sua fabricação nas diversas faixas de resolução de temperatura. Se nenhuma configuração for feita, o sensor TMP100 opera com a resolução padrão de 9 bits, mas pode ser programado para trabalhar com até 12 bits de precisão, sendo que, nesta configuração a resolução da temperatura será de 0.0625 ºC. A placa de circuito impresso do módulo montado é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig08"><span class="sci-ico-fileFigure"></span>Fig. 8</a>. </p>
+<div class="row fig" id="fig08">
+<a name="fig08"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>2.2. Desenvolvimento do módulo receptor </b>
+    </p>
+<p></p>
+<p>Este módulo é responsável pelo controle do tráfego de informações entre o módulo sensor e o sistema computacional, responsável por receber e armazenar dos os dados. O sistema consta de um microprocessador interligado com um transceptor. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig09"><span class="sci-ico-fileFigure"></span>Fig. 9</a> ilustra o módulo 1. </p>
+<div class="row fig" id="fig09">
+<a name="fig09"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>No computador, um programa computacional de coleta foi desenvolvido usando a ferramenta Borland <i>C++ </i>Builder que gerencia os dados recebidos do módulo 2, para que o aluno possa avaliar os dados através de gráficos e planilhas. O "front-end" do programa de computador é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig10"><span class="sci-ico-fileFigure"></span>Fig. 10</a> </p>
+<div class="row fig" id="fig10">
+<a name="fig10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>2.3. Medição de potência radiada e teste dos sensores </b>
+    </p>
+<p></p>
+<p>Os sensores foram testados por alunos em uma área experimental do Laboratório de Física Aplicada e Compucional-LAFAC/FZEA/USP. Foram realizados dois experimentos: um de resposta do sensor com dados coletados telemetricamente e um experimento para medir a potência radiada. </p>
+<p></p>
+<p>No experimento de resposta do sensor, os alunos montaram um experimento no qual o sensor de temperatura sem fio foi inserido dentro de um pequeno recipiente de vidro, imerso no gelo. O sistema foi isolado do meio externo usando um recipiente hermético. </p>
+<p></p>
+<p>Foi utilizado um sensor de referência em conjunto com o sensor a ser avaliado para validação dos dados coletados pelo dispositivo desenvolvido. Esperou-se a temperatura no interior do jarro estabilizar e em seguida o sensor foi retirado e submetido à temperatura ambiente. A adaptação do sensor às novas condições de temperatura foi registrada através do software de coleta de dados. Finalmente, construiu-se um gráfico que permite avaliar a curva de resposta destes sensores. </p>
+<p></p>
+<p>No experimento para medir a potência radiada foi utilizado um analisador de espectro. O analisador de espectro foi ajustado inicialmente para uma faixa larga de freqüência (100 Hz a 4.6 GHz), para que uma varredura panorâmica fosse realizada a fim de checar a existência de outras componentes de freqüência que possam existir e influenciar no momento das medições e que poderiam interferir nos valores a serem observados. A seguir o analisador de espectro foi ajustado na freqüência principal do transmissor do sensor (433 MHz). </p>
+<p></p>
+<p>Os locais de medição dentro da área experimental foram demarcados, obtendo-se para cada ponto a sua distância da antena emissora. A antena do analisador foi mantida a uma distância adequada de qualquer estrutura metálica. </p>
+<p></p>
+<p>O sensor foi posicionado, e as medidas foram tomadas nas distâncias de 69 cm (3 vezes o tamanho da antena), 138 cm (6 vezes o tamanho da antena) e 230 cm (10 vezes o tamanho da antena). Em todos os casos as medições foram feitas com a antena do analisador de espectro tanto na perpendicular quanto em paralelo em relação à antena emissora (polarização vertical e horizontal). Foram realizadas várias repetições em dias diferentes. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a> mostra a média dos dados obtidos para cada distância. Para efeito de comparação os alunos implementaram no Matlab um algoritmo para calcular t eoricamente perdas em espaço livre da potência em função da distância, na freqüência de 433Mhz usada pelo transmissor do módulo sensor.</p>
+<div class="row table" id="tab01">
+<a name="tab01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>O termo perda em espaço livre ou path loss <i>(PL), </i>refere-se à perda de espalhamento do sinal radiado entre o transmissor do módulo sensor e a antena receptora do analisador de espectro. O <i>PL </i>representa a atenuação do sinal medida em decibéis e foi calculado usando a Eq. (10). Considerando os ganhos das antenas unitários e reescrevendo a Eq. (10), usando uma notação logarítmica, a função que calcula o <i>PL </i>foi escrita, com </p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ11">
+<a name="equ11"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/8c16602081506e8ee59a3e1462affc662501f069.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <b>3. Resultados e Discussão </b>
+    </p>
+<p></p>
+<p>
+      <b>3.1. Teste do sistema telemétrico realizado pelos alunos </b>
+    </p>
+<p></p>
+<p>As <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga23fig11"><span class="sci-ico-fileFigure"></span>Figs. 11</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig12"><span class="sci-ico-fileFigure"></span>12</a> mostram a tela do programa desenvolvido para adquirir os dados e gerar a curva de resposta dos sensores, respectivamente, obtidos telemetricamente através do mooulo sensor que ficou inserido em uma jarra hermética </p>
+<p></p>
+<p>
+      <div class="row fig" id="a23fig11">
+<a name="a23fig11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFiga23fig11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<div class="row fig" id="fig12">
+<a name="fig12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig12"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Neste experimento simples, conduzido pelos alunos fica claro a eficiência do sistema desenvolvido para oensino de conceitos de medição telemétrica. O software permite uma percepção intuitiva dos dados, os quais são recebidos atravées de uma comunicação sem fio. </p>
+<p></p>
+<p>Nesta mesma linha de raciocínio, o sistema também permite vislumbrar outros conceitos importantes relativo ao objeto em estudo, ou seja, aspectos ligados a transmissão da informação por meio de ondas eletromagnéticas.</p>
+<p></p>
+<p> Assim, a partir do experimento proposto os conceitos da teoria da comunicação digital sem o podem ser explorados e trabalhados pelos professores ou monitores, pois os alunos terão percebido e observado na prática a grande aplicabilidade do sistema telemétrico através da coleta de dados sem fio </p>
+<p></p>
+<p>
+      <b>3.2. Experimentos de medição da potência radiada realizado pelos alunos </b>
+    </p>
+<p></p>
+<p>A Tabela 1 anteriormente citada mostra os dados coletados em relação a potência radiada em função da distância. Nesta tabela o aluno pode verificar e comparar os valores obtidos experimentalmente e compará-los com os valores teóricos, calculados para a freqüência de 433 MHz. </p>
+<p></p>
+<p>Desta forma, pode-se explorar os conceitos de potência de transmissão e relacioná-los com alguns conceitos básicos sobre teoria de antenas. Por exemplo, a discrepância entre os valores teóricos e os valores experimentais obtidos pelos alunos leva à discussão, de que tal discrepância pode ser oriunda de diversos fatores, mas, pode-se inferir que o principal argumento para a divergência absoluta entre o valor medido e o calculado reside no fato de ter-se usado o ganho das antenas como unitário, no caso teórico. </p>
+<p></p>
+<p>Com respeito ao efeito da distância na potência, mesmo considerando as variações relativas, nota-se que nas distâncias testadas existe uma pequena variação, conforme observado nos valores teóricos. Experimentos mais sofisticados podem ser realizados inclusive para avaliar os efeitos da antena na transmissão da informação construindo-se, por exemplo, os gráficos de radiação horizontal e vertical da antena e explorar conceitos relativos ao tipo de transmissão da antena. </p>
+<p></p>
+<p>
+      <b>4. Conclusão </b>
+    </p>
+<p></p>
+<p>O sistema desenvolvido neste artigo não traz nenhuma inovação no que diz respeito à tecnologia sem fio, propriamente dita. No entanto, em relação a forma como foi projetado, permite trabalhar didaticamente os conceitos básicos da medição telemétrica. </p>
+<p></p>
+<p>Recebido em 16/8/2012 </p>
+<p></p>
+<p> Aceito em 27/9/2012 </p>
+<p></p>
+<p> Publicado em 18/3/2013 </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:ernane@usp.br">ernane@usp.br</a>. </div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] H. Eren, <i>Wireless Sensors and Instruments: Networks, Design and Applications. </i>(CRC Press, Boca Raton, 2006), 1st ed.</div></li>
+<li><div>[2] F.L. Leonardo, R.D. Martins e C. Fiolhais, Revista Brasileira de Ensino de Física <b>31</b>,2(2009).</div></li>
+<li>
+<sup class="xref big">3</sup><div>[3] R.G. Yudanto, D. Burdese, M. Mulassamo and L. Reyneri, Research in Microelectronics and Electronics <b>3</b>,237(2008).</div>
+</li>
+<li><div>[4] R. Min, M. Bhardwaj, S. Cho, N. Ickes, E. Shih, A. Sinha, A. Wang and A. Chandrakasan, IEEE Wireless Communications <b>9</b>,28(2002).</div></li>
+<li><div>[5] G. Asada, 1. Bhatti, T.H. Lin, S. Natkunanthanan, F. Newberg, R. Rofougaran, A. Sipos, S. Valoff, G.J. Pottie and W.J. Kaiser, Proc. 01 SPIE <b>3673</b>,11(2000).</div></li>
+<li><div>[6] A.C.S. Silva, A.C. Arce, S. Souto and E.J.X. Costa, Computers and Electronics in Agriculture <b>49</b>,246(2005).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        ernane@usp.br. 
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>08 Maio 2013</li>
+<li>
+<strong>Data do Fascículo</strong><br>Mar 2013</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>16 Ago 2012</li>
+<li>
+<strong>Aceito</strong><br>27 Set 2012</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Luciana Vieira Piza </strong><br><div>
+          ,  Pirassununga,  
+          ,  SP,  
+        ,  Universidade de São Paulo,  Departamento de Ciências Básicas ,  Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Aldo Ivan Céspedes Arce </strong><br><div>
+          ,  Pirassununga,  
+          ,  SP,  
+        ,  Universidade de São Paulo,  Departamento de Ciências Básicas ,  Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Adriano Rogério Bruno Tech </strong><br><div>
+          ,  Pirassununga,  
+          ,  SP,  
+        ,  Universidade de São Paulo,  Departamento de Ciências Básicas ,  Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Ernane José Xavier Costa </strong><br><div>
+          ,  Pirassununga,  
+          ,  SP,  
+        ,  Universidade de São Paulo,  Departamento de Ciências Básicas ,  Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (12)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (1)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (10)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiga23fig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiga23fig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiga23fig11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div></div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ08_09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiga23fig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/d2aac4a3392fc973ef43a649350af5bcc8b41073.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/d2aac4a3392fc973ef43a649350af5bcc8b41073.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/721296434d1bee33e8a34518bb32ccd8c747670d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/721296434d1bee33e8a34518bb32ccd8c747670d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/840f3dc546c0e28c722dfad7d23cf12e8b464db6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/840f3dc546c0e28c722dfad7d23cf12e8b464db6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiga23fig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2fbb5e1d9e81e8c6e797fec058a9def74a4b8fa6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2fbb5e1d9e81e8c6e797fec058a9def74a4b8fa6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/e48922d9eb95ba3cb4db2169a72f2e5a81de850c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/e48922d9eb95ba3cb4db2169a72f2e5a81de850c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2a0191757ac09b0710071c76ead71b3e10f7b6b7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2a0191757ac09b0710071c76ead71b3e10f7b6b7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/1de41d4b1905d0a086fe7373b7f035055aa25928.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/1de41d4b1905d0a086fe7373b7f035055aa25928.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/fbe5a33e214b9f281074fe3db076cc39bb67f113.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/fbe5a33e214b9f281074fe3db076cc39bb67f113.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2c9fb8d6596a505b3f39b9a6141a09beb6041604.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2c9fb8d6596a505b3f39b9a6141a09beb6041604.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2f513e742a2a21d3c9ee1d92bb58e6a7ee2ad180.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2f513e742a2a21d3c9ee1d92bb58e6a7ee2ad180.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiga23fig11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/bae5eae150f7a25847593773e3ec066c351e95df.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/bae5eae150f7a25847593773e3ec066c351e95df.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/91744e8fe9d9a4499236765610350eb0f34c3ce5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/91744e8fe9d9a4499236765610350eb0f34c3ce5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/80f79fe73a9757552faa2668937d6e172c8011b9.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/80f79fe73a9757552faa2668937d6e172c8011b9.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/ec596ea4d6292a8249829d646f7dacf67b460fea.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/ec596ea4d6292a8249829d646f7dacf67b460fea.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/87a0f3398f3efe0080995dd680a48364af8a1f98.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/87a0f3398f3efe0080995dd680a48364af8a1f98.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2c7b41f72804ec127c18c51269c2e10953e052dc.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/2c7b41f72804ec127c18c51269c2e10953e052dc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/85eef6df751743a3e616959ff781896098ce1db8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/85eef6df751743a3e616959ff781896098ce1db8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/74df82a221b3f9be2f17d9fbdff696b4d3fd83de.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/74df82a221b3f9be2f17d9fbdff696b4d3fd83de.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/f74b15fa8d9d46cb2532ddc54d590790d4f2e416.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/f74b15fa8d9d46cb2532ddc54d590790d4f2e416.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/d059b97eb35ffbe4df42a71115302ada358437e1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/d059b97eb35ffbe4df42a71115302ada358437e1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ08_09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/d44bc3104f659c9c28db4a790db3e5ffaa94658f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/d44bc3104f659c9c28db4a790db3e5ffaa94658f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/fa46b7634da8fb24c0ef281b5894f17f5cc59ab8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/fa46b7634da8fb24c0ef281b5894f17f5cc59ab8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/8c16602081506e8ee59a3e1462affc662501f069.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/S8WJmC9GPgbm38qc3HRvSvJ/8c16602081506e8ee59a3e1462affc662501f069.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Piza, Luciana Vieira et al. Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples. Revista Brasileira de Ensino de Física [online]. 2013, v. 35, n. 1 [Acessado CURRENTDATE] , pp. 01-07. Disponível em: &lt;https://doi.org/10.1590/S1806-11172013000100023&gt;. Epub 08 Maio 2013. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172013000100023.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples&#34; &#34;Piza, Luciana Vieira&#34; &#34;Arce, Aldo Ivan Céspedes&#34; &#34;Tech, Adriano Rogério Bruno&#34; &#34;Costa, Ernane José Xavier&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples&#34; &#34;Piza, Luciana Vieira&#34; &#34;Arce, Aldo Ivan Céspedes&#34; &#34;Tech, Adriano Rogério Bruno&#34; &#34;Costa, Ernane José Xavier&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/S8WJmC9GPgbm38qc3HRvSvJ/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172013000100023&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172013000100023" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172013000100023">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172013000100023" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172013000100023">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172013000100023"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172013000100023" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172013000100023">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000100023" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Ensinando os fundamentos de redes de sensores sem fio usando um sistema simples
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000100023">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

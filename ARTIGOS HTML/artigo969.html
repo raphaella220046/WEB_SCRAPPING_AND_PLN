@@ -1,0 +1,1822 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Determinação de curvas de histerese Determinação de curvas de histerese </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Determinação de curvas de histerese"/>
+<meta property="og:description" content="Neste trabalho apresentamos uma discussão detalhada sobre as curvas de histerese obtidas no caso..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Leite, Vanessa Souza">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Santa Catarina">
+        
+        <meta name="citation_author" content="Figueiredo, Wagner">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Santa Catarina">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="29"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="53"></meta>
+    <meta name="citation_lastpage" content="56"></meta>
+    <meta name="citation_doi" content="10.1590/S0102-47442007000100010"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Determinação de curvas de histerese
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Neste trabalho apresentamos uma discussão detalhada sobre as curvas de histerese obtidas no caso do mais simples sistema magnético, o modelo de Ising. As curvas de histerese são construídas através de estados estáveis e metaestáveis do sistema. A estabilidade de cada estado é determinada pela energia livre de Gibbs do sistema para cada valor de temperatura e campo magnético externo. Também discutimos o procedimento necessário para a determinação de curvas de histerese através do método de Monte Carlo, de forma a manter o sistema em seus estados metaestáveis durante as simulações."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2007"></meta>
+<meta name="citation_keywords" content="modelo de Ising"></meta><meta name="citation_keywords" content="histerese"></meta><meta name="citation_keywords" content="propriedades magnéticas"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2007.v29n1/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2007.v29n1/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172007000100010 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 29 
+                (1)
+            <span class="_separator"> • </span>2007</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S0102-47442007000100010" class="_doi" target="_blank">https://doi.org/10.1590/S0102-47442007000100010</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S0102-47442007000100010"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Determinação de curvas de histerese<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Determination of hysteresis curves</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Vanessa Souza Leite </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Florianópolis,  
+          ,  Santa Catarina,  
+        ,  Universidade Federal de Santa Catarina,  Departamento de Física ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Wagner Figueiredo </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Florianópolis,  
+          ,  Santa Catarina,  
+        ,  Universidade Federal de Santa Catarina,  Departamento de Física ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Neste trabalho apresentamos uma discussão detalhada sobre as curvas de histerese obtidas no caso do mais simples sistema magnético, o modelo de Ising. As curvas de histerese são construídas através de estados estáveis e metaestáveis do sistema. A estabilidade de cada estado é determinada pela energia livre de Gibbs do sistema para cada valor de temperatura e campo magnético externo. Também discutimos o procedimento necessário para a determinação de curvas de histerese através do método de Monte Carlo, de forma a manter o sistema em seus estados metaestáveis durante as simulações.</p>
+<p>modelo de Ising; histerese; propriedades magnéticas</p>
+</div>
+<hr>
+<div>
+<p>In this work we present a detailed discussion concerning the hysteresis curves for the simplest magnetic system, the Ising model. The hysteresis curves are generated by passing along a set of stable and metastable states of the system. The stability of each state is determined by the Gibbs free energy of the system for each pair of values of temperature and field. We also discuss how we must proceed in determining hysteresis curves by the Monte Carlo method in order to keep the system in its metastable states during the simulation process.</p>
+<p>Ising model; hysteresis; magnetic properties</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>Determinação de curvas de histerese</p>
+<p></p>
+<p>
+      <b>Determination of hysteresis curves</b>
+    </p>
+<p></p>
+<p>Vanessa Souza Leite; Wagner Figueiredo<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        wagner@fisica.ufsc.br.
+      </span></span></span></p>
+<p></p>
+<p> Departamento de Física, Universidade Federal de Santa Catarina, Florianópolis, SC, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Neste trabalho apresentamos uma discussão detalhada sobre as curvas de histerese obtidas no caso do mais simples sistema magnético, o modelo de Ising. As curvas de histerese são construídas através de estados estáveis e metaestáveis do sistema. A estabilidade de cada estado é determinada pela energia livre de Gibbs do sistema para cada valor de temperatura e campo magnético externo. Também discutimos o procedimento necessário para a determinação de curvas de histerese através do método de Monte Carlo, de forma a manter o sistema em seus estados metaestáveis durante as simulações.</p>
+<p></p>
+<p><b>Palavras-chave:</b> modelo de Ising, histerese, propriedades magnéticas.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p> In this work we present a detailed discussion concerning the hysteresis curves for the simplest magnetic system, the Ising model. The hysteresis curves are generated by passing along a set of stable and metastable states of the system. The stability of each state is determined by the Gibbs free energy of the system for each pair of values of temperature and field. We also discuss how we must proceed in determining hysteresis curves by the Monte Carlo method in order to keep the system in its metastable states during the simulation process.</p>
+<p></p>
+<p><b>Keywords:</b> Ising model, hysteresis, magnetic properties.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p> Do ponto de vista experimental, as curvas de magnetização contra a intensidade do campo magnético informam sobre a dureza dos materiais magnéticos, que está relacionada com sua anisotropia cristalina. Quando um campo magnético é aplicado sobre um sistema magnético, como um pedaço de ferro, suas paredes de domínio se movimentam, aumentando a região de momentos magnéticos na mesma direção do campo e causando uma diminuição de sua energia interna. Para pequenos valores do campo este processo é reversível. Entretanto, quando o campo não é fraco, o processo torna-se irreversível, prevenindo o sistema de retornar à sua configuração inicial quando o campo é removido. Este é o bem conhecido fenômeno de histerese [1].</p>
+<p></p>
+<p> Qualquer material magnético que esteja num estado ordenado perde sua magnetização quando a temperatura torna-se maior que <i>T<sub>c</sub></i>, a chamada temperatura crítica do sistema. Por exemplo, para o ferro tem-se <i>T<sub>c</sub></i> = 1043 K. Esta temperatura representa uma propriedade muito importante tanto do ponto de vista tecnológico quanto teórico, uma vez que acima da temperatura crítica o fenômeno de histerese não pode mais ser observado [2].</p>
+<p></p>
+<p> O modelo de Ising [3], que é muito estudado na mecânica estatística, representa os materiais magnéticos que exibem uma alta anisotropia cristalina. O modelo de Ising é descrito pelo seguinte hamiltoniano</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/0ce91a12c57aaba2010df00c2676a9307809e2d4.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> onde as variáveis s<i><sub>i</sub></i> representam os momentos magnéticos do sistema e, por simplicidade, assumem os valores ±1. O primeiro termo dessa equação representa o acoplamento magnético entre os spins vizinhos mais próximos localizados nas posições <i>i</i> e <i>j</i> de uma estrutura cristalina. <i>J</i> é a magnitude da interação entre os spins e é conhecido como constante de troca. O segundo termo dessa equação acopla os momentos magnéticos ao campo magnético externo, <i>H</i>, e é conhecido como contribuição de Zeeman para a energia do sistema. <i>N</i> é o número de momentos magnéticos do sistema e <i>q</i> é o número de coordenação da rede, sendo que <i>q</i> = 6 no caso de uma estrutura cúbica simples. </p>
+<p></p>
+<p> Em uma dimensão o modelo de Ising é exatamente solúvel, não apresentando nenhuma transição de fase a temperatura finita. Entretanto, em duas dimensões, Onsager encontrou uma solução exata para o modelo de Ising na ausência de campo, com uma temperatura crítica finita [4]. </p>
+<p></p>
+<p> Neste estudo, ilustramos o fenômeno da histerese através das curvas de magnetização determinadas para o modelo de Ising em função da temperatura e do campo magnético. Com a intenção de simplificar a discussão, consideramos apenas a solução mais simples para o problema, que é baseada na aproximação de campo médio [5]. Por exemplo, nessa aproximação, a magnetização de equilíbrio do sistema é dada pela seguinte equação:</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/71c9509bd00aa8d1d88513ac44d4e3207c6d0853.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> e a energia livre de Gibbs por</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm03">
+<a name="frm03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/9f3ec411e4b9e55601a2cda48085a6c3ad83ad1b.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> onde b = 1/<i>k</i><sub>B</sub>T, <i>k<sub>B</sub></i> é a constante de Boltzmann e <i>T</i> é a temperatura absoluta.</p>
+<p></p>
+<p> A equação para a magnetização de equilíbrio do sistema pode também ser obtida através da equação mestra, considerando-se por exemplo, que o sistema evolui no tempo segundo o processo estocástico de Glauber [6]. A evolução temporal da magnetização média do sistema é dada por</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm04">
+<a name="frm04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/6e8b11a995baf27783218cac713791471fbd2040.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> onde t é o tempo de relaxação para a inversão de um único spin do sistema na presença do campo magnético externo. Essa última equação também é obtida na aproximação de um sítio, campo médio, considerando-se a taxa de evolução de Glauber para o sistema. </p>
+<p></p>
+<p> No estado estacionário temos que</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm05">
+<a name="frm05"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/db69a25859ba163e3a761029a56139ae7dde3da2.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> e uma das soluções dessa equação coincide com aquela da Eq. 2. Esta solução, que minimiza <i>G</i>(<i>T,H;m</i>), representa o estado de equilíbrio do sistema.</p>
+<p></p>
+<p> A Eq. 4 pode ser usada para se obter as curvas de histerese do sistema. Neste caso, começamos com uma configuração dos spins que corresponde ao estado desmagnetizado (<i>H</i> = 0) e mudamos a magnitude do campo magnético externo enquanto o tempo passa. Para cada valor do campo, encontramos o estado estacionário do sistema, onde a Eq. 5 é satisfeita.</p>
+<p></p>
+<p> Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a> apresentamos as curvas de magnetização quando variamos o campo numa taxa D<i>H</i> = 0,01 J por unidade de tempo. O tempo é medido em unidades de t. Assim, por exemplo, se tomarmos t = 1, toda vez que aumentarmos o tempo <i>t</i> de uma unidade, devemos incrementar o campo de D<i>H</i> = 0,01 J. Neste caso, essa é a velocidade de varredura escolhida para o campo magnético. As curvas são obtidas para <i>T</i> = 0,05 J/k<sub>B</sub>, <i>T</i> = 0,50 J/k<sub>B</sub>, <i>T</i> = 1,00 J/k<sub>B</sub>, <i>T</i> = 2,00 J/k<sub>B</sub>, <i>T</i> = 4,00 J/k<sub>B</sub> e <i>T</i> = 6,00 J/k<sub>B</sub>, onde <i>T<sub>c</sub></i> = 6,00 J/k<sub>B</sub> é a temperatura crítica do sistema na aproximação de campo médio. Como podemos verificar, há um ciclo de histerese nas curvas de magnetização para todas as temperaturas abaixo da temperatura crítica do sistema. A existência do ciclo indica que o sistema também passa por estados metaestáveis, ou seja, estados que não correspondem ao verdadeiro equilíbrio termodinâmico do sistema. Se a velocidade de varredura do campo magnético externo for bastante pequena, muito menor que aquela escolhida na construção da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>, o sistema sempre entrará num estado de equilíbrio. Por outro lado, se a taxa de variação é alta, o sistema pode permanecer num estado metaestável, que é determinado justamente pelos estados anteriores, ou seja, ele depende da história do sistema.</p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para encontrar os estados de equilíbrio e metaestáveis do sistema para um dado conjunto de valores de temperatura e campo, devemos considerar as raízes da equação</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm06">
+<a name="frm06"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/7b1154179e312f9e23f7061b69b6dc0d468f38a8.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Apresentamos na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a> os zeros dessa equação para os mesmos valores selecionados dos parâmetros usados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>. Por exemplo, na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2(c)</a>, fazemos o gráfico das raízes desta equação para <i>T</i> = 1,0 J/k<sub>B</sub>. Como pode-se verificar, para magnitudes do campo entre -4,0 &lt; <i>H</i> &lt; 4,0 J encontramos três soluções distintas para a Eq. 6. Por outro lado, fora deste intervalo, apenas uma solução é obtida. Comparando-se as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Figs. 1(c)</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>2(c)</a>, percebe-se que apesar de obtermos três soluções estacionárias para a magnetização do sistema nos intervalos -4,0 &lt; <i>H</i> &lt; -2,5 J e 2,5 &lt; <i>H</i> &lt; 4,0 J na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2(c)</a>, a curva de histerese da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1(c)</a> escolhe apenas um valor de m nesses intervalos para a taxa de varredura do campo considerada. O mesmo ocorre para todas as outras temperaturas abaixo da temperatura crítica. Para temperaturas acima da crítica, apenas uma única solução da Eq. 6 é obtida para cada valor do campo magnético externo.</p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para determinar qual é a magnetização do sistema para um dado par de valores de <i>H</i> e <i>T</i>, devemos observar os valores de sua energia livre. A magnetização que corresponde ao mínimo global da energia livre do sistema é a sua magnetização de equilíbrio.</p>
+<p></p>
+<p> Nas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Figs. 3</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>4</a> apresentamos, como ilustração, os valores da energia livre do sistema em função de sua magnetização para vários valores de <i>H</i>, quando <i>T</i> = 1,0 J/k<sub>B</sub> e <i>T</i> = 5,0 J/k<sub>B</sub>, respectivamente. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a> assumimos a mesma temperatura considerada nas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Figs. 1(c)</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>2(c)</a>. Observando essa figura podemos entender porque o sistema nunca escolhe a solução existente entre os valores <i>m</i> = -1,0 e <i>m</i> = 1,0: para esse ramo de valores de <i>m</i>, a energia livre de Gibbs sempre apresenta um máximo. Para a baixa temperatura considerada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>, o mínimo global <i>G</i> ocorre para os estados <i>m</i> » -1,0 ou <i>m</i> » 1,0. Quando o campo é muito negativo, o único mínimo, o mínimo global da função <i>G</i>, ocorre para <i>m</i> » -1,0. Aumentando-se o campo até <i>H</i> = 0, o sistema permanece no ramo de estados estáveis <i>m</i> » -1,0, porém <i>m</i> » 1 representa um estado metaestável. Exatamente em <i>H</i> = 0,0, os mínimos locais, <i>m</i> » -1,0 e <i>m</i> » 1,0 tornam-se igualmente estáveis. Quando 0 <i>H</i> 2,5 J, o sistema permanece ainda no estado instável <i>m</i> » -1, apesar da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a> mostrar que a solução de equilíbrio estável é <i>m</i> » 1. Finalmente, para <i>H</i> 2,5 J, o campo é suficientemente forte para o sistema ultrapassar a barreira de energia entre os estados metaestáveis e estáveis do sistema, e a configuração de equilíbrio é alcançada. Por outro lado, quando reduzimos o campo a partir de seus valores positivos, o sistema permanece no estado metaestável apenas para -2,5 &lt; <i>H </i>&lt; 0 J.</p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig04">
+<a name="fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Comparando-se as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Figs. 3</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>4</a>, notamos que ao aumentarmos a temperatura do sistema, diminuímos a barreira de energia entre os estados de mínima energia livre. Desta forma, a probabilidade do sistema ultrapassar a barreira torna-se maior em temperaturas mais altas, e o ciclo de histerese do sistema torna-se mais fechado. A largura do ciclo de histerese depende da temperatura do sistema e da velocidade de variação do campo magnético externo, como pode ser verificado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a>, onde três velocidades de varredura diferentes para o campo foram consideradas.</p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Um comentário final deve ser feito sobre a determinação de curvas de histerese através das simulações de Monte Carlo. Usualmente, no método de Monte Carlo, esperamos que o sistema evolua no tempo até que alcance seu estado de equilíbrio para então computarmos os valores das quantidades físicas de interesse. Assim, médias são realizadas considerando a evolução do sistema nas vizinhanças do estado de equilíbrio [7]. Obviamente, este procedimento não pode ser aplicado na obtenção das curvas de histerese. Para a obtenção dos estados metaestáveis do sistema durante a varredura do campo, devemos proibir que o sistema ultrapasse a barreira de energia em um tempo finito, entrando em um estado de equilíbrio. Desta forma, necessitamos escolher convenientemente a janela de tempo (intervalo de passos de Monte Carlo) durante a qual o sistema permanece em um estado de equilíbrio metaestável. Por exemplo, se consideramos um sistema que entre no estado de equilíbrio após um tempo típico de, digamos, 1.200 passos de Monte Carlo, podemos construir sua curva de histerese considerando os valores da magnetização do sistema entre os passos 300 e 800. Neste intervalo, os estados do sistema flutuam nos arredores de sua configuração metaestável. O mesmo tipo de procedimento é também empregado quando as simulações de Monte Carlo são aplicadas para investigar as transições de fase de sistemas fora do equilíbrio que apresentam estados absorventes, como por exemplo, o processo de contato e os modelos para catálise heterogênea. Nestes casos, monitoramos o sistema durante um dado intervalo de tempo, durante o qual ele permanece em um estado estacionário metaestável [8].</p>
+<p></p>
+<p>
+      <b>Agradecimentos</b>
+    </p>
+<p></p>
+<p> Os autores agradecem o apoio financeiro das agências de fomento CNPq e FAPESC.</p>
+<p></p>
+<p>Recebido em 20/6/2006; Aceito em 5/9/2006 </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:wagner@fisica.ufsc.br">wagner@fisica.ufsc.br</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] N.W. Ashcroft and N.D. Mermin, <i>Solid State    Physics</i> (Saunders College, Nova Iorque, 1976). </div></li>
+<li><div>[2] C. Kittel, <i>Introduction to Solid State    Physics</i> (John Wiley and Sons, Nova Iorque, 1976), 5 ed. </div></li>
+<li><div>[3] S.G. Brush, Rev. Mod. Phys. <b>39</b>, 883    (1967). </div></li>
+<li><div>[4] C. Domb, <i>The Critical Point</i> (Taylor    and Francis, Nova Iorque, 1996). </div></li>
+<li><div>[5] S.R. Salinas, <i>Introduçăo ŕ    Física Estatística</i> (Edusp, Săo Paulo, 1999). </div></li>
+<li><div>[6] T. Tomé e M. J. de Oliveira, <i>Dinâmica    Estocástica e Irreversibilidade</i> (Edusp, Săo Paulo, 2001). </div></li>
+<li><div>[7] D.P. Landau and K. Binder, <i>A Guide to    Monte Carlo Simulations in Statistical Physics</i> (Cambridge University Press,    Cambridge, 2000). </div></li>
+<li><div>[8] J. Marro and R. Dickman, <i>Nonequilibrium    Phase Transitions in Lattice Models</i> (Cambridge University Press, Cambridge,    1999).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        wagner@fisica.ufsc.br.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>15 Jun 2007</li>
+<li>
+<strong>Data do Fascículo</strong><br>2007</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Aceito</strong><br>05 Set 2006</li>
+<li>
+<strong>Recebido</strong><br>20 Jun 2006</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Vanessa Souza Leite </strong><br><div>
+          ,  Florianópolis,  
+          ,  Santa Catarina,  
+        ,  Universidade Federal de Santa Catarina,  Departamento de Física ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Wagner Figueiredo </strong><br><div>
+          ,  Florianópolis,  
+          ,  Santa Catarina,  
+        ,  Universidade Federal de Santa Catarina,  Departamento de Física ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (5)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (6)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/eb9b5bca762ad53da0da6061658c079bfffd2275.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/eb9b5bca762ad53da0da6061658c079bfffd2275.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/c5aba33a458754a580fb51e2939452220f5c8451.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/c5aba33a458754a580fb51e2939452220f5c8451.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/b3b87f6ddb7b610e3ef157b2a4880ea984e13fe6.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/b3b87f6ddb7b610e3ef157b2a4880ea984e13fe6.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/b311b64217a3f6776f21484e5e4cf6b438a4a65a.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/b311b64217a3f6776f21484e5e4cf6b438a4a65a.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/fa9986310a56023131ddc75de343d437fa4d0ce8.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/fa9986310a56023131ddc75de343d437fa4d0ce8.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/0ce91a12c57aaba2010df00c2676a9307809e2d4.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/0ce91a12c57aaba2010df00c2676a9307809e2d4.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/71c9509bd00aa8d1d88513ac44d4e3207c6d0853.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/71c9509bd00aa8d1d88513ac44d4e3207c6d0853.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/9f3ec411e4b9e55601a2cda48085a6c3ad83ad1b.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/9f3ec411e4b9e55601a2cda48085a6c3ad83ad1b.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/6e8b11a995baf27783218cac713791471fbd2040.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/6e8b11a995baf27783218cac713791471fbd2040.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/db69a25859ba163e3a761029a56139ae7dde3da2.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/db69a25859ba163e3a761029a56139ae7dde3da2.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/7b1154179e312f9e23f7061b69b6dc0d468f38a8.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qzbfq3djSxwWqNHT8Tgt8NG/7b1154179e312f9e23f7061b69b6dc0d468f38a8.gif"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Leite, Vanessa Souza e Figueiredo, WagnerDeterminação de curvas de histerese. Revista Brasileira de Ensino de Física [online]. 2007, v. 29, n. 1 [Acessado CURRENTDATE] , pp. 53-56. Disponível em: &lt;https://doi.org/10.1590/S0102-47442007000100010&gt;. Epub 15 Jun 2007. ISSN 1806-9126. https://doi.org/10.1590/S0102-47442007000100010.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Determinação de curvas de histerese&#34; &#34;Leite, Vanessa Souza&#34; &#34;Figueiredo, Wagner&#34; &#34;2007&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Determinação de curvas de histerese&#34; &#34;Leite, Vanessa Souza&#34; &#34;Figueiredo, Wagner&#34; &#34;2007&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/qzbfq3djSxwWqNHT8Tgt8NG/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172007000100010&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S0102-47442007000100010" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S0102-47442007000100010">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S0102-47442007000100010" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S0102-47442007000100010">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S0102-47442007000100010"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S0102-47442007000100010" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S0102-47442007000100010">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S0102-47442007000100010" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Determinação de curvas de histerese
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S0102-47442007000100010">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

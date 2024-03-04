@@ -1,0 +1,2901 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Uso do Módulo &lt;i&gt;Python Uncertainties&lt;/i&gt; no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental Uso do Módulo &lt;i&gt;Python Uncertainties&lt;/i&gt; no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Uso do Módulo &lt;i&gt;Python Uncertainties&lt;/i&gt; no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental"/>
+<meta property="og:description" content="Nesse artigo, utilizou-se o Módulo Python Uncertainties no desenvolvimento dos códigos para..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="do Couto, Flávio M.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Espírito Santo">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0002-3870-6733">
+        <meta name="citation_author" content="da Silva, Julio F.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Espírito Santo">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="43"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2020-0415"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Uso do Módulo &lt;i&gt;Python Uncertainties&lt;/i&gt; no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Nesse artigo, utilizou-se o Módulo Python Uncertainties no desenvolvimento dos códigos para efetuar os cálculos de incertezas experimentais, tanto para a diferença de potencial, quanto para as correntes elétricas. Para esse fim, foi desenvolvido um protótipo experimental que demonstra o efeito fotovoltaico a partir da utilização de materiais de baixo custo e, por conseguinte, com o objetivo de observar e quantificar as referidas grandezas físicas envolvidas. Além disso, foi realizada uma análise qualitativa e quantitativa do efeito fotovoltaico, assim como da Primeira Lei de Ohm. Nessa perspectiva, o protótipo foi associado a um multímetro, que permitiu a aferição direta da diferença de potencial, cujo o valor principal foi de (0,4582 ± 0,0004) V, quando incidido um feixe laser em um fotodiodo presente em um transistor 2N3055, mas também os valores das correntes elétricas, sendo os valores principais de (81,7100 ± 0,1118) μA e (1,9990 ± 0,0320) μA, quando se utilizou dos resistores ôhmicos de 1,0 kΩ e 220,0 kΩ, respectivamente. Por fim, é importante salientar que essa proposta de artigo objetiva a anexação da computação física no cotidiano escolar, assim como promover o despertar científico na confecção de instrumentações específicas para o ensino-aprendizagem de física."></meta>
+<meta name="citation_article_type" content="book-review"></meta>
+<meta name="citation_publication_date" content="2021-03-01"></meta>
+<meta name="citation_keywords" content="Python"></meta><meta name="citation_keywords" content="Ensino de Física"></meta><meta name="citation_keywords" content="Instrumentação para o Ensino de Física"></meta><meta name="citation_keywords" content="Primeira Lei de Ohm"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2021.v43/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2021.v43/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172021000100710 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 43 <span class="_separator"> • </span>2021</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2020-0415" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2020-0415</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0415"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 deed.en"></span>Uso do Módulo <i>Python Uncertainties</i> no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Use of the <i>Python Uncertainties</i> Module in the calculation of experimental uncertainties of the potential difference and electric current of an experimental prototype</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Flávio M. do Couto </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong><div class="corresp">* Endereço de correspondência: <a href="mailto:fmcfisico@gmail.com">fmcfisico@gmail.com</a> </div>Universidade Federal do Espírito Santo, Centro de Ciências Exatas, Naturais e da Saúde, Departamento de Química e Física, Campus de Alegre, Alegre, ES, Brasil.<a href="http://orcid.org/0000-0002-3870-6733" class="btnContribLinks orcid">http://orcid.org/0000-0002-3870-6733</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Julio F. da Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade Federal do Espírito Santo, Centro de Ciências Exatas, Naturais e da Saúde, Departamento de Química e Física, Campus de Alegre, Alegre, ES, Brasil.</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Nesse artigo, utilizou-se o Módulo <i>Python Uncertainties</i> no desenvolvimento dos códigos para efetuar os cálculos de incertezas experimentais, tanto para a diferença de potencial, quanto para as correntes elétricas. Para esse fim, foi desenvolvido um protótipo experimental que demonstra o efeito fotovoltaico a partir da utilização de materiais de baixo custo e, por conseguinte, com o objetivo de observar e quantificar as referidas grandezas físicas envolvidas. Além disso, foi realizada uma análise qualitativa e quantitativa do efeito fotovoltaico, assim como da Primeira Lei de Ohm. Nessa perspectiva, o protótipo foi associado a um multímetro, que permitiu a aferição direta da diferença de potencial, cujo o valor principal foi de (0,4582 ± 0,0004) V, quando incidido um feixe <i>laser</i> em um fotodiodo presente em um transistor 2N3055, mas também os valores das correntes elétricas, sendo os valores principais de (81,7100 ± 0,1118) μA e (1,9990 ± 0,0320) μA, quando se utilizou dos resistores ôhmicos de 1,0 kΩ e 220,0 kΩ, respectivamente. Por fim, é importante salientar que essa proposta de artigo objetiva a anexação da computação física no cotidiano escolar, assim como promover o despertar científico na confecção de instrumentações específicas para o ensino-aprendizagem de física.</p>
+<p><strong>Palavras-chave</strong><br>Python; Ensino de Física; Instrumentação para o Ensino de Física; Primeira Lei de Ohm</p>
+</div>
+<hr>
+<div>
+<p>In this article, the Python Uncertainties Module was used in the development of the codes to perform the calculations of experimental uncertainties, both for the potential difference and for the electric currents. For this purpose, an experimental prototype was developed that demonstrates the photovoltaic effect from the use of low-cost materials and, therefore, with the objective of observing and quantifying the referred physical quantities involved. In addition, a qualitative and quantitative analysis of the photovoltaic effect was carried out, as well as of Ohm’s First Law. In this perspective, the prototype was associated with a multimeter, that allowed direct measurement of the potential difference, whose main value was (0,4558 ± 0,0004) V, when a laser beam was focused on a photodiode present in a 2N3055 transistor, but also the values of the electric currents, the main values being (81,7100 ± 0,1118) μA and (1,9990 ± 0,0320) μA, when the ohmic resistors of 1,0 kΩ and 220,0 kΩ were used, respectively. Finally, it is important to note that this article proposal aims at the annexation of physical computing in school routine, as well as promoting scientific awakening in the manufacture of specific instruments for teaching and learning physics.</p>
+<p><strong>Keywords</strong><br>Python; Physics Teaching; Instrumentation for Physics Teaching; Ohm’s First Law</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>A linguagem de programação em Python foi criada em 1990 por <i>Guido Van Rossum</i>. Destaca-se por ser <i>open source</i> (código aberto), além de apresentar elevado nível de desempenho e possuir uma gama de módulos pré-estabelecidos que permitem ao usuário desenvolver e alterar códigos para diversas finalidades [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>1. A. Downey, J. Elkner e C. Meyers, How to Think Like a Computer Scientist (Green Tea Press Needham, Massachusetts, 2002).</span></span></span>]. O módulo <i>Python Uncertainties</i> pode ser utilizado na elaboração de expressões para cálculos simples e complexos de incertezas experimentais, via o método matemático de derivadas [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>2. E.O. Lebigot, Uncertainties Python Package: Documentation Release 3.0.1, disponível em: https://pythonhosted.org/uncertainties, acessado em 19/08/2020.</span><br><a href="https://pythonhosted.org/uncertainties" target="_blank">https://pythonhosted.org/uncertainties...
+            </a></span></span>]. Nesse artigo utilizou-se do módulo <i>Python Uncertainties</i> para o desenvolvimento de 4 (quatro) códigos específicos, a fim de utilizá-los no cálculo das incertezas experimentais da tensão e corrente elétrica, por meio de aplicação direta da Primeira Lei de Ohm, com uma precisão de saída configurada no código para um resultado de quatro (4) casas decimais definidas via método de arredondamento, em conformidade com os resultados apresentados nesse artigo. Nessa vertente, os valores obtidos, com a utilização de alguma instrumentação específica, seja ela analógica ou digital, são próximos de um resultado denominado valor principal e o intervalo de variação dos referidos valores é inversamente proporcional ao grau de confiabilidade atribuída àqueles mensurados devido as incertezas experimentais associadas a cada uma das medições [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>3. J.H. Vuolo, Fundamentos da teoria de erros (Edgard Blucher, São Paulo, 1996), 2a ed.</span></span></span>, <span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>4. P. Lima Jr. e F.L. da Silveira, Rev. Bras. Ens. Fis. 33, 2 (2011).</span></span></span>].</p>
+      <p>Partindo desse pressuposto, a equação geral da propagação de incertezas, permite reduzir a uma única faixa de valores todas as incertezas associadas ao processo de medição, o qual está atrelado as variáveis estimadas. A equação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS1_E1"><span class="sci-ico-fileFormula"></span>1</a>) sintetiza o formalismo mais geral no cálculo de propagação de incertezas, todavia se as variáveis primárias atreladas à grandeza física forem independentes, estiverem em consonância estatística e apresentarem os desvios individuais e padrão com a mesma ordem de grandeza para a mesma variável [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>4. P. Lima Jr. e F.L. da Silveira, Rev. Bras. Ens. Fis. 33, 2 (2011).</span></span></span>]. Além disso, é fundamental destacar que o método utilizado para o cálculo das incertezas experimentais via módulo <i>Python Uncertainties</i> está em ressonância com a referida equação 1 [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>3. J.H. Vuolo, Fundamentos da teoria de erros (Edgard Blucher, São Paulo, 1996), 2a ed.</span></span></span>, <span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>4. P. Lima Jr. e F.L. da Silveira, Rev. Bras. Ens. Fis. 33, 2 (2011).</span></span></span>]:</p>
+      <div class="row formula" id="eS1_E1">
+<a name="S1_E1"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(1)</span>
+        <math display="block">
+          <mrow>
+            <msubsup>
+              <mi>σ</mi>
+              <mi>ω</mi>
+              <mn>2</mn>
+            </msubsup>
+            <mo>=</mo>
+            <mrow>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mfrac>
+                      <mrow>
+                        <mo>∂</mo>
+                        <mo>⁡</mo>
+                        <mi>ω</mi>
+                      </mrow>
+                      <mrow>
+                        <mo>∂</mo>
+                        <mo>⁡</mo>
+                        <mi>x</mi>
+                      </mrow>
+                    </mfrac>
+                    <mo>)</mo>
+                  </mrow>
+                  <mn>2</mn>
+                </msup>
+                <mo>⁢</mo>
+                <msubsup>
+                  <mi>σ</mi>
+                  <mi>x</mi>
+                  <mn>2</mn>
+                </msubsup>
+              </mrow>
+              <mo>+</mo>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mfrac>
+                      <mrow>
+                        <mo>∂</mo>
+                        <mo>⁡</mo>
+                        <mi>ω</mi>
+                      </mrow>
+                      <mrow>
+                        <mo>∂</mo>
+                        <mo>⁡</mo>
+                        <mi>y</mi>
+                      </mrow>
+                    </mfrac>
+                    <mo>)</mo>
+                  </mrow>
+                  <mn>2</mn>
+                </msup>
+                <mo>⁢</mo>
+                <msubsup>
+                  <mi>σ</mi>
+                  <mi>y</mi>
+                  <mn>2</mn>
+                </msubsup>
+              </mrow>
+              <mo>+</mo>
+              <mi mathvariant="normal">⋯</mi>
+            </mrow>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>Nessa tocante, foi realizada a montagem de um protótipo experimental, cujos componentes eletrônicos estão listados na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS2_T1"><span class="sci-ico-fileTable"></span>1</a>, a fim de aplicar o m dulo <i>Python Uncertainties</i>, respectivamente, no cálculo das incertezas da Tensão, em conformidade com os dados descritos na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS2_T2"><span class="sci-ico-fileTable"></span>2</a>; dois (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS1_E2"><span class="sci-ico-fileFormula"></span>2</a>) deles no cálculo das correntes elétricas, cujos dados foram apresentados nas Tabelas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS3_T3"><span class="sci-ico-fileTable"></span>3</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS3_T4"><span class="sci-ico-fileTable"></span>4</a>; por fim, um código específico para análise e empregabilidade da Primeira Lei de Ohm no referido procedimento experimental. Os códigos e as descrições pormenorizadas dos mesmos, foram disponibilizados na íntegra via plataforma virtual <i>GitHub</i><span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+        O GitHub é um repositório de código aberto público desenvolvido para fins de compartilhamento, alocação de códigos, gerenciamento de projetos, dados e criação de softwares, por meio dos mais de 50 (cinquenta) milhões de desenvolvedores [5].
+      </span></span></span> [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>5. https://github.com/, acessado em 17/01/2021.</span><br><a href="https://github.com/" target="_blank">https://github.com/...
+            </a></span></span>].</p>
+      <div class="row table" id="S2_T1">
+<a name="S2_T1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS2_T1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Componentes eletrônicos e a instrumentação utilizada na montagem do protótipo experimental. Valores estimados no mês de setembro do ano de 2020.
+        <br>
+</div>
+</div>
+      <div class="row table" id="S2_T2">
+<a name="S2_T2"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS2_T2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 2</strong><br>
+          Valores da ddp para o Efeito Fotovoltaico.
+        <br>
+</div>
+</div>
+      <div class="row table" id="S3_T3">
+<a name="S3_T3"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS3_T3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 3</strong><br>
+          Valores da corrente elétrica para o resistor ôhmico de 1,0 kΩ.
+        <br>
+</div>
+</div>
+      <div class="row table" id="S3_T4">
+<a name="S3_T4"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS3_T4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 4</strong><br>
+          Valores da corrente elétrica para o resistor ôhmico de 220,0 kΩ.
+        <br>
+</div>
+</div>
+      <p>Os objetivos elencados nesse artigo estão em ressonância com o desenvolvimento de uma instrumentação específica para a análise qualitativa e quantitativa do efeito fotovoltaico em um transistor; o desenvolvimento de códigos para o cálculo das incertezas das grandezas físicas supracitadas; aferição da corrente elétrica via Lei de Ohm. Por essas razões, vislumbrou-se a oportunidade e a necessidade de se desenvolver um protótipo experimental que pudesse ser acessível monetariamente, replicável e que oportunizasse abordar os principais conceitos relacionados à Primeira Lei de Ohm e ao estudo do efeito fotovoltaico dentro de um fotodiodo de silício (transistor) [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. M. Azevedo e A. Cunha, Fazer uma célula fotovoltaica, disponível em: https://www.academia.edu/25810777/Physics_on_Stage_Fazer_uma_c%C3%A9lula_fotovoltaica.</span><br><a href="https://www.academia.edu/25810777/Physics_on_Stage_Fazer_uma_c%C3%A9lula_fotovoltaica" target="_blank">https://www.academia.edu/25810777/Physic...
+            </a></span></span>, <span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>7. M. Alonso e E.J. Finn, Física (Escolar Editora, Forte da Casa, 2012).</span></span></span>]. Portanto, a proposição desse tipo de instrumentação no ensino de física, consideradas de baixo custo, tem merecido destaque em publicações científicas [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>8. A.J. Bühler, Estudo de técnicas de determinação experimental e pós processamento de curvas características de módulos fotovoltaicos. Tese de Doutorado, Universidade Federal do Rio Grande do Sul, Porto Alegre (2011).</span></span></span>, <span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. A.M.F. Diniz e R.D. Araújo, Revista Brasileira de Ensino de Física 41, e20180216 (2019).</span></span></span>]. Nesse sentido, o protótipo desenvolvido tem a funcionalidade didática e específica para análises qualitativas e quantitativas acerca do efeito fotovoltaico, em que se destaca pelo ineditismo aplicado ao ensino de física, assim como o desenvolvimento dos códigos para os cálculos das incertezas experimentais correlacionadas à ddp e corrente elétrica.</p>
+      <p>Uma vez realizada a montagem, calibragem e testes com o protótipo experimental, posteriormente, um conjunto de medidas foram realizadas para obtenção dos valores da diferença de potencial de forma direta com o auxílio de um multímetro, e com o mesmo, estimou-se a queda de corrente que passa por um resistor, a fim de obter valores da tensão elétrica de forma indireta via Primeira Lei de Ohm conforme a equação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS1_E2"><span class="sci-ico-fileFormula"></span>2</a>), onde <i>V</i> – diferença de potencial ou ddp (V); <i>R</i> – resistência ôhmica (Ω) e <i>i</i> – corrente elétrica (A). [<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>7. M. Alonso e E.J. Finn, Física (Escolar Editora, Forte da Casa, 2012).</span></span></span>]:</p>
+      <div class="row formula" id="eS1_E2">
+<a name="S1_E2"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(2)</span>
+        <math display="block">
+          <mrow>
+            <mi>V</mi>
+            <mo>=</mo>
+            <mrow>
+              <mi>R</mi>
+              <mo>⁢</mo>
+              <mi>i</mi>
+            </mrow>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>Por conseguinte, foi realizado um estudo pormenorizado sobre a empregabilidade e desenvolvimento do módulo <i>Python Uncertainties</i> para o cálculo das incertezas experimentais para a Tensão (ddp) e as correntes elétricas, cujos códigos foram disponibilizados nos apêndices 1 a 4 e no <i>GitHub</i><sup>1</sup>, nessa ordem, descritos previamente no resumo e, discutidos de maneira profícua na seção <strong>3</strong> desse artigo [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>2. E.O. Lebigot, Uncertainties Python Package: Documentation Release 3.0.1, disponível em: https://pythonhosted.org/uncertainties, acessado em 19/08/2020.</span><br><a href="https://pythonhosted.org/uncertainties" target="_blank">https://pythonhosted.org/uncertainties...
+            </a></span></span>]. Portanto, com essa proposta espera-se elucidar atividades mais laborativas, a fim de estimular a criatividade, a participação efetiva do aluno na construção do seu conhecimento, nas tomadas de decisões, fundamentando-se em abordagens mais estruturadas, dinâmicas, alinhadas a promoção e o desenvolvimento de uma instrumentação adequada no estudo do efeito fotovoltaico, além de incentivar o uso da programação física no processo de ensino-aprendizagem [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>1. A. Downey, J. Elkner e C. Meyers, How to Think Like a Computer Scientist (Green Tea Press Needham, Massachusetts, 2002).</span></span></span>, <span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>10. T. Igoe e D. O’sullivan, Physical Computing – Sensing and Controlling the Physical World with Computers (Thomson Course Technology, Boston, 2004).</span></span></span>, <span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>11. N.J. Giordano e H. Nakanishi, Computational Physics (Pearson, London, 2005), 2a ed.</span></span></span>]. Todavia, há uma gama de artigos que utilizam da fundamentação teórica do efeito fotovoltaico à aferição de grandezas físicas distintas, contudo aplicados na indústria, a citar: desenvolvimento de um veículo aéreo, não tripulado movido por energia solar para vigilância civil [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>12. N.J.P. Betancourth, J.E.P. Villamarin, J.J.V. Rios, P.D. Bravo-Mosquera e H.D. Cerón-Muñoz, J. Aerosp. Technol. Manag. 8, 385 (2016).</span></span></span>]; na determinação da eficiência energética em sistemas de iluminação [<span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>13. C.L. Boquimpani, A.L.T.S. Motta, O.L.C. Souza e C.H.V.R. Oliveira, Ambient. constr. 19, 303 (2019).</span></span></span>]; na criação de algoritmos para a análise de sistemas fotovoltaicos [<span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>14. G. Lopes Filho, R.A.P. Franco e F.H.T. Vieira, TEMA (São Carlos) 21, 157 (2020).</span></span></span>].</p>
+      <p>Sendo assim, a utilização desse protótipo pode ser feita de modo didático em disciplinas distintas, porém correlacionadas, a citar uma de computação no ensino de física e outra que aborde os conteúdos acerca do efeito fotovoltaico. É fundamental destacar três relevantes aspectos, quanto à montagem e aplicação didática do referido protótipo. Primeiro, são componentes eletrônicos de fácil acesso e com baixo valor monetário comparados às instrumentações utilizadas nos laboratórios de instituições de ensino superior. Segundo, a programação utilizada nesse artigo é <i>open source</i>, ou seja, código aberto e gratuita, em que há várias plataformas digitais, sites, comunidades que a dominam e compartilham informações. Terceiro, exclusivamente para esse modelo apresentado (protótipo experimental), o código já foi desenvolvido e poderá ser replicado, uma vez que sua disponibilização será gratuita e livre. Portanto, reitera-se que a combinação e uso dessa proposta de instrumentação e linguagem de programação supracitadas poderão ser desenvolvidas em disciplinas de física e/ou engenharias, com enfoque no processo de ensino-aprendizagem de maneira didática.</p>
+    
+      <h1 class="articleSectionTitle">2. Protótipo Experimental e Metodologia de Aquisição de Dados</h1>
+      <p>A montagem do protótipo foi desenvolvida utilizando-se uma base suporte de polipropileno; uma chave <i>on/off</i> para o <i>laser</i>; um transistor 2N3055; ponteiras para fechar o circuito e efetuar a medição da tensão e corrente; fios na confecção do circuito elétrico; um resistor de 1,0 kΩ e outro de 220,0 kΩ disposto na parte inferior da base suporte; um <i>laser</i> de comprimento de onda estimado em 650nm, de acordo com as especificações do fabricante e um multímetro para aferição da diferença de potencial (tensão e/ou ddp) e corrente elétrica. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F1"><span class="sci-ico-fileFigure"></span>1</a> ilustra o referido protótipo utilizado para fins de estudo do efeito fotovoltaico.</p>
+      <div class="row fig" id="S2_F1">
+<a name="S2_F1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/05c20d7f64f637740a097710e035642aab183fbe.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Protótipo para estudo do efeito fotovoltaico e a Primeira Lei de Ohm.
+        <br>
+</div>
+</div>
+      <p>Os resistores dispostos na parte inferior do suporte base, fazem parte de um circuito elétrico utilizado na obtenção da ddp, mas também da corrente elétrica. Isso é possível, por meio das ponteiras do multímetro, uma vez mescladas entre os terminais adequados, torna o circuito aberto ou fechado, a fim de mensurar as grandezas físicas de interesse. O circuito base proposto para a coleta de dados está ilustrado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a>.</p>
+      <div class="row fig" id="S2_F2">
+<a name="S2_F2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/3a812c9a81cff95341480146df904b75244b052b.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Circuito Elétrico utilizado na aferição da ddp e corrente elétrica.
+        <br>
+</div>
+</div>
+      <p>A instrumentação utilizada na confecção do referido protótipo, configura a ideia central de utilizar materiais de valor aquisitivo bem menor que os <i>kits</i> experimentais desenvolvidos por empresas especializadas, seja no Brasil e/ou exterior. Tendo em vista esse aspecto, foram organizados na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS2_T1"><span class="sci-ico-fileTable"></span>1</a>, os principais componentes eletrônicos e a instrumentação utilizada na montagem do protótipo experimental, consonantes aos seus valores médios no mercado.</p>
+      <p>Objetivou-se fazer a tomada de dados e comparar os resultados obtidos para os dois multímetros, uma vez comprovada a eficiência do multímetro de menor valor, este foi utilizado para fins da obtenção dos valores para a ddp e corrente elétrica descritos na seção resultados e discussões. Dessa forma, assegura-se um protótipo com valor menor ao usuário final, mantendo-se a qualidade e eficiência na aquisição dos dados. Em relação ao transistor, seu valor irrisório permite o estudo do efeito fotovoltaico, recorrendo ao foto diodo de silício localizado em seu interior, cuja exposição à incidência de luz, onde utilizou-se de um <i>laser</i>, cujo comprimento de onda e potência são, respectivamente, iguais 650 nm e 5 mW. Além disso, foram utilizados 2 (dois) resistores de 1,0 kΩ e 220,0 kΩ, terminais de ponteiras (extremidades utilizadas na aferição dos dados), neste artigo utilizou-se 4 (quatro) terminais. Os valores estimados nesse artigo são referentes ao mês de setembro de 2020, todavia, estarão sujeitas as oscilações de preço do mercado.</p>
+      <p>O sistema foi alinhado, de maneira que, o feixe <i>laser</i> incidisse perpendicularmente sobre a fotocélula do transistor e, por conseguinte, foram mensuradas, de forma direta, a diferença de potencial nas extremidades 3 e 4 do circuito elétrico ilustrado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a>, com o auxílio do multímetro na escala de 2000 m na função <i>DCV</i>. Sucessivamente, alternou-se a escala do multímetro para 200 μ <i>DCA</i> e, consequentemente, foram obtidos os valores para a corrente elétrica nas extremidades 1 e 4, onde foi possível fechar o circuito com um resistor de 1,0 kΩ. A mesma escala foi utilizada nas extremidades 2 e 4 fechando o circuito com um resistor de 220,0 kΩ.</p>
+    
+      <h1 class="articleSectionTitle">3. Resultados e Discussões</h1>
+      <p>Os procedimentos para aquisição dos dados pertinentes a ddp, consistiu na utilização das extremidades 3 e 4 do circuito elétrico, quando o feixe <i>laser</i> incidia sobre a fotocélula. Nesse sentido os valores para a ddp apareciam diretamente no visor do multímetro. Com isso, foram realizadas 100 medições, subdivididas em 20 (vinte) etapas, cada uma delas com 5 (cinco) repetições para o cálculo da ddp, devido ao efeito fotovoltaico. O valor médio com sua incerteza experimental ficou estimado em torno de <b>(0,4582 ± 0,0004) V</b>. O valor principal, assim como a sua incerteza experimental, foi calculado via módulo <i>Python Uncertainties</i>, cujo código completo pode ser apreciado gratuitamente na plataforma <i>GitHUb</i> [<span class="ref"><sup class="xref xrefblue">15</sup><span class="refCtt closed"><span>15. https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticadaTensao.ipynb, acessado em 18/01/2021.</span><br><a href="https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1%E2%80%93Lei-de-Ohm/blob/master/EstatisticadaTensao.ipynb" target="_blank">https://github.com/julio-fs/Calculos-est...
+            </a></span></span>]. Não obstante, os códigos foram desenvolvidos para obter uma precisão de quatro (4) casas decimais nos cálculos das incertezas e disponibilizados nos Apêndices de 1 a 4. Os resultados estão disponíveis na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS2_T2"><span class="sci-ico-fileTable"></span>2</a> e o código referente aos cálculos das incertezas está descrito, na íntegra, no Apêndice 1.</p>
+      <p>Os resultados dispostos na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS3_T3"><span class="sci-ico-fileTable"></span>3</a> são referentes a corrente elétrica, quando se utilizou o resistor ôhmico de 1,0 kΩ. Para isso, foram realizadas 100 (cem) medições, subdividas em 20 (vinte) etapas, cada uma delas prevalecendo o total de 5 (cinco) repetições. Com isso, foi possível mensurar o valor principal e sua incerteza experimental de <b>(81,710 ± 0,112) μA</b>, ou seja, com uma variação de ±0,14%. Analogamente ao cálculo da ddp (Tabela 2), o código utilizado para obtenção dos valores presentes na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS3_T3"><span class="sci-ico-fileTable"></span>3</a>, pode ser apreciado, na plataforma <i>GitHUb</i> [<span class="ref"><sup class="xref xrefblue">16</sup><span class="refCtt closed"><span>16. https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticaCorrente1.ipynb, acessado em 18/01/2021.</span><br><a href="https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1%E2%80%93Lei-de-Ohm/blob/master/EstatisticaCorrente1.ipynb" target="_blank">https://github.com/julio-fs/Calculos-est...
+            </a></span></span>]. O código referente aos cálculos das incertezas da Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS3_T3"><span class="sci-ico-fileTable"></span>3</a> está descrito, na íntegra, no Apêndice 2.</p>
+      <p>Os resultados descritos na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS3_T4"><span class="sci-ico-fileTable"></span>4</a>, são condizentes a utilização do resistor ôhmico de 220,0 kΩ e os procedimentos adotados, assim como a obtenção de todos os dados seguiram, de maneira fidedigna ao descrito na aquisição dos dados da Tabela 3. Contudo, obteve-se o valor principal e sua incerteza experimental de <b>(1,9990 ± 0,0320) μA</b> com uma variação de ±1,6%. O código utilizado para obtenção dos valores presentes na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS3_T3"><span class="sci-ico-fileTable"></span>3</a>, está na plataforma <i>GitHUb</i> [<span class="ref"><sup class="xref xrefblue">17</sup><span class="refCtt closed"><span>17. https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticaCorrente2.ipynb, acessado em 18/01/2021.</span><br><a href="https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1%E2%80%93Lei-de-Ohm/blob/master/EstatisticaCorrente2.ipynb" target="_blank">https://github.com/julio-fs/Calculos-est...
+            </a></span></span>]. O código referente aos cálculos das incertezas da Tabela 4 está descrito, na íntegra, no Apêndice 3.</p>
+      <p>Em seguida, foram substituídos os valores da ohmicidade de 1,0 kΩ e da corrente elétrica na Equação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS1_E2"><span class="sci-ico-fileFormula"></span>2</a>). Essas substituições permitiram obter o valor principal para a diferença de potencial e sua incerteza experimental (0,0830 ± 0,0042) V [<span class="ref"><sup class="xref xrefblue">18</sup><span class="refCtt closed"><span>18. https://github.com/julio-fs/Calculos-Estatasticos-para-Corrente-Tensao-e-Primeira-Lei-de-Ohm/blob/master/CalculosPrimeiraLeideOhm.ipynb, acessado em 18/01/2021.</span><br><a href="https://github.com/julio-fs/Calculos-Estatasticos-para-Corrente-Tensao-e-Primeira-Lei-de-Ohm/blob/master/CalculosPrimeiraLeideOhm.ipynb" target="_blank">https://github.com/julio-fs/Calculos-Est...
+            </a></span></span>]. Comparando este valor com aquele demonstrado na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS2_T2"><span class="sci-ico-fileTable"></span>2</a>, observou-se uma discrepância considerável. Sendo assim, justifica-se esse fato, por consequência do baixo valor da corrente elétrica que percorre o circuito elétrico descrito na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a>. Contudo, a utilização do referido resistor se torna insignificante. Isso permitiu estabelecer os valores na função do multímetro em DCA e escala de 200 μA ao inserir as ponteiras de prova nos terminais 3 e 4 do circuito, a fim de obter os mesmos valores de corrente, previamente, mensurados via os terminais 1 e 4, ratificando dessa forma, a inutilização do resistor. De maneira semelhante, foi substituído os valores da resistência de 220,0 kΩ e da corrente elétrica na Equação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS1_E2"><span class="sci-ico-fileFormula"></span>2</a>). Isso permitiu obter de forma indireta o valor principal da diferença de potencial, associado à sua incerteza experimental de <b>(0,4438 ± 0,0233) V</b> [<span class="ref"><sup class="xref xrefblue">18</sup><span class="refCtt closed"><span>18. https://github.com/julio-fs/Calculos-Estatasticos-para-Corrente-Tensao-e-Primeira-Lei-de-Ohm/blob/master/CalculosPrimeiraLeideOhm.ipynb, acessado em 18/01/2021.</span><br><a href="https://github.com/julio-fs/Calculos-Estatasticos-para-Corrente-Tensao-e-Primeira-Lei-de-Ohm/blob/master/CalculosPrimeiraLeideOhm.ipynb" target="_blank">https://github.com/julio-fs/Calculos-Est...
+            </a></span></span>].</p>
+      <p>A incerteza experimental detém uma gama de valores dispersos em torno de um valor de referência, ou seja, denominado valor principal. Observa-se essa variação com cercasu de <b>±</b>5,3% em relação ao valor principal. Não obstante, existem fatores intrínsecos no processo de aquisição de dados em o todo procedimento experimental, dos quais o resultado final depende diretamente da precisão, calibração e a incerteza das instrumentações utilizadas, assim como o alinhamento do sistema e o fator humano na execução das medições [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>3. J.H. Vuolo, Fundamentos da teoria de erros (Edgard Blucher, São Paulo, 1996), 2a ed.</span></span></span>]. O modelo adotado nesse artigo foi para o cálculo das incertezas experimentais, tendo em vista que os valores da tensão obtidos e informados na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS2_T2"><span class="sci-ico-fileTable"></span>2</a>, são utilizados como referência, pois são variáveis considerando as fontes de erros supracitadas, mesmo vinculados a um percentual diminuto. Sendo assim, a prerrogativa de não ter um referencial imutável e/ou fixo, faz com que se utilize da teoria de incertezas experimentais, em contrapartida à teoria de erros.</p>
+      <p>Notoriamente, esse valor <b>(0,4438 ± 0,0233) V</b> é condizente àquele calculado na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS2_T2"><span class="sci-ico-fileTable"></span>2</a>, o qual corrobora a faixa de valores associados a sua incerteza experimental. O código referente aos cálculos das incertezas está descrito, na íntegra, no Apêndice 4.</p>
+    
+      <h1 class="articleSectionTitle">4. Conclusões</h1>
+      <p>Em geral, as análises via código de programação por meio do módulo <i>Python Uncertainties</i>, podem proporcionar uma visão mais holística do uso da computação no ensino de física, por meio da linguagem em <i>Python</i>, dentre tantas outras <i>open source</i>, como um recurso gratuito e relevante no enriquecimento do processo de ensino-aprendizagem [<span class="ref"><sup class="xref xrefblue">19</sup><span class="refCtt closed"><span>19. L.E. Borges, Python para Desenvolvedores (Novatec Editora, Rio de Janeiro, 2010), 2a ed.</span></span></span>].</p>
+      <p>A instrumentação desenvolvida nesse artigo prevê a possibilidade de ser usada em modo didático com a utilização de poucos recursos financeiros e construir um protótipo eficaz no estudo da Primeira Lei de Ohm e na observação do efeito fotovoltaico de maneira qualitativa, mas também quantitativa. Nessa tocante, a obtenção de dados referentes a diferença de potencial e a corrente elétrica. Essas análises em consonância com os dados apresentados corroboram, os códigos desenvolvidos sinalizam uma notória eficiência e, posterior, aplicação e replicabilidade em instituições de ensino básica e/ou superior.</p>
+    </div>
+<div class="articleSection" data-anchor="Agradecimentos">
+<h1 class="articleSectionTitle">Agradecimentos</h1>
+      
+      <p>À Universidade Federal do Espírito Santo.</p>
+      <p>À Fundação de Amparo à Pesquisa e Inovação do Espírito Santo – FAPES.</p>
+    </div>
+<div class="articleSection" data-anchor="Material Suplementar">
+<h1 class="articleSectionTitle">Material Suplementar</h1>
+        
+        <p>O seguinte material suplementar está disponível online:</p>
+        <p>
+          <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/1c1966d1deb93458f939cb0135662763eaad0096.pdf">
+            Apêndice 1
+          </a>
+        </p>
+      </div>
+<div>
+<h1></h1>
+        <p>
+          <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/efda3af199ef37730ff04a2d97f20516de79c8f8.pdf">
+             Apêndice 2 
+          </a>
+        </p>
+      </div>
+<div>
+<h1></h1>
+        <p>
+          <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/e0dce1a69a10e145124619a8f218008544eb1708.pdf">
+             Apêndice 3 
+          </a>
+        </p>
+      </div>
+<div>
+<h1></h1>
+        <p>
+          <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/b4fa2cb7d340f64d22a9e1e5a5815b3bbc4c0ce8.pdf">
+            Apêndice 4
+          </a>
+        </p>
+      </div>
+<div class="articleSection" data-anchor="References">
+<h1 class="articleSectionTitle">References</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">1.</sup><div> A. Downey, J. Elkner e C. Meyers, <i>How to Think Like a Computer Scientist</i> (Green Tea Press Needham, Massachusetts, 2002).</div>
+</li>
+<li>
+<sup class="xref big">2.</sup><div> E.O. Lebigot, <i>Uncertainties Python Package: Documentation Release 3.0.1</i>, disponível em: https://pythonhosted.org/uncertainties, acessado em 19/08/2020.<br><a href="https://pythonhosted.org/uncertainties" target="_blank">» https://pythonhosted.org/uncertainties</a>
+</div>
+</li>
+<li>
+<sup class="xref big">3.</sup><div> J.H. Vuolo, <i>Fundamentos da teoria de erros</i> (Edgard Blucher, São Paulo, 1996), 2<sup>a</sup> ed.</div>
+</li>
+<li>
+<sup class="xref big">4.</sup><div> P. Lima Jr. e F.L. da Silveira, Rev. Bras. Ens. Fis. <b>33</b>, 2 (2011).</div>
+</li>
+<li>
+<sup class="xref big">5.</sup><div> https://github.com/, acessado em 17/01/2021.<br><a href="https://github.com/" target="_blank">» https://github.com/</a>
+</div>
+</li>
+<li>
+<sup class="xref big">6.</sup><div> M. Azevedo e A. Cunha, <i>Fazer uma célula fotovoltaica</i>, disponível em: https://www.academia.edu/25810777/Physics_on_Stage_Fazer_uma_c%C3%A9lula_fotovoltaica<br><a href="https://www.academia.edu/25810777/Physics_on_Stage_Fazer_uma_c%C3%A9lula_fotovoltaica" target="_blank">» https://www.academia.edu/25810777/Physics_on_Stage_Fazer_uma_c%C3%A9lula_fotovoltaica</a>
+</div>
+</li>
+<li>
+<sup class="xref big">7.</sup><div> M. Alonso e E.J. Finn, <i>Física</i> (Escolar Editora, Forte da Casa, 2012).</div>
+</li>
+<li>
+<sup class="xref big">8.</sup><div> A.J. Bühler, <i>Estudo de técnicas de determinação experimental e pós processamento de curvas características de módulos fotovoltaicos.</i> Tese de Doutorado, Universidade Federal do Rio Grande do Sul, Porto Alegre (2011).</div>
+</li>
+<li>
+<sup class="xref big">9.</sup><div> A.M.F. Diniz e R.D. Araújo, Revista Brasileira de Ensino de Física <b>41</b>, e20180216 (2019).</div>
+</li>
+<li>
+<sup class="xref big">10.</sup><div> T. Igoe e D. O’sullivan, <i>Physical Computing – Sensing and Controlling the Physical World with Computers</i> (Thomson Course Technology, Boston, 2004).</div>
+</li>
+<li>
+<sup class="xref big">11.</sup><div> N.J. Giordano e H. Nakanishi, <i>Computational Physics</i> (Pearson, London, 2005), 2<sup>a</sup> ed.</div>
+</li>
+<li>
+<sup class="xref big">12.</sup><div> N.J.P. Betancourth, J.E.P. Villamarin, J.J.V. Rios, P.D. Bravo-Mosquera e H.D. Cerón-Muñoz, J. Aerosp. Technol. Manag. <b>8</b>, 385 (2016).</div>
+</li>
+<li>
+<sup class="xref big">13.</sup><div> C.L. Boquimpani, A.L.T.S. Motta, O.L.C. Souza e C.H.V.R. Oliveira, Ambient. constr. <b>19</b>, 303 (2019).</div>
+</li>
+<li>
+<sup class="xref big">14.</sup><div> G. Lopes Filho, R.A.P. Franco e F.H.T. Vieira, TEMA (São Carlos) <b>21</b>, 157 (2020).</div>
+</li>
+<li>
+<sup class="xref big">15.</sup><div> https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticadaTensao.ipynb, acessado em 18/01/2021.<br><a href="https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1%E2%80%93Lei-de-Ohm/blob/master/EstatisticadaTensao.ipynb" target="_blank">» https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticadaTensao.ipynb</a>
+</div>
+</li>
+<li>
+<sup class="xref big">16.</sup><div> https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticaCorrente1.ipynb, acessado em 18/01/2021.<br><a href="https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1%E2%80%93Lei-de-Ohm/blob/master/EstatisticaCorrente1.ipynb" target="_blank">» https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticaCorrente1.ipynb</a>
+</div>
+</li>
+<li>
+<sup class="xref big">17.</sup><div> https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticaCorrente2.ipynb, acessado em 18/01/2021.<br><a href="https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1%E2%80%93Lei-de-Ohm/blob/master/EstatisticaCorrente2.ipynb" target="_blank">» https://github.com/julio-fs/Calculos-estatasticos-para-corrente-tensao-e-1–Lei-de-Ohm/blob/master/EstatisticaCorrente2.ipynb</a>
+</div>
+</li>
+<li>
+<sup class="xref big">18.</sup><div> https://github.com/julio-fs/Calculos-Estatasticos-para-Corrente-Tensao-e-Primeira-Lei-de-Ohm/blob/master/CalculosPrimeiraLeideOhm.ipynb, acessado em 18/01/2021.<br><a href="https://github.com/julio-fs/Calculos-Estatasticos-para-Corrente-Tensao-e-Primeira-Lei-de-Ohm/blob/master/CalculosPrimeiraLeideOhm.ipynb" target="_blank">» https://github.com/julio-fs/Calculos-Estatasticos-para-Corrente-Tensao-e-Primeira-Lei-de-Ohm/blob/master/CalculosPrimeiraLeideOhm.ipynb</a>
+</div>
+</li>
+<li>
+<sup class="xref big">19.</sup><div> L.E. Borges, <i>Python para Desenvolvedores</i> (Novatec Editora, Rio de Janeiro, 2010), 2<sup>a</sup> ed.</div>
+</li>
+</ul></div>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList footnote">
+      <li>
+        <span class="xref big">1</span>
+        <div>O GitHub é um repositório de código aberto público desenvolvido para fins de compartilhamento, alocação de códigos, gerenciamento de projetos, dados e criação de <i>softwares</i>, por meio dos mais de 50 (cinquenta) milhões de desenvolvedores [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>5. https://github.com/, acessado em 17/01/2021.</span><br><a href="https://github.com/" target="_blank">https://github.com/...
+            </a></span></span>].</div>
+      </li>
+    </ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>01 Mar 2021</li>
+<li>
+<strong>Data do Fascículo</strong><br>2021</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>29 Set 2020</li>
+<li>
+<strong>Revisado</strong><br>18 Jan 2021</li>
+<li>
+<strong>Aceito</strong><br>01 Fev 2021</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png" alt="Creative Common - by 4.0 deed.en"></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Flávio M. do Couto </strong><strong>
+            *
+          </strong><br><div>Universidade Federal do Espírito Santo, Centro de Ciências Exatas, Naturais e da Saúde, Departamento de Química e Física, Campus de Alegre, Alegre, ES, Brasil.</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0002-3870-6733" class="btnContribLinks orcid">http://orcid.org/0000-0002-3870-6733</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Julio F. da Silva </strong><br><div>Universidade Federal do Espírito Santo, Centro de Ciências Exatas, Naturais e da Saúde, Departamento de Química e Física, Campus de Alegre, Alegre, ES, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">* Endereço de correspondência: <a href="mailto:fmcfisico@gmail.com">fmcfisico@gmail.com</a> </div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (2)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (2)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/05c20d7f64f637740a097710e035642aab183fbe.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Protótipo para estudo do efeito fotovoltaico e a Primeira Lei de Ohm.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/3a812c9a81cff95341480146df904b75244b052b.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Circuito Elétrico utilizado na aferição da ddp e corrente elétrica.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS2_T1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Componentes eletrônicos e a instrumentação utilizada na montagem do protótipo experimental. Valores estimados no mês de setembro do ano de 2020.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS2_T2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 2</strong><br>
+          Valores da ddp para o Efeito Fotovoltaico.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS3_T3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 3</strong><br>
+          Valores da corrente elétrica para o resistor ôhmico de 1,0 kΩ.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS3_T4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 4</strong><br>
+          Valores da corrente elétrica para o resistor ôhmico de 220,0 kΩ.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS1_E1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS1_E2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/af5454794a40da23d0ba859857ad0f150a9eba8c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Protótipo para estudo do efeito fotovoltaico e a Primeira Lei de Ohm.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/af5454794a40da23d0ba859857ad0f150a9eba8c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/887adc2c9d3c135b01d69e27f59455d058695580.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Circuito Elétrico utilizado na aferição da ddp e corrente elétrica.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zPhrQhWFVzGfcmVwmbkv8bs/887adc2c9d3c135b01d69e27f59455d058695580.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS2_T1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Componentes eletrônicos e a instrumentação utilizada na montagem do protótipo experimental. Valores estimados no mês de setembro do ano de 2020.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="left" valign="top">
+                <b>Componentes Eletrônicos e/ou Instrumentação</b>
+              </th>
+              <th align="center" valign="top">
+                <b>Valor Médio</b>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">Multímetro <i>ICEL MD-5770</i>
+</td>
+              <td align="center" valign="top">R$ 90,00</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">Multímetro <i>Instruterm MD-300</i>
+</td>
+              <td align="center" valign="top">R$ 30,00</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">Transistor modelo 2N3055 <i>Malaysia</i> da marca ST</td>
+              <td align="center" valign="top">R$ 5,00</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <i>Laser</i>
+              </td>
+              <td align="center" valign="top">R$ 5,00</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">Resistores (1,0 a 220,0) kΩ</td>
+              <td align="center" valign="top">R$ 1,00</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">Terminais de Ponteiras (extremidades utilizadas na aferição dos dados)</td>
+              <td align="center" valign="top">R$ 1,00</td>
+            </tr>
+            <tr>
+              <td align="justify" valign="top"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS2_T2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 2</strong>    
+          Valores da ddp para o Efeito Fotovoltaico.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="left" valign="top">
+                <b>Medida</b>
+              </th>
+              <th align="center" valign="top">
+                <b>T1(V)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>T2(V)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>T3(V)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>T4(V)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>T5(V)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>Médias das ddp’s (V)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>Incerteza (V)</b>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">
+                <b>1</b>
+              </td>
+              <td align="center" valign="top">0,4630</td>
+              <td align="center" valign="top">0,4620</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4620</td>
+              <td align="center" valign="top">0,4608</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>2</b>
+              </td>
+              <td align="center" valign="top">0,4600</td>
+              <td align="center" valign="top">0,4630</td>
+              <td align="center" valign="top">0,4640</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4600</td>
+              <td align="center" valign="top">0,4610</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>3</b>
+              </td>
+              <td align="center" valign="top">0,4620</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4594</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>4</b>
+              </td>
+              <td align="center" valign="top">0,4630</td>
+              <td align="center" valign="top">0,4610</td>
+              <td align="center" valign="top">0,4610</td>
+              <td align="center" valign="top">0,4610</td>
+              <td align="center" valign="top">0,4610</td>
+              <td align="center" valign="top">0,4614</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>5</b>
+              </td>
+              <td align="center" valign="top">0,4620</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4600</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4600</td>
+              <td align="center" valign="top">0,4596</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>6</b>
+              </td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4540</td>
+              <td align="center" valign="top">0,4540</td>
+              <td align="center" valign="top">0,4540</td>
+              <td align="center" valign="top">0,4540</td>
+              <td align="center" valign="top">0,4548</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>7</b>
+              </td>
+              <td align="center" valign="top">0,4550</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4562</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>8</b>
+              </td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4564</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>9</b>
+              </td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4570</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>10</b>
+              </td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">
+                <b>±0,0024</b>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>11</b>
+              </td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4574</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>12</b>
+              </td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4588</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>13</b>
+              </td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4574</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>14</b>
+              </td>
+              <td align="center" valign="top">0,4600</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4586</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>15</b>
+              </td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4560</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4576</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>16</b>
+              </td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4582</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>17</b>
+              </td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4586</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>18</b>
+              </td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4582</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>19</b>
+              </td>
+              <td align="center" valign="top">0,4600</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4570</td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4588</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>20</b>
+              </td>
+              <td align="center" valign="top">0,4590</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4580</td>
+              <td align="center" valign="top">0,4582</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>Valor Principal da ddp</b>
+              </td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" colspan="2" valign="top">
+                <b>0,4582 ± 0,0005</b>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS3_T3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 3</strong>    
+          Valores da corrente elétrica para o resistor ôhmico de 1,0 kΩ.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="left" valign="top">
+                <b>Medida</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C1(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C2(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C3(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C4(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C5(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>Média Correntes das Elétricas (μA)</b>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">
+                <b>1</b>
+              </td>
+              <td align="center" valign="top">94,3000</td>
+              <td align="center" valign="top">90,4000</td>
+              <td align="center" valign="top">89,1000</td>
+              <td align="center" valign="top">88,0000</td>
+              <td align="center" valign="top">86,5000</td>
+              <td align="center" valign="top">89,6600 ± 0,5353</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>2</b>
+              </td>
+              <td align="center" valign="top">83,3000</td>
+              <td align="center" valign="top">82,4000</td>
+              <td align="center" valign="top">81,9000</td>
+              <td align="center" valign="top">81,9000</td>
+              <td align="center" valign="top">80,5000</td>
+              <td align="center" valign="top">82,0000 ± 0,5009</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>3</b>
+              </td>
+              <td align="center" valign="top">85,5000</td>
+              <td align="center" valign="top">83,2000</td>
+              <td align="center" valign="top">81,8000</td>
+              <td align="center" valign="top">81,4000</td>
+              <td align="center" valign="top">80,7000</td>
+              <td align="center" valign="top">82,5200 ± 0,5033</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>4</b>
+              </td>
+              <td align="center" valign="top">87,0000</td>
+              <td align="center" valign="top">83,3000</td>
+              <td align="center" valign="top">81,2000</td>
+              <td align="center" valign="top">80,0000</td>
+              <td align="center" valign="top">77,6000</td>
+              <td align="center" valign="top">81,8200 ± 0,5003</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>5</b>
+              </td>
+              <td align="center" valign="top">80,2000</td>
+              <td align="center" valign="top">79,5000</td>
+              <td align="center" valign="top">79,1000</td>
+              <td align="center" valign="top">78,9000</td>
+              <td align="center" valign="top">78,5000</td>
+              <td align="center" valign="top">79,2400 ± 0,4885</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>6</b>
+              </td>
+              <td align="center" valign="top">82,2000</td>
+              <td align="center" valign="top">79,7000</td>
+              <td align="center" valign="top">78,2000</td>
+              <td align="center" valign="top">77,3000</td>
+              <td align="center" valign="top">77,2000</td>
+              <td align="center" valign="top">78,9200 ± 0,4872</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>7</b>
+              </td>
+              <td align="center" valign="top">82,4000</td>
+              <td align="center" valign="top">78,1000</td>
+              <td align="center" valign="top">74,1000</td>
+              <td align="center" valign="top">75,1000</td>
+              <td align="center" valign="top">74,3000</td>
+              <td align="center" valign="top">76,8000 ± 0,4778</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>8</b>
+              </td>
+              <td align="center" valign="top">80,3000</td>
+              <td align="center" valign="top">79,9000</td>
+              <td align="center" valign="top">77,0000</td>
+              <td align="center" valign="top">76,3000</td>
+              <td align="center" valign="top">76,1000</td>
+              <td align="center" valign="top">77,9200 ± 0,4827</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>9</b>
+              </td>
+              <td align="center" valign="top">81,9000</td>
+              <td align="center" valign="top">81,0000</td>
+              <td align="center" valign="top">79,9000</td>
+              <td align="center" valign="top">79,4000</td>
+              <td align="center" valign="top">78,8000</td>
+              <td align="center" valign="top">80,2000 ± 0,4929</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>10</b>
+              </td>
+              <td align="center" valign="top">80,9000</td>
+              <td align="center" valign="top">80,0000</td>
+              <td align="center" valign="top">79,2000</td>
+              <td align="center" valign="top">78,7000</td>
+              <td align="center" valign="top">78,1000</td>
+              <td align="center" valign="top">79,3800 ± 0,4892</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>11</b>
+              </td>
+              <td align="center" valign="top">91,7000</td>
+              <td align="center" valign="top">87,7000</td>
+              <td align="center" valign="top">90,1000</td>
+              <td align="center" valign="top">89,6000</td>
+              <td align="center" valign="top">88,5000</td>
+              <td align="center" valign="top">89,5200 ± 0,5345</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>12</b>
+              </td>
+              <td align="center" valign="top">88,6000</td>
+              <td align="center" valign="top">86,7000</td>
+              <td align="center" valign="top">90,1000</td>
+              <td align="center" valign="top">89,3000</td>
+              <td align="center" valign="top">80,3000</td>
+              <td align="center" valign="top">87,0000 ± 0,5235</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>13</b>
+              </td>
+              <td align="center" valign="top">77,0000</td>
+              <td align="center" valign="top">76,4000</td>
+              <td align="center" valign="top">86,6000</td>
+              <td align="center" valign="top">81,6000</td>
+              <td align="center" valign="top">84,7000</td>
+              <td align="center" valign="top">81,2600 ± 0,4979</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>14</b>
+              </td>
+              <td align="center" valign="top">83,5000</td>
+              <td align="center" valign="top">85,1000</td>
+              <td align="center" valign="top">80,0000</td>
+              <td align="center" valign="top">77,9000</td>
+              <td align="center" valign="top">77,6000</td>
+              <td align="center" valign="top">80,8200 ± 0,4958</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>15</b>
+              </td>
+              <td align="center" valign="top">79,8000</td>
+              <td align="center" valign="top">79,0000</td>
+              <td align="center" valign="top">81,4000</td>
+              <td align="center" valign="top">81,2000</td>
+              <td align="center" valign="top">81,4000</td>
+              <td align="center" valign="top">80,5600 ± 0,4945</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>16</b>
+              </td>
+              <td align="center" valign="top">86,5000</td>
+              <td align="center" valign="top">88,1000</td>
+              <td align="center" valign="top">86,7000</td>
+              <td align="center" valign="top">86,7000</td>
+              <td align="center" valign="top">87,4000</td>
+              <td align="center" valign="top">87,0800 ± 0,5236</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>17</b>
+              </td>
+              <td align="center" valign="top">76,3000</td>
+              <td align="center" valign="top">76,3000</td>
+              <td align="center" valign="top">76,6000</td>
+              <td align="center" valign="top">77,8000</td>
+              <td align="center" valign="top">79,3000</td>
+              <td align="center" valign="top">77,2600 ± 0,4797</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>18</b>
+              </td>
+              <td align="center" valign="top">83,4000</td>
+              <td align="center" valign="top">82,6000</td>
+              <td align="center" valign="top">83,2000</td>
+              <td align="center" valign="top">82,7000</td>
+              <td align="center" valign="top">81,0000</td>
+              <td align="center" valign="top">82,5800 ± 0,5035</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>19</b>
+              </td>
+              <td align="center" valign="top">78,4000</td>
+              <td align="center" valign="top">78,7000</td>
+              <td align="center" valign="top">77,9000</td>
+              <td align="center" valign="top">78,6000</td>
+              <td align="center" valign="top">80,4000</td>
+              <td align="center" valign="top">78,8000 ± 0,4866</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>20</b>
+              </td>
+              <td align="center" valign="top">80,3000</td>
+              <td align="center" valign="top">81,5000</td>
+              <td align="center" valign="top">81,5000</td>
+              <td align="center" valign="top">80,7000</td>
+              <td align="center" valign="top">80,3000</td>
+              <td align="center" valign="top">80,8600 ± 0,4958</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>Valor Principal da Corrente</b>
+              </td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">
+                <b>81,7100 ± 0,1118</b>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS3_T4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 4</strong>    
+          Valores da corrente elétrica para o resistor ôhmico de 220,0 kΩ.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="left" valign="top">
+                <b>Medida</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C1(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C2(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C3(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C4(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>C5(μA)</b>
+              </th>
+              <th align="center" valign="top">
+                <b>Média (μA)</b>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">
+                <b>1</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9800 ± 0,1430</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>2</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000 ± 0.1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>3</b>
+              </td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>4</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>5</b>
+              </td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0200 ± 0,1432</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>6</b>
+              </td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>7</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">1,9400 ± 0,1428</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>8</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>9</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>10</b>
+              </td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0200 ± 0,1432</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>11</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0200 ± 0,1432</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>12</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>13</b>
+              </td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0200 ± 0,1432</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>14</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>15</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>16</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000 ± 0,1431</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>17</b>
+              </td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9800 ± 0,1430</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>18</b>
+              </td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,1000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0400 ± 0,1433</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>19</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9800 ± 0,1430</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>20</b>
+              </td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">2,0000</td>
+              <td align="center" valign="top">1,9800 ± 0,1430</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <b>Valor Principal da Corrente</b>
+              </td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">–</td>
+              <td align="center" valign="top">
+                <b>1,9990 ± 0,0320</b>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS1_E1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+          <mrow>
+            <msubsup>
+              <mi>σ</mi>
+              <mi>ω</mi>
+              <mn>2</mn>
+            </msubsup>
+            <mo>=</mo>
+            <mrow>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mfrac>
+                      <mrow>
+                        <mo>∂</mo>
+                        <mo>⁡</mo>
+                        <mi>ω</mi>
+                      </mrow>
+                      <mrow>
+                        <mo>∂</mo>
+                        <mo>⁡</mo>
+                        <mi>x</mi>
+                      </mrow>
+                    </mfrac>
+                    <mo>)</mo>
+                  </mrow>
+                  <mn>2</mn>
+                </msup>
+                <mo>⁢</mo>
+                <msubsup>
+                  <mi>σ</mi>
+                  <mi>x</mi>
+                  <mn>2</mn>
+                </msubsup>
+              </mrow>
+              <mo>+</mo>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mfrac>
+                      <mrow>
+                        <mo>∂</mo>
+                        <mo>⁡</mo>
+                        <mi>ω</mi>
+                      </mrow>
+                      <mrow>
+                        <mo>∂</mo>
+                        <mo>⁡</mo>
+                        <mi>y</mi>
+                      </mrow>
+                    </mfrac>
+                    <mo>)</mo>
+                  </mrow>
+                  <mn>2</mn>
+                </msup>
+                <mo>⁢</mo>
+                <msubsup>
+                  <mi>σ</mi>
+                  <mi>y</mi>
+                  <mn>2</mn>
+                </msubsup>
+              </mrow>
+              <mo>+</mo>
+              <mi mathvariant="normal">⋯</mi>
+            </mrow>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS1_E2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+          <mrow>
+            <mi>V</mi>
+            <mo>=</mo>
+            <mrow>
+              <mi>R</mi>
+              <mo>⁢</mo>
+              <mi>i</mi>
+            </mrow>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'do Couto, Flávio M. e da Silva, Julio F.Uso do Módulo Python Uncertainties no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental. Revista Brasileira de Ensino de Física [online]. 2021, v. 43 [Acessado CURRENTDATE] , e20200415. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2020-0415&gt;. Epub 01 Mar 2021. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2020-0415.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Uso do Módulo &lt;i&gt;Python Uncertainties&lt;/i&gt; no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental&#34; &#34;do Couto, Flávio M.&#34; &#34;da Silva, Julio F.&#34; &#34;2021&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Uso do Módulo &lt;i&gt;Python Uncertainties&lt;/i&gt; no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental&#34; &#34;do Couto, Flávio M.&#34; &#34;da Silva, Julio F.&#34; &#34;2021&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/zPhrQhWFVzGfcmVwmbkv8bs/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172021000100710&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2020-0415" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2020-0415">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2020-0415" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2020-0415">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2020-0415"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2020-0415" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2020-0415">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2020-0415" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Uso do Módulo &lt;i&gt;Python Uncertainties&lt;/i&gt; no cálculo de incertezas experimentais da diferença de potencial e corrente elétrica de um protótipo experimental
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2020-0415">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

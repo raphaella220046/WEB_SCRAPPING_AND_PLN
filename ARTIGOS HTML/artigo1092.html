@@ -1,0 +1,2029 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?format=html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction"/>
+<meta property="og:description" content="Physics has played a fundamental role in medicine sciences, specially in imaging diagnostic...."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Menin, Olavo H.">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal de São Paulo">
+        
+        <meta name="citation_author" content="Rolnik, Vanessa">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_author" content="Martinez, Alexandre S.">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="35"></meta>
+<meta name="citation_number" content="2"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?lang=en&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?format=xml&amp;lang=en"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172013000200004"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction
+            "></meta>
+
+<meta name="citation_language" content="en"></meta>
+
+<meta name="citation_abstract" content="Physics has played a fundamental role in medicine sciences, specially in imaging diagnostic. Currently, image reconstruction techniques are already taught in Physics courses and there is a growing interest in new potential applications. The aim of this paper is to introduce to students the electrical impedance tomography, a promising technique in medical imaging. We consider a numerical example which consists in finding the position and size of a non-conductive region inside a conductive wire. We review the electrical impedance tomography inverse problem modeled by the minimization of an error functional. To solve the boundary value problem that arises in the direct problem, we use the boundary element method. The simulated annealing algorithm is chosen as the optimization method. Numerical tests show the technique is accurate to retrieve the non-conductive inclusion."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2013-06"></meta>
+<meta name="citation_keywords" content="electrical impedance tomography"></meta><meta name="citation_keywords" content="boundary element method"></meta><meta name="citation_keywords" content="simulated annealing algorithm"></meta><meta name="citation_keywords" content="inverse problem"></meta><meta name="citation_keywords" content="optimization"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2013.v35n2/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?lang=en&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?lang=en&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (Inglês)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2013.v35n2/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (Inglês)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172013000200004 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge"></span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 35 
+                (2)
+            <span class="_separator"> • </span>June 2013</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172013000200004" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172013000200004</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172013000200004"><span class="sci-ico-link"></span>copy</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Método dos elementos de contorno e algoritmo de recozimento simulado aplicados na reconstrução de imagem da tomografia de impedância elétrica</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Olavo H. Menin </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Sertãozinho,  
+          ,  São Paulo,  
+        ,  Instituto Federal de São Paulo,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Vanessa Rolnik </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Ribeirão Preto,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Faculdade de Filosofia Ciências e Letras de Ribeirão Preto ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Alexandre S. Martinez </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>
+          ,  Ribeirão Preto,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Faculdade de Filosofia Ciências e Letras de Ribeirão Preto ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">About the authors</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Abstracts"><h1 class="articleSectionTitle">Abstracts</h1></div>
+<div>
+<p>Physics has played a fundamental role in medicine sciences, specially in imaging diagnostic. Currently, image reconstruction techniques are already taught in Physics courses and there is a growing interest in new potential applications. The aim of this paper is to introduce to students the electrical impedance tomography, a promising technique in medical imaging. We consider a numerical example which consists in finding the position and size of a non-conductive region inside a conductive wire. We review the electrical impedance tomography inverse problem modeled by the minimization of an error functional. To solve the boundary value problem that arises in the direct problem, we use the boundary element method. The simulated annealing algorithm is chosen as the optimization method. Numerical tests show the technique is accurate to retrieve the non-conductive inclusion.</p>
+<p>electrical impedance tomography; boundary element method; simulated annealing algorithm; inverse problem; optimization</p>
+</div>
+<hr>
+<div>
+<p>A física tem tido um papel fundamental nas ciências médicas, especialmente em diagnósticos por imagem. Atualmente, as técnicas de reconstrução de imagem já são ensinadas nos curso de Física e existe um crescente interesse em possíveis novas aplicações. O objetivo deste trabalho é apresentar aos alunos a tomografia de impedância elétrica, uma promissora técnica de imageamento em medicina. Para isso, consideramos um exemplo numérico que consiste em encontrar a posição e o tamanho de uma região não condutora no interior de um fio condutor. Nós revisamos o problema inverso da tomografia de impedância elétrica modelado pela minimização de um funcional de erro. Para resolver o problema de valor de contorno que surge no problema direto, nós usamos o método dos elementos de contorno. O algoritmo de recozimento simulado foi escolhido como método de otimização. Testes numéricos mostram que a técnica é precisa para encontrar a inclusão não condutora.</p>
+<p>tomografia de impedância elétrica; método dos elementos de contorno; algoritmo de recozimento simulado; problema inverso; otimização</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">
+          <b>Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction</b>
+        </span>
+        <div>
+          <b>Método dos elementos de contorno e algoritmo de recozimento simulado aplicados na reconstrução de imagem da tomografia de impedância elétrica</b>
+        </div>
+      </li>
+    </p>
+<p></p>
+<p>
+      <b>Olavo H. Menin<sup>I, 1</sup>; Vanessa Rolnik<sup>II</sup>; Alexandre S. Martinez<sup>II</sup></b>
+    </p>
+<p></p>
+<p><sup>I</sup>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, Sertãozinho, SP, Brasil </p>
+<p></p>
+<p><sup>II</sup>Faculdade de Filosofia Ciências e Letras de Ribeirão Preto, Universidade de São Paulo, Ribeirão Preto, SP, Brasil</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>Physics has played a fundamental role in medicine sciences, specially in imaging diagnostic. Currently, image reconstruction techniques are already taught in Physics courses and there is a growing interest in new potential applications. The aim of this paper is to introduce to students the electrical impedance tomography, a promising technique in medical imaging. We consider a numerical example which consists in finding the position and size of a non-conductive region inside a conductive wire. We review the electrical impedance tomography inverse problem modeled by the minimization of an error functional. To solve the boundary value problem that arises in the direct problem, we use the boundary element method. The simulated annealing algorithm is chosen as the optimization method. Numerical tests show the technique is accurate to retrieve the non-conductive inclusion.</p>
+<p></p>
+<p><b>Keywords:</b> electrical impedance tomography, boundary element method, simulated annealing algorithm, inverse problem, optimization.</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>A física tem tido um papel fundamental nas ciências médicas, especialmente em diagnósticos por imagem. Atualmente, as técnicas de reconstrução de imagem já são ensinadas nos curso de Física e existe um crescente interesse em possíveis novas aplicações. O objetivo deste trabalho é apresentar aos alunos a tomografia de impedância elétrica, uma promissora técnica de imageamento em medicina. Para isso, consideramos um exemplo numérico que consiste em encontrar a posição e o tamanho de uma região não condutora no interior de um fio condutor. Nós revisamos o problema inverso da tomografia de impedância elétrica modelado pela minimização de um funcional de erro. Para resolver o problema de valor de contorno que surge no problema direto, nós usamos o método dos elementos de contorno. O algoritmo de recozimento simulado foi escolhido como método de otimização. Testes numéricos mostram que a técnica é precisa para encontrar a inclusão não condutora.</p>
+<p></p>
+<p><b>Palavras-chave:</b> tomografia de impedância elétrica, método dos elementos de contorno, algoritmo de recozimento simulado, problema inverso, otimização.</p>
+<p></p>
+<p>
+      <b> 1 Introduction</b>
+    </p>
+<p></p>
+<p>Electrical impedance tomography (EIT) is a technique to obtain the inner image of an object exploring its electrical properties. It consists to apply an electric voltage (or electric current) stimulus through electrodes positioned on the object external surface. The corresponding response (electric current or voltage) is measured by the same electrodes. The obtained data are supplied to a computer, which has an algorithm to reconstruct the conductivity distribution inside the object. This distribution can be interpreted as the interior object image. A scheme of a medical EIT is depicted in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>.</p>
+<div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 1</strong><br>
+         - Layout of the electrical impedance tomography. An electrodes belt is attached on the body surface. A voltage source applies a stimulus on the electrodes and the corresponding re- sponse is measured and supplied to a computer. A specific software reconstructs the interior body image.
+      <br>
+</div>
+</div>
+<p></p>
+<p>The first occurrence of imaging the human body in terms of its electrical properties occurred in 1978 by Henderson and Webster <span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        olavohmenin.ifsp@gmail.com. 
+      </span></span></span>. After this study, several research groups have emerged providing significant developments in EIT technique. Current applications of EIT in medical area are the monitoring of pulmonary functions, breast cancer detection, blood flow monitoring inside the heart and imaging of human brain functions. Also, in engineering, EIT applications includes the monitoring of two-phase flow in a pipe, detection of corrosion or cracks inside metallic objects and retrieval a pipeline route in the subsoil <sup>[2-4]</sup>.</p>
+<p></p>
+<p>Although the EIT technique presents attractive features, such as low cost, portability and robustness, it is not widely used yet due to the difficulty to obtain a good image resolution. This difficulty arises because the EIT image reconstruction is an inverse-problem and therefore, it is intrinsically ill-posed <sup>[5]</sup>. The Hadamard criteria, (i) existence, (ii) uniqueness and (iii) continuous data dependence on the solution are not simultaneously guaranteed. The first criterion is satisfied, since the physical body being imaged certainly has a actual conductivity distribution. With respect to the second one, it has been shown for the Dirichlet-to-Neumann map there is a unique solution for the conductivity distribution inside the domain <sup>[6]</sup>. However, the third criterion has been the hardest one to be overcome. To deal with it, the researchers have tried to find a good and suitable regularization function or alternative approaches. For example, it is possible to restrain the search-space to speed up the convergence to the actual solution and avoid nonphysical solutions <sup>[7]</sup>.</p>
+<p></p>
+<p>A typical way to solve the reconstruction EIT problem is to treat it as an optimization problem. In this case, one must minimize an error functional which is a value expressing the discrepancy between two different models of the same problem, one experimentally obtained and the other one numerically calculated. The conductivity distribution that yields the error function global minimum corresponds to the sought image.</p>
+<p></p>
+<p>Due to the ill-conditioned nature of the inverse EIT problem, the optimization surface presents irregularities such as multiple local minima and almost flat regions. Hence, one must adopt an efficient optimization procedure to handle such topological features and we have chosen the Simulated Annealing (SA) <sup>[8,9]</sup> . This is a stochastic method in which the main feature is the possibility of eventually accept a solution that increases the objective function. This allows the method to detrap from local minima basins or flat regions and reach the global minimum <sup>[10,11]</sup>.</p>
+<p></p>
+<p>To carry out the iterative searching, one must solve the direct problem with different conductivity distributions. It corresponds to a boundary value problem (BVP), which models the stimulus/response process. Frequently, this BVP does not have analytical solution, requiring the use of numerical methods, such as the Finite Element Method (FEM) and the Finite Difference Method (FDM). Here, the Boundary Element Method (BEM) was chosen. This is well suited to EIT problem, since it requires only the discretization of the domain boundary and the solution on the boundary is calculated firstly without calculating the values of the electric potential inside the domain <sup>[12,13]</sup>. Moreover, BEM offers important advantages such as great flexibility for arbitrary geometries and boundary shape and easiness of implementation <sup>[14,15]</sup>.</p>
+<p></p>
+<p>Our goal in this paper is to present to students the EIT technique using BEM and SA algorithm. This study was motivated by the difficulty in teaching the physical and mathematical methods/processes related to image reconstruction. Some studies have been carried in experimental approach, such as the assembly proposed by Mylott <i>et al.</i> <sup>[16]</sup> to study the computed tomography. Considering the students' growing interest in computational physics in the last years, we have proposed a numerical example to introduce the EIT technique. It consists in retrieving a non-conductive region inside a conductive wire. In engineering, this non-conductive region may represent, for example, a manufacturing defect or a normal wear in the wire which could compromise its use in an apparatus. In medicine, it may model an air bubble inside an artery hampering the blood flow.</p>
+<p></p>
+<p>Our numerical example considers a conductive cylindrical wire of length 10.0 and diameter 1.0 (arbitrary units). The non-conductive region is a sphere of radius 0.3 with center located along the cylinder axis at 7.0 units far from one of its extremities, as shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. [2]</a>. The challenge is summarized as a two variables optimization problem, the center <i>x</i>-coordinate and radius <i>R</i> of the non-conductive region. Due to the domain symmetry, we have taken a longitudinal section of the wire as a two-dimensional domain and placed the left bottom corner at the origin of a Cartesian system <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/90915b706de189630e94fd3641459ef87991542c.jpg">. Also, the stimulus/response process consists in applying an electric voltage <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0dd182b94d1c8d8c83ac3cf01eeb8552719262dd.jpg"> between the wire extremities <i>b</i> and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/fd628260398743aa1c3cb3637a08e80065056e3a.jpg"> and measuring the current flux on the same extremities. Moreover, the lateral area of the wire is considered electrically insulated, such that the current flux vanishes.</p>
+<div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Figure 2 - Scheme of the numerical example: cylindrical conductive wire with length 10:0 and diameter 1:0 with a non-conductive region of radius 0:3 located 7:0 units far from extremity <i>a</i>.</p>
+<p></p>
+<p>In Sec. 2, we review the EIT mathematical modeling based on the functional approach, the Boundary Element Method and the Simulated Annealing algorithm. In Sec. 3, we show the numerical tests and the results. Finally, in Sec. 4, we discuss the results and conclude.</p>
+<p></p>
+<p>
+      <b>2 Problem statement and methods</b>
+    </p>
+<p></p>
+<p>Here, we present the mathematical and numerical basis of EIT problem, specially focused on our numerical example.</p>
+<p></p>
+<p>
+      <b>2.2 EIT mathematical formulation</b>
+    </p>
+<p></p>
+<p>The mathematical modeling of the EIT problem is obtained from the Maxwell's equations. Since the stimulus processing is made at low frequency, the inductive effects can be ignored. Also, considering the domain fully ohmic, we can neglect the capacitive effects. The electric field is <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/2b2dbd1833d1908fc6c1851ba385bd7470f8ca4b.jpg">, where <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/6506672389f420460e22ae637d113a8f59c3edcc.jpg"> is the electrical potential and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/b63acee58258766f518b326fff582b389099ef9d.jpg"> is the gradient operator. The current density is <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/5194bbcfb49c3e9df154c960bba1e06544b75ea9.jpg">, being <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/191c99f98dc74d8b677c8d776d2c69f10505c885.jpg"> the electrical conductivity. Considering no internal current sources, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/4c75cd185c1f37d24878fa730d1efffc9413e5d6.jpg"> and the partial differential equation (PDE),</p>
+<p></p>
+<p>
+      <div class="row fig" id="281d704a0990d64f989237bbe0595f36d975cd59">
+<a name="281d704a0990d64f989237bbe0595f36d975cd59"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg281d704a0990d64f989237bbe0595f36d975cd59"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/281d704a0990d64f989237bbe0595f36d975cd59.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>governs the electrical potential <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/6506672389f420460e22ae637d113a8f59c3edcc.jpg"> inside the domain <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/e7640e79006a8adb133022402b61c8157b27809e.jpg">. To simulate the stimulus/response process, we have two boundary conditions given by <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/55d2b9488bc7d0952a0559cb7961ad3120511f18.jpg">, where <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/2a6e070f8c4145928209657815d820aed8889ef0.jpg"> is the voltage profile and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/21b8fa90ed4115baff7627abc7d57b7f787dc4b1.jpg"> is the normal component of the electric current flux, both on the boundary <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/41d7095d8b9c8185edb1cc0902cce77fbd35ba69.jpg">.</p>
+<p></p>
+<p>The numerical example considers a two-phase medium problem. One of them (the spherical non-conductive region) has null-conductivity and the other one (the rest of the wire) has constant and uniform non-vanishing conductivity. In this case, the interior of the non-conductive inclusion is interpreted as the exterior of the domain and the conductivity distribution <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"> corresponds to the position and size of the non-conductive region. Also, Eq. (1) is simplified to the Laplace equation</p>
+<p></p>
+<p>
+      <div class="row fig" id="d4da53e773bc2c6c86b08bba0c356e0738d7f105">
+<a name="d4da53e773bc2c6c86b08bba0c356e0738d7f105"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgd4da53e773bc2c6c86b08bba0c356e0738d7f105"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/d4da53e773bc2c6c86b08bba0c356e0738d7f105.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Considering unitary the conductivity of the non null phases ,<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/88c23ddabe1419df2dd618a39dcf7e1fed4da313.jpg">, the boundary conditions become</p>
+<p></p>
+<p>
+      <div class="row formula" id="ee03">
+<a name="e03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/bbc635a1c21e198e073ef3e48f0011d9f4203b02.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <div class="row formula" id="ee04">
+<a name="e04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/423a6698ac9b9cccf2248aacd86320046fcfa6d2.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>The stimulus-response can be mathematically modeled through the Dirichlet-to-Neumann map, in which a known voltage profile <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/c32f665077b265760974dc562214bc7a41b670b5.jpg"> is imposed on the boundary and the electric current fluxes <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/010aace98be46faa5773852568619066f47e4ea2.jpg"> are calculated on the same boundary. Otherwise, if a known electric current flux profile <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/010aace98be46faa5773852568619066f47e4ea2.jpg"> is imposed and the voltage <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/c32f665077b265760974dc562214bc7a41b670b5.jpg"> is calculated, the model is called Neumann-to-Dirichlet map. Although in practice the EIT problem is formulated as a Dirichlet-to-Neumann map, mathematically, it represents a mixed problem since it is imposed null current flux for the internal boundary, <i>i.e.</i>, Eq. (4) vanishes.</p>
+<p></p>
+<p>The <i>direct problem</i> consists in solving the BVP given by Eqs. (2) and (3), considering a knowing conductivity distribution <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"> to obtain the current flux from Eq. (4). However, in EIT image reconstruction, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"> is unknown and we have an <i>inverse problem</i>. One approach to solve it and to obtain <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"> is to construct and minimize an error functional (objective function) that compares the measurements obtained from two different models, the <i>actual model</i> and the <i>numerical model</i>.</p>
+<p></p>
+<p>For the Dirichlet-Neumann map, the <i>actual model</i> corresponds to a collection of measurements, <b>J</b><sub>actual</sub>, which are the current fluxes on the electrodes obtained from experimental assembly. This model contains the unknown actual conductivity distribution, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"><sub>actual</sub>, which must be found. The <i>numerical model</i> considers a known prospective conductivity distribution, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"><sub>prosp</sub>, to solve the <i>direct problem</i> to obtain <b>J</b><sub>num</sub>, which corresponds to the numerical current fluxes on the same electrodes. The error functional must be defined as a discrepancy measure between <b>J</b><sub>actual</sub> and <b>J</b><sub>num</sub>. Here, we have defined the error functional <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"><sub>prosp</sub> as the mean square error between the experimental and numerical current fluxes,</p>
+<p></p>
+<p>
+      <div class="row fig" id="ea45e2985b0bf93d47864761f66edc569a8b48be">
+<a name="ea45e2985b0bf93d47864761f66edc569a8b48be"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgea45e2985b0bf93d47864761f66edc569a8b48be"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ea45e2985b0bf93d47864761f66edc569a8b48be.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>where <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/3d40113461b70b7c583cf1c54e547848c8ea7a17.jpg"> are, respectively, the actual and numerical fluxes in the electrode <i>i</i> and <i>n</i> is the number of electrodes.</p>
+<p></p>
+<p>The idea of the optimization process is to perform an iterative search to find the prospective conductivity distribution that minimizes Eq. (5). In each iteration, a prospective solution, <div class="row fig" id="ffda2619eb770d1398a7031c0c9460610c06a755">
+<a name="ffda2619eb770d1398a7031c0c9460610c06a755"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgffda2619eb770d1398a7031c0c9460610c06a755"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"></div></a></div>
+</div><sub>prosp</sub>, is generated and supplied to Eqs. (2) and (3) to yield a numerical flux <b>J</b><sub>actual</sub>. This flux is compared with the actual one <b>J</b><sub>num</sub> to calculate the error functional, from Eq. (5). This process is repeated so that <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"><sub>prosp</sub><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/61def726c4e22ff6fd73afdd83ff5d02820d1d92.jpg"> 0 and, consequently, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/019d2709536ad979382d19223cb3512ccbc5b213.jpg"> within an acceptable error level.</p>
+<p></p>
+<p>
+      <b>2.2 Boundary element method</b>
+    </p>
+<p></p>
+<p>The essence of BEM is to convert the field equation to integral equations on the domain boundary through the reciprocal relation,</p>
+<p></p>
+<p>
+      <div class="row fig" id="c7c3ffcdf15729f248f5dedf1ef39119b0c39063">
+<a name="c7c3ffcdf15729f248f5dedf1ef39119b0c39063"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgc7c3ffcdf15729f248f5dedf1ef39119b0c39063"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/c7c3ffcdf15729f248f5dedf1ef39119b0c39063.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>where <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/971584e3bbfafa79827c7e9bcf9f74f8dcdb313d.jpg"> and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/63ab837e13565decc1688b4dfda6eb7730296544.jpg"> are two general solutions of Eq. (2), and through the fundamental solution,</p>
+<p></p>
+<p>
+      <div class="row fig" id="0cdc8e3308fe6cc69c6d9a9ab2d65f3bad63f6d2">
+<a name="0cdc8e3308fe6cc69c6d9a9ab2d65f3bad63f6d2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg0cdc8e3308fe6cc69c6d9a9ab2d65f3bad63f6d2"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0cdc8e3308fe6cc69c6d9a9ab2d65f3bad63f6d2.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>which is a particular solution of Eq. (2). From Eqs. (6) and (7), it is possible to obtain two integral equations, one for the points <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/54c37a044bb089b156c073d526922a9bfec9514a.jpg"> inside the domain <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/54c37a044bb089b156c073d526922a9bfec9514a.jpg"> and another for the points <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/98df285b78bcc5313a575a743c85488dcec5a4b5.jpg"> on the boundary <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/37b74af3068482292f251efd688f3e6bba004fac.jpg">. In the discretized form, these integral equations are</p>
+<p></p>
+<p>
+      <div class="row fig" id="30373f077800dd2a8f767126394596934381aaeb">
+<a name="30373f077800dd2a8f767126394596934381aaeb"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg30373f077800dd2a8f767126394596934381aaeb"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/30373f077800dd2a8f767126394596934381aaeb.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>for <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/1fda17eeee34f36284e2f782c562c77cc217a798.jpg"> and</p>
+<p></p>
+<p>
+      <div class="row fig" id="29244c06685f3f5306f858040c3aee938cf78ca6">
+<a name="29244c06685f3f5306f858040c3aee938cf78ca6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg29244c06685f3f5306f858040c3aee938cf78ca6"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/29244c06685f3f5306f858040c3aee938cf78ca6.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>for <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/da6950ebf7c59ef86b34a6959072cfe3963d79a9.jpg">, where</p>
+<p></p>
+<p>
+      <div class="row fig" id="6098a9cc27ccaa0534393919ace59c89aeb8cb67">
+<a name="6098a9cc27ccaa0534393919ace59c89aeb8cb67"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg6098a9cc27ccaa0534393919ace59c89aeb8cb67"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/6098a9cc27ccaa0534393919ace59c89aeb8cb67.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>The external boundary is discretized in <i>N</i><sub>ext</sub> straight elements, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/6bdd896efb84e1fa8082992b9c23035702800841.jpg">, and the internal one in <i>N</i><sub>int</sub> elements, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/8b8cb952ac9a29114365cab9f4ea67e0519e8e5d.jpg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/cfe61aec7b6b07c7734380d33f71d17843fbefce.jpg">. The coordinates <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/c021dbebd1bee3e01981725e233cb02491418b8f.jpg"> of the elements extremities are supplied to the program and, by convention, the elements are numbered following the counter clockwise direction for the external boundary and clockwise for the internal one. This guarantees the normal unitary vector <b>n</b> always points to the outside of the domain. Also, for each boundary (external and internal), the final extremity of the last element is made to coincide with the initial extremity of the first one. In this case, the domain and the inclusion are approximated by polygons.</p>
+<p></p>
+<p>Equation (9) produces a linear system of <i>N<sub>T</sub></i> equations with <i>N<sub>T</sub></i> unknowns, either<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/157cda2421250679903e68ead8166b754085fed3.jpg">. Solving this system provides the pair <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/50a4b9a8156bc2b5a7c88025f5c878e70b4332ef.jpg"> for all boundary elements. Hence, the direct problem solution of EIT is completed. If the solution <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/9156cd91388ed90f340009e1c659fe4926c9ff12.jpg"> at some internal point is required, it can be calculated through Eq. (8).</p>
+<p></p>
+<p>
+      <b>2.3 Simulated annealing algorithm</b>
+    </p>
+<p></p>
+<p>The simulated annealing algorithm is a stochastic optimization method that has its origins in the Metropolis acceptance criterion when two system configurations are compared . It is based on the probability to find the system with energy <i>E</i>, given by the Boltzmann weight, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/43dfa1ccbb88b7e846a74cd7a3d613231dc8d3d0.jpg">, where <i>T</i> is the temperature and <i>k<sub>b</sub></i> is the Boltzmann constant.</p>
+<p></p>
+<p>In 1983, Kirkpatrick <i>et al.</i><sup>[28]</sup> solved the salesman problem using the Metropolis criterion adding an important differential. They adopted a cooling schedule for the temperature to control the search stochasticity. In the thermodynamic framework, if the temperature of a liquid material is slowly cooled down, the atoms arrange themselves to form a structure (a perfect crystal), which has the lowest internal energy state. However, if the cooling process is not sufficiently slow, the final structure is not perfect and the internal energy is not the lowest one.</p>
+<p></p>
+<p>The analogy with an optimization process is made considering the objective function <i>f</i>(x) as the energy <i>E</i> of the system, the solutions <i>xi</i> as the system configurations and the temperature <i>T</i> becomes a control parameter of the process. The optimization process is done iteratively starting from an initial solution <i>E</i> and temperature <i>x0</i>. At each iteration, k searches are performed. Each new solution,<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/6d9323ee71c406e4efa70b2be6d2826e5f331374.jpg">, is generated through a pre-defined visitation distribution and compared with the current one, x<sub><i>i</i></sub>, to be, or not, accepted according to the Metropolis criterion. If <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/654a04cedcfa34b3dde5259ce648c8ec15a7b676.jpg">, the new solution is accepted and if <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/8fa94431a9375fb9888d94ff7e63c942cd16c85e.jpg">, the new solution is accepted with probability</p>
+<p></p>
+<p>
+      <div class="row fig" id="0ea2605a5540d56ca93562f2993b7cf2af22abf4">
+<a name="0ea2605a5540d56ca93562f2993b7cf2af22abf4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg0ea2605a5540d56ca93562f2993b7cf2af22abf4"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0ea2605a5540d56ca93562f2993b7cf2af22abf4.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>where <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ef3d8ea6fcebdc5e72846e3452cea5fd725e35bf.jpg">. After the last solution x<sub>k</sub> is evaluated, the temperature is decreased through a cooling schedule and the search process restarts. The last solution accepted at the previous temperature is taken as the initial solution to the current one.</p>
+<p></p>
+<p>The most common ways to generate a new solution <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/6465bb5e08800bed93cbb51d4c51877a9688337e.jpg"> from the previous one x<sub><i>i</i></sub> are through uniform or Gaussian deviates. Here, we have chosen the Gaussian one in the following form</p>
+<p></p>
+<p>
+      <div class="row fig" id="006001ffe18db0b348e656fcf0bb073b995025b6">
+<a name="006001ffe18db0b348e656fcf0bb073b995025b6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg006001ffe18db0b348e656fcf0bb073b995025b6"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/006001ffe18db0b348e656fcf0bb073b995025b6.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>where <i>T<sub>0</sub></i> is the initial temperature, <i>T<sub>t</sub></i> is the temperature at the iteration <i>t</i>, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0808d972a35d21e9361cff316258ef367863843e.jpg"> is a parameter that depends on the search space range and <i>n</i> is a random number with normal distribution <i>N</i>(0,1).</p>
+<p></p>
+<p>According to Eqs. (12) and (13), at high temperatures, solutions can be generated relatively far from the previous one, characterizing a global search. Also, there is high probability to accept a new solution that increases the objective function. As the temperature decreases, the search becomes essentially local and the acceptance of an uphill error solution becomes less likely to occur. Hence, the temperature <i>T</i> plays a fundamental role. The choice of a suitable cooling schedule is essential to ensure a good performance of the optimization process, <i>i.e.</i>, to reach the global minimum of the objective function with as few steps as possible. The most commons cooling schedules in the literature are the logarithmic and the geometric ones. We have chosen the last one in which the temperature <i>T</i> decreases with the iteration <i>t</i> according to</p>
+<p></p>
+<p>
+      <div class="row fig" id="97332f4e368cb4e1dfeed51ad7d3d3fd64545316">
+<a name="97332f4e368cb4e1dfeed51ad7d3d3fd64545316"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg97332f4e368cb4e1dfeed51ad7d3d3fd64545316"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/97332f4e368cb4e1dfeed51ad7d3d3fd64545316.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>where T<sub>0</sub> is the initial temperature and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/a7d55beb9f72905146b8ae2253f349a2e4616496.jpg"> is the cooling rate.</p>
+<p></p>
+<p>
+      <b>3 Numerical tests and results</b>
+    </p>
+<p></p>
+<p>To solve the numerical example proposed in Sec. , we developed in MATLAB<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/b7ba0b8d09402f6366b9acd4f0773e3cd7371276.jpg"> language a program that includes the BEM and the SA algorithm routines.</p>
+<p></p>
+<p>To construct the error functional, Eq. (5), one must confront two models of the same problem, the actual and the numerical ones. The <i>actual model</i> is simulated numerically, since it is not the goal of this paper to explore the experimental part of the problem. Hence, the actual current flux, <b>J</b><sub>actual</sub>, is obtained solving numerically the Eq. (2) through BEM with the boundary conditions, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/b36d24749c212a4f00226797d815720cbe3cd96e.jpg">, for <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/07fc4bfcfea4b9c5de259be7de665d00fd992a2e.jpg">, and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0680859e00907519b96c5961d1016ebb70239ac4.jpg">, for <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/952d58349c244f90ed36c84187df652afebb19d0.jpg">. Also, it was adopted <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/666115bdf0a3ec84ebb355c4ba9d85ff64e88f36.jpg"> for the points (<i>x,y</i>) on the boundary of the non-conductive spherical region. The <i>numerical model</i> is defined as the actual one. However, its non-conductive region, called <i>prospective inclusion</i>, has center (<i>x</i>)-coordinate R<i>p</i> and radius (R<i>p</i>) variables in order to carry out the searching process.</p>
+<p></p>
+<p>For both models, the external boundary discretization was made using 220 elements, being 100 elements for each side, top and bottom, and 10 elements for each side, left and right. The internal inclusion was discretized in 80 elements, totalizing 300 boundary elements.</p>
+<p></p>
+<p>
+      <b>3.1 Test 1 - Error functional behavior</b>
+    </p>
+<p></p>
+<p>The first test explores the behavior of the error functional surface. The variables x<sub><i>p</i></sub> and <i>RP</i> were systematically modified over the search space [2.0,8.0]×[0.1,0.4] in a regular mesh of 61×61=3721 points. The error functional is calculated for each position <i>xp</i> and radius <i>RP</i> generating the error functional surface, as shown in the plot of <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig.3</a> with error functional axis in logarithm scale. It is possible to see almost flat regions and a narrow channel that contains a prominent global minimum. These characteristics require a powerful optimization method to reach the global minimum.</p>
+<div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Figure 3 - Error functional surface in logarithm scale. It presents almost at regions and a channel that contains a prominent global minimum.</p>
+<p></p>
+<p>
+      <b>3.2 Test 2 - Applying the Simulated annealing</b>
+    </p>
+<p></p>
+<p>In this test, we evaluated the performance of the developed program to retrieve the position and radius of the non-conductive region. Since SA algorithm is stochastic, its convergence to the actual solution is not always guaranteed. Therefore, it is necessary to run the program many times to assess its performance. Also, to make a more careful analysis, we have divided the Test 2 in three parts.</p>
+<p></p>
+<p>In the first part, Test 2.a, the intent was to find only the center x-coordinate of the non-conductive region. We set the prospective inclusion radius equal to the actual one (<i>Rp</i>=0.3). The initial solution of <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ca9138677af8d7a117c6937b586661a2e0270ca4.jpg"> was generated randomly in the range [1.0,9,0] and, to generate a new solution <i>xp</i> from the previous one <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/f433aed856587c782b63317165a026020b46635a.jpg"> by Eq. (13), it was chosen <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/166b56d69653810a6e4bef9a846d2e20bf713330.jpg">. In the second one, Test 2.b, the program searched only the non-conductive region radius. In this case, we set the prospective inclusion center x-coordinate equal to the actual one (<i>xp</i>=7.0). The initial solution of <i>Rp</i> was generated randomly, but in the range [0.05,0.45]. The new solution <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/d4fbeb1ab15d1db251388fa6d33879fc63e9697d.jpg"> from the previous one <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/eb0cc3ab6ab5032d8fe9812afd572fef7a9e60d5.jpg"> by Eq. (13) was generated considering <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0016eac43b297ebdc9893b3cb78893d27f465407.jpg"> For both, Test 2.a and Test 2.b, the program was executed considering 1000 iterations, with <i>k</i> =1, and we set <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/626ace5152e6ce24849ba6303e4906ab49188ab5.jpg">=0.95 and <i>T</i><sub>0</sub> = 1000.</p>
+<p></p>
+<p>Finally, the third part, Test 2.c, considers the search for both, position and radius. In this case, we joined the two programs used in the previous parts in a single one. More specifically, in each iteration (at each temperature) the program carried out two separated searching, one for the position and another for the radius. Due the difficulty to carry out the optimization searching with two variables, we adopted 2000 iterations, with k=1, and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/626ace5152e6ce24849ba6303e4906ab49188ab5.jpg">=0.97. As the previous parts, we set <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/4ece8a85e44d1ca7d24c9a3bbc5f1408ec538243.jpg"> to generate a new <i>x<sub>p</sub></i>, and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0016eac43b297ebdc9893b3cb78893d27f465407.jpg">, to generate a new <i>R<sub>p</sub></i>. Again, the initial solutions of <i>x<sub>p</sub></i> and <i>R<sub>p</sub></i> were generated randomly in the same ranges of the previous parts.</p>
+<p></p>
+<p>For each part of the Test 2, the program was executed 50 times and the final solution <i>x<sub>p</sub></i> and/or <i>R<sub>p</sub></i> found in each one was stored. <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Table 1</a> shows the minimum, maximum, mean and standard deviation of the final solutions considering all of the runnings for each part. For the best running of the Test 2.c, the solution found was <i>x<sub>p</sub></i>=7.0005 and <i>R<sub>p</sub></i>=0.3000, with error functional of 2.6×10<sup>-17</sup>. For the best running, the evolution of the error functional, the prospective center x-coordinate and the prospective radius during the optimization process are shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. (4)</a>.</p>
+<div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>Table 1 - Minimum, maximum, mean and standard deviation of the nal solutions <i>x<sup>p</sup></i> and/or R<sup>p</sup> for the three parts of the Test 2, considering 50 runnings.</p>
+<div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 4</strong><br>
+         - Evolution with the iteration for the best running of Test 2.c of the (a) error functional (b) prospective center x-coordinate and (c) prospective radiu
+      <br>
+</div>
+</div>
+<p></p>
+<p>
+      <b>4 Discussion and conclusion</b>
+    </p>
+<p></p>
+<p>We have presented to students the electrical impedance tomography technique and the application of retrieving the size and position of an non-conductive inclusion inside of a conductive wire using the boundary element method and simulated annealing algorithm. Numerical simulations assessed either the behavior of the error functional in the search-space and the performance of the implemented program. The results show that the problem has a difficult error surface to be optimized. Despite this, the implemented program has presented a satisfactory accuracy to find the non-conductive region. Finally, the presented algorithms and methods have a wide scope of application and should be better appreciated in topics of undergraduate and graduate physics programs.</p>
+<p></p>
+<p>
+      <b>Acknowledgments</b>
+    </p>
+<p></p>
+<p>ASM acknowledges Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) (305738/2010-0). VR acknowledges Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) (2008/01284-4).</p>
+<p></p>
+<p>Recebido em 24/7/2012 </p>
+<p></p>
+<p> Aceito em 2/2/2013 </p>
+<p></p>
+<p> Publicado em 24/4/2013 </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:olavohmenin.ifsp@gmail.com">olavohmenin.ifsp@gmail.com</a>. </div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] R.P. Henderson    and J.G. Webster , IEEE Transactions on Biomedical Engineering <b> 25</b>, 250    (year 1978).</div></li>
+<li><div>[2] W. Lionheart    , N. Polydorides and A. Borsic , <i>Electrical Impedance Tomography: Methods,    History, and Applications</i>, (Institute of Physics Publishing, Bristol, year    2005), Chap. chapter The reconstruction problem.</div></li>
+<li><div>[3] J.F. Abascal    , S.R. Arridge , D. Atkinson , R. Horesh , L. Fabrizi , M.D. Luca , L. Horesh    , R.H. Bayford and D.S. Holder , journal <b>43</b>, 258 (year 2008).</div></li>
+<li><div>[4] A. Osella ,    G. Chao and F. Sanchez , American Journal of Physics <b> 69</b>, (year 2001).</div></li>
+<li><div>[5] L. Borcea,    Inverse Problems <b>18</b>, R99 (2002).</div></li>
+<li><div>[6] A.I. Nachman,    The Annals of Mathematics, Second Series <b>143</b>, 71 (1996).</div></li>
+<li><div>[7] O.H. Menin    and V. Rolnik, International Journal of Modern Physics C <b>22</b>, 825 (2011).</div></li>
+<li><div>[8] E. Aarts and    J. Korst, <i>Simulated Annealing and Boltzmann Machines: A Stochastic Approach    to Combinatorial Optimization and Neural Computing</i> (J. Wiley &amp; Sons,    1988).</div></li>
+<li><div>[9] D. Goldberg,    <i>Genetic Algorithms in Search, Optimization and Machine Learning</i> (Addison-Wesley    Longman Publish, Boston, 1989).</div></li>
+<li><div>[10]T.C. Martins,    E.D.L.B. Camargo, R.G. Lima, M.B.P. Amato and M.S.G. Tsuzuki, in <i>Engineering    in Medicine and Biology Society, EMBC, 2011 Annual International Conference    of the IEEE</i> (2011).</div></li>
+<li><div>[11] H. Kim, C.    Boo and Y. Lee, International Journal of Control, Automation and System <b>2</b>,    211 (2005).</div></li>
+<li><div>[12] V. Rolnik,    O.H. Menin, G.L.C. Carosio and P.J. Seleghim, in <i>ABCM Symposium Series in    Mechatronics</i>, Vol. 4 (2010) pp. 835{843.</div></li>
+<li><div>[13] R. Duraiswami,    K. Sarkar and G.L. Chanine, Engineering Analysis with Boundary Elements, 13(1998).</div></li>
+<li><div>[14] C.A. Brebbia    and J. Dominguez, <i>Boundary Elements Methods An Introductory Course</i>, 2nd    ed. (Computational Mechanics Publications Southampton Boston,1992).</div></li>
+<li><div>[15] W.T. Ang,    <i>A Beginner's Course in Boundary Element Methods</i> (Universal Publishers,    Boca Raton, Florida, 2007).</div></li>
+<li><div>[16]E. Mylott,    R. Klepetka, J.C. Dunlap and R. Widenhorn, European Journal of Physics <b>32</b>,    1227 (2011).</div></li>
+<li><div>[17]N. Metropolis,    A. Rosenbluth, M. Rosenbluth, A. Teller and E. Teller, Journal of Chemistry    Physics <b>21</b>, 1087 (1953).</div></li>
+<li><div>[18] S. Kirkpatrick,    C. Gellat and M. Vecchi, Science <b>220</b>, 671 (1983).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        
+          Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction
+        
+        
+          Método dos elementos de contorno e algoritmo de recozimento simulado aplicados na reconstrução de imagem da tomografia de impedância elétrica
+        
+      
+        1
+         E-mail: 
+        olavohmenin.ifsp@gmail.com. 
+      </div>
+</div>
+<div class="articleSection" data-anchor="Publication Dates">
+<h1 class="articleSectionTitle">Publication Dates</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publication in this collection</strong><br>05 July 2013</li>
+<li>
+<strong>Date of issue</strong><br>June 2013</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="History">
+<h1 class="articleSectionTitle">History</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Received</strong><br>24 July 2012</li>
+<li>
+<strong>Accepted</strong><br>02 Feb 2013</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">About the authors</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Olavo H. Menin </strong><br><div>
+          ,  Sertãozinho,  
+          ,  São Paulo,  
+        ,  Instituto Federal de São Paulo,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Vanessa Rolnik </strong><br><div>
+          ,  Ribeirão Preto,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Faculdade de Filosofia Ciências e Letras de Ribeirão Preto ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Alexandre S. Martinez </strong><br><div>
+          ,  Ribeirão Preto,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Faculdade de Filosofia Ciências e Letras de Ribeirão Preto ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figures | Tables | Formulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figures
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tables
+                    (1)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Formulas
+                    (2)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 1</strong><br>
+         - Layout of the electrical impedance tomography. An electrodes belt is attached on the body surface. A voltage source applies a stimulus on the electrodes and the corresponding re- sponse is measured and supplied to a computer. A specific software reconstructs the interior body image.
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 4</strong><br>
+         - Evolution with the iteration for the best running of Test 2.c of the (a) error functional (b) prospective center x-coordinate and (c) prospective radiu
+      </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div></div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ff524889c2f27f88d914bd60ac190e37c7f0f947.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 1   
+         - Layout of the electrical impedance tomography. An electrodes belt is attached on the body surface. A voltage source applies a stimulus on the electrodes and the corresponding re- sponse is measured and supplied to a computer. A specific software reconstructs the interior body image.
+      <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ff524889c2f27f88d914bd60ac190e37c7f0f947.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/36dc80827cc97cc3add6168e33094937b12fe87f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/36dc80827cc97cc3add6168e33094937b12fe87f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/95ff0176bcb705cac605c107c7bf084fa872cd1a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/95ff0176bcb705cac605c107c7bf084fa872cd1a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/1e32685ce8fc0d962d870bc876643dc1c47ad291.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 4   
+         - Evolution with the iteration for the best running of Test 2.c of the (a) error functional (b) prospective center x-coordinate and (c) prospective radiu
+      <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/1e32685ce8fc0d962d870bc876643dc1c47ad291.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/58d853776edd6f32dcf55f7e183d5b31e11a7dd2.jpg" target="_blank" data-placement="left" title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/58d853776edd6f32dcf55f7e183d5b31e11a7dd2.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/bbc635a1c21e198e073ef3e48f0011d9f4203b02.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/bbc635a1c21e198e073ef3e48f0011d9f4203b02.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/423a6698ac9b9cccf2248aacd86320046fcfa6d2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/423a6698ac9b9cccf2248aacd86320046fcfa6d2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg281d704a0990d64f989237bbe0595f36d975cd59" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/281d704a0990d64f989237bbe0595f36d975cd59.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/281d704a0990d64f989237bbe0595f36d975cd59.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgd4da53e773bc2c6c86b08bba0c356e0738d7f105" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/d4da53e773bc2c6c86b08bba0c356e0738d7f105.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/d4da53e773bc2c6c86b08bba0c356e0738d7f105.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgea45e2985b0bf93d47864761f66edc569a8b48be" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ea45e2985b0bf93d47864761f66edc569a8b48be.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ea45e2985b0bf93d47864761f66edc569a8b48be.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgffda2619eb770d1398a7031c0c9460610c06a755" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/ffda2619eb770d1398a7031c0c9460610c06a755.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgc7c3ffcdf15729f248f5dedf1ef39119b0c39063" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/c7c3ffcdf15729f248f5dedf1ef39119b0c39063.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/c7c3ffcdf15729f248f5dedf1ef39119b0c39063.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg0cdc8e3308fe6cc69c6d9a9ab2d65f3bad63f6d2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0cdc8e3308fe6cc69c6d9a9ab2d65f3bad63f6d2.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0cdc8e3308fe6cc69c6d9a9ab2d65f3bad63f6d2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg30373f077800dd2a8f767126394596934381aaeb" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/30373f077800dd2a8f767126394596934381aaeb.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/30373f077800dd2a8f767126394596934381aaeb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg29244c06685f3f5306f858040c3aee938cf78ca6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/29244c06685f3f5306f858040c3aee938cf78ca6.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/29244c06685f3f5306f858040c3aee938cf78ca6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg6098a9cc27ccaa0534393919ace59c89aeb8cb67" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/6098a9cc27ccaa0534393919ace59c89aeb8cb67.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/6098a9cc27ccaa0534393919ace59c89aeb8cb67.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg0ea2605a5540d56ca93562f2993b7cf2af22abf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0ea2605a5540d56ca93562f2993b7cf2af22abf4.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/0ea2605a5540d56ca93562f2993b7cf2af22abf4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg006001ffe18db0b348e656fcf0bb073b995025b6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/006001ffe18db0b348e656fcf0bb073b995025b6.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/006001ffe18db0b348e656fcf0bb073b995025b6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg97332f4e368cb4e1dfeed51ad7d3d3fd64545316" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/97332f4e368cb4e1dfeed51ad7d3d3fd64545316.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MhhLnLvBcRvGQCrCPF39vqy/97332f4e368cb4e1dfeed51ad7d3d3fd64545316.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">How to cite</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copy</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Menin, Olavo H., Rolnik, Vanessa and Martinez, Alexandre S.Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction. Revista Brasileira de Ensino de Física [online]. 2013, v. 35, n. 2 [Accessed CURRENTDATE] , 2304. Available from: &lt;https://doi.org/10.1590/S1806-11172013000200004&gt;. Epub 05 July 2013. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172013000200004.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?lang=en&amp;format=pdf">
+                      
+                        Inglês
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction&#34; &#34;Menin, Olavo H.&#34; &#34;Rolnik, Vanessa&#34; &#34;Martinez, Alexandre S.&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction&#34; &#34;Menin, Olavo H.&#34; &#34;Rolnik, Vanessa&#34; &#34;Martinez, Alexandre S.&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/MhhLnLvBcRvGQCrCPF39vqy/?lang=en">English</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172013000200004&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172013000200004" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172013000200004">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172013000200004" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172013000200004">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172013000200004"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172013000200004" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172013000200004">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000200004" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Boundary element method and simulated annealing algorithm applied to electrical impedance tomography image reconstruction
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000200004">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

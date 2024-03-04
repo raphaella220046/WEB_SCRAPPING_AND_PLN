@@ -1,0 +1,2093 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z"/>
+<meta property="og:description" content="Resumo Neste trabalho vamos abordar uma nova tecnologia, de baixo custo, de controle de motor de..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Romero, André L. S.">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-9982-8171">
+        <meta name="citation_author" content="Barbano, Emerson C.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Paraná">
+        
+        <meta name="citation_author" content="Misoguti, Lino">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="41"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2019-0018"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Resumo Neste trabalho vamos abordar uma nova tecnologia, de baixo custo, de controle de motor de passo via computador, a qual pode ser utilizada para movimentação de amostras. Mais especificamente, desenvolvemos um sistema de controle usando o módulo eletrônico comercial L298, que evita o uso de um circuito eletrônico tradicional complexo de múltiplos componentes discretos. Ademais, utilizamos um motor de passo acoplado em um estágio de translação para um experimento de óptica não linear de varredura-Z (Z-scan) em que se faz necessário o deslocamento preciso de amostras. Tanto para o controle de motor de passo quanto aquisição de dados, foi utilizado o dispositivo myDAQ, fabricado pela empresa National Instruments, que é um dispositivo de multifunções versátil e de custo não tão elevado que pode ser conectado ao computador via porta de comunicação USB. Neste trabalho estamos utilizando a linguagem de programação visual LabVIEW e estamos disponibilizando para download os programas necessários para a movimentação do motor de passo. Os circuitos descritos são de simples e fácil montagem, podendo ser úteis para estudantes, alunos de iniciação científica, técnicos de laboratório e até mesmo para pesquisadores formados."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2019-04-18"></meta>
+<meta name="citation_keywords" content="Labview"></meta><meta name="citation_keywords" content="L298"></meta><meta name="citation_keywords" content="Motor de Passo"></meta><meta name="citation_keywords" content="myDAQ"></meta><meta name="citation_keywords" content="Varredura-Z"></meta><meta name="citation_keywords" content="Espectroscopia"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2019.v41n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2019.v41n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172019000400403 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 41 
+                (4)
+            <span class="_separator"> • </span>2019</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2019-0018" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2019-0018</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0018"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Computerized system for sample displacement with stepper motor using the L298: application in the Z-scan technique</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> André L. S. Romero </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil<div class="corresp">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:andretec@ifsc.usp.br">andretec@ifsc.usp.br</a>.</div>
+<a href="http://orcid.org/0000-0001-9982-8171" class="btnContribLinks orcid">http://orcid.org/0000-0001-9982-8171</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Emerson C. Barbano </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade Federal do Paraná, Centro Politécnico, Departamento de Física, Curitiba, PR, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Lino Misoguti </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumo">
+<h1 class="articleSectionTitle">Resumo</h1>
+<p>Neste trabalho vamos abordar uma nova tecnologia, de baixo custo, de controle de motor de passo via computador, a qual pode ser utilizada para movimentação de amostras. Mais especificamente, desenvolvemos um sistema de controle usando o módulo eletrônico comercial L298, que evita o uso de um circuito eletrônico tradicional complexo de múltiplos componentes discretos. Ademais, utilizamos um motor de passo acoplado em um estágio de translação para um experimento de óptica não linear de varredura-<i>Z</i> (<i>Z</i>-<i>scan</i>) em que se faz necessário o deslocamento preciso de amostras. Tanto para o controle de motor de passo quanto aquisição de dados, foi utilizado o dispositivo myDAQ, fabricado pela empresa <i>National Instruments,</i> que é um dispositivo de multifunções versátil e de custo não tão elevado que pode ser conectado ao computador via porta de comunicação USB. Neste trabalho estamos utilizando a linguagem de programação visual <i>LabVIEW</i> e estamos disponibilizando para download os programas necessários para a movimentação do motor de passo. Os circuitos descritos são de simples e fácil montagem, podendo ser úteis para estudantes, alunos de iniciação científica, técnicos de laboratório e até mesmo para pesquisadores formados.</p>
+<p><strong>Palavras-chave:</strong><br>Labview; L298; Motor de Passo; myDAQ; Varredura-Z; Espectroscopia</p>
+</div>
+<div class="articleSection" data-anchor="Abstract">
+<h1 class="articleSectionTitle">Abstract</h1>
+<p>In this work, we show up a new technology of low-cost stepper motor control via computer, that can be used for moving samples. More specifically, we developed a control system using the commercial electronic module L298, which avoids the use of a complex traditional electronic circuit of multiple discrete components. In addition, we used a stepper motor coupled in a translation stage for a nonlinear optics experiment, Z-scan, in which the precise displacement of samples is required. For both the stepper motor control and data acquisition we used the myDAQ device, which is manufactured by National Instruments and, it is a versatile multifunction and not-so-high cost device that can be connected to the computer via USB communication port. In this work we are using the visual programming language LabVIEW and we are making available for download the necessary programs for the movement of the stepper motor. The circuits described are simple and easy to assemble and may be useful for students, undergrad researchers, laboratory technicians and even for trained researchers.</p>
+<p><strong>Keywords:</strong><br>Labview; L298; Stepper Motor; myDAQ; Z-scan; Spectroscopy</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>Em um grande número de experimentos na área de física, se faz o uso de dispositivos eletromecânicos para movimentação de amostras e módulos de multifunções para aquisição de dados. Neste sentido, para se manter um laboratório de pesquisa moderno, sua constante atualização com novas tecnologias é essencial. Para isso o domínio e entendimento do funcionamento dos dispositivos de aquisição de dados e módulos de controle de motores de passo são muito importantes. Atualmente, o desenvolvimento tecnológico tem permitido um melhor interfaceamento de módulos de multifunções e novos programas de computador mais amigáveis e intuitivos que podem ser constantemente atualizados e modernizados.</p>
+      <p>Para este trabalho, apresentamos uma nova tecnologia de baixo custo para interfaceamento de experimentos assistidos por computador utilizando o módulo de multifunções myDAQ <span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] National Instruments, myDAQ - Dispositivo de aquisição de dados para estudantes, disponível em http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166, acessado em 20/10/2018.</span><br><a href="http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166" target="_blank">http://www.ni.com/en-us/shop/select/myda...
+            </a></span></span>, da empresa <i>National Instruments</i>, que está disponível no Brasil para compra <i>online</i> e com desconto para professores e alunos universitários <span class="ref"><strong class="xref xrefblue">[2]</strong><span class="refCtt closed"><span>[2] http://brasil.ni.com/academia/mydaq, acessado em 20/10/2018.</span><br><a href="http://brasil.ni.com/academia/mydaq" target="_blank">http://brasil.ni.com/academia/mydaq...
+            </a></span></span>. Este é um dispositivo de multifunções que possui diversas funcionalidades e tem <i>LabVIEW</i> como linguagem base de programação. Com uma linguagem visual de programação poderosa e intuitiva, diferente das outras linguagens textuais, <i>LabVIEW</i> utiliza ícones gráficos que são conectados utilizando fios em um diagrama, que faz com que os dados sejam transmitidos e analisados seguindo um fluxo. Não diferente de outras linguagens, <i>LabVIEW</i> possui vários tipos de dados, laços de controle (<i>loop</i>), construção de sub-rotinas (Sub <i>VI</i>s), programação por tratamento de eventos e uma vasta gama de funções matemáticas e de controle de fluxo. Esta é uma linguagem de programação de alto nível, tendo assim uma maior facilidade na programação de tarefas repetitivas. Ela é utilizada amplamente pelas universidades nos laboratórios de pesquisa e nas indústrias na área de automação e controle de processos.</p>
+      <p>O uso de motores de passo para movimentação de amostra nos proporciona o controle preciso de sua posição e velocidade. Por isso, utilizaremos um motor de passo bipolar, que possibilita uma resolução de 1,8 graus por passo. Trata-se de um motor de baixo custo que pode ser adquirido <i>online</i> por um preço médio de US$ 15,00. Para o controle de corrente desse motor, utilizamos um módulo comercial de controle de alta corrente L298 <span class="ref"><strong class="xref xrefblue">[3]</strong><span class="refCtt closed"><span>[3] http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF, acessado em 11/01/2019.</span><br><a href="http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF" target="_blank">http://www.dx.com/p/lson-l298n-stepper-m...
+            </a></span></span>, que também pode ser adquirido <i>online</i>, e seu preço médio é de US$ 5,00.</p>
+    
+      <h1 class="articleSectionTitle">2. Detalhes sobre motores de passo</h1>
+      <p>Motores de passo são atuadores eletromecânicos que convertem um sinal digital pulsado em um movimento mecânico discreto (incremental), são amplamente utilizados em aplicações de controle industrial, robótica e instrumentação eletrônica. São motores DC, mas com a possibilidade de se controlar sua velocidade, direção e ângulo com extrema precisão. Com a tecnologia atual, podemos subdividir os passos de um motor em micro passos (<i>microstepping</i>), conferindo assim maior precisão no movimento <span class="ref"><strong class="xref xrefblue">[4]</strong><span class="refCtt closed"><span>[4] Wikipedia, Stepper motor, disponível em https://en.wikipedia.org/wiki/Stepper_motor, acessado em 20/10/2018.</span><br><a href="https://en.wikipedia.org/wiki/Stepper_motor" target="_blank">https://en.wikipedia.org/wiki/Stepper_mo...
+            </a></span></span>. Porém, para utilizar esta tecnologia, temos que utilizar um circuito integrado mais sofisticado e vários outros componentes discretos montados em uma placa de circuito, deixando o projeto mais complexo para a montagem e também aumentando seu custo. Neste trabalho não vamos nos aprofundar na construção dos motores de passo, e seus diversos tipos, já que estes estão bem documentados <span class="ref"><strong class="xref xrefblue">[5]</strong><span class="refCtt closed"><span>[5] A3967 Microstepping driver with translator, disponível em https://www.sparkfun.com/datasheets/Robotics/A3967.pdf.</span><br><a href="https://www.sparkfun.com/datasheets/Robotics/A3967.pdf" target="_blank">https://www.sparkfun.com/datasheets/Robo...
+            </a></span></span>. O que vamos abordar neste artigo são conceitos necessários para se entender o funcionamento eletrônico dos motores e informações de métodos de acionamento das bobinas para que se obtenha o adequado funcionamento.</p>
+      <p>Os motores de passo são encontrados em dois tipos: <i>unipolar</i> e <i>bipolar</i><span class="ref"><strong class="xref xrefblue">[6]</strong><span class="refCtt closed"><span>[6] Desenvolvimento de um Controle para Motores de Passo, disponível em http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf.</span><br><a href="http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf" target="_blank">http://www.fotonica.ifsc.usp.br/pdfs/201...
+            </a></span></span>.</p>
+      <p><b><i>-</i> motor <i>unipolar:</i></b> Este tipo de motor possui 5 fios (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1-A</a>), sendo dois conjuntos de bobinas com uma derivação central (<i>tap</i>) em cada bobina. Este tipo apresenta como característica o fato de ter um torque menor, devido à energização da metade de cada bobina por vez.</p>
+      <p><b><i>-</i> motor <i>bipolar</i>:</b> possui quatro fios, sendo dois conjuntos de bobinas (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1-B</a>). Esse tipo tem maior torque, justamente por energizar cada bobina por inteiro. Contudo, para este tipo de motor há a necessidade de se inverter o sentido da corrente de cada bobina em um determinado instante. Sendo assim necessário o uso de um circuito mais sofisticado para a inversão da corrente.</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Esquema de ligação das bobinas dos motores de passo. A) Motor Unipolar, possui 5 fios; B) Motor Bipolar, possui 4 fios.
+        <br>
+</div>
+</div>
+      <p>Neste trabalho vamos utilizar motores do tipo bipolar (4 fios). Os motores unipolares (5 ou 6 fios) também podem ser utilizados como bipolares, bastando para isso apenas isolar os dois <i>tap</i>s centrais de cada bobina.</p>
+      <p>As configurações mais comuns são motores de passo que dão um giro de uma volta completa (360°) em 200 passos, com uma resolução de 1,8 graus por passo, e existem ainda aqueles com menor precisão que utilizam 48 passos por volta, resultando em uma resolução de 7,5 graus por passo.</p>
+      <p>Para o movimento contínuo do motor de passo, temos que energizar as bobinas seguindo uma sequência apropriada. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>, temos o esquema das bobinas dos motores, e seus terminais de ligação elétrica. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a> podemos observar as tabelas com a sequência de acionamento das bobinas. São apresentadas duas tabelas, sendo uma para movimentar o motor no modo de passo inteiro (<i>full-step</i>), o qual tem que andar 200 passos para poder percorrer uma volta completa do eixo, e outra tabela correspondendo ao modo de meio passo (<i>half-step</i>), que proporciona uma resolução maior do motor, que, neste caso, tem que andar 400 passos para percorrer uma volta completa.</p>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Tabela com a sequência de acionamento das bobinas para o caso do motor bipolar. Na parte superior temos a tabela para passo completo (<i>full-step</i>) e na parte inferior temos a tabela para meio passo (<i>half-step</i>).
+        <br>
+</div>
+</div>
+      <p>Podemos observar na tabela que existem dois fluxos no sentido da corrente. Essa inversão na corrente só é possível utilizando um circuito de controle mais sofisticado - neste trabalho utilizamos o <i>drive</i> de corrente <i>L298</i>, um circuito versátil que possui essa capacidade de inversão de corrente.</p>
+      <p>O que temos na tabela são as sequências de acionamento das bobinas dos motores. Observamos então que nos terminais 1a,1b da bobina 1, hora fica com o fluxo da corrente positivo (TF) e outra hora fica com o fluxo da corrente negativo (FT), fazendo assim a inversão da corrente.</p>
+    
+      <h1 class="articleSectionTitle">3. Instruções de Montagem</h1>
+      <p>Apresentamos aqui a montagem do controle de motor de passo. Para a montagem deste projeto (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3</a>) temos apenas duas pequenas placas de circuitos dispostas em uma caixa plástica (46 x 87 x 98 mm). Uma das placas é o módulo de corrente L298, e a outra uma pequena fonte de tensão do tipo chaveada bi-volt, a qual fornece uma tensão de saída de 12 volts e corrente de até 1 ampere.</p>
+      <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          Fotografia da montagem, na esquerda temos a fonte de tensão de 12 volts e a direita o módulo de corrente L298.
+        <br>
+</div>
+</div>
+      <p>Para a conexão entre o modulo de corrente e o módulo de aquisição de dados (myDAQ), usamos conectores do tipo DB9 (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. 4</a>), que é um padrão adotado em nosso laboratório para conexão dos módulos. Outro conector DB9 é utilizado para o motor de passo. Na parte traseira temos um interruptor para ligar a fonte de alimentação. Outros tipos de conectores podem ser utilizados respeitando a necessidade do uso de até 5 fios ativos para o caso de motores unipolares.</p>
+      <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+          Fotografia da caixa finalizada com um conector DB-9 para o motor de passo e outro para o módulo de aquisição de dados (myDAQ).
+        <br>
+</div>
+</div>
+      <p>É importante lembrar que a ligação entre o módulo de corrente e o módulo de aquisição de dados (myDAQ) se faz com baixa tensão, usando padrão <b>TTL</b> (5 volts), que é o padrão dos sistemas digitais. Por outro lado, a ligação do controle do motor de passo ao motor, se faz usando uma tensão de 12 volts de alta corrente, com isso temos um isolamento da parte de alta corrente do motor de passo com o computador.</p>
+    
+      <h1 class="articleSectionTitle">4. Conexão entre os módulos</h1>
+      <p>Para a conexão entre os módulos, conectamos os terminais <b>IN1</b> ao <b>IN4</b> do módulo <b>L298</b> aos pinos <b>0</b> à <b>3</b> do módulo <b>myDAQ,</b> juntamente com o terra (GND) entre os módulos, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Fig. 5</a>, de forma que apenas quatro linhas digitais do módulo de aquisição são utilizadas. Para a fonte de alimentação de <b>12</b> volts, utilizamos um eliminador de pilha de <b>1</b> ampere, para poder suprir a corrente necessária para acionamento do motor de passo.</p>
+      <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+          Diagrama de conexão entre o módulo de aquisição e o módulo de corrente.
+        <br>
+</div>
+</div>
+      <p>Podemos observar no diagrama esquemático (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Fig. 5</a>) as ligações elétricas entre os módulos. Utiliza-se poucos fios, o que torna a montagem e compreensão deste circuito bastante simples.</p>
+    
+      <h1 class="articleSectionTitle">5. Módulo de corrente (L298)</h1>
+      <p>Este módulo consiste de uma placa de circuito de aproximadamente 4,5 cm x 4,5 cm (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Fig. 6</a>), com a parte de potência em um único circuito integrado, possui terminais de conexão, os quais facilitam muito a ligação com outros módulos. Internamente possui dois circuitos em <b>ponte H</b>, possibilitando a ligação de cargas de até <b>35 volts</b> e correntes de até <b>4 amperes</b>. Circuitos em <b>ponte H</b> são muito utilizados para controle de motores, devido à sua característica de inverter o sentido da corrente que passa pelas bobinas dos motores de passo, podendo assim executar a sequência correta de acionamento das bobinas do motor de passo. O chip possui um dissipador de calor, evitando sobreaquecimento. Estes módulos possuem um baixo custo (US$ 5,00) e são de fácil aquisição <span class="ref"><strong class="xref xrefblue">[3]</strong><span class="refCtt closed"><span>[3] http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF, acessado em 11/01/2019.</span><br><a href="http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF" target="_blank">http://www.dx.com/p/lson-l298n-stepper-m...
+            </a></span></span>.</p>
+      <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+          Módulo de corrente L298 para controle de motores de passo.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">6. Detalhes sobre ponte H</h1>
+      <p>O circuito denominado ponte H é amplamente utilizado em projetos de robótica, mecatrônica e automação. Este circuito é utilizado quando há a necessidade de controlar o sentido de rotação em um motor de corrente continua (DC). O sentido de rotação de um motor DC se dá justamente pelo sentido da circulação da corrente que passa através de seu enrolamento, ao inverter o sentido da corrente, também invertemos o sentido de rotação do motor. No projeto aqui abordado, a utilização da ponte H é adequada, pois, para movimentar o motor de passo, temos a necessidade de inverter o sentido da corrente nas bobinas num determinado instante, como foi visto na tabela da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a>, o fluxo da corrente muda entre positivo e negativo ao longo da tabela, o que resulta em um movimento contínuo e uniforme do motor de passo.</p>
+      <p>Para demonstrar o funcionamento da ponte H, temos na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Fig.7</a> a representação esquemática de apenas uma das duas utilizadas em nosso sistema, onde podemos observar quatro transistores bipolares e também, na parte central, uma das duas bobinas do motor de passo. O nome ponte H vem justamente da semelhança da letra H com disposição dos quatro transistores e na parte central uma bobina conectando os dois lados.</p>
+      <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+          Quando nenhum transistor está acionado, a bobina está sem fluxo de corrente. Quando os transistores Q1 e Q4 estão acionados, o fluxo de corrente está no sentido indicado pela seta na cor azul (seta cheia). Quando os transistores Q2 e Q3 estão acionados, o fluxo de corrente flui no sentido contrário, indicado pela seta na cor verde (seta tracejada).
+        <br>
+</div>
+</div>
+      <p>O funcionamento de uma ponte H é bem simples, temos que entender que os transistores bipolares funcionam como chaves que ligam e desligam o circuito. Ao dizer para o controle lógico que devemos ligar os transistores (chaves) Q1 e Q4, estamos fechando o circuito no qual o fluxo de corrente está sendo demonstrada com a seta na cor azul (seta cheia), no diagrama esquemático esta seta está no sentido da esquerda para a direita. Para a inversão do sentido da corrente, temos que desligar os transistores Q1 e Q4 e então ligar os outros dois transistores, Q2 e Q3. O sentido da corrente passa pela bobina do motor de passo em outro sentido, indicado pela seta na cor verde (seta tracejada), no diagrama esquemático esta seta está no sentido da direita para a esquerda. Para esta representação esquemática do fluxo da corrente nos transistores estamos utilizando o modelo de corrente convencional, o qual a corrente flui no sentido do terminal positivo (VCC) da alimentação até o terminal negativo (terra).</p>
+      <p>O diagrama interno do circuito de corrente L298 é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a>. Podemos observar nos detalhes <span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] L298 Dual full-bridge driver, disponível em https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+				</span><br><a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf" target="_blank">https://www.sparkfun.com/datasheets/Comp...
+            </a></span></span> que temos duas pontes H, ambas com a parte central conectada aos pinos de saída do circuito integrado. Uma, ponte H (A), com a parte central conectada aos pinos 2 e 3 e a outra, ponte H (B), aos pinos 13 e 14. Os circuitos que vemos no diagrama de bloco são circuitos lógicos de controle, estas portas lógicas protegem o circuito impedindo que os pares de transistores Q1;Q4 e Q2;Q3 sejam acionados simultaneamente. Se isso acontecer, estaríamos ligando a alimentação (VCC) diretamente ao terra, ocasionando um curto circuito.</p>
+      <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+          Diagrama interno do circuito de controle de corrente L298. Nos detalhes temos a as duas pontes H, onde podemos observar que na parte central da ponte estão ligados os pinos 2 e 3 para a ponte A e os pinos 13 e 14 para a ponte B. Fonte: Adaptado de <span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] L298 Dual full-bridge driver, disponível em https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+				</span><br><a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf" target="_blank">https://www.sparkfun.com/datasheets/Comp...
+            </a></span></span>.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">7. Dispositivo de aquisição (myDAQ)</h1>
+      <p>Este dispositivo de aquisição e controle nos permite realizar interfaceamento de vários experimentos ao computador através da porta de comunicação USB, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Fig. 9</a>, proporcionando aquisição de sinais analógicos (<i>A/D</i>) com resolução de <b>16 bits</b> e taxa amostral de <b>200 kS/s</b>, também possui <b>8</b> linhas de entrada e saída digitais (<i>I/O</i>) no padrão <b>TTL</b>, sendo estas as que vamos utilizar para conexão ao módulo de corrente <b>L298</b>. O dispositivo é um módulo versátil que também possui duas saídas analógicas (<i>D/A</i>), às quais nos possibilitam sintetizar sinais analógicos tais como ondas senoidais, triangulares, dente de serra, entre outros, podendo assim ser utilizado também como um gerador de funções.</p>
+      <div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 9</strong><br>
+          Módulo de aquisição myDAQ da empresa <i>National Instruments</i>, conectado ao computador via USB. Possui conector lateral com várias saídas digitais e entradas analógicas.
+        <br>
+</div>
+</div>
+      <p>Este módulo de multifunções possui muitas outras funcionalidades <span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] National Instruments, myDAQ - Dispositivo de aquisição de dados para estudantes, disponível em http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166, acessado em 20/10/2018.</span><br><a href="http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166" target="_blank">http://www.ni.com/en-us/shop/select/myda...
+            </a></span></span>, permitindo sua utilização em diversas atividades na área de instrumentação e automação eletrônica como também em experimentos e pesquisas de física.</p>
+    
+      <h1 class="articleSectionTitle">8. Programa para controle dos motores</h1>
+      <p>O programa de controle do sistema foi desenvolvido utilizando a linguagem gráfica de programação <i>LabVIEW</i>, da empresa <i>National Instruments</i>, devido à sua simplicidade e programação intuitiva. É uma linguagem de alto nível, que utiliza como conceito principal o fluxo de dados. <i>LabVIEW</i> permite o desenvolvimento de algoritmos de forma simples, utilizando apenas ícones e elementos gráficos para representação de comunicação entre o computador e a interface de aquisição. O programa que apresentamos contém as tabelas com a sequência de acionamento das bobinas do motor de passo, a qual faz o motor girar de forma contínua e controlada. Como podemos observar na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Fig. 10</a>, temos duas tabelas, uma tabela de passo inteiro (<i>full step</i>), e outra de meio passo (<i>half step</i>).</p>
+      <div class="row fig" id="f10">
+<a name="f10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 10</strong><br>
+          Tela do subprograma para controle do motor de passo (Motor-L298.vi), temos as tabelas com a sequência de acionamento das bobinas do motor de passo.
+        <br>
+</div>
+</div>
+      <p>O intuito de fazer essa parte do controle de acionamento do motor, dentro da programação em <i>LabVIEW</i>, é de justamente deixar o circuito o mais simples possível, não havendo a necessidade de componentes adicionais, como um microcontrolador contendo toda esta lógica de tabelas e controle de acionamento das bobinas do motor de passo. O fato de não utilizar um microcontrolador no projeto, permite diminuir os custos e também deixar o projeto muito mais simples. Todos os arquivos e programas desenvolvidos neste artigo estão disponíveis no repositório Github https://github.com/andretec/Stepper-motor-L298-myDAQ).</p>
+      <p>Sendo <i>LabVIEW</i> uma linguagem modular, o que fazemos é utilizar o programa da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Fig. 10</a> (Motor-L298) como um subprograma (sub VI) dentro do programa principal. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf11"><span class="sci-ico-fileFigure"></span>Fig. 11</a> temos o painel frontal (<i>Front Panel</i>), sendo esta a interface do usuário, onde o usuário entra com as informações como número de passos, tempo entre passos e sentido de rotação do motor. O painel frontal nos permite colocar componentes visuais de entrada de valores, tais como botões e componentes de entrada de números, além de também poder colocar indicadores que se assemelham à luzes (LEDs). Com um visual claro e intuitivo através deste painel faz-se a interação com o usuário.</p>
+      <div class="row fig" id="f11">
+<a name="f11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 11</strong><br>
+          Tela do painel frontal do programa do motor de passo (Motor-L298.vi)
+        <br>
+</div>
+</div>
+      <p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf12"><span class="sci-ico-fileFigure"></span>Fig. 12</a> apresentamos a tela do diagrama de blocos (<i>Block Diagram</i>) do programa teste (<i>test – Motor.vi</i>). Nesta parte do programa é onde fazemos a ligação dos blocos e componentes. O programa é bem simples, possui um laço infinito no qual a tarefa executada termina somente com a intervenção do usuário clicando no botão “<i>stop</i>”. O programa de controle está ao centro deste laço (ícone Motor L298) e nele estão definidos uma constante de 200 passos, que está ligada ao terminal “<i>number of steps</i>”, e um terminal de controle que está ligado ao “<i>time between steps</i>”, que define o intervalo de tempo entre os passos. Estão ligados ainda o terminal onde definimos os pinos de saída da placa de aquisição e também o terminal de sentido de rotação do motor de passo. Observe que existe uma constante ligada fora do laço, está definida inicialmente como “<i>false</i>” (F) e ao longo do programa esta variável muda seu valor para “<i>true</i>” (T), isto se dá através do componente de inversão digital conectado logo em seguida na linha verde.</p>
+      <div class="row fig" id="f12">
+<a name="f12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 12</strong><br>
+          Diagrama do programa de teste do controle do motor de passo (test – Motor.vi)
+        <br>
+</div>
+</div>
+      <p>Essa linha verde indica um sinal do tipo booleano (<i>true/false</i>), ela está conectada ao terminal de sentido de rotação do motor de passo. O programa então funciona girando o motor de passo por uma volta completa em um sentido e depois fazendo o mesmo em outra direção, e faz isso indefinidamente.</p>
+    
+      <h1 class="articleSectionTitle">9. Aplicação</h1>
+      <p>São várias as aplicações deste sistema para controle de motores de passo. Essas aplicações vão desde sistemas de microfabricação até técnicas de caracterização óptica não linear ou qualquer outro experimento que envolva um deslocamento controlado de uma amostra, espelho, monocromador, etc. Aqui apresentamos como aplicação uma medida de varredura-<i>Z</i>, onde a movimentação da amostra foi realizada com o sistema que desenvolvemos. Escolhemos a técnica de varredura-<i>Z</i> por ser simples e amplamente utilizada na área de óptica não linear.</p>
+    
+      <h1 class="articleSectionTitle">10. Técnica de varredura-Z</h1>
+      <p>A técnica de varredura-<i>Z</i> (<i>Z-scan tecnique</i><span class="ref"><strong class="xref xrefblue">[8]</strong><span class="refCtt closed"><span>[8] M. Sheik-Bahae, A.A. Said, T. Wei, D. Hagan e E.W. van Stryland, IEEE J. Quantum Electronics 26, 760 (1990).</span></span></span>) é uma técnica bastante utilizada para medir-se propriedades ópticas não lineares de amostras sólidas e líquidas. Um trabalho didático que contém mais informações a respeito pode ser encontrado na referência <span class="ref"><strong class="xref xrefblue">[9]</strong><span class="refCtt closed"><span>[9] C.R. Mendonça, L. Misoguti, F.F. Dall' Agnol e S.C. Zilio, Revista Brasileira de Ensino de Física, 21, 272 (1999).</span></span></span>. Nesta técnica a amostra desloca-se ao longo do eixo de propagação (considerado como sendo o eixo <i>Z</i>, daí o nome varredura-<i>Z</i>) de um feixe laser focalizado, passando pelo ponto focal, veja <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf13"><span class="sci-ico-fileFigure"></span>Fig. 13</a>. Se a intensidade do laser for suficientemente alta, nas proximidades do ponto focal, vemos que a amostra passa a comportar-se como uma lente e este efeito de lente induzida é um efeito óptico não linear. Basicamente, um meio óptico não linear trans parente apresenta a seguinte expressão para o índice de refração:</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <msub>
+              <mi>n</mi>
+              <mn>0</mn>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>n</mi>
+              <mn>2</mn>
+            </msub>
+            <mi>I</mi>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>em que <math><mrow><msub><mi>n</mi><mtext>0</mtext></msub></mrow></math> é o índice de refração linear, <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub></mrow></math> o índice de refração não linear e <i>I</i> a irradiância. Sendo assim, para situações em que <i>I</i> é relativamente pequeno, o termo <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub><mi>I</mi></mrow></math> é desprezível e o índice de refração do material pode ser tido como sendo igual ao índice de refração linear, <math><mrow><msub><mi>n</mi><mtext>0</mtext></msub></mrow></math>. Porém, para valores suficientemente altos de <i>I</i>, o efeito não linear torna-se significativo e pode-se observar então o efeito de lente induzida. Isso ocorre porque se considerarmos o perfil transversal de irradiância do feixe laser como sendo Gaussiano, podemos dizer que o termo <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub><msub><mi>I</mi><mtext>
+							</mtext></msub></mrow></math> também comporta-se como uma Gaussiana, apresentando valor máximo no centro do feixe e diminuindo para as bordas. Isso leva a uma variação no índice de refração efetivo <i>n</i>, veja equação (1). Esta variação no índice de refração faz com que o material se comporte como uma lente convergente (caso <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub></mrow></math> seja positivo) ou divergente (caso <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub></mrow></math> seja negativo).</p>
+      <div class="row fig" id="f13">
+<a name="f13"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 13</strong><br>
+          Aparato experimental da técnica de varredura-<i>Z</i>.
+        <br>
+</div>
+</div>
+      <p>No experimento mede-se, com um fotodetector, a potência transmitida por uma íris (abertura) posicionada após a amostra, como indicado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf13"><span class="sci-ico-fileFigure"></span>Fig. 13</a>. Para o caso em que <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub></mrow></math> é positivo, ao movermos a amostra em direção ao foco (<i>z</i> =0), ela passa a se comportar como uma lente convergente. Assim, quando a amostra está na região pré-foco (<i>z</i>&lt;0), ela causa um aumento na divergência do feixe na posição da íris, diminuindo a magnitude do sinal coletado pelo fotodetector, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf14"><span class="sci-ico-fileFigure"></span>Fig. 14 (a)</a>. Por outro lado, quando a amostra está na região pós-foco (<i>z</i>&gt;0), ela diminui a divergência do feixe na posição da íris, aumentando assim o sinal coletado pelo fotodetector, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf14"><span class="sci-ico-fileFigure"></span>Fig. 14 (b)</a>.</p>
+      <div class="row fig" id="f14">
+<a name="f14"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 14</strong><br>
+          Caso <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub><mo>&gt;</mo><mn>0</mn></mrow></math>. a) amostra antes do foco. b) amostra depois do foco. A linha contínua indica o traçado do feixe no caso em que não há efeito não linear. A linha tracejada indica a mudança na divergência do feixe causada pelo efeito não linear que ocorre devido à interação do laser com a amostra.
+        <br>
+</div>
+</div>
+      <p>Em uma curva típica de varredura-<i>Z</i>, a potência transmitida pela íris para cada posição <i>z</i> de varredura da amostra, <math><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math>, é dividida pela potência transmitida quando a amostra está distante do foco, <math><mrow><mi>P</mi><mo stretchy="false">(</mo><msub><mi>z</mi><mi>∞</mi></msub><mo stretchy="false">)</mo></mrow></math>, onde os efeitos não lineares não estão presentes, de forma que a contribuição dos efeitos lineares é eliminada. Assim, obtemos uma quantidade <math><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math>/<math><mrow><mi>P</mi><mo stretchy="false">(</mo><msub><mi>z</mi><mi>∞</mi></msub><mo stretchy="false">)</mo></mrow></math> que é denominada de transmitância normalizada.</p>
+      <p>A curva apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf15"><span class="sci-ico-fileFigure"></span>Fig. 15</a> com um vale na região pré-foco seguido de um pico na região pós-foco é um típico sinal de varredura-<i>Z</i> para o caso de uma não linearidade refrativa positiva, <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub><mo>&gt;</mo><mn>0</mn></mrow></math>. Uma curva inversa é obtida para o caso em que <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub><mo>&lt;</mo><mn>0</mn></mrow></math>, ou seja, um pico pré-foco seguido de um vale pós-foco. Os extremos da transmitância normalizada, ou seja, os valores de vale e pico dependem do valor de <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub></mrow></math>. Essencialmente, <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub></mrow></math> é proporcional à diferença entre a transmitância normalizada no pico e no vale, <math><mrow><mi>Δ</mi><msub><mi>T</mi><mrow><mi>p</mi><mi>v</mi></mrow></msub></mrow></math>.</p>
+      <div class="row fig" id="f15">
+<a name="f15"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 15</strong><br>
+          T(z) em função da posição da amostra, <math><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>&gt;</mo><mn>0</mn></mrow></math>.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">11. Medida experimental utilizando o novo sistema</h1>
+      <p>Para o nosso teste, preparamos uma solução de DR13 (<i>Disperse Red</i> 13) em que usamos metanol como solvente. Como fonte de luz foi utilizado um feixe de laser contínuo em <math><mrow><mi>λ</mi><mtext>
+						</mtext><mo>=</mo><mtext>
+						</mtext><mn>532</mn></mrow></math> nm de um laser de Nd:YVO<math><mrow><msub><mrow></mrow><mtext>4</mtext></msub></mrow></math> bombeado por diodos, dobrado em frequência. A focalização do feixe foi feita com uma lente convergente com distância focal de 5 cm (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf17"><span class="sci-ico-fileFigure"></span>Fig. 17</a>) e a transmitância foi coletada em um detector de silício (PIN). Realizamos o deslocamento da amostra com o controle de motor de passo desenvolvido neste projeto. Podemos observar na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf17"><span class="sci-ico-fileFigure"></span>Fig. 17</a> que o estágio de translação está acoplado ao motor de passo através de uma correia dentada. A configuração mecânica do sistema de translação desloca 0,26 mm com 80 passos na configuração passo-completo (<i>full step</i>) ou 0,13 mm na configuração meio-passo (<i>half step</i>). Aqui realizamos o experimento no sistema de passo-completo. O resultado obtido é apresentado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf16"><span class="sci-ico-fileFigure"></span>Fig. 16</a>, em que nota-se claramente uma curva característica de uma não linearidade negativa (pico na região pré-foco seguido de um vale na região pós-foco). Este sinal negativo da não linearidade está associado à origem térmica do efeito não linear medido em nosso experimento e, neste caso, o material comporta-se como uma lente divergente.</p>
+      <div class="row fig" id="f16">
+<a name="f16"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf16"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 16</strong><br>
+          T(z) para uma amostra de DR13. O deslocamento em <i>Z</i> foi realizado com o controle de motor de passo desenvolvido com módulo L298.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="f17">
+<a name="f17"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf17"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 17</strong><br>
+          Foto do estágio de translação com o suporte de amostra na montagem do experimento de varredura-<i>Z</i>.
+        <br>
+</div>
+</div>
+      <p>Com os dados da curva experimental e as expressões teóricas da técnica de varredura-<i>Z</i>, ver referência <span class="ref"><strong class="xref xrefblue">[9]</strong><span class="refCtt closed"><span>[9] C.R. Mendonça, L. Misoguti, F.F. Dall' Agnol e S.C. Zilio, Revista Brasileira de Ensino de Física, 21, 272 (1999).</span></span></span>, é possível obter parâmetros do feixe como cintura, comprimento Rayleigh e também irradiância (desde que se saiba o valor da potência do feixe na amostra), além do valor do índice de refração não linear, <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub></mrow></math>, do material. Não apresentamos estes cálculos, pois foge da proposta deste trabalho. Nosso objetivo principal aqui foi mostrar a parte eletrônica de controle de motor de passo utilizando o L298 e sua interligação com um computador.</p>
+    
+      <h1 class="articleSectionTitle">12. Conclusão</h1>
+      <p>Em resumo, o intuito deste trabalho foi mostrar que é possível simplificar a construção de um controle de motores de passo com o uso do L298. O uso deste componente eletrônico único evita a construção de circuitos eletrônicos mais complicados e complexos com microcontroladores e vários transistores de potência montados em uma placa de circuitos. Ademais, mostramos também o uso de um módulo de aquisição de dados mais simples (myDAQ) e linguagem LabVIEW com interfaces amigáveis para um experimento de varredura-<i>Z</i>, em que se utiliza um motor de passo para translação de amostras.</p>
+    </div>
+<div class="articleSection" data-anchor="Agradecimentos">
+<h1 class="articleSectionTitle">Agradecimentos</h1>
+      
+      <p>Gostaríamos de agradecer ao Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), à Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) pelo suporte financeiro, ao Instituto de Física de São Carlos e ao Grupo de Fotônica pela infraestrutura necessária para o desenvolvimento deste projeto.</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> National Instruments, <i>myDAQ - Dispositivo de aquisição de dados para estudantes</i>, disponível em http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166, acessado em 20/10/2018.<br><a href="http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166" target="_blank">» http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> http://brasil.ni.com/academia/mydaq, acessado em 20/10/2018.<br><a href="http://brasil.ni.com/academia/mydaq" target="_blank">» http://brasil.ni.com/academia/mydaq</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF, acessado em 11/01/2019.<br><a href="http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF" target="_blank">» http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> Wikipedia, <i>Stepper motor</i>, disponível em https://en.wikipedia.org/wiki/Stepper_motor, acessado em 20/10/2018.<br><a href="https://en.wikipedia.org/wiki/Stepper_motor" target="_blank">» https://en.wikipedia.org/wiki/Stepper_motor</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> <i>A3967 Microstepping driver with translator</i>, disponível em https://www.sparkfun.com/datasheets/Robotics/A3967.pdf<br><a href="https://www.sparkfun.com/datasheets/Robotics/A3967.pdf" target="_blank">» https://www.sparkfun.com/datasheets/Robotics/A3967.pdf</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> <i>Desenvolvimento de um Controle para Motores de Passo</i>, disponível em http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf<br><a href="http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf" target="_blank">» http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> <i>L298 Dual full-bridge driver</i>, disponível em https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+				<br><a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf" target="_blank">» https://www.sparkfun.com/datasheets/Components/General/L298N.pdf</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> M. Sheik-Bahae, A.A. Said, T. Wei, D. Hagan e E.W. van Stryland, IEEE J. Quantum Electronics <b>26</b>, 760 (1990).</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> C.R. Mendonça, L. Misoguti, F.F. Dall' Agnol e S.C. Zilio, Revista Brasileira de Ensino de Física, <b>21</b>, 272 (1999).</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>18 Abr 2019</li>
+<li>
+<strong>Data do Fascículo</strong><br>2019</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>26 Jan 2019</li>
+<li>
+<strong>Aceito</strong><br>28 Fev 2019</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> André L. S. Romero </strong><strong>
+            *
+          </strong><br><div>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0001-9982-8171" class="btnContribLinks orcid">http://orcid.org/0000-0001-9982-8171</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Emerson C. Barbano </strong><br><div>Universidade Federal do Paraná, Centro Politécnico, Departamento de Física, Curitiba, PR, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Lino Misoguti </strong><br><div>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:andretec@ifsc.usp.br">andretec@ifsc.usp.br</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist"><li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (17)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Esquema de ligação das bobinas dos motores de passo. A) Motor Unipolar, possui 5 fios; B) Motor Bipolar, possui 4 fios.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Tabela com a sequência de acionamento das bobinas para o caso do motor bipolar. Na parte superior temos a tabela para passo completo (<i>full-step</i>) e na parte inferior temos a tabela para meio passo (<i>half-step</i>).
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          Fotografia da montagem, na esquerda temos a fonte de tensão de 12 volts e a direita o módulo de corrente L298.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+          Fotografia da caixa finalizada com um conector DB-9 para o motor de passo e outro para o módulo de aquisição de dados (myDAQ).
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+          Diagrama de conexão entre o módulo de aquisição e o módulo de corrente.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+          Módulo de corrente L298 para controle de motores de passo.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+          Quando nenhum transistor está acionado, a bobina está sem fluxo de corrente. Quando os transistores Q1 e Q4 estão acionados, o fluxo de corrente está no sentido indicado pela seta na cor azul (seta cheia). Quando os transistores Q2 e Q3 estão acionados, o fluxo de corrente flui no sentido contrário, indicado pela seta na cor verde (seta tracejada).
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+          Diagrama interno do circuito de controle de corrente L298. Nos detalhes temos a as duas pontes H, onde podemos observar que na parte central da ponte estão ligados os pinos 2 e 3 para a ponte A e os pinos 13 e 14 para a ponte B. Fonte: Adaptado de <span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] L298 Dual full-bridge driver, disponível em https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+				</span><br><a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf" target="_blank">https://www.sparkfun.com/datasheets/Comp...
+            </a></span></span>.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+          Módulo de aquisição myDAQ da empresa <i>National Instruments</i>, conectado ao computador via USB. Possui conector lateral com várias saídas digitais e entradas analógicas.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 10</strong><br>
+          Tela do subprograma para controle do motor de passo (Motor-L298.vi), temos as tabelas com a sequência de acionamento das bobinas do motor de passo.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 11</strong><br>
+          Tela do painel frontal do programa do motor de passo (Motor-L298.vi)
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 12</strong><br>
+          Diagrama do programa de teste do controle do motor de passo (test – Motor.vi)
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 13</strong><br>
+          Aparato experimental da técnica de varredura-<i>Z</i>.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 14</strong><br>
+          Caso <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub><mo>&gt;</mo><mn>0</mn></mrow></math>. a) amostra antes do foco. b) amostra depois do foco. A linha contínua indica o traçado do feixe no caso em que não há efeito não linear. A linha tracejada indica a mudança na divergência do feixe causada pelo efeito não linear que ocorre devido à interação do laser com a amostra.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 15</strong><br>
+          T(z) em função da posição da amostra, <math><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>&gt;</mo><mn>0</mn></mrow></math>.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 16</strong><br>
+          T(z) para uma amostra de DR13. O deslocamento em <i>Z</i> foi realizado com o controle de motor de passo desenvolvido com módulo L298.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf17"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 17</strong><br>
+          Foto do estágio de translação com o suporte de amostra na montagem do experimento de varredura-<i>Z</i>.
+        </div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/9b73aa359d26acc4dc9f7399d7af63b568a0e650.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Esquema de ligação das bobinas dos motores de passo. A) Motor Unipolar, possui 5 fios; B) Motor Bipolar, possui 4 fios.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/9b73aa359d26acc4dc9f7399d7af63b568a0e650.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/175dff8b134714e279cf801eee1fea630c8915b5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Tabela com a sequência de acionamento das bobinas para o caso do motor bipolar. Na parte superior temos a tabela para passo completo (<i>full-step</i>) e na parte inferior temos a tabela para meio passo (<i>half-step</i>).
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/175dff8b134714e279cf801eee1fea630c8915b5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/a58ce8a5686268a963ea4004b44d15eae00b7052.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          Fotografia da montagem, na esquerda temos a fonte de tensão de 12 volts e a direita o módulo de corrente L298.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/a58ce8a5686268a963ea4004b44d15eae00b7052.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/f5a669bf9a451964b63a940cc092e5e6d6bfa77a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+          Fotografia da caixa finalizada com um conector DB-9 para o motor de passo e outro para o módulo de aquisição de dados (myDAQ).
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/f5a669bf9a451964b63a940cc092e5e6d6bfa77a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/2921b15b4dc6b5557a8917bcc80c50dd7efbbe48.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+          Diagrama de conexão entre o módulo de aquisição e o módulo de corrente.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/2921b15b4dc6b5557a8917bcc80c50dd7efbbe48.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/3a6bc16bb33504928087147aebb4156b6e8f897f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+          Módulo de corrente L298 para controle de motores de passo.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/3a6bc16bb33504928087147aebb4156b6e8f897f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/343cae1e6b52fc6bfba123e85e4c4667dae72bcf.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+          Quando nenhum transistor está acionado, a bobina está sem fluxo de corrente. Quando os transistores Q1 e Q4 estão acionados, o fluxo de corrente está no sentido indicado pela seta na cor azul (seta cheia). Quando os transistores Q2 e Q3 estão acionados, o fluxo de corrente flui no sentido contrário, indicado pela seta na cor verde (seta tracejada).
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/343cae1e6b52fc6bfba123e85e4c4667dae72bcf.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/d6a1862fd63e87a17adfe5bb9d81e5be348fa0ab.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+          Diagrama interno do circuito de controle de corrente L298. Nos detalhes temos a as duas pontes H, onde podemos observar que na parte central da ponte estão ligados os pinos 2 e 3 para a ponte A e os pinos 13 e 14 para a ponte B. Fonte: Adaptado de <span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] L298 Dual full-bridge driver, disponível em https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+				</span><br><a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf" target="_blank">https://www.sparkfun.com/datasheets/Comp...
+            </a></span></span>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/d6a1862fd63e87a17adfe5bb9d81e5be348fa0ab.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/4e4b50b965c8d981eb272cdad4963a0d603f0dc7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+          Módulo de aquisição myDAQ da empresa <i>National Instruments</i>, conectado ao computador via USB. Possui conector lateral com várias saídas digitais e entradas analógicas.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/4e4b50b965c8d981eb272cdad4963a0d603f0dc7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/332064ed7a9f821e586f3542647ec890b8e6cd99.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 10   
+          Tela do subprograma para controle do motor de passo (Motor-L298.vi), temos as tabelas com a sequência de acionamento das bobinas do motor de passo.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/332064ed7a9f821e586f3542647ec890b8e6cd99.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/83740bf6cb9ead1a98c12a258cb4b3f6ea70c411.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 11   
+          Tela do painel frontal do programa do motor de passo (Motor-L298.vi)
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/83740bf6cb9ead1a98c12a258cb4b3f6ea70c411.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/b334caff860b469473f7f19583b754dbf1556387.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 12   
+          Diagrama do programa de teste do controle do motor de passo (test – Motor.vi)
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/b334caff860b469473f7f19583b754dbf1556387.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/bac745ff21514fad0cf4ccbf2643e18fa3a50900.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 13   
+          Aparato experimental da técnica de varredura-<i>Z</i>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/bac745ff21514fad0cf4ccbf2643e18fa3a50900.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/51a0fdd9949cf05f6f7f54e8446498e054d2c267.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 14   
+          Caso <math><mrow><msub><mi>n</mi><mtext>2</mtext></msub><mo>&gt;</mo><mn>0</mn></mrow></math>. a) amostra antes do foco. b) amostra depois do foco. A linha contínua indica o traçado do feixe no caso em que não há efeito não linear. A linha tracejada indica a mudança na divergência do feixe causada pelo efeito não linear que ocorre devido à interação do laser com a amostra.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/51a0fdd9949cf05f6f7f54e8446498e054d2c267.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/66f9b56c2cdc56ff7d964f4aaf6280449416e5bf.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 15   
+          T(z) em função da posição da amostra, <math><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>&gt;</mo><mn>0</mn></mrow></math>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/66f9b56c2cdc56ff7d964f4aaf6280449416e5bf.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/e1f0976d56c8aa3aedadd16e1464327af4f0ca42.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 16   
+          T(z) para uma amostra de DR13. O deslocamento em <i>Z</i> foi realizado com o controle de motor de passo desenvolvido com módulo L298.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/e1f0976d56c8aa3aedadd16e1464327af4f0ca42.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf17" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/17b6880fab9950a9cad9be29ee7ecc1ff45de946.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 17   
+          Foto do estágio de translação com o suporte de amostra na montagem do experimento de varredura-<i>Z</i>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Nt4GTCRT9w8J39pgrh7xJwN/17b6880fab9950a9cad9be29ee7ecc1ff45de946.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Romero, André L. S., Barbano, Emerson C. e Misoguti, LinoSistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z. Revista Brasileira de Ensino de Física [online]. 2019, v. 41, n. 4 [Acessado CURRENTDATE] , e20190018. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2019-0018&gt;. Epub 18 Abr 2019. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2019-0018.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z&#34; &#34;Romero, André L. S.&#34; &#34;Barbano, Emerson C.&#34; &#34;Misoguti, Lino&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z&#34; &#34;Romero, André L. S.&#34; &#34;Barbano, Emerson C.&#34; &#34;Misoguti, Lino&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/Nt4GTCRT9w8J39pgrh7xJwN/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172019000400403&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2019-0018" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2019-0018">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2019-0018" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2019-0018">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2019-0018"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2019-0018" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2019-0018">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0018" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0018">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

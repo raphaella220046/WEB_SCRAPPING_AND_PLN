@@ -1,0 +1,2501 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor"/>
+<meta property="og:description" content="O presente trabalho tem o intuito de apresentar o desempenho da simulação computacional em..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Rocha, Paulo Alexandre Costa">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Ceará">
+        
+        <meta name="citation_author" content="Silveira, João Victor Pinto da">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Ceará">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="34"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172012000400006"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="O presente trabalho tem o intuito de apresentar o desempenho da simulação computacional em alguns casos que podem ser considerados clássicos no estudo de mecânica dos fluidos e transferência de calor. Para isso, foi utilizado o software comercial Ansys-CFX 12.1, que utiliza como base o método dos volumes finitos. O desempenho da ferramenta foi avaliado através de comparação com resultados experimentais e dados da literatura. Uma vez que se torna evidente o crescente desenvolvimento dos computadores e a facilitação do acesso aos mesmos e às ferramentas sofisticadas em sala de aula, o conhecimento das limitações destas se torna importante. São apresentados quatro casos que abordam diferentes situações físicas: o estudo do escoamento de ar sobre um perfil aerodinâmico, a simulação de um misturador estático, o funcionamento de um viscosímetro rotacional e o escoamento sobre uma placa plana normal ao fluxo de ar."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2012-12"></meta>
+<meta name="citation_keywords" content="mecânica dos fluidos"></meta><meta name="citation_keywords" content="transmissão de calor"></meta><meta name="citation_keywords" content="dinâmica dos fluidos computacional"></meta><meta name="citation_keywords" content="método dos volumes finitos"></meta><meta name="citation_keywords" content="Ansys-CFX 12.1"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2012.v34n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2012.v34n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172012000400006 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 34 
+                (4)
+            <span class="_separator"> • </span>Dez 2012</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172012000400006" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172012000400006</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172012000400006"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Study and application of computational simulation in simple problems of fluid mechanics and heat transfer</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Paulo Alexandre Costa Rocha </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Fortaleza,  
+          ,  Ceará,  
+        ,  Universidade Federal do Ceará,  Departamento de Engenharia Mecânica e de Produção ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> João Victor Pinto da Silveira </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Fortaleza,  
+          ,  Ceará,  
+        ,  Universidade Federal do Ceará,  Departamento de Engenharia Mecânica e de Produção ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>O presente trabalho tem o intuito de apresentar o desempenho da simulação computacional em alguns casos que podem ser considerados clássicos no estudo de mecânica dos fluidos e transferência de calor. Para isso, foi utilizado o software comercial Ansys-CFX 12.1, que utiliza como base o método dos volumes finitos. O desempenho da ferramenta foi avaliado através de comparação com resultados experimentais e dados da literatura. Uma vez que se torna evidente o crescente desenvolvimento dos computadores e a facilitação do acesso aos mesmos e às ferramentas sofisticadas em sala de aula, o conhecimento das limitações destas se torna importante. São apresentados quatro casos que abordam diferentes situações físicas: o estudo do escoamento de ar sobre um perfil aerodinâmico, a simulação de um misturador estático, o funcionamento de um viscosímetro rotacional e o escoamento sobre uma placa plana normal ao fluxo de ar.</p>
+<p>mecânica dos fluidos; transmissão de calor; dinâmica dos fluidos computacional; método dos volumes finitos; Ansys-CFX 12.1</p>
+</div>
+<hr>
+<div>
+<p>This paper has the purpose to present the computational simulation performance in some cases that may be considered classical in the study of fluid mechanics and heat transfer. To do so, the commercial software Ansys-CFX 12.1, which is based on the finite volume method, was used. The performance of the computational tool was evaluated through the comparison with experimental results and literature data. With the knowledge of the increasing computers development and the easier access to them and to sophisticated tools at class, it is important to know their limitations. Four cases that address different physics situations are presented: the study of the airflow over an aerodynamic profile, the simulation of a static mixer, the functioning of a rotational viscometer and the flow over a flat plate normal to the air flux.</p>
+<p>fluid mechanics; heat transfer; computational fluid dynamics; finite volume method; Ansys-CFX 12.1</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor</p>
+<p></p>
+<p>
+      <b>Study and application of computational simulation in simple problems of fluid mechanics and heat transfer</b>
+    </p>
+<p></p>
+<p> Paulo Alexandre Costa Rocha<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        paulo.rocha@ufc.br.
+      </span></span></span>; João Victor Pinto da Silveira</p>
+<p></p>
+<p> Departamento de Engenharia Mecânica e de Produção, Universidade Federal do Ceará, Fortaleza, Ce, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>O presente trabalho tem o intuito de apresentar o desempenho da simulação computacional em alguns casos que podem ser considerados clássicos no estudo de mecânica dos fluidos e transferência de calor. Para isso, foi utilizado o software comercial Ansys-CFX 12.1, que utiliza como base o método dos volumes finitos. O desempenho da ferramenta foi avaliado através de comparação com resultados experimentais e dados da literatura. Uma vez que se torna evidente o crescente desenvolvimento dos computadores e a facilitação do acesso aos mesmos e às ferramentas sofisticadas em sala de aula, o conhecimento das limitações destas se torna importante. São apresentados quatro casos que abordam diferentes situações físicas: o estudo do escoamento de ar sobre um perfil aerodinâmico, a simulação de um misturador estático, o funcionamento de um viscosímetro rotacional e o escoamento sobre uma placa plana normal ao fluxo de ar. </p>
+<p></p>
+<p><b>Palavras-chave:</b> mecânica dos fluidos, transmissão de calor, dinâmica dos fluidos computacional, método dos volumes finitos, Ansys-CFX 12.1. </p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>This paper has the purpose to present the computational simulation performance in some cases that may be considered classical in the study of fluid mechanics and heat transfer. To do so, the commercial software Ansys-CFX 12.1, which is based on the finite volume method, was used. The performance of the computational tool was evaluated through the comparison with experimental results and literature data. With the knowledge of the increasing computers development and the easier access to them and to sophisticated tools at class, it is important to know their limitations. Four cases that address different physics situations are presented: the study of the airflow over an aerodynamic profile, the simulation of a static mixer, the functioning of a rotational viscometer and the flow over a flat plate normal to the air flux. </p>
+<p></p>
+<p><b>Keywords:</b> fluid mechanics, heat transfer, computational fluid dynamics, finite volume method, Ansys-CFX 12.1.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p> O uso de tecnologias de simulação computacional em engenharia e nas ciências exatas em geral tem crescido de forma significativa nos últimos anos. Em particular, a evolução dos computadores tem sido responsável por esse crescimento acentuado. Antigamente, trabalhar com simulação computacional era bastante complicado, visto a baixa capacidade de processamento e armazenamento de dados dos computadores. Atualmente, têm-se computadores cada vez mais versáteis, ágeis e acessíveis, inclusive para uso diretamente em sala de aula. Devido à crescente demanda por profissionais com conhecimento acerca dos programas de simulação computacional, é importante que o aluno tenha contato com algumas ferramentas ainda durante sua formação, principalmente as mais utilizadas e que representam o estado da arte. </p>
+<p></p>
+<p>
+      <b>2. Metodologia</b>
+    </p>
+<p></p>
+<p> Para realizar as simulações foi utilizado o pacote de dinâmica dos fluidos computacional Ansys-CFX 12.1, que hoje representa o estado da arte na aplicação do método dos volumes finitos [1,2] a problemas de dinâmica dos fluidos e transmissão de calor. O mesmo é dotado de ferramentas de geração de malha (pré-processamento), solução das equações de conservação discretizadas (solver) e pós-processamento, onde podem ser calculadas linhas de corrente, perfis e animações.</p>
+<p></p>
+<p> Apresentam-se a seguir de forma mais detalhada cada um dos casos implementados. Para cada caso foi realizado um experimento para validar os resultados obtidos numericamente - exceto para o caso da placa plana onde o objetivo foi comparar os resultados numéricos com dados empíricos da literatura [3]. </p>
+<p></p>
+<p>
+      <b>3. Escoamento de ar sobre perfil aerodinâmico</b>
+    </p>
+<p></p>
+<p> Para esse caso, foi feita tanto uma análise computacional quanto uma avaliação experimental em laboratório. Foi utilizado um perfil aerodinâmico NACA 4412 (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>) instalado no túnel de vento do Laboratório de Aerodinâmica e Mecânica dos Fluidos do curso de Engenharia Mecânica (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a>). Foram realizados experimentos com 3 diferentes ângulos de ataque: 0º, 5º e 10º. Nessas três configurações foram medidas as pressões ao longo da superfície do perfil. A velocidade do escoamento foi calculada através da equação </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/08496d893bd3051771e12f7089fc47c09e62ddb4.jpg">
+      </div></div>
+</div>
+    </p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>As pressões estática e de estagnação foram obtidas através de uma tomada de pressão estática na parede do túnel e uma de estagnação no bordo de ataque. A velocidade calculada foi de 39,3676 m/s medido na posição de 0º do perfil com: <i>P<sub>estagnacao</sub></i> = 1304,73 Pa, <i>P<sub>estatica</sub></i> = 382,59 Pa e <i>ρ</i> = 1,19 kg/m<sup>3</sup>.</p>
+<p></p>
+<p>Para a simulação computacional, o perfil foi desenhado utilizando-se programas de CAE (<i>computer aided engineering</i>) e a ferramenta de desenho do Ansys-CFX foi utilizada para desenhar o domínio do problema. O modelo de turbulência de duas equações <i>k</i>  <i>ε</i> foi utilizado na simulação. O mesmo é clássico, e está bem documentado na literatura [4]. Quando da construção da malha para a solução numérica do escoamento, as regiões mais próximas ao perfil foram mais refinadas em relação ao volume de controle em si (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a>). Esta abordagem objetiva permitir que a solução numérica perceba as maiores variações locais de velocidade e pressão. A velocidade do ar na entrada foi admitida como sendo a mesma do túnel de vento. Sabendo-se que a corda do perfil utilizado era de 97 milímetros, o número de Reynolds foi calculado assumindo que: <i>ρ</i> = 1,19 kg/m<sup>3</sup>,<i> V</i> = 39,3676 m/s, L = 97 mm e <i>µ</i> = 1,84E-05. Dessa forma, <i>Re</i> = 2,469E+05 o que caracteriza escoamento turbulento [5].</p>
+<div class="row fig" id="fig04">
+<a name="fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Os dados obtidos no experimento foram interpolados para toda a superfície do perfil, e as curvas de comparação entre o resultado numérico e o experimental são apresentadas nas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Figs. 5 a 7</a>.</p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig06">
+<a name="fig06"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig07">
+<a name="fig07"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a> apresenta os valores percentuais de erro relativo entre o resultado experimental e o computacional. O erro relativo foi calculado como<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/f29977d0289e2ba70d50a9c3ad0653b522d86644.jpg"> 100%</p>
+<div class="row table" id="tab01">
+<a name="tab01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>A simulação retornou a distribuição de pressão sobre o aerofólio e a variação de pressão ao longo do contorno do perfil de modo satisfatório. A divergência do resultado experimental para o computacional pode também se dever ao posicionamento do perfil dentro do túnel de vento. Outro fator que poderia ter melhorado o resultado seria um estudo de refinamento da malha, conforme apresentado na Seção 5 (escoamento sobre a placa plana).</p>
+<p></p>
+<p>
+      <b>4. Misturador estático</b>
+    </p>
+<p></p>
+<p> O experimento consistiu em misturar fluidos de temperaturas diferentes e conhecidas e medir a temperatura resultante na saída do misturador (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig08"><span class="sci-ico-fileFigure"></span>Figs. 8</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig09"><span class="sci-ico-fileFigure"></span>9</a>). A mesma situação foi realizada no software, através da criação de uma geometria semelhante e das condições de contorno impostas pelo experimento, comparando assim a temperatura de saída obtida computacionalmente com o resultado experimental.</p>
+<div class="row fig" id="fig08">
+<a name="fig08"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig09">
+<a name="fig09"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para a execução do experimento foram utilizados 7 L de água aquecidos até 80 ºC e mais 7 L de água resfriados até 5 ºC. Todo o volume do misturador foi preenchido inicialmente por água a temperatura ambiente e então foram adicionados os 7 L de água de cada lado simultaneamente. Esperou-se um tempo para que toda a água a temperatura ambiente saísse e depois a temperatura da mistura resultante foi medida. A temperatura final medida foi de 40 ºC</p>
+<p></p>
+<p> Para realizar a simulação computacional desse caso foi necessário determinar a vazão mássica nas entradas. Para isso, utilizou-se a equação de Bernoulli considerando-se que a velocidade inicial é nula e que as entradas e a saída estão abertas para a atmosfera. Dessa forma, tem-se </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/17cb0726abfcf98540a5f9bb55d3f5fff5ac187e.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Com a velocidade, calculou-se a vazão </p>
+<p></p>
+<p>
+      <div class="row fig" id="485efc9b458a92735bde7e0298bb2c354931f3f4">
+<a name="485efc9b458a92735bde7e0298bb2c354931f3f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg485efc9b458a92735bde7e0298bb2c354931f3f4"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/485efc9b458a92735bde7e0298bb2c354931f3f4.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p> Conhecendo-se os volumes específicos da água para as temperaturas de 80 ºC e 5 ºC e considerando que a vazão calculada é o dobro da vazão fornecida em cada entrada, tem-se que </p>
+<p></p>
+<p>
+      <div class="row fig" id="015214ebef6504ac552d502e4567a3a3f0954ab1">
+<a name="015214ebef6504ac552d502e4567a3a3f0954ab1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg015214ebef6504ac552d502e4567a3a3f0954ab1"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/015214ebef6504ac552d502e4567a3a3f0954ab1.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p> Com esses dados, foi possível implementar o problema. Na simulação só foi utilizada a região central T do tubo, visto que é o ponto de mais interesse (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig10"><span class="sci-ico-fileFigure"></span>Figs. 10</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig11"><span class="sci-ico-fileFigure"></span>11</a>).</p>
+<div class="row fig" id="fig10">
+<a name="fig10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig11">
+<a name="fig11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> As <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig12"><span class="sci-ico-fileFigure"></span>Figuras 12</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig13"><span class="sci-ico-fileFigure"></span>13</a> representam os resultados da simulação. Para calcular-se a temperatura na saída foi feita uma média ponderada da temperatura. Dessa forma, a temperatura na saída pela simulação foi de 42 ºC.</p>
+<div class="row fig" id="fig12">
+<a name="fig12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig12"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig13">
+<a name="fig13"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig13"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Fazendo uma análise comparativa entre o resultado experimental e o resultado da simulação, verificou-se que o erro relativo foi de 5%, demonstrando assim a eficiência da simulação numérica para o caso estudado. </p>
+<p></p>
+<p>
+      <b>5. Escoamento sobre placa plana</b>
+    </p>
+<p></p>
+<p> Esta fase do trabalho teve como objetivo analisar o escoamento de ar sobre uma placa plana de (500 x 500 x 1) mm utilizando o software de simulação computacional Ansys-CFX 12.1 (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig14"><span class="sci-ico-fileFigure"></span>Fig. 14</a>). Focou-se nas etapas de parametrização da malha e posterior avaliação dos resultados em relação aos dados da literatura para escoamento em placa plana. O caso da placa plana submersa foi escolhido por ser muito bem apresentado em livros de mecânica dos fluidos básica - inclusive com dados experimentais [6].</p>
+<div class="row fig" id="fig14">
+<a name="fig14"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig14"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> O tamanho do volume de controle variou de acordo com as etapas de parametrização. A velocidade do fluido adotada na entrada (inlet) foi de 21 m/s. Dessa forma, com as propriedades avaliadas a 25 ºC, garantiu-se que o número de Reynolds está acima de 1000, o que permite a utilização do gráfico presente na literatura [7], e, além disso, o escoamento encontra-se em regime turbulento. Garantir que o escoamento está sob regime turbulento assegura um melhor resultado devido ao método de resolução adotado pelo modelo de turbulência aplicado (<i>k</i>  <i>ε</i>).</p>
+<p></p>
+<p> A etapa de parametrização consistiu dos seguintes passos: variação da distância a jusante, variação da distância a montante, refinamento do domínio inteiro e refinamento sobre a placa. A parametrização é uma etapa importante da simulação que garante que variações no resultado da mesma independam da malha [8].</p>
+<p></p>
+<p> É importante lembrar que o processo de parametrização é realizado em ciclos. Ou seja, no primeiro ciclo foram verificados todos os valores de montante, segue-se a jusante, refinamento do domínio e refinamento da placa. Adquiridos os resultados, parte-se para o próximo ciclo com novos parâmetros de refinamento e tamanho do domínio. A parametrização foi concluída após o 3º ciclo de iterações e resultou nas seguintes dimensões: 6250 mm a montante, 25000 mm a jusante, tamanhos máximo e mínimo dos tetraedros de 346 mm e 18 mm respectivamente para o domínio e 481 mm e 25 mm para a placa.</p>
+<p></p>
+<p>Por fim, foram definidos os parâmetros do escoamento. O modelo de turbulência adotado foi o <i>k</i>  <i>ε</i>. Na entrada (inlet), a condição imposta foi de ar escoando a 21 m/s. Na saída (outlet), só foi necessário impor a pressão manométrica de referência, 0 Pa. Todos os lados da placa foram considerados como parede sem escorregamento. Já as paredes do volume de controle foram adotadas com condição de livre escorregamento.</p>
+<p></p>
+<p> Vê-se pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig15"><span class="sci-ico-fileFigure"></span>Fig. 15</a> que o programa também provê boas ferramentas gráficas, deixando claro que a parte qualitativa da simulação foi bem prevista pelo programa. Pode-se ver claramente a zona de recirculação e o descolamento da camada limite.</p>
+<div class="row fig" id="fig15">
+<a name="fig15"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig15"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O valor obtido para o coeficiente de arrasto (Cd) ao final do ciclo de iterações e ao final da construção da curva de razão de aspecto versus arrasto (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig16"><span class="sci-ico-fileFigure"></span>Fig. 16</a>) foi superior ao obtido na literatura. Esse comportamento já era esperado, visto que os programas de simulação computacional costumam superestimar os coeficientes de arrasto. Esse fato se deve às considerações feitas pelos modelos de turbulência clássicos. Geralmente, o modelo de turbulência utilizado considera que todo o escoamento sobre o corpo se encontra em regime turbulento. Dessa forma, é de se esperar que os valores de Cd sejam superestimados.</p>
+<div class="row fig" id="fig16">
+<a name="fig16"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig16"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> No gráfico comparativo apresentado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig16"><span class="sci-ico-fileFigure"></span>Fig. 16</a> é possível verificar que a simulação realmente superestimou o arrasto. Os valores de Cd calculados na simulação foram muito próximos ao valor empírico. Tal fato se deve principalmente porque a placa plana é uma geometria muito simples e que já foi bastante testada e validada. Além disso, sabe-se que uma das maiores dificuldades do modelo de turbulência é prever o ponto de descolamento da camada limite e, para uma geometria tão simples quanto a da placa, esse problema praticamente não existe, visto que o ponto de descolamento já está bem definido para essa geometria (borda da placa). Na realização de estudos posteriores, poderiam ser feitas algumas modificações para buscar uma melhora dos resultados da simulação como, por exemplo, testar outros modelos de turbulência e adotar uma região de refinamento da malha na região central do domínio à jusante, visto que nessa região ocorre a formação da esteira e também é uma zona de recirculação.</p>
+<p></p>
+<p>
+      <div class="row fig" id="5a1de87361891492da1c1f57034644543b3d2e7f">
+<a name="5a1de87361891492da1c1f57034644543b3d2e7f"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg5a1de87361891492da1c1f57034644543b3d2e7f"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5a1de87361891492da1c1f57034644543b3d2e7f.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <b>6. Viscosímetro rotacional</b>
+    </p>
+<p></p>
+<p> Viscosímetros são instrumentos utilizados para medir a viscosidade de fluidos. Eles podem ser classificados em dois grupos: primário e secundário. No grupo primário enquadram-se os instrumentos que realizam uma medida direta da tensão e da taxa de deformação da amostra de fluido. Instrumentos com diversos arranjos podem ser concebidos para este fim: entre eles há o de disco, de cone-disco e de cilindro rotativo.</p>
+<p></p>
+<p> Nesta fase, foi determinada a distribuição das velocidades angulares do fluido entre dois cilindros coaxiais em rotação e foi calculada a viscosidade deste fluido a partir das distribuições de forças que nele foram exercidas (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig17"><span class="sci-ico-fileFigure"></span>Figs. 17</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig18"><span class="sci-ico-fileFigure"></span>18</a>).</p>
+<div class="row fig" id="fig17">
+<a name="fig17"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig17"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig18">
+<a name="fig18"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig18"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Foi utilizado um óleo automotivo disponível no comércio. As características do mesmo estão listadas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab03"><span class="sci-ico-fileTable"></span>Tabela 3</a>, e foram retiradas de informações do fabricante (especificação SAE 20W-50).</p>
+<div class="row table" id="tab03">
+<a name="tab03"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>Nas condições apresentadas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig18"><span class="sci-ico-fileFigure"></span>Fig. 18</a>, sendo m.g o peso aplicado à extremidade do fio e R o raio da polia, o torque da força de tração em relação ao eixo de rotaçãoé </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm03">
+<a name="frm03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/cb8d18ad011df2a52cd5853c361e964fe185e432.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> A esse torque τ<sub><i>G</i></sub> se opõem o torque devido à resistência viscosa do líquido na superfície lateral do cilindro τ<sub><i>L</i></sub>, e na base inferior τ<sub><i>B</i></sub> e o torque devido às forças de atrito nos mancais τ<sub><i>A</i></sub>. </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm04">
+<a name="frm04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/e5a8eb66c9cfbc3b29edd456941f2af7de6471d7.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> A camada de fluido considerada é de forma cilíndrica de espessura <i>dr</i>. A velocidade angular <i>w </i>varia com a distância radial <i>r</i>. O gradiente de velocidade é expresso em coordenadas cilíndricas </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm05">
+<a name="frm05"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/d72f6311c2e662a475a43c0127d8dc6eda792722.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> A área <i>A</i> de uma superfície lateral de um cilindro de raio <i>r</i> e altura <i>L</i> é 2π<i>rL</i>. Tem-se que o momento <i>M</i> da força <i>F</i> relativo ao eixo de rotação é <i>M = Fr</i>, assim </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm06">
+<a name="frm06"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/6054cd336598808e6dd37a9deaa2f6ac097bbc68.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Pode-se escrever o momento independente do raio <i>r</i> da forma </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm07">
+<a name="frm07"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/14d133fcfb7f92d870a7db788530054806a8697d.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Integrando-se a Eq. (7) </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm09">
+<a name="frm09"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/aa4b93baa06397837c55e718333decf988f4e7eb.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>c</i><sub>1</sub> e <i>c</i><sub>2</sub> são constantes determinadas através das seguintes condições de contorno </p>
+<ul list-type="bullet">
+<li>
+        <p> Para <i>ρ</i> = <i>a</i>, <i>w = w<sub>a</sub></i>,</p>
+      </li>
+<li>
+        <p> Para </p>
+        <p><i>ρ</i> = </p>
+        <p><i>b</i>, </p>
+        <p>
+          <i>w = w<sub>b</sub>.</i>
+        </p>
+      </li>
+</ul>
+<p></p>
+<p> Dessa forma, as constantes são </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm10">
+<a name="frm10"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/13adcee6cfbb46ab61858232e19646ae5514da5e.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Considerando que o cilindro externo esteja sempre parado (<i>w<sub>b</sub></i> = 0) e o cilindro interior gire com velocidade angular <i>w<sub>a</sub> = w</i>, o momento relativo ao eixo de rotação é proporcional à velocidade angular relativa dos cilindros e é representado por </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm12">
+<a name="frm12"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/f3ee5839fa051b2f7f3b654b81aa4ac2b3bc45c7.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Esse momento devido à viscosidade do fluido freia o movimento de rotação do cilindro causado pela massa pendurada. Escrevendo-o em função das variáveis da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig18"><span class="sci-ico-fileFigure"></span>Fig. 18</a>, </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm13">
+<a name="frm13"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/e3a18e172e2e2b12b64caa391ae261694823787f.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Para o torque devido à base, tem-se </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm14">
+<a name="frm14"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/bf63b5d6d69ccc26c1ce1f0d4604ef454b069040.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Como a velocidade da descida da massa é constante e considerando-se o fio inextensível, tem-se que </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm15">
+<a name="frm15"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/a18fe852fe2ed74a28a0be32ba74aa2420f25a59.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Sendo<i> V = S/t,</i> onde <i>S</i> é o espaço percorrido na velocidade limite durante o tempo <i>t</i> e sendo <i>R</i> o raio da polia acoplada ao cilindro móvel, substituindo as Eqs. (3), (4), e (5) na Eq. (1), tem-se </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm16">
+<a name="frm16"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/aa1438a5cd84d7ff18c91b3f3c94b74bd9b69dfd.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab04"><span class="sci-ico-fileTable"></span>Tabela 4</a> apresenta as massas utilizadas, o espaço percorrido, o tempo necessário e a velocidade limite.</p>
+<div class="row table" id="tab04">
+<a name="tab04"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>Foi realizada uma simulação com as 3 massas distintas e abaixo segue o resultado comparativo entre os resultados experimentais e os resultados computacionais (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablea06tab05"><span class="sci-ico-fileTable"></span>Tabela 5</a>).</p>
+<p></p>
+<p>
+      <div class="row table" id="a06tab05">
+<a name="a06tab05"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablea06tab05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+        
+      <br>
+</div>
+</div>
+    </p>
+<p></p>
+<p> Durante a simulação do viscosímetro, este foi considerado como um sistema ideal, ou seja, sem dissipação de energia pelo atrito no sistema mecânico. Sabe-se que as perdas por atrito nos mancais e as imperfeições no fio e na massa, são consideráveis, porém estas foram desprezadas durante o experimento para que o resultado se aproximasse o máximo possível do teórico, assim como a simulação. As divergências nos resultados foram observadas provavelmente devido a estes fatores e ao sistema de medição, não muito preciso, como a escala e o tempo, visto que estes foram medidos artesanalmente, observando visualmente o percurso da massa pela escala e acionando um cronômetro com a mão. De maneira geral, os dados obtidos com as medidas do experimento e os da simulação, foram próximos.</p>
+<p></p>
+<p>
+      <b>7. Conclusão</b>
+    </p>
+<p></p>
+<p> O presente trabalho consistiu em realizar 4 simulações de situações físicas distintas em paralelo com a realização de experimentos ou comparação com dados empíricos. A maioria das simulações retornaram resultados próximos aos dos experimentos, o que pode encorajar a adoção dessas como ferramenta didática, desde que tomados os devidos cuidados. Permitiu-se também a identificação das qualidades e das fraquezas dos métodos computacionais quando da resolução de problemas de Mecânica dos Fluidos e Transmissão de Calor. Constatou-se a adequação da adoção de programas de Dinâmica dos Fluidos Computacional na formação dos alunos das engenharias e ciências exatas, uma vez que estes programas normalmente apresentaram resultados dentro das faixas de erro esperadas (até 30%).</p>
+<p></p>
+<p> [5] R.W. Fox, op. cit., p. 36. </p>
+<p></p>
+<p> [7] R.W. Fox, op. cit., p. 447. </p>
+<p></p>
+<p> [8] H.K. Versteeg, op. cit., p. 5. </p>
+<p></p>
+<p>Recebido em 26/9/2011; Aceito em 8/5/2012; Publicado em 7/12/2012 </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:paulo.rocha@ufc.br">paulo.rocha@ufc.br</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] H.K. Versteeg and W. Malalasekera, <i>An Introduction to Computational Fluid Dynamics - The Finite Volume Method</i> (Editora Pearson, London, 2007), 2ª  ed.</div></li>
+<li><div>[2] S.V. Patankar, <i>Numerical Heat Transfer and Fluid Flow</i> (Taylor &amp; Francis, Boca Raton,  1980) 1ª  ed.</div></li>
+<li><div>[3] R.W. Fox, A.T. McDonald and P.J. Pritchard, <i>Introdução à Mecânica dos Fluidos</i> (Editora LTC, Rio de Janeiro, 2006), 6ª  ed.</div></li>
+<li><div>[4] D.C. Wilcox, <i>Turbulence Modeling for CFD</i> (DCW Industries, Inc, California, 1993).</div></li>
+<li><div>[6] K.B. Lacerda e A.E.A. Amorim, Revista Brasileira de Ensino de Física <b>23</b>, 196 (2001).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        paulo.rocha@ufc.br.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>31 Jan 2013</li>
+<li>
+<strong>Data do Fascículo</strong><br>Dez 2012</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>26 Set 2011</li>
+<li>
+<strong>Aceito</strong><br>08 Maio 2012</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Paulo Alexandre Costa Rocha </strong><br><div>
+          ,  Fortaleza,  
+          ,  Ceará,  
+        ,  Universidade Federal do Ceará,  Departamento de Engenharia Mecânica e de Produção ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> João Victor Pinto da Silveira </strong><br><div>
+          ,  Fortaleza,  
+          ,  Ceará,  
+        ,  Universidade Federal do Ceará,  Departamento de Engenharia Mecânica e de Produção ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (18)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (14)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig17"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig18"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablea06tab05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/a95e8cafa3343bbdd3d35bc8e1823ba36bcd830b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/a95e8cafa3343bbdd3d35bc8e1823ba36bcd830b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/06e956c5f093d3a93bbdad01c5f74d45f56ae8f0.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/06e956c5f093d3a93bbdad01c5f74d45f56ae8f0.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/df7605a69af8b11ae5391828e2252d24e6a2cfe6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/df7605a69af8b11ae5391828e2252d24e6a2cfe6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/43db52f64499250a9492f99be6ec357fe4d7f824.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/43db52f64499250a9492f99be6ec357fe4d7f824.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/15398d67fd89ea0cd2c114b47ef65353a78c92a5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/15398d67fd89ea0cd2c114b47ef65353a78c92a5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5302a436696b95330ad6538d0d75ab316282f6c3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5302a436696b95330ad6538d0d75ab316282f6c3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/fcf92d6780b7094e53a1752975e08b506d94d642.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/fcf92d6780b7094e53a1752975e08b506d94d642.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/a5ad38761352c56a38e1b5d0b4b3f223f252a94e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/a5ad38761352c56a38e1b5d0b4b3f223f252a94e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/e1738db15cc381aab131da8a62a75e69482f4799.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/e1738db15cc381aab131da8a62a75e69482f4799.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/4b0563fcbf59244104d90b46ce1d523b825921f3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/4b0563fcbf59244104d90b46ce1d523b825921f3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/11de63433762e7dcd730763733a53866096197b2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/11de63433762e7dcd730763733a53866096197b2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/9682371b06d763a81f40340c77bbbcf51ce2b0c9.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/9682371b06d763a81f40340c77bbbcf51ce2b0c9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/f149cf022b3641a8769635f31e5be2af8aa702b8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/f149cf022b3641a8769635f31e5be2af8aa702b8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/ca860f6b5895468b1b5bc323000f0ab2cf0f0308.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/ca860f6b5895468b1b5bc323000f0ab2cf0f0308.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5d72ac85a7d02ab73f6a7617cf3f8c3412b6b96c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5d72ac85a7d02ab73f6a7617cf3f8c3412b6b96c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/405c0674bc912ce06666d8c5627ceb4f58ca8ffd.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/405c0674bc912ce06666d8c5627ceb4f58ca8ffd.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig17" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/623ad21fb30d0a68d921279e21bff5b139d1dfac.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/623ad21fb30d0a68d921279e21bff5b139d1dfac.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig18" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/0ce34c96df71843185a44d87983f55a8d21614f6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/0ce34c96df71843185a44d87983f55a8d21614f6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/bb564bdc97be80cbaf3879b5a72fc00cf30a8186.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/bb564bdc97be80cbaf3879b5a72fc00cf30a8186.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/206554a7c83e37aee9bf5f15bedee3bb3c401f1c.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/206554a7c83e37aee9bf5f15bedee3bb3c401f1c.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/baa22f171bf66ef9443c8419d899d89a3c44faac.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/baa22f171bf66ef9443c8419d899d89a3c44faac.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablea06tab05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5f6cfd0a9ce0252e40756b331873f29e24350870.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5f6cfd0a9ce0252e40756b331873f29e24350870.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/08496d893bd3051771e12f7089fc47c09e62ddb4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/08496d893bd3051771e12f7089fc47c09e62ddb4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/17cb0726abfcf98540a5f9bb55d3f5fff5ac187e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/17cb0726abfcf98540a5f9bb55d3f5fff5ac187e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/cb8d18ad011df2a52cd5853c361e964fe185e432.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/cb8d18ad011df2a52cd5853c361e964fe185e432.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/e5a8eb66c9cfbc3b29edd456941f2af7de6471d7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/e5a8eb66c9cfbc3b29edd456941f2af7de6471d7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/d72f6311c2e662a475a43c0127d8dc6eda792722.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/d72f6311c2e662a475a43c0127d8dc6eda792722.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/6054cd336598808e6dd37a9deaa2f6ac097bbc68.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/6054cd336598808e6dd37a9deaa2f6ac097bbc68.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/14d133fcfb7f92d870a7db788530054806a8697d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/14d133fcfb7f92d870a7db788530054806a8697d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/aa4b93baa06397837c55e718333decf988f4e7eb.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/aa4b93baa06397837c55e718333decf988f4e7eb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/13adcee6cfbb46ab61858232e19646ae5514da5e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/13adcee6cfbb46ab61858232e19646ae5514da5e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/f3ee5839fa051b2f7f3b654b81aa4ac2b3bc45c7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/f3ee5839fa051b2f7f3b654b81aa4ac2b3bc45c7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/e3a18e172e2e2b12b64caa391ae261694823787f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/e3a18e172e2e2b12b64caa391ae261694823787f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/bf63b5d6d69ccc26c1ce1f0d4604ef454b069040.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/bf63b5d6d69ccc26c1ce1f0d4604ef454b069040.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/a18fe852fe2ed74a28a0be32ba74aa2420f25a59.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/a18fe852fe2ed74a28a0be32ba74aa2420f25a59.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/aa1438a5cd84d7ff18c91b3f3c94b74bd9b69dfd.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/aa1438a5cd84d7ff18c91b3f3c94b74bd9b69dfd.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg485efc9b458a92735bde7e0298bb2c354931f3f4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/485efc9b458a92735bde7e0298bb2c354931f3f4.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/485efc9b458a92735bde7e0298bb2c354931f3f4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg015214ebef6504ac552d502e4567a3a3f0954ab1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/015214ebef6504ac552d502e4567a3a3f0954ab1.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/015214ebef6504ac552d502e4567a3a3f0954ab1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg5a1de87361891492da1c1f57034644543b3d2e7f" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5a1de87361891492da1c1f57034644543b3d2e7f.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/5ZyZhzhkj87Lhkr4z64vYCw/5a1de87361891492da1c1f57034644543b3d2e7f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Rocha, Paulo Alexandre Costa e Silveira, João Victor Pinto daEstudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor. Revista Brasileira de Ensino de Física [online]. 2012, v. 34, n. 4 [Acessado CURRENTDATE] , 4306. Disponível em: &lt;https://doi.org/10.1590/S1806-11172012000400006&gt;. Epub 31 Jan 2013. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172012000400006.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor&#34; &#34;Rocha, Paulo Alexandre Costa&#34; &#34;Silveira, João Victor Pinto da&#34; &#34;2012&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor&#34; &#34;Rocha, Paulo Alexandre Costa&#34; &#34;Silveira, João Victor Pinto da&#34; &#34;2012&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/5ZyZhzhkj87Lhkr4z64vYCw/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172012000400006&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172012000400006" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172012000400006">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172012000400006" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172012000400006">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172012000400006"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172012000400006" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172012000400006">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172012000400006" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172012000400006">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

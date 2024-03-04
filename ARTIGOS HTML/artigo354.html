@@ -1,0 +1,3571 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Desenvolvimento de um sistema automatizado para medição de impedância elétrica Desenvolvimento de um sistema automatizado para medição de impedância elétrica </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Desenvolvimento de um sistema automatizado para medição de impedância elétrica"/>
+<meta property="og:description" content="A medição de impedâncias elétricas é um procedimento bastante comum em laboratórios de Física...."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+
+
+    <meta name="citation_author" content="Viana, Joseanne Cristina"></meta>
+    <meta name="citation_author" content="Arnold, Francisco"></meta>
+    <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="39"></meta>
+<meta name="citation_number" content="2"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2016-0183"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Desenvolvimento de um sistema automatizado para medição de impedância elétrica
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="A medição de impedâncias elétricas é um procedimento bastante comum em laboratórios de Física. Convencionalmente, por meio de medições de tensão elétrica um circuito divisor de tensão se pode determinar a impedância elétrica de um dispositivo qualquer. Todavia, este procedimento permite que as impedâncias só possam ser medidas em faixas de valores restritas. Em componentes, como alguns transdutores piezelétricos, que apresentam larga faixa de magnitude de impedância, os resultados obtidos com este procedimento não são satisfatórios. Neste trabalho é apresentado um circuito eletrônico simples, de baixo custo, com fácil compreensão de operação por estudantes com pouco conhecimento sobre eletrônica e que amplia a faixa de determinação das impedâncias. O sistema foi testado com transdutores piezelétricos e os resultados obtidos comparados com o de um analisador de impedâncias comercial. Os resultados mostraram que é possível medir impedâncias entre dezenas de Ω e dezenas de kΩ satisfatoriamente."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2016-11-16"></meta>
+<meta name="citation_keywords" content="LabView"></meta><meta name="citation_keywords" content="Piezelétrico"></meta><meta name="citation_keywords" content="Circuito Eletrônico"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2017.v39n2/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2017.v39n2/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172017000200601 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Didactic Resources</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 39 
+                (02)
+            <span class="_separator"> • </span>2017</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2016-0183" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2016-0183</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2016-0183"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Desenvolvimento de um sistema automatizado para medição de impedância elétrica<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Development of an automated system for measuring electrical impedance</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Joseanne Cristina Viana </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Faculdade de Tecnologia, Universidade Estadual de Campinas, Limeira, SP, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Francisco Arnold </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong><div class="corresp">*Endereço de correspondência: <a href="mailto:arnold@ft.unicamp.br">arnold@ft.unicamp.br</a>.</div>Faculdade de Tecnologia, Universidade Estadual de Campinas, Limeira, SP, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>A medição de impedâncias elétricas é um procedimento bastante comum em laboratórios de Física. Convencionalmente, por meio de medições de tensão elétrica um circuito divisor de tensão se pode determinar a impedância elétrica de um dispositivo qualquer. Todavia, este procedimento permite que as impedâncias só possam ser medidas em faixas de valores restritas. Em componentes, como alguns transdutores piezelétricos, que apresentam larga faixa de magnitude de impedância, os resultados obtidos com este procedimento não são satisfatórios. Neste trabalho é apresentado um circuito eletrônico simples, de baixo custo, com fácil compreensão de operação por estudantes com pouco conhecimento sobre eletrônica e que amplia a faixa de determinação das impedâncias. O sistema foi testado com transdutores piezelétricos e os resultados obtidos comparados com o de um analisador de impedâncias comercial. Os resultados mostraram que é possível medir impedâncias entre dezenas de <math display="inline" id="m3"><mi mathvariant="normal">Ω</mi></math> e dezenas de k<math display="inline" id="m4"><mi mathvariant="normal">Ω</mi></math> satisfatoriamente.</p>
+<p><strong>Palavras-chave:</strong><br>LabView; Piezelétrico; Circuito Eletrônico</p>
+</div>
+<hr>
+<div>
+<p>The measurement of electrical impedance is a common procedure in physics laboratories. Conventionally, by means of voltage measurements a voltage divider circuit can determine the electrical impedance of any device. However, this procedure allows the impedances can be measured only in limited ranges of values. In components as some piezoelectric transducers, which have large impedance magnitude band, the results obtained with this procedure are not satisfactory. This paper presents a simple electronic circuit, low cost, easy to understand operation by students with low knowledgement in electronics and broadens the range of determination of impedances. The system was tested with piezoelectric transducers and the results compared with a commercial impedance analyzer. The results have shown that it is possible to measure impedances between tens of <math display="inline" id="m1"><mi mathvariant="normal">Ω</mi></math> and tens of k<math display="inline" id="m2"><mi mathvariant="normal">Ω</mi></math> satisfactorily.</p>
+<p><strong>Keywords:</strong><br>LabView; Piezoelectric; Electronic Circuit</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>O emprego de recursos tecnológicos visando criar maior dinamismo e exatidão em experimentos de física tem atraído especial atenção nos últimos anos nas publicações voltadas ao ensino. A massificação da utilização de recursos eletrônicos [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] J.C. Andrades, A. Schiappacassa e P.F. Santos, Rev. Bras. Ens. Fis. 35, 2503 (2013).</span></span></span>,<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T. Dorneles, Rev. Bras. Ens. Fis. 38, e3503 (2016).</span></span></span>], sensores [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] F.J. Arnold, R. Arthur, L.L. Bravo-Roger, M.S. Gonçalves e M.J.G. Oliveira, Rev. Bras. Ens. Fis. 33, 4311 (2011).</span></span></span>], vídeos [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] C. Sirisathitkul, P. Glawtanong, T. Eadkong and Y. Sirisathitkul, Rev. Bras. Ens. Fis. 35, 1504 (2013).</span></span></span>] e produtos ligados a informática [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] A.G. Guedes, Rev. Bras. Ens. Fis. 37, 2502 (2015).</span></span></span>–<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>[7] A.C.P. Fernandes, L.T.S. Auler e J.A.O. Huguenin, Rev. Bras. Ens. Fis. 38, e3504 (2016).</span></span></span>] no ensino é uma decorrência, entre outros motivos, da maior acessibilidade a dispositivos e softwares para automatização dos experimentos. Os equipamentos eletrônicos inseridos nas práticas tradicionais atrai a atenção dos alunos pelo fascínio que desperta em relação à praticidade e à velocidade na obtenção e ao processamento de resultados, além de estimular o espírito inventivo na concepção de outros experimentos.</p>
+      <p>Medir impedâncias elétricas é uma prática bastante comum em laboratórios de física de ensino e de pesquisa. Nas práticas de ensino, medir impedâncias elétricas é conteúdo obrigatório na exploração de propriedades de circuitos elétricos em correntes alternadas, usualmente ensinada na disciplina Física IV [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>[8] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2012), 9ªed, vol. 4.</span></span></span>–<span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>[10] P.R. Kesten e D.L. Tauck, Física na Universidade para as Ciências Físicas e da Vida (LTC, Rio de Janeiro, 2015), 1ªed, vol. 3.</span></span></span>]. Em pesquisa, a medição de impedâncias elétricas tem maior abrangência pois, em grande parte dos casos, consiste na caracterização de dispositivos de diferentes naturezas, como componentes elétricos e eletrônicos e sensores. De um modo geral, os procedimentos dos experimentos abarcam a determinação da magnitude e da fase (ou das componentes real e imaginária) da impedância elétrica de um dispositivo qualquer numa faixa de frequências.</p>
+      <p>Há, basicamente, dois caminhos para se medir as impedâncias elétricas. Pode-se empregar um analisador de impedâncias comercial para obtenção dos espectros de frequência e fase. Os analisadores de impedância comerciais são equipamentos de larga complexidade tecnológica, com uma gama de aplicações muito ampla, grandes dimensões físicas e de custo muito elevado. Portanto podem não ser viáveis para um laboratório de ensino ou mesmo para serem empregado em finalidades específicas ou atividades de campo.</p>
+      <p>Outra forma de medir impedâncias elétricas é por meio do circuito esquematizado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>. Esta metodologia convencional [<span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>[11] J.W. Dally, W.F. Riley and K.G. McConnell, Instrumentation for Engineering Measurements (John Wiley &amp; Sons, New York, 1984)</span></span></span>] consiste em usar um divisor de tensão elétrica em que o elemento que se deseja conhecer a impedância (<math display="inline" id="m5"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>)</mo></math> está em série com um resistor <i>shunt</i> (<math display="inline" id="m6"><mi>R</mi></math>). O divisor é alimentado com sinais elétricos senoidais (<math display="inline" id="m7"><mi>v</mi></math>) de um gerador de funções, de modo que seja possível ajustar a frequência na faixa de valores desejada e medir, usando-se um osciloscópio, as tensões de entrada (<math display="inline" id="m8"><msub><mrow><mi>v</mi></mrow><mrow><mi mathvariant="normal">1</mi></mrow></msub></math>) e nos terminais do shunt (<math display="inline" id="m9"><msub><mrow><mi>v</mi></mrow><mrow><mi mathvariant="normal">2</mi></mrow></msub></math>). A partir dessas medições, empregando-se análise de circuitos elétricos elementar se pode determinar a magnitude da impedância elétrica do dispositivo. A componente de fase da impedância elétrica também pode ser determinada por meio das medições dos tempos de atraso ou adiantamento de <math display="inline" id="m10"><msub><mrow><mi>v</mi></mrow><mrow><mi mathvariant="normal">1</mi></mrow></msub></math> em relação a <math display="inline" id="m11"><msub><mrow><mi>v</mi></mrow><mrow><mi mathvariant="normal">2</mi></mrow></msub></math>. Esta prática é bastante comum nos laboratórios de ensino e de pesquisa, devido ao emprego de equipamentos de uso genérico nos laboratórios e de baixo custo.</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Diagrama esquemático de um divisor de tensão como uma configuração simples para determinação de impedâncias elétricas.
+        <br>
+</div>
+</div>
+      <p>Todavia, empregar esta metodologia para medições em que o módulo das impedâncias varia largamente, nem sempre é adequado. Por exemplo, quando o valor da resistência <i>shunt</i> for muito pequeno em relação a impedância elétrica do dispositivo a ser caracterizado (<math display="inline" id="m12"><mi>R</mi><mo>&lt;</mo><mo>&lt;</mo><mo>|</mo><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>|</mo></math>), podem ocorrer dificuldades em medir a baixa amplitude de tensão elétrica entre os terminais do <i>shunt</i> devido às limitações de escala típicas de um osciloscópio de uso geral e o surgimento de ruídos. Numa situação inversa, quando a resistência do <i>shunt</i> é muito maior que a impedância elétrica do dispositivo em teste (<math display="inline" id="m13"><mi>R</mi><mo>&gt;</mo><mo>&gt;</mo><mo>|</mo><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>|</mo></math>), as variações de tensão podem não ser corretamente avaliadas devido a baixa resolução dos equipamentos de medida. Além disso, quando a tensão medida no <i>shunt</i> apresenta amplitudes reduzidas, ocorre a inserção de ruídos que deformam o sinal e dificultam a determinação da diferença de fase entre os sinais <math display="inline" id="m14"><msub><mrow><mi>v</mi></mrow><mrow><mi mathvariant="normal">1</mi></mrow></msub></math> e <math display="inline" id="m15"><msub><mrow><mi>v</mi></mrow><mrow><mi mathvariant="normal">2</mi></mrow></msub></math>.</p>
+      <p>Em sinais de baixa amplitude a utilização de amplificadores para o sinal de corrente pode ser feita para superar essas dificuldades de medição, porém estes podem ir a saturação quando o sinal se tornar mais elevado. Além disso, o uso de amplificadores de ganho elevado pode contribuir para a redução da banda de frequências a ser utilizada.</p>
+      <p>Variações do sinal de corrente da ordem de algumas décadas são típicas quando se mede a impedância de transdutores piezelétricos. Os transdutores piezelétricos são apresentados em diferentes modelos que dependem de sua aplicação [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>[12] A. Saffari and E.K. Akdogan, Piezoelectric and Acoustic Materials for Transducer Applications (Springer, New Jersey, 2008).</span></span></span>]. Particularmente, transdutores piezelétricos usados em aplicações com potências elevadas (da ordem de dezenas de W) apresentam variações da magnitude da impedância da ordem de dezenas de k<math display="inline" id="m16"><mi mathvariant="normal">Ω</mi></math>. Sendo assim, a metodologia convencional deve ser pouco efetiva para a determinação das impedâncias devido a larga faixa de variação alcançada ao longo das frequências.</p>
+      <p>Na literatura científica são encontrados alguns trabalhos que tratam do desenvolvimento de sistemas de medição de impedâncias elétricas. Fishman [<span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>[13] F.J. Fishman, Am. J. Phys. 55, 1047 (1987).</span></span></span>] apresentou um sistema eletrônico digital integrado a um computador juntamente com resultados experimentais de magnitude e fase da impedância, porém restrito a valores de frequência da ordem de centenas de Hz. Peiars et al. [<span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>[14] D.M. Peairs, G. Park and D.J. Inman, J. of Intell. Mat. Systems and Struct. 15, 129 (2004).</span></span></span>] e Batista et al. [<span class="ref"><sup class="xref xrefblue">15</sup><span class="refCtt closed"><span>[15] F.G. Baptista, and J. Vieira Filho, IEEE Trans. on Instrum. and Meas. 58, 3602 (2009).</span></span></span>] apresentaram soluções para medir impedâncias em testes de monitoramento da integridade mecânica (<i>Structural Health Monitoring - SHM</i>) de materiais usando-se dispositivos piezelétricos. Eles empregaram a configuração convencional do divisor resistivo com o resistor <i>shunt</i> ligado a um amplificador operacional. Os resultados apresentados nesses artigos se mostraram precisos, porém restritos a variações de centenas de ohms, típicas dos transdutores aplicados em SHM. O ajuste das resistências de uma ponte foi utilizada em [<span class="ref"><sup class="xref xrefblue">16</sup><span class="refCtt closed"><span>[16] S. Wang, and C. You, J. of Intell. Mat. Systems and Struct. 19, 1029 (2008).</span></span></span>] por meio de controles em potenciômetros digitais em aplicações de SHM, mas os resultados foram apresentados como impedâncias relativas e com variações de valores muito inferiores às dos piezelétricos para alta potência.</p>
+      <p>Outra forma de medir correntes para determinar a impedância consiste no uso de sensores magnéticos. A utilização de sensores magnéticos [<span class="ref"><sup class="xref xrefblue">17</sup><span class="refCtt closed"><span>[17] F.J. Arnold, R.L. Ximenes, R. Arthur e T.S. Santos, in: Anais do XX Congresso Brasileiro de Automática p. 1712-1717 (2014).</span></span></span>] apresenta limitações causadas pela interferência da sua componente de reatância indutiva no circuito sob frequências elevadas e/ou quando o elemento em teste apresentar valores de reatâncias próximos ao assumidos pelo sensor. Outros sistemas para medição mais sofisticados são encontrados em [<span class="ref"><sup class="xref xrefblue">18</sup><span class="refCtt closed"><span>[18] S. Doerner, T. Schneider and P.R. Hauptmann, Rev. of Sci. Instrum. 78, 105101 (2007).</span></span></span>,<span class="ref"><sup class="xref xrefblue">19</sup><span class="refCtt closed"><span>[19] M. Schmid, E. Benes and R. Sedlaczek, Meas. Sci. Tech 1, 970 (1990).</span></span></span>]. Contudo, estes sistemas se utilizam de técnicas eletrônicas que fogem do escopo deste artigo, qual seja de encontrar uma solução de um problema comum nos laboratórios de física com didática e simplicidade e que possa ser construído com facilidade.</p>
+      <p>Neste trabalho é proposta uma adaptação a configuração apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a> com intuito de superar algumas dificuldades de medição quando os valores de <math display="inline" id="m17"><mi>R</mi></math> e <math display="inline" id="m18"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> são díspares. Essa adaptação é baseada no circuito mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>. Ela consiste em realizar a medição da tensão no componente em teste ao invés do resistor <i>shunt</i> e fazer uma transformação linear da faixa de valores medidos em outra faixa que possa ser adequadamente medida por um osciloscópio ou módulo digital. O resultado dessa transformação irá modificar os valores extremos de tensão acusados anteriormente como limitantes e permitir que a medição seja feita em condições adequadas de operação precisa dos medidores.</p>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Diagrama esquemático do divisor de tensão utilizado no sistema desenvolvido.
+        <br>
+</div>
+</div>
+      <p>O objetivo do trabalho é apresentar o desenvolvimento de um circuito de baixo custo e operação simplificada e de uma metodologia que possa ser utilizada e compreendida por alunos dos semestres iniciais de um curso de Física, Engenharia ou afins. Este circuito deve ser útil para que se meçam impedâncias elétricas em uma faixa larga de magnitudes, como as apresentadas por transdutores piezelétricos usados em aplicações de alta potência.</p>
+    
+      <h1 class="articleSectionTitle">2. Teoria de circuitos</h1>
+      <p>Nesta seção é apresentada a teoria de circuitos, baseada em álgebra fasorial [<span class="ref"><sup class="xref xrefblue">20</sup><span class="refCtt closed"><span>[20] J.A. Edminister, Circuitos Elétricos (Editora McGraw-Hill, São Paulo, 1991), 2ªed.</span></span></span>,<span class="ref"><sup class="xref xrefblue">21</sup><span class="refCtt closed"><span>[21] R.L. Boylestad, Análise de Circuitos (Editora Pearson, São Paulo, 2012), 12ªed.</span></span></span>], que explica o procedimento utilizado para a determinação da impedância elétrica <math display="inline" id="m19"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math>. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a> é apresentado o circuito que será utilizado para a análise. Como pode ser visto nesta figura, a impedância de teste é <math display="inline" id="m20"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> possui as componentes real e imaginária dadas por <i>Re</i><math display="inline" id="m21"><mrow><mo>(</mo></mrow><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub><mrow><mo>)</mo></mrow><mo>=</mo><msub><mrow><mi>R</mi></mrow><mrow><mi>t</mi></mrow></msub></math> e <i>Im</i><math display="inline" id="m22"><mrow><mo>(</mo></mrow><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>)</mo><mo>=</mo><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub></math>, respectivamente.</p>
+      <p>Com o embasamento fasorial utilizado para a análise de circuitos, definem-se <math display="inline" id="m23"><msub><mrow><mi>V</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math> e <math display="inline" id="m24"><msub><mrow><mi>V</mi></mrow><mrow><mi>t</mi></mrow></msub></math> como as amplitudes das tensões <math display="inline" id="m25"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math> e <math display="inline" id="m26"><msub><mrow><mi>v</mi></mrow><mrow><mi>t</mi></mrow></msub></math>. A impedância total, <i>Z</i>, ”vista”pela fonte <math display="inline" id="m27"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math>, representada nas notações complexa e fasorial, é dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Equação 1</a>.</p>
+      <p>
+        <div class="row formula" id="ee1">
+<a name="e1"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(1)</span>
+          <math display="block" id="m28">
+            <mi>Z</mi>
+            <mo>=</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>R</mi>
+                <mo>+</mo>
+                <msub>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>+</mo>
+            <mi>j</mi>
+            <msub>
+              <mrow>
+                <mi>X</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mfenced close="|" open="|" separators="">
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+            </mfenced>
+            <mi>∠</mi>
+            <mi>θ</mi>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>onde <math display="inline" id="m29"><mi>R</mi></math> é a resistência do divisor de tensão, <math display="inline" id="m30"><msub><mrow><mi>R</mi></mrow><mrow><mi>t</mi></mrow></msub></math> e <math display="inline" id="m31"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub></math> são as partes real e imaginária da impedância do componente medido, <math display="inline" id="m32"><mi>θ</mi></math> é o ângulo de fase da impedância e <i>j</i> é a unidade complexa.</p>
+      <p>A impedância a ser determinada é <math display="inline" id="m33"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math>, é descrita pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee2"><span class="sci-ico-fileFormula"></span>Equação (2)</a>, tanto na notação complexa como fasorial.</p>
+      <p>
+        <div class="row formula" id="ee2">
+<a name="e2"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(2)</span>
+          <math display="block" id="m34">
+            <msub>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <msub>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>+</mo>
+            <mi>j</mi>
+            <msub>
+              <mrow>
+                <mi>X</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mfenced close="|" open="|" separators="">
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>Z</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mfenced>
+            <mi>∠</mi>
+            <msub>
+              <mrow>
+                <mi>θ</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>A amplitude da tensão elétrica medida no resistor R é calculada usando-se a teoria de circuitos elétricos pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee3"><span class="sci-ico-fileFormula"></span>Equação (3)</a>
+			</p>
+      <p>
+        <div class="row formula" id="ee3">
+<a name="e3"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(3)</span>
+          <math display="block" id="m35">
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>i</mi>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+            <mfrac>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+              <mrow>
+                <msqrt>
+                  <mrow>
+                    <msup>
+                      <mrow>
+                        <mfenced close=")" open="(" separators="">
+                          <mrow>
+                            <mi>R</mi>
+                            <mo>+</mo>
+                            <msub>
+                              <mrow>
+                                <mi>R</mi>
+                              </mrow>
+                              <mrow>
+                                <mi>t</mi>
+                              </mrow>
+                            </msub>
+                          </mrow>
+                        </mfenced>
+                      </mrow>
+                      <mrow>
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                    <mo>+</mo>
+                    <msubsup>
+                      <mrow>
+                        <mi>X</mi>
+                      </mrow>
+                      <mrow>
+                        <mi>t</mi>
+                      </mrow>
+                      <mrow>
+                        <mn>2</mn>
+                      </mrow>
+                    </msubsup>
+                  </mrow>
+                </msqrt>
+              </mrow>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>A diferença de fase entre <math display="inline" id="m36"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math> e a corrente do circuito é a mesma diferença entre a <math display="inline" id="m37"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math> e <math display="inline" id="m38"><msub><mrow><mi>v</mi></mrow><mrow><mi>R</mi></mrow></msub></math> e pode ser calculada com a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee4"><span class="sci-ico-fileFormula"></span>Equação (4)</a>
+			</p>
+      <p>
+        <div class="row formula" id="ee4">
+<a name="e4"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(4)</span>
+          <math display="block" id="m39">
+            <mo>tan</mo>
+            <mi>θ</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>X</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+                <mo>+</mo>
+                <msub>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>O ângulo de fase <math display="inline" id="m40"><mi>θ</mi></math> depende da natureza do efeito reativo de <math display="inline" id="m41"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math>, que pode ser capacitivo(<math display="inline" id="m42"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&lt;</mo><mn>0</mn></math>) ou indutivo (<math display="inline" id="m43"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></math>). O diagrama de fasores referentes a impedância do circuito apresenta as duas configurações que são mostradas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a>.</p>
+      <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          (a) Representação fasorial entre corrente <i>I</i> e Impedância <i>Z</i> para circuitos capacitivos (<math display="inline" id="m44"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&lt;</mo><mn>0</mn></math>).(b) Representação fasorial entre corrente <i>I</i> e Impedância <i>Z</i> para circuitos indutivos (<math display="inline" id="m45"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></math>).
+        <br>
+</div>
+</div>
+      <p>Adotando-se a fase da tensão de entrada <math display="inline" id="m46"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math> como 0, <math display="inline" id="m47"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math> = <math display="inline" id="m48"><msub><mrow><mi>V</mi></mrow><mrow><mi>i</mi></mrow></msub><mi>∠</mi><msup><mrow><mn>0</mn></mrow><mrow><mo>∘</mo></mrow></msup></math>, determina-se o fasor da corrente <i>I</i> pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee5"><span class="sci-ico-fileFormula"></span>Equação 5</a>. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a> também está inserida a representação fasorial da corrente do circuito.</p>
+      <p>
+        <div class="row formula" id="ee5">
+<a name="e5"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(5)</span>
+          <math display="block" id="m49">
+            <mi>I</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+                <mi>∠</mi>
+                <mn>0</mn>
+              </mrow>
+              <mrow>
+                <mi>Z</mi>
+                <mi>∠</mi>
+                <mi>θ</mi>
+              </mrow>
+            </mfrac>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+            </mfrac>
+            <mi>∠</mi>
+            <mo>–</mo>
+            <mi>θ</mi>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Com isso, os fasores das tensões <math display="inline" id="m50"><msub><mrow><mi>v</mi></mrow><mrow><mi>R</mi></mrow></msub></math> e <math display="inline" id="m51"><msub><mrow><mi>v</mi></mrow><mrow><mi>t</mi></mrow></msub></math> são calculados com as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee6"><span class="sci-ico-fileFormula"></span>Equações 6</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee7"><span class="sci-ico-fileFormula"></span>7</a>.</p>
+      <p>
+        <div class="row formula" id="ee6">
+<a name="e6"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(6)</span>
+          <math display="block" id="m52">
+            <msub>
+              <mrow>
+                <mi>v</mi>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mi>I</mi>
+            <mi>R</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+            </mfrac>
+            <mi>∠</mi>
+            <mo>–</mo>
+            <mi>θ</mi>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>
+        <div class="row formula" id="ee7">
+<a name="e7"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(7)</span>
+          <math display="block" id="m53">
+            <msub>
+              <mrow>
+                <mi>v</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mi>I</mi>
+            <msub>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mi>∠</mi>
+            <msub>
+              <mrow>
+                <mi>θ</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+            </mfrac>
+            <mi>R</mi>
+            <mi>∠</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>θ</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+                <mo>–</mo>
+                <mi>θ</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Conforme já conhecido da teoria de circuitos, as fases entre das impedâncias são restritas a ângulos de 90<math display="inline" id="m54"><msup><mrow></mrow><mrow><mo>∘</mo></mrow></msup></math>. Portanto, <math display="inline" id="m55"><mo>–</mo><mn>9</mn><msup><mrow><mn>0</mn></mrow><mrow><mo>∘</mo></mrow></msup><mo>&lt;</mo><msub><mrow><mi>θ</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&lt;</mo><mn>9</mn><msup><mrow><mn>0</mn></mrow><mrow><mo>∘</mo></mrow></msup></math> e <math display="inline" id="m56"><mo>–</mo><mn>9</mn><msup><mrow><mn>0</mn></mrow><mrow><mo>∘</mo></mrow></msup><mo>&lt;</mo><mi>θ</mi><mo>&lt;</mo><mn>9</mn><msup><mrow><mn>0</mn></mrow><mrow><mo>∘</mo></mrow></msup></math>.</p>
+      <p>A tensão <math display="inline" id="m57"><msub><mrow><mi>v</mi></mrow><mrow><mi>t</mi></mrow></msub></math> possui um ângulo de fase <math display="inline" id="m58"><msub><mrow><mi>θ</mi></mrow><mrow><mi>v</mi><mi>t</mi></mrow></msub><mo>=</mo><msub><mrow><mi>θ</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>–</mo><mi>θ</mi></math> em relação a <math display="inline" id="m59"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math>. Com isso, os fasores dos diagramas da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a> sendo multiplicados por I são rotacionados e produzem o diagrama fasorial das tensões mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a>
+			</p>
+      <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+          (a) Representação fasorial das tensões para circuitos capacitivos (<math display="inline" id="m60"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&lt;</mo><mn>0</mn></math>).(b) Representação fasorial das tensões para circuitos indutivos (<math display="inline" id="m61"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></math>)
+        <br>
+</div>
+</div>
+      <p>Adotando-se um procedimento experimental em que são medidos <math display="inline" id="m62"><msub><mrow><mi>V</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math>, <math display="inline" id="m63"><msub><mrow><mi>V</mi></mrow><mrow><mi>t</mi></mrow></msub></math> e <math display="inline" id="m64"><msub><mrow><mi>θ</mi></mrow><mrow><mi>v</mi><mi>t</mi></mrow></msub></math>, determina-se <math display="inline" id="m65"><msub><mrow><mi>V</mi></mrow><mrow><mi>R</mi></mrow></msub></math> usando a lei dos cossenos (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee8"><span class="sci-ico-fileFormula"></span>Equação 8</a>) nos triângulos formados nos diagramas fasoriais da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a>.</p>
+      <p>
+        <div class="row formula" id="ee8">
+<a name="e8"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(8)</span>
+          <math display="block" id="m66">
+            <msubsup>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msubsup>
+            <mo>=</mo>
+            <msubsup>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>i</mi>
+                <mi>n</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msubsup>
+            <mo>+</mo>
+            <msubsup>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msubsup>
+            <mo>–</mo>
+            <mn>2</mn>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>i</mi>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>cos</mo>
+            <msub>
+              <mrow>
+                <mi>θ</mi>
+              </mrow>
+              <mrow>
+                <mi>v</mi>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Aplicando-se novamente a lei dos cossenos nos fasores da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a>, obtem-se o ângulo <math display="inline" id="m67"><mi>θ</mi></math> com a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee9"><span class="sci-ico-fileFormula"></span>Equação 9</a>
+			</p>
+      <p>
+        <div class="row formula" id="ee9">
+<a name="e9"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(9)</span>
+          <math display="block" id="m68">
+            <mo>cos</mo>
+            <mi>θ</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msubsup>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo>–</mo>
+                <msubsup>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo>–</mo>
+                <msubsup>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+              </mrow>
+              <mrow>
+                <mo>–</mo>
+                <mn>2</mn>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Com os resultados obtidos por meio das <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee8"><span class="sci-ico-fileFormula"></span>Equações 8</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee9"><span class="sci-ico-fileFormula"></span>9</a> pode-se calcular a <math display="inline" id="m69"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub><mi>∠</mi><msub><mrow><mi>θ</mi></mrow><mrow><mi>t</mi></mrow></msub></math>. A magnitude de <math display="inline" id="m70"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> é obtida pela igualdade das correntes em <math display="inline" id="m71"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> e <math display="inline" id="m72"><mi>R</mi></math> (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee10"><span class="sci-ico-fileFormula"></span>Equação 10</a>). A fase é obtida somando-se <math display="inline" id="m73"><msub><mrow><mi>θ</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>=</mo><msub><mrow><mi>θ</mi></mrow><mrow><mi>v</mi><mi>t</mi></mrow></msub><mo>+</mo><mi>θ</mi></math>.</p>
+      <p>
+        <div class="row formula" id="ee10">
+<a name="e10"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(10)</span>
+          <math display="block" id="m74">
+            <msub>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mi>R</mi>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+      </p>
+    
+      <h1 class="articleSectionTitle">3. Descrição do circuito</h1>
+      <p>Como é sabido, em um divisor de tensão em que os valores dos componentes possuem resistência (ou impedância) díspares, a voltagem sobre o elemento de menor valor é muito pequena. Medições de tensões na ordem de dezenas de mV, em condições não preparadas especificamente para este fim, podem ser comprometidas pelo surgimento de interferências indesejáveis. Além disso, muitos equipamentos, como osciloscópios e placas digitalizadoras comuns, que medem voltagens não operam satisfatoriamente sob amplitudes dessa ordem. O circuito desenvolvido neste trabalho visa superar as dificuldades causadas por essa situação por meio da amplificação dessas tensões para níveis em que as medições possam ser menos afetadas pelas eventuais interferências e o medidor opere sem restrições em plenitude.</p>
+      <p>A operação do circuito é baseada numa transformação linear em que a tensão medida no dispositivo em teste é somada a um nível de tensão mínimo e amplificada. O resultado dessa operação deve garantir um valor mínimo de tensão de saída o qual possa ser medido sem maiores dificuldades técnicas.</p>
+      <p>O diagrama esquemático do circuito proposto no trabalho é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a>. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a> foram omitidos os terminais de alimentação dos amplificadores operacionais e os capacitores de <i>bypass</i> normalmente conectados entre os terminais <math display="inline" id="m75"><mo>+</mo></math>V e -V e o terra da fonte de alimentação.</p>
+      <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+          Diagrama esquemático do circuito eletrônico que amplifica os sinais e modifica a sensibilidade da medição da corrente para cálculo da impedância elétrica.
+        <br>
+</div>
+</div>
+      <p>O divisor de tensão de entrada é composto por <math display="inline" id="m76"><mi>R</mi></math>1 e <math display="inline" id="m77"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math>. <math display="inline" id="m78"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> é o elemento a ter sua impedância elétrica determinada. Conforme a frequência do sinal elétrico fornecido pelo gerador de sinais, <math display="inline" id="m79"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math>, a queda de tensão elétrica em <math display="inline" id="m80"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> é modificada. Dessa forma, a variação entre os valores de <math display="inline" id="m81"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi><mspace width="0em"></mspace><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></math> e <math display="inline" id="m82"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi><mspace width="0em"></mspace><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></math>, prevista no projeto, deve produzir uma variação na amplitude da tensão na entrada não inversora de AO1 entre <math display="inline" id="m83"><msub><mrow><mi>V</mi></mrow><mrow><mi>t</mi><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></math> e <math display="inline" id="m84"><msub><mrow><mi>V</mi></mrow><mrow><mi>t</mi><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></math>. O valor de <math display="inline" id="m85"><msub><mrow><mi>V</mi></mrow><mrow><mi>t</mi><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></math> deve apresentar problemas de medição caso o valor de <math display="inline" id="m86"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi><mspace width="0em"></mspace><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></math> seja muito menor que <math display="inline" id="m87"><mi>R</mi></math>1. Nesse caso, é necessário que o valor de <math display="inline" id="m88"><msub><mrow><mi>V</mi></mrow><mrow><mi>t</mi></mrow></msub></math> seja amplificado. Contudo, por outro lado, esta amplificação pode gerar níveis de tensão mais elevados e uma possível saturação do amplificador quando o valor de <math display="inline" id="m89"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> for mais elevado.</p>
+      <p>A solução para este problema consiste em aplicar uma transformação linear na tensão de saída do divisor de tensão. Dessa forma, a amplitude da tensão na saída do amplificador operacional AO2 deve ser dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee11"><span class="sci-ico-fileFormula"></span>Equação (11)</a>
+			</p>
+      <p>
+        <div class="row formula" id="ee11">
+<a name="e11"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(11)</span>
+          <math display="block" id="m90">
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>o</mi>
+                <mi>u</mi>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mi>A</mi>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>+</mo>
+            <mi>B</mi>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>onde <math display="inline" id="m91"><mi>A</mi></math> e <math display="inline" id="m92"><mi>B</mi></math> são constantes a serem determinadas;</p>
+      <p><math display="inline" id="m93"><msub><mrow><mi>V</mi></mrow><mrow><mi>t</mi></mrow></msub></math> é a amplitude da tensão em <math display="inline" id="m94"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> que varia entre valores estabelecidos pela relação de <math display="inline" id="m95"><mi>R</mi></math>1 e <math display="inline" id="m96"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math>;</p>
+      <p><math display="inline" id="m97"><msub><mrow><mi>V</mi></mrow><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub></math> é a amplitude da tensão de saída resultante de uma amplificação adequada dos valores extremos de <math display="inline" id="m98"><msub><mrow><mi>V</mi></mrow><mrow><mi>t</mi></mrow></msub></math>.</p>
+      <p>A operação definida pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee11"><span class="sci-ico-fileFormula"></span>Equação 11</a> é feita por um circuito composto pelos amplificadores operacionais: AO1 que promove a multiplicação <i>Av</i><math display="inline" id="m99"><msub><mrow></mrow><mrow><mi>t</mi></mrow></msub></math> e AO2 que executa a soma <i>Av</i><math display="inline" id="m100"><msub><mrow></mrow><mrow><mi>t</mi></mrow></msub><mspace width="1em"></mspace><mo>+</mo><mspace width="1em"></mspace><mi>B</mi></math>. A teoria sobre amplificadores operacionais e suas configurações típicas são apresentadas em [<span class="ref"><sup class="xref xrefblue">22</sup><span class="refCtt closed"><span>[22] A. Pertence, Amplificadores Operacionais e Filtros Ativos (Makron Books, São Paulo, 1996), 5ªed.</span></span></span>].</p>
+      <p>A determinação de <math display="inline" id="m101"><mi>A</mi></math> e <math display="inline" id="m102"><mi>B</mi></math> é feita considerando os extremos das faixas de tensão previstas no projeto. Assim se obtém um sistema de equações lineares dado em <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee12"><span class="sci-ico-fileFormula"></span>(12)</a>:</p>
+      <p>
+        <div class="row formula" id="ee12">
+<a name="e12"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(12)</span>
+          <math display="block" id="m103">
+            <mtable align="axis" columnlines="none none none none none none none none none none none none none none none none none none none" equalcolumns="false" equalrows="false" style="">
+              <mtr>
+                <mtd columnalign="center">
+                  <msub>
+                    <mrow>
+                      <mi>V</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>o</mi>
+                      <mi>u</mi>
+                      <mi>t</mi>
+                      <mo>min</mo>
+                    </mrow>
+                  </msub>
+                  <mo>=</mo>
+                  <mi>A</mi>
+                  <msub>
+                    <mrow>
+                      <mi>V</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>t</mi>
+                      <mo>min</mo>
+                    </mrow>
+                  </msub>
+                  <mo>+</mo>
+                  <mi>B</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="center">
+                  <msub>
+                    <mrow>
+                      <mi>V</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>o</mi>
+                      <mi>u</mi>
+                      <mi>t</mi>
+                      <mo>max</mo>
+                    </mrow>
+                  </msub>
+                  <mo>=</mo>
+                  <mi>A</mi>
+                  <msub>
+                    <mrow>
+                      <mi>V</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>t</mi>
+                      <mo>max</mo>
+                    </mrow>
+                  </msub>
+                  <mo>+</mo>
+                  <mi>B</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="center"></mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Os resistores <math display="inline" id="m104"><mi>R</mi></math>2 e <math display="inline" id="m105"><mi>R</mi></math>3 compõem um divisor de tensão que são definidos a partir do valor de <math display="inline" id="m106"><mi>B</mi></math>. O valor de <math display="inline" id="m107"><mi>B</mi></math> é uma constante calculada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee13"><span class="sci-ico-fileFormula"></span>Equação 13</a>.</p>
+      <p>
+        <div class="row formula" id="ee13">
+<a name="e13"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(13)</span>
+          <math display="block" id="m108">
+            <mi>B</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>R</mi>
+                <mn>4</mn>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+                <mn>3</mn>
+                <mo>+</mo>
+                <mi>R</mi>
+                <mn>4</mn>
+              </mrow>
+            </mfrac>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>i</mi>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p><math display="inline" id="m109"><mi>R</mi></math>4 e <math display="inline" id="m110"><mi>R</mi></math>5 são os resistores que definem o ganho do amplificador operacional AO1 na configuração não inversora, dado pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee14"><span class="sci-ico-fileFormula"></span>Equação 14</a> e que fornecem a componente <i>Av</i><math display="inline" id="m111"><msub><mrow></mrow><mrow><mi>t</mi></mrow></msub></math> para o circuito somador.</p>
+      <p>
+        <div class="row formula" id="ee14">
+<a name="e14"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(14)</span>
+          <math display="block" id="m112">
+            <mi>A</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mfrac>
+              <mrow>
+                <mi>R</mi>
+                <mn>5</mn>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+                <mn>4</mn>
+              </mrow>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+      </p>
+    
+      <h1 class="articleSectionTitle">4. Desenvolvimento do projeto e metodologia</h1>
+      <p>No projeto que foi desenvolvido neste trabalho foram estabelecidos os seguintes parâmetros: <math display="inline" id="m113"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math> = 28 V<math display="inline" id="m114"><msub><mrow></mrow><mrow><mi mathvariant="normal">pp</mi></mrow></msub></math>, <math display="inline" id="m115"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi><mspace width="0em"></mspace><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></math> = 10 <math display="inline" id="m116"><mi mathvariant="normal">Ω</mi></math>, <math display="inline" id="m117"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi><mspace width="0em"></mspace><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></math> = 100 k<math display="inline" id="m118"><mi mathvariant="normal">Ω</mi></math>, <math display="inline" id="m119"><msub><mrow><mi>v</mi></mrow><mrow><mi>o</mi><mi>u</mi><mi>t</mi><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></math> = 0,3 V<math display="inline" id="m120"><msub><mrow></mrow><mrow><mi mathvariant="normal">pp</mi></mrow></msub></math> e <math display="inline" id="m121"><msub><mrow><mi>v</mi></mrow><mrow><mi>o</mi><mi>u</mi><mi>t</mi><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></math> = 25,0 V<math display="inline" id="m122"><msub><mrow></mrow><mrow><mi mathvariant="normal">pp</mi></mrow></msub></math>. A alimentação é simétrica de ±18V e entre os terminais da fonte e o terra foram usados capacitores de <i>bypass</i> de 100 nF.</p>
+      <p>A obtenção de <math display="inline" id="m123"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi></mrow></msub></math> foi feita a partir de um gerador de funções Tektronix AFG3021C. Na saída deste gerador foi ligado um amplificador operacional na configuração não inversora que forneceu os 28 V<math display="inline" id="m124"><msub><mrow></mrow><mrow><mi mathvariant="normal">pp</mi></mrow></msub></math>
+			</p>
+      <p>O resistor <math display="inline" id="m125"><mi>R</mi></math>1 é de 15 k<math display="inline" id="m126"><mi mathvariant="normal">Ω</mi></math> e foi escolhido por se tratar de um valor intermediário da faixa de impedâncias que o elemento a ser testado poderia apresentar. Este critério foi adotado pois pretende-se utilizar o medidor para determinar impedâncias de transdutores piezelétricos de potência que apresentam, em geral, variações de magnitude entre dezenas de <math display="inline" id="m127"><mi mathvariant="normal">Ω</mi></math> e dezenas de k<math display="inline" id="m128"><mi mathvariant="normal">Ω</mi></math>. Com isso, as tensões <math display="inline" id="m129"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></math> e <math display="inline" id="m130"><msub><mrow><mi>v</mi></mrow><mrow><mi>i</mi><mi>n</mi><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></math> são de 0,019 V<math display="inline" id="m131"><msub><mrow></mrow><mrow><mi mathvariant="normal">pp</mi></mrow></msub></math> e 24,3 V<math display="inline" id="m132"><msub><mrow></mrow><mrow><mi mathvariant="normal">pp</mi></mrow></msub></math>, respectivamente. Resolvendo-se o sistema de <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee12"><span class="sci-ico-fileFormula"></span>equações (12)</a> obteve-se <math display="inline" id="m133"><mi>A</mi></math> = 1,02 e <math display="inline" id="m134"><mi>B</mi></math> = 0,28 V</p>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela I</a> apresenta os valores calculados a partir das premissas do projeto. O circuito foi simulado, construído e calibrado antes da realização dos testes.</p>
+      <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Valores das resistências dos resistores calculados (valores comerciais aproximados). Todos os resistores possuem potencias nominais de 1/4 W e tolerância de ±5%.
+        <br>
+</div>
+</div>
+      <p>Os testes foram realizados em transdutores piezelétricos de potência produzidos pela Beijing Cheng-cheng Weiye Ultrasonic Science and Technology Co. Ltda. Os transdutores possuem frequências de ressonância nos seus modos fundamentais em torno de 27 kHz, 28 kHz e 38 kHz e serão denominados P1, P2 e P3, respectivamente. As impedâncias desses transdutores foram determinadas na faixa de 10 kHz a 70 kHz usando-se um analisador de impedâncias HP4294A, produzido pela Agilent. O analisador fornece as curvas do módulo e da fase da impedância em função da frequência que servirão de referência para validação do sistema desenvolvido.</p>
+      <p>As medições da tensão de entrada e saída foram feitas por um módulo digital NI USB51-32 da National Instruments que realiza funções de medição de tensão similares a de um osciloscópio. As configurações do módulo digitalizador e do gerador de funções, assim como o controle da varredura dos processos, foram feitas por um programa desenvolvido na plataforma LabView (National Instruments). Este mesmo programa possui rotina para determinar magnitude e fase da impedância. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a> mostra um diagrama de blocos do sistema completo.</p>
+      <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+          Diagrama de blocos do sistema completo.
+        <br>
+</div>
+</div>
+      <p>A interface com o usuário desenvolvida no LabView é mostrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Figura 7</a>.</p>
+      <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+          Interface do sistema de medições gerenciado pelo LabView.
+        <br>
+</div>
+</div>
+      <p>Os resultados são apresentados em gráficos comparativos contendo as curvas de magnitude e fase da impedância do sistema desenvolvido e do HP4294A. Cada curva contem 1000 pontos.</p>
+    
+      <h1 class="articleSectionTitle">5. Resultados e discussões</h1>
+      <p>Os resultados obtidos com os transdutores P1, P2 e P3 são mostrados nas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figuras 8</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>9</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>10</a>, respectivamente.</p>
+      <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+          (a) Módulo da Impedância em função da frequência do transdutor P1. (b) Fase em função da frequência do transdutor P1. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 9</strong><br>
+          (a) Módulo da Impedância em função da frequência do transdutor P2. (b) Fase em função da frequência do transdutor P2. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="f10">
+<a name="f10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 10</strong><br>
+          (a) Módulo da Impedância em função da frequência do transdutor P3. (b) Fase em função da frequência do transdutor P3. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        <br>
+</div>
+</div>
+      <p>De acordo com o esperado, a tensão no elemento <math display="inline" id="m144"><msub><mrow><mi>Z</mi></mrow><mrow><mi>t</mi></mrow></msub></math> pode ser medida numa faixa entre 0,019 e 24,3 Vpp e, com isso, determinar as impedâncias numa faixa larga de valores. Este ponto representa uma vantagem em relação ao circuito da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>. Uma tensão de 28 Vpp aplicada ao circuito da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>, considerando um resistor <i>shunt</i> com valores em torno de uma centena de <math display="inline" id="m145"><mi mathvariant="normal">Ω</mi></math>, geraria elevadas demandas de potência.</p>
+      <p>A medição direta no divisor de tensão com o módulo digital NI USB51-32 não é viável quando as tensões medidas são inferiores a 150 mVpp, aproximadamente. Dessa forma, é necessário que seja realizada uma elevação da tensão a ser medida. Essa elevação foi desempenhada satisfatoriamente pelo circuito desenvolvido. Portanto, a operação de transformação linear proposta contribui para o alargamento da faixa de valores do módulo da impedância a ser determinada.</p>
+      <p>Os resultados indicam que nos três transdutores piezelétricos testados o sistema desenvolvido pode medir magnitudes de impedâncias na faixa de dezenas de <math display="inline" id="m146"><mi mathvariant="normal">Ω</mi></math> a dezenas de k<math display="inline" id="m147"><mi mathvariant="normal">Ω</mi></math>, conforme proposto. Da mesma forma, as fases entre −90° e 90° também foram obtidas.</p>
+      <p>Os erros médios relativos da magnitude (<i>ERZ</i>) e da fase (<i>ER</i><math display="inline" id="m148"><mi>θ</mi></math>) calculados com as medições feitas com o sistema desenvolvido são apresentados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Tabela II</a>. Notou-se que os erros apresentaram uma tendência de crescimento com a frequência. Em frequências mais elevadas os componentes do circuito, especialmente os resistores com valores da ordem de dezenas de k<math display="inline" id="m149"><mi mathvariant="normal">Ω</mi></math> passam a apresentar efeito indutivo e, como consequência, progressivamente, geram imprecisões nas medições nas frequências superiores. A utilização de amplificadores operacionais de uso comum, como o TL084, também acarreta na redução da resposta na faixa de frequências. Havia inicialmente a pretensão de estender a utilização deste medidor de impedâncias até 100 kHz. Todavia, devido ao aumento dos erros a faixa de utilização recomendada ficou com limite superior de 70 kHz.</p>
+      <div class="row table" id="t2">
+<a name="t2"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 2</strong><br>
+          Erros médios relativos da magnitude (<i>ERZ</i>) e da fase (<i>ER</i><math display="inline" id="m150"><mi>θ</mi></math>) dos transdutores P1, P2 e P3
+        <br>
+</div>
+</div>
+      <p>Intrinsecamente, a determinação da impedância elétrica de transdutores piezelétricos de alta potência é bastante crítica e pode contribuir para o aumento dos erros. Esses transdutores apresentam elevados valores de fator de qualidade, <math display="inline" id="m152"><mi>Q</mi></math>, portanto, em certas faixas de valores, pequenas diferenças nas frequências dos sistemas que produzirão as comparações dos valores podem gerar erros de elevada magnitude.</p>
+      <p>Foi verificado que o algoritmo para determinação do ângulo de fase entre dois sinais executado pelo LabView, que emprega ferramentas próprias desse software, apresenta deficiências quando sinais com pequena amplitude e apresentando distorções são submetidos. Isto explica o aumento dos erros na medição da fase nas proximidades das ressonâncias dos transdutores (valores mínimos de impedância).</p>
+      <p>A medição de impedâncias em transdutores piezelétricos de potência é um procedimento bastante crítico. Devido ao elevado fator <math display="inline" id="m153"><mi>Q</mi></math> que esses transdutores apresentam, pequenas diferenças de frequência podem causar grandes discrepâncias entre os resultados. A automatização do sistema com o LabView permite mudar os passos da varredura em frequência e, assim, contribui para que os erros causados por esse motivo fossem minimizados.</p>
+      <p>Uma das vantagens da configuração proposta é a possibilidade de adequar a faixa de valores de impedância medidos alterando-se os valores de alguns resistores. Para tal, basta que se definam outros limites de tensão de saída e se refaçam os cálculos do sistema de equações (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee12"><span class="sci-ico-fileFormula"></span>Equação 12</a>). Também é possível usar este sistema em aplicações de campo, pois o gerador de funções, na forma de equipamento, utilizado neste trabalho pode ser substituído por um circuito integrado que realize a operação. A fonte de alimentação do sistema também pode ser substituída por baterias, uma vez que a corrente consumida é da ordem de dezenas de mA.</p>
+    
+      <h1 class="articleSectionTitle">6. Conclusões</h1>
+      <p>Foi apresentado um sistema para determinação de magnitude e fase da impedância elétrica de transdutores piezelétricos. O artifício utilizado para superar dificuldades de medição de valores extremos mostrou-se satisfatório em termos comparativos com os resultados obtidos com um analisador de impedâncias comercial. A forma com que o projeto foi desenvolvido pode ser replicada para outras faixas de valores de magnitude da impedância e outras frequências. Para tal, basta estabelecer os parâmetros e utilizar componentes semicondutores adequados para operações nas faixas de frequência e impedâncias elétricas consideradas.</p>
+      <p>Em relação aos custos, o módulo digital, a licença do software (LabView) e os componentes utilizados no circuito totalizam, aproximadamente, 3000 dólares. No entanto, este valor pode ser amortizado pois o módulo digital e o software podem ser partilhados na automatização de outros experimentos de um laboratório de física. Sendo assim, comparado ao valor de um analisador de impedâncias comercial (um HP4294A) que é de aproximadamente 45000 dólares, pode-se dizer que o custo do dispositivo é muito baixo.</p>
+      <p>Há possibilidades de aperfeiçoamento do sistema com o uso de resistores de precisão e amplificadores operacionais que respondam em frequências mais elevadas. Com a inserção desses componentes espera-se produzir sensível melhoria na precisão, principalmente nas frequências superiores a 70 kHz, em que a taxa de erro na curva de fase foi maior.</p>
+      <p>Embora os testes tenham sido realizados em transdutores piezelétricos, o sistema apresentado pode ser empregado para a prática de aulas experimentais de Fisica IV em que se aborda a análise de circuitos em correntes alternadas com componentes resistivos e reativos e circuitos ressonantes. Por ser automatizada, a configuração proposta permite que experimentos, como o proposto em [<span class="ref"><sup class="xref xrefblue">23</sup><span class="refCtt closed"><span>[23] D.L. Chinaglia, G. Gozzi, R.A.M. Alfaro, e R. Hessel, Rev. Bras. Ens. Fis. 30, 4504 (2008).</span></span></span>], possam ser reproduzidos com maior celeridade e dinamismo na obtenção de dados.</p>
+    </div>
+<div class="articleSection" data-anchor="Agradecimentos">
+<h1 class="articleSectionTitle">Agradecimentos</h1>
+      
+      <p>Os autores agradecem a Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) e ao Conselho Nacional de Pesquisa (CNPq) pelo apoio financeiro dado a realização deste trabalho.</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> J.C. Andrades, A. Schiappacassa e P.F. Santos, Rev. Bras. Ens. Fis. <b>35</b>, 2503 (2013).</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T. Dorneles, Rev. Bras. Ens. Fis. <b>38</b>, e3503 (2016).</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> F.J. Arnold, R. Arthur, L.L. Bravo-Roger, M.S. Gonçalves e M.J.G. Oliveira, Rev. Bras. Ens. Fis. <b>33</b>, 4311 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> C. Sirisathitkul, P. Glawtanong, T. Eadkong and Y. Sirisathitkul, Rev. Bras. Ens. Fis. <b>35</b>, 1504 (2013).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> A.G. Guedes, Rev. Bras. Ens. Fis. <b>37</b>, 2502 (2015).</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> P.F.O. Rosa, F.S. Silva, L. Benyosef e A.R.R. Papa, Rev. Bras. Ens. Fis. <b>38</b>, 1501 (2016).</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> A.C.P. Fernandes, L.T.S. Auler e J.A.O. Huguenin, Rev. Bras. Ens. Fis. <b>38</b>, e3504 (2016).</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> D. Halliday, R. Resnick e J. Walker, <i>Fundamentos de Física</i> (LTC, Rio de Janeiro, 2012), 9ªed, vol. 4.</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> P.A. Tipler e G. Mosca, <i>Física para Cientistas e Engenheiros</i> (LTC, Rio de Janeiro, 2012), 6ªed, vol. 2.</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> P.R. Kesten e D.L. Tauck, <i>Física na Universidade para as Ciências Físicas e da Vida</i> (LTC, Rio de Janeiro, 2015), 1ªed, vol. 3.</div>
+</li>
+<li>
+<sup class="xref big">[11]</sup><div> J.W. Dally, W.F. Riley and K.G. McConnell, <i>Instrumentation for Engineering Measurements</i> (John Wiley &amp; Sons, New York, 1984)</div>
+</li>
+<li>
+<sup class="xref big">[12]</sup><div> A. Saffari and E.K. Akdogan, <i>Piezoelectric and Acoustic Materials for Transducer Applications</i> (Springer, New Jersey, 2008).</div>
+</li>
+<li>
+<sup class="xref big">[13]</sup><div> F.J. Fishman, Am. J. Phys. <b>55</b>, 1047 (1987).</div>
+</li>
+<li>
+<sup class="xref big">[14]</sup><div> D.M. Peairs, G. Park and D.J. Inman, J. of Intell. Mat. Systems and Struct. <b>15</b>, 129 (2004).</div>
+</li>
+<li>
+<sup class="xref big">[15]</sup><div> F.G. Baptista, and J. Vieira Filho, IEEE Trans. on Instrum. and Meas. <b>58</b>, 3602 (2009).</div>
+</li>
+<li>
+<sup class="xref big">[16]</sup><div> S. Wang, and C. You, J. of Intell. Mat. Systems and Struct. <b>19</b>, 1029 (2008).</div>
+</li>
+<li>
+<sup class="xref big">[17]</sup><div> F.J. Arnold, R.L. Ximenes, R. Arthur e T.S. Santos, in: <i>Anais do XX Congresso Brasileiro de Automática</i> p. 1712-1717 (2014).</div>
+</li>
+<li>
+<sup class="xref big">[18]</sup><div> S. Doerner, T. Schneider and P.R. Hauptmann, Rev. of Sci. Instrum. <b>78</b>, 105101 (2007).</div>
+</li>
+<li>
+<sup class="xref big">[19]</sup><div> M. Schmid, E. Benes and R. Sedlaczek, Meas. Sci. Tech <b>1</b>, 970 (1990).</div>
+</li>
+<li>
+<sup class="xref big">[20]</sup><div> J.A. Edminister, <i>Circuitos Elétricos</i> (Editora McGraw-Hill, São Paulo, 1991), 2ªed.</div>
+</li>
+<li>
+<sup class="xref big">[21]</sup><div> R.L. Boylestad, <i>Análise de Circuitos</i> (Editora Pearson, São Paulo, 2012), 12ªed.</div>
+</li>
+<li>
+<sup class="xref big">[22]</sup><div> A. Pertence, <i>Amplificadores Operacionais e Filtros Ativos</i> (Makron Books, São Paulo, 1996), 5ªed.</div>
+</li>
+<li>
+<sup class="xref big">[23]</sup><div> D.L. Chinaglia, G. Gozzi, R.A.M. Alfaro, e R. Hessel, Rev. Bras. Ens. Fis. <b>30</b>, 4504 (2008).</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publicação nesta coleção</strong><br>2017</li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>18 Ago 2016</li>
+<li>
+<strong>Revisado</strong><br>19 Set 2016</li>
+<li>
+<strong>Aceito</strong><br>29 Out 2016</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Joseanne Cristina Viana </strong><br><div>Faculdade de Tecnologia, Universidade Estadual de Campinas, Limeira, SP, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Francisco Arnold </strong><strong>*</strong><br><div>Faculdade de Tecnologia, Universidade Estadual de Campinas, Limeira, SP, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">*Endereço de correspondência: <a href="mailto:arnold@ft.unicamp.br">arnold@ft.unicamp.br</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (10)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (2)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (14)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Diagrama esquemático de um divisor de tensão como uma configuração simples para determinação de impedâncias elétricas.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Diagrama esquemático do divisor de tensão utilizado no sistema desenvolvido.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          (a) Representação fasorial entre corrente <i>I</i> e Impedância <i>Z</i> para circuitos capacitivos (<math display="inline" id="m44"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&lt;</mo><mn>0</mn></math>).(b) Representação fasorial entre corrente <i>I</i> e Impedância <i>Z</i> para circuitos indutivos (<math display="inline" id="m45"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></math>).
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+          (a) Representação fasorial das tensões para circuitos capacitivos (<math display="inline" id="m60"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&lt;</mo><mn>0</mn></math>).(b) Representação fasorial das tensões para circuitos indutivos (<math display="inline" id="m61"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></math>)
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+          Diagrama esquemático do circuito eletrônico que amplifica os sinais e modifica a sensibilidade da medição da corrente para cálculo da impedância elétrica.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+          Diagrama de blocos do sistema completo.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+          Interface do sistema de medições gerenciado pelo LabView.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+          (a) Módulo da Impedância em função da frequência do transdutor P1. (b) Fase em função da frequência do transdutor P1. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+          (a) Módulo da Impedância em função da frequência do transdutor P2. (b) Fase em função da frequência do transdutor P2. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 10</strong><br>
+          (a) Módulo da Impedância em função da frequência do transdutor P3. (b) Fase em função da frequência do transdutor P3. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Valores das resistências dos resistores calculados (valores comerciais aproximados). Todos os resistores possuem potencias nominais de 1/4 W e tolerância de ±5%.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 2</strong><br>
+          Erros médios relativos da magnitude (<i>ERZ</i>) e da fase (<i>ER</i><math display="inline" id="m150"><mi>θ</mi></math>) dos transdutores P1, P2 e P3
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(5)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(6)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(7)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(8)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(9)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(10)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(11)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(12)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(13)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(14)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/0e7241a57a1adddbf0d7de5b387f6e50d98be01d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Diagrama esquemático de um divisor de tensão como uma configuração simples para determinação de impedâncias elétricas.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/0e7241a57a1adddbf0d7de5b387f6e50d98be01d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/9f95995b826febdbaf17fea5dbb66e9ba31f1bd4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Diagrama esquemático do divisor de tensão utilizado no sistema desenvolvido.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/9f95995b826febdbaf17fea5dbb66e9ba31f1bd4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/0328dfff85f560f9bd61993f6b89143219cd06b6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          (a) Representação fasorial entre corrente <i>I</i> e Impedância <i>Z</i> para circuitos capacitivos (<math display="inline" id="m44"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&lt;</mo><mn>0</mn></math>).(b) Representação fasorial entre corrente <i>I</i> e Impedância <i>Z</i> para circuitos indutivos (<math display="inline" id="m45"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></math>).
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/0328dfff85f560f9bd61993f6b89143219cd06b6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/e9d10b67b10fa3e611b8c9ebad12ef416eeba5d4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+          (a) Representação fasorial das tensões para circuitos capacitivos (<math display="inline" id="m60"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&lt;</mo><mn>0</mn></math>).(b) Representação fasorial das tensões para circuitos indutivos (<math display="inline" id="m61"><msub><mrow><mi>X</mi></mrow><mrow><mi>t</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></math>)
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/e9d10b67b10fa3e611b8c9ebad12ef416eeba5d4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/a1592ac8f0ffc9a971acb99e6ba94663c77d7955.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+          Diagrama esquemático do circuito eletrônico que amplifica os sinais e modifica a sensibilidade da medição da corrente para cálculo da impedância elétrica.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/a1592ac8f0ffc9a971acb99e6ba94663c77d7955.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/13a141c1894315d7b3af33a4e5fc63794eca22f5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+          Diagrama de blocos do sistema completo.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/13a141c1894315d7b3af33a4e5fc63794eca22f5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/c18f13aa986903bd1abbdd1a32361421f8540f94.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+          Interface do sistema de medições gerenciado pelo LabView.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/c18f13aa986903bd1abbdd1a32361421f8540f94.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/9b9f5d528ac5cdd7a312ec687e8864264f8e0d80.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+          (a) Módulo da Impedância em função da frequência do transdutor P1. (b) Fase em função da frequência do transdutor P1. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/9b9f5d528ac5cdd7a312ec687e8864264f8e0d80.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/d64e814600a6a0692e55fd50d77924bb0fff7b4f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+          (a) Módulo da Impedância em função da frequência do transdutor P2. (b) Fase em função da frequência do transdutor P2. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/d64e814600a6a0692e55fd50d77924bb0fff7b4f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/55ef202c397dcee845cd41bdc6b71d869e33bcb1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 10   
+          (a) Módulo da Impedância em função da frequência do transdutor P3. (b) Fase em função da frequência do transdutor P3. Em ambos os gráficos os traços azul e vermelho correspondem aos dados colhidos com o HP4292A e com sistema desenvolvido.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8f4ryqcDcn946DzC9mmcPhN/55ef202c397dcee845cd41bdc6b71d869e33bcb1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Valores das resistências dos resistores calculados (valores comerciais aproximados). Todos os resistores possuem potencias nominais de 1/4 W e tolerância de ±5%.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="11%">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="left">R1</th>
+              <th align="left">R2</th>
+              <th align="left">R3</th>
+              <th align="left">R4</th>
+              <th align="left">R5</th>
+              <th align="left">R6</th>
+              <th align="left">R7</th>
+              <th align="left">R8</th>
+              <th align="left">R9</th>
+            </tr>
+          </thead>
+          <tbody style="border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <td align="left">15k<math display="inline" id="m135"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+              <td align="left">10k<math display="inline" id="m136"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+              <td align="left">100<math display="inline" id="m137"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+              <td align="left">10k<math display="inline" id="m138"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+              <td align="left">150<math display="inline" id="m139"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+              <td align="left">1k<math display="inline" id="m140"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+              <td align="left">1k<math display="inline" id="m141"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+              <td align="left">1k<math display="inline" id="m142"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+              <td align="left">10k<math display="inline" id="m143"><mi mathvariant="normal">Ω</mi></math>
+							</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 2</strong>    
+          Erros médios relativos da magnitude (<i>ERZ</i>) e da fase (<i>ER</i><math display="inline" id="m150"><mi>θ</mi></math>) dos transdutores P1, P2 e P3
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="25%">
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="left"></th>
+              <th align="center">P1</th>
+              <th align="center">P2</th>
+              <th align="center">P3</th>
+            </tr>
+          </thead>
+          <tbody style="border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <td align="left">
+<i>ERZ</i>(%)</td>
+              <td align="center">7,41</td>
+              <td align="center">5,63</td>
+              <td align="center">9,64</td>
+            </tr>
+            <tr>
+              <td align="left">
+<i>ER</i><math display="inline" id="m151"><mi>θ</mi></math>(%)</td>
+              <td align="center">6,98</td>
+              <td align="center">5,76</td>
+              <td align="center">8,70</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m28">
+            <mi>Z</mi>
+            <mo>=</mo>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>R</mi>
+                <mo>+</mo>
+                <msub>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>+</mo>
+            <mi>j</mi>
+            <msub>
+              <mrow>
+                <mi>X</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mfenced close="|" open="|" separators="">
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+            </mfenced>
+            <mi>∠</mi>
+            <mi>θ</mi>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m34">
+            <msub>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <msub>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>+</mo>
+            <mi>j</mi>
+            <msub>
+              <mrow>
+                <mi>X</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mfenced close="|" open="|" separators="">
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>Z</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mfenced>
+            <mi>∠</mi>
+            <msub>
+              <mrow>
+                <mi>θ</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m35">
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>i</mi>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+            <mfrac>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+              <mrow>
+                <msqrt>
+                  <mrow>
+                    <msup>
+                      <mrow>
+                        <mfenced close=")" open="(" separators="">
+                          <mrow>
+                            <mi>R</mi>
+                            <mo>+</mo>
+                            <msub>
+                              <mrow>
+                                <mi>R</mi>
+                              </mrow>
+                              <mrow>
+                                <mi>t</mi>
+                              </mrow>
+                            </msub>
+                          </mrow>
+                        </mfenced>
+                      </mrow>
+                      <mrow>
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                    <mo>+</mo>
+                    <msubsup>
+                      <mrow>
+                        <mi>X</mi>
+                      </mrow>
+                      <mrow>
+                        <mi>t</mi>
+                      </mrow>
+                      <mrow>
+                        <mn>2</mn>
+                      </mrow>
+                    </msubsup>
+                  </mrow>
+                </msqrt>
+              </mrow>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m39">
+            <mo>tan</mo>
+            <mi>θ</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>X</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+                <mo>+</mo>
+                <msub>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(5)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m49">
+            <mi>I</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+                <mi>∠</mi>
+                <mn>0</mn>
+              </mrow>
+              <mrow>
+                <mi>Z</mi>
+                <mi>∠</mi>
+                <mi>θ</mi>
+              </mrow>
+            </mfrac>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+            </mfrac>
+            <mi>∠</mi>
+            <mo>–</mo>
+            <mi>θ</mi>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(6)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m52">
+            <msub>
+              <mrow>
+                <mi>v</mi>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mi>I</mi>
+            <mi>R</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+            </mfrac>
+            <mi>∠</mi>
+            <mo>–</mo>
+            <mi>θ</mi>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(7)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m53">
+            <msub>
+              <mrow>
+                <mi>v</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mi>I</mi>
+            <msub>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mi>∠</mi>
+            <msub>
+              <mrow>
+                <mi>θ</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+            </mfrac>
+            <mi>R</mi>
+            <mi>∠</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>θ</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+                <mo>–</mo>
+                <mi>θ</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(8)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m66">
+            <msubsup>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msubsup>
+            <mo>=</mo>
+            <msubsup>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>i</mi>
+                <mi>n</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msubsup>
+            <mo>+</mo>
+            <msubsup>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msubsup>
+            <mo>–</mo>
+            <mn>2</mn>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>i</mi>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>cos</mo>
+            <msub>
+              <mrow>
+                <mi>θ</mi>
+              </mrow>
+              <mrow>
+                <mi>v</mi>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(9)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m68">
+            <mo>cos</mo>
+            <mi>θ</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msubsup>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo>–</mo>
+                <msubsup>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo>–</mo>
+                <msubsup>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+              </mrow>
+              <mrow>
+                <mo>–</mo>
+                <mn>2</mn>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                </msub>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                    <mi>n</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(10)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m74">
+            <msub>
+              <mrow>
+                <mi>Z</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mi>R</mi>
+            <mfrac>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>t</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mi>V</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>R</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(11)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m90">
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>o</mi>
+                <mi>u</mi>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mi>A</mi>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>t</mi>
+              </mrow>
+            </msub>
+            <mo>+</mo>
+            <mi>B</mi>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(12)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m103">
+            <mtable align="axis" columnlines="none none none none none none none none none none none none none none none none none none none" equalcolumns="false" equalrows="false" style="">
+              <mtr>
+                <mtd columnalign="center">
+                  <msub>
+                    <mrow>
+                      <mi>V</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>o</mi>
+                      <mi>u</mi>
+                      <mi>t</mi>
+                      <mo>min</mo>
+                    </mrow>
+                  </msub>
+                  <mo>=</mo>
+                  <mi>A</mi>
+                  <msub>
+                    <mrow>
+                      <mi>V</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>t</mi>
+                      <mo>min</mo>
+                    </mrow>
+                  </msub>
+                  <mo>+</mo>
+                  <mi>B</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="center">
+                  <msub>
+                    <mrow>
+                      <mi>V</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>o</mi>
+                      <mi>u</mi>
+                      <mi>t</mi>
+                      <mo>max</mo>
+                    </mrow>
+                  </msub>
+                  <mo>=</mo>
+                  <mi>A</mi>
+                  <msub>
+                    <mrow>
+                      <mi>V</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>t</mi>
+                      <mo>max</mo>
+                    </mrow>
+                  </msub>
+                  <mo>+</mo>
+                  <mi>B</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="center"></mtd>
+              </mtr>
+            </mtable>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(13)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m108">
+            <mi>B</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>R</mi>
+                <mn>4</mn>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+                <mn>3</mn>
+                <mo>+</mo>
+                <mi>R</mi>
+                <mn>4</mn>
+              </mrow>
+            </mfrac>
+            <msub>
+              <mrow>
+                <mi>V</mi>
+              </mrow>
+              <mrow>
+                <mi>i</mi>
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(14)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m112">
+            <mi>A</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mfrac>
+              <mrow>
+                <mi>R</mi>
+                <mn>5</mn>
+              </mrow>
+              <mrow>
+                <mi>R</mi>
+                <mn>4</mn>
+              </mrow>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Viana, Joseanne Cristina e Arnold, FranciscoDesenvolvimento de um sistema automatizado para medição de impedância elétrica. Revista Brasileira de Ensino de Física [online]. 2017, v. 39, n. 02 [Acessado CURRENTDATE] , e2503. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2016-0183&gt;. Epub 16 Nov 2016. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2016-0183.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Desenvolvimento de um sistema automatizado para medição de impedância elétrica&#34; &#34;Viana, Joseanne Cristina&#34; &#34;Arnold, Francisco&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Desenvolvimento de um sistema automatizado para medição de impedância elétrica&#34; &#34;Viana, Joseanne Cristina&#34; &#34;Arnold, Francisco&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/8f4ryqcDcn946DzC9mmcPhN/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172017000200601&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2016-0183" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2016-0183">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2016-0183" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2016-0183">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2016-0183"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2016-0183" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2016-0183">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2016-0183" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Desenvolvimento de um sistema automatizado para medição de impedância elétrica
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2016-0183">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

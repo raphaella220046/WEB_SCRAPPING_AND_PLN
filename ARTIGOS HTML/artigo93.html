@@ -1,0 +1,4348 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Rediscutindo Soluções Numéricas de Equações de Onda Rediscutindo Soluções Numéricas de Equações de Onda </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Rediscutindo Soluções Numéricas de Equações de Onda"/>
+<meta property="og:description" content="Resumo Nesta contribuição, é nosso principal objetivo apresentar um método numérico de solução..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Silva, Adilson Costa da">
+        
+            <meta name="citation_author_affiliation" content="Instituto Militar de Engenharia">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0002-3234-1307">
+        <meta name="citation_author" content="Helayël, José Abdalla">
+        
+            <meta name="citation_author_affiliation" content="Centro Brasileiro de Pesquisas Físicas">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="41"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2019-0064"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Rediscutindo Soluções Numéricas de Equações de Onda
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Resumo Nesta contribuição, é nosso principal objetivo apresentar um método numérico de solução da equação de onda, seja esta de origem mecânica ou eletromagnética. Baseando-nos nesta solução, podemos avaliar o comportamento destas ondas sob diferentes aspectos e condições, visto que, as ondas eletromagnéticas conseguem se propagar no vácuo, ou seja, não necessitam de um meio de propagação, enquanto as ondas mecânicas necessitam de um meio de propagação. Neste artigo, o leitor perceberá que a implementação numérica será a mesma tanto para ondas mecânicas quanto para ondas eletromagnéticas. Como iremos avaliar o comportamento de ondas em apenas um meio de propagação, utilizaremos o método de diferenças finitas para discretizar esta equação. Um dos propósitos deste trabalho é incentivar os leitores a utilizarem métodos numéricos de soluções aplicados à Física. Logo, abordamos de forma bastante simples a solução numérica do problema aqui tratado, bem como suas aplicações sob diferentes condições, atendo-nos com cuidado à precisão do método. Para validar a metodologia implementada nesta contribuição, comparamos os resultados obtidos com soluções analíticas disponíveis na literatura."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2019-06-27"></meta>
+<meta name="citation_keywords" content="Ondas mecânicas"></meta><meta name="citation_keywords" content="ondas eletromagnéticas"></meta><meta name="citation_keywords" content="método de diferenças finitas"></meta><meta name="citation_keywords" content="propagação e vibração de ondas"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2019.v41n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2019.v41n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172019000400412 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 41 
+                (4)
+            <span class="_separator"> • </span>2019</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2019-0064" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2019-0064</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0064"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Rediscutindo Soluções Numéricas de Equações de Onda<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Re-assessing Numerical Solutions to the Wave Equations</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Adilson Costa da Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Instituto Militar de Engenharia, Seção de Engenharia Nuclear, Urca, RJ, Brasil<div class="corresp">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:adilsoncostasilva@gmail.com">adilsoncostasilva@gmail.com</a>
+				</div>
+<a href="http://orcid.org/0000-0002-3234-1307" class="btnContribLinks orcid">http://orcid.org/0000-0002-3234-1307</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> José Abdalla Helayël Neto</span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Centro Brasileiro de Pesquisas Físicas, Urca, RJ, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumo">
+<h1 class="articleSectionTitle">Resumo</h1>
+<p>Nesta contribuição, é nosso principal objetivo apresentar um método numérico de solução da equação de onda, seja esta de origem mecânica ou eletromagnética. Baseando-nos nesta solução, podemos avaliar o comportamento destas ondas sob diferentes aspectos e condições, visto que, as ondas eletromagnéticas conseguem se propagar no vácuo, ou seja, não necessitam de um meio de propagação, enquanto as ondas mecânicas necessitam de um meio de propagação. Neste artigo, o leitor perceberá que a implementação numérica será a mesma tanto para ondas mecânicas quanto para ondas eletromagnéticas. Como iremos avaliar o comportamento de ondas em apenas um meio de propagação, utilizaremos o método de diferenças finitas para discretizar esta equação. Um dos propósitos deste trabalho é incentivar os leitores a utilizarem métodos numéricos de soluções aplicados à Física. Logo, abordamos de forma bastante simples a solução numérica do problema aqui tratado, bem como suas aplicações sob diferentes condições, atendo-nos com cuidado à precisão do método. Para validar a metodologia implementada nesta contribuição, comparamos os resultados obtidos com soluções analíticas disponíveis na literatura.</p>
+<p><strong>Palavras-chave:</strong><br>Ondas mecânicas; ondas eletromagnéticas; método de diferenças finitas; propagação e vibração de ondas</p>
+</div>
+<div class="articleSection" data-anchor="Abstract">
+<h1 class="articleSectionTitle">Abstract</h1>
+<p>Numerical solutions to the mechanical and electromagnetic wave equations have been worked out. In terms of numerical solutions, we can evaluate the behavior of these waves under different view points, for the equation that governs these phenomena differ specifically in the propagation speed. Thus, the numerical implementation follows without changes for both the mechanical and electromagnetic waves. As we are interested in evaluating the behavior of the wave solutions in a single propagation medium, we shall make use of the finite difference method to discretize the wave equation. As one of the main goals of this contribution is to encourage readers to use numerical methods to find solutions for physical problems, we shall present in a very simple way the numerical procedures, as well as their applications under different conditions, taking care, however, of the precision of the method. To validate the methodology implemented in our paper, we compare the analytical solutions available in the literature with the results here obtained.</p>
+<p><strong>Keywords:</strong><br>Mechanical waves; electromagnetic waves; finite difference method; wave propagation and vibration</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>As ondas, de uma forma geral, constituem um dos principais campos de estudo da Física, e suas aplicações são bastante significativa no mundo em que vivemos atualmente. Para termos uma ideia de sua aplicação, podemos citar o mundo fonográfico da música e sua grande extensão. Também, podemos citar concertos sinfônicos, festivais de música cujo o público chega a centenas de milhares de pessoas, entre outros. O desenvolvimento tecnológico neste caso é tão significativo que gastam-se muito na produção musical de um grupo, bem como, na produção musical de filmes, onde há altos investimentos em acústica de ambientes e studios de produção. Note que não citamos investimentos em softwares e instrumentos musicais que evoluíram bastante ao longo dos anos. Neste caso, estamos falando especificamente de ondas mecânicas, isto é, ondas que dependem de um meio para se propagar<span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+        Ar, água ou em um gás.
+      </span></span></span>. Para abranger mais um pouco sobre este meio, podemos citar os veículos de divulgação, distribuição e reprodução, já que uma vez produzido, a informação contida na onda pode ser transmitida para o mundo inteiro através da internet, rádio, televisão, mídias graváveis que podem ser reproduzidas por meio de CDs, DVDs, pen drives e outros dispositivos que estão atualmente em desenvolvimento.</p>
+      <p>A aplicação de ondas eletromagnéticas é tão vasta que vai desde a escala atômica, por exemplo, na medicina nuclear, onde são feitos exames para obtenção de imagens por tomografia computadorizada por emissão de pósitrons <i>PET</i><span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] A.C.B. Machado, V. Pleitez e M.C. Tijero, Rev. Bras. Ensino Física 28, 407 (2006).</span></span></span> já que o corpo do paciente, que é constituído de matéria, apresenta os elétrons que se aniquilam com a antimatéria emitida por um radionuclídeo emissor de pósitrons, gerando assim dois fótons seguindo os princípios de conservação da carga entre outros. Este procedimento é bastante eficiente na detecção de tumores cerebrais em pacientes com câncer. Para aplicação em grandes escalas, podemos citar a transmissão de sinal via satélites entre outros.</p>
+      <p>O objetivo de apresentar uma solução numérica visa descrever o fenômeno físico com uma abordagem bastante simples e precisa. Umas das grandes vantagens em utilizar soluções numéricas deve-se ao fato de que há muitos problemas em aberto que não possuem soluções analíticas, de forma que a abordagem numérica é que nos permite contornar esta dificuldade. Uma outra vantagem é que é sempre possível simplificar o problema proposto, tornando nulos alguns termos da equação, sem a necessidade de reescrever o código desenvolvido para o caso geral. É importante que o leitor tenha a ideia de que há um preço a pagar pelo uso de soluções numéricas devido ao esforço computacional gasto na solução do problema a serem tratados. Porém, com os avanços na área de tecnologia da informação, os tempos de simulação para diferentes tipos de casos/problemas estão sendo reduzidos e tornando cada vez mais viável o uso de soluções numéricas.</p>
+      <p>Apresentaremos uma visão geral do problema e as simulações para cada caso de interesse.</p>
+      <p>Consideremos uma corda presa em suas extremidades na horizontal, sendo deslocada da posição de equilíbrio. Seja <i>L</i> o comprimento da corda. Para descrever o movimento dessa corda em torno da posição de equilíbrio, vamos utilizar apenas um elemento de corda de massa <math><mi>Δ</mi><mi>m</mi></math>. Como essa corda está sendo tensionada pela ação das forças <math><msub><mi>T</mi><mn>1</mn></msub></math> e <math><msub><mi>T</mi><mn>2</mn></msub></math>, conforme mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig.1</a>, podemos aplicar a segunda lei de Newton a esse elemento de corda e obter, assim, a equação que governa a propagação de onda dessa corda, tal que,</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Elemento de corda esticada.
+        <br>
+</div>
+</div>
+      <div class="row formula" id="eeq1">
+<a name="eq1"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(1)</span>
+        <math display="block" id="m1">
+          <mrow>
+            <msub>
+              <mi>T</mi>
+              <mn>2</mn>
+            </msub>
+            <mi>cos</mi>
+            <msub>
+              <mi>θ</mi>
+              <mn>2</mn>
+            </msub>
+            <mover accent="true">
+              <mi>ı</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>−</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>1</mn>
+            </msub>
+            <mi>cos</mi>
+            <msub>
+              <mi>θ</mi>
+              <mn>1</mn>
+            </msub>
+            <mover accent="true">
+              <mi>ı</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>+</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>2</mn>
+            </msub>
+            <mi>sin</mi>
+            <msub>
+              <mi>θ</mi>
+              <mn>2</mn>
+            </msub>
+            <mover accent="true">
+              <mi>j</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>−</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>1</mn>
+            </msub>
+            <mi>sin</mi>
+            <msub>
+              <mi>θ</mi>
+              <mn>1</mn>
+            </msub>
+            <mover accent="true">
+              <mi>j</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>=</mo>
+            <mi>Δ</mi>
+            <mi>m</mi>
+            <mi>a</mi>
+            <mover accent="true">
+              <mi>j</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>,</mo>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>onde <math><mrow><mi>Δ</mi><mi>m</mi></mrow></math> é o elemento de corda. Como a aceleração tem apenas componente ao longo do eixo-<i>y</i>, podemos escrever a seguinte relação para a projeção ao longo do eixo-<i>x</i>,</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <msub>
+            <mi>T</mi>
+            <mn>2</mn>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mi>T</mi>
+                <mn>1</mn>
+              </msub>
+              <mi>cos</mi>
+              <msub>
+                <mi>θ</mi>
+                <mn>1</mn>
+              </msub>
+            </mrow>
+            <mrow>
+              <mi>cos</mi>
+              <msub>
+                <mi>θ</mi>
+                <mn>2</mn>
+              </msub>
+            </mrow>
+          </mfrac>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>Substituindo na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq1"><span class="sci-ico-fileFormula"></span>Eq.(1)</a>, resulta que</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <msub>
+            <mi>T</mi>
+            <mn>1</mn>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mi>tan</mi>
+          <msub>
+            <mi>θ</mi>
+            <mn>2</mn>
+          </msub>
+          <mo>−</mo>
+          <mi>tan</mi>
+          <msub>
+            <mi>θ</mi>
+            <mn>1</mn>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mi>Δ</mi>
+              <mi>m</mi>
+              <mi>a</mi>
+            </mrow>
+            <mrow>
+              <mi>cos</mi>
+              <msub>
+                <mi>θ</mi>
+                <mn>1</mn>
+              </msub>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>como estamos lidando com pequenos ângulos, podemos aproximar <math><mi>cos</mi><msub><mi>θ</mi><mn>1</mn></msub><mo>≃</mo><mn>1</mn></math> e usando, a relação entre massa e densidade, temos que, para um pequeno elemento da corda, <math><mi>Δ</mi><mi>m</mi><mo>=</mo><mi>μ</mi><mi>Δ</mi><mi>x</mi></math>. Para simplificar a notação, definiremos a tensão na corda <math><mi>T</mi><mo>≡</mo><msub><mi>T</mi><mn>1</mn></msub></math>. Logo, com essas relações a equação pode ser escrita como,</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mfrac>
+            <mrow>
+              <mi>tan</mi>
+              <msub>
+                <mi>θ</mi>
+                <mn>2</mn>
+              </msub>
+              <mo>−</mo>
+              <mi>tan</mi>
+              <msub>
+                <mi>θ</mi>
+                <mn>1</mn>
+              </msub>
+            </mrow>
+            <mrow>
+              <mi>Δ</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <mo>=</mo>
+          <mfrac>
+            <mi>μ</mi>
+            <mi>T</mi>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+              <mi>y</mi>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>t</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>A derivada de uma função descreve a inclinação da reta tangente no ponto; logo, a tangente no ponto, dada pela derivada da função, lê-se:</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mi>Δ</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <mo stretchy="false">(</mo>
+          <mfrac>
+            <mrow>
+              <mo>∂</mo>
+              <mi>y</mi>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <msub>
+            <mo>|</mo>
+            <mrow>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>Δ</mi>
+              <mi>x</mi>
+            </mrow>
+          </msub>
+          <mo>−</mo>
+          <mfrac>
+            <mrow>
+              <mo>∂</mo>
+              <mi>y</mi>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <msub>
+            <mo>|</mo>
+            <mi>x</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mfrac>
+            <mi>μ</mi>
+            <mi>T</mi>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+              <mi>y</mi>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>t</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>Então, se aplicarmos o limite quando <math><mi>Δ</mi><mi>x</mi><mo>→</mo><mn>0</mn></math> na equação acima, obtém-se</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <munder>
+            <mrow>
+              <mi>lim</mi>
+            </mrow>
+            <mrow>
+              <mi>Δ</mi>
+              <mi>x</mi>
+              <mo>→</mo>
+              <mn>0</mn>
+            </mrow>
+          </munder>
+          <mfrac>
+            <mo>∂</mo>
+            <mrow>
+              <mo>∂</mo>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <mo stretchy="false">(</mo>
+          <mfrac>
+            <mrow>
+              <mi>y</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>Δ</mi>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+              <mo>−</mo>
+              <mi>y</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mrow>
+              <mi>Δ</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mfrac>
+            <mi>μ</mi>
+            <mi>T</mi>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+              <mi>y</mi>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>t</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>resultando assim na equação de onda mecânica dada por,</p>
+      <div class="row formula" id="eeq2">
+<a name="eq2"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(2)</span>
+        <math display="block" id="m2">
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+              <mi>y</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <msup>
+                <mi>v</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+              <mi>y</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>t</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>onde <i>v</i> é a velocidade de propagação da onda mecânica, que depende da densidade linear da corda <math><mi>μ</mi></math> e da tensão da corda <math><mi>T</mi></math>, definida como <math><mi>v</mi><mo>≡</mo><msqrt><mrow><mfrac><mi>T</mi><mi>μ</mi></mfrac></mrow></msqrt></math>. É importante que o leitor observe que há diferentes tipo de ondas, isto é,</p>
+      <ul list-type="bullet">
+<li>
+          <p><b>Ondas mecânicas:</b> São as mais conhecidas, visto que podem ser observadas no nosso cotidiano; por exemplo, as ondas do mar, sonoras, sísmicas, entre outras. Estas ondas dependem de um meio material para se propagar e são governadas pelas leis de Newton.</p>
+        </li>
+<li>
+          <p><b>Ondas eletromagnéticas:</b> Apesar de utilizarmos com frequência, por exemplo, microondas, telefonia celular, transmissão de rádio, telecomunicações, medicina e termos experiências cotidianas com a luz visível, estas ondas são menos intuitivas e pouco conhecidas e até por alguns estudantes. As ondas eletromagnéticas não precisam de um meio material para se propagar; propagam-se no vácuo com a máxima velocidade de sinalização, dada por <math><mi>c</mi><mo>=</mo><mn>3.0</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup><mtext>
+							</mtext><mi>m</mi><mo>/</mo><mi>s</mi></math> (<i>c</i> é a constante fundamental da Física que representa a velocidade da luz no vácuo).</p>
+        </li>
+<li>
+          <p><b>Ondas de matéria</b>: São ondas mais restritas que se revelam em escalas atômica e subatômica cujos estudos são realizados em experimentos de alta precisão que permitem detectá-las. Estão associadas a partículas subatômicas, como os elétrons, prótons, nêutrons e neutrinos, por exemplo. São classificadas desta forma devido ao seu comportamento <i>dual</i>, ora se comportam como partículas, ora como ondas.</p>
+        </li>
+</ul>
+      <p>Neste artigo, buscaremos soluções analíticas e numéricas tanto para ondas mecânicas, bem como, ondas eletromagnéticas. Há muitas formas de obter a solução da equação <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>Eq.(2)</a>. Na literatura <span class="ref"><strong class="xref xrefblue">[2]</strong><span class="refCtt closed"><span>[2] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física - Volume 2 (Editora LTC, São Paulo, 2016).</span></span></span>, a solução da equação de onda é dada por,</p>
+      <div class="row formula" id="eeq3">
+<a name="eq3"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(3)</span>
+        <math display="block" id="m3">
+          <mi>y</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <msub>
+            <mi>y</mi>
+            <mi>m</mi>
+          </msub>
+          <mi>sin</mi>
+          <mo stretchy="false">(</mo>
+          <mi>κ</mi>
+          <mi>x</mi>
+          <mo>−</mo>
+          <mi>ω</mi>
+          <mi>t</mi>
+          <mo>+</mo>
+          <mi>ϕ</mi>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>onde <math><mi>κ</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>λ</mi></mfrac></math> é o vetor de onda, <math><mi>λ</mi></math> é o comprimento de onda, <math><mi>ω</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>T</mi></mfrac></math> é a frequência angular e <i>T</i> é o período da onda, ou seja, o tempo necessário para que a onda percorra uma distância igual ao seu comprimento de onda, <math><mi>λ</mi></math>. Para a obtenção de soluções ondulatórias, adotaremos o método de separação de variáveis para ondas estacionárias, onde as condições de contorno são especificadas. Apresentaremos a solução numérica para o caso geral, isto é, aquela que pode ser aplicada tanto para ondas mecânicas, bem como, para ondas eletromagnéticas.</p>
+    
+      <h1 class="articleSectionTitle">2. Solução Numérica da Equação de Onda</h1>
+      <p>Apresentaremos uma solução numérica para equação de onda mecânica ou eletromagnética unidimensional, dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>Eq.(2)</a>. Para isso, usaremos a notação <math><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></math> para representar a função de onda, visto que é uma notação mais geral. Desta forma, a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>Eq.(2)</a> em função desta nova notação assume a seguinte forma,</p>
+      <div class="row formula" id="eeq4">
+<a name="eq4"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(4)</span>
+        <math display="block" id="m4">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <msup>
+                <mi>v</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>t</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mi>ψ</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mi>ψ</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>Para discretizar esta equação, usaremos a série de Taylor<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">2</strong>
+        Utiliza o mesmo conceito do Método de Diferenças Finitas
+      </span></span></span> [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] C. Scherer, Métodos Computacionais da Física (Editora Livraria da Física, São Paulo, 2010).</span></span></span>, <span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] S. Nakamura, Computational Method in Engineering and Science (John Wiley and Sons, Nova Jersey, 1977).</span></span></span>], de modo que, a expansão em torno do ponto <math><mi>Δ</mi><mi>t</mi></math> é dado por</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mtable columnalign="left">
+            <mtr>
+              <mtd>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo>±</mo>
+                <mi>Δ</mi>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>=</mo>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>±</mo>
+                <mi>Δ</mi>
+                <mi>t</mi>
+                <mfrac>
+                  <mo>∂</mo>
+                  <mrow>
+                    <mo>∂</mo>
+                    <mi>t</mi>
+                  </mrow>
+                </mfrac>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>+</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>Δ</mi>
+                    <msup>
+                      <mi>t</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                    <mo>!</mo>
+                  </mrow>
+                </mfrac>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mo>∂</mo>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mo>∂</mo>
+                    <msup>
+                      <mi>t</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>±</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>Δ</mi>
+                    <msup>
+                      <mi>t</mi>
+                      <mn>3</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mn>3</mn>
+                    <mo>!</mo>
+                  </mrow>
+                </mfrac>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mo>∂</mo>
+                      <mn>3</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mo>∂</mo>
+                    <msup>
+                      <mi>t</mi>
+                      <mn>3</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mn>...</mn>
+                <mo>,</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </math>
+      </div></div>
+</div>
+      <p>analogamente, para pontos em torno de <math><mi>Δ</mi><mi>x</mi></math>, temos</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mtable columnalign="left">
+            <mtr>
+              <mtd>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>±</mo>
+                <mi>Δ</mi>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>=</mo>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>±</mo>
+                <mi>Δ</mi>
+                <mi>x</mi>
+                <mfrac>
+                  <mo>∂</mo>
+                  <mrow>
+                    <mo>∂</mo>
+                    <mi>x</mi>
+                  </mrow>
+                </mfrac>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>+</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>Δ</mi>
+                    <msup>
+                      <mi>x</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                    <mo>!</mo>
+                  </mrow>
+                </mfrac>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mo>∂</mo>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mo>∂</mo>
+                    <msup>
+                      <mi>x</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>±</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>Δ</mi>
+                    <msup>
+                      <mi>x</mi>
+                      <mn>3</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mn>3</mn>
+                    <mo>!</mo>
+                  </mrow>
+                </mfrac>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mo>∂</mo>
+                      <mn>3</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mo>∂</mo>
+                    <msup>
+                      <mi>x</mi>
+                      <mn>3</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mn>....</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+        </math>
+      </div></div>
+</div>
+      <p>Como a equação de onda é uma equação de <math><msup><mn>2</mn><mi>a</mi></msup></math> ordem tanto no espaço, quanto no tempo, podemos truncar a série na segunda derivada. Combinando as expressões, temos que suas derivadas ficam expressas da seguinte forma,</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mrow>
+            <mfrac>
+              <mrow>
+                <msup>
+                  <mo>∂</mo>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mrow>
+                <mo>∂</mo>
+                <msup>
+                  <mi>t</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+            </mfrac>
+            <mi>ψ</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>,</mo>
+            <mi>t</mi>
+            <mo stretchy="false">)</mo>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo>−</mo>
+                <mi>Δ</mi>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>−</mo>
+                <mn>2</mn>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo>+</mo>
+                <mi>Δ</mi>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+              </mrow>
+              <mrow>
+                <mi>Δ</mi>
+                <msup>
+                  <mi>t</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+            </mfrac>
+            <mo>,</mo>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>e</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mrow>
+            <mfrac>
+              <mrow>
+                <msup>
+                  <mo>∂</mo>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mrow>
+                <mo>∂</mo>
+                <msup>
+                  <mi>x</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+            </mfrac>
+            <mi>ψ</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>,</mo>
+            <mi>t</mi>
+            <mo stretchy="false">)</mo>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>−</mo>
+                <mi>Δ</mi>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>−</mo>
+                <mn>2</mn>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>Δ</mi>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+              </mrow>
+              <mrow>
+                <mi>Δ</mi>
+                <msup>
+                  <mi>x</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+            </mfrac>
+            <mo>.</mo>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>Substituindo estas expressões na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq4"><span class="sci-ico-fileFormula"></span>Eq.(4)</a>, temos que</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mtable columnalign="left">
+            <mtr>
+              <mtd>
+                <mfrac>
+                  <mn>1</mn>
+                  <mrow>
+                    <msup>
+                      <mi>v</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+                <mfrac>
+                  <mrow>
+                    <mi>ψ</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>x</mi>
+                    <mo>,</mo>
+                    <mi>t</mi>
+                    <mo>−</mo>
+                    <mi>Δ</mi>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                    <mo>−</mo>
+                    <mn>2</mn>
+                    <mi>ψ</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>x</mi>
+                    <mo>,</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                    <mo>+</mo>
+                    <mi>ψ</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>x</mi>
+                    <mo>,</mo>
+                    <mi>t</mi>
+                    <mo>+</mo>
+                    <mi>Δ</mi>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mrow>
+                    <mi>Δ</mi>
+                    <msup>
+                      <mi>t</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>=</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>ψ</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>x</mi>
+                    <mo>−</mo>
+                    <mi>Δ</mi>
+                    <mi>x</mi>
+                    <mo>,</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                    <mo>−</mo>
+                    <mn>2</mn>
+                    <mi>ψ</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>x</mi>
+                    <mo>,</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                    <mo>+</mo>
+                    <mi>ψ</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>x</mi>
+                    <mo>+</mo>
+                    <mi>Δ</mi>
+                    <mi>x</mi>
+                    <mo>,</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mrow>
+                    <mi>Δ</mi>
+                    <msup>
+                      <mi>x</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+                <mo>.</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </math>
+      </div></div>
+</div>
+      <p>Iremos redefinir os parâmetros de modo a simplificar a notação, tal que, <math><mrow><msub><mi>ψ</mi><mrow><mi>x</mi><mo>,</mo><mi>t</mi><mo>±</mo><mn>1</mn></mrow></msub><mo>≡</mo><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo>±</mo><mi>Δ</mi><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mtext>
+						</mtext><mtext>
+						</mtext><mi>$</mi><msub><mi>ψ</mi><mrow><mi>x</mi><mo>±</mo><mn>1</mn><mo>,</mo><mi>t</mi></mrow></msub><mo>≡</mo><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>±</mo><mi>Δ</mi><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mtext>
+						</mtext><mi>e</mi><mtext>
+						</mtext><mi>k</mi><mo>≡</mo><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup><mi>Δ</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><mrow><mi>Δ</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></math>. Fazendo algumas manipulações algébricas, temos</p>
+      <div class="row formula" id="eeq5">
+<a name="eq5"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(5)</span>
+        <math display="block" id="m5">
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mi>k</mi>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+              <mo>,</mo>
+              <mi>t</mi>
+            </mrow>
+          </msub>
+          <mo>+</mo>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+              <mo>,</mo>
+              <mi>t</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>+</mo>
+          <mn>2</mn>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mn>1</mn>
+          <mo>−</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+          <mo>−</mo>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq5"><span class="sci-ico-fileFormula"></span>Eq.(5)</a> representa a solução numérica da equação de onda obtida de forma bastante simples, visto que estamos assumindo que a propagação da onda ocorrerá em apenas um meio. É importante destacar que, se levarmos em conta a transmissão de uma onda entre meios distintos, podemos obter a solução numérica para este caso utilizando técnicas de integração entre meios distintos para tratar a descontinuidade entre os dois meios. Para baixas velocidades <math><mi>v</mi><mo>≪</mo><mi>c</mi></math>, isto é, por exemplo, a velocidade do som <math><mi>v</mi><mo>=</mo><mn>343</mn><mtext>
+					</mtext><mi>m</mi><mo>/</mo><mi>s</mi></math>, teremos o comportamento de uma onda mecânica se propagando em um meio que pode ser o ar. Para altas velocidades, <math><mi>v</mi><mo>=</mo><mi>c</mi></math> onde <i>c</i> é a velocidade da luz no vácuo, teremos o comportamento de uma onda eletromagnética se propagando com velocidade constante. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq5"><span class="sci-ico-fileFormula"></span>Eq.(5)</a> é uma equação progressiva no tempo, onde podemos calcular a função de onda <math><msub><mi>ψ</mi><mrow><mi>x</mi><mo>,</mo><mi>t</mi></mrow></msub></math> em função da condição inicial <math><msub><mi>ψ</mi><mrow><mi>x</mi><mo>,</mo><mi>o</mi></mrow></msub></math> e de sua derivada inicial <math><msub><mover accent="true"><mi>ψ</mi><mo>˙</mo></mover><mrow><mi>x</mi><mo>,</mo><mi>o</mi></mrow></msub></math>. Usando a série de Taylor <span class="ref"><strong class="xref xrefblue">[4]</strong><span class="refCtt closed"><span>[4] S. Nakamura, Computational Method in Engineering and Science (John Wiley and Sons, Nova Jersey, 1977).</span></span></span>, podemos determinar a função de onda num instante <i>t</i>, sendo</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mtable columnalign="left">
+            <mtr>
+              <mtd>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo>+</mo>
+                <mi>Δ</mi>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>=</mo>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>Δ</mi>
+                <mi>t</mi>
+                <mfrac>
+                  <mo>∂</mo>
+                  <mrow>
+                    <mo>∂</mo>
+                    <mi>t</mi>
+                  </mrow>
+                </mfrac>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>+</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>Δ</mi>
+                    <msup>
+                      <mi>t</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                  <mn>2</mn>
+                </mfrac>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mo>∂</mo>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mo>∂</mo>
+                    <msup>
+                      <mi>t</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+                <mi>ψ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>t</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>Θ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>Δ</mi>
+                <msup>
+                  <mi>t</mi>
+                  <mn>2</mn>
+                </msup>
+                <mo stretchy="false">)</mo>
+                <mo>,</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </math>
+      </div></div>
+</div>
+      <p>onde <math><mi>Θ</mi><mo stretchy="false">(</mo><mi>Δ</mi><msup><mi>t</mi><mn>2</mn></msup><mo stretchy="false">)</mo></math> representa a ordem do erro de truncamento da série de Taylor. Como estamos querendo avaliar a onda num instante <math><mi>t</mi><mo>=</mo><mn>0</mn></math>, temos que <math><mover accent="true"><mi>ψ</mi><mo>˙</mo></mover><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo><mo>≡</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mi>t</mi></mrow></mfrac><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></math> e que <math><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup></mrow><mrow><mo>∂</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><msup><mi>v</mi><mn>2</mn></msup><msup><mo>∇</mo><mn>2</mn></msup><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></math>. Substituindo essas relações na equação acima, vem</p>
+      <div class="row formula" id="eeq6">
+<a name="eq6"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(6)</span>
+        <math display="block" id="m6">
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>o</mi>
+            </mrow>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mn>1</mn>
+              <mo>−</mo>
+              <mi>k</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>+</mo>
+          <mi>Δ</mi>
+          <mi>t</mi>
+          <msub>
+            <mover accent="true">
+              <mi>ψ</mi>
+              <mo>˙</mo>
+            </mover>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>o</mi>
+            </mrow>
+          </msub>
+          <mo>+</mo>
+          <mfrac>
+            <mi>k</mi>
+            <mn>2</mn>
+          </mfrac>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>ψ</mi>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>−</mo>
+                  <mn>1</mn>
+                  <mo>,</mo>
+                  <mi>o</mi>
+                </mrow>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>ψ</mi>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>+</mo>
+                  <mn>1</mn>
+                  <mo>,</mo>
+                  <mi>o</mi>
+                </mrow>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>Por ser um método explícito <span class="ref"><strong class="xref xrefblue">[5]</strong><span class="refCtt closed"><span>[5] A.O. Fortuna, Técnicas Computacionais para Dinâmica dos Fluidos (Editora Edusp, São Paulo, 2000).</span></span></span>, o método é estável desde que satisfaça a seguinte condição de estabilidade,</p>
+      <div class="row formula" id="eeq7">
+<a name="eq7"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(7)</span>
+        <math display="block" id="m7">
+          <mfrac>
+            <mrow>
+              <mi>v</mi>
+              <mi>Δ</mi>
+              <mi>t</mi>
+            </mrow>
+            <mrow>
+              <mi>Δ</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <mo>≤</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>isso implica dizer que, dependendo da velocidade de propagação da onda, as relações entre os intervalos espaciais <math><mi>Δ</mi><mi>x</mi></math> e temporais <math><mi>Δ</mi><mi>t</mi></math>, serão diferentes de modo a satisfazer esta condição. Isso pode ser observado para análise de ondas eletromagnéticas, devido à velocidade da luz ser bastante significativa. A solução numérica será estável desde de que os erros ou perturbações na solução não cresçam de forma significativa, isto é, não se acumulem a ponto de a solução numérica divergir, comprometendo assim sua solução. Note que a solução numérica deste método é marchante, isto quer dizer que erros em instante de tempos anteriores podem ser acumulados com o passar do tempo. Se esses erros forem significativos, a solução numérica irá se afastar da solução analítica. Desta forma, a estabilidade do método está diretamente relacionada com o crescimento/diminuição dos erros introduzidos nos cálculos. Outro fator importante é que quando lidamos com métodos de diferenças finitas, associamos a precisão e acurácia do método com o tamanho da malha. Logo, se a malha for muito pequena, mais preciso é o método. Nesta solução, levamos também em conta a condição de estabilidade, isto é, a relação entre a velocidade de propagação e as malhas espaciais e temporais.</p>
+      <p>É importante destacar que uma vez definido as condições iniciais do problema, a solução numérica irá evoluir rapidamente para a solução do problema. Para validar o método proposto iremos comparar a solução numérica com soluções analíticas de referência. Para análise de propagação de onda, devemos levar em conta que como a velocidade da onda é constante, sua localização é dada por <math><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>x</mi><mi>o</mi></msub><mo>+</mo><mi>v</mi><mi>t</mi></math>.</p>
+    
+      <h1 class="articleSectionTitle">3. Análise de Resultados</h1>
+      <p>Apresentaremos os resultados obtidos pela solução numérica e compararemos com os resultados obtidos por soluções analíticas para validar a metodologia implementada neste artigo.</p>
+      <p>A solução da equação de onda para uma corda vibrando, pode ser obtida usando o Método de Separação de Variáveis <span class="ref"><strong class="xref xrefblue">[6]</strong><span class="refCtt closed"><span>[6] G.M. Ortigoza Capetillo, Rev. Mexicana de Física 53, 56 (2007).</span></span></span>, tal que <math><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>ϕ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>T</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math>. Substituindo essa relação na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq4"><span class="sci-ico-fileFormula"></span>Eq.(4)</a> resulta que</p>
+      <div class="row formula" id="eeq8">
+<a name="eq8"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(8)</span>
+        <math display="block" id="m8">
+          <mtable columnalign="left">
+            <mtr columnalign="left">
+              <mtd columnalign="left">
+                <mrow>
+                  <mi>ψ</mi>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+              </mtd>
+              <mtd columnalign="left">
+                <mo>=</mo>
+              </mtd>
+              <mtd columnalign="left">
+                <mrow>
+                  <mstyle displaystyle="true">
+                    <munderover>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>n</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>∞</mi>
+                    </munderover>
+                    <mrow>
+                      <mi>sin</mi>
+                    </mrow>
+                  </mstyle>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mi>n</mi>
+                          <mi>π</mi>
+                          <mi>x</mi>
+                        </mrow>
+                        <mi>L</mi>
+                      </mfrac>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mrow>
+                    <mo>[</mo>
+                    <mrow>
+                      <msub>
+                        <mi>A</mi>
+                        <mi>n</mi>
+                      </msub>
+                      <mi>sin</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>n</mi>
+                              <mi>π</mi>
+                              <mi>v</mi>
+                              <mi>t</mi>
+                            </mrow>
+                            <mi>L</mi>
+                          </mfrac>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr columnalign="left">
+              <mtd columnalign="left">
+                <mrow></mrow>
+              </mtd>
+              <mtd columnalign="left">
+                <mo>+</mo>
+              </mtd>
+              <mtd columnalign="left">
+                <mrow>
+                  <mrow>
+                    <mrow>
+                      <msub>
+                        <mi>B</mi>
+                        <mi>n</mi>
+                      </msub>
+                      <mi>cos</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>n</mi>
+                              <mi>π</mi>
+                              <mi>v</mi>
+                              <mi>t</mi>
+                            </mrow>
+                            <mi>L</mi>
+                          </mfrac>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mo>]</mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+          </mtable>
+        </math>
+      </div></div>
+</div>
+      <p>onde os coeficientes <math><mrow><msub><mi>A</mi><mi>n</mi></msub></mrow></math> e <math><msub><mi>B</mi><mi>n</mi></msub></math> são obtidos impondo condições iniciais para a função de onda, bem como, para sua derivada, tal que</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <msub>
+            <mi>A</mi>
+            <mi>n</mi>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mn>2</mn>
+            <mrow>
+              <mi>n</mi>
+              <mi>π</mi>
+              <mi>v</mi>
+            </mrow>
+          </mfrac>
+          <mstyle displaystyle="true">
+            <mrow>
+              <msubsup>
+                <mo>∫</mo>
+                <mn>0</mn>
+                <mi>L</mi>
+              </msubsup>
+              <mover accent="true">
+                <mi>ψ</mi>
+                <mo>˙</mo>
+              </mover>
+            </mrow>
+          </mstyle>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mn>0</mn>
+          <mo stretchy="false">)</mo>
+          <mi>sin</mi>
+          <mo stretchy="false">(</mo>
+          <mfrac>
+            <mrow>
+              <mi>n</mi>
+              <mi>π</mi>
+              <mi>x</mi>
+            </mrow>
+            <mi>L</mi>
+          </mfrac>
+          <mo stretchy="false">)</mo>
+          <mi>d</mi>
+          <mi>x</mi>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mrow>
+            <msub>
+              <mi>B</mi>
+              <mi>n</mi>
+            </msub>
+            <mo>=</mo>
+            <mfrac>
+              <mn>2</mn>
+              <mi>L</mi>
+            </mfrac>
+            <mstyle displaystyle="true">
+              <mrow>
+                <msubsup>
+                  <mo>∫</mo>
+                  <mn>0</mn>
+                  <mi>L</mi>
+                </msubsup>
+                <mi>ψ</mi>
+              </mrow>
+            </mstyle>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>,</mo>
+            <mn>0</mn>
+            <mo stretchy="false">)</mo>
+            <mi>sin</mi>
+            <mo stretchy="false">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>n</mi>
+                <mi>π</mi>
+                <mi>x</mi>
+              </mrow>
+              <mi>L</mi>
+            </mfrac>
+            <mo stretchy="false">)</mo>
+            <mi>d</mi>
+            <mi>x</mi>
+            <mo>,</mo>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>onde <i>L</i> é o comprimento da corda. Para validar assumiremos que</p>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mi>ψ</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mn>0</mn>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mi>sin</mi>
+          <mo stretchy="false">(</mo>
+          <mfrac>
+            <mrow>
+              <mi>π</mi>
+              <mi>x</mi>
+            </mrow>
+            <mi>L</mi>
+          </mfrac>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mover accent="true">
+            <mi>ψ</mi>
+            <mo>˙</mo>
+          </mover>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mn>0</mn>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mn>0.</mn>
+        </math>
+      </div></div>
+</div>
+      <p>A solução dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq8"><span class="sci-ico-fileFormula"></span>Eq.(8)</a> pode ser reescrita da seguinte forma<span class="ref footnote"><sup class="xref">3</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">3</strong>
+        É importante destacar que a Eq.(9) está de acordo com a Eq.(3). Para verificarmos, vamos fazer uso da seguinte propriedade trigonométrica, tal que, sinacosb=sin(a+b)+sin(a−b)2. Fazendo a=πxL e b=πvtL, a função de onda pode ser reescrita como ψ(x,t)=12sin(πx+πvtL)+12sin(πx−πvtL). A Eq.(9) representa o modo fundamental, isto é, n = 1. Sendo assim, o comprimento da corda é dado por L=λ2. Fazendo uso das definições do vetor de onda κ, da frequência angular ω e da relação ω=κv, temos que, a função de onda é dada por ψ(x,t)=12sin(κx+ωt)+12sin(κx−ωt).
+      </span></span></span>
+			</p>
+      <div class="row formula" id="eeq9">
+<a name="eq9"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(9)</span>
+        <math display="block" id="m9">
+          <mrow>
+            <mi>ψ</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>,</mo>
+            <mi>t</mi>
+            <mo stretchy="false">)</mo>
+            <mo>=</mo>
+            <mi>sin</mi>
+            <mo stretchy="false">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>π</mi>
+                <mi>x</mi>
+              </mrow>
+              <mi>L</mi>
+            </mfrac>
+            <mo stretchy="false">)</mo>
+            <mi>cos</mi>
+            <mo stretchy="false">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>π</mi>
+                <mi>v</mi>
+                <mi>t</mi>
+              </mrow>
+              <mi>L</mi>
+            </mfrac>
+            <mo stretchy="false">)</mo>
+            <mo>,</mo>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tab. 1</a> mostra a comparação dos resultados obtidos pela solução analítica, dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq9"><span class="sci-ico-fileFormula"></span>Eq.(9)</a> com a solução numérica, dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq5"><span class="sci-ico-fileFormula"></span>Eq.(5)</a> para as seguintes condições: <math><mi>L</mi><mo>=</mo><mn>1</mn><mtext>
+					</mtext><mi>m</mi><mo>,</mo><mi>v</mi><mo>=</mo><mn>1</mn><mtext>
+					</mtext><mi>m</mi><mo>/</mo><mi>s</mi></math> e <math><mi>t</mi><mo>=</mo><mn>0.5</mn><mtext>
+					</mtext><mi>s</mi></math>.</p>
+      <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Comparação de resultados entre a solução numérica e analítica para <math><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></math>
+					
+        <br>
+</div>
+</div>
+      <p>É importante observar que os resultados são precisos e acurados, pois os erros relativos percentuais ficam em torno de 0.15%, com erro máximo de aproximadamente 1%. Estamos considerando uma malha de discretização de 0.1 <i>m</i> que é bem grande. O objetivo é mostrar que os métodos numéricos podem ser utilizados para resolver diferentes tipos de problemas, com uma implementação bastante simples, de modo que, qualquer aluno interessado em programação e cálculo numérico possa implementar esse código usando uma linguagem de programação de sua preferência. Este programa foi desenvolvido usando a plataforma Visual Studio com compilador da Intel para o Fortran 90. No Apêndice, adicionamos o algoritmo do programa usado neste artigo.</p>
+      <p>Para comprovar a acurácia da solução numérica, refinamos a malha espacial e mantemos a malha temporal, de modo que, <math><mi>Δ</mi><mi>x</mi><mo>=</mo><mn>0.05</mn><mtext>
+					</mtext><mi>m</mi></math> e <math><mi>Δ</mi><mi>t</mi><mo>=</mo><mn>0.05</mn><mtext>
+					</mtext><mi>s</mi></math>. Como a condição de estabilidade prever que a razão <math><mfrac><mrow><mi>v</mi><mi>Δ</mi><mi>t</mi></mrow><mrow><mi>Δ</mi><mi>x</mi></mrow></mfrac><mo>≤</mo><mn>1</mn></math>; logo, podemos definir a velocidade de propagação <math><mi>v</mi><mo>=</mo><mn>1</mn><mtext>
+					</mtext><mi>m</mi><mo>/</mo><mi>s</mi></math> para satisfazer esta condição. Neste caso, as simulações numéricas mostraram que os resultados numéricos são idênticos aos resultados analíticos apresentados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tab. 1</a>. Isso comprova que, com uma malha bastante refinada, a aproximação da derivada da função onda pelo método de diferenças finitas é válido. Em consoante, temos que a relação entre <math><mi>Δ</mi><mi>x</mi></math>, <math><mi>Δ</mi><mi>t</mi></math> e <i>v</i> atendem o critério da condição de estabilidade, impedindo que a solução numérica acumule erros de truncamento.</p>
+      <p>Apresentaremos alguns resultados obtidos pela solução numérica para função de onda, dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq5"><span class="sci-ico-fileFormula"></span>Eq.(5)</a>. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a> mostra os resultados obtidos pela simulação numérica assumindo que <math><msub><mi>ψ</mi><mrow><mi>x</mi><mo>,</mo><mi>o</mi></mrow></msub><mo>=</mo><mi>sin</mi><mo stretchy="false">(</mo><mfrac><mrow><mi>π</mi><mi>x</mi></mrow><mi>L</mi></mfrac><mo stretchy="false">)</mo></math> e <math><msub><mover accent="true"><mi>ψ</mi><mo>˙</mo></mover><mrow><mi>x</mi><mo>,</mo><mi>o</mi></mrow></msub><mo>=</mo><mn>0</mn></math>. As malhas espaciais e temporais são definidas, tais que, <math><mi>Δ</mi><mi>x</mi><mo>=</mo><mn>0.05</mn><mtext>
+					</mtext><mi>m</mi></math> e <math><mi>Δ</mi><mi>t</mi><mo>=</mo><mn>0.05</mn><mtext>
+					</mtext><mi>s</mi></math>, onde a velocidade de propagação <math><mi>v</mi><mo>=</mo><mn>1</mn><mtext>
+					</mtext><mi>m</mi><mo>/</mo><mi>s</mi></math>, o tamanho da região <math><mi>L</mi><mo>=</mo><mn>10</mn><mtext>
+					</mtext><mi>m</mi></math> e o tempo de simulação <math><mi>t</mi><mo>=</mo><mn>15</mn><mtext>
+					</mtext><mi>s</mi></math>.</p>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Solução numérica da equação de onda mecânica e estacionária para alguns instantes de tempo para função de onda inicial trigonométrica.
+        <br>
+</div>
+</div>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3</a> mostra os resultados obtidos pela simulação numérica assumindo que a função de onda e sua deriva inicial sejam, respectivamente, <math><mrow><msub><mi>ψ</mi><mrow><mi>x</mi><mo>,</mo><mi>o</mi></mrow></msub><mo>=</mo><mi>x</mi></mrow></math> e <math><mrow><msub><mover accent="true"><mi>ψ</mi><mo>˙</mo></mover><mrow><mi>x</mi><mo>,</mo><mi>o</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>. As malhas espaciais e temporais são definidas, tais que, <math><mi>Δ</mi><mi>x</mi><mo>=</mo><mn>0.1</mn><mtext>
+					</mtext><mi>m</mi></math> e <math><mi>Δ</mi><mi>t</mi><mo>=</mo><mn>0.01</mn><mtext>
+					</mtext><mi>s</mi></math>, onde a velocidade de propagação <math><mi>v</mi><mo>=</mo><mn>1</mn><mtext>
+					</mtext><mi>m</mi><mo>/</mo><mi>s</mi></math>, o tamanho da região <math><mi>L</mi><mo>=</mo><mn>10</mn><mtext>
+					</mtext><mi>m</mi></math> e o tempo de simulação <math><mi>t</mi><mo>=</mo><mn>10</mn><mtext>
+					</mtext><mi>s</mi></math>.</p>
+      <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          Solução numérica da equação de onda mecânica e estacionária para alguns instantes de tempo para função de onda inicial linear.
+        <br>
+</div>
+</div>
+      <p>Conforme mencionado anteriormente, a solução numérica dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq5"><span class="sci-ico-fileFormula"></span>Eq.(5)</a> pode ser aplicado tanto para equação de onda mecânica e/ou eletromagnética. A principal diferença está na velocidade e no meio de propagação. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. 4</a> mostra os resultados obtidos pela simulação numérica da propagação de um sinal/onda eletromagnética no vácuo. Neste caso, tomamos a velocidade de propagação <math><mi>v</mi><mo>=</mo><mi>c</mi></math>, o tamanho da região <math><mi>L</mi><mo>=</mo><mn>100</mn><mtext>
+					</mtext><mi>m</mi></math> e o tempo de simulação <math><mi>t</mi><mo>=</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup><mtext>
+					</mtext><mi>s</mi></math>. As malhas espaciais e temporais são definidas, tais que, <math><mi>Δ</mi><mi>x</mi><mo>=</mo><mn>0.1</mn><mtext>
+					</mtext><mi>m</mi></math> e <math><mi>Δ</mi><mi>t</mi><mo>=</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup><mtext>
+					</mtext><mi>s</mi></math>. As condições iniciais são tais que</p>
+      <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+          Solução numérica da equação de onda eletromagnética se propagando no tempo.
+        <br>
+</div>
+</div>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <mrow>
+            <msub>
+              <mi>ψ</mi>
+              <mrow>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>o</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mrow>
+              <mo>{</mo>
+              <mrow>
+                <mtable>
+                  <mtr>
+                    <mtd>
+                      <mrow>
+                        <mi>x</mi>
+                        <mi>Δ</mi>
+                        <mi>x</mi>
+                      </mrow>
+                    </mtd>
+                    <mtd>
+                      <mo>,</mo>
+                    </mtd>
+                    <mtd>
+                      <mrow>
+                        <mn>0</mn>
+                        <mo>≤</mo>
+                        <mi>x</mi>
+                        <mo>≤</mo>
+                        <mn>4</mn>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd>
+                      <mrow>
+                        <mn>5</mn>
+                        <mi>Δ</mi>
+                        <mi>x</mi>
+                      </mrow>
+                    </mtd>
+                    <mtd>
+                      <mo>,</mo>
+                    </mtd>
+                    <mtd>
+                      <mrow>
+                        <mn>5</mn>
+                        <mo>≤</mo>
+                        <mi>x</mi>
+                        <mo>≤</mo>
+                        <mn>10</mn>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mn>15</mn>
+                        <mo>−</mo>
+                        <mi>x</mi>
+                        <mo stretchy="false">)</mo>
+                        <mi>Δ</mi>
+                        <mi>x</mi>
+                      </mrow>
+                    </mtd>
+                    <mtd>
+                      <mo>,</mo>
+                    </mtd>
+                    <mtd>
+                      <mrow>
+                        <mn>11</mn>
+                        <mo>≤</mo>
+                        <mi>x</mi>
+                        <mo>≤</mo>
+                        <mn>15</mn>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                </mtable>
+              </mrow>
+            </mrow>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <div class="row formula" id="e">
+<a name=""></a><div class="col-md-12"><div class="formula-container">
+        <math display="block">
+          <msub>
+            <mover accent="true">
+              <mi>ψ</mi>
+              <mo>˙</mo>
+            </mover>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>o</mi>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mrow>
+            <mo>{</mo>
+            <mrow>
+              <mtable>
+                <mtr>
+                  <mtd>
+                    <mrow>
+                      <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                      </msup>
+                      <mi>Δ</mi>
+                      <mi>x</mi>
+                    </mrow>
+                  </mtd>
+                  <mtd>
+                    <mo>,</mo>
+                  </mtd>
+                  <mtd>
+                    <mrow>
+                      <mn>0</mn>
+                      <mo>≤</mo>
+                      <mi>x</mi>
+                      <mo>≤</mo>
+                      <mn>4</mn>
+                    </mrow>
+                  </mtd>
+                </mtr>
+                <mtr>
+                  <mtd>
+                    <mrow>
+                      <mn>25</mn>
+                      <mi>Δ</mi>
+                      <mi>x</mi>
+                    </mrow>
+                  </mtd>
+                  <mtd>
+                    <mo>,</mo>
+                  </mtd>
+                  <mtd>
+                    <mrow>
+                      <mn>5</mn>
+                      <mo>≤</mo>
+                      <mi>x</mi>
+                      <mo>≤</mo>
+                      <mn>10</mn>
+                    </mrow>
+                  </mtd>
+                </mtr>
+              </mtable>
+            </mrow>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>As notações de tempo apresentada nos gráficos são da seguinte forma, <math><mi>t</mi><mo>=</mo><mn>1</mn><mi>E</mi><mo>−</mo><mn>8</mn><mi>s</mi><mo>=</mo><mn>1.0</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>8</mn></mrow></msup><mtext>
+					</mtext><mi>s</mi></math>.</p>
+      <p>Como a onda se move com alta velocidade, ajustamos as malhas espaciais e temporais para satisfazerem a condição de estabilidade. Note que os intervalos de tempo são bastante curtos, pois em <math><mn>1</mn><mtext>
+					</mtext><mi>s</mi></math> este sinal/onda percorre uma distância de 300 <i>mil km</i>. Logo, guardar todos esses dados em arquivos se torna inviável. É importante que o leitor compreenda essas escalas de tempo e espaço para que a simulação possa ser realizada. O gráfico ilustra de forma clara essas relações.</p>
+    
+      <h1 class="articleSectionTitle">4. Conclusões</h1>
+      <p>Sabemos que aplicação e compreensão de ondas mecânicas e eletromagnéticas é de vital importância para o desenvolvimento científico e tecnológico; por isso, estudos voltados à análise desses fenômenos é de extrema importância. Neste sentido, buscamos apresentar uma solução numérica que visa descrever o fenômeno físico com uma abordagem bastante simples e precisa. As vantagens em utilizar soluções numéricas foram discutidas ao longo deste artigo, visando mostra ao leitor sob quais aspectos é viável utilizar soluções numéricas em confronto com as soluções analíticas, que nem sempre é possível obtê-las. No entanto, é sempre possível obter uma solução numérica, permitindo assim, contornar o problema. Uma outra vantagem é que sempre é possível simplificar o problema proposto sem a necessidade de reescrever o código desenvolvido para o caso geral.</p>
+      <p>A solução numérica apresentada neste artigo pode ser aplicada tanto para ondas mecânicas, bem como, ondas eletromagnéticas. Isso implica dizer que o código desenvolvido para ambos os casos é o mesmo. A abordagem deste artigo visa mostra de forma simples a resolução do problema sob o ponto de vista de métodos numéricos, bem como, mostrar aos leitores a importância de validar sua solução numérica. Discutimos a importância de termos uma malha refinada para obtermos resultados mais precisos, assim como, atender os critérios de estabilidade do método proposto para que a solução numérica não se afastar de forma significativa da solução analítica/exata do problema.</p>
+      <p>Neste trabalho, utilizamos o método de diferenças finitas para discretizar as equações de onda mecânica e eletromagnética. A solução numérica desta equação, permite avaliar o comportamento dessas ondas sob diferentes aspectos e condições, isto é, se propagando no vácuo, bem como, vibrando ou se propagando em algum meio (ar, água, gás). Os resultados obtidos para a validação do método proposto foram bastante satisfatórios, permitindo assim aplicar esta metodologia de cálculo para avaliar o fenômeno físico.</p>
+      <p>Buscamos uma abordagem simples e precisa, pois o nosso principal objetivo é trazer uma física que seja acessível a todos os estudantes.</p>
+    </div>
+<div class="articleSection" data-anchor="Material suplementar">
+<h1 class="articleSectionTitle">Material suplementar</h1>
+        
+        <p>O seguinte material suplementar está disponível online:</p>
+        <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/6da5f144fc16a8d5ef961fd954adaaeded0df7ef.pdf">
+          Apêndice
+        </a>
+      </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> A.C.B. Machado, V. Pleitez e M.C. Tijero, Rev. Bras. Ensino Física <b>28</b>, 407 (2006).</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> D. Halliday, R. Resnick e J. Walker, <i>Fundamentos de Física - Volume 2</i> (Editora LTC, São Paulo, 2016).</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> C. Scherer, <i>Métodos Computacionais da Física</i> (Editora Livraria da Física, São Paulo, 2010).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> S. Nakamura, <i>Computational Method in Engineering and Science</i> (John Wiley and Sons, Nova Jersey, 1977).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> A.O. Fortuna, <i>Técnicas Computacionais para Dinâmica dos Fluidos</i> (Editora Edusp, São Paulo, 2000).</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> G.M. Ortigoza Capetillo, Rev. Mexicana de Física <b>53</b>, 56 (2007).</div>
+</li>
+</ul></div>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList footnote">
+      <li>
+        <span class="xref big">1</span>
+        <div>Ar, água ou em um gás.</div>
+      </li>
+      <li>
+        <span class="xref big">2</span>
+        <div>Utiliza o mesmo conceito do Método de Diferenças Finitas</div>
+      </li>
+      <li>
+        <span class="xref big">3</span>
+        <div>É importante destacar que a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq9"><span class="sci-ico-fileFormula"></span>Eq.(9)</a> está de acordo com a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq3"><span class="sci-ico-fileFormula"></span>Eq.(3)</a>. Para verificarmos, vamos fazer uso da seguinte propriedade trigonométrica, tal que, <math><mrow><mi>sin</mi><mi>a</mi><mi>cos</mi><mi>b</mi><mo>=</mo><mfrac><mrow><mi>sin</mi><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo><mo>+</mo><mi>sin</mi><mo stretchy="false">(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow></math>. Fazendo <math><mi>a</mi><mo>=</mo><mfrac><mrow><mi>π</mi><mi>x</mi></mrow><mi>L</mi></mfrac></math> e <math><mi>b</mi><mo>=</mo><mfrac><mrow><mi>π</mi><mi>v</mi><mi>t</mi></mrow><mi>L</mi></mfrac></math>, a função de onda pode ser reescrita como <math><mrow><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>sin</mi><mo stretchy="false">(</mo><mfrac><mrow><mi>π</mi><mi>x</mi><mo>+</mo><mi>π</mi><mi>v</mi><mi>t</mi></mrow><mi>L</mi></mfrac><mo stretchy="false">)</mo><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>sin</mi><mo stretchy="false">(</mo><mfrac><mrow><mi>π</mi><mi>x</mi><mo>−</mo><mi>π</mi><mi>v</mi><mi>t</mi></mrow><mi>L</mi></mfrac><mo stretchy="false">)</mo></mrow></math>. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq9"><span class="sci-ico-fileFormula"></span>Eq.(9)</a> representa o modo fundamental, isto é, n = 1. Sendo assim, o comprimento da corda é dado por <math><mrow><mi>L</mi><mo>=</mo><mfrac><mi>λ</mi><mn>2</mn></mfrac></mrow></math>. Fazendo uso das definições do vetor de onda <math><mi>κ</mi></math>, da frequência angular <math><mi>ω</mi></math> e da relação <math><mi>ω</mi><mo>=</mo><mi>κ</mi><mi>v</mi></math>, temos que, a função de onda é dada por <math><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>sin</mi><mrow><mo>(</mo><mrow><mi>κ</mi><mi>x</mi><mo>+</mo><mi>ω</mi><mi>t</mi></mrow><mo>)</mo></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>sin</mi><mrow><mo>(</mo><mrow><mi>κ</mi><mi>x</mi><mo>−</mo><mi>ω</mi><mi>t</mi></mrow><mo>)</mo></mrow></math>.</div>
+      </li>
+    </ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>27 Jun 2019</li>
+<li>
+<strong>Data do Fascículo</strong><br>2019</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>22 Mar 2019</li>
+<li>
+<strong>Revisado</strong><br>14 Maio 2019</li>
+<li>
+<strong>Aceito</strong><br>14 Maio 2019</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Adilson Costa da Silva </strong><strong>
+            *
+          </strong><br><div>Instituto Militar de Engenharia, Seção de Engenharia Nuclear, Urca, RJ, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0002-3234-1307" class="btnContribLinks orcid">http://orcid.org/0000-0002-3234-1307</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> José Abdalla Helayël Neto</strong><br><div>Centro Brasileiro de Pesquisas Físicas, Urca, RJ, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:adilsoncostasilva@gmail.com">adilsoncostasilva@gmail.com</a>
+				</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (1)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (9)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Elemento de corda esticada.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Solução numérica da equação de onda mecânica e estacionária para alguns instantes de tempo para função de onda inicial trigonométrica.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          Solução numérica da equação de onda mecânica e estacionária para alguns instantes de tempo para função de onda inicial linear.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+          Solução numérica da equação de onda eletromagnética se propagando no tempo.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Comparação de resultados entre a solução numérica e analítica para <math><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></math>
+					
+        </div>
+</div></div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(5)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(6)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(7)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(8)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(9)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/d8e47ceeca852b97bcd3547eb26c415eee126387.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Elemento de corda esticada.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/d8e47ceeca852b97bcd3547eb26c415eee126387.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/7280cf00743a5286cb95a225dc5521b136ac6938.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Solução numérica da equação de onda mecânica e estacionária para alguns instantes de tempo para função de onda inicial trigonométrica.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/7280cf00743a5286cb95a225dc5521b136ac6938.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/fcb0b1c1c59c653b9e2b63d6599046421643be9d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          Solução numérica da equação de onda mecânica e estacionária para alguns instantes de tempo para função de onda inicial linear.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/fcb0b1c1c59c653b9e2b63d6599046421643be9d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/32760519f41d0ea917718dbcf2036b11835dcd6d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+          Solução numérica da equação de onda eletromagnética se propagando no tempo.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Vh3ZVDGK4GFfD8khpmGhqvf/32760519f41d0ea917718dbcf2036b11835dcd6d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Comparação de resultados entre a solução numérica e analítica para <math><mi>ψ</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></math>
+					
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="16%">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="center">Tempo (s)</th>
+              <th align="center">Função</th>
+              <th align="center">
+                <math>
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mn>0.2</mn>
+                    <mtext>
+										</mtext>
+                    <mi>m</mi>
+                  </mrow>
+                </math>
+              </th>
+              <th align="center">
+                <math>
+                  <mi>x</mi>
+                  <mo>=</mo>
+                  <mn>0.4</mn>
+                  <mtext>
+									</mtext>
+                  <mi>m</mi>
+                </math>
+              </th>
+              <th align="center">
+                <math>
+                  <mi>x</mi>
+                  <mo>=</mo>
+                  <mn>0.6</mn>
+                  <mtext>
+									</mtext>
+                  <mi>m</mi>
+                </math>
+              </th>
+              <th align="center">
+                <math>
+                  <mi>x</mi>
+                  <mo>=</mo>
+                  <mn>0.8</mn>
+                  <mtext>
+									</mtext>
+                  <mi>m</mi>
+                </math>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-top: thin solid; border-top: thin solid; border-color: #000000">
+              <td align="center">0.0</td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>a</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.5878</td>
+              <td align="center">0.9511</td>
+              <td align="center">0.9511</td>
+              <td align="center">0.5878</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>n</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.5878</td>
+              <td align="center">0.9511</td>
+              <td align="center">0.9511</td>
+              <td align="center">0.5878</td>
+            </tr>
+            <tr style="border-top: thin solid; border-top: thin solid; border-color: #000000">
+              <td align="center">0.1</td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>a</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.5590</td>
+              <td align="center">0.9045</td>
+              <td align="center">0.9045</td>
+              <td align="center">0.5590</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>n</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.5592</td>
+              <td align="center">0.9048</td>
+              <td align="center">0.9048</td>
+              <td align="center">0.5592</td>
+            </tr>
+            <tr style="border-top: thin solid; border-top: thin solid; border-color: #000000">
+              <td align="center">0.2</td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>a</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.4755</td>
+              <td align="center">0.7694</td>
+              <td align="center">0.7694</td>
+              <td align="center">0.4755</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>n</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.4762</td>
+              <td align="center">0.7705</td>
+              <td align="center">0.7705</td>
+              <td align="center">0.4762</td>
+            </tr>
+            <tr style="border-top: thin solid; border-top: thin solid; border-color: #000000">
+              <td align="center">0.3</td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>a</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.3455</td>
+              <td align="center">0.5590</td>
+              <td align="center">0.5590</td>
+              <td align="center">0.3455</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>n</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.3469</td>
+              <td align="center">0.5613</td>
+              <td align="center">0.5613</td>
+              <td align="center">0.3469</td>
+            </tr>
+            <tr style="border-top: thin solid; border-top: thin solid; border-color: #000000">
+              <td align="center">0.4</td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>a</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.1816</td>
+              <td align="center">0.2939</td>
+              <td align="center">0.2939</td>
+              <td align="center">0.1816</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="center">
+                <math>
+                  <msub>
+                    <mi>ψ</mi>
+                    <mi>n</mi>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </math>
+              </td>
+              <td align="center">0.1838</td>
+              <td align="center">0.2974</td>
+              <td align="center">0.2974</td>
+              <td align="center">0.1838</td>
+            </tr>
+            <tr style="border-top: thin solid; border-top: thin solid; border-color: #000000">
+              <td align="center" colspan="6">
+<math><mi>Δ</mi><mi>x</mi><mo>=</mo><mn>0.1</mn><mtext>
+									</mtext><mi>m</mi></math>, <math><mi>Δ</mi><mi>t</mi><mo>=</mo><mn>0.05</mn><mtext>
+									</mtext><mi>s</mi></math>
+</td>
+            </tr>
+            <tr>
+              <td align="center" colspan="6">
+<math><msub><mi>ψ</mi><mi>a</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></math> - Analítico <math><msub><mi>ψ</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></math> - Numérico</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m1">
+          <mrow>
+            <msub>
+              <mi>T</mi>
+              <mn>2</mn>
+            </msub>
+            <mi>cos</mi>
+            <msub>
+              <mi>θ</mi>
+              <mn>2</mn>
+            </msub>
+            <mover accent="true">
+              <mi>ı</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>−</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>1</mn>
+            </msub>
+            <mi>cos</mi>
+            <msub>
+              <mi>θ</mi>
+              <mn>1</mn>
+            </msub>
+            <mover accent="true">
+              <mi>ı</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>+</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>2</mn>
+            </msub>
+            <mi>sin</mi>
+            <msub>
+              <mi>θ</mi>
+              <mn>2</mn>
+            </msub>
+            <mover accent="true">
+              <mi>j</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>−</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>1</mn>
+            </msub>
+            <mi>sin</mi>
+            <msub>
+              <mi>θ</mi>
+              <mn>1</mn>
+            </msub>
+            <mover accent="true">
+              <mi>j</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>=</mo>
+            <mi>Δ</mi>
+            <mi>m</mi>
+            <mi>a</mi>
+            <mover accent="true">
+              <mi>j</mi>
+              <mo>^</mo>
+            </mover>
+            <mo>,</mo>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m2">
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+              <mi>y</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <msup>
+                <mi>v</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+              <mi>y</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>t</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m3">
+          <mi>y</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <msub>
+            <mi>y</mi>
+            <mi>m</mi>
+          </msub>
+          <mi>sin</mi>
+          <mo stretchy="false">(</mo>
+          <mi>κ</mi>
+          <mi>x</mi>
+          <mo>−</mo>
+          <mi>ω</mi>
+          <mi>t</mi>
+          <mo>+</mo>
+          <mi>ϕ</mi>
+          <mo stretchy="false">)</mo>
+          <mo>,</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m4">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <msup>
+                <mi>v</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>t</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mi>ψ</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msup>
+                <mo>∂</mo>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+            <mrow>
+              <mo>∂</mo>
+              <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mi>ψ</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mi>t</mi>
+          <mo stretchy="false">)</mo>
+          <mo>.</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(5)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m5">
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mi>k</mi>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+              <mo>,</mo>
+              <mi>t</mi>
+            </mrow>
+          </msub>
+          <mo>+</mo>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+              <mo>,</mo>
+              <mi>t</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mo>+</mo>
+          <mn>2</mn>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+            </mrow>
+          </msub>
+          <mo stretchy="false">(</mo>
+          <mn>1</mn>
+          <mo>−</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+          <mo>−</mo>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>t</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>.</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(6)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m6">
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <msub>
+            <mi>ψ</mi>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>o</mi>
+            </mrow>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mn>1</mn>
+              <mo>−</mo>
+              <mi>k</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>+</mo>
+          <mi>Δ</mi>
+          <mi>t</mi>
+          <msub>
+            <mover accent="true">
+              <mi>ψ</mi>
+              <mo>˙</mo>
+            </mover>
+            <mrow>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>o</mi>
+            </mrow>
+          </msub>
+          <mo>+</mo>
+          <mfrac>
+            <mi>k</mi>
+            <mn>2</mn>
+          </mfrac>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <msub>
+                <mi>ψ</mi>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>−</mo>
+                  <mn>1</mn>
+                  <mo>,</mo>
+                  <mi>o</mi>
+                </mrow>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mi>ψ</mi>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>+</mo>
+                  <mn>1</mn>
+                  <mo>,</mo>
+                  <mi>o</mi>
+                </mrow>
+              </msub>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo>.</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(7)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m7">
+          <mfrac>
+            <mrow>
+              <mi>v</mi>
+              <mi>Δ</mi>
+              <mi>t</mi>
+            </mrow>
+            <mrow>
+              <mi>Δ</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <mo>≤</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(8)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m8">
+          <mtable columnalign="left">
+            <mtr columnalign="left">
+              <mtd columnalign="left">
+                <mrow>
+                  <mi>ψ</mi>
+                  <mo stretchy="false">(</mo>
+                  <mi>x</mi>
+                  <mo>,</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+              </mtd>
+              <mtd columnalign="left">
+                <mo>=</mo>
+              </mtd>
+              <mtd columnalign="left">
+                <mrow>
+                  <mstyle displaystyle="true">
+                    <munderover>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>n</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>∞</mi>
+                    </munderover>
+                    <mrow>
+                      <mi>sin</mi>
+                    </mrow>
+                  </mstyle>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mi>n</mi>
+                          <mi>π</mi>
+                          <mi>x</mi>
+                        </mrow>
+                        <mi>L</mi>
+                      </mfrac>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mrow>
+                    <mo>[</mo>
+                    <mrow>
+                      <msub>
+                        <mi>A</mi>
+                        <mi>n</mi>
+                      </msub>
+                      <mi>sin</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>n</mi>
+                              <mi>π</mi>
+                              <mi>v</mi>
+                              <mi>t</mi>
+                            </mrow>
+                            <mi>L</mi>
+                          </mfrac>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr columnalign="left">
+              <mtd columnalign="left">
+                <mrow></mrow>
+              </mtd>
+              <mtd columnalign="left">
+                <mo>+</mo>
+              </mtd>
+              <mtd columnalign="left">
+                <mrow>
+                  <mrow>
+                    <mrow>
+                      <msub>
+                        <mi>B</mi>
+                        <mi>n</mi>
+                      </msub>
+                      <mi>cos</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>n</mi>
+                              <mi>π</mi>
+                              <mi>v</mi>
+                              <mi>t</mi>
+                            </mrow>
+                            <mi>L</mi>
+                          </mfrac>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mo>]</mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+          </mtable>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(9)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m9">
+          <mrow>
+            <mi>ψ</mi>
+            <mo stretchy="false">(</mo>
+            <mi>x</mi>
+            <mo>,</mo>
+            <mi>t</mi>
+            <mo stretchy="false">)</mo>
+            <mo>=</mo>
+            <mi>sin</mi>
+            <mo stretchy="false">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>π</mi>
+                <mi>x</mi>
+              </mrow>
+              <mi>L</mi>
+            </mfrac>
+            <mo stretchy="false">)</mo>
+            <mi>cos</mi>
+            <mo stretchy="false">(</mo>
+            <mfrac>
+              <mrow>
+                <mi>π</mi>
+                <mi>v</mi>
+                <mi>t</mi>
+              </mrow>
+              <mi>L</mi>
+            </mfrac>
+            <mo stretchy="false">)</mo>
+            <mo>,</mo>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Silva, Adilson Costa da e Helayël, José AbdallaRediscutindo Soluções Numéricas de Equações de Onda. Revista Brasileira de Ensino de Física [online]. 2019, v. 41, n. 4 [Acessado CURRENTDATE] , e20190064. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2019-0064&gt;. Epub 27 Jun 2019. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2019-0064.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Rediscutindo Soluções Numéricas de Equações de Onda&#34; &#34;Silva, Adilson Costa da&#34; &#34;Helayël, José Abdalla&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Rediscutindo Soluções Numéricas de Equações de Onda&#34; &#34;Silva, Adilson Costa da&#34; &#34;Helayël, José Abdalla&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/Vh3ZVDGK4GFfD8khpmGhqvf/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172019000400412&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2019-0064" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2019-0064">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2019-0064" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2019-0064">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2019-0064"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2019-0064" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2019-0064">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0064" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Rediscutindo Soluções Numéricas de Equações de Onda
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0064">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

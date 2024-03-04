@@ -1,0 +1,1725 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador"/>
+<meta property="og:description" content="O objetivo deste trabalho é demonstrar a confecção de um obturador de feixe óptico a partir de..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+
+
+    <meta name="citation_author" content="Tomazio, N. B."></meta>
+    <meta name="citation_author" content="Romero, A. L. S."></meta>
+    <meta name="citation_author" content="Mendonca, C. R."></meta>
+    <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="40"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2017-0200"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="O objetivo deste trabalho é demonstrar a confecção de um obturador de feixe óptico a partir de um disco rígido de computador. O controle de corrente do dispositivo é feito por modulação de largura de pulso (Pulse width modulation - PWM), uma técnica que permite variar níveis de tensão/corrente por meio do ajuste da largura de pulso de um sinal digital. Este controle é feito de forma a minimizar a potência dissipada no dispositivo, aumentando assim sua vida útil. O núcleo do circuito de controle de corrente é o Arduino Uno, uma placa de microcontrolador de baixo custo e de fácil programação, amplamente utilizado como plataforma para prototipagem eletrônica. Por fim, a título de ilustração, apresentamos o uso do obturador de feixe óptico desenvolvido em um sistema de microfabricação via fotopolimerização por absorção de dois fótons, no qual ele tem papel fundamental."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2017-08-14"></meta>
+<meta name="citation_keywords" content="Obturador de feixe óptico"></meta><meta name="citation_keywords" content="modulação por largura de pulso"></meta><meta name="citation_keywords" content="Arduino UNO"></meta><meta name="citation_keywords" content="fotopolimerização por absorção de dois fótons"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2018.v40n1/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2018.v40n1/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172018000100407 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 40 
+                (1)
+            <span class="_separator"> • </span>2018</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2017-0200" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2017-0200</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2017-0200"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">The development of an optical shutter from a computer hard disk</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> N. B. Tomazio </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil<div class="corresp">*Endereço de correspondência: <a href="mailto:crmendon@ifsc.usp.br">crmendon@ifsc.usp.br</a>.</div>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> A. L. S. Romero </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> C. R. Mendonca </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>O objetivo deste trabalho é demonstrar a confecção de um obturador de feixe óptico a partir de um disco rígido de computador. O controle de corrente do dispositivo é feito por modulação de largura de pulso (<i>Pulse width modulation</i> - <i>PWM</i>), uma técnica que permite variar níveis de tensão/corrente por meio do ajuste da largura de pulso de um sinal digital. Este controle é feito de forma a minimizar a potência dissipada no dispositivo, aumentando assim sua vida útil. O núcleo do circuito de controle de corrente é o <i>Arduino Uno</i>, uma placa de microcontrolador de baixo custo e de fácil programação, amplamente utilizado como plataforma para prototipagem eletrônica. Por fim, a título de ilustração, apresentamos o uso do obturador de feixe óptico desenvolvido em um sistema de microfabricação via fotopolimerização por absorção de dois fótons, no qual ele tem papel fundamental.</p>
+<p><strong>Palavras-chave:</strong><br>Obturador de feixe óptico; modulação por largura de pulso; Arduino UNO; fotopolimerização por absorção de dois fótons</p>
+</div>
+<hr>
+<div>
+<p>This work demonstrates the development of an optical shutter from a computer hard disk. The electrical current control of the device is made by pulse width modulation, a technique that allows varying current/voltage levels by adjusting the pulse width of a digital signal. This control is made in order to minimize the power dissipated into the device, thus raising its lifetime. The main unit of the control circuit is Arduino Uno, a low cost and ease of programming microcontroller board, extensively used as a platform for electronic prototyping. As an example, we present the use of an optical shutter developed in a microfabrication setup via two-photon polymerization, in which it plays an important role.</p>
+<p><strong>Keywords:</strong><br>Optical shutter; pulse width modulation; Arduino Uno; two-photon polymerization</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>O obturador de feixe óptico é um acessório fundamental para montagens experimentais que têm o laser como componente central, e.g. fabricação a laser e microscopia, devido a sua função de bloquear o feixe de forma controlada. Além das opções disponíveis comercialmente, pode-se obter um obturador a partir de materiais comuns presentes num laboratório de pesquisa. O obturador apresentado neste trabalho foi construído a partir do braço de leitura/escrita de uma unidade de disco rígido de computador. Para que o feixe seja devidamente bloqueado, o braço de leitura/escrita de dados, convertido em elemento obturador, deve ser acionado de forma rápida. Para tanto, é necessária a aplicação de correntes elétricas altas que levam à dissipação térmica no dispositivo, podendo danificá-lo sob uso contínuo.</p>
+      <p>Com o intuito de evitar problemas associados ao superaquecimento do obturador, propomos o uso da técnica de modulação de largura de pulso (<i>PWM</i>) para efetuar o controle da corrente elétrica aplicada ao braço obturador. Esta técnica consiste na geração de sinais analógicos através da modulação temporal de um sinal digital e vem sendo utilizada de forma eficiente para diversas aplicações, e.g. controle de iluminação de LEDs e do movimento de servomotores[<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] J. Arrillaga, Y.H. Liu and N.R. Watson, Flexible Power Transmission: The HVDC Options (John Wiley &amp; Sons, Hoboken, 2007).</span></span></span>]. Para aplicar à técnica de <i>PWM</i>, foi utilizada a plataforma de prototipagem eletrônica <i>Arduino</i>[<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] Arduino homepage, https://www.arduino.cc, acesso em 26/04/2017.</span><br><a href="https://www.arduino.cc" target="_blank">https://www.arduino.cc...
+            </a></span></span>]. Esta plataforma tem sido amplamente utilizada em instrumentação eletrônica por seu baixo custo e flexibilidade de aplicações. Além de apresentar boa capacidade de processamento e diversidade de recursos e funções, o <i>Arduino</i> também possui uma interface de programação bem intuitiva que o torna adequado para fins didáticos</p>
+    
+      <h1 class="articleSectionTitle">2. Detalhes da Construção</h1>
+      <p>Uma unidade de disco rígido de computador é composta basicamente de uma bobina, um par de ímãs permanentes, um braço de escrita/leitura de dados e um disco magnético girante, no qual as informações são gravadas. No caso particular da utilização do disco rígido como obturador de feixe óptico, seu disco magnético girante é removido. Para o acionamento do braço de escrita/leitura de dados, utilizado aqui como elemento obturador, é necessária a aplicação de uma corrente elétrica à bobina. Quando é desenergizado, o braço obturador volta à posição original por meio da ação de uma mola adicionada ao dispositivo. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a> mostra um típico disco rígido de computador (a) e um disco rígido adaptado para uso como obturador de feixe óptico (b).</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          (a) Fotografia de um disco rígido de computador. Os números se referem a diferentes componentes do dispositivo: 1. Bobina, 2. Ímã permanente, 3. Braço de escrita/leitura de dados, 4. Disco magnético girante. (b) Fotografia de um disco rígido convertido em obturador de feixe óptico. 1. Fenda para exposição do feixe, 2. Mola, 3. Braço de escrita/leitura de dados.
+        <br>
+</div>
+</div>
+      <p>O procedimento para efetuar um controle eficiente de corrente elétrica do obturador se dá em dois estágios. Primeiramente, aplicamos um nível de corrente necessário para o acionamento rápido do braço obturador. Passado o tempo de resposta do dispositivo, ajustamos o nível de corrente para um valor mínimo que o mantém acionado. A corrente elétrica necessária para o acionamento rápido do nosso obturador é 570 mA. Contudo, para manter seu acionamento pouco menos da metade desta corrente é suficiente, cerca de 200 mA. Com a corrente reduzida pela metade da requerida para o acionamento rápido, a potência dissipada na bobina é 4 vezes menor que a potência de acionamento, o que representa uma queda acentuada no calor gerado no dispositivo. O tempo de resposta do obturador resultado de sua inércia mecânica e posicionamento em relação ao feixe óptico, precisa ser considerado neste controle para que o dispositivo seja devidamente acionado. Para medi-lo, o obturador é posicionado entre um laser de HeNe e um fotodiodo; e o atraso entre o sinal elétrico de acionamento e a saída do fotodiodo é medido com auxílio de um osciloscópio digital.</p>
+      <p>Este controle de corrente foi feito por meio da técnica de <i>PWM</i>. Esta técnica faz uso de um controle digital, o qual produz um sinal que oscila entre dois níveis de tensão, 0 e 5 V. A fração de tempo em que o sinal passa no nível de 5 V é chamada de largura de pulso (<i>duty cicle</i>). Sua modulação permite o ajuste do nível de tensão/corrente aplicada ao dispositivo, resultado da média temporal do sinal digital. A título de ilustração, na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a> são mostrados sinais digitais com diferentes valores de <i>duty cicle</i>. A média temporal destes sinais resulta em níveis de tensão de 0.5, 2.5 e 3.75 V, respectivamente.</p>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Sinais digitais com diferentes <i>duty cicles</i>. A linha tracejada em laranja representa a voltagem resultante da média temporal de cada sinal digital.
+        <br>
+</div>
+</div>
+      <p>O circuito elétrico utilizado neste projeto está esquematizado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3</a>. Sua alimentação é feita por uma fonte externa (eliminador de pilhas de 1 ampere), sendo seu componente principal o <i>ATtiny85</i>, um microcontrolador de baixo custo e pequenas dimensões. Ele está acoplado a uma placa <i>Arduino Uno</i> que intermedia sua comunicação com o ambiente de desenvolvimento integrado (<i>IDE</i> do inglês <i>Integrated Development Environment</i>) do <i>Arduino</i>, onde se dá sua programação. Por meio do pino 7, o microcontrolador faz a leitura do <i>status</i> do módulo de aquisição (<i>trigger</i>) que dá o comando para a abertura/fechamento do obturador. O sinal de <i>trigger</i> pode, por exemplo, ser gerado por um programa escrito na plataforma <i>LabVIEW</i> e enviado ao circuito por meio dos módulos de controle da <i>National Instruments</i>. Os pulsos de <i>PWM</i> são sintetizados e enviados através do pino 5 ao transistor Q1, componente responsável pelo controle da corrente aplicada ao obturador. O potenciômetro P1 foi inserido no circuito para efetuar o ajuste da corrente mínima para o acionamento do obturador. Os demais componentes são adicionados para conter o ruído do sinal elétrico e garantir a segurança do obturador. Depois de programado, o microcontrolador funciona independentemente, permitindo assim que a montagem do circuito seja feita no próprio obturador, em uma placa protótipo parafusada em sua estrutura.</p>
+      <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          Diagrama esquemático do circuito (o termo <i>Shutter</i>se refere ao obturador).
+        <br>
+</div>
+</div>
+      <p>O programa gravado no microcontrolador foi escrito em linguagem C<math display="inline" id="m1"><mo>+</mo><mo>+</mo></math>. Ele foi desenvolvido na <i>IDE</i> do <i>Arduino</i>, que conta com um compilador integrado e conectividade com os <i>kits</i> de desenvolvimento dos microcontroladores. Inicialmente é necessário configurá-lo, definindo variáveis e indicando os pinos para leitura/escrita de dados:<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span></a>
+			</p>
+      <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+      <p>Depois de configurado, o programa aguarda a resposta da variável <i>triggerpin</i>, a qual recebe o sinal digital vindo do módulo de aquisição. Este sinal oscila entre dois níveis de tensão, o <i>Hig</i>h (5 V) e o <i>Low</i> (0 V), conforme é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Fig. 4</a>. Quando a resposta da variável <i>triggerpin</i> for <i>High</i>, o programa ajusta o nível de <i>PWM</i> para 100%, aguarda 20 ms (tempo de resposta do obturador) e desce o nível de <i>PWM</i> para 50%. Em seguida, o programa fica em estado de espera até que a variável <i>triggerpin</i> seja alterada para <i>Low</i>. Nesta condição, o programa ajusta o nível de <i>PWM</i> para 0% e repete a sequência de instruções:<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span></a>
+			</p>
+      <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+      <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+          Sinais elétricos do sistema medidos por meio de um osciloscópio digital. Canal 1: Pulsos de <i>PWM</i> gerados pelo microcontrolador. Canal 2: Sinal digital de controle da rotina de abertura/fechamento do obturador (<i>trigger</i>).
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">3. Aplicação</h1>
+      <p>Uma das aplicações do obturador é controlar a exposição do feixe laser durante o processo de fotopolimerização por absorção de dois fótons (FA2F).[<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] S. Maruo, O. Nakamura and S. Kawata, Optics Letters 22, 132 (1997).</span></span></span>] Esta técnica de microfabricação tem se destacado no meio científico devido a sua capacidade de produzir microestruturas tridimensionais de alta complexidade e variedade de formas, permitindo até mesmo a confecção de estruturas contendo partes móveis.[<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] S. Maruo, K. Ikuta and H. Korogi, Journal of Microelectromechanical Systems 12, 533 (2003).</span></span></span>,<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] A. Ostendorf and B.N. Chichkov, Photonics Spectra 40, 72 (2006).</span></span></span>] A FA2F consiste em focalizar um feixe pulsado de femtossegundos no volume de uma resina polimérica contendo um fotoiniciador, composto orgânico responsável por desencadear a reação de polimerização quando excitado via absorção de dois fótons.[<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>[6] C.N. Lafratta, J.T. Fourkas, T. Baldacchini and R.A. Farrer, Angewandte Chemie-International Edition 46, 6238 (2007).</span></span></span>] Diferente do que ocorre no processo de absorção linear, a taxa na qual a absorção de dois fótons ocorre é proporcional à intensidade da radiação ao quadrado. Esta dependência não linear com a intensidade da radiação é a característica responsável pelo confinamento espacial da excitação, que confere à técnica resolução abaixo do limite de difração.[<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>[7] S. Maruo and J.T. Fourkas, Laser &amp; Photonics Reviews 2, 100 (2008).</span></span></span>] Ademais, diferentes polímeros podem ser utilizados para a fabricação das microestruturas, tornando a técnica viável para uma vasta gama de aplicações.</p>
+      <p>O aparato experimental para a microfabricação via FA2P está ilustrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Fig. 5</a>. O feixe proveniente de um oscilador laser de Ti:safira é direcionado a um par de espelhos galvanométricos, responsáveis pelo deslocamento do feixe no plano x-y da amostra. Ele é focalizado no volume da resina polimérica com auxílio de uma objetiva de microscópio. A resina é posicionada sobre um estágio de translação em z, o qual, em conjunto com os espelhos galvanométricos, permite deslocar o foco do feixe tridimensionalmente. O ajuste de intensidade do feixe laser é feito através de um polarizador e uma lâmina de meiaonda. O obturador, desenvolvido a partir de um disco rígido de computador conforme descrito anteriormente, é adicionado à montagem para controlar a exposição do feixe na resina e assim, evitar traçados de polimerização indesejados que configuram defeitos de fabricação. O controle da abertura/fechamento do obturador, assim como do movimento dos espelhos galvanométricos e do estágio de translação em z, é realizado por meio de um único programa de computador. Todo o processo é monitorado em tempo real com auxílio de um sistema de iluminação formado por um LED e uma câmera CCD. A título de exemplo, são mostradas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 6</a> imagens de microscopia eletrônica de varredura de estruturas típicas produzidas por meio deste aparato de microfabricação.</p>
+      <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+          Aparato experimental utilizado para a microfabricação via FA2F, destacando os principais componentes do sistema.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+          Microestruturas fabricadas pelo nosso sistema de microfabricação via FA2F. (a) Cristo Redentor (b) Cilindro e cubo ocos.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">4. Conclusão</h1>
+      <p>O obturador de feixe óptico apresentado neste trabalho foi confeccionado a partir de um disco rígido de computador, que pode facilmente ser obtido em um laboratório de ensino/pesquisa. Para efetuar um controle eficiente de corrente elétrica aplicada ao obturador, utilizamos a plataforma de prototipagem eletrônica <i>Arduino Uno</i>, que além de barata e flexível, dispõe de uma interface de programação simples, adequada para o uso de pessoas com pouca experiência em eletrônica. Este controle de corrente, feito por meio da técnica de modulação de largura de pulso, permite uma queda significativa de dissipação térmica no dispositivo, contribuindo assim para prolongar sua vida útil. Todos os detalhes da construção do circuito e programação foram explicados em detalhe para que outros estudantes possam reproduzi-lo. Para demonstrar o uso do obturador foi apresentada a fotopolimerização por absorção de dois fótons, uma técnica de microfabricação poderosa que permite o processamento de estruturas tridimensionais de alta resolução e com flexibilidade de materiais e geometrias.</p>
+    </div>
+<div class="articleSection" data-anchor="Agradecimentos">
+<h1 class="articleSectionTitle">Agradecimentos</h1>
+      
+      <p>Gostaríamos de agradecer ao Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), à Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) e à Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) pelo suporte financeiro, ao Instituto de Física de São Carlos e ao Grupo de Fotônica pela infraestrutura necessária para o desenvolvimento deste projeto e ao aluno de doutorado Gustavo Foresto Brito de Almeida e ao Dr. Adriano José Galvani Otuka pela fabricação da microestrutura em formato de Cristo Redentor.</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> J. Arrillaga, Y.H. Liu and N.R. Watson, <i>Flexible Power Transmission: The HVDC Options</i> (John Wiley &amp; Sons, Hoboken, 2007).</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> Arduino homepage, https://www.arduino.cc, acesso em 26/04/2017.<br><a href="https://www.arduino.cc" target="_blank">» https://www.arduino.cc</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> S. Maruo, O. Nakamura and S. Kawata, Optics Letters <b>22</b>, 132 (1997).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> S. Maruo, K. Ikuta and H. Korogi, Journal of Microelectromechanical Systems <b>12</b>, 533 (2003).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> A. Ostendorf and B.N. Chichkov, Photonics Spectra <b>40</b>, 72 (2006).</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> C.N. Lafratta, J.T. Fourkas, T. Baldacchini and R.A. Farrer, Angewandte Chemie-International Edition <b>46</b>, 6238 (2007).</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> S. Maruo and J.T. Fourkas, Laser &amp; Photonics Reviews <b>2</b>, 100 (2008).</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publicação nesta coleção</strong><br>2018</li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>19 Jun 2017</li>
+<li>
+<strong>Revisado</strong><br>13 Jul 2017</li>
+<li>
+<strong>Aceito</strong><br>15 Jul 2017</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> N. B. Tomazio </strong><strong>*</strong><br><div>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> A. L. S. Romero </strong><br><div>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> C. R. Mendonca </strong><br><div>Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">*Endereço de correspondência: <a href="mailto:crmendon@ifsc.usp.br">crmendon@ifsc.usp.br</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist"><li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (8)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          (a) Fotografia de um disco rígido de computador. Os números se referem a diferentes componentes do dispositivo: 1. Bobina, 2. Ímã permanente, 3. Braço de escrita/leitura de dados, 4. Disco magnético girante. (b) Fotografia de um disco rígido convertido em obturador de feixe óptico. 1. Fenda para exposição do feixe, 2. Mola, 3. Braço de escrita/leitura de dados.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Sinais digitais com diferentes <i>duty cicles</i>. A linha tracejada em laranja representa a voltagem resultante da média temporal de cada sinal digital.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          Diagrama esquemático do circuito (o termo <i>Shutter</i>se refere ao obturador).
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+          
+          
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+          
+          
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+          Sinais elétricos do sistema medidos por meio de um osciloscópio digital. Canal 1: Pulsos de <i>PWM</i> gerados pelo microcontrolador. Canal 2: Sinal digital de controle da rotina de abertura/fechamento do obturador (<i>trigger</i>).
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+          Aparato experimental utilizado para a microfabricação via FA2F, destacando os principais componentes do sistema.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+          Microestruturas fabricadas pelo nosso sistema de microfabricação via FA2F. (a) Cristo Redentor (b) Cilindro e cubo ocos.
+        </div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/3d8423d79df3dde24f72c264d7d2ab3db515a195.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          (a) Fotografia de um disco rígido de computador. Os números se referem a diferentes componentes do dispositivo: 1. Bobina, 2. Ímã permanente, 3. Braço de escrita/leitura de dados, 4. Disco magnético girante. (b) Fotografia de um disco rígido convertido em obturador de feixe óptico. 1. Fenda para exposição do feixe, 2. Mola, 3. Braço de escrita/leitura de dados.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/3d8423d79df3dde24f72c264d7d2ab3db515a195.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/29fc07536d9ed6a95d69429408d95a50c7a4f41c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Sinais digitais com diferentes <i>duty cicles</i>. A linha tracejada em laranja representa a voltagem resultante da média temporal de cada sinal digital.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/29fc07536d9ed6a95d69429408d95a50c7a4f41c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/b4e5a8babfa88e08c325e7bb97101fe81d40bb6b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          Diagrama esquemático do circuito (o termo <i>Shutter</i>se refere ao obturador).
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/b4e5a8babfa88e08c325e7bb97101fe81d40bb6b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/1571f4345a119e0c37d523e63da526ff6cae3149.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/1571f4345a119e0c37d523e63da526ff6cae3149.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/5f4349aa37d3e180278da50bdc388aa3254a36c2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/5f4349aa37d3e180278da50bdc388aa3254a36c2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/a2d626cf29490a1aa7e7f826322d087043c3188a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+          Sinais elétricos do sistema medidos por meio de um osciloscópio digital. Canal 1: Pulsos de <i>PWM</i> gerados pelo microcontrolador. Canal 2: Sinal digital de controle da rotina de abertura/fechamento do obturador (<i>trigger</i>).
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/a2d626cf29490a1aa7e7f826322d087043c3188a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/9a139b779ac713c2d0f97c4da4ea7975dd180a12.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+          Aparato experimental utilizado para a microfabricação via FA2F, destacando os principais componentes do sistema.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/9a139b779ac713c2d0f97c4da4ea7975dd180a12.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/072bea07657fe7cb154bdfefee63fc6ff2f3ffaf.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+          Microestruturas fabricadas pelo nosso sistema de microfabricação via FA2F. (a) Cristo Redentor (b) Cilindro e cubo ocos.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qtd8HHYjGHngwy8fyGbLdcg/072bea07657fe7cb154bdfefee63fc6ff2f3ffaf.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Tomazio, N. B., Romero, A. L. S. e Mendonca, C. R.Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador. Revista Brasileira de Ensino de Física [online]. 2018, v. 40, n. 1 [Acessado CURRENTDATE] , e1307. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2017-0200&gt;. Epub 14 Ago 2017. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2017-0200.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador&#34; &#34;Tomazio, N. B.&#34; &#34;Romero, A. L. S.&#34; &#34;Mendonca, C. R.&#34; &#34;2017&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador&#34; &#34;Tomazio, N. B.&#34; &#34;Romero, A. L. S.&#34; &#34;Mendonca, C. R.&#34; &#34;2017&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/qtd8HHYjGHngwy8fyGbLdcg/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172018000100407&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2017-0200" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2017-0200">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2017-0200" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2017-0200">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2017-0200"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2017-0200" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2017-0200">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2017-0200" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Desenvolvimento de um obturador de feixe óptico utilizando um disco rígido de computador
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2017-0200">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

@@ -1,0 +1,1732 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação"/>
+<meta property="og:description" content="Neste artigo discute-se a implementação de um experimento adequado para o ensino de conceitos..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Lüdke, Everton">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Santa Maria">
+        
+        <meta name="citation_author" content="Cauduro, Paola Jardim">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Santa Maria">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="35"></meta>
+<meta name="citation_number" content="3"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172013000300025"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Neste artigo discute-se a implementação de um experimento adequado para o ensino de conceitos fundamentais da biofísica da ultrassonografia para fins de diagnóstico hemodinâmico e investigação da circulação arterial. Apresenta-se e discute-se um transceptor sônico de 10 MHz e a metodologia de proessamento de sinais de ecos doppler e a sua análise digital empregando softwares de análise acústica para obter informações sobre a velocidade do sangue na artéria carótida comum direita. Uma metodologia adequada para explorar o experimento em um grupo de alunos simulando um atendimento clínico também é apresentada."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2013-09"></meta>
+<meta name="citation_keywords" content="experimento hemodinâmico"></meta><meta name="citation_keywords" content="biofísica do circulatório"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2013.v35n3/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2013.v35n3/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172013000300025 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Desenvolvimento em Ensino de Física</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 35 
+                (3)
+            <span class="_separator"> • </span>Set 2013</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172013000300025" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172013000300025</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172013000300025"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">A classroom hemodynamic experiment to teach circulatory biophysics</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Everton Lüdke </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Santa Maria,  
+          ,  Rio Grande do Sul,  
+        ,  Universidade Federal de Santa Maria,  Centro de Ciências Naturais e Exatas ,  Departamento de Física,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Paola Jardim Cauduro </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Santa Maria,  
+          ,  Rio Grande do Sul,  
+        ,  Universidade Federal de Santa Maria,  Centro de Ciências Naturais e Exatas ,  Departamento de Física,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Neste artigo discute-se a implementação de um experimento adequado para o ensino de conceitos fundamentais da biofísica da ultrassonografia para fins de diagnóstico hemodinâmico e investigação da circulação arterial. Apresenta-se e discute-se um transceptor sônico de 10 MHz e a metodologia de proessamento de sinais de ecos doppler e a sua análise digital empregando softwares de análise acústica para obter informações sobre a velocidade do sangue na artéria carótida comum direita. Uma metodologia adequada para explorar o experimento em um grupo de alunos simulando um atendimento clínico também é apresentada.</p>
+<p>experimento hemodinâmico; biofísica do circulatório</p>
+</div>
+<hr>
+<div>
+<p>In this paper, it is discussed a setup of a suitable experiment to teach fundamental concepts about the biophysics of ultrasonography, aiming at hemodynamical diagnosis and arterial blood flow assessment. It is presented and discussed a sonic transceiver operating at 10 MHz and the methods of doppler echo signal processing and digital analysis employing acoustic analysis softwares to obtain informations about the blood velocity within the right common carotid artery. A suitable methodological approach to carry out an experiment with a student group simulating an actual medical exam is also presented.</p>
+<p>hemodynamic experiment; circulatory biophysics</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>DESENVOLVIMENTO EM ENSINO DE FÍSICA</b>
+    </p>
+<p></p>
+<p>Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação</p>
+<p></p>
+<p>
+      <b>A classroom hemodynamic experiment to teach circulatory biophysics</b>
+    </p>
+<p></p>
+<p>Everton Lüdke<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        eludke@smail.ufsm.br.
+      </span></span></span>; Paola Jardim Cauduro</p>
+<p></p>
+<p>Departamento de Física, Centro de Ciências Naturais e Exatas, Universidade Federal de Santa Maria, Campus Universitário, Santa Maria, RS , Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Neste artigo discute-se a implementação de um experimento adequado para o ensino de conceitos fundamentais da biofísica da ultrassonografia para fins de diagnóstico hemodinâmico e investigação da circulação arterial. Apresenta-se e discute-se um transceptor sônico de 10 MHz e a metodologia de proessamento de sinais de ecos doppler e a sua análise digital empregando softwares de análise acústica para obter informações sobre a velocidade do sangue na artéria carótida comum direita. Uma metodologia adequada para explorar o experimento em um grupo de alunos simulando um atendimento clínico também é apresentada.</p>
+<p></p>
+<p><b>Palavras-chave:</b> experimento hemodinâmico, biofísica do circulatório.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>In this paper, it is discussed a setup of a suitable experiment to teach fundamental concepts about the biophysics of ultrasonography, aiming at hemodynamical diagnosis and arterial blood flow assessment. It is presented and discussed a sonic transceiver operating at 10 MHz and the methods of doppler echo signal processing and digital analysis employing acoustic analysis softwares to obtain informations about the blood velocity within the right common carotid artery. A suitable methodological approach to carry out an experiment with a student group simulating an actual medical exam is also presented.</p>
+<p></p>
+<p><b>Keywords:</b> hemodynamic experiment, circulatory biophysics.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>A determinação experimental das propriedades biofísicas do ultra-som para fins diagnósticos e terapêuticos é fundamental para o ensino de biofísica universitária na educação de adultos em ciências da saúde como fisioterapia, medicina e medicina veterinária [1,2,3].</p>
+<p></p>
+<p>Entretanto, a dificuldade reside em selecionar experimentos específicos e de boa reprodutibilidade e implementação, dentro de um orçamento razoável. Destaca-se aqui que o uso de equipamento homologado para uso médico como ultra-sons vasculares com potencial de imagem possuem custo muito elevado e somente são encontrados em centros de atendimento de saúde como hospitais terciários altamente especializados, sendo portanto, recursos didáticos indisponíveis em salas de aula e laboratórios universitários de física básica.</p>
+<p></p>
+<p>Além disso, o principal requisito de um experimento ultrasonográfico em classes de biofísica voltada a ciências da saúde, no nosso entendimento, é expor conceitos de física ondulatória, propriedades de ondas mecânicas e o efeito Doppler acústico amplamente discutidos em livros de física básica [4], além de mostrar as técnicas envolvidas na aquisição e processamento analógico e digital dos sinais elétricos e as associações com as grandezas que eles representam, com fins de diagnóstico clínico.</p>
+<p></p>
+<p>Dentro dessa hipótese de trabalho, propomos nesse artigo um experimento simples para possibilitar aos alunos analisar dados hemodinâmicos dentro de uma metodologia interdisciplinar e que seja efetiva na explicação dos principais conceitos envolvidos na biofísica da ultrassonografia para fins diagnósticos.</p>
+<p></p>
+<p>Na seção 2, apresentamos a discussão do circuito de um transceptor sônico de 10 MHz para deteção do efeito Doppler vascular. Na seção 3, discutimos uma breve metodologia empregada na utilização do equipamento em uma aula prática. As conclusões finais são apresentadas na seção 4.</p>
+<p></p>
+<p>
+      <b>2. O transceptor de 10 MHz</b>
+    </p>
+<p></p>
+<p>O transceptor sônico é um dispositivo eletrônico que produz ondas de rádio frequência (RF) na mesma frequência <i>f</i><sub>0</sub> das ondas de ultra-som que se deseja emitir. Um transdutor piezoelétrico consiste em uma caneta de prova sônica que engloba duas cápsulas independentes, uma emissora e outra receptora que transformam os sinais elétricos em ondas de compressão e rarefação acústicas e vice-versa. O sinal de RF retornado pelo eco quando o ultra-som encontra uma junção de duas impedâncias acústicas diferentes possui uma frequência <i>f<sub>D</sub></i> deslocada pelo efeito Doppler. Esse sinal é pouco intenso e deve sofrer um processo de amplificação antes de ser injetado em um circuito multiplicador (misturador) de sinais que produz um sinal elétrico de audiofrequência correspondente a frequência-diferença ou do batimento dos dois sinais de rádio. Uma vez que 10 MHz é frequência de ondas curtas, essencialmente o transceptor carrega um pouco da técnica de montagem de receptores de rádio de ondas curtas.</p>
+<p></p>
+<p>O esquema elétrico do transceptor desenvolvido para as medidas de dopplervelocimetria em 10 MHz é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga25fig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a> e a alimentação é feita por uma bateria alcalina de 9 V.</p>
+<p></p>
+<p>
+      <div class="row fig" id="a25fig01">
+<a name="a25fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFiga25fig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<p></p>
+<p>Os pulsos de 10 MHz são gerados por oscilador controlado a cristal de quartzo e o sinal é acoplado à sonda ultrassônica por meio de um transístor BF199. O sinal do oscilador com frequência <i>f</i><sub>0</sub> = 10 MHz pode ser verificado com um osciloscópio no ponto <i>g</i>2 do circuito, onde pulsos com amplitude de 1,2 Vpp (volts pico-a-pico) são visualizados e o valor correto da frequência emitida <i>f</i><sub>0</sub> pode ser medido com um frequencímetro digital.</p>
+<p></p>
+<p>O sinal recebido pela parte receptora da cápsula possui uma frequência alterada pelo efeito Doppler <i>f<sub>D</sub></i> devido ao eco de um alvo em movimento (corrente sanguínea) é na ordem de 200 mV e recebe uma amplificação adicional por meio de um amplificador sintonizado que emprega um transístor UHF de baixo ruído BFR90.</p>
+<p></p>
+<p>A bobina <i>L</i>2 do amplificador consiste em um enrolamento de 35 espiras de fio esmaltado 26 AWG enroladas lado-a-lado sobre um tubo de plástico de 6 mm de diâmetro e 1,0 cm de comprimento, produzindo uma indutância aproximada de 3,7 µH e com núcleo de ar. O transformador de acoplamento de sinal <i>L</i>1 consiste em uma bobina similar a <i>L</i>2, com núcleo de ar, funcionando como enrolamento secundário, mas que recebe um enrolamento primário adicional de 8 espiras enroladas diretamente sobre o secundário, que recebe o sinal de retorno do ultra-som coletado pela sonda. Choques de RF comerciais de 3,7 µH construídos com núcleos de ferrite não podem ser usados em lugar das bobinas pela intensa atenuação do sinal que eles proporcionam e que destruiriam a sensibilidade do circuito. No protótipo construído, foi cortado uma faixa de 1,5 cm de largura de uma folha de papel ofício, a qual foi enrolada para produzir um tubo cilíndrico sólido de papel com 4 mm de diâmetro que permitiu uma boa fixação mecânica das espiras sobre essa forma com cola plástica.</p>
+<p></p>
+<p>Para calibrar o amplificador para o máximo ganho, liga-se o instrumento e ajusta-se os trimmers de 3-30 pF para que o sinal no ponto <i>g</i>1 mostrado na figura seja o de maior amplitude possível, que no protótipo é 2,1 Vpp e o sistema está pronto para a coleta de dados. O ganho obtido após a sintonia dos trimmers do estágio amplificador foi <i>G</i> = 10 log(<i>V<sub>s</sub>/V<sub>e</sub></i>) = 24 dB.</p>
+<p></p>
+<p>Como sonda ultrassônica, recuperou-se uma cápsula usada de um equipamento doppler vascular portátil antigo, que é frequentemente encontrada em oficinas técnicas de manutenção de equipamento hospitalar e instrumentos biomédicos.</p>
+<p></p>
+<p>No ponto d verifica-se um sinal residual de 10 MHz com amplitude de 80 mV ou menos que será eliminado pelo amplificador operacional JFET TL071, que age como pré-amplificador de áudio frequência para amplificar os níveis do sinal de batimento <i>f<sub>D</sub>-f</i><sub>0</sub>, que é diferente de zero devido ao efeito doppler do sinal refletido de volta à cápsula pela corrente sangínea. O batimento da frequência é produzido pelo transístor tétrodo duplo-fet BF981 onde o sinal no dreno (d) é proporcional ao produto das voltagens alternadas do oscilador a cristal e o sinal amplificado de retorno da sonda de ultrassom. Se a cápsula estiver em contato com um alvo fixo, <i>f<sub>D</sub> = f</i><sub>0</sub> e não haverá som audível no conector de saída do circuito.</p>
+<p></p>
+<p>Na presença do fluxo arterial, o sinal de áudio cujo desvio espectral de frequência é proporcional a <i>f<sub>D</sub>-f</i><sub>0</sub> está disponível no conector de saída. Usando qualquer programa de análise temporal e espectral de sinais de áudio como o Audacity, Wavepad ou Spectrogram 16, o aluno identifica o aparecimento dos pulsos quando a sonda ultrassônica é colocada sobre a artéria carótida esquerda e a melhoria do sinal quando um gel ultrassônico é colocado entre a cápsula e a pele.</p>
+<p></p>
+<p>Como o circuito da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga25fig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a> tem a frequência determinada somente pelo cristal utilizado, pode-se empregar qualquer cristal oscilador entre 8 e 10 MHz que é a faixa de operação das cápsulas de ultrassom vascular encontradas no mercado brasileiro.</p>
+<p></p>
+<p>
+      <b>3. Análise do experimento</b>
+    </p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a> mostra a geometria de localização da artéria carótida comum direita, primeiramente por meio da palpação digital do pulso carotídeo e colocando-se a sonda com um ângulo de aproximadamente 30 graus com o plano paralelo ao eixo do pescoço (ângulo de insonação ϕ), para a qual a análise hemodinâmica será feita.</p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para o processamento dos dados, os alunos identificam os pulsos e medem a sua largura temporal e frequência. Por meio da função de análise de espectro por transformada de Fourier de um dado pulso fornece o desvio de frequência e o aluno estima <i>f<sub>D</sub>-f</i><sub>0</sub> pela análise espectral do sinal audível produzido na saída do circuito da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiga25fig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>.</p>
+<p></p>
+<p>As alterações em frequência do feixe de ultra-som recebido com respeito àquela do ultra-som emitido <i>f</i><sub>0</sub> são devido ao eco devido à diferença de impedância acústica <i>Z</i><sub>0</sub> entre o tecido sanguíneo e os tecidos vizinhos como vasos e músculos.</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/1d9ba112f2acdd8a5d19be21aeba45b93f9b0537.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Assim, as alterações em frequência do ultra-som emitido produzida pela corrente sanguínea são proporcionais à sua velocidade <i>V</i> com respeito à cápsula, ao ângulo entre o feixe de onda do ultra-som e o vaso insonado (ϕ = ângulo de insonação).</p>
+<p></p>
+<p>A frequência Doppler <i>f<sub>D</sub></i> é calculada pela fórmula:</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/867efcd10254ff7957b7874b50572d19f8903314.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>A atividade prática é melhor conduzida com a turma dividida em grupos de três alunos onde um é examinado, um anota os dados e o outro realiza o exame.</p>
+<p></p>
+<p>Sabendo que a impedância acústica do sangue é <i>Z</i> = 1,66×10<sup>6</sup> e a a sua densidade é ρ = 1,06×10<sup>3</sup> kg m<sup>-3</sup> o aluno primeiramente calcula a velocidade do som nesse meio <i>V<sub>c</sub></i> em unidades m s<sup>-1</sup>.</p>
+<p></p>
+<p>Depois, o aluno localiza a artéria carótida comum direita no seu (sua) colega pelo método semiotécnico da palpação [5] e calcula a velocidade do fluxo sanguineo ascendente ao cérebro, <i>V</i>, medindo a diferenca em frequência entre o ultra-som emitido e o recebido, usando o verso da folha de roteiro do experimento para cálculos. Valores encontrados são na ordem de 50-70 cm s<sup>-1</sup> e o gráfico das ondas de velocidade pode ser ajustado em função do tempo (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>). Como alternativa metodológica, pode-se incluir a pesquisa semiológica da pulsação do fluxo sanguíneo da artéria braquial e a medida da sua velocidade, sendo que os alunos podem consultar um livro de anatomia para tentarem repetir o roteiro do experimento com um outro vaso importante para a circulação.</p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Os alunos podem empregar o mesmo equipamento para medir a velocidade do sangue arterial em outros pontos do corpo humano onde a semiologia clínica prevê a deteção dos batimentos cardíacos como a artéria radial, dorsal do pé e tibial anterior, provendo o aluno com a familiarização da técnica.</p>
+<p></p>
+<p>Depois que a velocidade da corrente sanguínea arterial foi estimada, o valor encontrado para o "paciente" pode ser comparado com critérios hemodinâmicos de fluxo carotídeo publicado em estudos médicos [6], para que os alunos possam entender o significado do termo "exame normal" em ciências da saúde e os critérios de inclusão de um dado exame como "normal".</p>
+<p></p>
+<p>Os alunos também podem comparar as propriedades do sons doppler com alguns exemplos de doenças obtidas em pacientes de ambulatório vascular de hospitais-escola para verificar a fisiopatologia de doenças relacionadas ao tabaco, sedentarismo e hipercolesterolemia como a doença carotídea que leva a alterações do perfil hemodinâmico pela estenose vascular. Os alunos podem debater sobre o efeito da vida moderna sobre a gênese de doenças cardiovasculares na forma de seminários posteriores à realização do experimento. Arquivos .wav com a dopplervelocimetria de doenças conhecidas ou resultados publicados com a técnica de ultrassonografia [7] podem ser disponibilizados pelo professor para análise comparativa na discussão do experimento em classe.</p>
+<p></p>
+<p>Livros de anatomia descritiva [8] e topográfica [9] devem ser disponibilizados para os alunos, para que reconheçam os padrões anatômicos importantes do pescoço como o trígono carótico e a região axilar medial onde as medidas serão realizadas, possibilitando que firmem os conceitos cirúrgicos mais relevantes, a critério da experiência do professor que irá conduzir esse experimento e da importância de se estabelecer conexões interdisciplinares de conceitos entre diferentes disciplinas como anatomia, fisiologia e técnica cirúrgica, além de teorias pertinentes a exames cínicos para diagnóstico vascular [7].</p>
+<p></p>
+<p>A turbulência do fluxo sanguíneo no ventrículo esquerdo do coração também pode ser analisada de forma qualitativa com o equipamento proposto, colocando-se um amplificador de média potência e um alto-falante para que a classe possa perceber o fenômeno pela audição dos sons durante o processo da fase sistólica cardíaca. Nesse caso, a sondagem experimental deve ser feita na região entre os focos aórtico e mitral entre os arcos costais posteriores [8]. Entretanto, a interpretação da turbulência em regiões intervalvares da câmara cardíaca seja bem mais complexa e além dos objetivos didáticos propostos no presente trabalho. O leitor pode alterar frequência do circuito para 2,4 MHz usando um cristal oscilador apropopriado, quadruplicar o número de espiras de cada bobina e usar um transdutor de 2,4 MHz para obter uma maior abrangência do feixe do ultrassom para obter melhor cobertura em área do ventrículo esquerdo.</p>
+<p></p>
+<p>
+      <b>4. Conclusões</b>
+    </p>
+<p></p>
+<p>Nesse artigo apresentamos um experimento que, embora seja relativamente complexo de ser construído, se mostrou muito eficaz como recurso didático para estudo experimental de propriedades hemodinâmicas fundamentais.</p>
+<p></p>
+<p>As primeiras impressões sobre o experimento é que os alunos visualizam os conceitos e os discutem com mais eficácia e segurança pessoal.</p>
+<p></p>
+<p>Uma proposta de trabalho apresentada aqui sugere uma metodologia experimental para uso da ultrassonografia para fins diagnósticos, dentro de uma abordagem interdisciplinar com outros conteúdos relevantes em ciências da saúde como anatomia topográfica, descritiva e fisiologia e os conceitos de normalidade no exame clínico, o que é particularmente difícil de ser entendido pelos alunos de biófísica com o professor empregando métodos de ensino tradicionais de caráter puramente teóricos.</p>
+<p></p>
+<p>Recebido em 19/12/2012 </p>
+<p></p>
+<p> Aceito em 17/2/2013 </p>
+<p></p>
+<p> Publicado em 26/9/2013</p>
+<p></p>
+<p>Copyright by the Sociedade Brasileira de Física. Printed in Brazil. </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:eludke@smail.ufsm.br">eludke@smail.ufsm.br</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] W.D. O'Brien, Prog Biophys Mol Biol <b>93</b>, 2125 (2007).</div></li>
+<li><div>[2] E.A.C. Garcia, <i>Biofísica</i> (Makron Books, São Pauo, 2000), 2Ş  ed.</div></li>
+<li><div>[3] C.F. Carvalho, M.C. Chammas e G. G. Cerri, Ciência Rural <b>38</b>, 872 (2008).</div></li>
+<li><div>[4] D. Halliday, R. Resnick e J. Walker, <i>Fundamentos de   Física 2 - Gravitação, Ondas e Termodinâmica</i>, (Editora LTC, São Paulo, 1996), 4Ş  ed., p.138-154.</div></li>
+<li><div>[5] C.C. Porto, <i>Semiologia Médica</i> (Ed. Guanabara   Koogan, Rio de Janeiro, 2005), 5Ş  ed., p. 509-516.</div></li>
+<li><div>[6] D.W. Holdsworth, C.J.D. Norley, R. Frayne, D.A. Steinman and B.K. Rutt, Physiol. Meas. <b>11</b>,  219 (1999).</div></li>
+<li><div>[7] P. Pimentel, in: <i>Angiologia e Cirurgia Vascular: Tópicos Atuais</i>, editado por J.B. Thomaz (Ed. Revinter, São Paulo, 2000), p. 13-27.</div></li>
+<li><div>[8] K.L. Moore, A.F. Dalley, Anatomia Orientada para a Clínica, Cap.8-Pescoço, Guanabara Koogan, p. 889-927 (1999)</div></li>
+<li><div>[9] W. Thiel, <i>Atlas Fotográfico Colorido de Anatomia Humana - Cabeça e Pescoço</i> (Editora Revinter, São Paulo, 2004), p. 16-29.</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        eludke@smail.ufsm.br.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>31 Out 2013</li>
+<li>
+<strong>Data do Fascículo</strong><br>Set 2013</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>19 Dez 2012</li>
+<li>
+<strong>Aceito</strong><br>17 Fev 2013</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Everton Lüdke </strong><br><div>
+          ,  Santa Maria,  
+          ,  Rio Grande do Sul,  
+        ,  Universidade Federal de Santa Maria,  Centro de Ciências Naturais e Exatas ,  Departamento de Física,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Paola Jardim Cauduro </strong><br><div>
+          ,  Santa Maria,  
+          ,  Rio Grande do Sul,  
+        ,  Universidade Federal de Santa Maria,  Centro de Ciências Naturais e Exatas ,  Departamento de Física,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (3)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (2)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiga25fig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiga25fig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/c34c098ea0cfa3d272720cb2ad9f35e8b478c6a0.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/c34c098ea0cfa3d272720cb2ad9f35e8b478c6a0.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/eb65d723a5723c516eebb0ef341ad2ec11fd8374.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/eb65d723a5723c516eebb0ef341ad2ec11fd8374.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/454fd321f3961f21fea1bd9bf7fd0fb742b9c7f6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/454fd321f3961f21fea1bd9bf7fd0fb742b9c7f6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/1d9ba112f2acdd8a5d19be21aeba45b93f9b0537.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/1d9ba112f2acdd8a5d19be21aeba45b93f9b0537.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/867efcd10254ff7957b7874b50572d19f8903314.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/MWqGcZ65DzwXG44ccKVqZcD/867efcd10254ff7957b7874b50572d19f8903314.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Lüdke, Everton e Cauduro, Paola JardimUm experimento hemodinâmico em sala de aula para ensino de biofísica da circulação. Revista Brasileira de Ensino de Física [online]. 2013, v. 35, n. 3 [Acessado CURRENTDATE] , 3506. Disponível em: &lt;https://doi.org/10.1590/S1806-11172013000300025&gt;. Epub 31 Out 2013. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172013000300025.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação&#34; &#34;Lüdke, Everton&#34; &#34;Cauduro, Paola Jardim&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação&#34; &#34;Lüdke, Everton&#34; &#34;Cauduro, Paola Jardim&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/MWqGcZ65DzwXG44ccKVqZcD/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172013000300025&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172013000300025" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172013000300025">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172013000300025" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172013000300025">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172013000300025"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172013000300025" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172013000300025">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000300025" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Um experimento hemodinâmico em sala de aula para ensino de biofísica da circulação
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000300025">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

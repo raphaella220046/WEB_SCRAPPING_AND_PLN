@@ -1,0 +1,2211 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico"/>
+<meta property="og:description" content="Atualmente a Visualização Científica aliada à Realidade Virtual tem-se tornado disponível como..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Santos, Antônio Vanderlei dos">
+        
+            <meta name="citation_author_affiliation" content="Universidade Regional Integrada do Alto do Uruguai e das Missões">
+        
+        <meta name="citation_author" content="Santos, Selan Rodrigues dos">
+        
+            <meta name="citation_author_affiliation" content="University of Leeds">
+        
+        <meta name="citation_author" content="Fraga, Luciane Machado">
+        
+            <meta name="citation_author_affiliation" content="Universidade Regional Integrada do Alto do Uruguai e das Missões">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="24"></meta>
+<meta name="citation_number" content="2"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="185"></meta>
+    <meta name="citation_lastpage" content="195"></meta>
+    <meta name="citation_doi" content="10.1590/S1806-11172002000200015"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Atualmente a Visualização Científica aliada à Realidade Virtual tem-se tornado disponível como uma tecnologia de ponta para o aprendizado. No meio deste cenário, a demanda por software educacional que ofereça suporte para o processo de aprendizagem em muitas áreas está crescendo. Esta tendência não é diferente em Eletromagnetismo. Este trabalho apresenta um sistema de treinamento educacional, que é uma tentativa de responder a esta demanda. A aplicação tem sido desenvolvida com a combinação de tecnologias como a Realidade Virtual e a Visualização Científica para desmistificar os conceitos de manipulação e investigação interativa sobre a carga elétrica e seu campo elétrico. Os aspectos arquiteturais de tal sistema são discutidos juntamente com a descrição de um protótipo experimental chamado Electras."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2002-06"></meta>
+
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2002.v24n2/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2002.v24n2/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172002000200015 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Seção Especial: Informática no Ensino de Física</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 24 
+                (2)
+            <span class="_separator"> • </span>Jun 2002</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172002000200015" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172002000200015</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172002000200015"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">A Virtual Reality System for Simulation and Visualization of Discrete Point Charges and its Electric Field</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Antônio Vanderlei dos Santos </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Santo Ângelo,  
+          ,  
+        ,  Universidade Regional Integrada do Alto do Uruguai e das Missões,  Departamento de Ciências Exatas e da Terra ,  Brazil,  vando@urisan.tche.br</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Selan Rodrigues dos Santos </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Leeds,  
+        ,  University of Leeds,  The School of Computing ,  United Kingdom,  selan@comp.leeds.ac.uk</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Luciane Machado Fraga </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>
+          ,  Santo Ângelo,  
+          ,  
+        ,  Universidade Regional Integrada do Alto do Uruguai e das Missões,  Departamento de Engenharias e Ciência da Computação ,  Brazil,  fraga@urisan.tche.br</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div><p>Atualmente a Visualização Científica aliada à Realidade Virtual tem-se tornado disponível como uma tecnologia de ponta para o aprendizado. No meio deste cenário, a demanda por software educacional que ofereça suporte para o processo de aprendizagem em muitas áreas está crescendo. Esta tendência não é diferente em Eletromagnetismo. Este trabalho apresenta um sistema de treinamento educacional, que é uma tentativa de responder a esta demanda. A aplicação tem sido desenvolvida com a combinação de tecnologias como a Realidade Virtual e a Visualização Científica para desmistificar os conceitos de manipulação e investigação interativa sobre a carga elétrica e seu campo elétrico. Os aspectos arquiteturais de tal sistema são discutidos juntamente com a descrição de um protótipo experimental chamado Electras.</p></div>
+<hr>
+<div><p>Recently Scientific Visualization together with Virtual Reality has rapidly become available as leading edge technologies. In the midst of this scenario the demand for educational software that offers support for the teaching process in many areas has greatly increased. This trend is not different in Electromagnetism. This paper presents an educational training system, which is an attempt towards answering this demand. The application has been embedded with both virtual reality technology and scientific visualization techniques in order to carry out interactive investigation and manipulation of concepts concerning electric charge and its electric field. The architectural aspects of such system are discussed jointly with the description of an experimental prototype called Electras.</p></div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico </p>
+<p></p>
+<p>A Virtual Reality System for Simulation and Visualization of Discrete Point Charges and its Electric Field </p>
+<p></p>
+<p>  Antônio Vanderlei dos Santos1<span class="ref footnote"><sup class="xref">*</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">
+          *
+        </strong>
+         Autor Correspondente: Antônio Vanderlei dos Santos. Universidade Regional Integrada do Alto Uruguai e das Missões - URI. Av. Universidade das Missões, 464. Caixa Postal 204 - CEP:18802-470 Santo Ângelo - RS, Brasil. E-mail: 
+        
+           vando@urisan.tche.br
+        
+      </span></span></span>, Selan Rodrigues dos Santos<sup>2</sup>, Luciane Machado Fraga<sup>3</sup></p>
+<p></p>
+<p><sup><i>1</i></sup>Departamento de Ciências Exatas e da Terra, URI - Santo Ângelo/RS </p>
+<p></p>
+<p>
+      <a href="mailto:vando@urisan.tche.br" target="_blank">
+        <i>vando@urisan.tche.br</i>
+      </a>
+    </p>
+<p></p>
+<p><sup><i>2</i></sup>Research Student - PhD. The School of Computing, University of Leeds, Leeds/United Kingdom </p>
+<p></p>
+<p>
+      <a href="mailto:selan@comp.leeds.ac.uk" target="_blank">
+        <i>selan@comp.leeds.ac.uk</i>
+      </a>
+    </p>
+<p></p>
+<p> 3Departamento de Engenharias e Ciência da Computação, URI- Santo Ângelo/RS </p>
+<p></p>
+<p>
+      <a href="mailto:fraga@urisan.tche.br" target="_blank">
+        <i>fraga@urisan.tche.br</i>
+      </a>
+    </p>
+<p></p>
+<p>Recebido em 6 de março, 2002. Aceito em 2 de maio, 2002. </p>
+<div><blockquote>
+      <p>Atualmente a Visualização Científica aliada à Realidade Virtual tem-se tornado disponível como uma tecnologia de ponta para o aprendizado. No meio deste cenário, a demanda por software educacional que ofereça suporte para o processo de aprendizagem em muitas áreas está crescendo. Esta tendência não é diferente em Eletromagnetismo. Este trabalho apresenta um sistema de treinamento educacional, que é uma tentativa de responder a esta demanda. A aplicação tem sido desenvolvida com a combinação de tecnologias como a Realidade Virtual e a Visualização Científica para desmistificar os conceitos de manipulação e investigação interativa sobre a carga elétrica e seu campo elétrico. Os aspectos arquiteturais de tal sistema são discutidos juntamente com a descrição de um protótipo experimental chamado Electras.</p>
+      <p>Recently Scientific Visualization together with Virtual Reality has rapidly become available as leading edge technologies. In the midst of this scenario the demand for educational software that offers support for the teaching process in many areas has greatly increased. This trend is not different in Electromagnetism. This paper presents an educational training system, which is an attempt towards answering this demand. The application has been embedded with both virtual reality technology and scientific visualization techniques in order to carry out interactive investigation and manipulation of concepts concerning electric charge and its electric field. The architectural aspects of such system are discussed jointly with the description of an experimental prototype called Electras.</p>
+    </blockquote></div>
+<p></p>
+<p>
+      <b> I Introdução</b>
+    </p>
+<p></p>
+<p>  Para a melhor compreensão de certos fenômenos físicos, buscamos a integração da teoria com o experimento não para justificá-lo mas para ilustrar e torná-lo mais atrativo ao aluno. A experiência em redor do mundo demonstra que o trabalho de pesquisa básica, motivado exclusivamente pela curiosidade, pode levar a aplicações inesperadas de grande importância prática. </p>
+<p></p>
+<p>  Segundo o biólogo Jean Piaget [1], o conhecimento não pode ser concebido como algo predeterminado pelas estruturas internas do sujeito (pois elas resultam de uma construção contínua) nem pelas características do objeto (já que elas só são conhecidas graças à mediação dessa estruturas). Todo conhecimento é uma construção, uma interação, contendo um aspecto de elaboração novo. </p>
+<p></p>
+<p>  A partir dessas informações, propomos estudar como o campo elétrico se constitui no pensamento do adolescente, procurando salientar as relações lógicas que as organizam através de um sistema de simulação. </p>
+<p></p>
+<p>  Este sistema de simulação proporciona a sua utilização no ensino de Física no Ensino Médio, utilizando-se de uma metodologia elaborada a partir de uma perspectiva construtivista, visto que o papel do ensino experimental, a realização de experimentos no contexto do processo ensino-aprendizagem tem sido definido por muitos autores. Contudo, dados objetivos com relação à eficiência deste tipo de ensino não são encontrados facilmente na literatura. </p>
+<p></p>
+<p>  Através de uma metodologia de fácil aplicação e compreensão para o aluno, desenvolveremos este sistema relacionado ao Eletromagnetismo, mais especificamente ao campo elétrico, nas situações-problema vivenciadas pelo aluno em seu cotidiano. O sistema visa contribuir para a melhoria da qualidade de ensino, visto que há poucos recursos didáticos utilizados nas aulas de física no ensino médio. Sendo assim, busca-se a elaboração de um recurso didático para a aplicação no ensino médio. </p>
+<p></p>
+<p>  A Visualização Científica (VC) é um campo emergente que tem crescido nos últimos anos. Tem como principal função fornecer percepção em grandes e complexos conjuntos de dados, descrever ambientes e visualizar processos de simulação por meio de técnicas de computação gráfica. Por esta razão, a VC é considerada como um campo multidisciplinar, que trabalha como uma ferramenta auxiliar que incentiva pesquisas e processo educacional [2]. </p>
+<p></p>
+<p>  Enquanto isso, a Realidade Virtual (RV) tem sido disponibilizada como tecnologia de ponta para aprendizagem, oferecendo grande potencial para aplicações em muitas áreas, especialmente para simulações computacionais. RV é considerada como uma nova e avançada interface computacional para modelos 3D, que apresenta um novo mundo de possibilidades para a interação homem-máquina. Ela fornece um ambiente no qual os usuários são capazes de interagir e visualizar simulações ou conjuntos de dados complexos numa forma interativa. Conseqüentemente, a RV possibilita ao usuário desenvolver um relacionamento espacial com informação que ele/a esteja interagindo [3]. </p>
+<p></p>
+<p>  É possível combinar essas duas técnicas, a fim de desenvolver um software de simulação de alta qualidade, com propósito educacional [4]. Este software deve fornecer características como a interação 3D, simulação e visualização da atividade desejada. É importante enfatizar que esse tipo de software não está preocupado com o controle, nem com a dimensão do processo de aprendizado. Ao contrário, ele é projetado para fornecer um mecanismo por meio do qual seja possível obter uma simulação segura do processo em estudo. Em outras palavras, ele disponibilizará aos estudantes mais recursos para experimentar uma maneira complementar de melhorar seu conhecimento. </p>
+<p></p>
+<p>  Neste trabalho, nós apresentamos uma arquitetura para um sistema de simulação baseado em RV, o qual implementa a simulação de cargas elétricas e seu campo. O sistema possibilita aos usuários criar, manipular e visualizar cargas, como também representar o campo elétrico através da combinação das três técnicas de VC. A meta principal para complementar esse projeto é construir um sistema onde o usuário (usualmente um estudante) seja capaz de representar e visualizar a solução de problemas práticos relacionados ao campo elétrico. O sistema estabelece um ambiente no qual o usuário pode reproduzir problemas baseados em livros ou até mesmo problemas questionados pelo professor ou pelo próprio aluno, atuando como um mecanismo alternativo para o entendimento do Eletromagnetismo, especialmente para a simulação de problemas de livros apresentados na sala de aula. Por essa razão, o sistema pode ser categorizado como um software educacional baseado em técnicas de visualização científica e RV. </p>
+<p></p>
+<p>  A próxima seção introduz a motivação para este trabalho como também a descrição e caracterização da área em Eletromagnetismo à qual o software esta voltado. Na seção III, temos os resultados e discussões, apresentando a arquitetura do sistema, juntamente com suas exigências e operações. Na seção IV, nós destacaremos as técnicas de VC que estão presentes no software com alguns aspectos da RV, tais como navegação e interação. A seção V apresenta outros sistemas de simulação do eletromagnetismo. A última seção consiste na conclusão. </p>
+<p></p>
+<p>
+      <b> II Aplicação</b>
+    </p>
+<p></p>
+<p>  A Teoria Eletromagnética é uma das disciplinas mais importantes dada a sua aplicabilidade em diversos campos do conhecimento humano. No entanto, ainda existe certa dificuldade com relação ao correto entendimento de seus conceitos e teorias. </p>
+<p></p>
+<p>  Conceitos relacionados com o Eletromagnetismo como a carga elétrica e onda eletromagnética apresentam-se como elementos complexos e de difícil ''visualização''. De fato, tais conhecimentos são verificados, na maioria das vezes, apenas através de fórmulas matemáticas complexas (quase sempre assustadoras aos estudantes). Além disso, muitas delas não possuem uma verificação direta pelo aluno, seja via observação direta, seja através de experimentos laboratoriais. </p>
+<p></p>
+<p>  No ensino da Física, percebe-se que os estudantes freqüentemente apresentam uma dificuldade natural no aprendizado de conceitos-chave juntamente com sua aplicação em situações práticas. Este obstáculo inicial pode ser superado, o que permite a realização de altos níveis de aprendizado aplicável e efetivo. </p>
+<p></p>
+<p>  Este impedimento natural tem tido várias razões para sua existência, como: fraco embasamento matemático; desvinculação entre a Física estudada e o mundo real; e falta de recursos didáticos adequados que estimulem a curiosidade dos estudantes, etc. </p>
+<p></p>
+<p>  Com o avanço tecnológico computacional, os usos de métodos de aprendizado tradicionais tornam-se ineficientes e inadequados. A demanda por uma solução moderna e eficaz leva-nos ao conceito de software educacional. O desenvolvimento de um sistema que crie um ambiente no qual o usuário seja capaz de modelar, visualizar e interagir com a simulação proposta baseada em experimentos da Física real poderia ser considerado como uma solução para suprir esta demanda. </p>
+<p></p>
+<p>  Tal sistema seria uma ferramenta complementar para o estudo da Física, desde que através dele seja possível a realização de experimentos ''virtuais'' com a finalidade de esclarecer e reforçar o conhecimento teórico da Física, no nosso caso a teoria Eletromagnética. </p>
+<p></p>
+<p>  Nesta seção, nós focamos o eletromagnetismo, estabelecendo os limites da área que o sistema pretende simular. </p>
+<p></p>
+<p>
+      <b>II.1. Lei de Coulomb</b>
+    </p>
+<p></p>
+<p>  O campo elétrico cerca um corpo carregado estacionário ou partículas e age sobre ele com uma certa força, a qual é a base para a detecção e exploração de tais campos. Este fato foi estudado por Charles Coulomb (1736-1806), que produziu a lei que leva seu nome. </p>
+<p></p>
+<p>  Quando colocamos um corpo com carga <b>q</b><sub>1</sub> num ponto de uma região cercando outro corpo carregando carga <b>q</b><sub>2</sub>, nós geramos um par de forças <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/f6e37c01a6458618b2f9e853b4f92e259b4670a7.gif"> sobre ambas as cargas. Essas forças são direcionadas para que cargas com o mesmo sinal repilam uma à outra e que cargas com sinais opostos atraiam uma à outra, como mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig21"><span class="sci-ico-fileFigure"></span> Fig. 2.1</a>. </p>
+<div class="row fig" id="fig21">
+<a name="fig21"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig21"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>De acordo com o Princípio de Superposição<span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">
+          *
+        </strong>
+         Autor Correspondente: Antônio Vanderlei dos Santos. Universidade Regional Integrada do Alto Uruguai e das Missões - URI. Av. Universidade das Missões, 464. Caixa Postal 204 - CEP:18802-470 Santo Ângelo - RS, Brasil. E-mail: 
+        
+           vando@urisan.tche.br
+        
+      </span></span></span>, a força <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/f6e37c01a6458618b2f9e853b4f92e259b4670a7.gif"> deve ser tratada como o resultado da interação do campo elétrico comum com cada de duas cargas. A Lei de Coulomb descreve essa interação para cargas pontuais<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">
+          *
+        </strong>
+         Autor Correspondente: Antônio Vanderlei dos Santos. Universidade Regional Integrada do Alto Uruguai e das Missões - URI. Av. Universidade das Missões, 464. Caixa Postal 204 - CEP:18802-470 Santo Ângelo - RS, Brasil. E-mail: 
+        
+           vando@urisan.tche.br
+        
+      </span></span></span>: </p>
+<p></p>
+<p>  A força exercida em <i>vácuo</i> sobre cada de duas cargas pontuais por seu campo elétrico comum é diretamente proporcional ao produto das cargas e inversamente proporcional ao quadrado da distância entre elas, isto é, </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/afb7cd1771b92d1f37ca9527c1f447e2d13ac30e.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>  onde <div class="row fig" id="cbdc3e007fb5119494dab4d9acc53f6b905b9aad">
+<a name="cbdc3e007fb5119494dab4d9acc53f6b905b9aad"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgcbdc3e007fb5119494dab4d9acc53f6b905b9aad"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/cbdc3e007fb5119494dab4d9acc53f6b905b9aad.gif"></div></a></div>
+</div><sub>12</sub> é o vetor unitário que aponta de <b>q</b><sub>1</sub> para <b>q</b><sub>2</sub>, e <b>k</b> é a constante de Coulomb que tem, no SI, o valor de <b>k</b> = 8,99×10<sup>9</sup>N.m<sup>2</sup>/C<sup>2</sup>. A correspondente força <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/f6e37c01a6458618b2f9e853b4f92e259b4670a7.gif"><sub>21</sub> (a força q2 exercida sobre q1) é igual à - <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/f6e37c01a6458618b2f9e853b4f92e259b4670a7.gif"><sub>12</sub>. </p>
+<p></p>
+<p>
+      <b>II.2. O Campo Elétrico</b>
+    </p>
+<p></p>
+<p>  Inicialmente, vamos considerar a distribuição estacionária de cargas <b>q</b><sub>1</sub>,<b>q</b><sub>2</sub>,...,<b>q</b><sub>n</sub> no espaço. Com isso em mente, vamos ignorar as forças exercidas entre elas e concentrar-nos somente nos efeitos sobre a carga de prova chamada <b>q</b><sub>0</sub>, definida pelas coordenadas cartesianas (<b>x,y,z</b>). A força resultante de <b>q</b><sub>0 </sub> é dada por: </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/f054e78ad6cfcd645c74689ee0dfa943030b97b4.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>  onde <div class="row fig" id="cbdc3e007fb5119494dab4d9acc53f6b905b9aad">
+<a name="cbdc3e007fb5119494dab4d9acc53f6b905b9aad"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgcbdc3e007fb5119494dab4d9acc53f6b905b9aad"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/cbdc3e007fb5119494dab4d9acc53f6b905b9aad.gif"></div></a></div>
+</div><sub>0j</sub> é o vetor de partida da carga <i>j-th</i> no sistema para o ponto (<b>x,y,z</b>). </p>
+<p></p>
+<p>  Como a força <b>F</b><sub>0</sub> é proporcional a <b>q</b><sub>0</sub>, nós podemos dividi-la por <b>q</b><sub>0</sub>, produzindo uma quantidade vetorial dependendo somente do sistema de cargas original (<b>q1,q2,...q</b><sub>n</sub>) e a posição (<b>x,y,z</b>). Esta função vetorial de <b>x,y,z</b> é conhecida como Campo Elétrico <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"><span class="ref footnote"><sup class="xref">3</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">
+          *
+        </strong>
+         Autor Correspondente: Antônio Vanderlei dos Santos. Universidade Regional Integrada do Alto Uruguai e das Missões - URI. Av. Universidade das Missões, 464. Caixa Postal 204 - CEP:18802-470 Santo Ângelo - RS, Brasil. E-mail: 
+        
+           vando@urisan.tche.br
+        
+      </span></span></span>. As cargas <b>q1,</b> <b>q2,...,q</b><sub>n</sub> são chamadas fontes do campo. A definição matemática de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> é dada pela fórmula [5]: </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm03">
+<a name="frm03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/fab05690014979456a6dc363ae9091996357fbc1.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>  A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig22"><span class="sci-ico-fileFigure"></span> Fig. 2.2</a> ilustra o cálculo do <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> para um dado conjunto de cargas. </p>
+<div class="row fig" id="fig22">
+<a name="fig22"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig22"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>II.3. Linhas de força do campo elétrico</b>
+    </p>
+<p></p>
+<p>  A visualização do campo elétrico é freqüentemente obtida empregando-se duas técnicas: <i>campo vetorial</i> ou <i>linhas de força</i>. O cálculo e determinado vetor <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> para cada ponto no espaço (isto é, uma grade regular) corresponde ao primeiro método. O segundo, mais comum, consiste do uso de linhas desenhadas para que a tangente deles em qualquer ponto de seu comprimento dê a direção do campo de força do vetor <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> neste ponto. </p>
+<p></p>
+<p>  As linhas de força, devido a uma única carga pontual, são linhas radiais contínuas passando através da carga pontual. Elas são direcionadas radialmente para fora se a carga pontual dada é positiva, e radialmente para dentro caso contrário, como mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig23"><span class="sci-ico-fileFigure"></span> Fig. 2.3</a>. </p>
+<div class="row fig" id="fig23">
+<a name="fig23"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig23"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O campo de força de qualquer ponto de linhas de força de um campo elétrico correspondendo ao grupo de várias cargas pontuais é a soma vetorial do campo de força para cada carga tomada separadamente. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig24"><span class="sci-ico-fileFigure"></span> Fig. 2.4</a> mostra dois campos elétricos representados por suas linhas de força enquanto considerando duas cargas pontuais. </p>
+<div class="row fig" id="fig24">
+<a name="fig24"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig24"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>  Para traçar as linhas de força, é necessário seguir as regras elementares [6]: </p>
+<p></p>
+<p>  As linhas de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> iniciam nas cargas positivas (ou no infinito) e terminam nas cargas negativas (ou no infinito); </p>
+<p></p>
+<p>  As linhas de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> divergentes de uma carga, ou convergentes para uma carga são simétricas em torno da carga; </p>
+<p></p>
+<p>  O número de linhas de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> que divergem de uma carga positiva, ou que entram numa carga negativa, é proporcional à carga; </p>
+<p></p>
+<p>  A densidade de linhas (isto é, o número de linhas por unidade de área perpendicular à direção das linhas) em torno de um ponto é proporcional ao valor de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> neste ponto; </p>
+<p></p>
+<p>  As linhas do campo são uniformemente espaçadas e radiais a grandes distâncias do sistema de cargas; </p>
+<p></p>
+<p>  Duas linhas nunca têm um ponto de cruzamento. </p>
+<p></p>
+<p>
+      <b> III Resultados e Discussões</b>
+    </p>
+<p></p>
+<p>  Uma vez descritos os conceitos fundamentais e as entidades envolvidas nesta parte introdutória do Eletromagnetismo, é possível esboçar as exigências do sistema consideradas durante a concepção do sistema de simulação. </p>
+<p></p>
+<p>  O assunto de maior interesse que tínhamos em mente quando iniciamos o trabalho era fornecer um sistema de treinamento no qual o usuário pudesse interagir e construir seu próprio experimento em Eletromagnetismo, adquirindo percepção visual. Além disso, o uso de tal sistema na sala de aula poderia servir como uma maneira de executar a avaliação de tarefas do sistema, verificando se o processo de aprendizado foi satisfatoriamente perfeito ou não. </p>
+<p></p>
+<p>  Igualmente importante foi garantir que o sistema simulasse um ''mundo'' seguro e preciso, correspondendo exatamente aos teoremas, leis e fórmulas dos livros. Juntamente, oferecer um mecanismo que o usuário (estudante) pudesse aplicar para calcular a solução de qualquer problema proposto pelo professor ou dos livros. Com isso, percebemos a necessidade de inserir características de interação para que o usuário se sentisse encorajado o suficiente para executar atividades de investigação sobre o experimento dado. É valioso mencionar que a RV tem ultimamente demonstrado seu valor quando utilizada em aplicações computacionais baseadas em simulação. O potencial da RV naturalmente vem do fato de que ela permite que as pessoas visualizem, manipulem e interajam com dados complexos e fenômenos. Como a RV ajuda os usuários a estabelecerem uma interação 3D com os dados, ela tem abrangido protótipos, modelos físicos, linguagens de programação, linguagens de simulação e a simulação interativa visual [4]. </p>
+<p></p>
+<p>  RV é baseada em imersão, navegação e interação. Seu propósito principal é dar a ilusão de imersão num mundo gerado pelo computador. Isso pode ser mais bem realizado por meio de equipamentos especiais que capacitam os usuários a perceberem e manifestarem a si mesmos em outra realidade através de canais multis-sensoriais. Apesar disso, há sistemas de RV que são baseados em sistema periférico desktop, considerados como Sistemas não-imersivos [7]. </p>
+<p></p>
+<p>  De todas as coisas consideradas, nossa meta foi aproveitar a RV e a tecnologia de VC para desenvolver um laboratório ''artificial'' gerado pelo computador, no qual o usuário pode sistematicamente praticar suas habilidades adquiridas durante aulas teóricas em Eletromagnetismo. </p>
+<p></p>
+<p>
+      <b>III.1. Projeto arquitetural</b>
+    </p>
+<p></p>
+<p>  Tendo especificado as exigências necessárias para a simulacão do campo elétrico e cargas pontuais, podemos descrever a arquitetura interna do Electras (<b>Ele</b>ctric <b>C</b>harge <b>Tra</b>ining <b>S</b>ystem), o qual trata-se de nosso Sistema de Simulação baseado em RV. </p>
+<p></p>
+<p>  Há muitas questões que um sistema de simulacão educacional baseado em RV, tal como o Electras, deve resolver para realizar seus objetivos. O principal fator considerado durante o processo de projeto foi o reúso de código para outros Sistemas de Simulação, que permite um alto nível de desempenho ao módulo de visualização e o projeto de uma interface amigável. </p>
+<p></p>
+<p>  A necessidade para a característica de modularização vem do fato de que o projeto tem uma meta-prazo, que é o desenvolvimento de um conjunto de Sistemas Educacionais para ajudar estudantes a visualizarem fenômenos físicos (por exemplo, em Mecânica) como também conceitos matemáticos fundamentais (Geometria Analítica, por exemplo). Sendo assim, pensamos que uma maneira clara para reusar peças de código era utilizar um projeto Orientado a Objetos, obviamente em associação com uma linguagem Orientada a Objetos. </p>
+<p></p>
+<p>  Para permitir alto desempenho no processo de visualização na representação 3D de cargas elétricas associadas a seu campo elétrico, houve a necessidade de uma  API<span class="ref footnote"><sup class="xref">4</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">
+          *
+        </strong>
+         Autor Correspondente: Antônio Vanderlei dos Santos. Universidade Regional Integrada do Alto Uruguai e das Missões - URI. Av. Universidade das Missões, 464. Caixa Postal 204 - CEP:18802-470 Santo Ângelo - RS, Brasil. E-mail: 
+        
+           vando@urisan.tche.br
+        
+      </span></span></span> gráfica rápida. Apesar de outros Sistemas de Simulação similares oferecerem uma representação visual 2D do campo elétrico, decidimos que o nosso sistema suportaria, como um passo adicional, a visão 3D desses conceitos. Por essa razão, o sistema imita o comportamento real das cargas elétricas. </p>
+<p></p>
+<p>  A última questão foi criar uma interface acessível, que permita ao usuário facilmente interagir, investigar as propriedades das entidades visuais e configurar muitas das situações considerando cargas elétricas, que são pedidas pelo professor [8]. </p>
+<p></p>
+<p>  Assim, com todas essas preocupações em mente, escolhemos a linguagem Visual C++ 5.0 com a API gráfica OpenGL [9] para implementar nosso protótipo. </p>
+<p></p>
+<p>
+      <b>III.2. Classes do protótipo</b>
+    </p>
+<p></p>
+<p>  O protótipo Electras consiste em seis classes principais correspondentes às entidades discutidas em seções anteriores: carga elétrica (<b>Charge</b>), carga de prova (<b>ProofCharge</b>), campo elétrico (<b>EField</b>) no qual pode consistir de quaisquer linhas de força (<b>LineField</b>) ou campo colorido (<b>ColorField</b>). Também nós criamos uma classe chamada <b>Environment</b> na qual todos os objetos instanciados estão. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig31"><span class="sci-ico-fileFigure"></span> Fig. 3.1</a> mostra como os objetos instanciados estão inseridos no objeto <b>Environment</b>. </p>
+<div class="row fig" id="fig31">
+<a name="fig31"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig31"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>  Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig31"><span class="sci-ico-fileFigure"></span> Fig. 3.1</a>, é possível estabelecer a relação de pertinência ou herança entre algumas classes. Da mesma forma, nós podemos ver duas novas classes: <b>Vector </b> e <b>WorldView</b>. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig32"><span class="sci-ico-fileFigure"></span> Fig. 3.2</a> mostra o relacionamento de herança entre todas as classes. </p>
+<div class="row fig" id="fig32">
+<a name="fig32"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig32"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>  A seguir, iremos apresentar mais informações a respeito das classes principais. </p>
+<p></p>
+<p><b>Classe WorldView: </b>Esta classe é a representação visual do objeto <b>Environment</b> criado pela aplicação. Ela compreende a representação de uma ''Bounding Box'' que oferece posicionamento referente para os elementos presentes na simulacão tais como as cargas elétricas e as cargas de prova, como sugerido em [10]. </p>
+<p></p>
+<p><b>Classe Environment: </b>É responsável pelo gerenciamento dos objetos criados pelo usuário durante a execução do programa. Ela tem uma lista encadeada interna, que mantém registro dos objetos criados pelo usuário, o que deve ser feito uma vez. Devemos realizar um processamento adequado de cada objeto criado. O objeto <b>Environment</b> poderia ser interpretado, neste caso particular, como a abstração de um sistema de cargas estacionárias no espaço 3D. Várias vezes o usuário insere um novo objeto no objeto <b>Environment</b>, e certifica-se de que este novo elemento seja inserido nele estendendo seus limites para adaptar-se à nova situação. Por isso, os usuários são livres para criar novos elementos sem precisar cuidar se o <b>Environment </b> é grande o bastante. </p>
+<p></p>
+<p><b>Classe Entity: </b>Esta é uma classe abstrata, da qual as classes seguintes são herdadas. Ela é necessária para garantir uma manipulação independente dos objetos polimorfos pela classe <b>Environment</b>. Desse modo, o objeto gerenciado pode processar independentemente de todos os objetos presentes na simulacão, chamando o método draw adequado, o qual gera a apropriada, visualização. Esta classe, junto com as anteriores, é projetada para ser reusada em aplicações futuras que necessitem da visualização 3D. </p>
+<p></p>
+<p><b>Classe Charge: </b>Esta classe básica implementa a entidade carga elétrica. Ela tem um valor inteiro (positivo ou negativo) expresso em Coulomb, que representa o valor de uma carga elétrica. A carga está localizada num sistema de coordenadas retangular 3D, armazenado no objeto Point3D. A carga pode estar escondida ou visível dentro do objeto <b>Environment</b>. O objeto carga é graficamente representado por uma esfera sólida colorida, na qual pode assumir duas cores: vermelho para cargas positivas, e verde para as cargas negativas. Uma vez que um objeto carga é instanciado, o usuário pode modificá-lo ou apagá-lo. </p>
+<p></p>
+<p><b>Classe ProofCharge: </b>Esta é uma classe estendida da Classe <b>Charge</b>. Ela é muito similar à Classe <b>Charge</b>, exceto pelo fato de que não pode gerar linhas de força, e seu valor elétrico, por padrão, é +1 Coulomb. Esses objetos são ignorados durante o cálculo das linhas de força; uma carga de prova é usada como um mecanismo descritivo para investigação de pontos específicos no campo elétrico. Isto é, os usuários devem criar este objeto quando quiserem visualizar a força exercida sobre um objeto carga presente no sistema, como mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig22"><span class="sci-ico-fileFigure"></span> Fig. 2.2</a>. </p>
+<p></p>
+<p><b>Classe LineField:</b> A classe <b>LineField</b> corresponde a uma linha de força partindo de uma carga positiva. Como mencionado anteriormente, esta é uma das mais populares técnicas aplicadas na visualização de campos elétricos. </p>
+<p></p>
+<p><b>Classe VectorField:</b> O campo vetor é uma grade regular 2D (plano X, Y ou Z). Cada ponto na grade tem um vetor <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> associado. O usuário pode configurar o tamanho da célula na grade. </p>
+<p></p>
+<p><b>Classe ColorField: </b>É representada por um plano colorido correspondendo às linhas equipotenciais do campo elétrico. Cada cor é designada de acordo com um limiar particular extraído do valor do campo elétrico <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/824e790c56779b6ed4bd4a6c869c84dbab7184e0.gif"> na grade regular 2D (plano X, Y ou Z). Uma simples malha triangular gera o plano colorido. </p>
+<p></p>
+<p>
+      <b> IV Técnicas de visualização e RV</b>
+    </p>
+<p></p>
+<p>  Nesta seção, iremos dar uma breve descrição do uso do Sistema Electras, destacando as técnicas de VC e a RV, que têm sido aplicadas. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig41"><span class="sci-ico-fileFigure"></span> Fig. 4.1</a> mostra a janela principal da aplicação. O sistema inicia mostrando a ''Bounding Box'' correspondente ao mundo inicial. Através das unidades padrões do SI, o usuário é capaz de mudar para o sistema de Unidades CGC, configurando as propriedades do ''World''. </p>
+<div class="row fig" id="fig41">
+<a name="fig41"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig41"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O usuário pode iniciar a simulacão pretendida inserindo muitas entidades como cargas elétricas, cargas de prova, campo elétrico e assim por diante. A inserção de uma única entidade irá mostrar um diálogo no qual estão as características da entidade que podem ser configuradas. </p>
+<p></p>
+<p>  Após o passo de configuração, o usuário está apto a realizar a fase de exploração. Se ele inserir cargas, então está apto a introduzir um campo elétrico e observar a relacionamento entre as cargas. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig42"><span class="sci-ico-fileFigure"></span> Fig. 4.2</a> mostra o processo de investigação usando as linhas de força 3D. </p>
+<div class="row fig" id="fig42">
+<a name="fig42"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig42"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Se o estudante necessitar saber qual é o resultado do campo elétrico [E\vec] num ponto específico, ele poderá inserir uma carga de prova nesta localização e checar o valor do campo invocando o seu diálogo de propriedades (clicando com o botão direito do mouse), como mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig43"><span class="sci-ico-fileFigure"></span> Fig. 4.3</a>. Contudo, se o estudante quiser uma visão geral do campo elétrico ativo, ele pode inserir o campo colorido e/ou o campo vetorial (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig44"><span class="sci-ico-fileFigure"></span>Fig. 4.4</a>). </p>
+<div class="row fig" id="fig43">
+<a name="fig43"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig43"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig44">
+<a name="fig44"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig44"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Os campos Vetorial e Colorido podem ser criados para os planos X, Y ou Z em qualquer posição do ''Bounding Box''. Vale a pena mencionar que o ''Bounding Box'' pode ser rotacionado ao longo dos eixos X e Y, através das setas do teclado, portanto oferecendo diferentes perspectivas que incrementam o poder de investigação sobre a simulacão. </p>
+<p></p>
+<p>
+      <b>IV.1. Navegação e Feedback</b>
+    </p>
+<p></p>
+<p>  O esquema de navegação foi projetado o mais simplesmente possível. Ele é necessário toda vez que o usuário executa a inserção de uma entidade ou queira investigar pontos específicos no espaço. Neste caso, o usuário terá de escolher entre dois modos propostos em [11]: <i>espacial</i> ou <i>lingüístico</i>. No posicionamento espacial, o usuário escolhe a posição de acordo com a localização próxima aos objetos. No modo lingüístico, o usuário especificará (em uma janela de diálogo) uma posição exata (x,y,z) onde o objeto deverá estar. Em ambos os casos, ele pode conseguir um bom palpite olhando no ''status bar'' (localizado na parte de baixo da janela principal) onde a localização atual no espaço 3D é mostrada. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig45"><span class="sci-ico-fileFigure"></span> Fig. 4.5</a> apresenta o modo de posicionamento espacial. </p>
+<div class="row fig" id="fig45">
+<a name="fig45"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig45"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Dois planos ortogonais transparentes (XY e XZ) graficamente representam o cursor. O cruzamento das três linhas (uma é a interseção entre ambos os planos, outra é a linha vertical no plano XY, e a última é uma linha horizontal paralela ao eixo Z no plano XZ) indica a posição atual. </p>
+<p></p>
+<p>  Clicando no botão esquerdo do mouse, o usuário escolhe entre a navegação XY  (2 DF<span class="ref footnote"><sup class="xref">5</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">
+          *
+        </strong>
+         Autor Correspondente: Antônio Vanderlei dos Santos. Universidade Regional Integrada do Alto Uruguai e das Missões - URI. Av. Universidade das Missões, 464. Caixa Postal 204 - CEP:18802-470 Santo Ângelo - RS, Brasil. E-mail: 
+        
+           vando@urisan.tche.br
+        
+      </span></span></span>) ou a navegação XZ (2 DF) [12]. Quando o usuário move o mouse, as linhas mencionadas movem-se proporcionalmente. Assim, esse método torna disponível 3 graus de liberdade (esquerda, direita, para cima, para baixo, para frente, para trás) usando o dispositivo mouse (2 DF). Além disso, os planos de navegação foram feitos transparentes, como uma maneira de evitar o bloqueio da visão durante a navegação. </p>
+<p></p>
+<p>  Para permitir a característica de seleção, desenvolvemos uma ''tree window dialog bar'' (uma pequena janela colocada no canto esquerdo da janela principal) a qual contém a representação visual de lista encadeada interna de entidades. Assim, o usuário pode interagir ou explorar todas as entidades no sistema clicando e selecionando o nome da entidade na árvore com o botão esquerdo do mouse. Feito isso, a entidade é destacada no sistema por meio de uma pequena ''wire-framed Bounding Box'' que cerca a representação gráfica da entidade (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig43"><span class="sci-ico-fileFigure"></span>Fig. 4.3</a>). Clicando sobre a entidade com o botão direito do mouse, ativa-se um ''popup menu'' no qual nós podemos disparar um diálogo de propriedades, esconder ou apagar a entidade do ambiente. </p>
+<p></p>
+<p>  Este método traz duas grandes vantagens. A primeira é evitar procedimentos perigosos com o mecanismo da API OpenGL, mantendo o projeto um software independente. A segunda vantagem é a representação em forma de árvore, presente em muitas aplicações (no estilo Windows Explorer), que torna a interface mais amigável. </p>
+<p></p>
+<p>
+      <b>IV.2. Algoritmo do desenho das linhas de força</b>
+    </p>
+<p></p>
+<p>  O algoritmo para desenhar as Linhas de Força pode ser dividido em duas grandes partes. A primeira consiste no cálculo do ponto inicial localizado na ''superfície'' da partícula carregada. Para permitir a distribuição 3D, desenvolvemos uma rotina recursiva que dispõe as linhas sobre a superfície esférica de uma forma espalhada simetricamente, usando coordenadas esféricas: </p>
+<p></p>
+<p>
+      <div class="row fig" id="aed26097ff6870570ed64e8193de540f302392d1">
+<a name="aed26097ff6870570ed64e8193de540f302392d1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgaed26097ff6870570ed64e8193de540f302392d1"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/aed26097ff6870570ed64e8193de540f302392d1.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>  A execução dessa função é feita, distribuindo-se o número de linhas para serem espalhadas sobre a superfície e o limite inicial e final de Theta (q) e Phi (f). A coordenada Ro (r) é o raio da esfera, o qual é o mesmo, não importando como a linha seja desenhada. A condição de parada na linha 2 é atingida quando há somente uma linha para ser colocada. Por isso, a posição é colocada no meio da região esférica. </p>
+<p></p>
+<p>  Em cada interação dividimos a esfera (ou região dela) em duas. Cada parte recebe metade do número de linhas (linhas 6 e 7). Se o limite de Theta é maior que o limite de Phi, nós dividimos o limite de Theta em dois, proporcionalmente ao número de linhas para cada parte (linhas 9 e 10). </p>
+<p></p>
+<p>  Então recursivamente chamamos a função para cada metade, podendo assim espalhar um pequeno número de linhas para uma pequena região da esfera original (linhas 11 e 12). O mesmo processo é realizado quando o limite de Phi é maior que o limite de Theta (linhas 15 à 18). </p>
+<p></p>
+<p>  A segunda parte é desenhar as linhas partindo dos pontos iniciais encontrados no passo anterior. Basicamente este objeto é feito de pequenos segmentos de linha cuja direção é obtida do cálculo do vetor <b>E</b> no ponto final do segmento de linha anterior. O procedimento pode ser resumido como segue: </p>
+<p></p>
+<p>
+      <b>Calcular o campo elétrico do ponto inicial (localizado na ''superfície'' da esfera);</b>
+    </p>
+<p></p>
+<p>
+      <b>Desenhar uma linha curta na direção do campo elétrico;</b>
+    </p>
+<p></p>
+<p>
+      <b>Calcular o campo elétrico do final da linha.</b>
+    </p>
+<p></p>
+<p>
+      <b>Repetir os passos 2 e 3 até alcançar uma outra carga pontual ou terem sido desenhados o número prédefinido de segmentos.</b>
+    </p>
+<p></p>
+<p>  Embora estejamos falando de umas poucas linhas de força por carga, desenhá-las usualmente é uma tarefa que consome tempo, dado que nós devemos levar em conta a influência exercida por todas as cargas presentes na simulacão para cada pequeno segmento. Assim, a execução deste cálculo exige uma atenção especial para garantir alto desempenho, especialmente por causa do considerável número de segmentos de linha que são calculados e desenhados a fim de que a linha inteira pareça com uma linha curva. Essas linhas podem também ser visualizadas na tradicional forma 2D (paralelas aos planos X, Y ou Z). </p>
+<p></p>
+<p>  Na verdade, quanto mais objetos-carga com linhas de força o usuário cria, mais lento o sistema será. Se o usuário é interessado em precisão, será possível configurar a propriedade das linhas de maneira que seus segmentos sejam pequenos o bastante para garantir a suavidade delas. Contudo, se o usuário decidiu por velocidade ao invés de precisão, ele deve escolher um segmento de linha maior. </p>
+<p></p>
+<p>
+      <b> V Outros sistemas de simulação do campo elétrico</b>
+    </p>
+<p></p>
+<p>  Há outras aplicações projetadas para responder à demanda por sistemas educacionais para o Eletromagnetismo. Muitas delas estão disponíveis na Internet e podem ser adquiridas facilmente. Um dos mais populares e premiados softwares é o EM Field 6 [13], o qual é parte de um projeto do Physics Academic Software. Ele abrange o campo elétrico produzido por cargas pontuais, linhas de força e campo magnético. O campo elétrico pode ser investigado através de vetores do campo elétrico, setas direcionais, linhas do campo e equipotenciais elétricos. Embora o sistema apresente fartura de capacidades e seja bastante interativo, ele restringe-se à visualização 2D da distribuição de cargas. </p>
+<p></p>
+<p>  Seguindo a mesma tendência, podemos mencionar o Electric Field Plotter [14], o qual tem a limitação de permitir que os usuários configurem somente nove cargas pontuais. Outro software bem colocado é o YP Electric Field [15], que também permite três tipos de visualização (linhas, equipotenciais e o vetor de força elétrico). Todavia, o principal ponto negativo é encontrado na configuração das cargas pontuais, que é restrita para poucas configurações prédefinidas (individual, duplo, triângulo, quadrado), trazendo obviamente restrições para o processo de investigação do estudante. </p>
+<p></p>
+<p>  Podemos dizer que o Sistema Electras traz uma nova ênfase para tal simulacão e introduz um ambiente espacial verdadeiro, no qual o usuário é capaz de configurar as cargas pontuais e qualquer posição dentro da caixa 3D. A RV é um ponto-chave, pois ela melhora a tarefa de investigação da simulacão, fornecendo ao usuário a habilidade de rotação da cena, uma investigação livre do ponto de visão, que melhor satisfaz suas necessidades. </p>
+<p></p>
+<p>  Outro aspecto positivo do Electras é que nele o usuário pode obter uma visão volumétrica sobre o campo elétrico por meio da combinação de mecanismos de visualização. Esta aplicação é mostrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig51"><span class="sci-ico-fileFigure"></span> Fig. 5.1</a>, através do uso de poucos campos equipotenciais coloridos. </p>
+<div class="row fig" id="fig51">
+<a name="fig51"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig51"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>  Além disso, o ambiente 3D torna possível mapear os exercícios publicados em livros de Física. Esses exercícios são propostos principalmente usando-se a distribuição geométrica 3D das cargas pontuais como cubos, pirâmides, tetraedros e caixas. É impossí vel representar essas formas em um típico Sistema 2D. </p>
+<p></p>
+<p>  O usuário também pode investigar qualquer ponto 3D do campo elétrico através da navegação utilizando o cursor 3D, o qual mostra no ''status bar'' o correspondente valor do Campo Elétrico de acordo com a sua localização atual. Este mecanismo, juntamente com a rotação inteira do ''Bounding Box'', fornece a capacidade de exploração. </p>
+<p></p>
+<p>
+      <b> VI Conclusões</b>
+    </p>
+<p></p>
+<p>  Com a breve descrição do projeto arquitetural para o Sistema de Simulação em Eletromagnetismo, mostramos que o sistema reúne características especiais de ambas as áreas de VC e RV. O ponto-chave foi desenvolver um sistema que pudesse trabalhar como uma ferramenta auxiliar, suportando o processo de aprendizado das cargas elétricas e conceitos do seu campo elétrico para experimentos e investigações virtuais. </p>
+<p></p>
+<p>  Para alcançar essa meta, o sistema faz extensivo uso de técnicas de visualização de acordo com [10], tais como: posição relacionada e valor escalar (grade 3D mais os valores escalares representados pelos labels no ''Bounding Box''); descrição do campo vetorial (linhas de força); correlação entre vetores e escalares (campo vetorial ao mesmo tempo com campo colorido); localização de valores (uso das linhas da grade para ajudar na localização e posicionamento dos objetos); revelação de informação escondida (transparência no mecanismo de navegação); e seleção e feedback interativos (seleção de objetos colocados no espaço 3D usando o dispositivo mouse). </p>
+<p></p>
+<p>  O mecanismo de seleção foi implementado por meio de uma janela em forma de árvore localizada num diálogo bar. Este método parece ser válido, uma vez que evita o mecanismo do OpenGL. </p>
+<p></p>
+<p>  Os primeiros usuários têm reclamado do mecanismo de navegação. Esse necessita ser melhorado e mais bem apresentado. Nele faltam os campos profundidade e posicionamento durante o movimento. Além disso, outros usuários têm encontrado problemas com a correta visualização do ''Bounding Box'' provocada pela interpretação natural dupla realizada por suas mentes, como afirma [11]. </p>
+<p></p>
+<p>  O passo seguinte, junto com os problemas mencionados, será validar uma versão beta do Sistema Electras, considerando-se se ele realmente ajuda estudantes com os conceitos básicos do Eletromagnetismo ou não. Considerando os aspectos Físicos, nós estenderemos nosso sistema para a incorporação de simulacão e visualização do comportamento dinâmico de cargas. Finalmente, nós iremos ter futuramente sistemas implementados usando a plataforma Java (mais API Java 3D), como um meio de fornecer visualização colaborativa sobre a World Wide Web. </p>
+<p></p>
+<p>[13] Trowbridge, D., Sherwood, B., <a href="http://webassign.net/pasnew/em_field/emf.html" target="_blank">http://webassign.net/pasnew/em_field/emf.html</a>, (1998) ''<i>EM Field 6</i>'', July.</p>
+<p></p>
+<p>[14] Nelson, B., <a href="http://webassign.net/pasnew/electric_field_plotter/efp.html" target="_blank">http://webassign.net/pasnew/electric_field_plotter/efp.html</a>, (1996) ''<i>Electric Field Plotter</i>'', June.</p>
+<p></p>
+<p>[15] Pelletier, Y., <a href="http://www.scienceman.com/pgs/rev_ypelectric.html" target="_blank">http://www.scienceman.com/pgs/rev_ypelectric.html</a>, (1999) <i>''</i><i>YP Electric Field 1.0</i>'', October.</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">
+          <sup>*</sup>
+        </span>
+        <div> Autor Correspondente: Antônio Vanderlei dos Santos. Universidade Regional Integrada do Alto Uruguai e das Missões - URI. Av. Universidade das Missões, 464. Caixa Postal 204 - CEP:18802-470 Santo Ângelo - RS, Brasil. E-mail: </div>
+        <div>
+          <a href="mailto:%20vando@urisan.tche.br"> vando@urisan.tche.br</a>
+        </div>
+      </li>
+    </p>
+<p></p>
+<p><sup>1</sup> O campo elétrico é dado pela soma dos campos elétricos individuais produzidos por suas fontes. </p>
+<p></p>
+<p><sup>2</sup> Um corpo carregado é considerado como um carga pontual quando suas dimensões lineares são insignificantemente comparadas com as distâncias dos pontos nos quais a medida do campo é feita [Evdokimov, 1997]. </p>
+<p></p>
+<p><sup>3</sup> A unidade SI do campo elétrico é Newton/Coulomb (N/C). </p>
+<p></p>
+<p><sup>4</sup><i>Application Programming Interface</i> (Interface de Programacão de Aplicacões) </p>
+<p></p>
+<p>
+      
+        <sup>5</sup>
+      
+      <i> DF - Grau de Liberdade</i>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] Piaget, J. (1991) ''<i>Seis Estudos de Psicologia''. </i> Rio de Janeiro. Forense.</div></li>
+<li><div>[2] McCormick, B. H. et al. (1987) ''<i>Visualization in Scientific Computing</i>'', Computer Graphics, ACM, Volume 21,  # 6, pp. 1-14, November.</div></li>
+<li><div>[3] Brooks Jr., F. P. (1999) ''<i>What's Real About Virtual Reality</i>?'', IEEE Computer Graphics and Application,  Special Report, Vol. 19, No. 6, November/December, pp 16-27.</div></li>
+<li><div>[4] Barnes, M. (1996) ''<i>Virtual Reality and Simulation'', Proceedings of the 1996 Winter Simulation Conference</i>, pp 101-110.</div></li>
+<li><div>[5] Purcell, E. M., (1965) ''<i>Electricity and Magnetism</i>'', Volume 2, McGraw-Hill Book Company.</div></li>
+<li><div>[6] Tipler, P. (1996) ''<i>Física para Cientistas e Engenheiros, volume 3 - Eletricidade e Magnetismo</i>'', 3<sup>a</sup> ediçăo, LTC-Livros  Técnicos Científicos.</div></li>
+<li><div>[7] Kirner, C. (1996) ''<i>Sistemas de Realidade Virtual</i>'', V Escola Regional de Informática da SBC  Regional Sul, pp 72-100.</div></li>
+<li><div>[8] El-Khalili, N. H., Brodlie, K. W. (1998) ''<i>Architectural Design Issues For Web-Based Virtual Reality Training System</i>'', in Proceedings of the  1998 International Conference on Web-Based Modeling and Simulation, edited  by Paul A. Fishwick, David R. C. Hill and Roger Smith, Society for Computer  Simulation International, pp 153-158.</div></li>
+<li><div>[9] Kilgard, M. J. (1997) ''<i>Realizing OpenGL: two implementations of one architecture</i>'', Proceedings of the 1997  SIGGRAPH/Eurographics Workshop on Graphics Hardware, August, pp xx-yy.</div></li>
+<li><div>[10] Keller, P. R., Keller, M. M. (1993) ''<i>Visual Cues: Practical Data Visualization</i>'', IEEE Computer Society Press,  Los Alamitos, CA.</div></li>
+<li><div>[11] Foley, J.D., van Dam, A., Feiner, S. K., Heghes, J. F. (1997) ''<i>Computer Graphics - Principles and Practice, second edition in C</i>'', Addison-Wesley publish company.</div></li>
+<li><div>[12] Lima, C. R. U. (1999) ''<i>O Estado da Arte da Realidade Virtual</i>'', Revista Informática na  Educaçăo: Teoria &amp; Prática, PGIE - UFRGS, Porto Alegre,  abril.</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        
+          *
+        
+         Autor Correspondente: Antônio Vanderlei dos Santos. Universidade Regional Integrada do Alto Uruguai e das Missões - URI. Av. Universidade das Missões, 464. Caixa Postal 204 - CEP:18802-470 Santo Ângelo - RS, Brasil. E-mail: 
+        
+           vando@urisan.tche.br
+        
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>01 Dez 2006</li>
+<li>
+<strong>Data do Fascículo</strong><br>Jun 2002</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Aceito</strong><br>02 Maio 2002</li>
+<li>
+<strong>Recebido</strong><br>06 Mar 2002</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Antônio Vanderlei dos Santos </strong><br><div>
+          ,  Santo Ângelo,  
+          ,  
+        ,  Universidade Regional Integrada do Alto do Uruguai e das Missões,  Departamento de Ciências Exatas e da Terra ,  Brazil,  vando@urisan.tche.br</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Selan Rodrigues dos Santos </strong><br><div>
+          ,  Leeds,  
+        ,  University of Leeds,  The School of Computing ,  United Kingdom,  selan@comp.leeds.ac.uk</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Luciane Machado Fraga </strong><br><div>
+          ,  Santo Ângelo,  
+          ,  
+        ,  Universidade Regional Integrada do Alto do Uruguai e das Missões,  Departamento de Engenharias e Ciência da Computação ,  Brazil,  fraga@urisan.tche.br</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (12)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (3)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig21"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig22"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig23"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig24"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig31"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig32"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig41"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig42"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig43"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig44"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig45"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig51"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig21" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/4fd1e8651a6c16461cd319fc3c447933a751b3a5.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/4fd1e8651a6c16461cd319fc3c447933a751b3a5.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig22" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/4bb4d66767ff9e47832a327c1229aec34192fa39.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/4bb4d66767ff9e47832a327c1229aec34192fa39.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig23" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/6de03cdc3ac9a7af34051f1c4a9c8bbf25f2530a.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/6de03cdc3ac9a7af34051f1c4a9c8bbf25f2530a.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig24" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/225474bd8fe15a0a0a60bbb14bbf429506608adb.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/225474bd8fe15a0a0a60bbb14bbf429506608adb.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig31" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/43c115e5eac8bcacfefdda59b5ca6fec80a3cd9c.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/43c115e5eac8bcacfefdda59b5ca6fec80a3cd9c.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig32" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/86f532519596de40a1c61697c39cebadc5ab7181.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/86f532519596de40a1c61697c39cebadc5ab7181.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig41" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/23313c8f206b40894531223bd7e4051d0430014f.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/23313c8f206b40894531223bd7e4051d0430014f.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig42" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/b54d3470d9511faf534d62d4a2546365c2755703.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/b54d3470d9511faf534d62d4a2546365c2755703.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig43" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/5d9827a783269c921b7f9b694931224e62b6882f.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/5d9827a783269c921b7f9b694931224e62b6882f.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig44" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/06f4e586f5c4356a13855391cd14982c0cdbc9c0.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/06f4e586f5c4356a13855391cd14982c0cdbc9c0.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig45" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/4e0a7fc593dc1ab013b3de4ef9a4e2cd67b96b88.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/4e0a7fc593dc1ab013b3de4ef9a4e2cd67b96b88.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig51" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/7d8edfb79bc75a1be81fb1e113ff30d4b6d67a5d.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/7d8edfb79bc75a1be81fb1e113ff30d4b6d67a5d.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/afb7cd1771b92d1f37ca9527c1f447e2d13ac30e.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/afb7cd1771b92d1f37ca9527c1f447e2d13ac30e.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/f054e78ad6cfcd645c74689ee0dfa943030b97b4.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/f054e78ad6cfcd645c74689ee0dfa943030b97b4.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/fab05690014979456a6dc363ae9091996357fbc1.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/fab05690014979456a6dc363ae9091996357fbc1.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgcbdc3e007fb5119494dab4d9acc53f6b905b9aad" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/cbdc3e007fb5119494dab4d9acc53f6b905b9aad.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/cbdc3e007fb5119494dab4d9acc53f6b905b9aad.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgcbdc3e007fb5119494dab4d9acc53f6b905b9aad" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/cbdc3e007fb5119494dab4d9acc53f6b905b9aad.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/cbdc3e007fb5119494dab4d9acc53f6b905b9aad.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgaed26097ff6870570ed64e8193de540f302392d1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/aed26097ff6870570ed64e8193de540f302392d1.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/8Xdzs7hN7pBvysh8bQW6tXy/aed26097ff6870570ed64e8193de540f302392d1.gif"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Santos, Antônio Vanderlei dos, Santos, Selan Rodrigues dos e Fraga, Luciane MachadoSistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico. Revista Brasileira de Ensino de Física [online]. 2002, v. 24, n. 2 [Acessado CURRENTDATE] , pp. 185-195. Disponível em: &lt;https://doi.org/10.1590/S1806-11172002000200015&gt;. Epub 01 Dez 2006. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172002000200015.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico&#34; &#34;Santos, Antônio Vanderlei dos&#34; &#34;Santos, Selan Rodrigues dos&#34; &#34;Fraga, Luciane Machado&#34; &#34;2002&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico&#34; &#34;Santos, Antônio Vanderlei dos&#34; &#34;Santos, Selan Rodrigues dos&#34; &#34;Fraga, Luciane Machado&#34; &#34;2002&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/8Xdzs7hN7pBvysh8bQW6tXy/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172002000200015&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172002000200015" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172002000200015">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172002000200015" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172002000200015">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172002000200015"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172002000200015" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172002000200015">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172002000200015" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Sistema de Realidade Virtual para Simulação e Visualização de Cargas Pontuais Discretas e seu Campo Elétrico
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172002000200015">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

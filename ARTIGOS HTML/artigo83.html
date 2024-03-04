@@ -1,0 +1,2321 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Desenvolvimento de uma ferramenta para o ensino de física experimental a distância Desenvolvimento de uma ferramenta para o ensino de física experimental a distância </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Desenvolvimento de uma ferramenta para o ensino de física experimental a distância"/>
+<meta property="og:description" content="Apresentamos neste artigo dados sobre desenvolvimento de um sistema de instrumentação virtual..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Pessanha, Márlon Caetano Ramos">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_author" content="Cozendey, Sabrina Gomes">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de São Carlos">
+        
+        <meta name="citation_author" content="Souza, Marcelo de Oliveira">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual do Norte Fluminense">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="32"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="4503-1"></meta>
+    <meta name="citation_lastpage" content="4503-10"></meta>
+    <meta name="citation_doi" content="10.1590/S1806-11172010000400013"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Desenvolvimento de uma ferramenta para o ensino de física experimental a distância
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Apresentamos neste artigo dados sobre desenvolvimento de um sistema de instrumentação virtual que possibilita o controle e coleta de dados de experimentos através da internet, para o uso em atividades de ensino de física experimental a distância. O sistema é composto por um conjunto interativo de softwares e hardwares. Foram criados três tipos diferentes de softwares: Cliente, Servidor de Comunicação e Servidor de Controle. Estes softwares foram desenvolvidos com o uso das linguagens de programação Object Pascal e C++. Foram construídos circuitos eletrônicos de interface para a comunicação entre computador e experimento. Testes de comunicação e controle/coleta de dados foram realizados com a utilização de um experimento básico de física moderna."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2010-12"></meta>
+<meta name="citation_keywords" content="ensino a distância"></meta><meta name="citation_keywords" content="experimentos automatizados"></meta><meta name="citation_keywords" content="física experimental"></meta><meta name="citation_keywords" content="informática na educação"></meta><meta name="citation_keywords" content="instrumentação virtual"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2010.v32n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2010.v32n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172010000400013 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 32 
+                (4)
+            <span class="_separator"> • </span>Dez 2010</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172010000400013" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172010000400013</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172010000400013"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Desenvolvimento de uma ferramenta para o ensino de física experimental a distância<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Development a tool of experimental physics teaching at distance</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Márlon Caetano Ramos Pessanha </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  São Paulo,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Sabrina Gomes Cozendey </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  São Carlos,  
+          ,  São Paulo,  
+        ,  Universidade Federal de São Carlos,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Marcelo de Oliveira Souza </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>
+          ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Universidade Estadual do Norte Fluminense,  Laboratório de Ciências Físicas ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Apresentamos neste artigo dados sobre desenvolvimento de um sistema de instrumentação virtual que possibilita o controle e coleta de dados de experimentos através da internet, para o uso em atividades de ensino de física experimental a distância. O sistema é composto por um conjunto interativo de softwares e hardwares. Foram criados três tipos diferentes de softwares: Cliente, Servidor de Comunicação e Servidor de Controle. Estes softwares foram desenvolvidos com o uso das linguagens de programação Object Pascal e C++. Foram construídos circuitos eletrônicos de interface para a comunicação entre computador e experimento. Testes de comunicação e controle/coleta de dados foram realizados com a utilização de um experimento básico de física moderna.</p>
+<p>ensino a distância; experimentos automatizados; física experimental; informática na educação; instrumentação virtual</p>
+</div>
+<hr>
+<div>
+<p>We present in this paper the development of a system of virtual instrumentation that makes possible the control and collects of data of experiments by Internet, for the use in activities of experimental physics teaching. The system is composed by an interactive set of softwares and hardwares. Three different types of softwares had been created: Client, Communication server and Control Server. These softwares had been developed with the use of the programming languages Object Pascal and C++. Interface electronic circuits had been constructed for the communication between Computer and Experiment. Tests of communication and control/collect of data had been carried with the use of a basic experiment of modern physics.</p>
+<p>distance learning; automatized experiments; experimental physics; computer in education; virtual instrumentation</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>PRODUTOS E MATERIAIS DIDÁTICOS</b>
+    </p>
+<p></p>
+<p>
+      <b>Desenvolvimento de uma ferramenta para o ensino de física experimental a distância</b>
+    </p>
+<p></p>
+<p>
+      <b>Development a tool of experimental physics teaching at distance</b>
+    </p>
+<p></p>
+<p>Márlon Caetano Ramos PessanhaI, <span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        marlonpessanha@yahoo.com.br.
+      </span></span></span>; Sabrina Gomes Cozendey<sup><b>II</b></sup>; Marcelo de Oliveira Souza<sup><b>III</b></sup></p>
+<p></p>
+<p><sup>I</sup>Universidade de São Paulo, São Paulo, SP, Brasil </p>
+<p></p>
+<p><sup>II</sup>Universidade Federal de São Carlos, São Carlos, SP, Brasil </p>
+<p></p>
+<p><sup>III</sup>Laboratório de Ciências Físicas, Universidade Estadual do Norte Fluminense Darcy Ribeiro, Rio de Janeiro, RJ, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Apresentamos neste artigo dados sobre desenvolvimento de um sistema de instrumentação virtual que possibilita o controle e coleta de dados de experimentos através da internet, para o uso em atividades de ensino de física experimental a distância. O sistema é composto por um conjunto interativo de softwares e hardwares. Foram criados três tipos diferentes de softwares: Cliente, Servidor de Comunicação e Servidor de Controle. Estes softwares foram desenvolvidos com o uso das linguagens de programação Object Pascal e C++. Foram construídos circuitos eletrônicos de interface para a comunicação entre computador e experimento. Testes de comunicação e controle/coleta de dados foram realizados com a utilização de um experimento básico de física moderna.</p>
+<p></p>
+<p><b>Palavras-chave:</b> ensino a distância, experimentos automatizados, física experimental, informática na educação, instrumentação virtual.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>We present in this paper the development of a system of virtual instrumentation that makes possible the control and collects of data of experiments by Internet, for the use in activities of experimental physics teaching. The system is composed by an interactive set of softwares and hardwares. Three different types of softwares had been created: Client, Communication server and Control Server. These softwares had been developed with the use of the programming languages Object Pascal and C++. Interface electronic circuits had been constructed for the communication between Computer and Experiment. Tests of communication and control/collect of data had been carried with the use of a basic experiment of modern physics.</p>
+<p></p>
+<p><b>Keywords:</b> distance learning, automatized experiments, experimental physics, computer in education, virtual instrumentation.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>Segundo Moran [1] a educação a distância (EaD) pode ser definida como um processo de ensino-aprendizagem, mediado por tecnologias, onde professores e estudantes estão separados espacial e/ou temporalmente.</p>
+<p></p>
+<p>Neste processo, algum meio permite a interação entre estudantes, professores e materiais de estudo. Dentre os meios mais comuns, podem ser destacados as correspondências, a televisão, o rádio, e mais recentemente, os meios computacionais.</p>
+<p></p>
+<p>Alguns dos meios computacionais em destaque, que podem ser utilizados para transmissão/construção do conhecimento em EaD, são as mídias removíveis (disquete, cd-roms, dvd-rom, etc.) contendo apostilas e exercícios digitalizados, imagens e vídeos-aula, softwares diversos, e principalmente, a Internet.</p>
+<p></p>
+<p>A Internet passou a um lugar de destaque como importante ferramenta para a EaD, pois de forma facilitada é possível a transmissão de texto, vídeo, áudio, imagens, além de transmissões ao vivo de acontecimentos.</p>
+<p></p>
+<p>O uso da Internet na Educação a Distância vem se intensificando, tendo suas origens já há algumas décadas. Como exemplo, no Brasil, a Universidade de Brasília (UnB) já utilizava nos anos 80 a Internet em cursos de extensão universitária. [2].</p>
+<p></p>
+<p>
+      <b>1.1 Ensino experimental</b>
+    </p>
+<p></p>
+<p>Em cursos a distância que envolvam disciplinas científicas a utilização de experimentos didáticos é uma interessante prática pedagógica que pode ser considerada.</p>
+<p></p>
+<p>A experimentação é importante e de certa forma fundamental no ensino das ciências naturais. É uma oportunidade de visualização da ação dos conceitos abordados em aula, além de permitir ao estudante que conheça algumas das ferramentas utilizadas na prática científica.</p>
+<p></p>
+<p>Diferentes teorias da aprendizagem dão sustentação ao uso de experimentos como ferramenta para a aprendizagem. Com base na Teoria de Piaget [3], a abordagem experimental se mostra como ótima ferramenta auxiliar no processo de construção do conhecimento. A apresentação de novos conceitos aos estudantes gera o que em sua teoria denomina-se desequilíbrio, e após isto, com a realização de práticas experimentais, é oferecido ao estudante uma oportunidade de confronto entre o que foi construído mentalmente e o que é real, ocorrendo então um reajuste mental ou construção de um novo esquema mental.</p>
+<p></p>
+<p>Durante uma prática experimental é possível o acompanhamento simultâneo de vários estudantes. Desta forma, uma característica marcante da experimentação é a possibilidade de interação ente os diferentes indivíduos envolvidos no processo ensino-aprendizagem. Baseado na teoria de Vygotsky [4], a participação de grupos de estudantes no procedimento experimental, com a interação entre estudantes e entre estes e um professor, apresenta-se como um ponto positivo que auxilia no desenvolvimento cognitivo destes estudantes.</p>
+<p></p>
+<p>Experimentos que possuam relações com situações cotidianas, ou propriedades de elementos já conhecidas pelos estudantes, apresentam-se ainda como ótimas ferramentas de contextualização. Em outras palavras, a experimentação pode ser utilizada como ponte entre os conceitos ensinados e o que é real e presente no cotidiano dos estudantes.</p>
+<p></p>
+<p>Um último aspecto normalmente envolvido em uma prática experimental é a motivação. A teoria da aprendizagem de Ausubel [5] aponta a motivação dos estudantes como um colaborador da aprendizagem. A interação entre os estudantes e o experimento é algo que traz motivação para os estudantes, que têm a oportunidade de não serem apenas ouvintes de explanações, como ocorre na pedagogia tradicional, mas de serem indivíduos participativos no processo ensino-aprendizagem.</p>
+<p></p>
+<p>Ressalta-se que, para que a prática experimental a distância ocorra é necessário a utilização de tecnologias que permitam a interação entre estudantes e procedimento experimental a distância.</p>
+<p></p>
+<p>
+      <b>1.2 A educação a distância no Brasil</b>
+    </p>
+<p></p>
+<p>No Brasil foi autorizado por lei e regulamentado por decreto presidencial, o Ensino a distância para diferentes níveis [6, 7].</p>
+<p></p>
+<p>Desta forma, instituições de ensino puderam oferecer também cursos EaD em nível básico (Ensino Fundamental e Médio), nível técnico, de educação especial, de educação de jovens e adultos, e de nível superior.</p>
+<p></p>
+<p>O Brasil já conta com diversos cursos a distância em nível superior. Entre os cursos oferecidos no país, alguns podem ser destacados pelo seu tradicional uso da experimentação, como os cursos de formação de professores de física, química, matemática e ciências. Tais cursos possuem geralmente em suas grades curriculares, disciplinas experimentais de física e química.</p>
+<p></p>
+<p>Segundo levantamento efetuado a partir do Sistema Integrado de Informações da Educação Superior (SiedSup) do Ministério da Educação do Brasil, foi possível verificar a quantidade de cursos de física, química, matemática e ciências, na modalidade de EaD, que se encontram autorizados a funcionar. Em 2008 eram 76 cursos com no mínimo 26808 vagas [8].</p>
+<p></p>
+<p>Muitas disciplinas experimentais presentes nas grades curriculares destes cursos ocorrem em aulas presenciais. Tecnologias que permitam que estas aulas ocorram de forma não presencial, a distância, são interessantes, pois permitem uma maior facilidade para os estudantes e professores destes cursos.</p>
+<p></p>
+<p>Considerando a importância da experimentação no processo ensino-aprendizagem, principalmente no ensino de ciências, e ainda mais importante na formação de professores, fica evidente a necessidade de dispositivos tecnológicos que permitam esta prática pedagógica a distância.</p>
+<p></p>
+<p>Considerando ainda o uso da Internet como o meio tecnológico que permita a comunicação entre os estudantes e professores devem ser utilizados dispositivos que permitam uma prática experimental à distância, através da Internet.</p>
+<p></p>
+<p>O presente artigo apresenta o desenvolvimento de um sistema de instrumentação virtual que possibilita a prática experimental a distância através da internet.</p>
+<p></p>
+<p>
+      <b>2. Metodologia</b>
+    </p>
+<p></p>
+<p>O sistema proposto é composto por um conjunto de elementos de software e hardware. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a> apresenta o esquema de funcionamento e as interações do sistema.</p>
+<div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Aos experimentos são conectados sensores e componentes de controle. Estes sensores e componentes eletrônicos são variados, e de acordo com a necessidade de cada experimento.</p>
+<p></p>
+<p>Estes componentes se conectam a um circuito de interface (placa de aquisição e controle de dados), que permite a comunicação entre experimento e computador. Foi considerado o uso da placa de interface USB R-Control30. [9].</p>
+<p></p>
+<p>Em paralelo, uma câmera coleta imagens do experimento, enviando estes dados ao computador através de uma porta de comunicação USB.</p>
+<p></p>
+<p>Neste computador operam três softwares servidores, um responsável pelo gerenciamento das imagens (Servidor Encoder), outro pelo gerenciamento de controle e coleta de dados (Servidor de Controle) e um último pelo gerenciamento de conexões de softwares clientes (Servidor de Comunicação).</p>
+<p></p>
+<p>O Software Cliente se conecta aos Servidores de Comunicação e Encoder, recebendo e enviando dados. Os usuários do sistema utilizam o Software Cliente, sendo possível a conexão simultânea de vários destes usuários. Através deste software é possível acompanhar e controlar o procedimento experimental, e interagir com outros usuários que estejam conectados ao sistema.</p>
+<p></p>
+<p>Os softwares Servidor de Comunicação, Servidor de Controle, e Cliente foram desenvolvidos na pesquisa.</p>
+<p></p>
+<p>O Software Encoder utilizado foi o Microsoft Windows Media Encoder 9.0 [10], de licença gratuita para versões originais do Windows XP e Vista.</p>
+<p></p>
+<p>
+      <b>2.1 Desenvolvimento dos Softwares</b>
+    </p>
+<p></p>
+<p>Entre os softwares que compõem o sistema, apenas o Servidor Encoder não foi desenvolvido durante a pesquisa. Todos os demais softwares foram elaborados com a utilização dos ambientes de desenvolvimento (IDE) Delphi e C++Builder [11][12].</p>
+<p></p>
+<p>O IDE Delphi foi utilizado no desenvolvimento dos softwares Cliente e Servidor de Comunicação; enquanto o IDE C++Builder foi utilizado para o desenvolvimento do software Servidor de Controle.</p>
+<p></p>
+<p>No desenvolvimento dos softwares, foram implementadas diversas funções, como a comunicação entre os softwares por protocolo TCP/IP; funções que permitissem a adaptabilidade e o gerenciamento de procedimentos experimentais e de controle, etc. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet01"><span class="sci-ico-fileTable"></span>Tabela 1</a> apresenta algumas das funções implementadas em cada software.</p>
+<p></p>
+<p>
+      <div class="row table" id="t01">
+<a name="t01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+        
+      <br>
+</div>
+</div>
+    </p>
+<p></p>
+<p>Foram implementadas ainda, para todos os três softwares, a função de carregamento de esquemas de cores do software, carregamento automático de configurações iniciais, e acesso à seção de ajuda de cada software.</p>
+<p></p>
+<p>
+      <b>2.2 Hardware</b>
+    </p>
+<p></p>
+<p>Para a comunicação através da porta USB foi considerada a utilização de um circuito de Interface comercial, a Placa R-Control30 da Rogercom. [9].</p>
+<p></p>
+<p>Uma foto desta placa de interface é apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a>.</p>
+<div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Esta placa possui diversas funções de controle e coleta de dados. Para o Sistema de Instrumentação Virtual, foram utilizadas as funções de Conversão analógico-digital (A/D) de 4 canais e Conversão digital-analógico (D/A) de 1 canal.</p>
+<p></p>
+<p>O conversor A/D foi utilizado para a leitura de até quatro sensores de experimentos. Já o conversor D/A foi utilizado no controle experimental.</p>
+<p></p>
+<p>Foi elaborado ainda, um circuito auxiliar de controle com o objetivo de converter o sinal de saída do canal D/A em sinais de controle.</p>
+<p></p>
+<p>O circuito auxiliar de controle (CAC-USB) possui como componente eletrônico principal o Driver LM3914. Este componente possui dez saídas analógicas que podem ser ligadas ou desligadas, de acordo com a diferença de potencial que é aplicada em dois pinos do componente [13].</p>
+<p></p>
+<p>Desta forma, a saída do conversor D/A da placa R-Control30 foi conectada ao circuito auxiliar de controle, e assim, de acordo com a diferença de potencial fornecida pelo conversor D/A, foi possível ligar uma das saídas do Driver LM3914.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3</a> apresenta o esquema eletrônico do circuito auxiliar de controle.</p>
+<div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>2.3 Experimento para teste</b>
+    </p>
+<p></p>
+<p>Foram construídos diversos experimentos de física, com o intuito de realizar testes de funcionamento do sistema de instrumentação virtual desenvolvido.</p>
+<p></p>
+<p>Como exemplo, um dos experimentos tratou dos conceitos físicos de absorção e reflexão da luz por materiais claros e escuros.</p>
+<p></p>
+<p>Para isto, em uma caixa foram colocadas duas placas metálicas idênticas, mas pintadas por tintas de cores diferentes, uma pintada de preto e outra de branco. Uma lâmpada fluorescente de 9 Watts, de baixa radiação térmica, foi colocada em frente às placas de forma que emitisse luz branca sobre estas.</p>
+<p></p>
+<p>Atrás das placas foram colocados sensores térmicos (termistores), possibilitando verificar a absorção da energia luminosa, que provoca o aumento da temperatura da placa. À frente de cada placa foram colocados ainda sensores de luminosidade LDR (Light Dependent Resistor), com o objetivo de verificar a intensidade de radiação luminosa refletida por cada placa.</p>
+<p></p>
+<p>Estes sensores são resistências variáveis em função das grandezas físicas que verificam (luminosidade e temperatura).</p>
+<p></p>
+<p>As <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figs. 4</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>5</a> apresentam, respectivamente, o esquema de montagem e uma foto deste experimento.</p>
+<div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Um circuito auxiliar (C-E1), com seu esquema eletrônico representado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>, foi utilizado para coletar valores analógicos de tensão elétrica em cada um dos sensores. A tensão elétrica está relacionada às medições efetuadas nos sensores. Cada um dos circuitos auxiliares (C-E1) se conectava à placa de aquisição de dados através de um dos canais de conversão A/D.</p>
+<div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Após a montagem do experimento, os sensores de temperatura foram calibrados. Para isto, foi tomado como referência os dados técnicos fornecidos pelo fabricante [14].</p>
+<p></p>
+<p>Para as medições de temperatura, foram utilizados dois termistores NTC (Negative Temperature Coefficient). Estes sensores possuem seu valor de resistência inversamente proporcional à temperatura.</p>
+<p></p>
+<p>Esta relação obedece a uma expressão, que é apresentada em Eq. (1)</p>
+<p></p>
+<p>
+      <div class="row fig" id="0f732ced25923033c153bb53b73cc46894ce7347">
+<a name="0f732ced25923033c153bb53b73cc46894ce7347"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg0f732ced25923033c153bb53b73cc46894ce7347"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/0f732ced25923033c153bb53b73cc46894ce7347.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>R<sub>T</sub></i> é a resistência elétrica do Termistor; <i>T</i> é a temperatura em °C que está sendo verificada pelo termistor. Já 25 ºC (resistência do termistor à 25 °C) e <i>B</i> são valores constantes informados pelo fabricante. Os termistores utilizados possuem os valores 10000 para <i>R</i>25 ºC e 3965 para <i>B</i>.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Fig. 7</a> apresenta um gráfico da relação <i>RT</i> x <i>T</i>.</p>
+<div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Conforme pode ser observado, o comportamento deste sensor não é linear, tendo para o intervalo entre 0 °C e 100 °C um coeficiente de correlação <i>R</i><sup>2</sup> igual a 0,7387.</p>
+<p></p>
+<p>Desta forma, é necessária que seja utilizada alguma alternativa que permita a linearização. O circuito auxiliar C-E1 possui também a função de linearização das medidas efetuadas nos sensores. O circuito, conforme pôde ser observado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Fig. 6</a>, trata-se de uma associação em série entre o sensor, neste caso o termistor, e um resistor de 10 kΩ. É efetuada a leitura da tensão elétrica atuante no resistor.</p>
+<p></p>
+<p>Com a aplicação da lei de Ohm, chegaremos à seguinte equação</p>
+<p></p>
+<p>
+      <div class="row fig" id="da1d9c867cb5726c170a041f89c9039fcf7eb17c">
+<a name="da1d9c867cb5726c170a041f89c9039fcf7eb17c"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgda1d9c867cb5726c170a041f89c9039fcf7eb17c"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/da1d9c867cb5726c170a041f89c9039fcf7eb17c.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Substituindo o valor de <i>R<sub>T</sub></i>, descrito pela Eq. (1), na Eq. (2), é possível traçar o gráfico para a relação entre <i>U</i><sub>R</sub> 10 kΩ e <i>T</i> (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a>).</p>
+<div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Durante a coleta de dados, a grandeza física medida é a tensão elétrica atuante no resistor; e conforme e possível observar na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a>, o gráfico mostra-se mais linear se comparado ao apresentado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Figura 7</a>. O coeficiente de correlação para este gráfico (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a>) é <i>R<sup>2</sup></i> igual a 0,9479.</p>
+<p></p>
+<p>Considerando apenas o intervalo de medida de temperatura entre 0 °C e 40 °C, o gráfico possui um com portamento bem próximo de uma linha reta, conforme observa-se na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Fig. 9</a>.</p>
+<div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para este intervalo, o coeficiente de correlação se aproxima muito da linha reta, possuindo <i>R<sup>2</sup></i> igual a 0,9996. Devido a aproximação a um comportamento linear, a tensão elétrica obtida no resistor, em função da temperatura verificada no termistor, pode ser descrita pela Eq. (3)</p>
+<p></p>
+<p>
+      <div class="row fig" id="18fad3443fb86d4e89adf043f1dfd97ecb7400bf">
+<a name="18fad3443fb86d4e89adf043f1dfd97ecb7400bf"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg18fad3443fb86d4e89adf043f1dfd97ecb7400bf"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/18fad3443fb86d4e89adf043f1dfd97ecb7400bf.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Para o experimento proposto, o intervalo entre 0 °C e 40 ºC é satisfatório, podendo-se tomar como referência a equação Eq. (3).</p>
+<p></p>
+<p>Já em relação aos sensores de luminosidade, os LDRs, devido a algumas características da fonte de luz utilizada e dos próprios sensores, é feita a medição de um valor relativo ao máximo de intensidade de luz que o LDR consegue verificar.</p>
+<p></p>
+<p>De acordo com as informações de fabricantes [15, 16], para o tipo de sensor LDR utilizado (CdS - sulfeto de cádmio - 550 nm), o fenômeno fotoelétrico ocorre com maior facilidade quando se incide sobre o sensor uma radiação eletromagnética na faixa de 550 nm. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Fig. 10</a>, que se segue, apresenta um gráfico da resposta relativa do tipo de sensor LDR utilizado, em relação ao comprimento de onda da radiação ao qual o sensor é exposto.</p>
+<div class="row fig" id="f10">
+<a name="f10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O gráfico se refere a um mínimo de intensidade da radiação de comprimento de onda de 550 nm, necessária para que a resposta relativa do sensor seja o máximo (100%). No gráfico, é apresentada ainda, a resposta relativa que o sensor apresenta para radiações em outras faixas de comprimento de onda, que possuem a mesma intensidade da radiação de 550 nm.</p>
+<p></p>
+<p> Quando o sensor apresenta uma resposta relativa igual a 100%, sua resistência elétrica está bem próxima de zero, e logo, uma resposta relativa igual a 0% indica que o sensor apresenta uma resistência elétrica alta.</p>
+<p></p>
+<p> Cabe ressaltar que, é possível, com radiações luminosas de comprimento de onda diferentes de 550 nm, alcan»car uma resposta próxima ou igual a 100%, mas para isto, será necessária uma intensidade maior da radiação. Esta intensidade diz respeito a densidade de energia luminosa que incide sobre o sensor, ou seja, energia/área do sensor.</p>
+<p></p>
+<p>Como a fonte luminosa utilizada no experimento emite radiação luminosa em diferentes comprimentos de onda, torna-se difícil a coleta de informações com estes sensores, a não ser a resposta relativa do sensor.</p>
+<p></p>
+<p> Cada sensor LDR é conectado a um circuito auxiliar C-E1, e a tensão elétrica medida é proporcional à resposta relativa do sensor, em que para uma medição igual a 0 V se tem uma resposta relativa igual a 0%, enquanto para uma medida igual a 5 V ter-se-á uma resposta relativa igual a 100%.</p>
+<p></p>
+<p>Sensores do tipo LDR possuem um tempo de resposta que varia em cerca de 40 ms à 50 ms [17]. Sendo assim, o sensor LDR só permite a percepção de variações de luminosidade que ocorram em intervalos de tempo de no mínimo 40 ms. Para variações de luminosidade com tempos inferiores, é possível somente identificar valores médios desta variação.</p>
+<p></p>
+<p> O experimento utiliza uma lâmpada fluorescente, a qual possui uma variação periódica da intensidade da luminosidade com freqüência correspondente à, no mínimo, o dobro da freqüência de oscilação da rede elétrica. Sendo assim, o período desta variação é inferior ao tempo de reaçãao do sensor LDR, não possibilitando a percepção desta, e somente um valor médio desta variação.</p>
+<p></p>
+<p>
+      <b>2.4. Testes</b>
+    </p>
+<p></p>
+<p> Para que se pudesse efetuar uma avaliação do funcionamento do Sistema de Instrumentação Virtual desenvolvido foram realizados dois tipos de testes. Em um primeiro tipo se buscou verificar alguns aspectos relacionados a transmissão de dados durante a comunicação dos softwares; e em outro tipo de teste buscou-se verificar o uso do sistema desenvolvido na realização de procedimentos experimentais e de controle.</p>
+<p></p>
+<p>
+      <b>2.4.1. Testes de transmissão de dados</b>
+    </p>
+<p></p>
+<p> Nestes testes foram verificados os tempos de transferência de mensagens entre o software cliente e software servidor, e o tempo de atraso no recebimento de imagens de vídeo.</p>
+<p></p>
+<p> Para que fosse possível a medição do tempo entre o envio e recebimento de mensagens, um software do tipo cliente foi modificado, gerando assim uma nova versão deste software, a qual foi denominada "Software Cliente-Timer".</p>
+<p></p>
+<p> Visualmente, esta versão é idêntica ao software Cliente. A modificação consistiu na adição de mais uma função no software. Para isto, durante o seu desenvolvimento foi implementado um contador de tempo.</p>
+<p></p>
+<p>Qualquer mensagem enviada por um software cliente é direcionada ao servidor, que por sua vez, redireciona para todos os clientes conectados, inclusive para aquele que enviou a mensagem.</p>
+<p></p>
+<p> Sendo assim, a função implementada registra o momento em que o usuário envia a mensagem e o momento em que o usuário recebe de volta esta mesma mensagem. O intervalo de tempo entre estes momentos é armazenado em um arquivo, no mesmo diretório em que se encontra o executável do software.</p>
+<p></p>
+<p>Este software foi utilizado no lugar do software cliente, por apenas um dos usuários do sistema, durante os testes com experimentos, os quais serão descritos a frente.</p>
+<p></p>
+<p>Já para o registro do tempo de atraso no recebimento de imagens de vídeo foi desenvolvido um software, também através do IDE Delphi, o qual possui um cronômetro virtual, e o acesso µas imagens transmitidas pelo servidor. Quando o cronômetro virtual do software está em funcionamento, é feita uma captura da tela do software a cada 30 s, e salva em um arquivo de imagem.</p>
+<p></p>
+<p> Durante os testes, o cronômetro virtual do software foi disparado no mesmo momento que um cronômetro real, que tem seu visor filmado pela câmera de captura de imagens. Desta forma, nos arquivos que sâo criados periodicamente, há informações do tempo dos dois cronômetros. A diferença de tempo entre estes dois valores de tempo é o atraso no recebimento das imagens.</p>
+<p></p>
+<p> A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf11"><span class="sci-ico-fileFigure"></span>Fig. 11</a> apresenta um esquema de como isto ocorre. Através da Fig. 12, é apresentada uma tela capturada deste software, durante sua execução.</p>
+<div class="row fig" id="f11">
+<a name="f11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Este teste foi realizado durante 1 h, com a coleta do tempo de atraso ocorrendo a cada 30 s.</p>
+<p></p>
+<p>
+      <b>2.4.2. Teste de controle e coleta de dados do experimento</b>
+    </p>
+<p></p>
+<p> Foi realizado ainda um teste das funções de controle e coleta de dados a distância através do sistema desenvolvido. O teste consistiu em uma sessão de 5 h ininterrupta onde o sistema esteve em operação, em que se buscou, observar possíveis falhas de funcionamento do sistema, verificar características dos softwares no que diz respeito a qualidade destes, e a viabilidade de uso como ferramenta pedagógica.</p>
+<p></p>
+<p>No decorrer destas 5 h, os dados experimentais coletados (medidas de luminosidade re°etida e temperatura das placas) foram enviados a cada 20 s aos clientes conectados ao sistema. Além disto, comandos de controle (ligar ou desligar a fonte luminosa) foram enviados a cada 20 min ao servidor por um dos clientes.</p>
+<p></p>
+<p>
+      <b>3. Resultados e discussão</b>
+    </p>
+<p></p>
+<p>
+      <b>3.1. Softwares desenvolvidos</b>
+    </p>
+<p></p>
+<p> A seguir, são apresentados resultados do desenvolvimento gráfico e de funções dos softwares.</p>
+<p></p>
+<p> Uma tela capturada do Software Cliente é apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf13"><span class="sci-ico-fileFigure"></span>Fig. 13</a>.</p>
+<div class="row fig" id="f13">
+<a name="f13"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O software possui diversas funções, destacando a possibilidade de interação com o experimento e com os outros usuários conectados.</p>
+<p></p>
+<p> O usuário do software poderá visualizar em tempo real o procedimento experimental, controlar o experimento através de linhas de comando (comandos enviados como texto) ou através de Botões. O software possibilita a configuração de até 20 botões para facilitar o controle do experimento.</p>
+<p></p>
+<p>Por se tratar de uma ferramenta para aplicação no ensino, foi implementada uma função para o acesso a conteúdos teóricos, que devem abordar os conceitos envolvidos no procedimento experimental. Uma tela da seção de conteúdos teóricos para um dos experimentos construídos, é apresentada através da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf14"><span class="sci-ico-fileFigure"></span>Fig. 14</a>.</p>
+<div class="row fig" id="f14">
+<a name="f14"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> O software Servidor de Comunicação possui uma tela mais simples que as dos demais softwares desenvolvidos. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf15"><span class="sci-ico-fileFigure"></span>Fig. 15</a> apresenta a tela capturada do Software Servidor de Comunicação.</p>
+<div class="row fig" id="f15">
+<a name="f15"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Entre as funções implementadas no desenvolvimento deste software, destacam-se a possibilidade de ações para com os usuários (desconexão e mensagem privativa) e a possibilidade de configuração de mensagens automáticas de conexão.</p>
+<p></p>
+<p> Um último software desenvolvido, o Servidor de Controle, possui uma quantidade significativa de funções implementadas. Uma tela capturada deste software é apresentada através da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf16"><span class="sci-ico-fileFigure"></span>Fig. 16</a>.</p>
+<div class="row fig" id="f16">
+<a name="f16"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf16"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Entre as funções destacam-se as de seleção de usuário que poderá controlar o experimento, as de configuração de comandos de controle do procedimento experimental, e as de configuração de canais A/D.</p>
+<p></p>
+<p>A seleção do usuário que poderia efetuar o controle possibilita um maior gerenciamento da aula experimental a distância. Como o sistema possibilita a conexão simultânea de diversos estudantes, é necessário que se escolha um destes para efetuar o controle do procedimento, podendo esta escolha ser modificada a qualquer momento. Mesmo que um estudante não possa no momento controlar o experimento, ele ainda acompanharia o procedimento, com o acesso às imagens em tempo real e aos dados coletados no experimento.</p>
+<p></p>
+<p>Tanto a configuração de comandos de controle, como a configuração de canais A/D torna o software adaptável a diversos experimentos. Esta é uma característica importante do sistema. Considerando o uso do sistema em um curso a distância, será necessária uma adaptabilidade aos diferentes procedimentos experimentais que deverão ser realizados. Neste software é possível a configuração do tipo de medida que está sendo realizada em cada canal A/D, e ainda, os comandos de controle específicos para o procedimento experimental. Toda a configuração pode ser salva em arquivo, podendo ser restaurada quando o mesmo procedimento experimental for realizado novamente.</p>
+<p></p>
+<p>
+      <b>3.2. Testes de transmissão de dados</b>
+    </p>
+<p></p>
+<p> Os testes de transmissão de dados no formato de texto (mensagens), foram realizados durantes os testes de funcionamento com os experimentos.</p>
+<p></p>
+<p>Destacando apenas o experimento apresentado no presente artigo, foi realizada uma sessão de teste, com 5 h de duração com a medição do intervalo de tempo no momento que era enviado um comando de controle, o que ocorria a cada 20 min. Logo, foram feitas 15 medições do intervalo entre envio e recebimento de mensagens, para cada sessão de teste.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf17"><span class="sci-ico-fileFigure"></span>Fig. 17</a> apresenta os intervalos, em milisegundos, verificados durante este teste.</p>
+<div class="row fig" id="f17">
+<a name="f17"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf17"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>É possível observar que a média geral obtida para o intervalo entre envio e recebimento de resposta, foi de aproximadamente 0,1 s.</p>
+<p></p>
+<p>Este intervalo de tempo é satisfatório, e permite que mensagens sejam trocadas quase que instantaneamente. Levando-se em conta ainda a alta velocidade na coleta de dados dos experimentos, pode-se afirmar que tais procedimentos terão um acompanhamento em tempo real.</p>
+<p></p>
+<p> Já durante o teste de transferência de imagens, foi verificado, conforme pode ser observado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf18"><span class="sci-ico-fileFigure"></span>Figura 18</a>, um tempo de atraso constante.</p>
+<div class="row fig" id="f18">
+<a name="f18"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf18"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O tempo de atraso no recebimento das imagens foi constante em 7 s. É um tempo alto, mas que, no entanto, dependendo do experimento utilizado, não compromete o acompanhamento deste.</p>
+<p></p>
+<p>Para experimentos mais dinâmicos, como alguns de mecânica, o sistema não se mostrou apropriado. Ressalta-se, no entanto, que esta é uma limitação da tecnologia de transmissão de imagens através da internet que se tem atualmente, que tende a evoluir µa medida que ocorre também a evolução das bandas de internet.</p>
+<p></p>
+<p>
+      <b>3.3. Testes com o uso do experimento</b>
+    </p>
+<p></p>
+<p> Neste tópico são apresentados alguns dos resultados obtidos durante o teste do sistema com o uso do experimento apresentado neste artigo.</p>
+<p></p>
+<p>Durante os testes com os dispositivos de controle, foi possível, com o uso do Sistema de Instrumentação Virtual desenvolvido, o acesso ao controle e coleta de dados do experimento. O sistema mostrou-se eficiente no controle e no acompanhamento do procedimento. Foram obtidos informações relativas a temperatura de absorção e luminosidade re°etida pelas duas placas metálicas presentes no experimento. As <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf19"><span class="sci-ico-fileFigure"></span>Figs. 19</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf20"><span class="sci-ico-fileFigure"></span>20</a> apresentam os gráficos obtidos a partir dos valores coletados neste experimento, ao longo das 5 h de execução do procedimento experimental.</p>
+<div class="row fig" id="f19">
+<a name="f19"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf19"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="f20">
+<a name="f20"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf20"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Durante a realização do teste a lâmpada presente no experimento era ligada ou desligada em intervalos de 20 min. A luminosidade re°etida nos momentos em que a lâmpada encontrava-se ligada ou desligada é perceptível através da Fig. 19. Estes momentos coincidem com a elevação e o declínio da temperatura das placas, que podem ser verificados na Fig. 20.</p>
+<p></p>
+<p>Ressalta-se, entretanto, que as variações da intensidade de luminosidade re°etida da lâmpada não são perceptíveis, devido µas limitações do sensor utilizado, conforme apresentado no tópico 2.3. Devido o elevado tempo de atraso do sensor LDR é possível apenas o acompanhamento de valores médios destas variações.</p>
+<p></p>
+<p> No entanto, o experimento permite diferenciar nitidamente, a capacidade de re°exão e absorção da luz, por placas claras e escuras. Desta forma, é possível concluir a adequação do experimento proposto para a discussão conceitual sobre o fenômeno envolvido. </p>
+<p></p>
+<p>O Sistema de Instrumentação Virtual desenvolvido permitiu o acesso em tempo real aos dados coletados no experimento, além do controle do experimento, onde foi possível ligar ou desligar a fonte luminosa do experimento.</p>
+<p></p>
+<p>
+      <b>4. Conclusão</b>
+    </p>
+<p></p>
+<p> Muitas disciplinas experimentais presentes nas grades curriculares dos cursos a distância ocorrem em aulas presenciais.</p>
+<p></p>
+<p>Tecnologias que permitam que estas aulas ocorram de forma não presencial a distância são necessárias, por permitirem uma maior facilidade e dinamismo tanto para os estudantes como para os professores destes cursos.</p>
+<p></p>
+<p>A ferramenta desenvolvida permitiria que estas aulas experimentais pudessem ocorrer a distância, através da internet, possibilitando o controle e acompanhamento simultâneo de um procedimento experimental por até 50 estudantes. Esta quantidade de 50 estudantes está relacionada a uma limitação do software encoder, que permite a conexão de no máximo 50 usuários.</p>
+<p></p>
+<p> Com base na teoria de Vygotsky, a elaboração de conteúdos teóricos, acessíveis através do software Cliente e específicos para cada experimento, permitiria um desenvolvimento real do estudante; e a partir da interação com outros usuários e tutores seria possível também um desenvolvimento potencial.</p>
+<p></p>
+<p> A visualização dos experimentos através de imagens reais permite que os estudantes possam relacionar mais facilmente aquilo que está sendo visualizado, com o conteúdo teórico que lhe foi apresentado.</p>
+<p></p>
+<p> Considerando ainda, uma quantidade cada vez maior de cursos na modalidade a distância em que a experimentação se faz necessária, com base nos resultados obtidos, e considerando ainda os variados aspectos positivos do uso de experimentos e novas tecnologias no ensino, é possível concluir que a ferramenta desenvolvida possui um alto grau de aplicabilidade.</p>
+<p></p>
+<p>Recebido em 15/10/2009; Aceito em 25/5/2010; Publicado em 28/2/2011</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:marlonpessanha@yahoo.com.br">marlonpessanha@yahoo.com.br</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] J.M.    Moran, O que é Educação a Distância. Disponível    em http://www.eca.usp.br/prof/moran/dist.htm    Acesso em 1/10/2008.</div></li>
+<li><div>[2] M.E.C.    de Andrade, Processo de Ensino-Aprendizagem via Internet. Tese de Mestrado em    Engenharia de Produção, Universidade Federal de Santa Catarina,    Florianópolis (2001).</div></li>
+<li><div>[3] N.    Piletti, Psicologia Educacional. (Ática, Săo Paulo, 1999).</div></li>
+<li><div>[4] L.    Vygotsky, Pensamento e Linguagem (Martins Fontes, Săo Paulo, 1998).</div></li>
+<li><div>[5] D.    Ausubel, J. Novak e H. Hanesian, Psicologia Educacional (Interamericana, Rio    de Janeiro, 1980).</div></li>
+<li><div>[6] Brasil, Lei n± 9.394, de 20 de dezembro de 1996. Estabelece as diretrizes e bases da educação nacional (1996).</div></li>
+<li><div>[7] Brasil, Decreto n± 5.622, de 19 de dezembro de 2005, Presidência da República, Casa Civil, Subchefia de Assuntos Jurídicos (2005).</div></li>
+<li><div>[8] SIEDSUP/MEC,    Cadastro das Instituições de Ensino Superior: Busca de Curso,    Disponível em http://www.educacaosuperior.inep.gov.br/funcional/busca    curso.stm Acesso em 8/10/2008.</div></li>
+<li><div>[9] Rogercom.com,    Manual da Placa R-CONTROL 30, Disponível em http://www.rogercom.com/Produtos/PlacaRcontrol30/Manual-RCONTROL30.pdf    Acesso em 9/9/2007.</div></li>
+<li><div>[10] Microsoft, Windows Media Encoder 9 Series, Disponível em http://www.microsoft.com/windows/windowsmedia/pt/9series/encoder/default.aspx Acesso em 9/9/2007.</div></li>
+<li><div>[11] I.C.    Boratti, Programação Orientada a Objetos Usando Delphi (Visual    Books, Florianópolis, 2004).</div></li>
+<li><div>[12] A.D.    Bueno, Programação Orientada a Objeto com C++ (Novatec, Săo Paulo,    2003).</div></li>
+<li><div>[13] National    Semiconductor, Data Sheet LM3914: Dot/Bar Display Driver. Disponível    em http://www.national.com/green/pdf/LM3914VNOPB.pdf    Acesso em 15/7/2008.</div></li>
+<li><div>[14] Maxim, Application Note 817 - Using Thermistors in Temperature Tracking Power Supplies. Disponível em http://pdfserv.maximic.com/en/an/AN817.pdf Acesso em 10/7/2008.</div></li>
+<li><div>[15] Silonex,    Standard Optoelectronic Components. Disponível em http://www1.silonex.com/datasheets/specs/images/pdf/103259.pdf    Acesso em 10/7/2008, (2007a).</div></li>
+<li><div>[16] Silonex,    TO-5 Photocells. Disponível em http://www1.silonex.com/optoelectronics/photocells.html    Acesso em 10/7/2008 (2007b).</div></li>
+<li><div>[17] Dick    Smith Electronics, Data Sheet Z 4801: Cadmium Sulphide Light Dependent Resistor.    Disponível em http://www.dse.com.au/isroot/dse/support/Z4801.pdf    Acesso em 20/12/2009.</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        marlonpessanha@yahoo.com.br.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>04 Abr 2011</li>
+<li>
+<strong>Data do Fascículo</strong><br>Dez 2010</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>15 Out 2009</li>
+<li>
+<strong>Aceito</strong><br>25 Maio 2010</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Márlon Caetano Ramos Pessanha </strong><br><div>
+          ,  São Paulo,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Sabrina Gomes Cozendey </strong><br><div>
+          ,  São Carlos,  
+          ,  São Paulo,  
+        ,  Universidade Federal de São Carlos,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Marcelo de Oliveira Souza </strong><br><div>
+          ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Universidade Estadual do Norte Fluminense,  Laboratório de Ciências Físicas ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (19)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (1)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf17"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf18"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf19"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf20"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div></div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/63e459ec322597e4bb0acfff3996aa713bb362d4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/63e459ec322597e4bb0acfff3996aa713bb362d4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/269d4c352960e9600102c590e8e948970ee107ed.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/269d4c352960e9600102c590e8e948970ee107ed.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/f2efc9dfda392b3695a7c5dea85bf877fb16eefc.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/f2efc9dfda392b3695a7c5dea85bf877fb16eefc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/d4763b6e44cd3ccceeca464c705bbbe1d48cc9de.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/d4763b6e44cd3ccceeca464c705bbbe1d48cc9de.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/623196892721d054c4d9d2be4af98adf7da67b60.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/623196892721d054c4d9d2be4af98adf7da67b60.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/80844cde3ef447fc4b3829c10b423340ca5fe1da.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/80844cde3ef447fc4b3829c10b423340ca5fe1da.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/f89938adeef315d2f70431346b87e7add25b3893.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/f89938adeef315d2f70431346b87e7add25b3893.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/b092e5863109a84262730b6e0a17af2b19b76a1e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/b092e5863109a84262730b6e0a17af2b19b76a1e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/f06371defa2f422eb3bf5bb063d6b50f9fe5758d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/f06371defa2f422eb3bf5bb063d6b50f9fe5758d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/a8570d2da24cf0f642bb00f58d69fd9214b2edb8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/a8570d2da24cf0f642bb00f58d69fd9214b2edb8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/504faf5b2da0c08b302f10b3551c5e6f14abe7f0.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/504faf5b2da0c08b302f10b3551c5e6f14abe7f0.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/41f35b83d9614f993a4394c55229851be9c4bac1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/41f35b83d9614f993a4394c55229851be9c4bac1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/bbbd1764f91c2614ca927b548cdf2745f3d01fb8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/bbbd1764f91c2614ca927b548cdf2745f3d01fb8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/851fcf6e078550c6ee66b63e7f60f354d69eff9c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/851fcf6e078550c6ee66b63e7f60f354d69eff9c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/429d65e107ad537e212d73d93cbd1eabf94a3c31.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/429d65e107ad537e212d73d93cbd1eabf94a3c31.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf17" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/572393b23e9c79b535375cf6e20ba7ac21b5a3e1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/572393b23e9c79b535375cf6e20ba7ac21b5a3e1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf18" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/009092f9f5c94cb5655d890f2cf627dadb7a77f3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/009092f9f5c94cb5655d890f2cf627dadb7a77f3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf19" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/c84bd7db105b0684bacc76920b45aa5818f595d9.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/c84bd7db105b0684bacc76920b45aa5818f595d9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf20" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/ea3649c32ab316c76cbf3e1a9ca829abc1b8ca10.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/ea3649c32ab316c76cbf3e1a9ca829abc1b8ca10.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/e1291bb18d784b435c831bb35cf87f86b3d199ee.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/e1291bb18d784b435c831bb35cf87f86b3d199ee.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg0f732ced25923033c153bb53b73cc46894ce7347" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/0f732ced25923033c153bb53b73cc46894ce7347.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/0f732ced25923033c153bb53b73cc46894ce7347.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgda1d9c867cb5726c170a041f89c9039fcf7eb17c" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/da1d9c867cb5726c170a041f89c9039fcf7eb17c.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/da1d9c867cb5726c170a041f89c9039fcf7eb17c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg18fad3443fb86d4e89adf043f1dfd97ecb7400bf" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/18fad3443fb86d4e89adf043f1dfd97ecb7400bf.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/18fad3443fb86d4e89adf043f1dfd97ecb7400bf.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Pessanha, Márlon Caetano Ramos, Cozendey, Sabrina Gomes e Souza, Marcelo de OliveiraDesenvolvimento de uma ferramenta para o ensino de física experimental a distância. Revista Brasileira de Ensino de Física [online]. 2010, v. 32, n. 4 [Acessado CURRENTDATE] , pp. 4503-1-4503-10. Disponível em: &lt;https://doi.org/10.1590/S1806-11172010000400013&gt;. Epub 04 Abr 2011. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172010000400013.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Desenvolvimento de uma ferramenta para o ensino de física experimental a distância&#34; &#34;Pessanha, Márlon Caetano Ramos&#34; &#34;Cozendey, Sabrina Gomes&#34; &#34;Souza, Marcelo de Oliveira&#34; &#34;2010&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Desenvolvimento de uma ferramenta para o ensino de física experimental a distância&#34; &#34;Pessanha, Márlon Caetano Ramos&#34; &#34;Cozendey, Sabrina Gomes&#34; &#34;Souza, Marcelo de Oliveira&#34; &#34;2010&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/SVH8kNNj5XhwbDNmBXBsDTz/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172010000400013&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172010000400013" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172010000400013">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172010000400013" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172010000400013">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172010000400013"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172010000400013" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172010000400013">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172010000400013" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Desenvolvimento de uma ferramenta para o ensino de física experimental a distância
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172010000400013">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

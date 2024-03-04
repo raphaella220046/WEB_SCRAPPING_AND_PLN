@@ -1,0 +1,3379 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos"/>
+<meta property="og:description" content="Neste trabalho apresentamos a construção de um dispositivo para a determinação da impedância..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Santos, E.B.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Juiz de Fora">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-5298-8207">
+        <meta name="citation_author" content="Cezário Júnior, M.A.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Juiz de Fora">
+        
+        <meta name="citation_author" content="Araújo, D.S.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Juiz de Fora">
+        
+        <meta name="citation_author" content="Abreu, T.M.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Juiz de Fora">
+        
+        <meta name="citation_author" content="Dias, R.A.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Juiz de Fora">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="44"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2021-0323"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Neste trabalho apresentamos a construção de um dispositivo para a determinação da impedância elétrica utilizando sistemas embarcados. Especificamente utilizamos dois Arduinos, ambos do tipo Nano, e um Conversor Digital Analógico (DAC). O primeiro Arduino, juntamente com o DAC, tem a função de gerar de um sinal harmônico que permita a variação de frequência na faixa de 2 Hz até 120 Hz. O segundo Arduino é responsável pela realização das medidas de tensão elétrica, corrente elétrica e a impedância elétrica do sistema de interesse. Além disso, as atividades experimentais tiveram uma maior ênfase em aplicar nessa plataforma o que os alunos aprenderam durante o curso de Física Prática 3 até o dado momento de forma teórica, com esse conhecimento, deu-se a construção do experimento. Os métodos aplicados se mostraram eficientes para a construção e aquisição de dados obtidos durante as medições da impedância."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2022-04-04"></meta>
+<meta name="citation_keywords" content="Arduino"></meta><meta name="citation_keywords" content="microscopia de impedância elétrica"></meta><meta name="citation_keywords" content="conversor digital analógico"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2022.v44/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2022.v44/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172022000100714 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 44 <span class="_separator"> • </span>2022</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2021-0323" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2021-0323</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0323"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 deed.en"></span>Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Construction of a device for obtaining electrical impedance systems using Arduinos</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> E.B. Santos </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong><div class="corresp">* Endereço de correspondência: <a href="mailto:evandro@evandrobs.com">evandro@evandrobs.com</a> </div>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.<a href="http://orcid.org/0000-0001-5298-8207" class="btnContribLinks orcid">http://orcid.org/0000-0001-5298-8207</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> M.A. Cezário Júnior</span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> D.S. Araújo </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> T.M. Abreu </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</ul></span><span class="dropdown"><a id="contribGroupTutor5" class="dropdown-toggle" data-toggle="dropdown"><span> R.A. Dias </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor5">
+<strong></strong>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Neste trabalho apresentamos a construção de um dispositivo para a determinação da impedância elétrica utilizando sistemas embarcados. Especificamente utilizamos dois Arduinos, ambos do tipo Nano, e um Conversor Digital Analógico (DAC). O primeiro Arduino, juntamente com o DAC, tem a função de gerar de um sinal harmônico que permita a variação de frequência na faixa de 2 Hz até 120 Hz. O segundo Arduino é responsável pela realização das medidas de tensão elétrica, corrente elétrica e a impedância elétrica do sistema de interesse. Além disso, as atividades experimentais tiveram uma maior ênfase em aplicar nessa plataforma o que os alunos aprenderam durante o curso de Física Prática 3 até o dado momento de forma teórica, com esse conhecimento, deu-se a construção do experimento. Os métodos aplicados se mostraram eficientes para a construção e aquisição de dados obtidos durante as medições da impedância.</p>
+<p><strong>Palavras-chave:</strong><br>Arduino; microscopia de impedância elétrica; conversor digital analógico</p>
+</div>
+<hr>
+<div>
+<p>In this work we present the construction of a device for determining electrical impedance using embedded systems. Specifically we use two Arduinos, both of Nano Arduino, and an Digital Analog Converter (DAC). The first Arduino, together with the DAC, has the function of generating a harmonic signal that allows the frequency varies in the range of 2 Hz up to 120 Hz. The second Arduino is responsible for performing measurements of electrical voltage, electrical current and electrical impedance of the system in interest. In addition, the experimental activities had a greater emphasis on applying at this platform all learnings that the students reach during the course until the now, that were taught in theory classes. Using this knowledge, the experiment was built. The applied methods proved to be efficient for the construction and acquisition of data obtained during the impedance measurements.</p>
+<p><strong>Keywords</strong><br>Arduino; impedance; analog digital converter</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      
+        <h2>1.1. Impedância elétrica</h2>
+        <p>Na maioria dos programas básicos do Ensino de Física, médio, técnico ou superior, a impedância elétrica tem papel fundamental em assuntos que envolvam circuitos elétricos. Além do Ensino de Física, a impedância elétrica tem aplicações industriais e técnicas e, ainda, em medicina [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] R.G. Rosa, W. Rutzen, L. Madeira, A.M. Ascoli, F.L. Dexheimer Neto, J.G. Maccari, R.P. Oliveira e C. Teixeira, Revista Brasileira de Terapia Intensiva 27, 406 (2015).</span></span></span>, <span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] E.P. Britto e E.T. Mesquita, Rev SOCERJ. 21, 178 (2008).</span></span></span>]. Há, ainda, muitos sistemas complexos podem ser modelados com base em circuitos elétricos [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] J.E.H. Silva, H.S. Bernardino, H.J.C. Barbosa, A.B. Vieira, L.C.D. Campos e I.L. Oliveira, em: IEEE Congress on Evolutionary Computation (CEC) (Glasgow, 2020).</span></span></span>].</p>
+        <p>A Impedância Elétrica(Z) pode ser resumida como a carga total, ou a capacidade de resistir a um fluxo de cargas elétricas, em um circuito elétrico, o que inclui, resistores(R), capacitores(C) e indutores(L). A parcela da impedância associada aos capacitores e indutores é conhecido por reatância capacitiva e reatância indutiva (<math display="inline"><msub><mi>χ</mi><mi>C</mi></msub></math> e <math display="inline"><msub><mi>χ</mi><mi>L</mi></msub></math>), respectivamente para cada um desses componentes. De forma geral, é possível escrever uma equação [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] H.M. Nussenzveig, Curso de Fisica Basica: Eletromagnetism o (Edgard Blucher, São Paulo, 2015), v. 3.</span></span></span>] simples para a impedância(Z)</p>
+        <p>
+          <div class="row formula" id="eS1_E1">
+<a name="S1_E1"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(1)</span>
+            <math display="block">
+              <mrow>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mi>i</mi>
+                    <mi>V</mi>
+                  </mfrac>
+                </mrow>
+                <mo>.</mo>
+              </mrow>
+            </math>
+          </div></div>
+</div>
+        </p>
+        <p>Em que <i>i</i> é a corrente e <i>V</i> é a diferença de potencial(ddp) medidas em um dispositivo no circuito elétrico. A impedância, por ser composta de capacitores e indutores, tem sua descrição no plano dos números complexos, dependendo, portanto, de uma frequência(<math display="inline"><mi>ω</mi></math>) de operação, além de uma fase <math display="inline"><mi>φ</mi></math>, entre <i>i</i> e <i>V</i>.</p>
+        <p>
+          <div class="row formula" id="eS1_E2">
+<a name="S1_E2"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(2)</span>
+            <math display="block">
+              <mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <msub>
+                    <mi>i</mi>
+                    <mn>0</mn>
+                  </msub>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mi>cos</mi>
+                    <mo>⁡</mo>
+                    <mrow>
+                      <mo stretchy="false">(</mo>
+                      <mrow>
+                        <mrow>
+                          <msub>
+                            <mi>w</mi>
+                            <mn>0</mn>
+                          </msub>
+                          <mo>⁢</mo>
+                          <mi>t</mi>
+                        </mrow>
+                        <mo>+</mo>
+                        <mi>φ</mi>
+                      </mrow>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                  </mrow>
+                </mrow>
+              </mrow>
+            </math>
+          </div></div>
+</div>
+        </p>
+        <p>Os primeiros experimentos que levaram a Lei da Indução, em 1831, surgiram quando Michael Faraday(1791–1867), montou um solenóide com aproximadamente 70 m de fio de cobre [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] H.M. Nussenzveig, Curso de Fisica Basica: Eletromagnetism o (Edgard Blucher, São Paulo, 2015), v. 3.</span></span></span>], ligado a um galvanômetro. Em sua conclusão, nesse e em experimentos seguintes, percebeu que havia um efeito que induzia uma corrente, em sentido oposto, quando medida em outro circuito ou uma corrente, também em sentido oposto, quando aproximava um ímã permanente do solenóide. Essa corrente teria valores compatíveis com a fem (força eletromotriz)</p>
+        <p>
+          <div class="row formula" id="eS1_E3">
+<a name="S1_E3"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(3)</span>
+            <math display="block">
+              <mrow>
+                <mrow>
+                  <mi>ε</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>-</mo>
+                    <mfrac>
+                      <mrow>
+                        <mi>d</mi>
+                        <mo>⁢</mo>
+                        <msub>
+                          <mi>ϕ</mi>
+                          <mi>B</mi>
+                        </msub>
+                      </mrow>
+                      <mrow>
+                        <mi>d</mi>
+                        <mo>⁢</mo>
+                        <mi>t</mi>
+                      </mrow>
+                    </mfrac>
+                  </mrow>
+                </mrow>
+                <mo>,</mo>
+              </mrow>
+            </math>
+          </div></div>
+</div>
+        </p>
+        <p>em que o sinal negativo é atribuído à Lei de Lenz. Considerando a Lei de Faraday-Lenz, é possível concluir que uma corrente i percorrendo um solenóide, induzirá em um segundo solenóide paralelo, uma fem de</p>
+        <p>
+          <div class="row formula" id="eS1_E4">
+<a name="S1_E4"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(4)</span>
+            <math display="block">
+              <mrow>
+                <mrow>
+                  <mi>ε</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>-</mo>
+                    <mrow>
+                      <mi>M</mi>
+                      <mo>⁢</mo>
+                      <mfrac>
+                        <mrow>
+                          <mi>d</mi>
+                          <mo>⁢</mo>
+                          <mi>i</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>d</mi>
+                          <mo>⁢</mo>
+                          <mi>t</mi>
+                        </mrow>
+                      </mfrac>
+                    </mrow>
+                  </mrow>
+                </mrow>
+                <mo>,</mo>
+              </mrow>
+            </math>
+          </div></div>
+</div>
+        </p>
+        <p>em que <i>M</i> é um fator de proporcionalidade, conhecido como indutância mútua [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] H.M. Nussenzveig, Curso de Fisica Basica: Eletromagnetism o (Edgard Blucher, São Paulo, 2015), v. 3.</span></span></span>]. Além da indutância mútua, esse mesmo solenóide é capaz de induzir uma fem em si mesmo, que pode ser escrita como</p>
+        <p>
+          <div class="row formula" id="eS1_E5">
+<a name="S1_E5"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(5)</span>
+            <math display="block">
+              <mrow>
+                <mrow>
+                  <mi>ε</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>-</mo>
+                    <mrow>
+                      <mi>L</mi>
+                      <mo>⁢</mo>
+                      <mfrac>
+                        <mrow>
+                          <mi>d</mi>
+                          <mo>⁢</mo>
+                          <mi>i</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>d</mi>
+                          <mo>⁢</mo>
+                          <mi>t</mi>
+                        </mrow>
+                      </mfrac>
+                    </mrow>
+                  </mrow>
+                </mrow>
+                <mo>.</mo>
+              </mrow>
+            </math>
+          </div></div>
+</div>
+        </p>
+        <p><i>L</i> é conhecido como auto-indutância [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] H.M. Nussenzveig, Curso de Fisica Basica: Eletromagnetism o (Edgard Blucher, São Paulo, 2015), v. 3.</span></span></span>].</p>
+        <p>Portanto, é de se esperar que, quando nos deparamos com circuitos elétricos não-ideais, o efeito de auto-indutância afete os valores de <i>i</i> e <i>V</i> no circuito elétrico.</p>
+      
+      
+        <h2>1.2. Arduino</h2>
+        <p>Quando decidimos montar um aparato para a medição da impedância, procuramos por tecnologias que fossem acessíveis no custo, bibliotecas e literaturas. Também há a necessidade de que a utilização seja segura, uma vez que os alunos deverão ter acesso ao material, em sua maioria colocando a “mão na massa”. A escollha foi, então, pela plataforma Arduino.</p>
+        <p>O Arduino é uma plataforma de prototipagem eletrônica de <i>hardware</i> livre, composta, em um única placa, de um micro controlador, uma linguagem de programação com características e estruturas semelhantes a C/C++ e é utilizado um ambiente de desenvolvimento integrado (IDE, <i>integrated development environment</i>) específico onde é desenvolvida toda codificação [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] https://www.Arduino.cc/en/software </span><br><a href="https://www.Arduino.cc/en/software" target="_blank">https://www.Arduino.cc/en/software...
+            </a></span></span>]. É uma ferramenta acessível, de baixo custo, e fácil de ser usada por principiantes e profissionais. O caráter <i>open source</i> da plataforma possibilitou que se espalhasse rapidamente e levou ao surgimento de novas placas genéricas similares de baixo custo [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>[6] https://www.Arduino.cc/en/Main/Policy </span><br><a href="https://www.Arduino.cc/en/Main/Policy" target="_blank">https://www.Arduino.cc/en/Main/Policy...
+            </a></span></span>, <span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>[7] https://blog.Arduino.cc/2013/07/10/send-in-the-clones/ </span><br><a href="https://blog.Arduino.cc/2013/07/10/send-in-the-clones/" target="_blank">https://blog.Arduino.cc/2013/07/10/send-...
+            </a></span></span>].</p>
+        <p>Uma típica placa Arduino é composta por um controlador, algumas linhas de entrada e saída (E/S) digital e analógica, além de uma interface serial ou USB, para ser ligado ao computador hospedeiro, que é usado para programá-lo em tempo real. As placas mais básicas, não possuem qualquer recurso de rede, porém é comum combinar um ou mais Arduinos usando extensões apropriadas chamadas de <i>Shields</i>.</p>
+        <p>Construir um programa no Arduino é muito simples. Basta conectá-lo ao computador usando a conexão USB (<i>Universal Serial Bus</i>) e utilizar o IDE para escrever o programa. Uma vez escrito o código, deve-se compilar e transferí-lo automaticamente para a placa. No próprio IDE, deve ser selecionado versões de placas e/ou controladores para a correta instalação do programa. Depois de instalado o programa, o microcontrolador pode ser usado de forma independente, sendo possível utilizá-lo para diversas funções: desde o controle de um robô e utensílios eletrônicos domésticos até a iluminação de uma casa, o ajuste da temperatura do ar condicionado, a realização de medidas experimentais, entre outras inúmeras possibilidades.</p>
+        <p>Seguindo essa linha, em que as placas são utilizadas de maneiras independentes, foram realizados alguns trabalhos acadêmicos que visam a aplicação ds placas Arduino em áreas distintas, passando por experimentos simples como medições de valores de <i>g</i> [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>[8] H. Cordova e A.C. Tort, Revista Brasileira de Ensino de Física 38, e2308 (2016).</span></span></span>], propriedades de um oscilador amortecido [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>[9] A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física 33, 1702 (2011).</span></span></span>], transferência de calor [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>[9] A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física 33, 1702 (2011).</span></span></span>], propriedades de gases [<span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>[10] J.M. Cardoso e M. Zannin, Revista Brasileira de Ensino de Física 41, e20190028 (2019).</span></span></span>] e aplicações um pouco mais complexas como uso de acelerômetros [<span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>[11] F. Rocha, G. Maranghello e M. Lucchese, Caderno Brasileiro de Ensino de Física 31, 98 (2013).</span></span></span>] ou medidas de bioimpedância [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>[12] S. Corbellini e A. Vallan, em: IEEE International Symposium on Medical Measurements and Applications (MeMeA) (Lisboa, 2014).</span></span></span>].</p>
+        <p>Diversos modelos, principalmente para muitas aplicações, de placas Arduino podem ser encontradas [<span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>[13] https://www.arduino.cc/en/main/boards </span><br><a href="https://www.arduino.cc/en/main/boards" target="_blank">https://www.arduino.cc/en/main/boards...
+            </a></span></span>]. Em geral, diferem em vários aspectos e propriedades, podendo ser variações em quantidade de memória, quantidade de portas (pinos) de entrada e saída, tamanho e forma física, alimentação externa, entre outras propriedades. O Arduino é basicamente uma placa com um microcontrolador Atmel AVR de 8 bits, entre os quais podemos citar alguns ATmega8, ATmega168, ATmega328 e o ATmega1280 [<span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>[13] https://www.arduino.cc/en/main/boards </span><br><a href="https://www.arduino.cc/en/main/boards" target="_blank">https://www.arduino.cc/en/main/boards...
+            </a></span></span>]. Porém, outros chips podem ser usados, respeitando os padrões de <i>hardware</i> livre, por placas genéricas.</p>
+        <p>Nesse trabalho utilizamos o modelo Nano, composto por um microcontrolador ATmega328. Nele há cerca de trinta pontos de conexão entre portas de alimentação, digitais e analógicas. Esse modelo é composto também por duas camadas de circuito impresso(PCB, <i>Printed Circuit Board</i>).</p>
+        <p>O IDE do Arduino é um programa, escrito em Java, que pode ser utilizado em vários sistemas operacionais, como Linux, Windows e Mac. Deriva dos projetos <i>Processing</i> e <i>Wiring</i>. Com isso é possível utilizar estruturas de programação simples que facilitam o aprendizado, inclusive de iniciantes, sendo essa uma das principais propostas iniciais do projeto Arduino.</p>
+        <p>Visualmente o IDE faz o realce de sintaxe, ou seja, as cores de letras, números e demais caracteres utilizados na codificação podem sofrer mudança de tonalidade e cor. Facilita a verificação de erros e leitura do código. Como o IDE é, de certa forma, integrado à placa, o programa escrito pode ser compilado e carregado à placa em apenas um único comando ou clique. Essa proposta de IDE integrada elimina as fases exclusivas de compilação, que em ambientes mais tradicionais podem ser compostas de linhas extensas de código.</p>
+        <div class="row fig" id="S1_F1">
+<a name="S1_F1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS1_F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/c8badb953a1a389818ae5787a4b2c92912ee3ee5.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 1</strong><br>
+            Ambiente de Desenvolvimento Integrado do Arduino. É apresentado realce de cores para comandos distintos e comentários.
+          <br>
+</div>
+</div>
+        <p>A biblioteca “<i>Wiring</i>” permite que o programa possa ser escrito em C/C++. As operações estruturadas de entrada e saída (IO), se tornam mais fáceis e intuitivas necessitando apenas das estruturas abaixo e exemplificadas na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS1_F1"><span class="sci-ico-fileFigure"></span>1</a>.</p>
+        <ul id="S1.I1" list-type="bullet">
+<li>
+            <p><i>setup()</i>: nessa seção as configurações iniciais do programa são definidas, como por exemplo os valores iniciais de uma variável, se uma porta será utilizada como entrada ou saída, mensagens para o usuário, etc. e,</p>
+          </li>
+<li>
+            <p><i>loop()</i>: onde são escritas e repetidas as estruturas de comandos de forma estruturada e sequencial. É realizado até que algum critério de parada seja enviado pelo programa e executado pelo Arduino.</p>
+          </li>
+</ul>
+        <p>Não é preciso ser especialista em linguagens C/C++ para programá-lo. Além da grande quantidade de exemplos que se encontra disponível na internet ou no próprio IDE. Pode-se começar utilizando a estrutura básica do Arduino, composta de três partes: declaração de variáveis, definição de parâmetros para as portas e bloco de comandos. Abaixo o código de programação para o clássico <i>blink</i>, programação para o acendimento intermitente de um LED.</p>
+        
+          <h3>1.2.1. Exemplo</h3>
+          <p>
+            <div class="row fig" id="ebc788f4a6993d1c4ae9a27807e8f12f80b745e6">
+<a name="ebc788f4a6993d1c4ae9a27807e8f12f80b745e6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgebc788f4a6993d1c4ae9a27807e8f12f80b745e6"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/4131bc324788e2a2e676b85ace7e2ffe4601bff1.jpg"></div></a></div>
+</div>
+          </p>
+        
+      
+    
+      <h1 class="articleSectionTitle">2. Desenvolvimento Experimental</h1>
+      
+        <h2>2.1. Material</h2>
+        <p>Para a prototipação desse projeto foram utilizados componentes de baixo custo, fácil localização em lojas físicas e virtuais. Estas características são importantes, para que o usuário possa reproduzir com facilidade. Abaixo detalhamos componentes e seus custos, após uma rápida pesquisa na rede, atualizado em agosto de 2020.</p>
+        <ul id="S2.I1" list-type="bullet">
+<li>
+            <p>dois Arduinos modelo Nano <math display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mn>30,00</mn></mrow></mrow></math> cada;</p>
+          </li>
+<li>
+            <p>quatro protoboards <math display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mn>5,00</mn></mrow></mrow></math> cada;</p>
+          </li>
+<li>
+            <p>um conversor DAC (digital analógico MCP4725) <math display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mn>18,00</mn></mrow></mrow></math> cada;</p>
+          </li>
+<li>
+            <p>um potenciômetro <math display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mn>3,00</mn></mrow></mrow></math> cada;</p>
+          </li>
+<li>
+            <p>dois resistores <math display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mn>0,10</mn></mrow></mrow></math> cada;</p>
+          </li>
+<li>
+            <p>um capacitor <math display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mn>0,20</mn></mrow></mrow></math> cada e;</p>
+          </li>
+<li>
+            <p>uma bateria externa de 9V <math display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mn>10,00</mn></mrow></mrow></math> cada.</p>
+          </li>
+</ul>
+        <p>A bateria externa de 9V pode ser substituída por uma fonte externa, com tensão entre 9V e 12V, com conexão miniusb. O custo aproximado é, portanto, da ordem de <math display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mn>110,00</mn></mrow></mrow></math>. Pode ser considerado, de fato, um custo baixo para a nossa proposta e todo o aprendizado que a montagem e prototipação oferecem.</p>
+      
+      
+        <h2>2.2. Montagem e prototipação do circuito</h2>
+        <p>A montagem elétrica está diagramada na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a>. Os Arduinos são conectados ao circuito, de forma que o primeiro funcione como o emissor do sinal elétrico e segundo como o responsável por realizar as medições no circuito. As conexões do circuito foram feitas através de cabos machos e fêmeas, tipo <i>jumpers</i>. O potenciômetro tem a função de regular a frequência. Os dois resistores são ligados em série, sendo que um dos resistores é conectado em paralelo com o capacitor e o DAC, as Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F3"><span class="sci-ico-fileFigure"></span>3</a> representam a esquematização da montagem do circuito.</p>
+        <p>O Arduino Nano é composto por 14 pinos digitais, que podem ser usados tanto para entrada como para saída de dados. É importante ficar atento que esses pinos trabalham com 5 V, e podem fornecer ou receber apenas 40 mA de corrente máxima em cada um deles. Por isso deve-se tomar cuidado para não se sobrecarregar esses pinos e assim danificar a placa. O conversor digital analógico MCP4725 permite que se envie, ao partir do microcontrolador, sinais digitais que serão transformados pelo módulo em sinais analógicos.</p>
+        <div class="row fig" id="S2_F2">
+<a name="S2_F2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/20c72cd967b4659c1011d72454885c3e488516e8.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 2</strong><br>
+            Esquema mostrando os Arduinos e <i>protoboards</i> ligados a uma fonte(bateria de 9V).
+          <br>
+</div>
+</div>
+        <div class="row fig" id="S2_F3">
+<a name="S2_F3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/514e4dcbe1afcdfb3346715929fed4cb542b561a.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 3</strong><br>
+            Fotografia da montagem experimental esquematizada anteriormente, com os Arduinos e <i>protoboards</i> ligados a uma fonte externa e entrada de dados USB em conexão à IDE.
+          <br>
+</div>
+</div>
+        <p>Para ajudar os alunos a entenderem esse circuito elétrico, as Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F4"><span class="sci-ico-fileFigure"></span>4</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F5"><span class="sci-ico-fileFigure"></span>5</a>. O entendimento da montagem de circuitos elétricos é uma dificuldade grande e conhecida de alunos que estão iniciando o estudo de circuitos elétricos.</p>
+        <div class="row fig" id="S2_F4">
+<a name="S2_F4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/a3e4aebbcd8bc8564d0c47de5d0abce2001574c4.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 4</strong><br>
+            Esquema do circuito completo do circuito elétrico envolvido no projeto, de forma simplificada.
+          <br>
+</div>
+</div>
+        <div class="row fig" id="S2_F5">
+<a name="S2_F5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/930e6266d6f4a05e127f10346af098656b8531d7.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 5</strong><br>
+            Esquema do circuito completo do circuito elétrico envolvido no projeto, de forma ampliada.
+          <br>
+</div>
+</div>
+      
+    
+      <h1 class="articleSectionTitle">3. Resultados</h1>
+      <p>O primeiro Arduino, no qual é ligado o conversor DAC, produz um sinal tipo harmônico (Apêndice A). Esse sinal é lido no segundo Arduino e transmitido passando primeiro pelo Resistor 1 e, em seguida, pelo conjunto Resistor 2-Capacitor. A tensão é medida entre os terminais do Resistor 1 e a tensão total fornecida.</p>
+      <p>Na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a>, o primeiro resistor em série funciona como um divisor de tensão com a entrada da malha composta pelo Resistor 2 e pelo capacitor, de modo que <math display="inline"><mrow><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. A segunda parcela da tensão que é fornecida pelo DAC é</p>
+      <p>
+        <div class="row formula" id="eS3_E6">
+<a name="S3_E6"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(6)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <msub>
+                    <mi>V</mi>
+                    <mi>Z</mi>
+                  </msub>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mi>I</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>em que <math display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> é a impedância do conjunto Resistor-Capacitor. Obrigatoriamente, <math display="inline"><mrow><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>V</mi><mi>Z</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Como a corrente que passa por todo esse conjunto é a mesma que passa no primeiro resistor, podemos escrever</p>
+      <p>
+        <div class="row formula" id="eS3_E7">
+<a name="S3_E7"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(7)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <msub>
+                    <mi>V</mi>
+                    <mi>Z</mi>
+                  </msub>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>R</mi>
+                      </msub>
+                      <mo>⁢</mo>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>ω</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                    </mrow>
+                    <mi>R</mi>
+                  </mfrac>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>E, portanto,</p>
+      <p>
+        <div class="row formula" id="eS3_E8">
+<a name="S3_E8"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(8)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>R</mi>
+                  <mo>⁢</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>Z</mi>
+                      </msub>
+                      <mo>⁢</mo>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>ω</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>R</mi>
+                      </msub>
+                      <mo>⁢</mo>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>ω</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Ou, ainda,</p>
+      <p>
+        <div class="row formula" id="eS3_E9">
+<a name="S3_E9"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(9)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>R</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo>[</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <msub>
+                            <mi>V</mi>
+                            <mi>T</mi>
+                          </msub>
+                          <mo>⁢</mo>
+                          <mrow>
+                            <mo stretchy="false">(</mo>
+                            <mi>ω</mi>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                        </mrow>
+                        <mrow>
+                          <msub>
+                            <mi>V</mi>
+                            <mi>R</mi>
+                          </msub>
+                          <mo>⁢</mo>
+                          <mrow>
+                            <mo stretchy="false">(</mo>
+                            <mi>ω</mi>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                        </mrow>
+                      </mfrac>
+                      <mo>-</mo>
+                      <mn>1</mn>
+                    </mrow>
+                    <mo>]</mo>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>A medida da impedância é realizada indiretamente ao medir <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+      <p>Quando analisamos os valores de corrente <math display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> e diferença de potencial <math display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, identificamos uma defasagem entre eles. Há uma relação em que</p>
+      <p>
+        <div class="row formula" id="eS3_E10">
+<a name="S3_E10"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(10)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>I</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo>,</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mfrac>
+                    <msub>
+                      <mi>V</mi>
+                      <mn>0</mn>
+                    </msub>
+                    <mrow>
+                      <mo stretchy="false">|</mo>
+                      <mi>Z</mi>
+                      <mo stretchy="false">|</mo>
+                    </mrow>
+                  </mfrac>
+                  <mo>⁢</mo>
+                  <msup>
+                    <mi>e</mi>
+                    <mrow>
+                      <mo>-</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>⁢</mo>
+                        <mi>ϕ</mi>
+                        <mo>⁢</mo>
+                        <mrow>
+                          <mo stretchy="false">(</mo>
+                          <mi>ω</mi>
+                          <mo>,</mo>
+                          <mi>t</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </mrow>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <div class="row fig" id="S3_F6">
+<a name="S3_F6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/ad76c7bbb7c135c852edb1876752ad972a83a68d.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 6</strong><br>
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>28.9</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="S3_F7">
+<a name="S3_F7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/1c1b35d91d5f868fffc29f016ec4d529e2ce118c.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 7</strong><br>
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>32.2</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        <br>
+</div>
+</div>
+      <p>Logo, o valor máximo de <math display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> será</p>
+      <p>
+        <div class="row formula" id="eS3_E11">
+<a name="S3_E11"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(11)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <msub>
+                    <mi>I</mi>
+                    <mrow>
+                      <mi>m</mi>
+                      <mo>⁢</mo>
+                      <mi>a</mi>
+                      <mo>⁢</mo>
+                      <mi>x</mi>
+                    </mrow>
+                  </msub>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mfrac>
+                    <msub>
+                      <mi>V</mi>
+                      <mn>0</mn>
+                    </msub>
+                    <mrow>
+                      <mo stretchy="false">|</mo>
+                      <mi>Z</mi>
+                      <mo stretchy="false">|</mo>
+                    </mrow>
+                  </mfrac>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mi>cos</mi>
+                    <mo>⁡</mo>
+                    <mi>ϕ</mi>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Tal ângulo <math display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, encontrado, tem valor, nesse experimento,</p>
+      <p>
+        <div class="row formula" id="eS3_E12">
+<a name="S3_E12"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(12)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>ϕ</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mo>-</mo>
+                  <mrow>
+                    <msup>
+                      <mi>tan</mi>
+                      <mrow>
+                        <mo>-</mo>
+                        <mn>1</mn>
+                      </mrow>
+                    </msup>
+                    <mo>⁡</mo>
+                    <mrow>
+                      <mo>[</mo>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>R</mi>
+                              <mn>2</mn>
+                              <mn>2</mn>
+                            </msubsup>
+                            <mo>⁢</mo>
+                            <mi>ω</mi>
+                            <mo>⁢</mo>
+                            <mi>C</mi>
+                          </mrow>
+                          <mrow>
+                            <mrow>
+                              <msup>
+                                <mi>ω</mi>
+                                <mn>2</mn>
+                              </msup>
+                              <mo>⁢</mo>
+                              <msup>
+                                <mi>C</mi>
+                                <mn>2</mn>
+                              </msup>
+                              <mo>⁢</mo>
+                              <msubsup>
+                                <mi>R</mi>
+                                <mn>2</mn>
+                                <mn>2</mn>
+                              </msubsup>
+                            </mrow>
+                            <mo>+</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </mfrac>
+                        <mo>⁢</mo>
+                        <msup>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow>
+                              <msub>
+                                <mi>R</mi>
+                                <mn>1</mn>
+                              </msub>
+                              <mo>+</mo>
+                              <mfrac>
+                                <msub>
+                                  <mi>R</mi>
+                                  <mn>2</mn>
+                                </msub>
+                                <mrow>
+                                  <mrow>
+                                    <msup>
+                                      <mi>ω</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                    <mo>⁢</mo>
+                                    <msup>
+                                      <mi>C</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                    <mo>⁢</mo>
+                                    <msubsup>
+                                      <mi>R</mi>
+                                      <mn>2</mn>
+                                      <mn>2</mn>
+                                    </msubsup>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mn>1</mn>
+                                </mrow>
+                              </mfrac>
+                            </mrow>
+                            <mo>]</mo>
+                          </mrow>
+                          <mrow>
+                            <mo>-</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>de tal maneira que há um atraso entre a corrente e a tensão.</p>
+      <p>Nos experimentos didáticos tradicionais [<span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>[14] https://www.ufjf.br/fisica/teste/roteiros-dos-laboratorios/laboratorio-de-eletricidade-e-eletronica/ </span><br><a href="https://www.ufjf.br/fisica/teste/roteiros-dos-laboratorios/laboratorio-de-eletricidade-e-eletronica/" target="_blank">https://www.ufjf.br/fisica/teste/roteiro...
+            </a></span></span>] podemos usar o osciloscópio para medir a defasagem entre dois sinais de mesma frequência. Porém, nessa nossa abordagem é o próprio Arduino, e a montagem do circuito, que fazem as medições. Os dados obtidos na medição da corrente e tensão, estão plotados nas Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F6"><span class="sci-ico-fileFigure"></span>6</a>–<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F9"><span class="sci-ico-fileFigure"></span>9</a>. Os códigos responsáveis por gerar o sinal alternado e realizar as medições estão disponível no Apêndice A.</p>
+      <p>Nas Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F6"><span class="sci-ico-fileFigure"></span>6</a> a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F9"><span class="sci-ico-fileFigure"></span>9</a>, mostramos os valores de tensão obtidos para alguns valores de frequência. São exibidos, também, os valores da impedância <math display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>Z</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e do ângulo de defasagem <math display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+      <div class="row fig" id="S3_F8">
+<a name="S3_F8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/8ae564c08a18d72f3d97ad9ceb9b5a83f5ea60d8.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 8</strong><br>
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>58.7</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="S3_F9">
+<a name="S3_F9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/4fe3b59feeb3171e26530076583c4b48bb79a8b5.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 9</strong><br>
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>123.5</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        <br>
+</div>
+</div>
+      <p>Na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F6"><span class="sci-ico-fileFigure"></span>6</a> visualmente é claro que o sinal produzido pelo DAC e medido é senoidal, com um ajuste representado pelas linhas contínuas vermelha e amarela.</p>
+      <p>Comparando os resultados entre as Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F6"><span class="sci-ico-fileFigure"></span>6</a>–<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F9"><span class="sci-ico-fileFigure"></span>9</a>, é possível observar, que a medida que a frequência aumenta, o valor de <math display="inline"><mrow><mo stretchy="false">|</mo><mi>Z</mi><mo stretchy="false">|</mo></mrow></math> tende a diminuir e o valor da defasagem <math display="inline"><mi>ϕ</mi></math> entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> tem a tendência de aumentar. Representações gráficas das variações estão nas Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F10"><span class="sci-ico-fileFigure"></span>10</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F11"><span class="sci-ico-fileFigure"></span>11</a>. Nas Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F6"><span class="sci-ico-fileFigure"></span>6</a> a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F9"><span class="sci-ico-fileFigure"></span>9</a>, as medições são realizadas na situação de equilíbrio, após o arduino estabilizar, após todos os transientes serem eliminados.</p>
+      <div class="row fig" id="S3_F10">
+<a name="S3_F10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F10"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/51bbcafc371fdb8987abff089fd8f39dd4c82d56.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 10</strong><br>
+          Representação da variação do ângulo de defasagem <math display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> como função da frequência <math display="inline"><mi>ω</mi></math>.
+        <br>
+</div>
+</div>
+      <p>A linha contínua azul, chamada de Teórico, é a plotagem dos pontos gerados pela Equação <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS3_E12"><span class="sci-ico-fileFormula"></span>12</a>, para a Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F10"><span class="sci-ico-fileFigure"></span>10</a> e, pela Equação <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS3_E9"><span class="sci-ico-fileFormula"></span>9</a> para a Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F11"><span class="sci-ico-fileFigure"></span>11</a>. Essa plotagem não corresponde a um ajuste mas, somente, a plotagem dos pontos utilizando os mesmos valores de capacitância e de resistência, sendo utilizados resistores de <math display="inline"><mrow><mrow><mpadded width="+5pt"><mn>4.7</mn></mpadded><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">Ω</mi></mrow><mo>±</mo><mrow><mn>5</mn><mo>%</mo></mrow></mrow></math>. O capacitor utilizado tem capacitância de <math display="inline"><mrow><mrow><mn>0.47</mn><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mi>F</mi></mrow><mo>±</mo><mrow><mn>10</mn><mo>%</mo></mrow></mrow></math>.</p>
+      <div class="row fig" id="S3_F11">
+<a name="S3_F11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F11"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/4e7bdf858d94f4706a88a23cfdd4df617b5209fa.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 11</strong><br>
+          Representação da variação da impedância medida <math display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> como função da frequência <math display="inline"><mi>ω</mi></math>.
+        <br>
+</div>
+</div>
+      <p>O valor do módulo da impedância parte de aproximadamento <math display="inline"><mrow><mpadded width="+5pt"><mn>9</mn></mpadded><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">Ω</mi></mrow></math> até <math display="inline"><mrow><mpadded width="+5pt"><mn>5</mn></mpadded><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi mathvariant="normal">Ω</mi></mrow></math>. Esse valor é o esperado, uma vez que foram utilizados resistores e capacitores como descritos anteriormente, de modo que o valor limite tende a se aproximar dos valores de <i>R</i><sub>1</sub> e <i>R</i><sub>2</sub>. Esses valores de tolerância na resistência e na capacitância, associados a pequenos ruídos na geração do sinal DAC, causam esse desvio entre o esperado e o experimentalmente medido. A forma e valores encontrados, tanto na plotagem teórica quanto na plotagem experimental, estão em acordo com o trabalho realizado por Corbellini e Vallan [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>[12] S. Corbellini e A. Vallan, em: IEEE International Symposium on Medical Measurements and Applications (MeMeA) (Lisboa, 2014).</span></span></span>]. De modo que, nossa metodologia, além de se mostrar uma construção simples, é válida e precisa.</p>
+      <p>A diferença, na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F11"><span class="sci-ico-fileFigure"></span>11</a>, entre o cálculo teórico e a medição experimental pode ser tratada como um efeito de indutância parasita associada ao capacitor. Desse modo, propomos um modelo de indutância parasita, que fosse o mais simples possível, a fim de investigar se os valores experimentais poderia, agora, se acordar com o teórico. O modelo pode ser visto na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F12"><span class="sci-ico-fileFigure"></span>12</a>.</p>
+      <div class="row fig" id="S3_F12">
+<a name="S3_F12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F12"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/6d0475acdb42eff66603eda9c9d9c0d84ec94643.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 12</strong><br>
+          Modelo para determinação da indutância parasita devido ao capacitor.
+        <br>
+</div>
+</div>
+      <p>Para solucionar essa equação, fizemos uma simulação numérica encontrando o valor <math display="inline"><mrow><mi>L</mi><mo>≈</mo><mrow><mn>1.5</mn><mo>⁢</mo><mi>H</mi></mrow></mrow></math>. Com esse valor, plotamos novamente, na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F11"><span class="sci-ico-fileFigure"></span>11</a>, a curva contínua amarela.</p>
+      <p>Observe que, para essa curva, o ajuste é excelente. Isso comprova, não só, a existência da indutância parasita nesse circuito, mas também seus valores relativamente altos de <math display="inline"><mrow><mpadded width="+5pt"><mn>1.5</mn></mpadded><mo>⁢</mo><mi>H</mi></mrow></math>. A importância da determinação dessa indutância parasita é determinada pelo modo que ela afeta o circuito original. Em todos os casos, o efeito na impedância total do circuito é da ordem de <math display="inline"><mrow><mn>10</mn><mo>%</mo></mrow></math>.</p>
+      <p>Observe, ainda que, os valores experimentais, nas Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F10"><span class="sci-ico-fileFigure"></span>10</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F11"><span class="sci-ico-fileFigure"></span>11</a>, estão dentro dos valores teóricos. Além disso, uma atenção especial às altas frequências na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F10"><span class="sci-ico-fileFigure"></span>10</a>, quando a curva correspondente ao modelo com indutância parasita se aproxima muito dos valores experimentais.</p>
+      <p>Para esse modelo, também calculamos uma expressão análitica, que pode ser vista no Apêndice B.</p>
+    
+      <h1 class="articleSectionTitle">4. Conclusão</h1>
+      <p>Neste trabalho foi possível conhecer as configurações e os limites das placas Arduino, possibilitando a otimização e confiabilidade do sinal gerado e lido, além das medições realizadas. Não houve prejuízo significativo nos valores de conversão quando houve o aumento do <i>clock</i> do conversor DAC. Porém, para diminuir possíveis erros ocasionados por ruídos na conversão é aconselhado trabalhar com uma baixa frequência.</p>
+      <p>Ficou demonstrado que a utilização de dois Arduinos Nano, um para a geração de um sinal harmônico e outro para medidas de tensão, produz resultados satisfatórios e propicia um valor de custo menos elevado e bem acessível, que podem ser usados em práticas didáticas e pesquisas futuras. Isso inclui, mas não se limita, a instituições que não dispõem de laboratórios didáticos convencionais, como escolas de ensino básico.</p>
+      <p>Em relação aos resultados obtidos nessa plataforma, eles podem ser aplicados em áreas de pesquisas com grande relevância e relacionadas ao estudo da impedância ou, ainda, na produção de dispositivos práticos. Como, por exemplo, para medição de bioimpedância, uma vez que a nossa montagem tem, aproximadamente, o tamanho de uma mão.</p>
+      <p>Aos alunos envolvidos diretamente nesse trabalho, foi apresentado uma forma clara de como os resultados obtidos, baseados em sinal harmônico, entre eles, tensão, corrente e impedância podem ser tratados e apresentados.</p>
+    </div>
+<div class="articleSection" data-anchor="Apêndice A">
+<h1 class="articleSectionTitle">Apêndice A</h1>
+        
+        <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/6a49685ef194c8d2f68064d21082b9a428fe0a3e.pdf">
+          
+            Programação
+          
+        </a>
+      </div>
+<div class="articleSection" data-anchor="Apêndice B">
+<h1 class="articleSectionTitle">Apêndice B</h1>
+        
+        <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/e033a227d5ef0c0acf3b6612db604ac8b7dff2dc.pdf">
+          
+            Cálculos da Impedância
+          
+        </a>
+      </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> R.G. Rosa, W. Rutzen, L. Madeira, A.M. Ascoli, F.L. Dexheimer Neto, J.G. Maccari, R.P. Oliveira e C. Teixeira, Revista Brasileira de Terapia Intensiva 27, 406 (2015).</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> E.P. Britto e E.T. Mesquita, Rev SOCERJ. 21, 178 (2008).</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> J.E.H. Silva, H.S. Bernardino, H.J.C. Barbosa, A.B. Vieira, L.C.D. Campos e I.L. Oliveira, em: <i>IEEE Congress on Evolutionary Computation (CEC)</i> (Glasgow, 2020).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> H.M. Nussenzveig, <i>Curso de Fisica Basica: Eletromagnetism</i> o (Edgard Blucher, São Paulo, 2015), v. 3.</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> https://www.Arduino.cc/en/software <br><a href="https://www.Arduino.cc/en/software" target="_blank">» https://www.Arduino.cc/en/software</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> https://www.Arduino.cc/en/Main/Policy <br><a href="https://www.Arduino.cc/en/Main/Policy" target="_blank">» https://www.Arduino.cc/en/Main/Policy</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> https://blog.Arduino.cc/2013/07/10/send-in-the-clones/ <br><a href="https://blog.Arduino.cc/2013/07/10/send-in-the-clones/" target="_blank">» https://blog.Arduino.cc/2013/07/10/send-in-the-clones/</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> H. Cordova e A.C. Tort, Revista Brasileira de Ensino de Física 38, e2308 (2016).</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física 33, 1702 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> J.M. Cardoso e M. Zannin, Revista Brasileira de Ensino de Física 41, e20190028 (2019).</div>
+</li>
+<li>
+<sup class="xref big">[11]</sup><div> F. Rocha, G. Maranghello e M. Lucchese, Caderno Brasileiro de Ensino de Física 31, 98 (2013).</div>
+</li>
+<li>
+<sup class="xref big">[12]</sup><div> S. Corbellini e A. Vallan, em: <i>IEEE International Symposium on Medical Measurements and Applications (MeMeA)</i> (Lisboa, 2014).</div>
+</li>
+<li>
+<sup class="xref big">[13]</sup><div> https://www.arduino.cc/en/main/boards <br><a href="https://www.arduino.cc/en/main/boards" target="_blank">» https://www.arduino.cc/en/main/boards</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[14]</sup><div> https://www.ufjf.br/fisica/teste/roteiros-dos-laboratorios/laboratorio-de-eletricidade-e-eletronica/ <br><a href="https://www.ufjf.br/fisica/teste/roteiros-dos-laboratorios/laboratorio-de-eletricidade-e-eletronica/" target="_blank">» https://www.ufjf.br/fisica/teste/roteiros-dos-laboratorios/laboratorio-de-eletricidade-e-eletronica/</a>
+</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>04 Abr 2022</li>
+<li>
+<strong>Data do Fascículo</strong><br>2022</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>09 Set 2021</li>
+<li>
+<strong>Revisado</strong><br>29 Jan 2022</li>
+<li>
+<strong>Aceito</strong><br>08 Mar 2022</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png" alt="Creative Common - by 4.0 deed.en"></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> E.B. Santos </strong><strong>*</strong><br><div>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0001-5298-8207" class="btnContribLinks orcid">http://orcid.org/0000-0001-5298-8207</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> M.A. Cezário Júnior</strong><br><div>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> D.S. Araújo </strong><br><div>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> T.M. Abreu </strong><br><div>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> R.A. Dias </strong><br><div>Universidade Federal de Juiz de Fora, Departamento de Física, 36036-330, Juiz de Fora, MG, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">* Endereço de correspondência: <a href="mailto:evandro@evandrobs.com">evandro@evandrobs.com</a> </div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (12)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (12)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS1_F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/c8badb953a1a389818ae5787a4b2c92912ee3ee5.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 1</strong><br>
+            Ambiente de Desenvolvimento Integrado do Arduino. É apresentado realce de cores para comandos distintos e comentários.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/20c72cd967b4659c1011d72454885c3e488516e8.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 2</strong><br>
+            Esquema mostrando os Arduinos e <i>protoboards</i> ligados a uma fonte(bateria de 9V).
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/514e4dcbe1afcdfb3346715929fed4cb542b561a.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 3</strong><br>
+            Fotografia da montagem experimental esquematizada anteriormente, com os Arduinos e <i>protoboards</i> ligados a uma fonte externa e entrada de dados USB em conexão à IDE.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/a3e4aebbcd8bc8564d0c47de5d0abce2001574c4.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 4</strong><br>
+            Esquema do circuito completo do circuito elétrico envolvido no projeto, de forma simplificada.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/930e6266d6f4a05e127f10346af098656b8531d7.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 5</strong><br>
+            Esquema do circuito completo do circuito elétrico envolvido no projeto, de forma ampliada.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/ad76c7bbb7c135c852edb1876752ad972a83a68d.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 6</strong><br>
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>28.9</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/1c1b35d91d5f868fffc29f016ec4d529e2ce118c.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 7</strong><br>
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>32.2</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/8ae564c08a18d72f3d97ad9ceb9b5a83f5ea60d8.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 8</strong><br>
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>58.7</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/4fe3b59feeb3171e26530076583c4b48bb79a8b5.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 9</strong><br>
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>123.5</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F10"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/51bbcafc371fdb8987abff089fd8f39dd4c82d56.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 10</strong><br>
+          Representação da variação do ângulo de defasagem <math display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> como função da frequência <math display="inline"><mi>ω</mi></math>.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F11"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/4e7bdf858d94f4706a88a23cfdd4df617b5209fa.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 11</strong><br>
+          Representação da variação da impedância medida <math display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> como função da frequência <math display="inline"><mi>ω</mi></math>.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F12"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/6d0475acdb42eff66603eda9c9d9c0d84ec94643.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 12</strong><br>
+          Modelo para determinação da indutância parasita devido ao capacitor.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS1_E1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS1_E2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS1_E3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS1_E4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS1_E5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(5)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3_E6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(6)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3_E7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(7)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3_E8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(8)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3_E9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(9)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3_E10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(10)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3_E11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(11)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3_E12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(12)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS1_F1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/eac3e40457271ef3e9ea9a1c1f7582e2f30ff217.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 1   
+            Ambiente de Desenvolvimento Integrado do Arduino. É apresentado realce de cores para comandos distintos e comentários.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/eac3e40457271ef3e9ea9a1c1f7582e2f30ff217.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/7870304d5bbca0e3c109b98882aab31a4cf34e27.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 2   
+            Esquema mostrando os Arduinos e <i>protoboards</i> ligados a uma fonte(bateria de 9V).
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/7870304d5bbca0e3c109b98882aab31a4cf34e27.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/1f6c7f7205b09e2f1e264d93cd0d7d01c143b250.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 3   
+            Fotografia da montagem experimental esquematizada anteriormente, com os Arduinos e <i>protoboards</i> ligados a uma fonte externa e entrada de dados USB em conexão à IDE.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/1f6c7f7205b09e2f1e264d93cd0d7d01c143b250.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/eade25a5900f622179a776d9c4eeb640da1eb57e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 4   
+            Esquema do circuito completo do circuito elétrico envolvido no projeto, de forma simplificada.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/eade25a5900f622179a776d9c4eeb640da1eb57e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/ff453eab50e201cdd39276f68192a55942bac1ac.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 5   
+            Esquema do circuito completo do circuito elétrico envolvido no projeto, de forma ampliada.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/ff453eab50e201cdd39276f68192a55942bac1ac.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/bbea188802bd7b4cc4eb257b83492e19c9f2f600.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 6   
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>28.9</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/bbea188802bd7b4cc4eb257b83492e19c9f2f600.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/522142ad307bf85e8f54a3633502a51049d147e1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 7   
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>32.2</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/522142ad307bf85e8f54a3633502a51049d147e1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/571e0d88909900f179065c340defedb808ffaf04.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 8   
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>58.7</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/571e0d88909900f179065c340defedb808ffaf04.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/e120ffb119dd079db7684a8052d46910860854a5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 9   
+          Gráfico mostrando a defasagem dos dois sinais obtidos entre <math display="inline"><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math display="inline"><mrow><msub><mi>V</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, para um frequência de aproximadmente <math display="inline"><mrow><mpadded width="+5pt"><mn>123.5</mn></mpadded><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math>. As linhas representadas pelos pontos azuis e verdes são os dados experimentais relativos a tensão total e a tensão no resistor 1, enquanto as linhas contínuas vermelhas e amarelas, representam os ajustes por uma função do tipo seno.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/e120ffb119dd079db7684a8052d46910860854a5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/342ecfb1601bfc63c8768c94fe1b79b8b0452d05.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 10   
+          Representação da variação do ângulo de defasagem <math display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> como função da frequência <math display="inline"><mi>ω</mi></math>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/342ecfb1601bfc63c8768c94fe1b79b8b0452d05.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/6c15687968880a1fee69508cdb981b9149a8d0f8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 11   
+          Representação da variação da impedância medida <math display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> como função da frequência <math display="inline"><mi>ω</mi></math>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/6c15687968880a1fee69508cdb981b9149a8d0f8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/96033ac1e04918d1902e411c4c6c0467dc9d05ee.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 12   
+          Modelo para determinação da indutância parasita devido ao capacitor.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/9gvy9hCKyzDPphpS7Qszx5j/96033ac1e04918d1902e411c4c6c0467dc9d05ee.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS1_E1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+              <mrow>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mi>i</mi>
+                    <mi>V</mi>
+                  </mfrac>
+                </mrow>
+                <mo>.</mo>
+              </mrow>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS1_E2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+              <mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <msub>
+                    <mi>i</mi>
+                    <mn>0</mn>
+                  </msub>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mi>cos</mi>
+                    <mo>⁡</mo>
+                    <mrow>
+                      <mo stretchy="false">(</mo>
+                      <mrow>
+                        <mrow>
+                          <msub>
+                            <mi>w</mi>
+                            <mn>0</mn>
+                          </msub>
+                          <mo>⁢</mo>
+                          <mi>t</mi>
+                        </mrow>
+                        <mo>+</mo>
+                        <mi>φ</mi>
+                      </mrow>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                  </mrow>
+                </mrow>
+              </mrow>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS1_E3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+              <mrow>
+                <mrow>
+                  <mi>ε</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>-</mo>
+                    <mfrac>
+                      <mrow>
+                        <mi>d</mi>
+                        <mo>⁢</mo>
+                        <msub>
+                          <mi>ϕ</mi>
+                          <mi>B</mi>
+                        </msub>
+                      </mrow>
+                      <mrow>
+                        <mi>d</mi>
+                        <mo>⁢</mo>
+                        <mi>t</mi>
+                      </mrow>
+                    </mfrac>
+                  </mrow>
+                </mrow>
+                <mo>,</mo>
+              </mrow>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS1_E4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+              <mrow>
+                <mrow>
+                  <mi>ε</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>-</mo>
+                    <mrow>
+                      <mi>M</mi>
+                      <mo>⁢</mo>
+                      <mfrac>
+                        <mrow>
+                          <mi>d</mi>
+                          <mo>⁢</mo>
+                          <mi>i</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>d</mi>
+                          <mo>⁢</mo>
+                          <mi>t</mi>
+                        </mrow>
+                      </mfrac>
+                    </mrow>
+                  </mrow>
+                </mrow>
+                <mo>,</mo>
+              </mrow>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS1_E5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(5)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+              <mrow>
+                <mrow>
+                  <mi>ε</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>-</mo>
+                    <mrow>
+                      <mi>L</mi>
+                      <mo>⁢</mo>
+                      <mfrac>
+                        <mrow>
+                          <mi>d</mi>
+                          <mo>⁢</mo>
+                          <mi>i</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>d</mi>
+                          <mo>⁢</mo>
+                          <mi>t</mi>
+                        </mrow>
+                      </mfrac>
+                    </mrow>
+                  </mrow>
+                </mrow>
+                <mo>.</mo>
+              </mrow>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3_E6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(6)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <msub>
+                    <mi>V</mi>
+                    <mi>Z</mi>
+                  </msub>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mi>I</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3_E7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(7)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <msub>
+                    <mi>V</mi>
+                    <mi>Z</mi>
+                  </msub>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>R</mi>
+                      </msub>
+                      <mo>⁢</mo>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>ω</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                    </mrow>
+                    <mi>R</mi>
+                  </mfrac>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3_E8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(8)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>R</mi>
+                  <mo>⁢</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>Z</mi>
+                      </msub>
+                      <mo>⁢</mo>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>ω</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>R</mi>
+                      </msub>
+                      <mo>⁢</mo>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>ω</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3_E9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(9)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>Z</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>R</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo>[</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <msub>
+                            <mi>V</mi>
+                            <mi>T</mi>
+                          </msub>
+                          <mo>⁢</mo>
+                          <mrow>
+                            <mo stretchy="false">(</mo>
+                            <mi>ω</mi>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                        </mrow>
+                        <mrow>
+                          <msub>
+                            <mi>V</mi>
+                            <mi>R</mi>
+                          </msub>
+                          <mo>⁢</mo>
+                          <mrow>
+                            <mo stretchy="false">(</mo>
+                            <mi>ω</mi>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                        </mrow>
+                      </mfrac>
+                      <mo>-</mo>
+                      <mn>1</mn>
+                    </mrow>
+                    <mo>]</mo>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3_E10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(10)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>I</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo>,</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mfrac>
+                    <msub>
+                      <mi>V</mi>
+                      <mn>0</mn>
+                    </msub>
+                    <mrow>
+                      <mo stretchy="false">|</mo>
+                      <mi>Z</mi>
+                      <mo stretchy="false">|</mo>
+                    </mrow>
+                  </mfrac>
+                  <mo>⁢</mo>
+                  <msup>
+                    <mi>e</mi>
+                    <mrow>
+                      <mo>-</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>⁢</mo>
+                        <mi>ϕ</mi>
+                        <mo>⁢</mo>
+                        <mrow>
+                          <mo stretchy="false">(</mo>
+                          <mi>ω</mi>
+                          <mo>,</mo>
+                          <mi>t</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </mrow>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3_E11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(11)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <msub>
+                    <mi>I</mi>
+                    <mrow>
+                      <mi>m</mi>
+                      <mo>⁢</mo>
+                      <mi>a</mi>
+                      <mo>⁢</mo>
+                      <mi>x</mi>
+                    </mrow>
+                  </msub>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mfrac>
+                    <msub>
+                      <mi>V</mi>
+                      <mn>0</mn>
+                    </msub>
+                    <mrow>
+                      <mo stretchy="false">|</mo>
+                      <mi>Z</mi>
+                      <mo stretchy="false">|</mo>
+                    </mrow>
+                  </mfrac>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mi>cos</mi>
+                    <mo>⁡</mo>
+                    <mi>ϕ</mi>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3_E12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(12)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>ϕ</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>ω</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mo>-</mo>
+                  <mrow>
+                    <msup>
+                      <mi>tan</mi>
+                      <mrow>
+                        <mo>-</mo>
+                        <mn>1</mn>
+                      </mrow>
+                    </msup>
+                    <mo>⁡</mo>
+                    <mrow>
+                      <mo>[</mo>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>R</mi>
+                              <mn>2</mn>
+                              <mn>2</mn>
+                            </msubsup>
+                            <mo>⁢</mo>
+                            <mi>ω</mi>
+                            <mo>⁢</mo>
+                            <mi>C</mi>
+                          </mrow>
+                          <mrow>
+                            <mrow>
+                              <msup>
+                                <mi>ω</mi>
+                                <mn>2</mn>
+                              </msup>
+                              <mo>⁢</mo>
+                              <msup>
+                                <mi>C</mi>
+                                <mn>2</mn>
+                              </msup>
+                              <mo>⁢</mo>
+                              <msubsup>
+                                <mi>R</mi>
+                                <mn>2</mn>
+                                <mn>2</mn>
+                              </msubsup>
+                            </mrow>
+                            <mo>+</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </mfrac>
+                        <mo>⁢</mo>
+                        <msup>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow>
+                              <msub>
+                                <mi>R</mi>
+                                <mn>1</mn>
+                              </msub>
+                              <mo>+</mo>
+                              <mfrac>
+                                <msub>
+                                  <mi>R</mi>
+                                  <mn>2</mn>
+                                </msub>
+                                <mrow>
+                                  <mrow>
+                                    <msup>
+                                      <mi>ω</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                    <mo>⁢</mo>
+                                    <msup>
+                                      <mi>C</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                    <mo>⁢</mo>
+                                    <msubsup>
+                                      <mi>R</mi>
+                                      <mn>2</mn>
+                                      <mn>2</mn>
+                                    </msubsup>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mn>1</mn>
+                                </mrow>
+                              </mfrac>
+                            </mrow>
+                            <mo>]</mo>
+                          </mrow>
+                          <mrow>
+                            <mo>-</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Santos, E.B. et al. Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos. Revista Brasileira de Ensino de Física [online]. 2022, v. 44 [Acessado CURRENTDATE] , e20210323. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2021-0323&gt;. Epub 04 Abr 2022. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2021-0323.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos&#34; &#34;Santos, E.B.&#34; &#34;Cezário Júnior, M.A.&#34; &#34;Araújo, D.S.&#34; &#34;Abreu, T.M.&#34; &#34;Dias, R.A.&#34; &#34;2022&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos&#34; &#34;Santos, E.B.&#34; &#34;Cezário Júnior, M.A.&#34; &#34;Araújo, D.S.&#34; &#34;Abreu, T.M.&#34; &#34;Dias, R.A.&#34; &#34;2022&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/9gvy9hCKyzDPphpS7Qszx5j/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172022000100714&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2021-0323" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2021-0323">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2021-0323" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2021-0323">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2021-0323"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2021-0323" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2021-0323">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2021-0323" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Construção de um dispositivo para obtenção da impedância elétrica de sistemas utilizando Arduinos
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2021-0323">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

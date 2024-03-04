@@ -1,0 +1,2545 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino"/>
+<meta property="og:description" content="O presente trabalho apresenta uma aplicação do clássico interferômetro acústico de Quincke,..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="de Morais Souza, Cícero Jailton">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal de Educação">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0002-3714-568X">
+        <meta name="citation_author" content="da Silva, Larissa Alexandre">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal de Educação">
+        
+        <meta name="citation_author" content="Leite, Ibson José Maciel">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal de Educação">
+        
+        <meta name="citation_author" content="Monteiro, Mário Anonio Alves">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal de Educação">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0003-4516-6031">
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="43"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2021-0191"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="O presente trabalho apresenta uma aplicação do clássico interferômetro acústico de Quincke, conhecido como “tubo de Quincke”. O equipamento apresentado neste artigo foi construído com tubos de PVC e outros acessórios comumente utilizados em encanação. Como fonte sonora foi utilizada uma caixa de som convencional conectada a um notebook para a geração de ondas senoidais controladas pelo software GoldWave. Para medição da intensidade do som foi utilizado o sensor KY-038 junto a plataforma Arduino. O objetivo deste equipamento é auxiliar os estudos de interferência sonora em intervenções didáticas, tendo em vista a limitada existência de recursos didáticos para o processo de ensino e aprendizagem envolvendo ondas mecânicas, particularmente, nas aulas de interferência no ensino médio. Através do interferômetro acústico, foi possível calcular o comprimento de onda de cada frequência de som utilizada no experimento e, a partir destas medidas, determinar com boa precisão a velocidade do som no ar."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2021-07-14"></meta>
+<meta name="citation_keywords" content="Interferômetro acústico"></meta><meta name="citation_keywords" content="tubo de Quincke"></meta><meta name="citation_keywords" content="Arduino"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2021.v43/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2021.v43/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172021000100461 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 43 <span class="_separator"> • </span>2021</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2021-0191" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2021-0191</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0191"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 deed.en"></span>Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Demonstration and analysis of acoustic interference using a “Quincke tube” and the arduine platform</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Cícero Jailton de Morais Souza </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong><div class="corresp">* Endereço de correspondência: <a href="mailto:cicero.souza@pesqueira.ifpe.edu.br">cicero.souza@pesqueira.ifpe.edu.br</a> </div>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.<a href="http://orcid.org/0000-0002-3714-568X" class="btnContribLinks orcid">http://orcid.org/0000-0002-3714-568X</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Larissa Alexandre da Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Ibson José Maciel Leite </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Mário Anonio Alves Monteiro </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.<a href="http://orcid.org/0000-0003-4516-6031" class="btnContribLinks orcid">http://orcid.org/0000-0003-4516-6031</a>
+</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>O presente trabalho apresenta uma aplicação do clássico interferômetro acústico de Quincke, conhecido como “tubo de Quincke”. O equipamento apresentado neste artigo foi construído com tubos de PVC e outros acessórios comumente utilizados em encanação. Como fonte sonora foi utilizada uma caixa de som convencional conectada a um <i>notebook</i> para a geração de ondas senoidais controladas pelo <i>software GoldWave</i>. Para medição da intensidade do som foi utilizado o sensor KY-038 junto a plataforma Arduino. O objetivo deste equipamento é auxiliar os estudos de interferência sonora em intervenções didáticas, tendo em vista a limitada existência de recursos didáticos para o processo de ensino e aprendizagem envolvendo ondas mecânicas, particularmente, nas aulas de interferência no ensino médio. Através do interferômetro acústico, foi possível calcular o comprimento de onda de cada frequência de som utilizada no experimento e, a partir destas medidas, determinar com boa precisão a velocidade do som no ar.</p>
+<p><strong>Palavras-chave:</strong><br>Interferômetro acústico; tubo de Quincke; Arduino</p>
+</div>
+<hr>
+<div>
+<p>This work presents an application of the classical Quincke acoustic interferometer, also known as “Quincke tube”. The equipment described in this paper was built with PVC pipes and commonly used plumbing accessories. As a sound source, we used a conventional speaker that are connected to a notebook was used for the generation of sine waves controlled by the <i>GoldWave</i> software. To measure the intensity of the sound we use the KY-038 sensor and Arduino platform. The purpose of this equipment is support for educational activity, due to limited teaching and learning resources involving mechanical waves, especially the interference study in high school. Through the acoustic interferometer, it was possible to calculate the wavelength of different frequencies and from that to determine, with good precision, the speed of sound in the air.</p>
+<p><strong>Keywords</strong><br>Acoustic interferometer; Quincke tube; Arduino</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>O uso de estratégias experimentais no ensino de física vem sendo foco das pesquisas educacionais dos últimos anos. Isso demonstra o interesse dos profissionais da área em aprimorar a qualidade do seu ensino, tendo em vista a melhoria no índice de aprendizagem que recursos experimentais podem promover, e levando em consideração que a “realização das atividades experimentais […] não precisam, em hipótese alguma, serem condicionadas a bancadas, instrumentos sofisticados ou de alto custo” [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>1. J.G.S.O. Junior, L.M. Gomes, E.R.P. de Novais e F.C.L. Ferreira, Scientia Plena 15, 7 (2019).</span></span></span>].</p>
+      <p>Um dos fenômenos mais estudados em atividades experimentais no ensino de física é a interferência da luz, sendo muito comum a utilização de interferômetros ópticos, como o interferômetro de Michelson-Morley, por exemplo. Cordova [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>2. H.P. Cordova, Construção de um interferômetro de Michelsone aplicações no ensino de óptica. Dissertação de Mestrado,Universidade Federal do Rio de Janeiro, Rio de Janeiro, 2016.</span></span></span>], afirma que os interferômetros ópticos causam um impacto inicial positivo e que promovem uma atenção contínua e eficaz. No entanto, como se trata de um fenômeno ondulatório, a interferência também acontece com outros tipos de ondas, como as ondas sonoras. E quando se trata de conteúdos de ondas mecânicas, a visualização dos fenômenos estudados também é de alta importância para a construção do aprendizado.</p>
+      <p>Em 1866, em um artigo publicado na <i>Annalen der Physik</i> e intitulado <i>Ueber interferenz apparate für schallwellen</i> (“Sobre dispositivos de interferência para ondas sonoras”, o físico alemão Georg Hermann Quincke dissertou sobre um aparato experimental, criado por ele, para detectar a interferência em ondas sonoras [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>3. G.H. Quincke, Annalen der Physik 204, 177 (1866).</span></span></span>]. Por sua simplicidade e clareza, o equipamento, que ficou conhecido como “tubo de Quincke” (ou “trombone de Quincke”), é ainda hoje utilizado como experimento demonstrativo em muitas escolas.</p>
+      <p>Pensando na dificuldade da inserção de recursos didáticos experimentais para o ensino de física, e mais designadamente para o ensino de ondas sonoras, desenvolvemos neste trabalho um interferômetro acústico de baixo custo, mais especificamente um “tubo de Quincke” acoplado a um sensor de som KY-038 conectado ao Arduino, para demonstrar a interferência em ondas sonoras e determinar comprimentos de onda para diferentes frequências e também a velocidade do som no ar.</p>
+    
+      <h1 class="articleSectionTitle">2. Interferência do som: o “tubo de Quincke”</h1>
+      <p>O som “é uma propagação de vibrações longitudinais através de meios materiais […] e que propagam-se em três dimensões pelo espaço” [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>4. N. Villas Bôas. Tópicos de Física (Saraiva, SãoPaulo, 2004) v. 2, p. 264.</span></span></span>]. Sua propagação ocorre pela variação de pressão do meio, se caracterizando assim como uma onda mecânica, que necessita de um meio para se propagar, diferentemente das ondas eletromagnéticas. Como o som é uma propagação ondulatória, possui as propriedades características de uma onda: reflexão, refração, difração e interferência. Assim como nas ondas eletromagnéticas, a “interferência é causada pela combinação (em fase ou fora de fase) de duas ou mais ondas, fazendo com que a onda resultante seja mais intensa que as ondas originais, ou que se cancelem, no caso de uma interferência destrutiva” [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>5. DAS Divisão de Astrofísica, disponível em:http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm.</span><br><a href="http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm" target="_blank">http://www.das.inpe.br/~alex/FisicadaMus...
+            </a></span></span>].</p>
+      <p>Durante uma interferência sonora pode-se ouvir variações significativas na intensidade do som. Em determinados posições de um ambiente com duas fontes sonoras (<i>F</i> e <i>G</i>, mostradas na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F1"><span class="sci-ico-fileFigure"></span>1</a>), em que uma crista e um vale se encontram (ponto <i>C</i>, por exemplo) a interferência destrutiva resulta em um ponto “surdo”, no qual não há som (ou quase não há, dependendo da fase); enquanto os pontos <i>A</i> e <i>B</i>, por exemplo, apresentam o encontro de dois vales ou de duas cristas, resultando em interferências construtivas, ou seja, <i>A</i> e <i>B</i> representam pontos nos quais o som é mais intenso. Um experimento bastante utilizado para demonstrar o princípio da interferência em ondas sonoras é o interferômetro acústico conhecido como “tubo de Quincke”.</p>
+      <div class="row fig" id="S2_F1">
+<a name="S2_F1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/cc1461f576a0c40e4f1c8c99c42b9ba27fd157b2.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Interferência de ondas sonoras.
+        <br>
+</div>
+</div>
+      <p>Uma forma simples de se montar um “tubo Quincke” é com acessórios utilizados em encanação, como tubos de cobre ou PVC, <i>tês</i>, joelhos, redutores etc., e uma campânula capaz de projetar os sons do equipamento [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. G.R. Davies, The Physics Teacher 33, 244 (1995).</span></span></span>]. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a> apresenta um exemplo dessa montagem “clássica” do “tubo de Quincke”.</p>
+      <div class="row fig" id="S2_F2">
+<a name="S2_F2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/87179ecf594be1c2a16d006f53cee331b45e3e70.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Um exemplo “clássico” de um “tubo de Quincke”. Fonte: Davies, G. R. (1995). <i>Deck the Halls: Interference and diffraction corridor demonstrations</i> [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. G.R. Davies, The Physics Teacher 33, 244 (1995).</span></span></span>].
+        <br>
+</div>
+</div>
+      <p>O “tubo de Quincke” funciona da seguinte forma: uma fonte sonora emite uma onda que entra no sistema e se divide em duas, sendo que cada uma delas irá se propagar por um dos dois caminhos possíveis representados por cada tubo lateral em formato de U. O comprimento de um dos tubos em U é fixo e o comprimento do outro tubo em formato U é variável, uma vez que este tubo é construído de maneira semelhante a um trombone deslizante. Mover o tubo para dentro ou para fora muda o comprimento do caminho e, portanto, também muda a fase do som que chega à campânula em relação a onda que viaja através do tubo de comprimento fixo. Isso resulta em uma variação na intensidade do som que emerge da campânula, sendo mais fraco quando as fases dos dois componentes diferem por meio comprimento de onda e mais alto quando as duas ondas chegam em fase [<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>7. W.E. Singer, The Physics Teacher 3, 282 (1965).</span></span></span>]. Ou seja,</p>
+      <div><blockquote>
+        <p>Para uma determinada frequência (por exemplo, 3,0 kHz) e com o ouvido próximo ao cone de saída [campânula], um som máximo é ouvido quando os dois caminhos têm comprimentos iguais. Conforme o tubo deslizante é empurrado para fora, mínimos e máximos são observados. A distância movida de um mínimo para o próximo pode ser lida em uma escala e, portanto, o comprimento de onda deduzido. O que por sua vez permite que seja feita uma estimativa da velocidade do som no ar, desde que a frequência seja conhecida [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. G.R. Davies, The Physics Teacher 33, 244 (1995).</span></span></span>].</p>
+      </blockquote></div>
+      <p>Podemos descrever esquematicamente o “tubo de Quincke” como mostrado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F3"><span class="sci-ico-fileFigure"></span>3</a>. Ele é composto por um braço fixo de tamanho <i>L</i> e um braço móvel de tamanho variável <i>x</i>, ambos em forma de U. O tubo tem uma abertura em cada uma das extremidades (<i>A</i> e <i>B</i>). O sistema funciona da seguinte forma: uma das aberturas (<i>A</i>, por exemplo) é utilizada como entrada do som da fonte de onda sonora, parte dessa onda percorre o caminho fixo (<i>L</i>) e parte percorre o caminho variável (<i>x</i>). As ondas que foram fracionadas inicialmente se sobrepõem e interferem uma na outra na saída de som (<i>B</i>), onde está localizado um detector (microfone ou o próprio ouvido). Dessa forma é possível medir a intensidade do som emitido para os diferentes deslocamentos do braço variável.</p>
+      <div class="row fig" id="S2_F3">
+<a name="S2_F3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/0a9477e385e5c9f1db2d084f33a715e95fd56b7f.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          Modelo simplificado do “tubo de Quincke”.
+        <br>
+</div>
+</div>
+      <p>O cálculo do comprimento de onda deste experimento pode ser obtido através da análise da interferência entre as ondas sonoras dentro do tubo. Quando o tamanho do braço <i>x</i> é igual ao tamanho do braço <i>L</i> e as duas ondas fracionadas estão em fase, nota-se um som intenso na saída <i>B</i> devido a interferência construtiva. Quando se desloca o braço <i>x</i> ao ponto de perceber um mínimo de intensidade do som, a interferência é destrutiva. Assim para calcular o comprimento de onda pode-se utilizar as seguintes relações:</p>
+      <div class="row formula" id="eS2_E1">
+<a name="S2_E1"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(1)</span>
+        <math display="block">
+          <mrow>
+            <mrow>
+              <mn>2</mn>
+              <mo>⁢</mo>
+              <mi>d</mi>
+            </mrow>
+            <mo>=</mo>
+            <mrow>
+              <mi>n</mi>
+              <mo>⁢</mo>
+              <mi>λ</mi>
+            </mrow>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <div class="row formula" id="eS2_E2">
+<a name="S2_E2"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(2)</span>
+        <math display="block">
+          <mrow>
+            <mi>λ</mi>
+            <mo>=</mo>
+            <mstyle displaystyle="true">
+              <mfrac>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>⁢</mo>
+                  <mi>d</mi>
+                </mrow>
+                <mi>n</mi>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>Em que <i>d</i> = <i>x</i>−<i>L</i> e, como a onda percorre as distâncias <i>x</i> e <i>L</i> duas vezes (por cima e por baixo de acordo com o que é representado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F3"><span class="sci-ico-fileFigure"></span>3</a>), <i>2d</i> é a diferença total entre os caminhos que as ondas percorrem nos braços. Além disso, λ é o comprimento de onda e <i>n</i> = 0,1,2,3,… se a interferência é construtiva [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>8. H.M. Nussenzveig, in Curso de Física Básica 2: Fluidos,Oscilações e Ondas, Calor. (Edgard Blücher, São Paulo, 2002).</span></span></span>].</p>
+      <p>Dessa forma, os máximos de interferência acontecem quando <i>n</i> é zero ou um número inteiro. Assim a posição do primeiro máximo ocorre quando <i>n=0</i> (posição em que os braços do interferômetro têm o mesmo tamanho), o segundo máximo quando <i>n=1</i>, o terceiro quando <i>n=2</i> e assim por diante.</p>
+    
+      <h1 class="articleSectionTitle">3. Descrição do “tubo de Quincke” construído</h1>
+      <p>O interferômetro acústico construído é composto por dois tipos de canos de água fria, de dois diâmetros diferentes (50 mm e 60 mm), de forma que um cano encaixe no outro, com um pouco de folga para facilitar o deslizamento do braço variável. As extremidades dos canos são conectadas à joelhos e <i>tês</i> de forma que sua estrutura se assemelhe a do “tubo de Quincke”, com os dois <i>tês</i> localizados na entrada e saída do som. Sua extensão máxima é de três metros de comprimento, sendo que o lado do braço fixo tem 1 metro de extensão e o outro lado, de tamanho variável, pode ter seu comprimento variado de 1 a 2 metros, o que faz com que as dimensões do interferômetro variem de 2 a 3 metros. Estas dimensões foram escolhidas para permitir a observação do maior número possível de máximos, uma vez que, para uma determinada frequência, quanto maior os braços do interferômetro, maior a ocorrência de nós e antinós das ondas sonoras dentro do tubo. Desse modo, para a faixa de frequências utilizadas (de 1000 Hz a 2000 Hz, escolhidas devido a melhor sensibilidade do sensor), a variação de 1 metro no braço móvel permitiu a medição de até 11 máximos. O experimentador pode ajustar o tamanho do braço variável conforme sua necessidade de observar os máximos de interferência, estando limitado pelos três metros totais de comprimento do equipamento. O som sofre interferências construtivas e destrutivas de acordo com a variação do braço ajustável.</p>
+      <p>Na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F4"><span class="sci-ico-fileFigure"></span>4</a> apresentamos algumas imagens do interferômetro desenvolvido. Na entrada do equipamento, como fonte sonora, pela qual é emitida uma onda senoidal gerada pelo <i>software Gold Wave</i>, foi colocada uma caixa de som convencional, com dois canais estéreos, potência total de 4 W e conexão via porta USB e plugue P2 com o <i>notebook</i>. Na saída do som colocamos o sensor KY-038 conectado ao Arduino, que também é conectado ao <i>notebook</i>.</p>
+      <div class="row fig" id="S3_F4">
+<a name="S3_F4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/887ec57ef2b0f4cc56ab24840961d7d4adc757af.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+          Interferômetro acústico (“tubo de Quincke”) construído pelos autores.
+        <br>
+</div>
+</div>
+      <p>O sensor de som KY-038 possui um microfone que mede os picos do som; um chip LM393; um potenciômetro, para ajuste da sensibilidade do microfone; pinos VCC, GND, e saída digital e analógica, para conexão com o Arduino (ver Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F5"><span class="sci-ico-fileFigure"></span>5</a>). “O princípio de funcionamento é simples: ao detectar o som, o microfone varia a tensão na saída analógica A0, e aciona a saída digital D0, conforme a regulagem do potenciômetro presente no módulo” [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. ARDUINO E CIA, disponível em:https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/.</span><br><a href="https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/" target="_blank">https://www.arduinoecia.com.br/sensor-de...
+            </a></span></span>].</p>
+      <div class="row fig" id="S3_F5">
+<a name="S3_F5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/7197018b0580a0dc3a3eb0835ee22ecacf96d0ba.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+          Módulo de som KY-038. Fonte: ARDUINO &amp; CIA [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. ARDUINO E CIA, disponível em:https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/.</span><br><a href="https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/" target="_blank">https://www.arduinoecia.com.br/sensor-de...
+            </a></span></span>].
+        <br>
+</div>
+</div>
+      <p>A conexão do sensor KY-038 com o Arduino é representada na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F6"><span class="sci-ico-fileFigure"></span>6</a>. Basta conectar diretamente os pinos VCC e GND do sensor, respectivamente, a saída regulada de 5 V e ao terminal negativo GND do Arduino. Além disso, a saída analógica do sensor deve ser conectada a entrada analógica A0 do Arduino. Não é necessário fazer nenhuma conexão do Arduino com a saída digital do sensor.</p>
+      <div class="row fig" id="S3_F6">
+<a name="S3_F6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/5268a0db2c37344da8562d29cb60d34502633b7c.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+          Conexão do módulo de som KY-038 com o Arduino. Fonte: ARDUINO LEARNING [<span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>10. ARDUINO LEARNING, disponível em:http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php.</span><br><a href="http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php" target="_blank">http://arduinolearning.com/code/ky038-mi...
+            </a></span></span>].
+        <br>
+</div>
+</div>
+      <p>Quando conectado ao Arduino, o módulo de som KY-038 é capaz de medir a intensidade sonora relativa no local em que estiver posicionado. Dessa forma, colocando-o na saída de som do tubo, é possível determinar para que posições do braço <i>x</i> a intensidade sonora é máxima, ou seja, para que posições do braço variável ocorre interferência construtiva.</p>
+      <p>O código utilizado para medição da intensidade é mostrado no Quadro <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigF1"><span class="sci-ico-fileFigure"></span>1</a>.</p>
+      <div class="row fig" id="F1">
+<a name="F1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigF1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/33dc2a7deed96610095b37848a4713b52c49963a.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Quadro 1</strong><br>
+          Código utilizado para leitura de dados do sensor de som.
+        <br>
+</div>
+</div>
+      <div class="row table" id="S4_T1">
+<a name="S4_T1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS4_T1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Resultados das medições para <i><i>f</i><sub>1</sub> = 2000<i>Hz</i></i>.
+        <br>
+</div>
+</div>
+      <p>Destacamos que o código é bastante básico e não necessita da instalação de qualquer biblioteca. Com ele, a cada 50 amostras de intensidade sonora relativa, que pode variar de 0 a 1023, o Arduino calcula a média e imprime o resultado. Foi necessário realizar as médias das amostras porque os dados do sensor apresentavam muito ruído, o que dificultava a sua visualização quando eram plotados na IDE (<i>Integrated Development Environment</i> – Ambiente de Desenvolvimento Integrado) do Arduino. Dessa forma, a média dos pontos eliminou o problema e tornou a visualização das variações de intensidade bem mais claras.</p>
+    
+      <h1 class="articleSectionTitle">4. Resultados</h1>
+      <p>Ao mover o braço ajustável do tubo é possível, através da plataforma Arduino que plota um gráfico da média dos dados captados pelo sensor sonoro, detectar os máximos de interferência das frequências utilizadas no interferômetro acústico. Os dados obtidos através do sensor de som são plotados instantaneamente através da ferramenta <i>Serial Plotter</i>. Esta ferramenta vem pré-instalada na IDE do Arduino, sua função é capturar os dados seriais de entrada e os exibir na forma de um gráfico.</p>
+      <p>Conforme há mudança na distância do braço variável, há também interferências construtivas e destrutivas de acordo com o deslocamento realizado. A intensidade relativa medida é salva na variável <i>valor</i>, definida no código do Quadro <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigF1"><span class="sci-ico-fileFigure"></span>1</a>. O gráfico plotado pelo Arduino de intensidade sonora relativa em função do número da amostra, colhida a uma taxa de transmissão de dados de 9600 bps (bits por segundo), indica quando a interferência é máxima, como ilustrado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F7"><span class="sci-ico-fileFigure"></span>7</a>. O eixo vertical se ajusta conforme a variável <i>valor</i>aumenta ou diminui. O eixo horizontal tem 500 pontos e é atualizado quando um novo comando <i>Serial.println(valor)</i> é executado, também conforme o código mostrado no Quadro 1. Isso significa que o gráfico é atualizado toda vez que o comando <i>Serial.println(valor)</i> é executado e uma nova medida de intensidade é feita.</p>
+      <div class="row fig" id="S4_F7">
+<a name="S4_F7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/aedd9e5fc80ae1fe0e30ada4ee0410e4da785e92.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+          Gráfico dos máximos resultantes da interferência das ondas sonoras gerado automaticamente pela <i>Serial Plotter</i> da IDE do Arduino.
+        <br>
+</div>
+</div>
+      <p>O gráfico da Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F7"><span class="sci-ico-fileFigure"></span>7</a> foi gerado quando movimentamos o braço do interferômetro de forma lenta e contínua, de modo a passar por duas regiões de máximo, representadas pelos picos de interferência. Ao atingir um ponto de máximo, as diferenças entre os comprimentos dos braços do tubo eram medidas.</p>
+      <p>Foram utilizadas cinco frequências diferentes no interferômetro acústico, <i>f</i><sub>1</sub> = 2000<i>Hz</i>, <i>f</i><sub>2</sub> = 1750<i>Hz</i>, <i>f</i><sub>3</sub> = 1500<i>Hz</i>, <i>f</i><sub>4</sub> = 1250<i>Hz</i> e <i>f</i><sub>5</sub> = 1000<i>Hz</i>. As frequências utilizadas possuem uma incerteza relativa de ±0,5%. Os resultados obtidos para as medidas das diferenças entre as distâncias, (<i>2d</i>), com uma incerteza de ±1 cm, em relação aos máximos de interferência, <i>n</i>, e para as diferentes frequências, são apresentados nas Tabelas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS4_T1"><span class="sci-ico-fileTable"></span>1</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS4_T2"><span class="sci-ico-fileTable"></span>2</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS4_T3"><span class="sci-ico-fileTable"></span>3</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS4_T4"><span class="sci-ico-fileTable"></span>4</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS4_T5"><span class="sci-ico-fileTable"></span>5</a>, a seguir:</p>
+      <div class="row table" id="S4_T2">
+<a name="S4_T2"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS4_T2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 2</strong><br>
+          Resultados das medições para <i><i>f</i><sub>2</sub> = 1750<i>Hz</i></i>.
+        <br>
+</div>
+</div>
+      <div class="row table" id="S4_T3">
+<a name="S4_T3"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS4_T3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 3</strong><br>
+          Resultados das medições para <i><i>f</i><sub>3</sub> = 1500<i>Hz</i></i>.
+        <br>
+</div>
+</div>
+      <div class="row table" id="S4_T4">
+<a name="S4_T4"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS4_T4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 4</strong><br>
+          Resultados das medições para <i><i>f</i><sub>4</sub> = 1250<i>Hz</i></i>.
+        <br>
+</div>
+</div>
+      <div class="row table" id="S4_T5">
+<a name="S4_T5"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS4_T5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 5</strong><br>
+          Resultados das medições para <i><i>f</i><sub>5</sub> = 1000<i>Hz</i></i>.
+        <br>
+</div>
+</div>
+      <p>A partir destas tabelas, podemos plotar os gráficos das diferenças de distâncias, 2<i>d</i> (cm), medidas em função dos máximos, <i>n</i>, para cada frequência utilizada. Tais gráficos são apresentados nas figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F8"><span class="sci-ico-fileFigure"></span>8</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F9"><span class="sci-ico-fileFigure"></span>9</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F10"><span class="sci-ico-fileFigure"></span>10</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F11"><span class="sci-ico-fileFigure"></span>11</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F12"><span class="sci-ico-fileFigure"></span>12</a>.</p>
+      <div class="row fig" id="S4_F8">
+<a name="S4_F8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/25e2c2961e9e09970eb677d900fdd03f2b4e070a.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 2000 Hz.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="S4_F9">
+<a name="S4_F9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/54c66c1c0b6f03b6066ea654ac399bbea4cf7a00.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 9</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1750 Hz.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="S4_F10">
+<a name="S4_F10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F10"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/76ef49ecdcfe312bb0aaf9c036434fd8640fc9ba.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 10</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1500 Hz.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="S4_F11">
+<a name="S4_F11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F11"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/0585f6870bfca8b29de720a03a997cc8ad7dfe1a.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 11</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1250 Hz.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="S4_F12">
+<a name="S4_F12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F12"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/a64db3faea01abbea289af5c7d5a275937fcf7ab.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 12</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1000 Hz.
+        <br>
+</div>
+</div>
+      <p>A partir dos gráficos é possível afirmar que os dados medidos se ajustam muito bem às linhas de tendência, obtidas por regressão linear, o que pode ser visto pelos valores dos coeficientes de determinação (<i>R</i><sup>2</sup>), que estão muito próximos de 1. Dessa forma, podemos obter os comprimentos de onda λ para cada frequência, comparando as equações das linhas de tendência de cada gráfico com a equação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E2"><span class="sci-ico-fileFormula"></span>2</a>). E uma vez tendo obtido λ e conhecendo a frequência <i>f</i>, podemos determinar a velocidade do som no ar, a partir da equação:</p>
+      <p>
+        <div class="row formula" id="eS4_E3">
+<a name="S4_E3"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(3)</span>
+          <math display="block">
+            <mrow>
+              <mi>v</mi>
+              <mo>=</mo>
+              <mrow>
+                <mi>λ</mi>
+                <mo>⁢</mo>
+                <mi>f</mi>
+              </mrow>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Utilizando a equação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS4_E3"><span class="sci-ico-fileFormula"></span>3</a>), os comprimentos de onda obtidos a partir dos gráficos apresentados nas Figuras <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F8"><span class="sci-ico-fileFigure"></span>8</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F9"><span class="sci-ico-fileFigure"></span>9</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F10"><span class="sci-ico-fileFigure"></span>10</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F11"><span class="sci-ico-fileFigure"></span>11</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F12"><span class="sci-ico-fileFigure"></span>12</a>, e as respectivas frequências para cada comprimento de onda, podemos determinar os valores de velocidade do som no ar para cada frequência. Os resultados para os comprimentos de onda de diferentes frequências e a velocidade do som no ar, juntamente com suas respectivas incertezas, são apresentados na Tabela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTableS4_T6"><span class="sci-ico-fileTable"></span>6</a>.</p>
+      <div class="row table" id="S4_T6">
+<a name="S4_T6"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTableS4_T6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 6</strong><br>
+          Comprimentos de onda para cada frequência e velocidade do som no ar a partir dos valores medidos.
+        <br>
+</div>
+</div>
+      <p>A velocidade do som no ar, obtida através da média dos valores das velocidades de cada frequência, foi de 339 m/s ± 2 m/s, onde a incerteza na medida foi determinada pelo desvio padrão da média.</p>
+      <p>Portanto, concluímos a partir dos dados obtidos que a velocidade do som no ar está de acordo com a literatura [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>8. H.M. Nussenzveig, in Curso de Física Básica 2: Fluidos,Oscilações e Ondas, Calor. (Edgard Blücher, São Paulo, 2002).</span></span></span>], segundo a qual tal velocidade é da ordem de 340 m/s, podendo variar de acordo com a temperatura do ar. O que demonstra que o aparelho é eficiente em estimar com boa precisão os comprimentos de onda para sons de diferentes frequências.</p>
+    
+      <h1 class="articleSectionTitle">5. Considerações finais</h1>
+      <p>O equipamento desenvolvido é de fácil construção e montagem, e utiliza materiais acessíveis e que, em sua maioria, podem ser adquiridos a um baixo custo: tubos de PVC, <i>tês</i> e joelhos, comumente utilizados em encanação, e o sensor KY-038 junto a plataforma Arduino, que podem ser encontrados em lojas especializadas em eletrônica a preços acessíveis. Além disso, como fonte sonora, foi utilizada uma caixa de som simples USB/P2 e um <i>notebook</i>. O código utilizado no Arduino também é simples, o que significa que é necessário apenas um conhecimento básico de programação para realizar sua execução.</p>
+      <p>A simplicidade de montagem e execução do equipamento juntamente com a qualidade dos resultados, que obtiveram precisão significativa, demonstraram que o “tubo de Quincke” construído neste trabalho pode ser utilizado como uma boa ferramenta didática para o estudo da interferência de ondas sonoras.</p>
+    </div>
+<div class="articleSection" data-anchor="References">
+<h1 class="articleSectionTitle">References</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">1.</sup><div> J.G.S.O. Junior, L.M. Gomes, E.R.P. de Novais e F.C.L. Ferreira, Scientia Plena <b>15</b>, 7 (2019).</div>
+</li>
+<li>
+<sup class="xref big">2.</sup><div> H.P. Cordova, <i>Construção de um interferômetro de Michelsone aplicações no ensino de óptica</i> Dissertação de Mestrado,Universidade Federal do Rio de Janeiro, Rio de Janeiro, 2016.</div>
+</li>
+<li>
+<sup class="xref big">3.</sup><div> G.H. Quincke, Annalen der Physik <b>204</b>, 177 (1866).</div>
+</li>
+<li>
+<sup class="xref big">4.</sup><div> N. Villas Bôas. <i>Tópicos de Física</i> (Saraiva, SãoPaulo, 2004) v. 2, p. 264.</div>
+</li>
+<li>
+<sup class="xref big">5.</sup><div> DAS Divisão de Astrofísica, disponível em:http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm<br><a href="http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm" target="_blank">» http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm</a>
+</div>
+</li>
+<li>
+<sup class="xref big">6.</sup><div> G.R. Davies, The Physics Teacher <b>33</b>, 244 (1995).</div>
+</li>
+<li>
+<sup class="xref big">7.</sup><div> W.E. Singer, The Physics Teacher <b>3</b>, 282 (1965).</div>
+</li>
+<li>
+<sup class="xref big">8.</sup><div> H.M. Nussenzveig, in <i>Curso de Física Básica 2: Fluidos,Oscilações e Ondas, Calor</i> (Edgard Blücher, São Paulo, 2002).</div>
+</li>
+<li>
+<sup class="xref big">9.</sup><div> ARDUINO E CIA, disponível em:https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/<br><a href="https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/" target="_blank">» https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/</a>
+</div>
+</li>
+<li>
+<sup class="xref big">10.</sup><div> ARDUINO LEARNING, disponível em:http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php<br><a href="http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php" target="_blank">» http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php</a>
+</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>14 Jul 2021</li>
+<li>
+<strong>Data do Fascículo</strong><br>2021</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>21 Maio 2021</li>
+<li>
+<strong>Revisado</strong><br>16 Jun 2021</li>
+<li>
+<strong>Aceito</strong><br>19 Jun 2021</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png" alt="Creative Common - by 4.0 deed.en"></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Cícero Jailton de Morais Souza </strong><strong>*</strong><br><div>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0002-3714-568X" class="btnContribLinks orcid">http://orcid.org/0000-0002-3714-568X</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Larissa Alexandre da Silva </strong><br><div>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Ibson José Maciel Leite </strong><br><div>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Mário Anonio Alves Monteiro </strong><br><div>Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0003-4516-6031" class="btnContribLinks orcid">http://orcid.org/0000-0003-4516-6031</a></li></ul>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">* Endereço de correspondência: <a href="mailto:cicero.souza@pesqueira.ifpe.edu.br">cicero.souza@pesqueira.ifpe.edu.br</a> </div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (13)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (6)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (3)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/cc1461f576a0c40e4f1c8c99c42b9ba27fd157b2.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Interferência de ondas sonoras.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/87179ecf594be1c2a16d006f53cee331b45e3e70.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Um exemplo “clássico” de um “tubo de Quincke”. Fonte: Davies, G. R. (1995). <i>Deck the Halls: Interference and diffraction corridor demonstrations</i> [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. G.R. Davies, The Physics Teacher 33, 244 (1995).</span></span></span>].
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/0a9477e385e5c9f1db2d084f33a715e95fd56b7f.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          Modelo simplificado do “tubo de Quincke”.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/887ec57ef2b0f4cc56ab24840961d7d4adc757af.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+          Interferômetro acústico (“tubo de Quincke”) construído pelos autores.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/7197018b0580a0dc3a3eb0835ee22ecacf96d0ba.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+          Módulo de som KY-038. Fonte: ARDUINO &amp; CIA [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. ARDUINO E CIA, disponível em:https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/.</span><br><a href="https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/" target="_blank">https://www.arduinoecia.com.br/sensor-de...
+            </a></span></span>].
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/5268a0db2c37344da8562d29cb60d34502633b7c.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+          Conexão do módulo de som KY-038 com o Arduino. Fonte: ARDUINO LEARNING [<span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>10. ARDUINO LEARNING, disponível em:http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php.</span><br><a href="http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php" target="_blank">http://arduinolearning.com/code/ky038-mi...
+            </a></span></span>].
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigF1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/33dc2a7deed96610095b37848a4713b52c49963a.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Quadro 1</strong><br>
+          Código utilizado para leitura de dados do sensor de som.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/aedd9e5fc80ae1fe0e30ada4ee0410e4da785e92.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+          Gráfico dos máximos resultantes da interferência das ondas sonoras gerado automaticamente pela <i>Serial Plotter</i> da IDE do Arduino.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/25e2c2961e9e09970eb677d900fdd03f2b4e070a.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 2000 Hz.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/54c66c1c0b6f03b6066ea654ac399bbea4cf7a00.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1750 Hz.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F10"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/76ef49ecdcfe312bb0aaf9c036434fd8640fc9ba.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 10</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1500 Hz.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F11"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/0585f6870bfca8b29de720a03a997cc8ad7dfe1a.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 11</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1250 Hz.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F12"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/a64db3faea01abbea289af5c7d5a275937fcf7ab.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 12</strong><br>
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1000 Hz.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS4_T1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Resultados das medições para <i><i>f</i><sub>1</sub> = 2000<i>Hz</i></i>.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS4_T2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 2</strong><br>
+          Resultados das medições para <i><i>f</i><sub>2</sub> = 1750<i>Hz</i></i>.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS4_T3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 3</strong><br>
+          Resultados das medições para <i><i>f</i><sub>3</sub> = 1500<i>Hz</i></i>.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS4_T4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 4</strong><br>
+          Resultados das medições para <i><i>f</i><sub>4</sub> = 1250<i>Hz</i></i>.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS4_T5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 5</strong><br>
+          Resultados das medições para <i><i>f</i><sub>5</sub> = 1000<i>Hz</i></i>.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTableS4_T6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 6</strong><br>
+          Comprimentos de onda para cada frequência e velocidade do som no ar a partir dos valores medidos.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2_E1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2_E2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS4_E3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/fa8ffd8e2e96a829188848b41799d55a91c9e16e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Interferência de ondas sonoras.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/fa8ffd8e2e96a829188848b41799d55a91c9e16e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/3a6787b7a9e673554df2097721f3a628a2017bb6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Um exemplo “clássico” de um “tubo de Quincke”. Fonte: Davies, G. R. (1995). <i>Deck the Halls: Interference and diffraction corridor demonstrations</i> [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. G.R. Davies, The Physics Teacher 33, 244 (1995).</span></span></span>].
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/3a6787b7a9e673554df2097721f3a628a2017bb6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/224b52775724da6830d18c9f115dad657c2bd757.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          Modelo simplificado do “tubo de Quincke”.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/224b52775724da6830d18c9f115dad657c2bd757.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/9ff608b897fe7d95e8943ec931acdbe7a3a9f90a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+          Interferômetro acústico (“tubo de Quincke”) construído pelos autores.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/9ff608b897fe7d95e8943ec931acdbe7a3a9f90a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/9c26210929cd9a782313329a1f32fe0258a7ad93.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+          Módulo de som KY-038. Fonte: ARDUINO &amp; CIA [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. ARDUINO E CIA, disponível em:https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/.</span><br><a href="https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/" target="_blank">https://www.arduinoecia.com.br/sensor-de...
+            </a></span></span>].
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/9c26210929cd9a782313329a1f32fe0258a7ad93.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/6bfee20837a325385757871846294bfbe32048e1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+          Conexão do módulo de som KY-038 com o Arduino. Fonte: ARDUINO LEARNING [<span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>10. ARDUINO LEARNING, disponível em:http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php.</span><br><a href="http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php" target="_blank">http://arduinolearning.com/code/ky038-mi...
+            </a></span></span>].
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/6bfee20837a325385757871846294bfbe32048e1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigF1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/af7edb454a2268b1916dbb9f024fb0501ee98e23.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Quadro 1   
+          Código utilizado para leitura de dados do sensor de som.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/af7edb454a2268b1916dbb9f024fb0501ee98e23.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/187eaa1905471b38e9e1c2dcd1a5e1e5d9382b1f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+          Gráfico dos máximos resultantes da interferência das ondas sonoras gerado automaticamente pela <i>Serial Plotter</i> da IDE do Arduino.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/187eaa1905471b38e9e1c2dcd1a5e1e5d9382b1f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/f0584486336a57e84cb0bf79e5efe616d605d9c8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 2000 Hz.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/f0584486336a57e84cb0bf79e5efe616d605d9c8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/f88663f64ea0632574fc05c2b909e4ed042241ee.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1750 Hz.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/f88663f64ea0632574fc05c2b909e4ed042241ee.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/4b138eaa2281503291558589205d22b2bd832baf.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 10   
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1500 Hz.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/4b138eaa2281503291558589205d22b2bd832baf.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/2d7677e472e1f2b53a3895b178eeae11bace807d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 11   
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1250 Hz.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/2d7677e472e1f2b53a3895b178eeae11bace807d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/fd7ff0f7bc0d8c270cdb09ecdc5df4e22cf57216.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 12   
+          Gráfico das diferenças entre as distâncias, <i>2d</i> (cm), em função dos máximos de interferência para uma frequência de 1000 Hz.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/fd7ff0f7bc0d8c270cdb09ecdc5df4e22cf57216.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS4_T1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Resultados das medições para <i><i>f</i><sub>1</sub> = 2000<i>Hz</i></i>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="center" colspan="12" valign="top">
+<i>f</i><sub>1</sub> = 2000<i>Hz</i>
+</th>
+            </tr>
+            <tr>
+              <th align="left" valign="top">
+                <i>n</i>
+              </th>
+              <th align="center" valign="top">1</th>
+              <th align="center" valign="top">2</th>
+              <th align="center" valign="top">3</th>
+              <th align="center" valign="top">4</th>
+              <th align="center" valign="top">5</th>
+              <th align="center" valign="top">6</th>
+              <th align="center" valign="top">7</th>
+              <th align="center" valign="top">8</th>
+              <th align="center" valign="top">9</th>
+              <th align="center" valign="top">10</th>
+              <th align="center" valign="top">11</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">2<i>d</i> (cm)</td>
+              <td align="center" valign="top">11</td>
+              <td align="center" valign="top">28</td>
+              <td align="center" valign="top">46</td>
+              <td align="center" valign="top">63</td>
+              <td align="center" valign="top">82</td>
+              <td align="center" valign="top">100</td>
+              <td align="center" valign="top">118</td>
+              <td align="center" valign="top">134</td>
+              <td align="center" valign="top">152</td>
+              <td align="center" valign="top">170</td>
+              <td align="center" valign="top">187</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS4_T2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 2</strong>    
+          Resultados das medições para <i><i>f</i><sub>2</sub> = 1750<i>Hz</i></i>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="center" colspan="11" valign="top">
+<i>f</i><sub>2</sub> = 1750<i>Hz</i>
+</th>
+            </tr>
+            <tr>
+              <th align="left" valign="top">
+                <i>n</i>
+              </th>
+              <th align="center" valign="top">1</th>
+              <th align="center" valign="top">2</th>
+              <th align="center" valign="top">3</th>
+              <th align="center" valign="top">4</th>
+              <th align="center" valign="top">5</th>
+              <th align="center" valign="top">6</th>
+              <th align="center" valign="top">7</th>
+              <th align="center" valign="top">8</th>
+              <th align="center" valign="top">9</th>
+              <th align="center" valign="top">10</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">2<i>d</i> (cm)</td>
+              <td align="center" valign="top">13</td>
+              <td align="center" valign="top">35</td>
+              <td align="center" valign="top">55</td>
+              <td align="center" valign="top">76</td>
+              <td align="center" valign="top">94</td>
+              <td align="center" valign="top">116</td>
+              <td align="center" valign="top">134</td>
+              <td align="center" valign="top">154</td>
+              <td align="center" valign="top">173</td>
+              <td align="center" valign="top">194</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS4_T3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 3</strong>    
+          Resultados das medições para <i><i>f</i><sub>3</sub> = 1500<i>Hz</i></i>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="center" colspan="9" valign="top">
+<i>f</i><sub>3</sub> = 1500<i>Hz</i>
+</th>
+            </tr>
+            <tr>
+              <th align="left" valign="top">
+                <i>n</i>
+              </th>
+              <th align="center" valign="top">1</th>
+              <th align="center" valign="top">2</th>
+              <th align="center" valign="top">3</th>
+              <th align="center" valign="top">4</th>
+              <th align="center" valign="top">5</th>
+              <th align="center" valign="top">6</th>
+              <th align="center" valign="top">7</th>
+              <th align="center" valign="top">8</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">2<i>d</i> (cm)</td>
+              <td align="center" valign="top">20</td>
+              <td align="center" valign="top">42</td>
+              <td align="center" valign="top">66</td>
+              <td align="center" valign="top">89</td>
+              <td align="center" valign="top">112</td>
+              <td align="center" valign="top">136</td>
+              <td align="center" valign="top">160</td>
+              <td align="center" valign="top">182</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS4_T4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 4</strong>    
+          Resultados das medições para <i><i>f</i><sub>4</sub> = 1250<i>Hz</i></i>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="center" colspan="8" valign="top">
+<i>f</i><sub>4</sub> = 1250<i>Hz</i>
+</th>
+            </tr>
+            <tr>
+              <th align="left" valign="top">
+                <i>n</i>
+              </th>
+              <th align="center" valign="top">1</th>
+              <th align="center" valign="top">2</th>
+              <th align="center" valign="top">3</th>
+              <th align="center" valign="top">4</th>
+              <th align="center" valign="top">5</th>
+              <th align="center" valign="top">6</th>
+              <th align="center" valign="top">7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">2<i>d</i> (cm)</td>
+              <td align="center" valign="top">20</td>
+              <td align="center" valign="top">42</td>
+              <td align="center" valign="top">66</td>
+              <td align="center" valign="top">89</td>
+              <td align="center" valign="top">112</td>
+              <td align="center" valign="top">136</td>
+              <td align="center" valign="top">160</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS4_T5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 5</strong>    
+          Resultados das medições para <i><i>f</i><sub>5</sub> = 1000<i>Hz</i></i>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="center" colspan="6" valign="top">
+<i>f</i><sub>5</sub> = 1000<i>Hz</i>
+</th>
+            </tr>
+            <tr>
+              <th align="left" valign="top">
+                <i>n</i>
+              </th>
+              <th align="center" valign="top">1</th>
+              <th align="center" valign="top">2</th>
+              <th align="center" valign="top">3</th>
+              <th align="center" valign="top">4</th>
+              <th align="center" valign="top">5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">2<i>d</i> (cm)</td>
+              <td align="center" valign="top">33</td>
+              <td align="center" valign="top">70</td>
+              <td align="center" valign="top">104</td>
+              <td align="center" valign="top">138</td>
+              <td align="center" valign="top">174</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTableS4_T6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 6</strong>    
+          Comprimentos de onda para cada frequência e velocidade do som no ar a partir dos valores medidos.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table cellpadding="5" cellspacing="5" frame="hsides" rules="groups">
+          <thead>
+            <tr>
+              <th align="left" valign="top">
+<i>f</i> (Hz)</th>
+              <th align="center" valign="top">λ (cm)</th>
+              <th align="center" valign="top">±<i>σ</i><sub><i>λ</i></sub> (cm)</th>
+              <th align="center" valign="top">
+<i>v</i> (m/s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">2000</td>
+              <td align="center" valign="top">16,8</td>
+              <td align="center" valign="top">0,2</td>
+              <td align="center" valign="top">336</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">1750</td>
+              <td align="center" valign="top">19,2</td>
+              <td align="center" valign="top">0,1</td>
+              <td align="center" valign="top">336</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <i>1500</i>
+              </td>
+              <td align="center" valign="top">22, 6</td>
+              <td align="center" valign="top">0,2</td>
+              <td align="center" valign="top">339</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <i>1250</i>
+              </td>
+              <td align="center" valign="top">27, 2</td>
+              <td align="center" valign="top">0,1</td>
+              <td align="center" valign="top">340</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">
+                <i>1000</i>
+              </td>
+              <td align="center" valign="top">34, 7</td>
+              <td align="center" valign="top">0,2</td>
+              <td align="center" valign="top">347</td>
+            </tr>
+            <tr>
+              <td align="center" colspan="4" valign="top">
+<i>v</i> = 339m/s±2m/s</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2_E1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+          <mrow>
+            <mrow>
+              <mn>2</mn>
+              <mo>⁢</mo>
+              <mi>d</mi>
+            </mrow>
+            <mo>=</mo>
+            <mrow>
+              <mi>n</mi>
+              <mo>⁢</mo>
+              <mi>λ</mi>
+            </mrow>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2_E2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+          <mrow>
+            <mi>λ</mi>
+            <mo>=</mo>
+            <mstyle displaystyle="true">
+              <mfrac>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>⁢</mo>
+                  <mi>d</mi>
+                </mrow>
+                <mi>n</mi>
+              </mfrac>
+            </mstyle>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS4_E3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mi>v</mi>
+              <mo>=</mo>
+              <mrow>
+                <mi>λ</mi>
+                <mo>⁢</mo>
+                <mi>f</mi>
+              </mrow>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'de Morais Souza, Cícero Jailton et al. Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino. Revista Brasileira de Ensino de Física [online]. 2021, v. 43 [Acessado CURRENTDATE] , e20210191. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2021-0191&gt;. Epub 14 Jul 2021. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2021-0191.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino&#34; &#34;de Morais Souza, Cícero Jailton&#34; &#34;da Silva, Larissa Alexandre&#34; &#34;Leite, Ibson José Maciel&#34; &#34;Monteiro, Mário Anonio Alves&#34; &#34;2021&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino&#34; &#34;de Morais Souza, Cícero Jailton&#34; &#34;da Silva, Larissa Alexandre&#34; &#34;Leite, Ibson José Maciel&#34; &#34;Monteiro, Mário Anonio Alves&#34; &#34;2021&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/XV9bLmJgSZ48MJJfLVvpzmk/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172021000100461&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2021-0191" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2021-0191">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2021-0191" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2021-0191">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2021-0191"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2021-0191" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2021-0191">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2021-0191" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2021-0191">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

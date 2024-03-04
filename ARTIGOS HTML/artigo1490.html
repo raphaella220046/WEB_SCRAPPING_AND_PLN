@@ -1,0 +1,2681 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Experimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino Experimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Experimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino"/>
+<meta property="og:description" content="Resumo Ao corrigir relatórios sobre o experimento de Young, de três turmas de graduandos em..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Admiral, Tiago Destéffani">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal Fluminense">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0002-3829-5778">
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="42"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2020-0139"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Experimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Resumo Ao corrigir relatórios sobre o experimento de Young, de três turmas de graduandos em Física, observou-se que sistematicamente os erros relacionados às medidas se concentravam nas medidas entre as franjas de difração. Essas medidas são sempre suscetíveis à sensibilidade do olho humano, exigindo certa experiência e cuidado. Este artigo descreve uma alternativa metodológica experimental e de baixo custo, para realizar o experimento de difração automatizado com Arduino. A metodologia permitiu-nos não apenas calcular a espessura de um fio de cabelo, com erro estimado de 3%, como também visualizar graficamente a distribuição de intensidade luminosa por meio de gráficos ao longo de todo espectro de difração, algo impossível sem o recurso utilizado."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2020-09-02"></meta>
+<meta name="citation_keywords" content="Difração"></meta><meta name="citation_keywords" content="Experimento de Young"></meta><meta name="citation_keywords" content="Arduino"></meta><meta name="citation_keywords" content="Ensino de Física"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2020.v42/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2020.v42/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172020000100627 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 42 <span class="_separator"> • </span>2020</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2020-0139" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2020-0139</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0139"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Experimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Light diffraction experiment using fully automated data collection by Arduino</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Tiago Destéffani Admiral </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Instituto Federal Fluminense, Campos dos Goytacazes, RJ, BrasilUniversidade Estadual do Norte Fluminense, Campos dos Goytacazes, RJ, Brasil<div class="corresp">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:tdesteffani@gmail.com">tdesteffani@gmail.com</a>.</div>
+<a href="http://orcid.org/0000-0002-3829-5778" class="btnContribLinks orcid">http://orcid.org/0000-0002-3829-5778</a>
+</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre o autor</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumo">
+<h1 class="articleSectionTitle">Resumo</h1>
+<p>Ao corrigir relatórios sobre o experimento de Young, de três turmas de graduandos em Física, observou-se que sistematicamente os erros relacionados às medidas se concentravam nas medidas entre as franjas de difração. Essas medidas são sempre suscetíveis à sensibilidade do olho humano, exigindo certa experiência e cuidado. Este artigo descreve uma alternativa metodológica experimental e de baixo custo, para realizar o experimento de difração automatizado com Arduino. A metodologia permitiu-nos não apenas calcular a espessura de um fio de cabelo, com erro estimado de <i>3</i>%, como também visualizar graficamente a distribuição de intensidade luminosa por meio de gráficos ao longo de todo espectro de difração, algo impossível sem o recurso utilizado.</p>
+<p><strong>Palavras-chave:</strong><br>Difração; Experimento de Young; Arduino; Ensino de Física</p>
+</div>
+<div class="articleSection" data-anchor="Abstract">
+<h1 class="articleSectionTitle">Abstract</h1>
+<p>During the correction of reports on Young's experiment, from three classes of undergraduate physics students, it was observed that systematically the errors related to the measurements were concentrated in the measurements between the diffraction fringes. These measures are always susceptible to the sensitivity of the human eye, requiring some experience and care. This article describes an experimental, low-cost methodological alternative to perform the diffraction experiment, automated with Arduino. The methodology allowed us not only to calculate the thickness of a hair, with an estimated error of 3%, but also to graphically visualize the distribution of luminous intensity by means of graphs throughout the diffraction spectrum, something impossible without the resource used.</p>
+<p><strong>Keywords:</strong><br>Diffraction; Young's experiment; Arduino; Physics Teaching</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>A abordagem de experimentos de física, como difração da luz, em vários níveis, tem sido alvo de estudos há bastante tempo. Vários trabalhos <span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] M.A. Cavalcante, V. Jardim e J.A.A. Barros, Cad. Catarinense de Ens. de Física 16, 362 (1999).</span></span></span> <span class="ref"><strong class="xref xrefblue">[2]</strong><span class="refCtt closed"><span>[2] N.M.D. Garcia e H.J. Kalinowski, Cad. Catarinense de Ens. de Física 11, 240 (1994).</span></span></span> <span class="ref"><strong class="xref xrefblue">[3]</strong><span class="refCtt closed"><span>[3] H.J. Kalinowski e N.M.D. Garcia, Cad. Catarinense de Ens. de Física 7, 64 (1990).</span></span></span> <span class="ref"><strong class="xref xrefblue">[4]</strong><span class="refCtt closed"><span>[4] E.M. Lopes e C.E. Laburú, Cad. Brasileiro de Ens. de Física 21, 258 (2004).</span></span></span> trazem propostas interessantes e viáveis para realizar experimentos similares, a maioria dos quais com propostas de baixo custo. É crescente o número de trabalhos <span class="ref"><strong class="xref xrefblue">[5]</strong><span class="refCtt closed"><span>[5] P. Oliveira, E. Júnior, B. Souza, F. Prêmoli, G. Martini e R. Martini, ScientiaTec: Rev. de Educação, Ciência e Tecnologia do IFRS 6, 90 (2019).</span></span></span> que mostram a eficácia de arranjos experimentais com boa precisão para fins didáticos e de fácil utilização.</p>
+      <p>No que diz respeito à execução dos experimentos, em particular o experimento de Young, os trabalhos encontrados na literatura são bastante similares, especialmente nos métodos de coleta de dados. Entretanto ao corrigir roteiros experimentais de alunos de licenciatura em Física ficou evidenciado, pelo menos nas três turmas observadas, que a principal fonte de erros do experimento de Young estava associada à medida entre as franjas de difração. A aferição dessa medida envolve um cuidado especial para identificar as nuances do decrescimento da intensidade luminosa e delimitar exatamente a região clara e escura. No experimento para medir a largura da fenda, 17 de 21 alunos encontraram valores com erro estimado na ordem de 10%.</p>
+      <p>Além da preocupação com a execução em si, o experimento deve ser planejado para evidenciar a verdadeira natureza dos fenômenos. É sabido <span class="ref"><strong class="xref xrefblue">[6]</strong><span class="refCtt closed"><span>[6] L.A. Souza, L. Silva, J.A. Huguenin e O.W.F. Balthazar, Rev. Bras. de Ens. de Física 37, 4311 (2015).</span></span></span> que a representação semiótica de raios luminosos como retas paralelas, embora sejam aproximações válidas para frentes de ondas planas, pode criar no aluno uma compreensão geométrica que dificulta a visualização da natureza ondulatória da luz. De forma similar podemos <span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] V.C. Barbosa, A.M.S. Breitschaft, J.P.R. Mendonça, L.M. Moreira e P.C.G. Moraes, Rev. Bras. de Ens. de Física 34, 1 (2012).</span></span></span> chamar atenção para o fato de que a compreensão do conceito de difração não é trivial. De acordo com os autores o assunto pode ser abordado com várias formas de complexidade, dependendo do nível de ensino.</p>
+      <p>Com a detecção de intensidade luminosa através de um LDR podemos tanto mensurar de forma precisa as distâncias entre os máximos e mínimos na franja de difração em tempo real, quanto visualizar de forma gráfica a distribuição de intensidades do espectro de difração, trazida pelos livros didáticos, e relacioná-la com o fenômeno da difração melhorando a compreensão fenomenológica. Vale ressaltar que é importante que o aluno possua a habilidade de realizar essas medidas, entretanto o aparato descrito nesse artigo pode fornecer uma opção viável para visualizar informações além das tradicionalmente mensuradas em laboratório a olho nu.</p>
+      <p>Por fim a escolha do Arduino para automatizar a coleta de dados está fundamentada em trabalhos <span class="ref"><strong class="xref xrefblue">[8]</strong><span class="refCtt closed"><span>[8] J.M. Cardoso e M. Zannin, Rev. Bras. Ensino Física 41, 28 (2019).</span></span></span> <span class="ref"><strong class="xref xrefblue">[9]</strong><span class="refCtt closed"><span>[9] E. Buksman, A.L.F. Oliveira, L. Barbieri e C. Ferreira, Rev. Bras. de Ens. de Física 41, 356 (2019).</span></span></span> <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] T.R. Barros e W.S. Dias. Rev. Bras. Ensino Física 41, 276 (2019).</span></span></span> que mostram, cada vez mais, sua versatilidade e aplicabilidade como um recurso no laboratório de física. Podemos perceber que, cada vez mais, aparecem experiências de ensino bem sucedidas utilizando essa plataforma. Isso pode ser explicado pela grande facilidade de acesso, tanto sob o aspecto financeiro quanto em relação às informações disponíveis para a utilização do Arduino. O fato de tanto o <i>software</i> quanto o <i>hardware</i> serem livres ajuda o compartilhamento de informações sobre conexões e programação. Esses são alguns fatores que contribuem para um interesse cada vez maior nessa tecnologia.</p>
+    
+      <h1 class="articleSectionTitle">2. Materiais e Métodos</h1>
+      <p>Os materiais utilizados no aparato experimental são os seguintes:</p>
+      <ol type="1">
+<li>
+          <p>1 Placa Arduino Uno;</p>
+        </li>
+<li>
+          <p>1 resistor de <math><mn>1</mn><mi>k</mi><mi mathvariant="normal">Ω</mi><mspace width="thinmathspace"></mspace><mo stretchy="false">(</mo><mn>1</mn><mrow><mo>/</mo></mrow><mn>4</mn><mi>W</mi><mo stretchy="false">)</mo></math>;</p>
+        </li>
+<li>
+          <p>1 Laser monocromático<math><mo stretchy="false">(</mo><mi>λ</mi><mo>=</mo><mn>650</mn><mspace width="thinmathspace"></mspace><mi>n</mi><mi>m</mi><mspace width="thinmathspace"></mspace><mo>±</mo><mspace width="thinmathspace"></mspace><mn>20</mn><mi>n</mi><mi>m</mi><mo stretchy="false">)</mo></math> </p>
+        </li>
+<li>
+          <p>1 vara rosqueada <math><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mspace width="thinmathspace"></mspace><mi>m</mi><mo stretchy="false">)</mo></math>;</p>
+        </li>
+<li>
+          <p>3 porcas <math><mo stretchy="false">(</mo><mn>15</mn><mi>m</mi><mi>m</mi><mo stretchy="false">)</mo></math>;</p>
+        </li>
+<li>
+          <p>1 LDR;</p>
+        </li>
+<li>
+          <p>Parafusadeira;</p>
+        </li>
+<li>
+          <p>Madeira e parafusos (para estrutura).</p>
+        </li>
+</ol>
+      <p>Inicialmente fornecemos uma visão geral do experimento e, nas seções seguintes é explicada cada parte separadamente. A montagem do aparato experimental, ilustrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>, consiste em um feixe de laser incidindo em um fio de cabelo e causando difração. A uma distância conhecida <i>x</i>, posiciona-se o conjunto detector alinhado ao padrão de difração, que faz a varredura horizontal com o sensor LDR.</p>
+      <p>Como se pode observar no esquema da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a> a diferença principal do arranjo experimental é o conjunto detector, que automatiza a aquisição dos dados. O laser utilizado foi retirado de um <i>laserpoint</i> que estava com a parte externa danificada e foi colocado em um suporte, do tipo morsa, para que fosse nivelado adequadamente para o experimento. Foram soldados dois fios para a alimentação do laser, um fio vermelho para o polo positivo e um fio marrom para o negativo, e a alimentação externa foi feita com duas pilhas tipo AA, totalizando <i>3,0V</i>.O conjunto do laser é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>.</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/4ccbf593f3e5c389768b96209ce2ad37065af5bf.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Perspectiva superior do esquema geral do aparato experimental, à direita o laser alinhado ao obstáculo e à direita o conjunto detector.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/8c2f3f8a4bb34e7739404c4f2bfcd160373d4e5e.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Conjunto do laser montado na morsa, à direita o suporte para a alimentação com duas pilhas tipo AA.
+        <br>
+</div>
+</div>
+      <p>O obstáculo consistiu em um fio de cabelo, na posição vertical, segurado por um suporte auxiliar. Esse suporte é específico para fixar partes pequenas de circuitos eletrônicos para o auxílio de soldagem. Ele possui garras de fixação que podem ser ajustadas para melhor alinhamento do objeto preso. O suporte é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a>.</p>
+      <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/0a716b279b260692a812d83f949f5c8dbbbb6fc2.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          Suporte com garras para a fixação do fio de cabelo.
+        <br>
+</div>
+</div>
+      <p>Durante o experimento, para melhor resultado de fixação, as garras do suporte foram envoltas por uma camada de fita isolante, o que ajudou a melhorar a fixação às garras de metal. Caracterizado, de maneira geral, o laser emissor, passamos ao conjunto detector.</p>
+      
+        <h2>2.1. Conjunto detector</h2>
+        <p>O conjunto detector consiste em dois suportes feitos de madeira, conectados por uma peça de madeira. Esses suportes são furados para que uma vara rosqueada seja colocada dentro dos furos de ambos os lados e gire livremente em torno do eixo paralelo ao seu maior comprimento. Em um dos suportes é posicionado um motor DC acoplado à vara rosqueada, que a fará a mesma girar. Em nosso experimento foi utilizado uma parafusadeira.</p>
+        <p>Alternativamente pode ser utilizado qualquer motor DC, inclusive os utilizados em brinquedos, entretanto a escolha da parafusadeira ocorreu pela uniformidade na velocidade de rotação que, conforme veremos, é imprescindível para melhorar a precisão do experimento. A parafusadeira utilizada não possui diferenciação de velocidades no acionamento do gatilho. Desse modo sempre que se aciona o gatilho, a velocidade de rotação é a mesma, esse é um fator importante na escolha do equipamento. Ao escolher a utilização de um motor DC qualquer deve-se tomar medidas para controlar a velocidade de rotação, preferencialmente com a inclusão de um circuito de controle PWM (<i>Pulse With Modulation</i>).</p>
+        <p>Entre os dois suportes foi montado o sensor de luminosidade, acoplado a duas porcas que, com o giro da vara rosqueada, se movimentam juntas para esquerda ou direita, dependendo do sentido de giro do motor DC. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a> mostra-se uma foto do conjunto detector:</p>
+        <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/4b4b77f3c5b23e05d15bc75423ab2ac4c95d4e5e.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+            Conjunto detector, responsável por movimentar horizontalmente o sensor para a varredura da figura de difração.
+          <br>
+</div>
+</div>
+        <p>Para a realização das medidas a parafusadeira foi acoplada à vara rosqueada, conforme mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a>. Para acoplarmos a parafusadeira à vara rosqueada fixamos uma porca, com cola quente, na extremidade da vara e, junto a esta, outra porca menor que pudesse ser encaixada diretamente ao bico da parafusadeira. A segunda porca foi adicionada para permitir a utilização do bico que já estava disponível; porém, é possível encaixar o bico diretamente na porca caso já possua o tamanho adequado. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a>, mostram-se tanto o detalhe da conexão quanto o detalhe do Arduino.</p>
+        <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/fa383e86cb660689a61927c323ada4ad44f39a23.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+            Parafusadeira acoplada à vara rosqueada, à direita a placa Arduino parafusada na madeira e com os fios conectados ao sensor.
+          <br>
+</div>
+</div>
+        <p>Como o bico utilizado no experimento possui um pequeno ímã, percebe-se uma grande estabilidade do acoplamento parafusadeira/vara, o que facilitou as medidas. Pelo fato de o parafuso estar diretamente em contato com a madeira surgiu a preocupação de um eventual problema com atrito, mas, devido ao torque considerável da parafusadeira <math><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>0</mn><mspace width="thinmathspace"></mspace><mi>N</mi><mi>m</mi><mo stretchy="false">)</mo></math> isso não afetou a velocidade de rotação da mesma, dispensando a necessidade de lubrificação dos furos da madeira. A parafusadeira utilizada é relativamente simples, funciona com bateria interna de <math><mn>4</mn><mo>,</mo><mn>8</mn><mi>V</mi></math>, possui seletores de torque que, em nosso experimento, foi mantido no máximo. Seu eixo de encaixe rápido tem diâmetro de 1/4″, e sua velocidade de rotação é de <math><mn>200</mn><mi>r</mi><mi>p</mi><mi>m</mi></math>, de acordo com especificações do fabricante.</p>
+      
+      
+        <h2>2.2. O sensor</h2>
+        <p>A construção do sensor é baseada no funcionamento do LDR (<i>Light Dependent Resistor</i>), que consiste em um resistor cuja resistência elétrica varia linearmente com a intensidade luminosa incidente. Quanto maior a intensidade da luz incidente, melhor condutor se torna o LDR e, consequentemente menor sua resistência elétrica, e vice versa. O comportamento do LDR utilizado está especificado no <i>datasheet</i> do componente. No <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiggr1"><span class="sci-ico-fileFigure"></span>Gráfico 1</a>, ilustra-se a relação entre resistência elétrica e luminosidade incidente do LDR:</p>
+        <div class="row fig" id="gr1">
+<a name="gr1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFiggr1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/6c2330e6e9cd533dbbc6bcba1d23064b08760a6b.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Gráfico 1</strong><br>
+            Resistência elétrica <i>versus</i> luminosidade incidente no LDR.
+          <br>
+</div>
+</div>
+        <p>No caso do LDR utilizado nesse experimento a medida da sua resistência elétrica mínima (com incidência direta do laser) foi <math><mn>0</mn><mo>,</mo><mn>01</mn><mi mathvariant="normal">Ω</mi></math>, e a medida de sua resistência elétrica máxima (totalmente coberto) foi <math><mn>1020</mn><mi>k</mi><mi mathvariant="normal">Ω</mi></math>.</p>
+        <p>O LDR utilizado possui uma abertura de <math><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>215</mn><mo>±</mo><mn>0</mn><mo>,</mo><mn>005</mn><mo stretchy="false">)</mo><mi>m</mi><mi>m</mi></math>, modelo com menor área encontrado. Essa escolha justifica-se pelo fato de a resolução do componente ser maior. Na curva de sensibilidade relativa, mostrada no <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiggr2"><span class="sci-ico-fileFigure"></span>Gráfico 2</a>, podemos observar que o componente possui o máximo de sensibilidade à luz com comprimento de onda de aproximadamente <math><mn>550</mn><mspace width="thinmathspace"></mspace><mi>n</mi><mi>m</mi></math>. Como o laser disponível para o experimento possui comprimento de onda de <math><mo stretchy="false">(</mo><mn>650</mn><mo>±</mo><mn>20</mn><mo stretchy="false">)</mo><mspace width="thinmathspace"></mspace><mi>n</mi><mi>m</mi></math> esperamos uma resposta menos acentuada no LDR Sendo assim, foi necessário realizar o experimento com a sala completamente fechada, para garantir que a variação de resistência fosse causada exclusivamente pela incidência do laser.</p>
+        <div class="row fig" id="gr2">
+<a name="gr2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFiggr2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/a1924e44d5c85659739097ce4233f1faa64b7574.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Gráfico 2</strong><br>
+            Sensibilidade relativa do LDR.
+          <br>
+</div>
+</div>
+        <p>O sensor foi construído para que o Arduino lesse a variação de tensão na saída durante a varredura horizontal do LDR. Para ajustar a sensibilidade o LDR foi montado com um circuito conhecido como divisor de tensão, mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>:</p>
+        <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/b956ede412ab8db69c0d71eaf9169417ef07ef1c.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+            Circuito do sensor utilizado no experimento.
+          <br>
+</div>
+</div>
+        <p>Analisando a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a> é fácil perceber que a tensão de saída é dada pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq1"><span class="sci-ico-fileFormula"></span>Equação 1</a>:</p>
+        <div class="row formula" id="eeq1">
+<a name="eq1"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(1)</span>
+          <math display="block">
+            <msub>
+              <mi>v</mi>
+              <mrow>
+                <mi>S</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mrow>
+              <mo>(</mo>
+              <mn>5.</mn>
+              <mfrac>
+                <mn>10.000</mn>
+                <mrow>
+                  <msub>
+                    <mi>R</mi>
+                    <mrow>
+                      <mi>L</mi>
+                      <mi>D</mi>
+                      <mi>R</mi>
+                    </mrow>
+                  </msub>
+                  <mo>+</mo>
+                  <mn>10.000</mn>
+                </mrow>
+              </mfrac>
+              <mo>)</mo>
+            </mrow>
+            <mi>V</mi>
+          </math>
+        </div></div>
+</div>
+        <p>Dessa forma sabemos que se a resistência elétrica apresentada pelo LDR for muito próxima de zero (alta intensidade de luz) a tensão de saída será muito próxima <math><mspace width="thinmathspace"></mspace><mn>5</mn><mo>,</mo><mn>0</mn><mi>V</mi></math>. Já se o valor da resistência elétrica do LDR tiver um valor muito maior ao valor do resistor fixo <math><mo stretchy="false">(</mo><mn>10</mn><mi>k</mi><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></math> então a tensão de saída será mais próxima de zero.</p>
+        <p>Para acoplarmos o sensor à vara rosqueada usamos um pedaço pequeno de madeira, no qual o LDR foi colado. Na parte inferior do pedaço de madeira colamos duas porcas, uma ao lado da outra, as quais foram colocadas na vara rosqueada, a fim de que, quando a vara girasse, todo conjunto detector se deslocaria lateralmente. Foi colado sob a peça de madeira um pequeno pedaço de metal que foi dobrado de forma a encaixar sobre a madeira paralela à vara rosqueada, que funcionou como apoio para estabilizar possíveis oscilações do sistema. Foi utilizada cola quente em todos os procedimentos de colagem, o sensor é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Figura 7</a>:</p>
+        <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/7fa4d85f320719993e0ae64fdaad413378287073.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+            (a) Sensor montado no conjunto detector, como utilizado na coleta de dados. (b) Visão lateral do sensor, fora do conjunto detector.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>2.3. O Arduino</h2>
+        <p>O último componente do conjunto detector é a placa Arduino Uno. O Arduino é uma placa de desenvolvimento <i>open source</i> que pode interagir por meio de sensores específicos, lendo variáveis como temperatura, intensidade sonora, intensidade luminosa, pressão, distância entre outras <span class="ref"><strong class="xref xrefblue">[11]</strong><span class="refCtt closed"><span>[11] A. Souza, A. Paixão, D. Uzêda, M. Dias, D. Duarte e H. Amorim. Rev. Brasileira de Ens. de Física 33, 1702 (2011).</span></span></span>. Embora a placa utilizada nesse projeto seja a Uno, qualquer outra placa da família Arduino seria capaz de realizar essa leitura.</p>
+        <p>As conexões com o Arduino são apenas três, e os três fios que saem do circuito mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>: <i>5V</i>, Gnd e Sinal são conectados, respectivamente, ao pino <i>5V</i>, Gnd e <i>A0</i> do Arduino Uno. Ao carregar na placa o programa mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a> e fazer as conexões, o sensor está pronto.</p>
+        <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/5a9f2039dd7bea74bf9341207494841979a41899.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+            Programação do sensor no Arduino.
+          <br>
+</div>
+</div>
+        <p>Todo material apresentado até aqui, exceto as ferramentas utilizadas e a parafusadeira que pode ser substituída, possui um custo estimado que pode ser obtido em sites de venda ou lojas de componentes eletrônicos. Em média os valores encontrados são estes: Arduino UNO (R$35,00); LDR (R$0,50); Resistor 1k <math><mi mathvariant="normal">Ω</mi></math> (R$2,00); Laser (R$15,00); Vara rosqueada com porcas (R$6,50), esse material essencial soma, em média R$60,00. Os demais como fios, madeira, parafusos e pregos apresentam pouco custo e podem ser inclusive reaproveitados de outros objetos.</p>
+      
+      
+        <h2>2.4. Difração em fenda única</h2>
+        <p>Para o cálculo da largura da fenda no experimento de Young usamos a previsão teórica conhecida <span class="ref"><strong class="xref xrefblue">[12]</strong><span class="refCtt closed"><span>[12] F.W. Sears, M.W. Zemansky, H.D. Young e R.A. Freedman, Física IV (Pearson Addison Wesley, São Paulo, 2008), 12ª ed., v.4.</span></span></span> pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>Equação 2</a>, para relacionar os pontos de máximos:</p>
+        <div class="row formula" id="eeq2">
+<a name="eq2"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(2)</span>
+          <math display="block">
+            <mi>m</mi>
+            <mi>λ</mi>
+            <mo>=</mo>
+            <mi>a</mi>
+            <mspace width="thinmathspace"></mspace>
+            <mi>s</mi>
+            <mi>e</mi>
+            <mi>n</mi>
+            <mi>θ</mi>
+          </math>
+        </div></div>
+</div>
+        <p>Em que <math><mi>λ</mi></math> corresponde ao comprimento de onda, <i>a</i> corresponde àdimensão do obstáculo ou da fenda simples, <math><mi>θ</mi></math> corresponde ao ângulo de difração e <i>m</i> é a ordem da difração observada. Embora a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>Equação 2</a> seja usada no experimento de Young, pelo princípio de Babinet <span class="ref"><strong class="xref xrefblue">[13]</strong><span class="refCtt closed"><span>[13] H.M. Nussenzveig, Curso de Física Básica (Editora Edgard Blucher, São Paulo, 2000), v.2.</span></span></span>, sabemos que a figura de difração de um obstáculo possuirá uma figura de difração idêntica. Por isso usaremos a mesma equação para calcular a espessura de um fio de cabelo.</p>
+        <p>De forma geral o fenômeno de difração pode ser classificado de duas maneiras, classificação que leva em conta as distâncias entre a fonte emissora e o obstáculo e também entre o obstáculo e o anteparo de observação das franjas. Na situação em que essas distâncias não são tão grandes ocorre a difração de campo próximo, também chamada de difração de Fresnel. Já no caso em que essas distâncias são suficientemente grandes para que consideremos as ondas incidente e refratada como ondas planas, ocorrerá a difração de campo distante, também conhecida como difração de Fraunhofer<span class="ref"><strong class="xref xrefblue">[14]</strong><span class="refCtt closed"><span>[14] D.M. Reis, E.M. Santos e A.V. Andrade-Neto, Revista Bras. de Ens. de Física 37, 2 (2015).</span></span></span>.</p>
+        <p>Em nossa abordagem utilizamos o padrão de difração de Fraunhofer, que é usualmente utilizado no contexto da disciplina ministrada, e frequentemente abordado em livros textos de física básica <span class="ref"><strong class="xref xrefblue">[14]</strong><span class="refCtt closed"><span>[14] D.M. Reis, E.M. Santos e A.V. Andrade-Neto, Revista Bras. de Ens. de Física 37, 2 (2015).</span></span></span>. Além de ser compatível com a metodologia utilizada na obtenção dos dados.</p>
+        <p>A definição das variáveis é ilustrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Figura 9</a>, considerando como <b><i>x</i></b>a distância entre o obstáculo e o anteparo e <b><i>y</i></b> a distância entre o centro de dois máximos consecutivos:</p>
+        <div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/8d55fd798e3adbfb929f5c6dbeffaa1592c9c784.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 9</strong><br>
+            Figura de difração visível e distribuição de intensidade prevista teoricamente.
+          <br>
+</div>
+</div>
+        <p>Adotando os parâmetros estabelecidos, podemos escrever o termo <math><mi>s</mi><mi>e</mi><mi>n</mi><mspace width="thinmathspace"></mspace><mi>θ</mi></math> de acordo com a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq3"><span class="sci-ico-fileFormula"></span>Equação 3</a>:</p>
+        <div class="row formula" id="eeq3">
+<a name="eq3"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(3)</span>
+          <math display="block">
+            <mi>s</mi>
+            <mi>e</mi>
+            <mi>n</mi>
+            <mspace width="thinmathspace"></mspace>
+            <mi>θ</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mi>y</mi>
+              <msqrt>
+                <msup>
+                  <mi>x</mi>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <msup>
+                  <mi>y</mi>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+              </msqrt>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+        <p>Vale ressaltar que a validade desses parâmetros deve estar de acordo com o limite de Fraunhofer. Em nossos testes utilizamos medidas <math><mspace width="thinmathspace"></mspace><mrow><mo>(</mo><mi>x</mi><mspace width="thinmathspace"></mspace><mo>&gt;&gt;</mo><mi>λ</mi><mo>)</mo></mrow></math> com ordem de grandeza que garantiram essa validade. Como mencionado anteriormente, para valores pequenos de <i>x</i> e <i>y</i>, ocorreria a difração de Fresnel. Ao simplificar <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq3"><span class="sci-ico-fileFormula"></span>(3)</a> e substituí-la em <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>(2)</a> e, isolando para a espessura <i>a</i>, temos a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq4"><span class="sci-ico-fileFormula"></span>Equação 4</a>:</p>
+        <div class="row formula" id="eeq4">
+<a name="eq4"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(4)</span>
+          <math display="block">
+            <mi>a</mi>
+            <mo>=</mo>
+            <mi>m</mi>
+            <mi>λ</mi>
+            <msqrt>
+              <mn>1</mn>
+              <mo>+</mo>
+              <msup>
+                <mrow>
+                  <mo>(</mo>
+                  <mfrac>
+                    <mi>x</mi>
+                    <mi>y</mi>
+                  </mfrac>
+                  <mo>)</mo>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </msqrt>
+          </math>
+        </div></div>
+</div>
+        <p>Em nosso experimento a medida do parâmetro <i>x</i> foi feita de forma direta, enquanto as distâncias <i>y</i> foram obtidas por meio do sistema automatizado.</p>
+      
+    
+      <h1 class="articleSectionTitle">3. Resultados e Discussões</h1>
+      <p>Para determinar de forma autônoma o parâmetro <i>y</i> foi necessário primeiramente determinar a velocidade de deslocamento do sensor. Para determinar essa velocidade, foi utilizada uma régua para fazer marcações de posição na peça de madeira, espaçadas igualmente a cada <i>10,0cm</i>. A estratégia de utilizar trechos diferentes baseou-se na necessidade de garantir que, em todos os trechos da vara rosqueada, a velocidade de deslocamento seria a mesma. Foram realizadas 12 medidas, em que se cronometrou o tempo de percurso do trecho demarcado. Como a velocidade média do sensor apresentou valor muito baixo, o erro associado ao tempo de reação não representou um desvio significativo das médias das medidas. Em todas as medidas a parafusadeira foi acionada sob as mesmas condições, e, como não possui variador de velocidade no gatilho, qualquer acionamento resultou na mesma taxa de rotação. Os valores das medidas são apresentados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela 1</a>.</p>
+      <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Valores obtidos para a medida da velocidade do sensor.
+        <br>
+</div>
+</div>
+      <p>De acordo com a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela 1</a>, o valor médio obtido para a velocidade foi <math><mn>0</mn><mo>,</mo><mn>45</mn><mspace width="thinmathspace"></mspace><mi>c</mi><mi>m</mi><mrow><mo>/</mo></mrow><mi>s</mi></math>,com desvio padrão médio <math><mi>σ</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>013</mn><mspace width="thinmathspace"></mspace><mi>c</mi><mi>m</mi><mrow><mo>/</mo></mrow><mi>s</mi></math> Baseado nesses parâmetros estabelecemos o valor da velocidade como <math><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>45</mn><mo>±</mo><mn>0</mn><mo>,</mo><mn>01</mn><mo stretchy="false">)</mo><mspace width="thinmathspace"></mspace><mi>c</mi><mi>m</mi><mrow><mo>/</mo></mrow><mi>s</mi></math> </p>
+      <p>Conforme podemos observar na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a>, a função <i>delay</i> do Arduino foi programada com o valor (100), como esse valor é dado em milissegundos, isso significa que o intervalo de tempo entre as medidas do sensor é de <math><mn>0</mn><mo>,</mo><mn>100</mn><mi>s</mi></math>. Não foi considerado o erro acumulado devido ao tempo da leitura em si, isso porque o Arduino uno é capaz <span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+        
+          <a href="https://www.arduino.cc/reference/pt/language/functions/analog-io/analogread/" target="_blank">https://www.arduino.cc/reference/pt/language/functions/analog-io/analogread/</a>
+        
+      </span></span></span> de fazer cada leitura analógica em <math><mn>100</mn><mspace width="thinmathspace"></mspace><mi>μ</mi><mi>s</mi></math>, valor muito menor que o erro obtido na medida da velocidade do sensor. No experimento o valor obtido pela medida direta da distância <i>x</i> foi <math><mo stretchy="false">(</mo><mn>100</mn><mo>,</mo><mn>02</mn><mo>±</mo><mn>0</mn><mo>,</mo><mn>05</mn><mo stretchy="false">)</mo><mi>c</mi><mi>m</mi></math>Ao realizarmos as medidas fizemos o acionamento da parafusadeira com o sensor em uma posição deslocada do máximo central. Não há necessidade de medição ou demarcação dessa posição, entretanto a condição para escolha dessa posição foi que, para <math><mi>t</mi><mo>=</mo><mn>0</mn><mi>s</mi></math> a intensidade fosse <math><mi>y</mi><mo>=</mo><mn>0</mn></math>, ou seja, o ponto inicial do sensor deve estar localizado antes do início do padrão visível de difração, com intensidade luminosa de fundo apenas. A direção de movimento do sensor deve ser tal que ele se desloque em direção ao máximo central e passe por ele. Para medirmos as distâncias realizamos um procedimento simples e, ao fim do percurso do sensor, temos uma tabela de dados que foram obtidos pelo sensor no programa do Arduino e sabemos que o intervalo de tempo entre essas aquisições é de <math><mn>0</mn><mo>,</mo><mn>100</mn><mi>s</mi></math>.</p>
+      <p>Então construímos outra coluna de dados, a qual pode ser feita utilizando qualquer <i>software</i>, na qual somamos o deslocamento referente a cada medida (em centímetros). Conseguimos fazer isso pois sabemos que, entre as medidas, o deslocamento é obtido multiplicando o valor da velocidade <math><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>45</mn><mspace width="thinmathspace"></mspace><mi>c</mi><mi>m</mi><mrow><mo>/</mo></mrow><mi>s</mi><mo stretchy="false">)</mo></math> por <math><mn>0</mn><mo>,</mo><mn>100</mn><mi>s</mi></math>. Dessa maneira obtemos uma tabela com duas colunas, uma com os valores de leitura do sensor e a outra com a distância (em cm) entre essas leituras. A vantagem dessa metodologia é que não há necessidade de calibragem prévia da posição do sensor, porque uma vez identificado o máximo central (pelo ponto de pico de leitura) podemos determinar a distância relativa dos outros pontos. Vale ressaltar que o correto alinhamento <i>horizontal</i>, do sensor com a figura de difração deve ser observado para uma boa leitura.</p>
+      <p>Os dados de intensidade obtidos na saída serial do Arduino são mostrados em tempo real, os quais aparecem na janela do monitor serial, que é encontrada dentro da própria IDE (<i>Integrated Development Environment</i>) do Arduino, enquanto os dados da posição são calculados à parte, com base no intervalo de leitura e velocidade do sensor. No <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiggr3"><span class="sci-ico-fileFigure"></span>Gráfico 3</a>, mostram-se os dados obtidos:</p>
+      <div class="row fig" id="gr3">
+<a name="gr3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFiggr3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/11d62b80f00abd58d32884f3dea22f8880e43984.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Gráfico 3</strong><br>
+          Intensidade luminosa <i>versus</i> posição horizontal do espectro.
+        <br>
+</div>
+</div>
+      <p>No <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiggr3"><span class="sci-ico-fileFigure"></span>Gráfico 3</a> podemos ver distintamente o máximo central, bem como os máximos de outras ordens de difração e suas distâncias relativas. Isso é possível porque o Arduino possui um conversor analógico-digital de 10 bits e permite que a placa consiga uma resolução de leitura de 1024 unidades dentro dos <math><mn>5</mn><mo>,</mo><mn>0</mn><mi>V</mi></math>, ou seja, sua sensibilidade de leitura é de <math><mn>4</mn><mo>,</mo><mn>9</mn><mspace width="thinmathspace"></mspace><mi>m</mi><mi>V</mi></math>. Por isso, o eixo das ordenadas, no <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiggr3"><span class="sci-ico-fileFigure"></span>Gráfico 3</a>, varia de a 1024, enquanto nos eixos das abscissas os valores da posição do sensor são obtidos em centímetros utilizando a metodologia explicada anteriormente.</p>
+      <p>Baseando-se nos valores medidos que foram apresentados no <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFiggr3"><span class="sci-ico-fileFigure"></span>Gráfico 3</a> e usando a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq4"><span class="sci-ico-fileFormula"></span>Equação 4</a>, temos alguns valores de espessura <b>a</b> mostrados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Tabela 2</a>:</p>
+      <div class="row table" id="t2">
+<a name="t2"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 2</strong><br>
+          Alguns valores de diâmetro obtidos a partir dos dados coletados.
+        <br>
+</div>
+</div>
+      <p>Com base nos dados da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Tabela 2</a>, estimamos um valor médio de <math><mn>69</mn><mo>,</mo><mn>3</mn><mspace width="thinmathspace"></mspace><mrow><mi>μ</mi></mrow><mi>m</mi></math>, com desvio padrão <math><mi>σ</mi><mo>=</mo><mn>3</mn><mo>,</mo><mn>4</mn><mi>μ</mi><mi>m</mi></math>, e erro padrão da média de <math><mn>1</mn><mo>,</mo><mn>4</mn><mi>μ</mi><mi>m</mi></math>. O valor do erro associado à metodologia, foi estimado através da propagação de erros em <math><mn>3</mn><mi mathvariant="normal">%</mi></math>. Assim o valor médio do fio de cabelo, com a margem de erro, é de <math><mo stretchy="false">(</mo><mn>69</mn><mo>±</mo><mn>2</mn><mo stretchy="false">)</mo><mspace width="thinmathspace"></mspace><mrow><mi>μ</mi></mrow><mi>m</mi></math>. Percebemos que o erro padrão da média obtido nessa série de medidas <math><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>4</mn><mi>μ</mi><mi>m</mi><mo stretchy="false">)</mo></math>, se encontra dentro da margem de erro prevista pela propagação de erros. A utilização do fio de cabelo, embora tenha sido uma escolha para facilitar o acesso aos materiais, possui um problema intrínseco. Por se tratar de um material biológico, está sujeito a apresentar irregularidades que podem interferir na estimativa de erro.</p>
+      <p>No sentido de comparar o erro dos dados obtidos da metodologia, refizemos o experimento substituindo o fio de cabelo por um anteparo contido num kit experimental de laboratório, cuja fenda simples possui largura conhecida <math><mi>a</mi><mo>=</mo><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>10</mn><mo>±</mo><mn>0</mn><mo>,</mo><mn>05</mn><mo stretchy="false">)</mo><mi>m</mi><mi>m</mi></math> de acordo com o fabricante.</p>
+      <p>O experimento foi repetido, agora com <math><mi>x</mi><mo>=</mo><mo stretchy="false">(</mo><mn>446</mn><mo>,</mo><mn>60</mn><mo>±</mo><mn>0</mn><mo>,</mo><mn>05</mn><mo stretchy="false">)</mo><mi>c</mi><mi>m</mi></math>, com o laser incidindo sobre a fenda supracitada, obtivemos os valores mostrados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet3"><span class="sci-ico-fileTable"></span><b>Tabela 3</b></a><b>:</b></p>
+      <div class="row table" id="t3">
+<a name="t3"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 3</strong><br>
+          Alguns valores de comprimento de largura da fenda a dos dados coletados.
+        <br>
+</div>
+</div>
+      <p>Os valores obtidos apresentaram boa correspondência com os valores esperados. O desvio padrão da medida de <b>a</b> foi <math><mi>σ</mi><mo>=</mo><mn>5</mn><mo>,</mo><mn>0.</mn><msup><mrow><mn>10</mn></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup><mi>m</mi><mi>m</mi></math>, o valor do erro padrão da média foi <math><mn>2</mn><mo>,</mo><mn>0.</mn><msup><mrow><mn>10</mn></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup><mi>m</mi><mi>m</mi></math> e o valor médio da medida de <b>a</b> foi de <math><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>092</mn><mo>±</mo><mn>0</mn><mo>,</mo><mn>002</mn><mo stretchy="false">)</mo><mspace width="thinmathspace"></mspace><mi>m</mi><mi>m</mi></math>. O valor obtido está dentro da margem de erro estipulada pelo fabricante da fenda <math><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>05</mn><mspace width="thinmathspace"></mspace><mi>m</mi><mi>m</mi><mspace width="thinmathspace"></mspace><mo>&lt;</mo><mspace width="thinmathspace"></mspace><mi>a</mi><mspace width="thinmathspace"></mspace><mo>&lt;</mo><mspace width="thinmathspace"></mspace><mn>0</mn><mo>,</mo><mn>15</mn><mspace width="thinmathspace"></mspace><mi>m</mi><mi>m</mi><mo stretchy="false">)</mo></math>. Vale ressaltar que o erro padrão da média, para essas medidas, representou uma margem de <math><mn>2</mn><mi mathvariant="normal">%</mi></math> do valor total, que também está dentro da margem teórica prevista anteriormente, por propagação de erros.</p>
+    
+      <h1 class="articleSectionTitle">4. Considerações Finais</h1>
+      <p>Obviamente não é objetivo do equipamento substituir a coleta manual de dados pelo aluno, uma vez que esse processo faz parte das habilidades a serem desenvolvidas na disciplina de laboratório. Entretanto a metodologia forneceu uma alternativa interessante para a coleta de dados, podendo ser utilizada tanto para realizar a comparação metodológica quanto para visualizar a variação da intensidade na figura de difração.</p>
+      <p>Ainda nesse sentido, reconhecemos que há pontos que podem ser explorados, no intuito de aperfeiçoar ainda mais a resolução do protótipo. Sabemos que o fato de o sensor possuir uma abertura em sua área de detecção, esse fato possivelmente diminui a resolução do sensor. Para estudos futuros ou aprimoramento do protótipo, pode ser pensada uma solução no intuito de diminuir a abertura e realizar testes sobre a viabilidade dessa solução. De forma análoga o parâmetro da velocidade do sensor pode ser modificado na tentativa de otimizar a resolução dos pontos escuros.</p>
+      <p>Percebeu-se que a metodologia se mostrou perfeitamente viável tanto pelo baixo valor dos equipamentos quanto pela precisão satisfatória para propósitos didáticos. Uma vez que o arranjo experimental foi montado o experimento sofreu uma grande simplificação no quesito coleta de dados, os quais foram colhidos de forma completamente autônoma.</p>
+      <p>Além de se mostrar prático, o equipamento permitiu-nos visualizar graficamente a distribuição do espectro das intensidades da figura de difração de acordo com o esperado teoricamente e compará-la com o padrão de difração visível, algo que antes só poderia ter sido feito como um exercício mental para os alunos. Tal característica vai ao encontro de trabalhos mencionados, que reforçam a importância da compreensão conceitual e fenomenológica.</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] M.A. Cavalcante, V. Jardim e J.A.A. Barros, Cad. Catarinense de Ens. de Física <b>16</b>, 362 (1999).</div></li>
+<li><div>[2] N.M.D. Garcia e H.J. Kalinowski, Cad. Catarinense de Ens. de Física <b>11</b>, 240 (1994).</div></li>
+<li><div>[3] H.J. Kalinowski e N.M.D. Garcia, Cad. Catarinense de Ens. de Física <b>7</b>, 64 (1990).</div></li>
+<li><div>[4] E.M. Lopes e C.E. Laburú, Cad. Brasileiro de Ens. de Física <b>21</b>, 258 (2004).</div></li>
+<li><div>[5] P. Oliveira, E. Júnior, B. Souza, F. Prêmoli, G. Martini e R. Martini, ScientiaTec: Rev. de Educação, Ciência e Tecnologia do IFRS <b>6</b>, 90 (2019).</div></li>
+<li><div>[6] L.A. Souza, L. Silva, J.A. Huguenin e O.W.F. Balthazar, Rev. Bras. de Ens. de Física <b>37</b>, 4311 (2015).</div></li>
+<li><div>[7] V.C. Barbosa, A.M.S. Breitschaft, J.P.R. Mendonça, L.M. Moreira e P.C.G. Moraes, Rev. Bras. de Ens. de Física <b>34</b>, 1 (2012).</div></li>
+<li><div>[8] J.M. Cardoso e M. Zannin, Rev. Bras. Ensino Física <b>41</b>, 28 (2019).</div></li>
+<li><div>[9] E. Buksman, A.L.F. Oliveira, L. Barbieri e C. Ferreira, Rev. Bras. de Ens. de Física <b>41</b>, 356 (2019).</div></li>
+<li><div>[10] T.R. Barros e W.S. Dias. Rev. Bras. Ensino Física <b>41</b>, 276 (2019).</div></li>
+<li><div>[11] A. Souza, A. Paixão, D. Uzêda, M. Dias, D. Duarte e H. Amorim. Rev. Brasileira de Ens. de Física <b>33</b>, 1702 (2011).</div></li>
+<li><div>[12] F.W. Sears, M.W. Zemansky, H.D. Young e R.A. Freedman, <i>Física IV</i> (Pearson Addison Wesley, São Paulo, 2008), 12ª ed., v.4.</div></li>
+<li><div>[13] H.M. Nussenzveig, <i>Curso de Física Básica</i> (Editora Edgard Blucher, São Paulo, 2000), v.2.</div></li>
+<li><div>[14] D.M. Reis, E.M. Santos e A.V. Andrade-Neto, Revista Bras. de Ens. de Física <b>37</b>, 2 (2015).</div></li>
+</ul></div>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList footnote">
+      <li>
+        <span class="xref big">1</span>
+        <div>
+          <a href="https://www.arduino.cc/reference/pt/language/functions/analog-io/analogread/" target="_blank">https://www.arduino.cc/reference/pt/language/functions/analog-io/analogread/</a>
+        </div>
+      </li>
+    </ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>02 Set 2020</li>
+<li>
+<strong>Data do Fascículo</strong><br>2020</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>14 Abr 2020</li>
+<li>
+<strong>rev-received</strong><br>06 Jul 2020</li>
+<li>
+<strong>Aceito</strong><br>23 Jul 2020</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre o autor</h4>
+</div>
+<div class="modal-body">
+<div class="info"><div class="tutors">
+<strong> Tiago Destéffani Admiral </strong><strong>*</strong><br><div>Instituto Federal Fluminense, Campos dos Goytacazes, RJ, Brasil</div>
+<div>Universidade Estadual do Norte Fluminense, Campos dos Goytacazes, RJ, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0002-3829-5778" class="btnContribLinks orcid">http://orcid.org/0000-0002-3829-5778</a></li></ul>
+<div class="clearfix"></div>
+</div></div>
+        <div class="info">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:tdesteffani@gmail.com">tdesteffani@gmail.com</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (12)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (3)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (4)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/4ccbf593f3e5c389768b96209ce2ad37065af5bf.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Perspectiva superior do esquema geral do aparato experimental, à direita o laser alinhado ao obstáculo e à direita o conjunto detector.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/8c2f3f8a4bb34e7739404c4f2bfcd160373d4e5e.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Conjunto do laser montado na morsa, à direita o suporte para a alimentação com duas pilhas tipo AA.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/0a716b279b260692a812d83f949f5c8dbbbb6fc2.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          Suporte com garras para a fixação do fio de cabelo.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/4b4b77f3c5b23e05d15bc75423ab2ac4c95d4e5e.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Conjunto detector, responsável por movimentar horizontalmente o sensor para a varredura da figura de difração.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/fa383e86cb660689a61927c323ada4ad44f39a23.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Parafusadeira acoplada à vara rosqueada, à direita a placa Arduino parafusada na madeira e com os fios conectados ao sensor.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiggr1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/6c2330e6e9cd533dbbc6bcba1d23064b08760a6b.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Gráfico 1</strong><br>
+            Resistência elétrica <i>versus</i> luminosidade incidente no LDR.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiggr2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/a1924e44d5c85659739097ce4233f1faa64b7574.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Gráfico 2</strong><br>
+            Sensibilidade relativa do LDR.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/b956ede412ab8db69c0d71eaf9169417ef07ef1c.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Circuito do sensor utilizado no experimento.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/7fa4d85f320719993e0ae64fdaad413378287073.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+            (a) Sensor montado no conjunto detector, como utilizado na coleta de dados. (b) Visão lateral do sensor, fora do conjunto detector.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/5a9f2039dd7bea74bf9341207494841979a41899.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+            Programação do sensor no Arduino.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/8d55fd798e3adbfb929f5c6dbeffaa1592c9c784.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+            Figura de difração visível e distribuição de intensidade prevista teoricamente.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/4b4b77f3c5b23e05d15bc75423ab2ac4c95d4e5e.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Conjunto detector, responsável por movimentar horizontalmente o sensor para a varredura da figura de difração.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/fa383e86cb660689a61927c323ada4ad44f39a23.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Parafusadeira acoplada à vara rosqueada, à direita a placa Arduino parafusada na madeira e com os fios conectados ao sensor.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiggr1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/6c2330e6e9cd533dbbc6bcba1d23064b08760a6b.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Gráfico 1</strong><br>
+            Resistência elétrica <i>versus</i> luminosidade incidente no LDR.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiggr2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/a1924e44d5c85659739097ce4233f1faa64b7574.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Gráfico 2</strong><br>
+            Sensibilidade relativa do LDR.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/b956ede412ab8db69c0d71eaf9169417ef07ef1c.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Circuito do sensor utilizado no experimento.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/7fa4d85f320719993e0ae64fdaad413378287073.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+            (a) Sensor montado no conjunto detector, como utilizado na coleta de dados. (b) Visão lateral do sensor, fora do conjunto detector.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/5a9f2039dd7bea74bf9341207494841979a41899.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+            Programação do sensor no Arduino.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/8d55fd798e3adbfb929f5c6dbeffaa1592c9c784.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+            Figura de difração visível e distribuição de intensidade prevista teoricamente.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFiggr3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/11d62b80f00abd58d32884f3dea22f8880e43984.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Gráfico 3</strong><br>
+          Intensidade luminosa <i>versus</i> posição horizontal do espectro.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Valores obtidos para a medida da velocidade do sensor.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 2</strong><br>
+          Alguns valores de diâmetro obtidos a partir dos dados coletados.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 3</strong><br>
+          Alguns valores de comprimento de largura da fenda a dos dados coletados.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/1871ac04e8a9d77577b86780b721548be837c7f5.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Perspectiva superior do esquema geral do aparato experimental, à direita o laser alinhado ao obstáculo e à direita o conjunto detector.
+        <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/f4b1a361991eb76d92cb8cd2078c1b3d24ceab00.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/94c94a50ca3366f1a7e6278315f2fc308b401fc3.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Conjunto do laser montado na morsa, à direita o suporte para a alimentação com duas pilhas tipo AA.
+        <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/85aa8ce019626778517ce844da86f2bd1e0ce948.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/9238de007a4d3c5d2c8ea91938c956c7abaa1393.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          Suporte com garras para a fixação do fio de cabelo.
+        <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/943c669cb2a82a4d5c222486ff50007239372231.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/9679c98a89881ea2a6cba0819ad0ae5186726994.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Conjunto detector, responsável por movimentar horizontalmente o sensor para a varredura da figura de difração.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/79280a0ab70fe9d4b58f6cdbfffff79a901efcef.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/6335d5434d6ad2a095ebfa7748bdd057c1d8b7c8.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Parafusadeira acoplada à vara rosqueada, à direita a placa Arduino parafusada na madeira e com os fios conectados ao sensor.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/928b8e158ed2d8cece40ab91c087ab648f8c827e.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiggr1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/0c4228c954c4b6e310d0dc40acaceb6f046eb159.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Gráfico 1   
+            Resistência elétrica <i>versus</i> luminosidade incidente no LDR.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/2aee2782be8070b59615aa5dd11d4e1dd4aeaac7.png"><small>Fonte:<a href="https://www.sunrom.com/get/443700" target="_blank">https://www.sunrom.com/get/443700</a> </small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiggr2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/d7f22c943ad4e068b6aa3cd049f0219bdc7b6ff0.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Gráfico 2   
+            Sensibilidade relativa do LDR.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/b4f83e223b06770a36e7d73198f9b3204f73ab06.png"><small>Fonte: <a href="https://www.sunrom.com/get/443700" target="_blank">https://www.sunrom.com/get/443700</a> </small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/0da82f671328611744632b412c5a24657a9aa306.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Circuito do sensor utilizado no experimento.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/6d5b7c45973a24ed47dd4ee69a10cc7981acca9d.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/d824c2d327229024fbf1747d8e8422f2fb6a4075.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+            (a) Sensor montado no conjunto detector, como utilizado na coleta de dados. (b) Visão lateral do sensor, fora do conjunto detector.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/85547c3abde52c002f5e7b75db344b32fe107113.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/25631d1eafeef39454a80ba0f99a88fe1c802c95.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+            Programação do sensor no Arduino.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/3d27d18220840773916708858e064b51d9b23434.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/0b30606cdec46ffd62875a640da1fa298fd82782.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+            Figura de difração visível e distribuição de intensidade prevista teoricamente.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/e8c3bdaf75d450d99e631dd443370f94d0aa7b48.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/9679c98a89881ea2a6cba0819ad0ae5186726994.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Conjunto detector, responsável por movimentar horizontalmente o sensor para a varredura da figura de difração.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/79280a0ab70fe9d4b58f6cdbfffff79a901efcef.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/6335d5434d6ad2a095ebfa7748bdd057c1d8b7c8.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Parafusadeira acoplada à vara rosqueada, à direita a placa Arduino parafusada na madeira e com os fios conectados ao sensor.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/928b8e158ed2d8cece40ab91c087ab648f8c827e.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiggr1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/0c4228c954c4b6e310d0dc40acaceb6f046eb159.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Gráfico 1   
+            Resistência elétrica <i>versus</i> luminosidade incidente no LDR.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/2aee2782be8070b59615aa5dd11d4e1dd4aeaac7.png"><small>Fonte:<a href="https://www.sunrom.com/get/443700" target="_blank">https://www.sunrom.com/get/443700</a> </small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiggr2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/d7f22c943ad4e068b6aa3cd049f0219bdc7b6ff0.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Gráfico 2   
+            Sensibilidade relativa do LDR.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/b4f83e223b06770a36e7d73198f9b3204f73ab06.png"><small>Fonte: <a href="https://www.sunrom.com/get/443700" target="_blank">https://www.sunrom.com/get/443700</a> </small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/0da82f671328611744632b412c5a24657a9aa306.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Circuito do sensor utilizado no experimento.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/6d5b7c45973a24ed47dd4ee69a10cc7981acca9d.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/d824c2d327229024fbf1747d8e8422f2fb6a4075.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+            (a) Sensor montado no conjunto detector, como utilizado na coleta de dados. (b) Visão lateral do sensor, fora do conjunto detector.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/85547c3abde52c002f5e7b75db344b32fe107113.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/25631d1eafeef39454a80ba0f99a88fe1c802c95.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+            Programação do sensor no Arduino.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/3d27d18220840773916708858e064b51d9b23434.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/0b30606cdec46ffd62875a640da1fa298fd82782.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+            Figura de difração visível e distribuição de intensidade prevista teoricamente.
+          <br>
+</h4>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/e8c3bdaf75d450d99e631dd443370f94d0aa7b48.png"><small>Fonte: Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFiggr3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/b1971d4f65af388dfa568f30e5bbae7420520750.tif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Gráfico 3   
+          Intensidade luminosa <i>versus</i> posição horizontal do espectro.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/zfsgRGwFTXKPdR6CpzHYCQw/39932221cf5480933cccd78de9d50d866a3de625.png"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Valores obtidos para a medida da velocidade do sensor.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="25%">
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="left">Medida</th>
+              <th align="center">V(cm/s)</th>
+              <th align="center">Medida</th>
+              <th align="center">V(cm/s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">1</td>
+              <td align="center">0,47</td>
+              <td align="center">7</td>
+              <td align="center">0,45</td>
+            </tr>
+            <tr>
+              <td align="left">2</td>
+              <td align="center">0,45</td>
+              <td align="center">8</td>
+              <td align="center">0,47</td>
+            </tr>
+            <tr>
+              <td align="left">3</td>
+              <td align="center">0,43</td>
+              <td align="center">9</td>
+              <td align="center">0,45</td>
+            </tr>
+            <tr>
+              <td align="left">4</td>
+              <td align="center">0,43</td>
+              <td align="center">10</td>
+              <td align="center">0,46</td>
+            </tr>
+            <tr>
+              <td align="left">5</td>
+              <td align="center">0,46</td>
+              <td align="center">11</td>
+              <td align="center">0,46</td>
+            </tr>
+            <tr>
+              <td align="left">6</td>
+              <td align="center">0,44</td>
+              <td align="center">12</td>
+              <td align="center">0,44</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 2</strong>    
+          Alguns valores de diâmetro obtidos a partir dos dados coletados.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="12%">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="left"></th>
+              <th align="left">Máximo Central</th>
+              <th align="left">m=1</th>
+              <th align="left">m=1</th>
+              <th align="left">m=2</th>
+              <th align="left">m=2</th>
+              <th align="left">m=3</th>
+              <th align="left">m=3</th>
+            </tr>
+            <tr>
+              <th align="left"></th>
+              <th align="left"></th>
+              <th align="left">Direita</th>
+              <th align="left">Esquerda</th>
+              <th align="left">Direita</th>
+              <th align="left">Esquerda</th>
+              <th align="left">Direita</th>
+              <th align="left">Esquerda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">Intensidade (U.A)</td>
+              <td align="center">975</td>
+              <td align="left">296</td>
+              <td align="left">305</td>
+              <td align="left">149</td>
+              <td align="left">153</td>
+              <td align="left">93</td>
+              <td align="left">87</td>
+            </tr>
+            <tr>
+              <td align="left">y(cm)</td>
+              <td align="center">0</td>
+              <td align="left">0,99</td>
+              <td align="left">1,01</td>
+              <td align="left">1,82</td>
+              <td align="left">1,86</td>
+              <td align="left">2,69</td>
+              <td align="left">2,71</td>
+            </tr>
+            <tr>
+              <td align="left">a(m)</td>
+              <td align="center">-</td>
+              <td align="left">65,7</td>
+              <td align="left">64,3</td>
+              <td align="left">71,4</td>
+              <td align="left">69,9</td>
+              <td align="left">72,5</td>
+              <td align="left">71,9</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 3</strong>    
+          Alguns valores de comprimento de largura da fenda a dos dados coletados.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="14%">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="left">X=446,60cm</th>
+              <th align="center">m=1 (Direita)</th>
+              <th align="center">m=1 (Esquerda)</th>
+              <th align="center">m=2 (Direita)</th>
+              <th align="center">m=2 (Esquerda)</th>
+              <th align="center">m=3 (Direita)</th>
+              <th align="center">m=3 (Esquerda)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">y(cm)</td>
+              <td align="center">2,80</td>
+              <td align="center">3,30</td>
+              <td align="center">6,11</td>
+              <td align="center">6,40</td>
+              <td align="center">10,02</td>
+              <td align="center">9,70</td>
+            </tr>
+            <tr>
+              <td align="left">a(mm)</td>
+              <td align="center">0,100</td>
+              <td align="center">0,088</td>
+              <td align="center">0,095</td>
+              <td align="center">0,091</td>
+              <td align="center">0,087</td>
+              <td align="center">0,090</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <msub>
+              <mi>v</mi>
+              <mrow>
+                <mi>S</mi>
+              </mrow>
+            </msub>
+            <mo>=</mo>
+            <mrow>
+              <mo>(</mo>
+              <mn>5.</mn>
+              <mfrac>
+                <mn>10.000</mn>
+                <mrow>
+                  <msub>
+                    <mi>R</mi>
+                    <mrow>
+                      <mi>L</mi>
+                      <mi>D</mi>
+                      <mi>R</mi>
+                    </mrow>
+                  </msub>
+                  <mo>+</mo>
+                  <mn>10.000</mn>
+                </mrow>
+              </mfrac>
+              <mo>)</mo>
+            </mrow>
+            <mi>V</mi>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mi>m</mi>
+            <mi>λ</mi>
+            <mo>=</mo>
+            <mi>a</mi>
+            <mspace width="thinmathspace"></mspace>
+            <mi>s</mi>
+            <mi>e</mi>
+            <mi>n</mi>
+            <mi>θ</mi>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mi>s</mi>
+            <mi>e</mi>
+            <mi>n</mi>
+            <mspace width="thinmathspace"></mspace>
+            <mi>θ</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mi>y</mi>
+              <msqrt>
+                <msup>
+                  <mi>x</mi>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <msup>
+                  <mi>y</mi>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+              </msqrt>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mi>a</mi>
+            <mo>=</mo>
+            <mi>m</mi>
+            <mi>λ</mi>
+            <msqrt>
+              <mn>1</mn>
+              <mo>+</mo>
+              <msup>
+                <mrow>
+                  <mo>(</mo>
+                  <mfrac>
+                    <mi>x</mi>
+                    <mi>y</mi>
+                  </mfrac>
+                  <mo>)</mo>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </msqrt>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Admiral, Tiago DestéffaniExperimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino. Revista Brasileira de Ensino de Física [online]. 2020, v. 42 [Acessado CURRENTDATE] , e20200139. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2020-0139&gt;. Epub 02 Set 2020. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2020-0139.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Experimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino&#34; &#34;Admiral, Tiago Destéffani&#34; &#34;2020&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Experimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino&#34; &#34;Admiral, Tiago Destéffani&#34; &#34;2020&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/zfsgRGwFTXKPdR6CpzHYCQw/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172020000100627&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2020-0139" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2020-0139">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2020-0139" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2020-0139">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2020-0139"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2020-0139" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2020-0139">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2020-0139" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Experimento de difração luminosa utilizando coleta de dados totalmente automatizada por Arduino
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2020-0139">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

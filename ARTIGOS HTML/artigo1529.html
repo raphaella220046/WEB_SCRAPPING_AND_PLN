@@ -1,0 +1,3675 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Estatística de contagem com a plataforma Arduino Estatística de contagem com a plataforma Arduino </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Estatística de contagem com a plataforma Arduino"/>
+<meta property="og:description" content="Descrevemos experimentos didáticos simples sobre detecção de radiação e estatística de..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Pereira, A. M.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Rio de Janeiro">
+        
+        <meta name="citation_author" content="Santos, A. C. F.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Rio de Janeiro">
+        
+        <meta name="citation_author" content="Amorim, H. S.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Rio de Janeiro">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="38"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2016-0079"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Estatística de contagem com a plataforma Arduino
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Descrevemos experimentos didáticos simples sobre detecção de radiação e estatística de contagens, utilizando a plataforma Arduino, para aplicação no ensino médio e superior. Os experimentos ilustram a natureza binomial do processo de decaimento radioativo. O aparato permite ao estudante medir as distribuições de Poisson e Gaussiana."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2016-06-23"></meta>
+<meta name="citation_keywords" content="Arduino"></meta><meta name="citation_keywords" content="estatística de contagens"></meta><meta name="citation_keywords" content="radiação"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2016.v38n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2016.v38n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172016000400601 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 38 
+                (4)
+            <span class="_separator"> • </span>Dez 2016</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2016-0079" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2016-0079</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2016-0079"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Estatística de contagem com a plataforma Arduino<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Counting statistics with the Arduino platform</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> A. M. Pereira </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> A. C. F. Santos </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong><div class="corresp">* Endereço de correspondência: <a href="mailto:toni@if.ufrj.br">toni@if.ufrj.br</a>.</div>Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> H. S. Amorim </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Descrevemos experimentos didáticos simples sobre detecção de radiação e estatística de contagens, utilizando a plataforma Arduino, para aplicação no ensino médio e superior. Os experimentos ilustram a natureza binomial do processo de decaimento radioativo. O aparato permite ao estudante medir as distribuições de Poisson e Gaussiana.</p>
+<p><strong>Palavras-chave:</strong><br>Arduino; estatística de contagens; radiação</p>
+</div>
+<hr>
+<div>
+<p>We describe simple didactic experiments on radiation detection and statistics counts using the Arduino platform for application in secondary and higher education. The experiments illustrate the binominal nature of the radioactive decay process. The setup enables the students to measure the distributions of Poisson and Gauss.</p>
+<p><strong>Keywords:</strong><br>Arduino; counting statistics; radiation</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>Estatística de contagens é um assunto fascinante, embora muitas vezes negligenciado até mesmo nos cursos de graduação em Física. Vários são os exemplos de seu uso registrados na literatura: distribuições temporais de mortes por coices de cavalo, surtos de guerras, entre outros [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] S.K. Chakarvarti, Nand Lal e K.K. Nagpaul, European Journal of Physics 1, 133 (1980).</span></span></span>]. No presente trabalho, abordaremos um fenômeno estatístico presente em diversos setores da sociedade e tratado com superficialidade pelos meios de comunicação: decaimentos radioativos.</p>
+      <p>Uma questão que se levanta é: por que devemos ensinar radioatividade e sua natureza estatística para alunos de nível médio? Uma das razões consiste nas aplicações da natureza ionizante e estatística da radiação encontradas no cotidiano, como por exemplo, no diagnóstico e tratamento (Radioterapia) de doenças como o câncer e na irradiação de alimentos com o intuito de aumentar seu tempo de conservação. Outra razão consiste em auxiliar a compreensão adequada dos jovens e adultos sobre a polêmica que envolve os acidentes radioativos e a utilização da energia nuclear. Uma análise adequada destes assuntos requer conhecimentos básicos dos fenômenos envolvidos, da terminologia utilizada e capacidade de interpretar ideias científicas e suas aplicações em situações da vida real. É preciso que o aluno saiba diferenciar claramente radiação de material radioativo e processo de irradiação de contaminação. Acreditamos que estes objetivos não serão alcançados somente pela exposição do professor, mas através da participação ativa dos alunos, desafiando-os e oferecendo-lhes oportunidades de esclarecer suas concepções espontâneas.</p>
+      <p>Utilizaremos um contador Geiger-Müller [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] E.M. Kakuno, Revista Brasileira de Ensino de Física 36, 1315 (2014).</span></span></span>], instrumento que permite medir intensidades de radioatividade (elementos radioativos e raios X). É um instrumento indispensável principalmente quando ocorrem acidentes radioativos, uma vez que identifica o nível de radiação de uma área em risco. Seu funcionamento consiste basicamente no seguinte: emissões radioativas atravessam a janela do tubo e passam por seu interior ionizando o gás – geralmente o argônio – contido a baixa pressão e um vapor orgânico ou um gás halogênio criando uma descarga elétrica. Esta se manifesta na forma de um pulso elétrico entre o eletrodo central (anodo) e o cilindro metálico (catodo) – onde a tensão aplicada é da ordem de 1kV – e é amplificado para um dispositivo acústico e/ou um contador, indicando que certa quantidade de energia foi absorvida pelo gás.</p>
+      <p>Este artigo tem dois objetivos: mostrar a natureza binomial dos processos de emissão e detecção da radiação e descrever experimentos que ilustram a utilização de um detector tipo Geiger-Muller de baixo custo, demonstrando as flutuações estatísticas em decaimentos radioativos.</p>
+    
+      <h1 class="articleSectionTitle">2. Aparato experimental</h1>
+      <p>Tendo em vista o elevado custo de um medidor Geiger comercial – inviáveis para aplicação em escolas públicas brasileiras –, escolhemos a plataforma <i>open source</i> Arduino [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] H. Cordova e A.C. Tort, Revista Brasileira de Ensino de Física, aceito para publicação.</span></span></span>–<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] L.R.M. Carvalho e H.S. Amorim, Revista Brasileira de Ensino de Física 36, 3501, (2014).</span></span></span>] para o desenvolvimento de um projeto bem mais barato que pudesse medir satisfatoriamente a radiação em algumas situações. Nossa escolha baseou-se no fato do Arduino ser uma plataforma muito versátil de prototipagem eletrônica, de <i>hardware</i> livre, projetada com um microcontrolador Atmel AVR, com várias linhas de E/S digital e analógica e conexão USB. O <i>software</i> de programação (IDE) é livre, baseado numa linguagem simples, derivada essencialmente da linguagem C/C++. Uma das grandes vantagens é a disponibilidade de uma grande quantidade de bibliotecas de programas, de acesso livre, que usadas como sub-rotinas facilitam a comunicação com os mais diferentes tipos de sensores.</p>
+      <p>O tubo Geiger utilizado [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>[6] Encontrado em https://sites.google.com/site/diygeigercounter/home.</span><br><a href="https://sites.google.com/site/diygeigercounter/home" target="_blank">https://sites.google.com/site/diygeigerc...
+            </a></span></span>] é sensível à radiação beta e gama, detectando-as de forma multidirecional. Isto significa que a medição independe da orientação do sensor Geiger em relação à fonte de radioatividade, dependendo apenas da distância. A unidade de medida utilizada pelos tubos Geiger é basicamente o número de pulsos gerados num dado intervalo de tempo, isto é, ”n”(um número inteiro) contagens por segundo (cps), ou contagens por minuto (cpm). Não é um valor de energia, mas apenas o número de pulsos.</p>
+      <p>Optamos em importar um kit pré-programado (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>), modular, que atendesse nossas necessidades. O módulo central é uma unidade de controle tipo Arduino (ATM328P), que incorpora circuitos complementares, um com a função de gerar uma tensão DC, ajustável na faixa aproximada de 100 – 400 V, para o acionamento do tubo Geiger e outro para possibilitar a conexão de um sensor GPS. Incluímos no projeto um modulo para armazenamento de dados (<i>datalogger</i>) em cartão micro-SD e um <i>display</i> LCD para a visualização das medidas. O módulo datalogger incorpora um circuito integrado DS1307 que atua como um relógio de tempo real (RTC). O tubo Geiger é o modelo SBT9 (6,5 cm <math display="inline" id="m1"><mo>×</mo></math> 1 cm) de fabricação russa. Toda a unidade é alimentada por uma bateria de 12 V / 12Ah que resulta numa autonomia de várias horas. Maiores detalhes podem ser encontrados na referência [<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>[7] Programa de Pós-Graduação em Ensino de Física, Instituto de Física, UFRJ: http://www.if.ufrj.br/~pef/producao_academica/dissertacoes/2014_Alexandre_Pereira/material_instrucional_Alexandre_Pereira.pdf</span><br><a href="http://www.if.ufrj.br/~pef/producao_academica/dissertacoes/2014_Alexandre_Pereira/material_instrucional_Alexandre_Pereira.pdf" target="_blank">http://www.if.ufrj.br/~pef/producao_acad...
+            </a></span></span>].</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Montagem experimental. Vide texto para detalhes.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">3. Breve revisão dos modelos estatísticos</h1>
+      <p>Sob certas condições podemos predizer a função distribuição estatística, que descreverá os resultados de várias medições repetidas [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>[8] L. Ruby, Am. J. Phys. 45, 380 (1977).</span></span></span>]. Podemos definir uma medida como uma contagem do número de sucessos resultando de um dado número de tentativas. Cada tentativa é um sucesso ou não. Para tudo que se segue, supomos que a probabilidade de sucesso é uma constante para todas as tentativas. Por exemplo, ao tentarmos observar um dado decaimento nuclear por um intervalo de tempo <math display="inline" id="m2"><mi>t</mi></math>, o número de tentativas é equivalente ao número de núcleos na amostra sob observação e a medida consiste em contar aqueles núcleos que decaem. Três modelos estatísticos específicos são introduzidos:</p>
+      <ol type="a">
+<li>
+          <p><i>Distribuição Binomial</i>. Este é o modelo mais geral e é largamente aplicável para todos os processos de probabilidade constante. Infelizmente, computacionalmente é muito trabalhosa para sistemas grandes, como por exemplo, em decaimentos nucleares. Além disso, é pouco utilizada em aplicações nucleares.</p>
+        </li>
+<li>
+          <p><i>Distribuição de Poisson</i>. Este modelo é uma simplificação matemática da distribuição binomial com a condição da probabilidade de sucesso ser pequena. Em termos práticos, significa que o tempo de observação escolhido é pequeno comparado à meia-vida da fonte, ou que a eficiência de detecção é pequena.</p>
+        </li>
+<li>
+          <p><i>Distribuição Gaussiana ou Normal</i>. Este modelo é uma simplificação ainda maior no caso do número médio de sucessos ser relativamente grande (maior do que 20 ou 30). Esta condição se aplicará para qualquer situação na qual acumulamos mais do que algumas contagens durante a medida. Este é o caso mais frequente, de modo que o modelo Gaussiano é largamente aplicável a muitos problemas em estatística de contagem. Lembramos que os modelos acima tornam-se idênticos para processos com uma probabilidade individual de sucesso pequena, mas com um número grande de tentativas, de modo que o número médio esperado de sucessos é grande.</p>
+        </li>
+</ol>
+      
+        <h2>3.1. A distribuição binomial</h2>
+        <p>Aqui alguma coisa é tentada repetidamente; a cada tentativa há sempre duas possibilidades, sucesso ou falha. Sendo <math display="inline" id="m3"><mi>p</mi></math>a probabilidade de sucesso e (1-<math display="inline" id="m4"><mi>p</mi><mo>)</mo></math> a probabilidade de falha, podemos escrever</p>
+        <div class="row formula" id="ee1">
+<a name="e1"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(1)</span>
+          <math display="block" id="m5">
+            <mrow>
+              <mtable>
+                <mtr>
+                  <mtd columnalign="left">
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>=</mo>
+                      <mo stretchy="false">(</mo>
+                      <mn>1</mn>
+                      <mo>−</mo>
+                      <mi>p</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>+</mo>
+                      <mi>p</mi>
+                    </mrow>
+                  </mtd>
+                </mtr>
+                <mtr>
+                  <mtd>
+                    <mrow>
+                      <msup>
+                        <mn>1</mn>
+                        <mi>N</mi>
+                      </msup>
+                      <mo>=</mo>
+                      <msup>
+                        <mrow>
+                          <mo stretchy="false">[</mo>
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo>−</mo>
+                          <mi>p</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>+</mo>
+                          <mi>p</mi>
+                          <mo stretchy="false">]</mo>
+                        </mrow>
+                        <mi>N</mi>
+                      </msup>
+                      <mo>=</mo>
+                      <mstyle displaystyle="true">
+                        <munderover>
+                          <mo>∑</mo>
+                          <mrow>
+                            <mi>n</mi>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                          </mrow>
+                          <mi>N</mi>
+                        </munderover>
+                        <mrow>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mtable>
+                                <mtr>
+                                  <mtd>
+                                    <mi>N</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr>
+                                  <mtd>
+                                    <mi>n</mi>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                        </mrow>
+                      </mstyle>
+                      <msup>
+                        <mi>p</mi>
+                        <mi>n</mi>
+                      </msup>
+                      <msup>
+                        <mrow>
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo>−</mo>
+                          <mi>p</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                        <mrow>
+                          <mi>N</mi>
+                          <mo>−</mo>
+                          <mi>n</mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mtd>
+                </mtr>
+              </mtable>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>A distribuição binominal é a mais geral dos modelos estatísticos discutidos aqui. Se <math display="inline" id="m6"><mi>N</mi></math> é o número de tentativas para o qual cada tentativa tem uma probabilidade de sucesso <math display="inline" id="m7"><mi>p</mi></math>, então a probabilidade de contar exatamente <math display="inline" id="m8"><mi>x</mi></math> sucessos é dada por</p>
+        <div class="row formula" id="ee2">
+<a name="e2"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(2)</span>
+          <math display="block" id="m9">
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>N</mi>
+                <mo>!</mo>
+              </mrow>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>N</mi>
+                    <mo>-</mo>
+                    <mi>x</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <mo>!</mo>
+                <mi>x</mi>
+                <mo>!</mo>
+              </mrow>
+            </mfrac>
+            <msup>
+              <mrow>
+                <mi>p</mi>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+            <msup>
+              <mrow>
+                <mfenced close=")" open="(" separators="">
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>-</mo>
+                    <mi>p</mi>
+                  </mrow>
+                </mfenced>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+                <mo>-</mo>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+          </math>
+        </div></div>
+</div>
+        <p>onde <math display="inline" id="m10"><mi>P</mi><mrow><mo>(</mo><mrow><mi>x</mi></mrow><mo>)</mo></mrow></math> é a função probabilidade, como dada pela distribuição binomial e é definida somente para valores inteiros de <math display="inline" id="m11"><mi>N</mi></math> e <math display="inline" id="m12"><mi>x</mi></math>. Algumas propriedades da distribuição binomial são importantes. Primeiramente, a distribuição é normalizada (vide <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>equação (1)</a>), ou seja</p>
+        <div class="row formula" id="ee3">
+<a name="e3"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(3)</span>
+          <math display="block" id="m13">
+            <munderover accent="false" accentunder="false">
+              <mrow>
+                <mo mathsize="big">∑</mo>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+              </mrow>
+            </munderover>
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mn>1</mn>
+          </math>
+        </div></div>
+</div>
+        <p>Também, sabemos que a média ou valor médio de uma distribuição é dada por</p>
+        <div class="row formula" id="ee4">
+<a name="e4"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(4)</span>
+          <math display="block" id="m14">
+            <mfenced close="⟩" open="⟨" separators="">
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </mfenced>
+            <mo>=</mo>
+            <munderover accent="false" accentunder="false">
+              <mrow>
+                <mo mathsize="big">∑</mo>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+              </mrow>
+            </munderover>
+            <mi>x</mi>
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>Se substituirmos a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee2"><span class="sci-ico-fileFormula"></span>equação 2</a> para <math display="inline" id="m15"><mi>P</mi><mrow><mo>(</mo><mrow><mi>x</mi></mrow><mo>)</mo></mrow></math> na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee4"><span class="sci-ico-fileFormula"></span>equação (4)</a> e realizarmos a soma, encontramos o valor médio de <math display="inline" id="m16"><mi>x</mi></math>
+				</p>
+        <div class="row formula" id="ee5">
+<a name="e5"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(5)</span>
+          <math display="block" id="m17">
+            <mfenced close="⟩" open="⟨" separators="">
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </mfenced>
+            <mo>=</mo>
+            <mi>p</mi>
+            <mi>N</mi>
+          </math>
+        </div></div>
+</div>
+        <p>O valor médio é, sem dúvidas, um valor fundamental para qualquer distribuição. É importante também obtermos um parâmetro que descreva a flutuação prevista por uma dada distribuição. Definimos agora a variância prevista <math display="inline" id="m18"><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></math>, que é uma medida de como os dados estão distribuídos em torno da média prevista pelo modelo estatístico especifico <math display="inline" id="m19"><mi>P</mi><mrow><mo>(</mo><mrow><mi>x</mi></mrow><mo>)</mo></mrow></math>,</p>
+        <div class="row formula" id="ee6">
+<a name="e6"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(6)</span>
+          <math display="block" id="m20">
+            <msup>
+              <mrow>
+                <mi>σ</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>≡</mo>
+            <munderover accent="false" accentunder="false">
+              <mrow>
+                <mo mathsize="big">∑</mo>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+              </mrow>
+            </munderover>
+            <mfenced close=")" open="(" separators="">
+              <mrow>
+                <mi>x</mi>
+                <mo>-</mo>
+                <mfenced close="⟩" open="⟨" separators="">
+                  <mrow>
+                    <mi>x</mi>
+                  </mrow>
+                </mfenced>
+              </mrow>
+            </mfenced>
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>Convencionalmente <math display="inline" id="m21"><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></math> é chamada de variância e enfatizamos o fato de que ela é associada com a distribuição de probabilidades prevista, por isto o nome variância prevista. É convenção definirmos também o desvio padrão como a raiz quadarada de <math display="inline" id="m22"><msup><mrow><mi>σ</mi></mrow><mrow><mn>2</mn></mrow></msup></math>. Agora, no caso da distribuição binomial, obtemos</p>
+        <div class="row formula" id="ee7">
+<a name="e7"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(7)</span>
+          <math display="block" id="m23">
+            <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+              <mtr>
+                <mtd columnalign="left">
+                  <msup>
+                    <mrow>
+                      <mi>σ</mi>
+                    </mrow>
+                    <mrow>
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mo>=</mo>
+                  <mi>N</mi>
+                  <mi>p</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>-</mo>
+                      <mi>p</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="left">
+                  <mo>=</mo>
+                  <mfenced close="⟩" open="⟨" separators="">
+                    <mrow>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfenced>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>-</mo>
+                      <mi>p</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="left">
+                  <mi>σ</mi>
+                  <mo>=</mo>
+                  <msqrt>
+                    <mrow>
+                      <mfenced close="⟩" open="⟨" separators="">
+                        <mrow>
+                          <mi>x</mi>
+                        </mrow>
+                      </mfenced>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>-</mo>
+                          <mi>p</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                  </msqrt>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="left"></mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </div></div>
+</div>
+        
+          <h3>Distribuição binomial para o decaimento radioativo</h3>
+          <p>Poucos textos evidenciam que a radioatividade é essencialmente um processo binomialmente distribuído [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>[8] L. Ruby, Am. J. Phys. 45, 380 (1977).</span></span></span>]. Considere o decaimento radioativo em um tempo <math display="inline" id="m24"><mi>t</mi></math>de um sistema contendo <math display="inline" id="m25"><mi>N</mi></math>átomos radioativos. Estes <math display="inline" id="m26"><mi>N</mi></math>átomos podem ser divididos em dois grupos: aqueles que decairão em um tempo <math display="inline" id="m27"><mi>t</mi></math>e aqueles que não decairão. A partir da lei do decaimento exponencial para espécies radioativas, a probabilidade de que um dado átomo não decaia é e<math display="inline" id="m28"><msup><mrow></mrow><mrow><mo>-</mo><mi>λ</mi><mi>t</mi></mrow></msup></math>, onde <math display="inline" id="m29"><mi>λ</mi></math> é a constante de decaimento para a espécie em questão. Então, a probabilidade <math display="inline" id="m30"><mi>p</mi></math>para o decaimento é</p>
+          <div class="row formula" id="ee8">
+<a name="e8"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(8)</span>
+            <math display="block" id="m31">
+              <mi>p</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+              <mo>-</mo>
+              <msup>
+                <mrow>
+                  <mi>e</mi>
+                </mrow>
+                <mrow>
+                  <mo>-</mo>
+                  <mi>λ</mi>
+                  <mi>t</mi>
+                </mrow>
+              </msup>
+            </math>
+          </div></div>
+</div>
+          <p>A probabilidade <math display="inline" id="m32"><mi>P</mi><mrow><mo>(</mo><mrow><mi>x</mi></mrow><mo>)</mo></mrow></math> de que <math display="inline" id="m33"><mi>x</mi></math> átomos decaiam em um intervalo de tempo <math display="inline" id="m34"><mi>t</mi></math> é</p>
+          <div class="row formula" id="ee9">
+<a name="e9"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(9)</span>
+            <math display="block" id="m35">
+              <mi>P</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>x</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>N</mi>
+                  <mo>!</mo>
+                </mrow>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mi>N</mi>
+                      <mo>-</mo>
+                      <mi>x</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mo>!</mo>
+                  <mi>x</mi>
+                  <mo>!</mo>
+                </mrow>
+              </mfrac>
+              <msup>
+                <mrow>
+                  <mfenced close=")" open="(" separators="">
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>-</mo>
+                      <msup>
+                        <mrow>
+                          <mi>e</mi>
+                        </mrow>
+                        <mrow>
+                          <mo>-</mo>
+                          <mi>λ</mi>
+                          <mi>t</mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mfenced>
+                </mrow>
+                <mrow>
+                  <mi>x</mi>
+                </mrow>
+              </msup>
+              <msup>
+                <mrow>
+                  <mfenced close=")" open="(" separators="">
+                    <mrow>
+                      <msup>
+                        <mrow>
+                          <mi>e</mi>
+                        </mrow>
+                        <mrow>
+                          <mo>-</mo>
+                          <mi>λ</mi>
+                          <mi>t</mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mfenced>
+                </mrow>
+                <mrow>
+                  <mi>N</mi>
+                  <mo>-</mo>
+                  <mi>x</mi>
+                </mrow>
+              </msup>
+            </math>
+          </div></div>
+</div>
+          <p>O número verdadeiro de decaimentos no intervalo de tempo <math display="inline" id="m36"><mi>t</mi></math> é</p>
+          <div class="row formula" id="ee10">
+<a name="e10"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(10)</span>
+            <math display="block" id="m37">
+              <mfenced close="⟩" open="⟨" separators="">
+                <mrow>
+                  <mi>x</mi>
+                </mrow>
+              </mfenced>
+              <mo>=</mo>
+              <mi>N</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mn>1</mn>
+                  <mo>-</mo>
+                  <msup>
+                    <mrow>
+                      <mi>e</mi>
+                    </mrow>
+                    <mrow>
+                      <mo>-</mo>
+                      <mi>λ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </math>
+          </div></div>
+</div>
+          <p>e o desvio padrão fica</p>
+          <div class="row formula" id="ee11">
+<a name="e11"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(11)</span>
+            <math display="block" id="m38">
+              <mi>σ</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mrow>
+                  <mi>N</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>-</mo>
+                      <msup>
+                        <mrow>
+                          <mi>e</mi>
+                        </mrow>
+                        <mrow>
+                          <mo>-</mo>
+                          <mi>λ</mi>
+                          <mi>t</mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <msup>
+                    <mrow>
+                      <mi>e</mi>
+                    </mrow>
+                    <mrow>
+                      <mo>-</mo>
+                      <mi>λ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </msqrt>
+              <mo>=</mo>
+              <msqrt>
+                <mrow>
+                  <mfenced close="⟩" open="⟨" separators="">
+                    <mrow>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfenced>
+                  <msup>
+                    <mrow>
+                      <mi>e</mi>
+                    </mrow>
+                    <mrow>
+                      <mo>-</mo>
+                      <mi>λ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </msqrt>
+            </math>
+          </div></div>
+</div>
+          <p>Para <math display="inline" id="m39"><mi>λ</mi></math>t « 1, ou seja, para tempos de observação curtos comparados com a meia vida, o desvio padrão é simplesmente</p>
+          <div class="row formula" id="ee12">
+<a name="e12"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(12)</span>
+            <math display="block" id="m40">
+              <mi>σ</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mrow>
+                  <mfenced close="⟩" open="⟨" separators="">
+                    <mrow>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfenced>
+                </mrow>
+              </msqrt>
+            </math>
+          </div></div>
+</div>
+        
+      
+      
+        <h2>3.2. A distribuição de Poisson</h2>
+        <p>Várias categorias de processos binários podem ser caracterizadas por uma baixa probabilidade de sucesso para cada tentativa individual. Nestes casos, a aproximação <math display="inline" id="m41"><mi>p</mi><mo>→</mo></math>0 e <math display="inline" id="m42"><mi>N</mi><mo>→</mo><mi>∞</mi></math> (na prática <math display="inline" id="m43"><mi>N</mi><mo>≥</mo></math> 30 e <math display="inline" id="m44"><mi>p</mi><mo>≤</mo></math> 0,05), de tal modo que a média <math display="inline" id="m45"><mo>&lt;</mo><mi>x</mi><mo>&gt;</mo><mo>=</mo><mi>N</mi><mi>p</mi></math> permaneça finita, será válida e algumas simplificações matemáticas podem ser aplicadas à distribuição binomial. Usando que</p>
+        <div class="row formula" id="ee13">
+<a name="e13"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(13)</span>
+          <math display="block" id="m46">
+            <mfrac>
+              <mrow>
+                <mi>N</mi>
+                <mo>!</mo>
+              </mrow>
+              <mrow>
+                <mfenced close=")" open="(" separators="">
+                  <mrow>
+                    <mi>N</mi>
+                    <mo>-</mo>
+                    <mi>x</mi>
+                  </mrow>
+                </mfenced>
+                <mo>!</mo>
+              </mrow>
+            </mfrac>
+            <mo>≈</mo>
+            <msup>
+              <mrow>
+                <mi>N</mi>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+          </math>
+        </div></div>
+</div>
+        <p>e</p>
+        <div class="row formula" id="ee14">
+<a name="e14"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(14)</span>
+          <math display="block" id="m47">
+            <msup>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>-</mo>
+                    <mi>p</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+                <mo>-</mo>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+            <mo>≈</mo>
+            <msup>
+              <mrow>
+                <mi>e</mi>
+              </mrow>
+              <mrow>
+                <mo>-</mo>
+                <mi>p</mi>
+                <mi>N</mi>
+              </mrow>
+            </msup>
+          </math>
+        </div></div>
+</div>
+        <p>a distribuição binominal se reduz a</p>
+        <div class="row formula" id="ee15">
+<a name="e15"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(15)</span>
+          <math display="block" id="m48">
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mfenced close=")" open="(" separators="">
+                      <mrow>
+                        <mi>p</mi>
+                        <mi>N</mi>
+                      </mrow>
+                    </mfenced>
+                  </mrow>
+                  <mrow>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+                <msup>
+                  <mrow>
+                    <mi>e</mi>
+                  </mrow>
+                  <mrow>
+                    <mo>-</mo>
+                    <mi>p</mi>
+                    <mi>N</mi>
+                  </mrow>
+                </msup>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+                <mo>!</mo>
+              </mrow>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+        <p>Assim como a distribuição binomial, a distribuição de Poisson é discreta. Ela essencialmente descreve processos para os quais a probabilidade de tentativa única é muito pequena, mas o número de tentativas é grande. Note que a distribuição binomial possui dois parâmetros: o número de tentativas <math display="inline" id="m49"><mi>N</mi></math>e a probabilidade individual de sucesso <math display="inline" id="m50"><mi>p</mi></math>. Mas, podemos ver que apenas um parâmetro é necessário na distribuição de Poisson, o produto <i>Np</i>. Esta é uma simplificação muito útil porque precisamos conhecer apenas o valor médio da distribuição para reconstruir sua amplitude <math display="inline" id="m51"><mi>P</mi><mrow><mo>(</mo><mrow><mi>x</mi></mrow><mo>)</mo></mrow></math>para todos os outros valores do argumento <math display="inline" id="m52"><mi>x</mi></math>. Algumas das propriedades da distribuição binomial, também são válidas para o caso da distribuição de Poisson. A variância no caso da distribuição de Poisson é dada por</p>
+        <div class="row formula" id="ee16">
+<a name="e16"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(16)</span>
+          <math display="block" id="m53">
+            <msup>
+              <mrow>
+                <mi>σ</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>=</mo>
+            <mfenced close="⟩" open="⟨" separators="">
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </mfenced>
+          </math>
+        </div></div>
+</div>
+        <p>Enfatizamos que, em geral, os livros didáticos partem da equação <math display="inline" id="m54"><mfrac><mrow><mi>d</mi><mi>N</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mo>-</mo><mi>λ</mi><mi>N</mi></math>para o decaimento radioativo, e afirmam de forma <i>ad hoc</i> que o decaimento segue uma distribuição de Poisson, sem explicitar a sua natureza binomial.</p>
+      
+      
+        <h2>3.3. A distribuição Gaussiana</h2>
+        <p>Consideremos agora uma outra simplificação em que o valor médio da distribuição é alto (maior do que 20). Pode-se mostrar que esta simplificação adicional, utilizando a aproximação de Stirling</p>
+        <div class="row formula" id="ee17">
+<a name="e17"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(17)</span>
+          <math display="block" id="m55">
+            <mi>x</mi>
+            <mo>!</mo>
+            <mo>≅</mo>
+            <msqrt>
+              <mrow>
+                <mn>2</mn>
+                <mi>π</mi>
+                <mi>x</mi>
+              </mrow>
+            </msqrt>
+            <msup>
+              <mrow>
+                <mfenced close=")" open="(" separators="">
+                  <mrow>
+                    <mfrac>
+                      <mrow>
+                        <mi>x</mi>
+                      </mrow>
+                      <mrow>
+                        <mi>e</mi>
+                      </mrow>
+                    </mfrac>
+                  </mrow>
+                </mfenced>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+          </math>
+        </div></div>
+</div>
+        <p>leva à distribuição Gaussiana ou distribuição normal</p>
+        <div class="row formula" id="ee18">
+<a name="e18"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(18)</span>
+          <math display="block" id="m56">
+            <mi>P</mi>
+            <mfenced close=")" open="(" separators="">
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </mfenced>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mn>1</mn>
+              </mrow>
+              <mrow>
+                <msqrt>
+                  <mrow>
+                    <mn>2</mn>
+                    <mi>π</mi>
+                    <mfenced close="⟩" open="⟨" separators="">
+                      <mrow>
+                        <mi>x</mi>
+                      </mrow>
+                    </mfenced>
+                  </mrow>
+                </msqrt>
+              </mrow>
+            </mfrac>
+            <msup>
+              <mrow>
+                <mi>e</mi>
+              </mrow>
+              <mrow>
+                <mo>-</mo>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mrow>
+                        <mfenced close=")" open="(" separators="">
+                          <mrow>
+                            <mi>x</mi>
+                            <mo>-</mo>
+                            <mfenced close="⟩" open="⟨" separators="">
+                              <mrow>
+                                <mi>x</mi>
+                              </mrow>
+                            </mfenced>
+                          </mrow>
+                        </mfenced>
+                      </mrow>
+                      <mrow>
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                    <mfenced close="⟩" open="⟨" separators="">
+                      <mrow>
+                        <mi>x</mi>
+                      </mrow>
+                    </mfenced>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </msup>
+          </math>
+        </div></div>
+</div>
+        <p>onde a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee16"><span class="sci-ico-fileFormula"></span>equação (16)</a> permanece válida.</p>
+        <p>A distribuição Gaussiana (também conhecida como distribuição normal) reside nos fundamentos da maioria dos métodos estatísticos em ciências. Os testes <math display="inline" id="m57"><msup><mrow><mi>χ</mi></mrow><mrow><mn>2</mn></mrow></msup></math>, F, Student, e outros, se baseiam na hipótese de que a quantidade em consideração segue uma distribuição Gaussiana. Além disso, flutuações Gaussianas (ou ruído Gaussiano) aparecem em quase todas as medidas em Física.</p>
+      
+    
+      <h1 class="articleSectionTitle">4. Resultados</h1>
+      <p>Nesta seção, descrevemos sugestões de práticas utilizando o aparato descrito anteriormente.</p>
+      
+        <h2>4.1. Prática 1: medindo a radiação de fundo</h2>
+        <p>Inicialmente, sugerimos que o professor comente sobre a estrutura da montagem experimental e desenvolva a ideia de que existe uma radiação de fundo presente em todos os locais do planeta. O medidor Geiger deve ser apresentado aos alunos explicando sua finalidade, seu princípio de funcionamento e como é feita sua montagem (esquema técnico). Assim que o medidor é ligado, são ouvidos cliques e observados dados sendo impressos no visor de LCD. Explicamos que esta experiência nos proporciona coletar contagens de radiação, onde cada pulso elétrico que foi detectado corresponde a uma partícula detectada e o valor oferecido no visor é a média estatística destas leituras. Com isso temos a oportunidade de discutir a fonte destes cliques e porque esses cliques posteriormente tornam-se uma contagem de radiação. Pelo fato da estrutura do nosso aparato experimental medir eventos de colisão e ionização da matéria as medidas encontradas não seguem um padrão de repetição. Por isso, é imprescindível montar um histograma como forma de representar essa dispersão de dados e determinarmos o valor médio e desvio padrão correspondentes (é preciso articular com os alunos um conjunto de ideias e conceitos que fazem parte dessa experiência simples).</p>
+        <p>Nessa prática, cada medida corresponde ao número de contagens observadas em 1 minuto. Tendo em vista a dispersão dos dados, repetimos a medida 92 vezes. Os dados foram medidos sequencialmente e registrados automaticamente no cartão de memória. Os dados foram transportados para o computador e construímos o histograma mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>. Os dados foram agrupados em classes (intervalos) automaticamente pelo software <i>Origin2015</i> [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>[9] http://www.originlab.com/ (versão 2015).</span><br><a href="http://www.originlab.com/" target="_blank">http://www.originlab.com/...
+            </a></span></span>] para a adequada análise de dispersão. Ressaltamos a importância do professor de Física na tarefa de capacitar os alunos em analisar dados através de um histograma de medidas e justificar o seu uso.</p>
+        <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+            Histograma de medidas da radiação ambiente. Barras verticais: dados experimentais; curva cheia: ajuste usando a distribuição de Poisson, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee15"><span class="sci-ico-fileFormula"></span>equação (15)</a>, com <math display="inline" id="m58"><mrow><mo>⟨</mo><mrow><mi>x</mi></mrow><mo>⟩</mo></mrow></math> = 16,8 cpm, <math display="inline" id="m59"><mi>N</mi></math> = 92 e <i><math display="inline" id="m60"><mi>σ</mi></math></i>= 5,0cpm.
+          <br>
+</div>
+</div>
+        <p>Sendo o processo de medida um processo estatístico, nos interessa então encontrar para a radiação local um “valor médio” (linha cheia do gráfico) e seu desvio padrão (linhas pontilhadas indicando os limites laterais). Como resultado, o software nos fornece (16,8 <math display="inline" id="m61"><mo>±</mo></math> 5,0) cpm, que denominamos radiação ambiente ou radiação de fundo.</p>
+      
+      
+        <h2>4.2. Prática 2: medindo a radiação de uma amostra mineral radioativa</h2>
+        <p>Em seguida, temos como objetivos determinar a influência de uma fonte radioativa, de baixo teor, utilizando o medidor Geiger e uma amostra mineral de monazita. A monazita é um fosfato que contem em sua composição o elemento radioativo Tório. A amostra utilizada consiste de grãos de monazita dispersa em areia (areia monazítica), previamente extraída de uma praia de Guarapari/ES. A areia monazítica foi acondicionada num vidro (vidro de azeitonas tamanho médio). A fonte assim constituída pode ser considerada extensa quando comparamos suas dimensões com os valores envolvidos nas práticas realizadas. As medidas foram feitas com o tubo Geiger encostado no vidro e as contagens obtidas armazenadas em um intervalo de tempo de 1min, conforme mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a>.</p>
+        <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+            Histograma de medidas da radiação da areia monazítica. Barras verticais: dados experimentais; curva cheia: ajuste utilizando a distribuição normal, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee16"><span class="sci-ico-fileFormula"></span>equação (16)</a>. Note que utilizamos aqui a distribuição normal apenas para fins ilustrativos. Poderíamos também ajustar utilizando a distribuição de Poisson.
+          <br>
+</div>
+</div>
+        <p>O valor médio encontrado para a leitura da radiação na presença da areia monazítica foi de 277,4 cpm, o que significa um aumento de 260,6 cpm em relação a radiação de fundo. Com isso, a radiação nas proximidades do medidor ficou 15,5 vezes maior. Experimentos deste tipo nos ajudam a medir a influência das fontes radioativas nas medidas de radiação e sua investigação em situações cotidianas. Nesta ocasião, o professor pode aproveitar para discutir a validade do ajuste utilizando a distribuição normal.</p>
+      
+      
+        <h2>4.3. Prática 3: medindo a intensidade radiação em função da distância à fonte radioativa</h2>
+        <p>A próxima prática consiste em mostrar a dependência com a distância à fonte nas leituras de radiação ao afastarmos gradualmente o medidor da fonte radioativa. Para tanto, além do medidor Geiger e do vidro com areia monazítica, utilizamos também uma régua. Ainda na presença da fonte radioativa, vamos agora variar a distância entre o medidor e a fonte e verificar qual a relação existente entre o valor médio de radiação e a distância da fonte até o medidor. Para isso, afastamos radialmente o tubo Geiger 2,0 cm e armazenamos valores de contagens durante 1,0 min. Várias medidas são tomadas sequencialmente para se caracterizar uma média e um desvio padrão. Em seguida, afastando o medidor mais 2,0 cm repetimos o processo de contagem, e assim sucessivamente até o mesmo atingir uma distância de 20,0 cm da fonte. Os pontos destacados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a> representam os valores médios calculados com o respectivo desvio padrão em função de sua posição. Os histogramas das medidas encontram-se no apêndice A. A linha cheia serve apenas para guiar os olhos.</p>
+        <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+            Relação entre a leitura da radiação e a distância à fonte.
+          <br>
+</div>
+</div>
+        <p>Verificamos um decaimento nas medidas até uma distância de aproximadamente 10 cm, e após este valor, os valores oscilam em torno de 90 cpm. Sabemos que a dependência da intensidade de radiação detectada com a distância à fonte depende de vários fatores, entre eles o fato de nossa fonte não ser pontual, a diminuição do ângulo sólido de detecção e o retroespalhamento por objetos da vizinhança. A discussão desses efeitos está além do escopo deste artigo.</p>
+      
+      
+        <h2>4.4. Prática 4: absorção da radiação pela matéria</h2>
+        <p>Outras práticas podem ser introduzidas como, por exemplo, observar o efeito de blindagem da radiação através do uso de variados absorvedores, especificando o poder de penetração de cada partícula envolvida. Uma sugestão interessante é relacionar a absorção com a espessura do absorvedor (no caso, alumínio) e verificar a aplicabilidade da Lei de Beer-Lambert [<span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>[10] A.C.F. Santos, S.D. Magalhaes e N.V.C. Faria, Nucl. Instr. Meth. Phys. Res. B 261, 264 (2007).</span></span></span>]. Para esta prática, precisaremos além do medidor Geiger, areia monazítica e papel alumínio de uso doméstico. Aumentamos gradualmente o número de folhas de alumínio interpostas entre a fonte radioativa e o tubo Geiger, mantidos em posições fixas e verificamos qual o efeito de atenuação. As incertezas apresentadas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a> representam os valores médios calculados com seus respectivos desvios padrão em função do número de folhas utilizadas. Com o aumento da espessura (número de folhas (n)) de alumínio, verificamos que a leitura do medidor tem um decaimento aproximadamente exponencial. A linha cheia que pode ser observada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a> foi obtida ajustando-se pelo método dos mínimos quadrados a função,</p>
+        <div class="row formula" id="ee19">
+<a name="e19"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(19)</span>
+          <math display="block" id="m62">
+            <mi>y</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mstyle>
+                  <mtext>contagem</mtext>
+                </mstyle>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <msub>
+              <mrow>
+                <mi>y</mi>
+              </mrow>
+              <mrow>
+                <mn>0</mn>
+              </mrow>
+            </msub>
+            <mstyle>
+              <mo>+</mo>
+            </mstyle>
+            <mi>A</mi>
+            <mo>.</mo>
+            <msup>
+              <mrow>
+                <mi>e</mi>
+              </mrow>
+              <mrow>
+                <mo>-</mo>
+                <mi>b</mi>
+                <mo>.</mo>
+                <mi>n</mi>
+              </mrow>
+            </msup>
+          </math>
+        </div></div>
+</div>
+        <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+            Relação entre a leitura de radiação e o número de folhas de alumínio.
+          <br>
+</div>
+</div>
+        <p>Em seguida o professor pode buscar relacionar a radiação com a altitude e encontrar soluções satisfatórias para medir a radiação cósmica secundária (abaixo do “chuveiro cósmico”). Fora do espaço físico da sala de aula, esta prática tem como proposta identificar a influência da altitude na radiação cósmica secundária que incide em determinada região. Para diminuir a influência terrestre algumas soluções são conhecidas, tais como: uma espessa camada com mais de 1m de gelo [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>[9] http://www.originlab.com/ (versão 2015).</span><br><a href="http://www.originlab.com/" target="_blank">http://www.originlab.com/...
+            </a></span></span>] e o uso de um balão atmosférico – ou durante um voo de avião – para medir a radiação em altitudes elevadas, distantes do solo. Desenvolvemos o experimento com o objetivo de buscar uma analogia entre a absorção atmosférica e a quantidade de andares de um prédio. Neste experimento, temos a tarefa de relacionar a absorção atmosférica da radiação cósmica secundária com o efeito de blindagem oferecido pelos andares (lajes) de um prédio. O local escolhido foi o bloco A do prédio do Centro de Tecnologia da UFRJ. Deixamos o medidor no 2°, 4° e 6° andares coletando dados durante um intervalo de tempo de 30 min em cada andar. O valor médio e o respectivo desvio padrão para cada andar encontram-se representados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>.</p>
+        <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+            Número de contagens no detector Geiger em função do andar.
+          <br>
+</div>
+</div>
+        <p>Como era de se esperar [<span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>[11] B. Jones The Phys. Teach. 31, 458 (1993).</span></span></span>], o efeito de blindagem diminui conforme subimos os andares do prédio uma vez que a quantidade de lajes de concreto acima de nós diminui, atenuando sutilmente a absorção da radiação cósmica secundária e aumentando a radiação de fundo medida: (19,6 <math display="inline" id="m63"><mo>±</mo></math> 5,0) cpm no 2° andar, (20,5 <math display="inline" id="m64"><mo>±</mo></math> 4,3) cpm no 4° andar e (22,1 <math display="inline" id="m65"><mo>±</mo></math> 4,4) cpm no 6° andar. Em linhas gerais, podemos relacionar a blindagem oferecida por grandes aumentos de altitude (diminuição da coluna de ar) com a diminuição da quantidade de concreto conforme subimos os andares de um prédio. Sabemos que emissões de radiação vindas das paredes (areia com tório) influenciam as medidas, mas consideramos a proposta viável na medida em que essa influência é praticamente constante. Observamos uma tendência condizente com o que é fisicamente esperado, nos encorajando a colocar como uma proposta para os estudantes. Acreditamos que medições em prédios mais altos com uma amostragem maior (maior tempo de coleta por andar) diminuiriam o desvio padrão e evidenciariam o efeito procurado. No nosso caso, verificamos uma diferença do valor médio das contagens de aproximadamente 13% entre o andar mais baixo (2° andar) e o andar mais alto (6° andar). Aqui vale uma discussão adicional com os alunos sobre incerteza de uma medida. Embora os resultados sejam, a princípio, condizentes com o que é fisicamente esperado, as incertezas associadas às medidas não permitem afirmar que de fato ocorre uma blindagem.</p>
+      
+    
+      <h1 class="articleSectionTitle">5. Conclusões</h1>
+      <p>Neste artigo apresentamos experimentos simples sobre detecção de radiação e estatística de contagens utilizando uma plataforma Arduino com medidor Geiger acoplado para utilização no ensino médio e superior. Através destes experimentos, ilustramos a natureza binomial do processo de decaimento radioativo, permitindo ao estudante medir as distribuições de Poisson e Gaussiana. Acreditamos estar introduzindo uma metodologia capaz de ultrapassar os muros da sala de aula, aproximando o ensino de Física à vida real e de grande relevância e potencial para a relação ensino-aprendizagem assim como para o desenvolvimento científico nacional. Esta mudança na forma de abordar e ensinar o assunto <i>Física das Radiações</i> facilita a compreensão do processo de emissão e detecção de radiação, contribuindo desta forma com a alfabetização científica, onde o indivíduo consegue transpor o conhecimento aprendido para a vida social.</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> S.K. Chakarvarti, Nand Lal e K.K. Nagpaul, European Journal of Physics <b>1</b>, 133 (1980).</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> E.M. Kakuno, Revista Brasileira de Ensino de Física <b>36</b>, 1315 (2014).</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> H. Cordova e A.C. Tort, Revista Brasileira de Ensino de Física, aceito para publicação.</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> H.S. Amorim, M.A. Dias e V. Soares, Revista Brasileira de Ensino de Física <b>37</b>, 4310, (2015).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> L.R.M. Carvalho e H.S. Amorim, Revista Brasileira de Ensino de Física <b>36</b>, 3501, (2014).</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> Encontrado em https://sites.google.com/site/diygeigercounter/home<br><a href="http://sites.google.com/site/diygeigercounter/home" target="_blank">» https://sites.google.com/site/diygeigercounter/home</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> Programa de Pós-Graduação em Ensino de Física, Instituto de Física, UFRJ: http://www.if.ufrj.br/~pef/producao_academica/dissertacoes/2014_Alexandre_Pereira/material_instrucional_Alexandre_Pereira.pdf<br><a href="http://www.if.ufrj.br/~pef/producao_academica/dissertacoes/2014_Alexandre_Pereira/material_instrucional_Alexandre_Pereira.pdf" target="_blank">» http://www.if.ufrj.br/~pef/producao_academica/dissertacoes/2014_Alexandre_Pereira/material_instrucional_Alexandre_Pereira.pdf</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> L. Ruby, Am. J. Phys. <b>45</b>, 380 (1977).</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> http://www.originlab.com/ (versão 2015).<br><a href="http://www.originlab.com/" target="_blank">» http://www.originlab.com/</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> A.C.F. Santos, S.D. Magalhaes e N.V.C. Faria, Nucl. Instr. Meth. Phys. Res. B <b>261</b>, 264 (2007).</div>
+</li>
+<li>
+<sup class="xref big">[11]</sup><div> B. Jones The Phys. Teach. <b>31</b>, 458 (1993).</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publicação nesta coleção</strong><br>Dez 2016</li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>05 Abr 2016</li>
+<li>
+<strong>Revisado</strong><br>10 Maio 2016</li>
+<li>
+<strong>Aceito</strong><br>15 Maio 2016</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> A. M. Pereira </strong><br><div>Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> A. C. F. Santos </strong><strong>*</strong><br><div>Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> H. S. Amorim </strong><br><div>Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">* Endereço de correspondência: <a href="mailto:toni@if.ufrj.br">toni@if.ufrj.br</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (6)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (19)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Montagem experimental. Vide texto para detalhes.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+            Histograma de medidas da radiação ambiente. Barras verticais: dados experimentais; curva cheia: ajuste usando a distribuição de Poisson, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee15"><span class="sci-ico-fileFormula"></span>equação (15)</a>, com <math display="inline" id="m58"><mrow><mo>⟨</mo><mrow><mi>x</mi></mrow><mo>⟩</mo></mrow></math> = 16,8 cpm, <math display="inline" id="m59"><mi>N</mi></math> = 92 e <i><math display="inline" id="m60"><mi>σ</mi></math></i>= 5,0cpm.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Histograma de medidas da radiação da areia monazítica. Barras verticais: dados experimentais; curva cheia: ajuste utilizando a distribuição normal, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee16"><span class="sci-ico-fileFormula"></span>equação (16)</a>. Note que utilizamos aqui a distribuição normal apenas para fins ilustrativos. Poderíamos também ajustar utilizando a distribuição de Poisson.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Relação entre a leitura da radiação e a distância à fonte.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Relação entre a leitura de radiação e o número de folhas de alumínio.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Número de contagens no detector Geiger em função do andar.
+          </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(5)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(6)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(7)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(8)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(9)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(10)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(11)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(12)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(13)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(14)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(15)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(16)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee17"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(17)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee18"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(18)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee19"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(19)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/4a05eb303160b020ca303fb067eaa11db5259f8b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Montagem experimental. Vide texto para detalhes.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/4a05eb303160b020ca303fb067eaa11db5259f8b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/5d465bd78e156b81c5152d585dbd83a2d61b6f1b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+            Histograma de medidas da radiação ambiente. Barras verticais: dados experimentais; curva cheia: ajuste usando a distribuição de Poisson, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee15"><span class="sci-ico-fileFormula"></span>equação (15)</a>, com <math display="inline" id="m58"><mrow><mo>⟨</mo><mrow><mi>x</mi></mrow><mo>⟩</mo></mrow></math> = 16,8 cpm, <math display="inline" id="m59"><mi>N</mi></math> = 92 e <i><math display="inline" id="m60"><mi>σ</mi></math></i>= 5,0cpm.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/5d465bd78e156b81c5152d585dbd83a2d61b6f1b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/8c471153f785e6b8013f6a2782153d0b454a26c5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Histograma de medidas da radiação da areia monazítica. Barras verticais: dados experimentais; curva cheia: ajuste utilizando a distribuição normal, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee16"><span class="sci-ico-fileFormula"></span>equação (16)</a>. Note que utilizamos aqui a distribuição normal apenas para fins ilustrativos. Poderíamos também ajustar utilizando a distribuição de Poisson.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/8c471153f785e6b8013f6a2782153d0b454a26c5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/abda995e3ea8524ee50b1fcda187ada8b317c202.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Relação entre a leitura da radiação e a distância à fonte.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/abda995e3ea8524ee50b1fcda187ada8b317c202.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/294ec65aedf1afcc58ed95c0be3477f87c423524.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Relação entre a leitura de radiação e o número de folhas de alumínio.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/294ec65aedf1afcc58ed95c0be3477f87c423524.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/f8d83609025db68a6ddaac5393cae9e1beb125a6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Número de contagens no detector Geiger em função do andar.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ddfkrPTWkFkRZ6Nwgc5ZzCw/f8d83609025db68a6ddaac5393cae9e1beb125a6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m5">
+            <mrow>
+              <mtable>
+                <mtr>
+                  <mtd columnalign="left">
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>=</mo>
+                      <mo stretchy="false">(</mo>
+                      <mn>1</mn>
+                      <mo>−</mo>
+                      <mi>p</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>+</mo>
+                      <mi>p</mi>
+                    </mrow>
+                  </mtd>
+                </mtr>
+                <mtr>
+                  <mtd>
+                    <mrow>
+                      <msup>
+                        <mn>1</mn>
+                        <mi>N</mi>
+                      </msup>
+                      <mo>=</mo>
+                      <msup>
+                        <mrow>
+                          <mo stretchy="false">[</mo>
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo>−</mo>
+                          <mi>p</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>+</mo>
+                          <mi>p</mi>
+                          <mo stretchy="false">]</mo>
+                        </mrow>
+                        <mi>N</mi>
+                      </msup>
+                      <mo>=</mo>
+                      <mstyle displaystyle="true">
+                        <munderover>
+                          <mo>∑</mo>
+                          <mrow>
+                            <mi>n</mi>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                          </mrow>
+                          <mi>N</mi>
+                        </munderover>
+                        <mrow>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mtable>
+                                <mtr>
+                                  <mtd>
+                                    <mi>N</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr>
+                                  <mtd>
+                                    <mi>n</mi>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                        </mrow>
+                      </mstyle>
+                      <msup>
+                        <mi>p</mi>
+                        <mi>n</mi>
+                      </msup>
+                      <msup>
+                        <mrow>
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo>−</mo>
+                          <mi>p</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                        <mrow>
+                          <mi>N</mi>
+                          <mo>−</mo>
+                          <mi>n</mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mtd>
+                </mtr>
+              </mtable>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m9">
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>N</mi>
+                <mo>!</mo>
+              </mrow>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>N</mi>
+                    <mo>-</mo>
+                    <mi>x</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <mo>!</mo>
+                <mi>x</mi>
+                <mo>!</mo>
+              </mrow>
+            </mfrac>
+            <msup>
+              <mrow>
+                <mi>p</mi>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+            <msup>
+              <mrow>
+                <mfenced close=")" open="(" separators="">
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>-</mo>
+                    <mi>p</mi>
+                  </mrow>
+                </mfenced>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+                <mo>-</mo>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m13">
+            <munderover accent="false" accentunder="false">
+              <mrow>
+                <mo mathsize="big">∑</mo>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+              </mrow>
+            </munderover>
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mn>1</mn>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m14">
+            <mfenced close="⟩" open="⟨" separators="">
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </mfenced>
+            <mo>=</mo>
+            <munderover accent="false" accentunder="false">
+              <mrow>
+                <mo mathsize="big">∑</mo>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+              </mrow>
+            </munderover>
+            <mi>x</mi>
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(5)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m17">
+            <mfenced close="⟩" open="⟨" separators="">
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </mfenced>
+            <mo>=</mo>
+            <mi>p</mi>
+            <mi>N</mi>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(6)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m20">
+            <msup>
+              <mrow>
+                <mi>σ</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>≡</mo>
+            <munderover accent="false" accentunder="false">
+              <mrow>
+                <mo mathsize="big">∑</mo>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+                <mo>=</mo>
+                <mn>0</mn>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+              </mrow>
+            </munderover>
+            <mfenced close=")" open="(" separators="">
+              <mrow>
+                <mi>x</mi>
+                <mo>-</mo>
+                <mfenced close="⟩" open="⟨" separators="">
+                  <mrow>
+                    <mi>x</mi>
+                  </mrow>
+                </mfenced>
+              </mrow>
+            </mfenced>
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(7)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m23">
+            <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+              <mtr>
+                <mtd columnalign="left">
+                  <msup>
+                    <mrow>
+                      <mi>σ</mi>
+                    </mrow>
+                    <mrow>
+                      <mn>2</mn>
+                    </mrow>
+                  </msup>
+                  <mo>=</mo>
+                  <mi>N</mi>
+                  <mi>p</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>-</mo>
+                      <mi>p</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="left">
+                  <mo>=</mo>
+                  <mfenced close="⟩" open="⟨" separators="">
+                    <mrow>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfenced>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>-</mo>
+                      <mi>p</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="left">
+                  <mi>σ</mi>
+                  <mo>=</mo>
+                  <msqrt>
+                    <mrow>
+                      <mfenced close="⟩" open="⟨" separators="">
+                        <mrow>
+                          <mi>x</mi>
+                        </mrow>
+                      </mfenced>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>-</mo>
+                          <mi>p</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                  </msqrt>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd columnalign="left"></mtd>
+              </mtr>
+            </mtable>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(8)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m31">
+              <mi>p</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+              <mo>-</mo>
+              <msup>
+                <mrow>
+                  <mi>e</mi>
+                </mrow>
+                <mrow>
+                  <mo>-</mo>
+                  <mi>λ</mi>
+                  <mi>t</mi>
+                </mrow>
+              </msup>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(9)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m35">
+              <mi>P</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>x</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>N</mi>
+                  <mo>!</mo>
+                </mrow>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mi>N</mi>
+                      <mo>-</mo>
+                      <mi>x</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mo>!</mo>
+                  <mi>x</mi>
+                  <mo>!</mo>
+                </mrow>
+              </mfrac>
+              <msup>
+                <mrow>
+                  <mfenced close=")" open="(" separators="">
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>-</mo>
+                      <msup>
+                        <mrow>
+                          <mi>e</mi>
+                        </mrow>
+                        <mrow>
+                          <mo>-</mo>
+                          <mi>λ</mi>
+                          <mi>t</mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mfenced>
+                </mrow>
+                <mrow>
+                  <mi>x</mi>
+                </mrow>
+              </msup>
+              <msup>
+                <mrow>
+                  <mfenced close=")" open="(" separators="">
+                    <mrow>
+                      <msup>
+                        <mrow>
+                          <mi>e</mi>
+                        </mrow>
+                        <mrow>
+                          <mo>-</mo>
+                          <mi>λ</mi>
+                          <mi>t</mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mfenced>
+                </mrow>
+                <mrow>
+                  <mi>N</mi>
+                  <mo>-</mo>
+                  <mi>x</mi>
+                </mrow>
+              </msup>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(10)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m37">
+              <mfenced close="⟩" open="⟨" separators="">
+                <mrow>
+                  <mi>x</mi>
+                </mrow>
+              </mfenced>
+              <mo>=</mo>
+              <mi>N</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mn>1</mn>
+                  <mo>-</mo>
+                  <msup>
+                    <mrow>
+                      <mi>e</mi>
+                    </mrow>
+                    <mrow>
+                      <mo>-</mo>
+                      <mi>λ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(11)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m38">
+              <mi>σ</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mrow>
+                  <mi>N</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>-</mo>
+                      <msup>
+                        <mrow>
+                          <mi>e</mi>
+                        </mrow>
+                        <mrow>
+                          <mo>-</mo>
+                          <mi>λ</mi>
+                          <mi>t</mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <msup>
+                    <mrow>
+                      <mi>e</mi>
+                    </mrow>
+                    <mrow>
+                      <mo>-</mo>
+                      <mi>λ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </msqrt>
+              <mo>=</mo>
+              <msqrt>
+                <mrow>
+                  <mfenced close="⟩" open="⟨" separators="">
+                    <mrow>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfenced>
+                  <msup>
+                    <mrow>
+                      <mi>e</mi>
+                    </mrow>
+                    <mrow>
+                      <mo>-</mo>
+                      <mi>λ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </msqrt>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(12)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m40">
+              <mi>σ</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mrow>
+                  <mfenced close="⟩" open="⟨" separators="">
+                    <mrow>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfenced>
+                </mrow>
+              </msqrt>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(13)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m46">
+            <mfrac>
+              <mrow>
+                <mi>N</mi>
+                <mo>!</mo>
+              </mrow>
+              <mrow>
+                <mfenced close=")" open="(" separators="">
+                  <mrow>
+                    <mi>N</mi>
+                    <mo>-</mo>
+                    <mi>x</mi>
+                  </mrow>
+                </mfenced>
+                <mo>!</mo>
+              </mrow>
+            </mfrac>
+            <mo>≈</mo>
+            <msup>
+              <mrow>
+                <mi>N</mi>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(14)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m47">
+            <msup>
+              <mrow>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>-</mo>
+                    <mi>p</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+              <mrow>
+                <mi>N</mi>
+                <mo>-</mo>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+            <mo>≈</mo>
+            <msup>
+              <mrow>
+                <mi>e</mi>
+              </mrow>
+              <mrow>
+                <mo>-</mo>
+                <mi>p</mi>
+                <mi>N</mi>
+              </mrow>
+            </msup>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(15)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m48">
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mfenced close=")" open="(" separators="">
+                      <mrow>
+                        <mi>p</mi>
+                        <mi>N</mi>
+                      </mrow>
+                    </mfenced>
+                  </mrow>
+                  <mrow>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+                <msup>
+                  <mrow>
+                    <mi>e</mi>
+                  </mrow>
+                  <mrow>
+                    <mo>-</mo>
+                    <mi>p</mi>
+                    <mi>N</mi>
+                  </mrow>
+                </msup>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+                <mo>!</mo>
+              </mrow>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(16)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m53">
+            <msup>
+              <mrow>
+                <mi>σ</mi>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>=</mo>
+            <mfenced close="⟩" open="⟨" separators="">
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </mfenced>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee17" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(17)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m55">
+            <mi>x</mi>
+            <mo>!</mo>
+            <mo>≅</mo>
+            <msqrt>
+              <mrow>
+                <mn>2</mn>
+                <mi>π</mi>
+                <mi>x</mi>
+              </mrow>
+            </msqrt>
+            <msup>
+              <mrow>
+                <mfenced close=")" open="(" separators="">
+                  <mrow>
+                    <mfrac>
+                      <mrow>
+                        <mi>x</mi>
+                      </mrow>
+                      <mrow>
+                        <mi>e</mi>
+                      </mrow>
+                    </mfrac>
+                  </mrow>
+                </mfenced>
+              </mrow>
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </msup>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee18" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(18)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m56">
+            <mi>P</mi>
+            <mfenced close=")" open="(" separators="">
+              <mrow>
+                <mi>x</mi>
+              </mrow>
+            </mfenced>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mn>1</mn>
+              </mrow>
+              <mrow>
+                <msqrt>
+                  <mrow>
+                    <mn>2</mn>
+                    <mi>π</mi>
+                    <mfenced close="⟩" open="⟨" separators="">
+                      <mrow>
+                        <mi>x</mi>
+                      </mrow>
+                    </mfenced>
+                  </mrow>
+                </msqrt>
+              </mrow>
+            </mfrac>
+            <msup>
+              <mrow>
+                <mi>e</mi>
+              </mrow>
+              <mrow>
+                <mo>-</mo>
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mrow>
+                        <mfenced close=")" open="(" separators="">
+                          <mrow>
+                            <mi>x</mi>
+                            <mo>-</mo>
+                            <mfenced close="⟩" open="⟨" separators="">
+                              <mrow>
+                                <mi>x</mi>
+                              </mrow>
+                            </mfenced>
+                          </mrow>
+                        </mfenced>
+                      </mrow>
+                      <mrow>
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                    <mfenced close="⟩" open="⟨" separators="">
+                      <mrow>
+                        <mi>x</mi>
+                      </mrow>
+                    </mfenced>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </msup>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee19" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(19)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m62">
+            <mi>y</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mstyle>
+                  <mtext>contagem</mtext>
+                </mstyle>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <msub>
+              <mrow>
+                <mi>y</mi>
+              </mrow>
+              <mrow>
+                <mn>0</mn>
+              </mrow>
+            </msub>
+            <mstyle>
+              <mo>+</mo>
+            </mstyle>
+            <mi>A</mi>
+            <mo>.</mo>
+            <msup>
+              <mrow>
+                <mi>e</mi>
+              </mrow>
+              <mrow>
+                <mo>-</mo>
+                <mi>b</mi>
+                <mo>.</mo>
+                <mi>n</mi>
+              </mrow>
+            </msup>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Pereira, A. M., Santos, A. C. F. e Amorim, H. S.Estatística de contagem com a plataforma Arduino. Revista Brasileira de Ensino de Física [online]. 2016, v. 38, n. 4 [Acessado CURRENTDATE] , e4501. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2016-0079&gt;. Epub 23 Jun 2016. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2016-0079.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Estatística de contagem com a plataforma Arduino&#34; &#34;Pereira, A. M.&#34; &#34;Santos, A. C. F.&#34; &#34;Amorim, H. S.&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Estatística de contagem com a plataforma Arduino&#34; &#34;Pereira, A. M.&#34; &#34;Santos, A. C. F.&#34; &#34;Amorim, H. S.&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/ddfkrPTWkFkRZ6Nwgc5ZzCw/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172016000400601&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2016-0079" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2016-0079">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2016-0079" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2016-0079">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2016-0079"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2016-0079" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2016-0079">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2016-0079" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Estatística de contagem com a plataforma Arduino
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2016-0079">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

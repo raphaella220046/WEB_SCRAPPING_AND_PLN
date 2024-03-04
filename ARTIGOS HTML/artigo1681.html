@@ -1,0 +1,2150 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - &#39;&#39;LAB Fit ajuste de curvas&#39;&#39;: um software em português para tratamento de dados experimentais &#39;&#39;LAB Fit ajuste de curvas&#39;&#39;: um software em português para tratamento de dados experimentais </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="&#39;&#39;LAB Fit ajuste de curvas&#39;&#39;: um software em português para tratamento de dados experimentais"/>
+<meta property="og:description" content="Este artigo visa a comunicar o desenvolvimento de um software para tratamento de dados..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Silva, Wilton Pereira da">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Campina Grande">
+        
+        <meta name="citation_author" content="Silva, Cleide M.D.P.S. e">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Campina Grande">
+        
+        <meta name="citation_author" content="Cavalcanti, Cláudio G.B.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Campina Grande">
+        
+        <meta name="citation_author" content="Silva, Diogo D.P.S. e">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Campina Grande">
+        
+        <meta name="citation_author" content="Soares, Ivomar B.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Campina Grande">
+        
+        <meta name="citation_author" content="Oliveira, João A.S.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Campina Grande">
+        
+        <meta name="citation_author" content="Silva, Cleiton D.P.S. e">
+        
+            <meta name="citation_author_affiliation" content="ITA">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="26"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="419"></meta>
+    <meta name="citation_lastpage" content="427"></meta>
+    <meta name="citation_doi" content="10.1590/S1806-11172004000400018"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            &#39;&#39;LAB Fit ajuste de curvas&#39;&#39;: um software em português para tratamento de dados experimentais
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Este artigo visa a comunicar o desenvolvimento de um software para tratamento de dados experimentais, denominado LAB Fit. Na verdade, trata-se de um pacote de programas envolvendo ajuste de curvas, gráficos 2D e 3D, estatística básica, propagação de erros e algumas ferramentas matemáticas. O software foi inicialmente publicado em inglês, buscando atingir um público alvo maior que o brasileiro, há cerca de dois anos. Devido ao sucesso alcançado, verificado pelo grande número de downloads e pelo número crescente de licenciamentos, está sendo disponibilizada, também, uma versão em português. Exemplos típicos de uso do LAB Fit mostram parte das potencialidades do software tanto no ensino como na pesquisa experimental. O seu desempenho foi verificado utilizando o &#39;&#39;Statistical Reference Datasets Project (SRDP)&#39;&#39; do &#39;&#39;National Institute of Standards and Technology (NIST)&#39;&#39;, que apresenta 27 conjuntos de dados e respectivas funções com valores certificados para os parâmetros. Todos os 27 resultados obtidos pelo LAB Fit são estatisticamente idênticos aos valores certificados."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2004-12"></meta>
+<meta name="citation_keywords" content="ajuste de curvas"></meta><meta name="citation_keywords" content="propagação de erros"></meta><meta name="citation_keywords" content="estatística básica"></meta><meta name="citation_keywords" content="gráficos 2D e 3D"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2004.v26n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2004.v26n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172004000400018 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 26 
+                (4)
+            <span class="_separator"> • </span>Dez 2004</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172004000400018" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172004000400018</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172004000400018"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>''LAB Fit ajuste de curvas'': um software em português para tratamento de dados experimentais<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">LAB Fit curve fitting: a software in Portuguese for treatment of experimental data</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Wilton Pereira da Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Cleide M.D.P.S. e Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Cláudio G.B. Cavalcanti </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Diogo D.P.S. e Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor5" class="dropdown-toggle" data-toggle="dropdown"><span> Ivomar B. Soares </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor5">
+<strong></strong>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor6" class="dropdown-toggle" data-toggle="dropdown"><span> João A.S. Oliveira </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor6">
+<strong></strong>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor7" class="dropdown-toggle" data-toggle="dropdown"><span> Cleiton D.P.S. e Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor7">
+<strong></strong>
+          ,  S.J. Campos,  
+          ,  SP,  
+        ,  ITA,  Departamento de Engenharia Eletrônica ,  Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Este artigo visa a comunicar o desenvolvimento de um software para tratamento de dados experimentais, denominado LAB Fit. Na verdade, trata-se de um pacote de programas envolvendo ajuste de curvas, gráficos 2D e 3D, estatística básica, propagação de erros e algumas ferramentas matemáticas. O software foi inicialmente publicado em inglês, buscando atingir um público alvo maior que o brasileiro, há cerca de dois anos. Devido ao sucesso alcançado, verificado pelo grande número de downloads e pelo número crescente de licenciamentos, está sendo disponibilizada, também, uma versão em português. Exemplos típicos de uso do LAB Fit mostram parte das potencialidades do software tanto no ensino como na pesquisa experimental. O seu desempenho foi verificado utilizando o ''Statistical Reference Datasets Project (SRDP)'' do ''National Institute of Standards and Technology (NIST)'', que apresenta 27 conjuntos de dados e respectivas funções com valores certificados para os parâmetros. Todos os 27 resultados obtidos pelo LAB Fit são estatisticamente idênticos aos valores certificados.</p>
+<p>ajuste de curvas; propagação de erros; estatística básica; gráficos 2D e 3D</p>
+</div>
+<hr>
+<div>
+<p>This paper aims to communicate the development of a software for treatment of experimental data called LAB Fit (curve fitting, 2D and 3D graphs, basic statistics, error propagation and mathematical tools). The english version was released two years ago and, due to the achieved success, verified by the great number of downloads, it is also being released a portuguese version. Typical examples of using of the LAB Fit show part of the potentialities of the program in the experimental teaching and research. The performance of the software has been verified with the Statistical Reference Datasets Project (SRDP) of the National Institute of Standards and Technology (NIST), which presents 27 datasets (and functions) with certified values for the parameters. All the 27 LAB Fit results are statistically identical to the certified values.</p>
+<p>curve fitting; error propagation; basic statistics; 2D and 3D graphs</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>PRODUTOS E MATERIAIS DIDÁTICOS</b>
+    </p>
+<p></p>
+<p>''LAB Fit ajuste de curvas'': um software em português para tratamento de dados experimentais </p>
+<p></p>
+<p>
+      <b>LAB Fit curve fitting: a software in Portuguese for treatment of experimental data</b>
+    </p>
+<p></p>
+<p>
+      <b>Wilton Pereira da Silva<sup>I</sup>; Cleide M.D.P.S. e Silva<sup>I</sup>; Cláudio G.B. Cavalcanti<sup>I</sup>; Diogo D.P.S. e Silva<sup>I</sup>; Ivomar B. Soares<sup>I</sup>; João A.S. Oliveira<sup>I</sup>; Cleiton D.P.S. e Silva<sup>II</sup></b>
+    </p>
+<p></p>
+<p><sup>I</sup>Grupo de Aquisição e Tratamento de Dados, Departamento de Física, Universidade Federal de Campina Grande, PB, Brasil </p>
+<p></p>
+<p><sup>II</sup>Departamento de Engenharia Eletrônica, ITA, S.J. Campos, SP, Brasil </p>
+<p></p>
+<p>
+      <strong>Endereço para correspondência</strong>
+    </p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Este artigo visa a comunicar o desenvolvimento de um <i>software</i> para tratamento de dados experimentais, denominado <i>LAB Fit</i>. Na verdade, trata-se de um pacote de programas envolvendo ajuste de curvas, gráficos 2D e 3D, estatística básica, propagação de erros e algumas ferramentas matemáticas. O <i>software</i> foi inicialmente publicado em inglês, buscando atingir um público alvo maior que o brasileiro, há cerca de dois anos. Devido ao sucesso alcançado, verificado pelo grande número de <i>downloads</i> e pelo número crescente de licenciamentos, está sendo disponibilizada, também, uma versão em português. Exemplos típicos de uso do <i>LAB Fit</i> mostram parte das potencialidades do <i>software</i> tanto no ensino como na pesquisa experimental. O seu desempenho foi verificado utilizando o ''<i>Statistical Reference Datasets Project</i> (SRDP)'' do ''<i>National Institute of Standards and Technology</i> (NIST)'', que apresenta 27 conjuntos de dados e respectivas funções com valores certificados para os parâmetros. Todos os 27 resultados obtidos pelo <i>LAB Fit</i> são estatisticamente idênticos aos valores certificados.</p>
+<p></p>
+<p><b>Palavras-chave:</b> ajuste de curvas, propagação de erros, estatística básica, gráficos 2D e 3D. </p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>This paper aims to communicate the development of a software for treatment of experimental data called LAB Fit (curve fitting, 2D and 3D graphs, basic statistics, error propagation and mathematical tools). The english version was released two years ago and, due to the achieved success, verified by the great number of downloads, it is also being released a portuguese version. Typical examples of using of the LAB Fit show part of the potentialities of the program in the experimental teaching and research. The performance of the software has been verified with the Statistical Reference Datasets Project (SRDP) of the National Institute of Standards and Technology (NIST), which presents 27 datasets (and functions) with certified values for the parameters. All the 27 LAB Fit results are statistically identical to the certified values. </p>
+<p></p>
+<p><b>Keywords:</b> curve fitting, error propagation, basic statistics, 2D and 3D graphs.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p> Tanto na pesquisa científica como na abordagem experimental do ensino das ciências, a observação de um dado fenômeno pode resultar em um gráfico cuja análise fornece parâmetros que possibilitam descrever qualitativa e quantitativamente tal fenômeno. A partir da década de 80, a determinação gráfica de parâmetros vem paulatinamente sendo substituída pelo método dos mínimos quadrados, uma vez que a aplicação generalizada deste método se tornou viável com a popularização dos microcomputadores. A essa técnica de determinação de parâmetros dá-se o nome genérico de ''regressão'' ou ''ajuste de curvas'', e já existem dezenas de <i>softwares</i> para essa aplicação disponíveis no mercado (ver, por exemplo, [1], [2], [3], [4] e [5]). A vivência na pesquisa e no ensino de disciplinas experimentais mostra que, em geral, num laboratório, é recomendável que se disponha de um <i>software</i> para análises de dados com as características mínimas apresentadas a seguir. </p>
+<p></p>
+<p> Primeiro, o <i>software</i> deve possibilitar o ajuste de funções, em geral, com a maior quantidade possível de informações sobre a função ajustada, inclusive a sua representação gráfica, se for o caso. Segundo, é desejável que tal <i>software</i> disponha de um menu com cálculos relativos à estatística básica já que, num laboratório, freqüentemente se deseja extrair informações de uma população de dados. Por último, devido ao fato do trabalho experimental muitas vezes envolver medidas, o que implica em incertezas, o <i>software</i> deve, também, conter um menu para cálculos de propagação de erros. </p>
+<p></p>
+<p> Uma minuciosa pesquisa na internet possibilita afirmar que, das dezenas de <i>softwares</i> disponíveis no mercado, nenhum deles dispõe, simultaneamente, destes três requisitos. Ao que parece, isto se deve a razões estratégicas de comercialização: ao invés de um, pode-se disponibilizar três <i>softwares</i> distintos, e cobrar por todos eles. Um exemplo que enfatiza esta estratégia pode ser dado através do <i>TableCurve</i> [5], em que o <i>software</i> de regressão não-linear é subdividido em dois, sendo um para ajuste de funções de uma variável independente (<i>TableCurve 2D</i>) e o outro para funções de duas variáveis independentes (<i>TableCurve 3D</i>). </p>
+<p></p>
+<p> Este artigo visa a apresentar um <i>software</i> para tratamento de dados experimentais, com versões em inglês e em português, cujo desenvolvimento teve o objetivo de preencher não só as necessidades de seus criadores, como também a lacuna identificada no mercado. </p>
+<p></p>
+<p>
+      <b>2. Um breve histórico</b>
+    </p>
+<p></p>
+<p> Em 1995 os dois primeiros autores deste artigo iniciaram, com a publicação de um livro sobre tratamento de dados experimentais [6], um trabalho visando ao fortalecimento das disciplinas experimentais oferecidas em sua universidade. No ano de 1996 os mesmos professores disponibilizaram, para os seus alunos, em complementação ao livro publicado, o programa ''Ajuste'', que dispunha de várias ferramentas<span class="ref footnote"><sup class="xref">*1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1*</strong>
+         Ajuste de curvas, estatística básica e propagacão de erros. 
+      </span></span></span> para o tratamento de dados experimentais. Apesar de ser uma boa ferramenta para os fins a que se destinava, o ''Ajuste'' foi desenvolvido na plataforma DOS, praticamente extinta nos dias atuais. Para tornar o ''Ajuste'' mais simples e amigável, no ano de 1999 os seus autores iniciaram o processo de sua migração para o ambiente Windows e, nessa plataforma, ele passou a se chamar <i>LAB Fit Curve Fitting Software (LAB Fit)</i> [7]. Buscando atingir um público alvo maior que o brasileiro, o <i>software</i> foi lançado em inglês, em agosto de 2002, em vários <i>sites</i> de <i>downloads</i> como, por exemplo, <i>cnet, cnetasia, zdnet, simtel, topshareware, soft32 e newfreeware</i>. Na maioria destes <i>sites</i> o <i>LAB Fit</i> se tornou um dos líderes em número de <i>downloads</i>, em comparação com outros da mesma categoria, estando quase sempre entre os dois ou três primeiros colocados. Apesar do sucesso da versão em inglês (comprovado por milhares de <i>downloads</i> e também pelo crescente número de licenciamentos), os autores sempre recebiam uma reclamação de seus usuários mais próximos: havia uma certa demanda, por parte de uma significativa parcela de seus alunos, por uma versão em português. Para atender a esta demanda, há cerca de um ano foi lançada, também, uma versão em português (V 7.2.14 c) e, neste idioma, o <i>software</i> recebeu o nome LAB Fit Ajuste de Curvas [8]. </p>
+<p></p>
+<p>
+      <b>3. Concepções gerais para o desenvolvimento do LAB Fit</b>
+    </p>
+<p></p>
+<p> Durante a sua concepção ficou estabelecido que o <i>LAB Fit</i> seria desenvolvido para análise e tratamento de dados experimentais, de forma ampla. Assim, neste <i>software</i>, deveria ser possível: </p>
+<p></p>
+<p> a) tratar dados similares; isto é, determinar o valor médio e a incerteza de um conjunto de leituras de uma mesma quantidade, efetuadas em condições similares. Além disso, o <i>software</i> deveria exibir um histograma referente aos dados tratados. Deveria haver, ainda, uma opção para tratar dois conjuntos de dados simultaneamente calculando, inclusive, a covariância e o coeficiente de correlação entre eles; </p>
+<p></p>
+<p> b) tratar dados não similares; isto é, determinar o valor médio e a incerteza de um conjunto de medidas de uma quantidade, em que cada uma delas é dada pelo seu valor médio e o correspondente desvio padrão; </p>
+<p></p>
+<p> c) determinar erro propagado; isto é, calcular o valor médio e a incerteza de uma função de uma ou de várias variáveis independentes, em que cada uma delas é dada através de seu valor médio e de seu desvio padrão; </p>
+<p></p>
+<p> d) traçar gráficos 2D e 3D de funções estipuladas pelo usuário; </p>
+<p></p>
+<p> e) efetuar cálculos matemáticos tais como: 1) resolver sistema de equações lineares, 2) determinar raízes de função e resolver equação não-linear, 3) calcular integral e derivada de funções de uma variável independente, 4) resolver sistemas de equações diferenciais ordinárias acopladas; </p>
+<p></p>
+<p> f) extrair valores de coordenadas de pontos em gráficos 2D </p>
+<p></p>
+<p> g) ajustar curvas. </p>
+<p></p>
+<p> Quanto ao sétimo requisito, o principal do <i>software</i>, o <i>LAB Fit</i> deveria ter um menu para ajuste de curvas, e os principais programas deste menu usariam regressão não-linear. O <i>LAB Fit</i> deveria ajustar funções de uma e de várias variáveis independentes, admitindo incertezas na variável dependente (Y) e também nas variáveis independentes (X). Em caso de incertezas em X e em Y, seria realizado um pré-ajuste desconsiderando as incertezas em X, que depois seriam transferidas para Y, por propagação de erros. A biblioteca do <i>LAB Fit</i> disponibilizaria mais de 200 funções de uma variável independente e quase 280 funções com duas variáveis independentes, previamente definidas. O usuário disporia, ainda, de um programa que procuraria pelas melhores funções de ajuste, dentre as disponíveis na biblioteca [9]. Haveria, também, uma opção que possibilitasse ao usuário escrever a sua própria função de ajuste, o que levou os criadores do <i>software</i> a desenvolver um avaliador de expressões [10] (''<i>function parser</i>'') específico para a linguagem <i>Fortran</i>, que foi utilizada em todo o pacote de programas que compõem o <i>LAB Fit</i>. Uma vez determinados os parâmetros da função de ajuste, deveria ser possível extrapolar a função ajustada e, para os casos 2D e 3D, o gráfico da função obtida seria mostrado. No caso 2D, o usuário poderia até incluir barras de erro e faixas de confiança e de predição no gráfico a ser traçado. </p>
+<p></p>
+<p>
+      <b>4. Fundamentação teórica</b>
+    </p>
+<p></p>
+<p> Relembrando que o <i>LAB Fit</i> surgiu em complementação ao livro sobre tratamento de dados escrito pelos dois primeiros autores deste artigo, fica claro que toda a fundamentação teórica e também todas as fórmulas embutidas no pacote têm como suporte a Ref. [6], embora outros autores tivessem sido consultados [11], [12], [13] e [14]. Deve-se observar que o objetivo deste artigo é apenas o de apresentar o <i>software</i> desenvolvido, e não o de discutir de forma profunda a teoria na qual tal <i>software</i> se baseia. Portanto, aqui cabe apenas mencionar que, no <i>LAB Fit</i>, os ajustes de funções são feitos através de regressão não-linear aplicada de forma iterativa, até que um critério de convergência seja atingido (ver, por exemplo, as seções 6.8 e 6.9 do capítulo 6 da Ref. [6]). Como o processo iterativo é muito instável em termos computacionais, o algoritmo de Levenberg-Marquardt [15] foi a opção utilizada para contornar a maioria dos problemas de divergência que ocorrem quando os valores iniciais estipulados pelo usuário não forem muito adequados. O <i>LAB Fit</i> sempre sugere ao usuário o uso do algoritmo de Levenberg-Marquardt, embora o <i>software</i> possibilite não utilizar esta opção. </p>
+<p></p>
+<p> Quanto às ferramentas matemáticas, em todo o <i>LAB Fit</i>, sistemas de equações lineares são resolvidos via tabela LU. Já o cálculo de raízes de uma função, bem como a solução de uma equação não-linear, utiliza o método da bisseção aplicado duas vezes: uma para a função e outra para a sua derivada. A propósito, o cálculo de derivadas, ponto crítico de <i>softwares</i> de ajuste de curvas, é feito diretamente a partir da definição enquanto que integrais são feitas acumulando áreas de trapézios. Já a solução numérica de equações diferenciais ordinárias é feita através do método de Runge-Kutta.</p>
+<p></p>
+<p> Os programas gráficos para representar funções de uma e de duas variáveis independentes tiveram como ponto de partida o estudo sobre o assunto apresentado no VFortran Tutorial [16], que é um tutorial para programação em <i>Fortran</i> 95 para Windows, utilizando uma opção de programação denominada ''<i>QuickWin Application</i>''. As <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Figs. 1</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>2</a> mostram dois gráficos que foram originalmente traçados no <i>LAB Fit</i> com a largura de 800 pixels e que, depois, foram reduzidos para a largura de 280 pixels com a utilização do <i>software IrfanView</i> [17].</p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> A rigor, as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Figs. 1</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>2</a>, que foram inicialmente editadas no próprio <i>LAB Fit</i>, deveriam ter sido reeditadas após a redução, reescrevendo-se as escalas e as informações sobre as variáveis, porque tais informações já não são legíveis. Entretanto, como se trata apenas de ilustrações, isto não foi feito. </p>
+<p></p>
+<p>
+      <b>5. Alguns exemplos de aplicação do LAB Fit</b>
+    </p>
+<p></p>
+<p> Para ilustrar algumas situações envolvendo dados experimentais em que o <i>LAB Fit</i> pode ser aplicado, serão mostrados alguns exemplos, também disponíveis no próprio <i>software</i> quando todos os componentes são instalados. Em todos os exemplos será suposto que os erros sistemáticos das leituras sejam desprezíveis, e também que exista um ''valor verdadeiro'' para o resultado do processo de medição. </p>
+<p></p>
+<p>
+      <b>5.1. Exemplo de tratamento de dados similares - Amostra não agrupada</b>
+    </p>
+<p></p>
+<p> Suponha que tenham sido feitas as leituras indicadas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a> para o valor de uma grandeza X, e que se deseja extrair informações dessa amostra de dados. </p>
+<div class="row table" id="tab01">
+<a name="tab01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>Clicando-se no item ''Dados Similares - Histograma'' do menu ''Tratamento de Dados'' ou então no botão ''Trat'' aparecerá uma caixa de diálogo em que o usuário deve escolher a primeira dentre as três opções disponíveis. Ao clicar no botão ''Novo'' e informar os dados, surge uma nova caixa de diálogo com as informações sobre a amostra, conforme pode ser visto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>. </p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Então, o usuário pode extrair os seguintes resultados finais: </p>
+<p></p>
+<p>com 68,3% de confiança </p>
+<p></p>
+<p>  Intervalo de predição das leituras: </p>
+<p></p>
+<p> X<sub><i>i</i></sub> = 10,230 ± 0,029 </p>
+<p></p>
+<p>  Intervalo de confiança do valor verdadeiro: </p>
+<p></p>
+<p> X<sub><i>V</i></sub> = 10,230 ± 0,008</p>
+<p></p>
+<p>com 95,4% de confiança</p>
+<p></p>
+<p> Intervalo de predição das leituras: </p>
+<p></p>
+<p> X<sub><i>i</i></sub> = 10,23 ± 0,06</p>
+<p></p>
+<p> Intervalo de confiança do valor verdadeiro: </p>
+<p></p>
+<p> X<sub><i>V</i></sub> = 10,230 ± 0,017 </p>
+<p></p>
+<p> Clicando no botão ''OK'' da caixa mostrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a> o usuário deve informar como será o histograma que, então, será traçado. No programa <i>Graph2D</i> do <i>LAB Fit</i>, após fornecer as informações sobre o histograma a ser traçado, o usuário pode clicar no menu ''Gráfico'' e depois no item ''<i>Zoom</i> mais'' que o gráfico será desenhado com as dimensões adequadas para uma posterior edição e redução em <i>softwares</i> apropriados como o da Ref. [17]. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a> mostra um histograma referente à <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a>. </p>
+<div class="row fig" id="fig04">
+<a name="fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> No pacote <i>LAB Fit</i>, versão em português, existem três arquivos de instalação distintos: o do software, propriamente dito, (arquivo chamado ''LABFit_p.zip''), o ''Help.zip'' que instala os arquivos de ajuda e também o ''Exemplos.zip'' em que se pode encontrar exemplos de outras opções disponíveis para tratamento de dados.</p>
+<p></p>
+<p>
+      <b>5.2. Exemplo de tratamento de dados não similares </b>
+    </p>
+<p></p>
+<p> Suponha que em quatro séries de leituras de uma grandeza X, cada uma delas tratada como foi mostrado no item 5.1, se tenha obtido os resultados finais para o valor verdadeiro da grandeza em cada série, conforme mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab02"><span class="sci-ico-fileTable"></span>Tabela 2</a>. </p>
+<div class="row table" id="tab02">
+<a name="tab02"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>Então, para extrair um resultado final para o valor da grandeza basta clicar no menu ''Tratamento de Dados'' e depois no item ''Dados não-similares'' ou então no botão ''N S''. Após informar os valores médios e também os desvios padrão correspondentes, obtém-se uma nova média e o seu desvio padrão: </p>
+<p></p>
+<p>X = 9,74 ± 0,14.</p>
+<p></p>
+<p>
+      <b>5.3. Exemplo de ajuste de curvas</b>
+    </p>
+<p></p>
+<p> O <i>LAB Fit</i> ajusta funções partindo do pressuposto de que se trata de uma função não-linear nos parâmetros, com várias variáveis independentes. Até para uma função linear com apenas uma variável independente, o tratamento dado é o mesmo para o caso mais geral. Aqui serão utilizados, como exemplo, dados típicos da pressão <i>vs.</i> a temperatura de um gás submetido a um aquecimento isocórico, conforme mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab03"><span class="sci-ico-fileTable"></span>Tabela 3</a>. Tais dados foram obtidos por alunos em um laboratório de Física Experimental I. Outros exemplos, como o ajuste da função logística a um conjunto de dados referentes ao crescimento de raízes de feijão, ou mesmo o ajuste de funções de duas ou mais variáveis independentes, podem ser obtidos diretamente no <i>software</i>. </p>
+<div class="row table" id="tab03">
+<a name="tab03"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p> Para informar os dados, o usuário deve clicar no menu ''Arquivo'' e depois no item ''Novo'' ou então no botão ''Novo'' que surgirá uma caixa de diálogo em que devem ser definidos: a) o número de variáveis independentes, b) quais são as variáveis que têm incertezas e ainda, no caso de ser apenas uma só, c) se a variável independente é ângulo em graus. Uma vez que os dados tenham sido informados, para os caso 2D e 3D a aparência da tela principal do <i>software</i> é modificada, destacando os pontos informados, conforme mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a>, para o exemplo referente à <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab03"><span class="sci-ico-fileTable"></span>Tabela 3</a>.</p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Neste ponto o usuário dispõe de três possibilidades: a) optar por procurar pelas melhores funções da biblioteca que se encaixam nos pontos experimentais [9] (menu ''Ajuste de Curvas'', item ''Ajuste: Achar funções'' ou botão ''Acha''), b) escolher uma função de ajuste na biblioteca do <i>LAB Fit</i> (menu ''Ajuste de Curvas'', item ''Ajuste: funções da biblioteca'' ou botão ''Bibl''), c) escrever a função de ajuste (menu ''Ajuste de Curvas'', item ''Ajuste: funções do usuário'' ou botão ''Usu''). Caso o usuário escolha a primeira opção, o <i>LAB Fit</i> ajustará todas as funções de sua biblioteca aos dados, determinando os melhores modelos através do valor do qui-quadrado reduzido referente a cada ajuste. Caso a decisão do usuário recaia nas duas últimas opções, o ajuste será feito apenas para a função estipulada. Para os dados deste exemplo, a observação da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a> e o conhecimento do fenômeno físico [18] sugerem que o modelo adequado seja uma função do primeiro grau: </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/c323cf42b5529cdfab9c0a4b291b1afcfa101a8c.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> No <i>LAB Fit</i>, o segundo membro de tal expressão deve ser escrito como A*X+B. Procedendo-se ao ajuste, obtém-se os resultados em uma caixa de diálogo, conforme mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig06"><span class="sci-ico-fileFigure"></span>Fig. 6</a>.</p>
+<div class="row fig" id="fig06">
+<a name="fig06"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Esta caixa informa que a convergência ocorreu na iteração de número 7 e que o coeficiente de correlação entre y<sub><i>i</i></sub> e y(x<sub><i>i</i></sub>) é 0,9945950. Informa, também, o nome do arquivo de dados (zero_abs.txt), a função de ajuste estipulada pelo usuário (Y = A*X+B) e o número de graus de liberdade do ajuste (Gr. Lib = 12). Há, ainda, informações sobre o qui-quadrado (igual a 12) e sobre o qui-quadrado reduzido, que vale 1. Os resultados para os parâmetros de ajuste são:</p>
+<p></p>
+<p> A = 0,236 ± 0,005 e B = 66,24 ± 0,27. </p>
+<p></p>
+<p>Clicando-se no botão ''Detalhes'', várias informações sobre o ajuste são disponibilizadas em um arquivo denominado ''saida.lst'', inclusive a matriz das covariâncias que, neste exemplo, é igual a</p>
+<p></p>
+<p> 0,252322E-04 -0,129946E-02 </p>
+<p></p>
+<p> -0,129946E-02 0,706124E-01 </p>
+<p></p>
+<p> de onde se pode extrair cov(A , B) = -0,129946E-02.</p>
+<p></p>
+<p> O botão ''Rejeição'' possibilita ao usuário identificar os pontos que eventualmente estejam fora da faixa de predição. Já o botão ''Avaliar'' possibilita que sejam determinados o valor médio e a incerteza da função ajustada para valores de x estipulados pelo usuário. Por outro lado, ao clicar no botão ''OK'', o gráfico da função ajustada será traçado, sendo que o usuário pode escolher, via caixa de diálogo, várias características a serem incluídas como, por exemplo, barras de erro, faixas de confiança e de predição, grade, extrapolação e cores. Optando por incluir barras de erro, grade e faixas de confiança e de predição tem-se, para o exemplo apresentado, o gráfico mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig07"><span class="sci-ico-fileFigure"></span>Fig. 7</a>. </p>
+<div class="row fig" id="fig07">
+<a name="fig07"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Um outro recurso disponível no <i>LAB Fit</i> é o da extrapolação da função ajustada. Se a opção pelo gráfico da função ajustada incluísse apenas grade e extrapolação, estipulando-se o intervalo de <i>t</i> de -300,0 C até 71,0 C, o resultado final seria aquele mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig08"><span class="sci-ico-fileFigure"></span>Fig. 8</a>, que possibilita ao usuário fazer interessantes análises sobre o fenômeno em estudo. </p>
+<div class="row fig" id="fig08">
+<a name="fig08"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>5.4. Propagação de erros</b>
+    </p>
+<p></p>
+<p> Supondo que o experimento do item 5.3 tenha por objetivo determinar a temperatura do zero absoluto em graus centígrados, os resultados referentes ao ajuste podem ser usados, após a breve consideração que será feita a seguir. A temperatura do zero absoluto (<i>t</i><sub>z</sub>) é aquela em que a energia cinética das moléculas seria igual a zero, o que implicaria na pressão zero exercida pelo gás sobre as paredes do recipiente. Então, da Eq. (1) obtém-se: </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/d8031167d898180808fcefe396faf4c9e6aa3789.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Clicando-se no menu ''Tratamento de Dados'' e depois no item ''Propagação de Erros'' (ou no botão ''Prop''), aparecerá uma caixa de diálogo onde o usuário deve selecionar ou escrever a função a ser calculada, indicando as variáveis independentes por X1, X2, e assim por diante. Para a operação indicada na Eq. (2), basta selecionar a função de número quatro, Y = X1/X2, e em seguida clicar no botão ''OK''. Aparecerá, então, uma nova caixa de diálogo com a função selecionada, na qual deve-se acrescentar um sinal de menos. Depois, os valores médios e as incertezas de X1 (=b) e de X2 (=a) devem ser informados. Ao clicar no botão ''OK'' surge uma nova caixa de diálogo para a complementação das informações sobre a matriz das covariâncias, conforme é visto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig09"><span class="sci-ico-fileFigure"></span>Fig. 9</a>. </p>
+<div class="row fig" id="fig09">
+<a name="fig09"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Como se sabe, os elementos diagonais desta matriz são dados pelo quadrado das incertezas dos parâmetros (ver, por exemplo, o item 6.6.1 do capítulo 6 da Ref. [6]), que já foram previamente informadas. Assim, na caixa de diálogo da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig09"><span class="sci-ico-fileFigure"></span>Fig. 9</a> já aparecem os valores dos elementos diagonais. Então, o usuário deve apenas escrever os elementos não diagonais dessa matriz. Por comodidade, se um elemento não diagonal for igual a zero, ele não precisa ser escrito, o que é interpretado pelo <i>LAB Fit</i> como valor zero. Uma vez informados todos os valores não diagonais diferentes de zero, basta clicar no botão ''OK'' e observar o resultado final conforme mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig10"><span class="sci-ico-fileFigure"></span>Fig. 10</a>. </p>
+<div class="row fig" id="fig10">
+<a name="fig10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Então, por propagação de erros, obtém-se o seguinte resultado para o zero absoluto:</p>
+<p></p>
+<p><i>t</i><sub><i>z</i></sub> = (-281 ± 7) ºC.</p>
+<p></p>
+<p>Conforme foi mencionado em 5.3, existem várias informações disponíveis no arquivo ''saida.lst'', obtido clicando-se no botão ''Detalhes'' da caixa de diálogo com os resultados do ajuste. Uma destas informações é o fator f pelo qual a incerteza deve ser multiplicada, de forma que o resultado obtido defina um intervalo com probabilidade pré-fixada de ocorrência do valor verdadeiro (ver, por exemplo, o capítulo VI da Ref. [11]). O valor deste fator depende do número de graus de liberdade do ajuste e, no <i>LAB Fit</i>, o seu cálculo pressupõe que os dados tenham uma distribuição normal em torno da função ajustada. Para este exemplo, pré-definindo a probabilidade em 95,4%, o fator vale f(95,4%) = 2,22. Assim, o resultado final para a temperatura do zero absoluto é: </p>
+<p></p>
+<p><i>t</i><sub><i>z</i></sub> = (-281 ± 16) ºC, com 95,4% de confiança. </p>
+<p></p>
+<p>
+      <b>6. Certificação do LAB Fit e considerações finais</b>
+    </p>
+<p></p>
+<p> Os autores do <i>software</i> <i>LAB Fit</i> procuraram por razões objetivas para certificar a qualidade do produto desenvolvido. Uma destas razões seria a abrangência de uso em laboratórios de ensino e de pesquisa. Outra seria a facilidade de uso, que quase dispensa os arquivos de ajuda e de exemplos. Muitas outras razões poderiam ser citadas como, por exemplo, no caso de ajustes, a grande tolerância com valores iniciais ruins. Entretanto, por mais que os autores evidenciassem as virtudes do produto que desenvolveram, poderia ficar a sensação de que os ''elogios'' sobre tal produto fossem tendenciosos, já que talvez não houvesse suficiente isenção acerca das informações prestadas. Conscientes deste risco, os autores procuraram buscar razões que realmente pudessem ser consideradas objetivas e, em certos aspectos, até mesmo inquestionáveis. </p>
+<p></p>
+<p> Felizmente, com relação à certificação de <i>softwares</i> estatísticos, existe um projeto denominado ''<i>Statistical Reference Datasets Project</i> (SRDP)'' [19] do ''<i>National Institute of Standards and Technology</i> (NIST)'' [20], que é o órgão de padronização do governo norte-americano. O SRDP disponibiliza 27 arquivos de dados com as correspondentes funções para a regressão não-linear, juntamente com os resultados certificados. Estes resultados foram obtidos pelo SRDP com os cálculos das derivadas das funções de ajuste feitos através de expressões analíticas, e com precisões acima da dupla precisão normalmente utilizada. Isto significa que, em termos práticos, foi feito um programa específico para a regressão não-linear de cada função de ajuste. Para cada um dos 27 conjuntos de dados, dois conjuntos de valores iniciais distintos são sugeridos. Os conjuntos de dados foram classificados pelo SRDP, segundo o grau de dificuldade na obtenção de resultados corretos, em três categorias: ''<i>lower</i>'' (8 arquivos), ''<i>average</i>'' (11 arquivos) e ''<i>higher</i>'' (8 arquivos). </p>
+<p></p>
+<p> A versão 7.2.31 do <i>LAB Fit</i> (inglês) foi testada e os resultados, detalhados no site do <i>software</i> [7], serão resumidos aqui. Todos os 27 conjuntos de dados, testados com os dois conjuntos de valores iniciais sugeridos, apresentaram resultados estatisticamente idênticos aos apontados pelo SRDP. Este desempenho do <i>LAB Fit</i> pode ser considerado excelente quando comparado com a performance de <i>softwares</i> comerciais importantes como, por exemplo, o NLREG [4] que, segundo o seu autor, não obtém respostas para três dos 27 arquivos, e para outros três a resposta só é satisfatória para um dos dois grupos de valores iniciais sugeridos. </p>
+<p></p>
+<p> Como outros <i>softwares</i>, o <i>LAB Fit</i> é um projeto que vai sendo modificado à medida em que possibilidades de melhoramentos vão sendo detectadas. Muitas das características atuais teve a sua origem através de sugestões de usuários. Atualmente, os autores estão trabalhando para incorporar ao <i>software</i> uma opção para <i>splines</i> e também para dar aos gráficos traçados uma qualidade de publicação, sem a necessidade de muitos artifícios. </p>
+<p></p>
+<p> Uma pergunta que poderia ser feita por usuários do <i>LAB Fit</i> e também por leitores deste artigo seria a respeito da possibilidade do desenvolvimento de uma versão do <i>software</i> na plataforma Linux. Isto chegou a ser cogitado mas estudos preliminares descartaram essa necessidade devido ao fato de que já existem programas que viabilizam a execução de softwares desenvolvidos em Windows na plataforma Linux (ver, por exemplo, a Ref. [21]). Assim, a idéia básica é tornar as versões para Windows cada vez mais poderosas porque, deste modo, os usuários das duas plataformas estarão sendo beneficiados. </p>
+<p></p>
+<p>
+      <b>Agradecimentos</b>
+    </p>
+<p></p>
+<p>Cláudio G.B. Cavalcanti, Diogo D.P.S. e Silva, Ivomar B. Soares e João A.S. Oliveira agradecem ao CNPq pela bolsa de Iniciação Científica. </p>
+<p></p>
+<p> [9] Embora o critério para definir o melhor ajuste possa ser baseado no valor do coeficiente de correlação entre y<sub><i>i</i></sub> e y(x<sub><i>i</i></sub>), o mais utilizado baseia-se no menor qui-quadrado reduzido para a função ajustada, e este é o critério que foi adotado para classificar as melhores funções no <i>LAB Fit</i> </p>
+<p></p>
+<p> [18] Praticamente todos os livros de Física básica abordam o tema ''aquecimento isocórico'' nos capítulos referentes ao estudo de gases. </p>
+<p></p>
+<p>
+      <li>
+        <div>Endereço para correspondência</div>
+        <div> Wilton Pereira da Silva </div>
+        <div> E-mail: </div>
+        <div>
+          <a href="mailto:wiltonps@uol.com.br">wiltonps@uol.com.br</a>
+        </div>
+      </li>
+    </p>
+<p></p>
+<p>Recebido em 07/11/2003; Aceito em 18/11/2004</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1*</span>
+        <div> Ajuste de curvas, estatística básica e propagacão de erros. </div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] <i>Origin Data Analysis and Graphing Software</i>,    disponível em www.originlab.com    acesso em 17/11/2004. </div></li>
+<li><div>[2] <i>SigmaPlot Graphing Software</i>, disponível    em www.sigmaplot.com    acesso em 17/11/2004. </div></li>
+<li><div>[3] <i>DataFit - Curve Fitting and Data Plotting</i>, disponível em www.oakdaleengr.com acesso em 17/11/2004.</div></li>
+<li><div>[4] <i>NLREG - Nonlinear Regression Analysis Program</i>, disponível em www.nlreg.com acesso em 17/11/2004.</div></li>
+<li><div>[5] <i>TableCurve</i>, disponível em www.systat.com    acesso em 17/11/2004. </div></li>
+<li><div>[6] Wilton P. Silva e Cleide M.D.P.S. Silva,    <i>Tratamento de Dados Experimentais</i> (Editora Universitária da UFPB,    Joăo Pessoa, 1998), 2Ş ed. </div></li>
+<li><div>[7] <i>LAB Fit Curve Fiting Software</i>, disponível    em www.labfit.net acesso    em 17/11/2004. </div></li>
+<li><div>[8] <i>LAB Fit Ajuste de Curvas</i>, disponível    em http://zeus.df.ufcg.edu.br/labfit/index_p.htm    acesso em 17/11/2004. </div></li>
+<li><div>[10] Wilton P. Silva e Ivomar B. Soares, <i>Fortran    Function Parser,</i> código aberto disponível em www.extension.hpg.com.br    acesso em 17/11/2004. </div></li>
+<li><div>[11] O.A.M. Helene e V.R. Vanin, <i>Tratamento    Estatístico de Dados em Física Experimental</i> (Editora Edgard Blücher    Ltda, Săo Paulo, 1981), 1Ş ed. </div></li>
+<li><div>[12] José H. Vuolo, <i>Fundamentos da Teoria    de Erros</i> (Editora Edgard Blücher, Săo Paulo, 1992), 1Ş ed. </div></li>
+<li><div>[13] P.R. Bevington, and D.K. Robinson, <i>Data    Reduction and Error Analysis for Physical Sciences</i> (McGraw-Hill, New York,    1992), 2nd ed. </div></li>
+<li><div>[14] J.R. Taylor, <i>An Introduction to Error    Analysis</i> (University Science Books, Sausalito, California, 1997), 2nd ed.    </div></li>
+<li><div>[15] William H. Press, <i>et al.</i>, <i>Numerical    Recipes in Fortran 77</i>, in <i>The Art of Scientific Computing</i>, (Cambridge    University Press, 1996), p. 678-680. </div></li>
+<li><div>[16] <i>VFortran Tutorial -Programação no Visual Studio</i>, disponível em www.extensao.hpg.com.br acesso em 17/11/2004.</div></li>
+<li><div>[17] <i>IrfanView</i>, online, download disponível    em http://www.Irfanview.com    </div></li>
+<li><div>[19] <i>Statistical Reference Datasets Project</i>, informações em www.nist.gov/itl/div898/strd acesso em 17/11/2004.</div></li>
+<li><div>[20] <i>National Institute of Standards and Technology</i>,    informaçőes em www.nist.gov    acesso em 17/11/2004. </div></li>
+<li><div>[21] <i>Winehq</i>, disponível em www.winehq.com    acesso em 17/11/2004. </div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        Endereço para correspondência
+         Wilton Pereira da Silva 
+         E-mail: 
+        
+          wiltonps@uol.com.br
+        
+      
+        1*
+         Ajuste de curvas, estatística básica e propagacão de erros. 
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>25 Abr 2005</li>
+<li>
+<strong>Data do Fascículo</strong><br>Dez 2004</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Aceito</strong><br>18 Nov 2004</li>
+<li>
+<strong>Recebido</strong><br>07 Nov 2003</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Wilton Pereira da Silva </strong><br><div>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Cleide M.D.P.S. e Silva </strong><br><div>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Cláudio G.B. Cavalcanti </strong><br><div>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Diogo D.P.S. e Silva </strong><br><div>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Ivomar B. Soares </strong><br><div>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> João A.S. Oliveira </strong><br><div>
+          ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Cleiton D.P.S. e Silva </strong><br><div>
+          ,  S.J. Campos,  
+          ,  SP,  
+        ,  ITA,  Departamento de Engenharia Eletrônica ,  Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (10)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (3)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (2)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/cd9405cb83a9f892e5da36da4efcca7f23201f2f.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/cd9405cb83a9f892e5da36da4efcca7f23201f2f.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/355015469e67fecd3b9740200580079c8223ef17.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/355015469e67fecd3b9740200580079c8223ef17.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/06d729c20d184d57d3e850d0630650dd150f7216.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/06d729c20d184d57d3e850d0630650dd150f7216.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/35ee37ad7c8fa7be849e27a9a3dc913069114ef3.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/35ee37ad7c8fa7be849e27a9a3dc913069114ef3.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/deaea05a8251efa5e074a6377886bea98c990f3a.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/deaea05a8251efa5e074a6377886bea98c990f3a.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/839ad7d2805e188abfe150a4b624f07d6d954bbe.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/839ad7d2805e188abfe150a4b624f07d6d954bbe.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/49e3a5a33d2dbcca38ccf284211c869c5566f9de.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/49e3a5a33d2dbcca38ccf284211c869c5566f9de.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/4f77cf49a4984b7322fe0e9169789f3d56aa0d76.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/4f77cf49a4984b7322fe0e9169789f3d56aa0d76.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/f6aefab36ffb08de34ec31cd3a7ddbd93b7db99f.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/f6aefab36ffb08de34ec31cd3a7ddbd93b7db99f.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/70d0fc70772f3cb9cf36fa513e020a9d964e929f.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/70d0fc70772f3cb9cf36fa513e020a9d964e929f.gif"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/c9a13947d5e9cce010c9bdb2ea89c7b9831f5322.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/c9a13947d5e9cce010c9bdb2ea89c7b9831f5322.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/1e4a4227a70795813bbc5bc54c9481b2bf102cd3.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/1e4a4227a70795813bbc5bc54c9481b2bf102cd3.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/5d0e641948bc736b1b077f26ea6b2b6265573529.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/5d0e641948bc736b1b077f26ea6b2b6265573529.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/c323cf42b5529cdfab9c0a4b291b1afcfa101a8c.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/c323cf42b5529cdfab9c0a4b291b1afcfa101a8c.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/d8031167d898180808fcefe396faf4c9e6aa3789.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/d8031167d898180808fcefe396faf4c9e6aa3789.gif"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Silva, Wilton Pereira da et al. ''LAB Fit ajuste de curvas'': um software em português para tratamento de dados experimentais. Revista Brasileira de Ensino de Física [online]. 2004, v. 26, n. 4 [Acessado CURRENTDATE] , pp. 419-427. Disponível em: &lt;https://doi.org/10.1590/S1806-11172004000400018&gt;. Epub 25 Abr 2005. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172004000400018.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;&#39;&#39;LAB Fit ajuste de curvas&#39;&#39;: um software em português para tratamento de dados experimentais&#34; &#34;Silva, Wilton Pereira da&#34; &#34;Silva, Cleide M.D.P.S. e&#34; &#34;Cavalcanti, Cláudio G.B.&#34; &#34;Silva, Diogo D.P.S. e&#34; &#34;Soares, Ivomar B.&#34; &#34;Oliveira, João A.S.&#34; &#34;Silva, Cleiton D.P.S. e&#34; &#34;2004&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;&#39;&#39;LAB Fit ajuste de curvas&#39;&#39;: um software em português para tratamento de dados experimentais&#34; &#34;Silva, Wilton Pereira da&#34; &#34;Silva, Cleide M.D.P.S. e&#34; &#34;Cavalcanti, Cláudio G.B.&#34; &#34;Silva, Diogo D.P.S. e&#34; &#34;Soares, Ivomar B.&#34; &#34;Oliveira, João A.S.&#34; &#34;Silva, Cleiton D.P.S. e&#34; &#34;2004&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/D44sMcwfXQrm4YQPDN3BZLN/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172004000400018&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172004000400018" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172004000400018">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172004000400018" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172004000400018">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172004000400018"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172004000400018" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172004000400018">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172004000400018" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            &#39;&#39;LAB Fit ajuste de curvas&#39;&#39;: um software em português para tratamento de dados experimentais
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172004000400018">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

@@ -1,0 +1,2059 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos"/>
+<meta property="og:description" content="A nova geração de simuladores de campos eletromagnéticos pode ser usada no ensino de..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Nogueira, Antônio Flavio Licarião">
+        
+            <meta name="citation_author_affiliation" content="Universidade do Estado de Santa Catarina">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="29"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="565"></meta>
+    <meta name="citation_lastpage" content="573"></meta>
+    <meta name="citation_doi" content="10.1590/S0102-47442007000400015"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="A nova geração de simuladores de campos eletromagnéticos pode ser usada no ensino de eletromagnetismo sem que o usuário conheça com profundidade a metodologia usada no desenvolvimento desses programas computacionais. A teoria da linha coaxial cilíndrica é usada para ilustrar a aplicação desses programas como ferramenta de ensino. A solução analítica do problema é usada para avaliar a precisão numérica dos resultados obtidos utilizando diferentes subdivisões das malhas de elementos finitos. A relação entre minimalidade energética e distribuição de potenciais elétricos é usada para explicar como diferentes discretizações do modelo afetam o cálculo das grandezas eletromagnéticas. A definição de um problema exterior para modelar a estrutura coaxial permite a análise dos campos dispersos nas extremidades e aumenta a precisão do cálculo da capacitância."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2007"></meta>
+<meta name="citation_keywords" content="axissimetria"></meta><meta name="citation_keywords" content="campos elétricos"></meta><meta name="citation_keywords" content="método dos elementos finitos"></meta><meta name="citation_keywords" content="método variacional"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2007.v29n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2007.v29n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172007000400015 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 29 
+                (4)
+            <span class="_separator"> • </span>2007</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S0102-47442007000400015" class="_doi" target="_blank">https://doi.org/10.1590/S0102-47442007000400015</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S0102-47442007000400015"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Analysis of cylindrical coaxial cables using the finite element technique</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Antônio Flavio Licarião Nogueira </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Joinville,  
+          ,  Santa Catarina,  
+        ,  Universidade do Estado de Santa Catarina,  Departamento de Engenharia Elétrica ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre o autor</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>A nova geração de simuladores de campos eletromagnéticos pode ser usada no ensino de eletromagnetismo sem que o usuário conheça com profundidade a metodologia usada no desenvolvimento desses programas computacionais. A teoria da linha coaxial cilíndrica é usada para ilustrar a aplicação desses programas como ferramenta de ensino. A solução analítica do problema é usada para avaliar a precisão numérica dos resultados obtidos utilizando diferentes subdivisões das malhas de elementos finitos. A relação entre minimalidade energética e distribuição de potenciais elétricos é usada para explicar como diferentes discretizações do modelo afetam o cálculo das grandezas eletromagnéticas. A definição de um problema exterior para modelar a estrutura coaxial permite a análise dos campos dispersos nas extremidades e aumenta a precisão do cálculo da capacitância.</p>
+<p>axissimetria; campos elétricos; método dos elementos finitos; método variacional</p>
+</div>
+<hr>
+<div>
+<p>The new generation of electromagnetic field simulators can be used for teaching electromagnetism with no user's deep knowledge about the methodology used to develop these computer programs. The theory of the cylindrical coaxial line is used to illustrate the application of these programs as teaching tools. The analytical solution of the problem is used to assess the accuracy of the numerical results produced by different subdivisions of the finite element meshes. The relationship between energy minimality and distribution of electric potentials is used to explain how different discretizations of the model affect the computation of the electromagnetic variables. The definition of an exterior problem to model the coaxial structure allows the analysis of leakage fields at the end-zone and improves the accuracy of capacitance calculation.</p>
+<p>axisymmetry; electric fields; finite element methods; variational methods</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos</p>
+<p></p>
+<p>
+      <b>Analysis of cylindrical coaxial cables using the finite element technique</b>
+    </p>
+<p></p>
+<p>Antônio Flavio Licarião Nogueira<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        antonioflavio@ieee.org.
+      </span></span></span></p>
+<p></p>
+<p> Departamento de Engenharia Elétrica, Universidade do Estado de Santa Catarina, Joinville, SC, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>A nova geração de simuladores de campos eletromagnéticos pode ser usada no ensino de eletromagnetismo sem que o usuário conheça com profundidade a metodologia usada no desenvolvimento desses programas computacionais. A teoria da linha coaxial cilíndrica é usada para ilustrar a aplicação desses programas como ferramenta de ensino. A solução analítica do problema é usada para avaliar a precisão numérica dos resultados obtidos utilizando diferentes subdivisões das malhas de elementos finitos. A relação entre minimalidade energética e distribuição de potenciais elétricos é usada para explicar como diferentes discretizações do modelo afetam o cálculo das grandezas eletromagnéticas. A definição de um problema exterior para modelar a estrutura coaxial permite a análise dos campos dispersos nas extremidades e aumenta a precisão do cálculo da capacitância.</p>
+<p></p>
+<p><b>Palavras-chave:</b> axissimetria, campos elétricos, método dos elementos finitos, método variacional.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p> The new generation of electromagnetic field simulators can be used for teaching electromagnetism with no user's deep knowledge about the methodology used to develop these computer programs. The theory of the cylindrical coaxial line is used to illustrate the application of these programs as teaching tools. The analytical solution of the problem is used to assess the accuracy of the numerical results produced by different subdivisions of the finite element meshes. The relationship between energy minimality and distribution of electric potentials is used to explain how different discretizations of the model affect the computation of the electromagnetic variables. The definition of an exterior problem to model the coaxial structure allows the analysis of leakage fields at the end-zone and improves the accuracy of capacitance calculation.</p>
+<p></p>
+<p><b>Keywords:</b> axisymmetry, electric fields, finite element methods, variational methods. </p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p> O método dos elementos finitos tem por base a idéia de subdividir o domínio original do problema, o <i>continuum</i>, em um conjunto de subdomínios, conhecidos como <i>elementos</i>. Uma formulação numérica, baseada na teoria das interpolações, é então aplicada a esses elementos de forma a satisfazer a um dado critério de otimização e produzir uma solução numérica. Trata-se, na verdade, de uma técnica numérica para a solução, em grande escala, de problemas de alta complexidade utilizando uma estrutura de dados que é, ao mesmo tempo, simples e flexível. Os elementos finitos são definidos com base em sua forma geométrica e no grau da função de aproximação. Essa função é, na maioria dos casos, polinomial e define a forma como a variável primária de cálculo, normalmente um potencial, comporta-se no minúsculo subespaço delimitado por cada <i>elemento finito</i>. Muitas formas geométricas podem ser utilizadas; o elemento triangular é o mais usado. Também, na maioria das aplicações, funções interpolantes de primeiro grau são suficientes para atender ao compromisso entre a precisão numérica requerida e as demandas em termos de esforço computacional e tempo de processamento.</p>
+<p></p>
+<p> A utilização conjunta da técnica dos elementos finitos com o método variacional foi apresentada à comunidade científica em 1970, através de um artigo de Silvester e Chari que abordava a questão da saturação magnética em transformadores [1]. A formulação proposta formou a base de cálculo dos primeiros sistemas informáticos para o desenvolvimento de projetos e otimização de equipamentos elétricos que surgiram na época. Apesar de um número expressivo de sistemas informáticos utilizar a técnica dos elementos finitos em conjunto com o método residual de Galerkin, alguns sistemas desenvolvidos recentemente continuam a empregar a primeira formulação. É o caso da suíte de programas utilizada neste trabalho, conhecida como FEMM [2] e distribuída gratuitamente na Internet desde 2002.</p>
+<p></p>
+<p> O presente trabalho procura mostrar que os programas de simulação de campos podem ser usados como instrumento didático no ensino de eletromagnetismo. A utilização dessas ferramentas de simulação requer a interferência do usuário ao longo de todo o processo. Na fase de definição do problema, o usuário precisa fazer uma série de escolhas de parâmetros relacionados, por exemplo, com o nível, maior ou menor, de discretização do domínio. Na fase final, quando a solução numérica já está disponível, a utilização dos recursos para cálculo e visualização das grandezas de interesse também exige a participação do usuário; as séries numéricas que representam as variações dos campos magnético e elétrico, podem ser manipuladas tanto na forma de distribuições discretas e constantes quanto na forma de superfícies suavizadas. </p>
+<p></p>
+<p> A questão da interatividade entre usuário e sistema informático, considerada por alguns educadores como o aspecto mais valioso da utilização dos simuladores de campo, é discutida neste trabalho ao longo da análise de um problema eletrostático. O problema avalia os parâmetros elétricos de um cabo coaxial e cilíndrico, energizado por uma diferença de potencial conhecida. Trata-se de um problema abordado em muitos livros de física e eletromagnetismo e que possui uma série de vantagens tais como uma solução analítica que é bem conhecida e que pode ser comparada com os valores calculados numericamente [3-4]. Outra vantagem é relacionada à simetria da estrutura; o problema pode ser analisado como estrutura plana, bidimensional ou como estrutura axissimétrica, tridimensional.</p>
+<p></p>
+<p> A exploração da simetria translacional, em coordenadas cartesianas, tem a familiaridade como principal vantagem, mas carrega consigo as limitações inerentes à análise bidimensional; não permite, por exemplo, avaliar o comportamento do campo elétrico nas extremidades do dispositivo. De acordo com Silvester e Ferrari [5], o problema da linha coaxial cilíndrica, além de ser facilmente modelado como estrutura axissimétrica, é ideal para a análise de desempenho do processo de aproximações numéricas utilizando diferentes níveis de subdivisões do domínio. </p>
+<p></p>
+<p>
+      <b>2. A estrutura coaxial cilíndrica</b>
+    </p>
+<p></p>
+<p> O equacionamento dos problemas que envolvem fronteiras cilíndricas é mais simples em situações onde o comprimento axial da estrutura é grande em relação ao raio [3]. Nesse caso, os potenciais e campos da linha coaxial são considerados aproximadamente independentes do comprimento <i>z</i>. Se adicionalmente, a estrutura apresenta simetria circular, as distribuições de potenciais e campos elétricos não apresentam variações na direção circunferencial, f, e podem ser expressas em função da variação do raio <i>r</i>. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a> mostra os principais elementos de uma linha coaxial. São eles: o raio interno <i>R<sub>i</sub></i>, o raio externo <i>R<sub>e</sub></i> e o comprimento axial <i>h</i>. A solução analítica é formulada em termos desses parâmetros e da variação do raio <i>r</i>. Se <i>V<sub>o</sub></i> denota o potencial elétrico na superfície cilíndrica interna de raio <i>R<sub>i</sub></i>, e a superfície externa de raio <i>R<sub>e</sub></i> é submetida a um potencial de zero volt, a variação do potencial elétrico no espaço entre os condutores, em volts, é </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d971a9157314f0c7b93bc6a9887a4c58a4ae1f6f.gif">
+      </div></div>
+</div>
+    </p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> A variação do campo elétrico radial, também no espaço entre os condutores, em volts por metro, é </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/9c4742ed0a15a40499c00585498fc42d5ae58dce.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> O cálculo analítico da capacitância é feito a partir das dimensões geométricas e das propriedades do meio material que ocupa o espaço entre os condutores. A capacitância do cabo coaxial, em farads, é </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm03">
+<a name="frm03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/ebbe2cda71c3a862feaa1b63171da1cb8444a249.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> onde e<sub><i>r</i></sub> é a permissividade relativa do meio dielétrico e e<sub>0</sub> = 8,854187817 × 10<sup>-12</sup> F/m é a permissividade elétrica do vácuo.</p>
+<p></p>
+<p> As equações acima foram desenvolvidas para a linha coaxial longa, mas podem ser utilizadas na análise de linhas ou cabos curtos, em quase toda a extensão do dispositivo. A questão da dispersão do campo elétrico em torno das extremidades requer o modelamento de uma região que envolve a estrutura, e isso é discutido mais adiante.</p>
+<p></p>
+<p>
+      <b>2.1. Problema de teste</b>
+    </p>
+<p></p>
+<p> A teoria da linha coaxial cilíndrica é usada no estudo de um pequeno cabo elétrico. Os raios, interno e externo das superfícies cilíndricas que formam o cabo, <i>R<sub>i</sub></i> e <i>R<sub>e</sub></i>, medem 1,0 e 5,0 cm, respectivamente. A altura h das superfícies é 20,0 cm e o espaço entre elas é preenchido pelo ar, um meio isolante cuja permissividade elétrica relativa, e<i><sub>r</sub></i>, é próxima da unidade. A superfície condutora interna é submetida a um potencial elétrico de 1000 V, enquanto a superfície externa é submetida a um potencial nulo, resultado de um processo de aterramento. </p>
+<p></p>
+<p> Para esse dispositivo, em particular, as variações do potencial e campo elétrico no espaço entre os condutores em função do raio <i>r</i> em centímetros, são </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm04">
+<a name="frm04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/dfbd769dbdd874d3ef9f9fcffbdb50596c6b7b68.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <b>2.2. Modelo numérico simplificado</b>
+    </p>
+<p></p>
+<p> A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a> mostra os componentes de uma estrutura axissimétrica bastante simples e cujas fronteiras coincidem com os limites geométricos do dispositivo em estudo. As duas superfícies cilíndricas são modeladas utilizando-se dois segmentos de reta verticais de 20 cm de altura, distantes 1,0 e 5,0 cm do eixo axial <i>z</i>, respectivamente. Nos dois segmentos verticais da estrutura retangular, o valor do potencial elétrico é imposto como condição de contorno. Tal condição é conhecida como condição de Dirichlet ou condição de contorno principal. Nesse problema, os valores atribuídos aos potenciais das superfícies condutoras, interna e externa, são 1000 V e 0 V, respectivamente. Os dois segmentos indicados como <i>F<sub>N</sub></i> e que unem as extremidades dos segmentos verticais são fronteiras do tipo Neumann, homogêneas, também conhecidas como condições de contorno naturais. A condição de contorno homogênea de Neumann é expressa matematicamente por </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm06">
+<a name="frm06"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/82cf976cc1c5c5c52192e1414c92f33b0c00f343.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde <b><i>n</i></b> representa o vetor unitário normal à fronteira e ¶<i>V/¶</i><b><i>n</i></b> a taxa de variação do potencial ao longo da direção normal à região externa da fronteira. Diferentemente das condições de fronteira Dirichlet que são rigidamente impostas, nenhuma restrição matemática é imposta aos contornos ou segmentos associados às condições homogêneas de Neumann, que são satisfeitas com alto nível de precisão por se tratar de condição "natural" do método dos elementos finitos. Assim sendo, o processo de cálculo produz uma distribuição de potenciais que exibe um alto nível de ortogonalidade entre as superfícies de mesmo potencial, as eqüipotenciais, e as fronteiras homogêneas de Neumann.</p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para mostrar que a discretização do domínio tem influência diferenciada no cálculo das diversas grandezas, duas configurações do modelo numérico são utilizadas. As configurações diferem somente no que diz respeito à malha de elementos finitos. Ambas as malhas mostradas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a> são formadas por elementos triangulares com geometria aproximadamente equilateral e apresentam uma certa regularidade em sua "granulação". Vale observar que a malha com uma única camada de 12 elementos é muito grosseira e, por isso, não reflete o nível de subdivisões de domínios utilizado na prática. Essa malha foi escolhida pelo seu valor didático; o erro numérico da solução produzida por essa malha é bastante elevado na porção central da estrutura; por outro lado, o erro numérico é nulo em todos os pontos nodais dessa malha, pois todos se situam nos segmentos verticais da fronteira retangular que modela a linha coaxial, exatamente onde as condições de contorno Dirichlet são definidas e satisfeitas com exatidão. Trata-se de uma configuração que realça os melhoramentos conseguidos nas aproximações feitas com outras malhas mais refinadas. </p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>3. Minimização de energia e potenciais incógnitos</b>
+    </p>
+<p></p>
+<p> A comparação de valores produzidos pelas diferentes soluções é feita com base na formulação matemática empregada no sistema informático FEMM [2], discutida brevemente nesta seção. O método variacional por elementos finitos utiliza um processo de minimização de energia para determinar, de forma indireta, os potenciais incógnitos do problema [6]. Para problemas como este, descritos pela equação de Poisson, a distribuição de potenciais elétricos que satisfaz a essa equação, também minimiza a energia armazenada no sistema, e vice-versa. Os potenciais incógnitos são interconectados por uma equação matricial que impõe restrições às correções ou ajustes efetuados nos valores dos potenciais ao longo do processo iterativo. As referidas restrições, devido à sua natureza global, não levam em conta variações localizadas da energia. Em decorrência, as soluções produzidas dessa maneira são otimizadas de uma forma global, mas podem conter erros localizados de magnitude considerável. </p>
+<p></p>
+<p> Com base nessas considerações, é de se esperar que alterações na discretização do domínio tenham uma influência menor nos valores de determinadas grandezas. É o caso da energia elétrica total armazenada cujo valor é, inclusive, utilizado como condição de convergência do processo. Por outro lado, variações na discretização do domínio podem ter efeitos bastante pronunciados na forma como potenciais e, principalmente, campos elétricos se distribuem no espaço analisado. </p>
+<p></p>
+<p>
+      <b>4. Resultados numéricos</b>
+    </p>
+<p></p>
+<p>
+      <b>4.1. Energia elétrica armazenada</b>
+    </p>
+<p></p>
+<p> Informações relativas à energia elétrica armazenada no cabo coaxial energizado são resumidas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a>. Além do tipo de simetria explorada na análise, são indicados na segunda e terceira colunas da tabela o número de elementos <i>N<sub>e</sub></i> e número de pontos nodais <i>N<sub>p</sub></i> de cada malha. Nessa tabela, constam informações relativas às duas malhas mostradas anteriormente e cujos elementos são distribuídos em camadas regulares. Também são incluídas informações relativas a uma terceira malha com 900 elementos, obtida a partir da análise do cabo como estrutura plana. Essa malha aparece na ilustração da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a>, superpondo-se ao mapeamento sombreado do potencial elétrico. A legenda, presente na ilustração, associa tons mais acentuados da cor cinza às regiões de potenciais mais elevados. </p>
+<div class="row table" id="tab01">
+<a name="tab01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<div class="row fig" id="fig04">
+<a name="fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>No processo de minimização com restrições, a energia mínima não trivial do sistema é aproximada por diferentes combinações ou distribuições dos potenciais elétricos. Os resultados da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a> mostram que, para as configurações associadas às malhas com 900 e 151 elementos, os valores das energias armazenadas são muito próximos, em torno dos 3,508 µJ. Vale aqui ressaltar que esses dois mínimos energéticos foram obtidos por processos de cálculo diferentes; em problemas com simetria plana ou translacional a minimização é efetuada em termos de energia/profundidade, enquanto que em problemas axissimétricos o que é minimizado é a energia/radiano. </p>
+<p></p>
+<p> Já no caso da malha com uma única camada de 12 elementos, o valor da energia armazenada é 18% maior que aqueles das outras configurações. Esse percentual deve ser tomado como um indicativo de erros numéricos expressivos na distribuição dos potenciais elétricos na região entre as superfícies condutoras, como mostrado na seção que se segue. </p>
+<p></p>
+<p>
+      <b>4.2. Distribuição de potenciais e campos</b>
+    </p>
+<p></p>
+<p> O contorno utilizado para extração dos valores de potenciais e campos é dirigido radialmente, ao longo do eixo horizontal do plano <i>r-z</i>. Trata-se do segmento retilíneo <i>i-f</i> indicado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>. Essa escolha do contorno de inspeção, aliada à simetria da estrutura, permite que campos e potenciais sejam calculados e interpretados a partir de uma simples análise unidimensional. Os resultados da análise devem ser, então, estendidos para a estrutura completa, tridimensional.</p>
+<p></p>
+<p> O gráfico da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a> apresenta a comparação das distribuições de potenciais produzidas pelas duas configurações numéricas do problema. Nesse gráfico, o eixo horizontal representa a distância até o condutor interno. Cada configuração está associada a uma das malhas mostradas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>. Essas distribuições de potenciais são apresentadas junto à curva suave que representa a solução analítica, descrita pela Eq. (4) e indicada por <i>V<sub>a</sub></i>. A série <i>V</i><sub>1</sub>, representada por "<i>o</i>" está associada à malha mais grosseira, formada por uma única camada de elementos finitos. A característica linear por partes representa a série <i>V</i><sub>4</sub> e está associada à malha formada por quatro camadas de elementos, mais refinada que a primeira.</p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O gráfico da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a> mostra que ambas as características obtidas numericamente possuem o mesmo valor nos extremos do intervalo. No entanto, a forma como o potencial se distribui ao longo do percurso é diferente em cada caso. Na primeira distribuição de valores, indicada por <i>V</i><sub>1</sub>, os pontos extremos estão unidos diretamente, através de um único segmento retilíneo. No caso da distribuição de potenciais <i>V</i><sub>4</sub>, associada à malha com quatro camadas, a aproximação é linear por partes e a variação do potencial é ditada por quatro funções lineares diferentes, uma para cada trecho representando um quarto do percurso total. Isso ajuda a explicar o desvio existente entre as duas características. Esse desvio aumenta à medida que os pontos de inspeção se afastam dos extremos do intervalo em direção à sua porção central. A característica <i>V</i><sub>1</sub> tem valores iniciais especificados unicamente nos pontos extremos do intervalo. A característica <i>V</i><sub>4</sub> também tem seus pontos extremos bem definidos, mas o processo de minimização impõe três restrições adicionais de valores, em três posições equidistantes e que dividem o contorno em quatro seções.</p>
+<p></p>
+<p> A observação atenta do gráfico da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a> mostra que, ao contrário da característica <i>V</i><sub>1</sub>, a característica <i>V</i><sub>4</sub> apresenta variações sucessivas em sua inclinação. Considerando que a distribuição do campo elétrico é calculada pela diferenciação dos potenciais em relação a deslocamentos posicionais, fica claro que as distribuições de campo elétrico associadas a cada uma das configurações do problema devem apresentar diferenças consideráveis [7]. </p>
+<p></p>
+<p> A comparação de diferentes distribuições do campo elétrico é apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig06"><span class="sci-ico-fileFigure"></span>Fig. 6</a>. Cada característica mostra a variação do campo elétrico ao longo do contorno de inspeção. Por extensão, essas distribuições representam a variação do campo elétrico radial, desde a base até o topo da estrutura. No caso da malha com quatro camadas de elementos, o campo elétrico é constante em cada trecho representando um quarto do percurso. A média aritmética dos valores da série <i>E</i><sub>4</sub> é 250,0 V/cm, exatamente o valor constante da série <i>E</i><sub>1</sub> ao longo de todo o percurso.</p>
+<div class="row fig" id="fig06">
+<a name="fig06"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Os degraus da série <i>E</i><sub>4</sub> se constituem em uma representação discreta e aproximada da característica <i>E<sub>a</sub></i> que representa a solução analítica, expressa pela Eq. (5). O grau de descontinuidade da característica numérica, calculado pelo quociente entre a média aritmética das alturas dos degraus e a diferença entre os valores máximo e mínimo da série decrescente, pode ser usado como critério para se conseguir melhores aproximações. No caso da série <i>E</i><sub>4</sub>, o grau de descontinuidade é 33%, um valor muito alto, indicativo de uma aproximação que precisa ser melhorada.</p>
+<p></p>
+<p> O melhoramento dessa aproximação numérica pode ser conseguido através de um processo de refinamento localizado na malha de elementos finitos, como ilustra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig07"><span class="sci-ico-fileFigure"></span>Fig. 7</a>. Nesse processo, a estrutura retangular original mostrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a> é dividida em 10 blocos ou regiões, também retangulares, e são impostas restrições ao comprimento máximo das arestas dos elementos triangulares de cada região. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig07"><span class="sci-ico-fileFigure"></span>Fig. 7</a> mostra cinco regiões, indicadas por <i>R</i><sub>1</sub>,..., <i>R</i><sub>5</sub> e que compõem a metade superior do cabo coaxial. No processo de restrição utilizado, escolhe-se primeiramente o valor que se deseja para o comprimento dos lados dos triângulos que vão formar cada região. O gerador de malhas "<i>Triangle"</i> [8] procura preencher a região com triângulos aproximadamente equilaterais e cujos lados possuem um comprimento próximo ao valor especificado. A observação da porção mais à direita da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig07"><span class="sci-ico-fileFigure"></span>Fig. 7</a> mostra que as condições impostas ao gerador de malhas resultam em uma malha bem mais densa nas proximidades do contorno onde se faz a inspeção do potencial e campo elétrico. Esse contorno, agora, passa a ser formado pela união de 64 arestas, ao invés de quatro.</p>
+<div class="row fig" id="fig07">
+<a name="fig07"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> A série numérica indicada por <i>E<sub>rl</sub></i> na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig08"><span class="sci-ico-fileFigure"></span>Fig. 8</a> mostra a distribuição do campo radial associada a essa malha com refinamento localizado e que contém 2799 elementos, ao todo. No caso, a média aritmética dos valores da série é, também, 250,0 V/cm, mas o grau de descontinuidade é praticamente nulo. Esses resultados mostram como obter uma seqüência convergente de aproximações numéricas, cada vez mais precisas à medida que a malha é refinada. </p>
+<div class="row fig" id="fig08">
+<a name="fig08"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>4.3. Modelo numérico com fronteira exterior</b>
+    </p>
+<p></p>
+<p> A avaliação do comportamento das variáveis eletromagnéticas no volume externo que circunda um dado dispositivo é um problema de grande importância e de difícil abordagem por métodos analíticos. Como o método dos elementos finitos produz uma solução em um domínio fechado e finito, técnicas especiais devem ser usadas no estudo de problemas que representam campos eletromagnéticos que não são confinados a um domínio finito. Para tal, deve-se estabelecer uma fronteira exterior, também fechada, e situada a uma distância finita do dispositivo em estudo. Essa fronteira exterior permite simular um problema que, de fato, possui uma distribuição de potenciais e campos em um domínio aberto. Em muitas aplicações do eletromagnetismo, a região externa é modelada com o objetivo de aumentar a precisão numérica do cálculo das variáveis eletromagnéticas na própria região interna, ocupada pelo dispositivo em estudo. Já para um outro grupo de aplicações, que incluem os estudos de blindagem e interferência eletromagnética, a estimativa precisa das variáveis eletromagnéticas em posições distantes do dispositivo é mais importante que a avaliação da distribuição dessas variáveis na região ocupada pelo dispositivo [9].</p>
+<p></p>
+<p> O modelo numérico simplificado, proposto inicialmente para o cabo coaxial energizado, possui fronteiras que coincidem com os limites geométricos do dispositivo e, por isso, é caracterizado como um <i>problema interior</i>. Para tornar possível a inclusão de estudos como o de campos dispersos nas extremidades do cabo e aumentar a precisão numérica do cálculo de parâmetros como a capacitância, o problema precisa ser modelado como um <i>problema exterior</i>. Nesse tipo de problema o domínio é expandido e analisado a partir de duas porções, de forma que a porção ou região interior contém as partes estruturais e campos de maior interesse. A região exterior se estende até uma fronteira artificial, fechada e situada a uma distância finita do dispositivo. A introdução dessa fronteira representa efetivamente a conversão de um domínio aberto em um fechado. Vários são os métodos para solução de problemas exteriores e a literatura técnica na área é extensa. Felizmente, existem excelentes revisões de literatura que podem facilitar a escolha da técnica mais adequada a uma determinada aplicação [10-12]. </p>
+<p></p>
+<p> Para modelar o problema de teste do cabo coaxial como um problema exterior, a técnica de trucamento de fronteiras exteriores é aqui utilizada. Trata-se de uma técnica de fácil entendimento e que pode ser implementada em qualquer simulador de campos. Baseia-se na suposição de que, em uma fronteira suficientemente distante do dispositivo em estudo, a derivada normal do potencial - elétrico ou magnético - tende a se anular ou, o próprio potencial é que tende a zero. As regras para a localização da fronteira exterior são empíricas e baseiam-se na suposição de que o dispositivo em estudo deve parecer pontual em relação ao volume total modelado. A necessidade de modelar uma porção adicional do espaço até uma posição distante para se conseguir um aumento na precisão dos cálculos é considerada a principal desvantagem da técnica. Uma outra solução para a questão da localização da fronteira exterior consiste em resolver o problema duas vezes, utilizando condições de contorno homogêneas de Dirichlet e Neumann na fronteira exterior. A maior ou menor variação nos parâmetros da solução, de uma simulação para outra, é usada para indicar se a localização da fronteira exterior é suficientemente distante ou não. Essa última metodologia foi utilizada para definir a localização da fronteira exterior do problema de teste do cabo coaxial.</p>
+<p></p>
+<p> A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig09"><span class="sci-ico-fileFigure"></span>Fig. 9</a> mostra as diferentes regiões do problema exterior. O domínio de análise, agora subdividido em 4412 elementos, estende-se até os limites de uma fronteira semicircular cujo raio mede 30,0 cm. As regiões retangulares <i>R<sub>t</sub></i> e <i>R<sub>b</sub></i>, que aparecem na figura, são fronteiras materiais artificiais criadas com o objetivo de avaliar, separadamente, a quantidade de energia armazenada nos campos dispersos do topo e base do dispositivo. Como se pode observar na ilustração, a fronteira exterior não está muito distante das extremidades do cabo coaxial, como recomendam as regras empíricas. No entanto, as soluções do problema utilizando os dois tipos de condições de contorno na fronteira exterior produziram valores computacionalmente equivalentes para os diversos parâmetros, o que mostra que a extensão do espaço exterior modelado é suficiente. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab02"><span class="sci-ico-fileTable"></span>Tabela 2</a> registra os valores de grandezas de caráter global - energias e cargas elétricas -, obtidos a partir da simulação baseada nas condições de contorno homogêneas de Dirichlet.</p>
+<div class="row fig" id="fig09">
+<a name="fig09"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row table" id="tab02">
+<a name="tab02"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>  O mapeamento do campo elétrico da estrutura coaxial é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig10"><span class="sci-ico-fileFigure"></span>Fig. 10</a>. A porção mais à esquerda da figura é uma vista ampliada da metade superior do cabo coaxial e do espaço que envolve sua extremidade. São apresentados dois recursos para visualização: mapeamento sombreado da intensidade de campo e traçado de setas. Nesse último, a direção das setas indica a direção do campo e o comprimento das mesmas é proporcional à intensidade do campo. Na ilustração observa-se que, ao longo de quase toda extensão do cabo coaxial, a distribuição do campo elétrico é homogênea, com o campo confinado ao espaço entre as superfícies condutoras e dirigido radialmente. A distribuição do campo começa a se desviar dessa configuração a uns poucos centímetros da borda superior; torna-se visível a não homogeneidade da distribuição, com aumento contínuo da concentração do campo - e correspondente energia armazenada - nas proximidades da superfície condutora interna. Os campos elétricos mais intensos ocorrem na borda interna e em suas imediações. Trata-se da região mais susceptível à ocorrência de descargas elétricas e onde o cálculo preciso da distribuição de campo requer um nível mais elevado de refinamento da malha.</p>
+<div class="row fig" id="fig10">
+<a name="fig10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Para Lowther e Silvester [13], o efeito da dispersão de campo nas extremidades equivale a um aumento efetivo do comprimento do dispositivo, ou seja, o campo disperso representa armazenamento de energia em regiões externas, que envolvem as partes estruturais do dispositivo. Nesse problema de teste, a energia dos campos dispersos representa 11,8% da energia total armazenada.</p>
+<p></p>
+<p> A abordagem analítica tradicional para cálculo de capacitância tende a produzir valores subestimados para esse parâmetro, pois o equacionamento é baseado nas dimensões geométricas das partes ativas da estrutura e não leva em consideração o efeito da dispersão nas extremidades. O resultado da inclusão dessa energia armazenada externamente no cálculo é o aumento do valor da capacitância, como se pode observar nos dados da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab03"><span class="sci-ico-fileTable"></span>Tabela 3</a>. Os valores calculados numericamente são baseados no método da energia [7]. O primeiro cálculo utiliza somente a energia armazenada no espaço entre as superfícies condutoras e produz uma estimativa bem próxima daquela calculada analiticamente pela Eq. (3); no caso, o desvio entre as duas estimativas é de apenas 1,3%. O segundo cálculo inclui a energia dos campos dispersos e produz um valor de capacitância consideravelmente maior. O desvio entre as duas estimativas calculadas numericamente é de 11,8%, exatamente o percentual da energia dos campos dispersos em relação à energia total armazenada. </p>
+<div class="row table" id="tab03">
+<a name="tab03"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>
+      <b>Conclusões</b>
+    </p>
+<p></p>
+<p> O artigo discute a possível utilização dos modernos simuladores de campos eletromagnéticos no ensino de graduação. Trata-se de um investimento pedagógico em um grupo de disciplinas que inclui, além do eletromagnetismo, princípios de telecomunicações e conversão de energia. Essas disciplinas, ao longo dos anos, têm sido consideradas as mais abstratas e difíceis dos cursos de engenharia. A criação de um laboratório de simulação significa um investimento inicial elevado para a instituição, pois os bons resultados da atividade dependem de um curso preparatório e as sessões de laboratório precisam ser bem planejadas e monitoradas. A experiência e atitude do instrutor são fatores determinantes para os bons resultados das aulas de simulação, pois os sistemas informáticos para cálculo de campos exigem um alto grau de interferência do usuário. </p>
+<p></p>
+<p> Partindo-se de uma estrutura axissimétrica bastante simples que modela um cabo coaxial energizado, a discussão procura explicitar a relação causa-efeito entre subdivisão do domínio e valor calculado para diferentes grandezas eletromagnéticas. No caso, percebe-se que mudanças na discretização têm efeito diferenciado no valor calculado para energias, potenciais e campos elétricos. Em qualquer solução de campos, os menores erros numéricos são associados às grandezas energéticas como energias armazenadas e potências dissipadas. Os erros nas grandezas energéticas são sempre menores que aqueles presentes nas distribuições de potenciais. Os erros presentes nas distribuições de potenciais, por sua vez, são amplificados no processo de diferenciação numérica usado para calcular os campos elétricos. </p>
+<p></p>
+<p> Os resultados numéricos mostram como implementar um processo de melhoria sucessiva da solução numérica do problema do cabo coaxial. Parte-se da configuração baseada na malha com 12 elementos, que gera erros elevados em todas as grandezas, inclusive na energia total armazenada. A mudança para a malha com 151 elementos representa um melhoramento no processo; a precisão numérica da aproximação para o mínimo energético do sistema é elevada e os potenciais elétricos são próximos daqueles calculados analiticamente. No entanto, a característica descontínua, calculada para a distribuição de campo elétrico, ainda está longe de representar a curva correta que é contínua e diferenciável. Através de um processo de refinamento da malha anterior, chega-se a uma malha axissimétrica com 2799 elementos e se consegue, a partir da mesma, uma aproximação numérica satisfatória para energias, bem como para distribuições de potenciais e campos.</p>
+<p></p>
+<p> Para contornar as limitações do modelo numérico, definido inicialmente como um problema interior, a estrutura coaxial passa a ser definida como um problema exterior, utilizando-se para tal a técnica de truncamento de fronteiras exteriores. Isso possibilitou a análise dos campos dispersos nas extremidades da estrutura e um cálculo mais preciso da capacitância da estrutura coaxial.</p>
+<p></p>
+<p>
+      <b>Agradecimentos</b>
+    </p>
+<p></p>
+<p> O autor gostaria de expressar sua gratidão aos professores Benedito Antonio Luciano e Edson Guedes da Costa, Universidade Federal de Campina Grande, pelo apoio recebido durante o Simpósio Brasileiro de Sistemas Elétricos, SBSE 2006. Também, quer registrar seus agradecimentos a Jonathan Richard Shewchuk (<a href="mailto:jrs@cs.berkeley.edu">jrs@cs.berkeley.edu</a>), autor do gerador de malhas <i>Triangle</i>, empregado neste trabalho e compartilhado por uma comunidade cada vez maior de estudantes e pesquisadores. Este trabalho é parte do Projeto UDESC n. DAPE 027/2006.</p>
+<p></p>
+<p>Recebido em 15/12/2006; Revisado em 21/9/2007; Aceito em 26/9/2007</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:antonioflavio@ieee.org">antonioflavio@ieee.org</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] P. Silvester and M.V.K. Chari, <i>Finite    element solution of saturable magnetic field problems</i>, IEEE Trans. on power    apparatus and systems, <b>PAS-89</b>, 1642 (1970). </div></li>
+<li><div>[2] D. Meeker, <i>FEMM 4.0 Magnetics and Electrostatics,    Reference manual</i>, (2006). Disponível em http://femm.foster-miller.net/wiki/HomePage</div></li>
+<li><div>[3] D.K. Cheng, <i>Field and Wave Electromagnetics</i>,    (Addison-Wesley Publishing Co., USA, 1989), 2<sup>nd</sup> ed, p. 183. </div></li>
+<li><div>[4] <i>The Electromagnetics Problem Solver</i>,    (Research and Education Association, Nova Iorque, 1987), p. 277. </div></li>
+<li><div>[5] P.P. Silvester and R.L. Ferrari, <i>Finite    Elements for Electrical Engineers</i>, (Cambridge University Press, Cambridge,    1990), 2a ed, p. 123. </div></li>
+<li><div>[6] J.P.A. Bastos, <i>Eletromagnetismo e Cálculo    de Campos </i>(Editora da UFSC, Florianópolis, 1992), 2Ş ed, p. 231.</div></li>
+<li><div>[7] A.F. Licariăo Nogueira, Revista Brasileira    de Ensino de Física <b>28</b>, 445 (2006). </div></li>
+<li><div>[8] J.R. Shewchuk, <i>Computational Geometry:    Theory and Applications</i>, <b>22</b>, 21 (2002). Disponível em http://www.cs.cmu.edu/%7Equake/triangle.html    </div></li>
+<li><div>[9] D.A. Lowther, E.M. Freeman and B. Forghani,    IEEE Trans. Magn. <b>25</b>, 2810 (1989). </div></li>
+<li><div>[10] C.R.I. Emson, Proc. IEE, Pt. A. <b>135</b>,    151 (1988). </div></li>
+<li><div>[11] P. Bettess, IEEE Trans. Magn. <b>24</b>,    238 (1988). </div></li>
+<li><div>[12] Q. Chen and A. Konrad, IEEE Trans. Magn.    <b>33</b>, 663 (1997). </div></li>
+<li><div>[13] D.A. Lowther and P.P. Silvester, <i>Computer-Aided    Design in Magnetics</i> (Springer-Verlag, Nova Iorque, 1986), p. 155. </div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        antonioflavio@ieee.org.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>18 Mar 2008</li>
+<li>
+<strong>Data do Fascículo</strong><br>2007</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>15 Dez 2006</li>
+<li>
+<strong>Revisado</strong><br>21 Set 2007</li>
+<li>
+<strong>Aceito</strong><br>26 Set 2007</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre o autor</h4>
+</div>
+<div class="modal-body"><div class="info"><div class="tutors">
+<strong> Antônio Flavio Licarião Nogueira </strong><br><div>
+          ,  Joinville,  
+          ,  Santa Catarina,  
+        ,  Universidade do Estado de Santa Catarina,  Departamento de Engenharia Elétrica ,  Brazil</div>
+<div class="clearfix"></div>
+</div></div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (10)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (3)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (5)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/0416f994901984b1e802fcc8cacbf58315ca0998.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/0416f994901984b1e802fcc8cacbf58315ca0998.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d25fb90b8f43bcbd900a7202c8e6c6dfb2080f96.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d25fb90b8f43bcbd900a7202c8e6c6dfb2080f96.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/eb12fc148a2f32552be4adfc1a16df8ea47ca4c1.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/eb12fc148a2f32552be4adfc1a16df8ea47ca4c1.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/44333bb9ae29df2a8fae31e052ad2555a6530aa7.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/44333bb9ae29df2a8fae31e052ad2555a6530aa7.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/3b4b24f5cdeab4bbd8d82bf9391ef99ca5397169.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/3b4b24f5cdeab4bbd8d82bf9391ef99ca5397169.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/94755c8369609c9077c18968962b7e1d19dfae30.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/94755c8369609c9077c18968962b7e1d19dfae30.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/ad4e952065929f890477873ea63c524f82f63134.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/ad4e952065929f890477873ea63c524f82f63134.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/b9743ef92642c8df6b760c1a681906cc5cad484e.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/b9743ef92642c8df6b760c1a681906cc5cad484e.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d484d2cdbac9fe33cb442570ce8b6abc9e331d28.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d484d2cdbac9fe33cb442570ce8b6abc9e331d28.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d534b59ada17afec862490ee0816de8c3b57b759.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d534b59ada17afec862490ee0816de8c3b57b759.gif"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/0ddc8c350f7d9b122a807bb98038a33f1c871d95.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/0ddc8c350f7d9b122a807bb98038a33f1c871d95.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/11cbac7017e4cd6b9be400eb873cdb2bb07851a0.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/11cbac7017e4cd6b9be400eb873cdb2bb07851a0.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/1669bb730d88315c1c55682314fb2ec07df2f71d.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/1669bb730d88315c1c55682314fb2ec07df2f71d.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d971a9157314f0c7b93bc6a9887a4c58a4ae1f6f.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/d971a9157314f0c7b93bc6a9887a4c58a4ae1f6f.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/9c4742ed0a15a40499c00585498fc42d5ae58dce.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/9c4742ed0a15a40499c00585498fc42d5ae58dce.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/ebbe2cda71c3a862feaa1b63171da1cb8444a249.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/ebbe2cda71c3a862feaa1b63171da1cb8444a249.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/dfbd769dbdd874d3ef9f9fcffbdb50596c6b7b68.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/dfbd769dbdd874d3ef9f9fcffbdb50596c6b7b68.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/82cf976cc1c5c5c52192e1414c92f33b0c00f343.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6PL6xmq6jtfQpdGHww4DNQk/82cf976cc1c5c5c52192e1414c92f33b0c00f343.gif"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Nogueira, Antônio Flavio LicariãoAnálise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos. Revista Brasileira de Ensino de Física [online]. 2007, v. 29, n. 4 [Acessado CURRENTDATE] , pp. 565-573. Disponível em: &lt;https://doi.org/10.1590/S0102-47442007000400015&gt;. Epub 18 Mar 2008. ISSN 1806-9126. https://doi.org/10.1590/S0102-47442007000400015.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos&#34; &#34;Nogueira, Antônio Flavio Licarião&#34; &#34;2007&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos&#34; &#34;Nogueira, Antônio Flavio Licarião&#34; &#34;2007&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/6PL6xmq6jtfQpdGHww4DNQk/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172007000400015&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S0102-47442007000400015" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S0102-47442007000400015">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S0102-47442007000400015" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S0102-47442007000400015">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S0102-47442007000400015"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S0102-47442007000400015" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S0102-47442007000400015">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S0102-47442007000400015" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Análise de cabos coaxiais cilíndricos usando a técnica dos elementos finitos
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S0102-47442007000400015">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

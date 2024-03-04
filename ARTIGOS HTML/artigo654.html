@@ -1,0 +1,2571 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?format=html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform"/>
+<meta property="og:description" content="In this paper, we use the Arduino platform together with sensors as accelerometer, gyroscope and..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Varanis, Marcus">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Grande Dourados">
+        
+        <meta name="citation_author" content="Silva, Anderson Langone">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Grande Dourados">
+        
+        <meta name="citation_author" content="Brunetto, Pedro Henrique Ayres">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Grande Dourados">
+        
+        <meta name="citation_author" content="Gregolin, Rafael Ferreira">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Grande Dourados">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="38"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?lang=en&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?format=xml&amp;lang=en"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11173812063"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform
+            "></meta>
+
+<meta name="citation_language" content="en"></meta>
+
+<meta name="citation_abstract" content="In this paper, we use the Arduino platform together with sensors as accelerometer, gyroscope and ultrasound, to measure vibrations in mechanical systems. The main objective is to assemble a signals acquisition system easy to handle, of low cost and good accuracy for teaching purposes. It is also used the Python language and its numerical libraries for signal processing. This paper proposes the study of vibrations of a beam, which is measured by position, velocity and acceleration. An experimental setup was implemented. The results obtained are compared with analytical models and computer simulations using finite elements. The results are in agreement with the literature."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2016-04-01"></meta>
+<meta name="citation_keywords" content="mechanical vibrations"></meta><meta name="citation_keywords" content="Arduino"></meta><meta name="citation_keywords" content="sensors"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2016.v38n1/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?lang=en&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?lang=en&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (Inglês)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2016.v38n1/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (Inglês)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172016000100401 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 38 
+                (1)
+            <span class="_separator"> • </span>Mar 2016</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11173812063" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11173812063</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812063"><span class="sci-ico-link"></span>copy</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0"></span>Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Instrumentação para análise de vibrações mecânicas nos domínios do tempo e da frequência utilizando a plataforma Arduino</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Marcus Varanis </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Faculdade de Engenharia, Universidade Federal do Grande Dourados, Dourados, MS, Brazil<div class="corresp">*Endereço de correspondência:<a href="mailto:marcusvaranis@ufgd.edu.br">marcusvaranis@ufgd.edu.br</a>.</div>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Anderson Langone Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Faculdade de Engenharia, Universidade Federal do Grande Dourados, Dourados, MS, Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Pedro Henrique Ayres Brunetto </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Faculdade de Engenharia, Universidade Federal do Grande Dourados, Dourados, MS, Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Rafael Ferreira Gregolin </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>Faculdade de Engenharia, Universidade Federal do Grande Dourados, Dourados, MS, Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">About the authors</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Abstracts"><h1 class="articleSectionTitle">Abstracts</h1></div>
+<div>
+<p>In this paper, we use the Arduino platform together with sensors as accelerometer, gyroscope and ultrasound, to measure vibrations in mechanical systems. The main objective is to assemble a signals acquisition system easy to handle, of low cost and good accuracy for teaching purposes. It is also used the Python language and its numerical libraries for signal processing. This paper proposes the study of vibrations of a beam, which is measured by position, velocity and acceleration. An experimental setup was implemented. The results obtained are compared with analytical models and computer simulations using finite elements. The results are in agreement with the literature.</p>
+<p><strong>Keywords:</strong><br>mechanical vibrations; Arduino; sensors</p>
+</div>
+<hr>
+<div>
+<p>Neste estudo, utiliza-se a plataforma Arduino em conjunto com sensores, como acelerômetro, giroscópio e ultrassom, para medição de vibrações em sistemas mecânicos. O principal objetivo deste trabalho é a montagem de um sistema para aquisição de sinais de fácil manuseio, baixo custo e boa precisão para ﬁns didáticos. Utiliza-se também a linguagem Python e suas bibliotecas numéricas para processamento dos sinais. Neste trabalho propõem-se o estudo de vibrações em uma viga, em que se mede a sua posição, velocidade e aceleração. Uma montagem experimental foi implementada. Os resultados obtidos são comparados com modelos analíticos e de simulação computacional através de elementos ﬁnitos. Os resultados estão em concordância com a literatura.</p>
+<p><strong>Palavras-chave:</strong><br>vibrações mecânicas; Arduino; sensores</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introduction</h1>
+      <p>The oscillatory phenomena are an object of study since man realized how important and how often they appear in our life. These phenomena are present from our speech and hearing due to mechanical waves up to our vision and digital communication, which are electromagnetic wave <sup>[</sup><span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] S.S. Rao and F.F. Yap, Mechanical Vibrations(Addison-Wesley, Boston, 1995), 3rded.</span></span></span><sup>,</sup><span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] B. Balachandran and E. Magrab, Vibrations(Cengage Learning, Toronto, 2008), 2nd ed.</span></span></span><sup>]</sup>.</p>
+      <p>Undergraduate students in physics and engineering when studying vibrations generally study only theoretically, by models of ordinary differential equations and computer simulation by finite elements <sup>[</sup><span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] R. Haberman, Mathematical Models: Mechanical Vibrations, Population Dynamics, and Traffic Flow (Siam, Philadelphia, 1998).</span></span></span><sup>,</sup><span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] A.A. Shabana, Theory of Vibration: An Introduction(Springer Science &amp; Business Media, Berlin, 2012).</span></span></span><sup>]</sup>. However, making the experimental analysis of vibrations in mechanical systems is no easy task, given the complexity of instrumenting and high costs.</p>
+      <p>In order to avoid the complexity experimental analysis an high cost involved in this work we propose the use of the Arduino platform and sensors, wich present satisfactory precision for educational purposes <sup>[</sup><span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] J. Sarik and I. Kymissis, in: Frontiers in Education Conference, edited by Y. Wang (IEEE, New York, 2010), p. T3C-1.</span><br><br><span>[6] R. Balogh, in Proceedings of the 1st International Conference on Robotics in Education, edited by R. Stelzer (Slovak University of Technology, Bratislava, 2010), p. 119.</span></span></span><sup>-</sup><span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>[7] M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física 33 , 4503, (2011).</span></span></span><sup>]</sup>. The Arduino plays the role of data acquisition system of the sensors (accelerometer, gyrocope and ultrassound), very popularized with incresing use in smartphones and tablets <sup>[</sup><span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>[8] M. Monteiro, C. Cabeza e A.C. Marti, Revista Brasileira de Ensino de Física 37 , 1303 (2015).</span></span></span><sup>]</sup>.</p>
+    
+      <h1 class="articleSectionTitle">2. Arduino</h1>
+      <p>The Arduino is an open-source microcontroller board, which has become very popular among the general public by being easy to use, simple programming and low prices, making it a great tool to quickly assemble and test electronic prototypes<sup>[</sup><span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>[9] M. Bhmer, Beginning Android ADK with Arduino(Apress, New York, 2012).</span></span></span><sup>]</sup>.</p>
+      <p>In this paper we used a board Arduino Mega 2560 Rev. 3, based on the Atmel ATmega2560 micro controller. This board contains 54 digital pins I/O (input/output), of which 15 pins can be used as PWM outputs, 16 analog inputs and 4 serial ports. It can be powered either by USB port of a computer or by an external power source.</p>
+      <p>The purpose of this paper is to use the Arduino platform as data acquisition system. In order to allow access to undergraduate students in Physics and Engineering courses for the experimental study of mechanical vibration phenomena, through sensors like accelerometer, gyroscope and ultrasound. Since such sensors have low cost, because of the popularization of smartphones, tablets and other devices that use them widely <sup>[</sup><span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>[10] M. Shoaib, H. Scholten and P.JM. Havinga, in Ubiquitous Intelligence and Computing, edited by D. Zhang (IEEE, New York , 2013), p. 80.</span><br><br><span>[11] I. König, A. Q. Memon e K. David, In: Wireless Communication Systems, edited by A. Mitschele-Thiel (IEEE, New York , 2011), p. 1.</span></span></span><sup>-</sup><span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>[12] Sung-Hun Shin et al., in ICT Convergence, edited by I. Sohn (IEEE, New York , 2011), p. 772.</span></span></span><sup>]</sup>.</p>
+      <p>The Arduino connection is made by the USB computer and arduino's port and receives information from sensors by analog and digital ports. The <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a> shows the Arduino board used in this paper.</p>
+      <p>See Ref. <sup>[</sup><span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>[13] https://www.arduino.cc/en/Main/arduinoBoardMega2560, accessed 20/07/2015.</span><br><a href="https://www.arduino.cc/en/Main/arduinoBoardMega2560" target="_blank">https://www.arduino.cc/en/Main/arduinoBo...
+            </a></span></span><sup>]</sup> for more detailed information about the device used.</p>
+      <p>
+        <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 1</strong><br>
+            Arduino Mega 2560 Rev3 Board.
+          <br>
+</div>
+</div>
+      </p>
+    
+      <h1 class="articleSectionTitle">3. Sensors</h1>
+      
+        <h2>3.1. Accelerometers</h2>
+        <p>Accelerometers are devices capable of measuring accelerations which they are submitted according to anon-inertial observer <sup>[</sup><span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>[8] M. Monteiro, C. Cabeza e A.C. Marti, Revista Brasileira de Ensino de Física 37 , 1303 (2015).</span></span></span><sup>]</sup>. In this paper one use an accelerometer with MEMS (Microelectromechanical systems) technology wich is capable of generating small sensors that measure several physical quantities with satisfactory precision. In this paper we used the MPU-6050 accelerometer.</p>
+        <p>The MPU-6050 accelerometer is a triaxial MEMS type device, that can be programmed to measure from 2 <i>g</i> to 16 <i>g</i><sup>[</sup><span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>[14] http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf.</span><br><a href="http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank">http://43zrtwysvxb2gf29r5o0athu.wpengine...
+            </a></span></span><sup>]</sup>. The MPU-6050 sensor is mounted on the board GY-521 (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2a</a>). The sensor board has a capacitor for filtering the signal, a LED indicator of operation and a voltage regulator which allows the sensor to be used with 5 V<sup>[</sup><span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>[14] http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf.</span><br><a href="http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank">http://43zrtwysvxb2gf29r5o0athu.wpengine...
+            </a></span></span><sup>]</sup>. The board set and accelerometer has 0.00173 kg.</p>
+        <p>
+          <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 2</strong><br>
+              (a) GY-521 board with accelerometer MPU-6050 and (b) HC-SR04 distance sensor.
+            <br>
+</div>
+</div>
+        </p>
+      
+      
+        <h2>3.2. Gyroscope</h2>
+        <p>The gyroscopes are sensors capable of measuring the angular speed which are submitted. From concepts of rigid bodies dynamics it can be calculated the tangential velocity at the point of interest. By numerical differentiation it is possible to obtain the tangential acceleration.</p>
+        <p>The accelerometer and the gyroscope used in this paper are on the same chip, MPU-6050 (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2a</a>). The gyroscope sensor has a measuring range of 2000°/s in the three axes <i>x, y, z</i><sup>[</sup><span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>[14] http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf.</span><br><a href="http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank">http://43zrtwysvxb2gf29r5o0athu.wpengine...
+            </a></span></span><sup>]</sup>.</p>
+      
+      
+        <h2>3.3. Ultrasound</h2>
+        <p>The ultrasonic distance sensor measures the position of any object using a sound wave transmitter that sends an ultrasound wave and by the phenomenon of reflection a receiver receives part of the sound wave sent, thus can be calculated the distance to the object by kinematics, because of the speed of sound in air is known, so that the distance to the object is half the distance traveled by the wave.</p>
+        <p>The sensor used was the HC-SR04 (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2b</a>) which according to the instruction manual <sup>[</sup><span class="ref"><sup class="xref xrefblue">15</sup><span class="refCtt closed"><span>[15] http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf.</span><br><a href="http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf" target="_blank">http://elecfreaks.com/estore/download/EF...
+            </a></span></span><sup>]</sup> can measure distances from 2 to 400 cm with an accuracy of 3 mm. Unlike the accelerometer and gyroscope, the HC-SR04 does not need direct contact with the mechanical system.</p>
+      
+    
+      <h1 class="articleSectionTitle">4. Vibration beams</h1>
+      <p>The mechanical system used in this paper is a beam, which will be done an analysis of vibrations by bending, due to a small initial displacement in the structure, initially considered a cantilever beam (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3a</a>) of mass m and length l. It is known that the beam is a continuous system with infinite degrees of freedom. This paper has interest in obtain the first natural frequency of the beam, thus a discretization is made, reducing to an equivalent system with concentrated mass (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3d</a>) and one degree of freedom. The same procedure is done for the propped beams (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3b</a>) and the fixed beams (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3c</a>). So one can write the equation of motion of the equivalent system according to <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Eq. (1)</a>. </p>
+      <p>
+        <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 3</strong><br>
+            Beams and equivalent system.
+          <br>
+</div>
+</div>
+      </p>
+      <div class="row formula" id="ee1">
+<a name="e1"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/ba6bca0a9a42207c43409342aab4b46dbd1f3249.jpg">
+      </div></div>
+</div>
+      <p>The equation presented in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Eq. (1)</a> is a second order homogeneous diﬀerential equation, which is a vibration system free of external forces and damped <sup>[</sup><span class="ref"><sup class="xref xrefblue">16</sup><span class="refCtt closed"><span>[16] F. Arnold, R. Arthur, L.G. Roger e M. Oliveira, Revista Brasileira de Ensino de Física 33 , 4311 (2011).</span></span></span><sup>]</sup>. The terms <i>m<sub>eq</sub></i>and<i>k<sub>eq</sub></i> represent, respectively, the equivalent mass and rigidity equivalent. Such equivalents values depend of the method of attachment, the beam geometry and material. From now on these terms will be denoted by equivalent parameters. For a cantilever beam, the equivalent parameters are presented in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee2"><span class="sci-ico-fileFormula"></span>Eqs. (2)</a> and (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee3"><span class="sci-ico-fileFormula"></span>3</a>) <sup>[</sup><span class="ref"><sup class="xref xrefblue">17</sup><span class="refCtt closed"><span>[17] H. Soriano, Introdução a Dinâmica de Estruturas(Elsevier, Rio de Janeiro, 2014).</span></span></span><sup>,</sup><span class="ref"><sup class="xref xrefblue">18</sup><span class="refCtt closed"><span>[18] A.K. Chopra, Dynamics of Structures (Prentice Hall, New Jersey, 1995).</span></span></span><sup>]</sup>.</p>
+      <div class="row formula" id="ee2">
+<a name="e2"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/9e73619acaed7fb233ca63c81cd513c24efef681.jpg">
+      </div></div>
+</div>
+      <div class="row formula" id="ee3">
+<a name="e3"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/b608e4d37afbcd794c1149db99f291333b569984.jpg">
+      </div></div>
+</div>
+      <p>To the propped beams its equivalent parameters are presented in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee4"><span class="sci-ico-fileFormula"></span>Eqs. (4)</a> and (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee5"><span class="sci-ico-fileFormula"></span>5</a>) <sup>[</sup><span class="ref"><sup class="xref xrefblue">17</sup><span class="refCtt closed"><span>[17] H. Soriano, Introdução a Dinâmica de Estruturas(Elsevier, Rio de Janeiro, 2014).</span></span></span><sup>,</sup><span class="ref"><sup class="xref xrefblue">18</sup><span class="refCtt closed"><span>[18] A.K. Chopra, Dynamics of Structures (Prentice Hall, New Jersey, 1995).</span></span></span><sup>]</sup>.</p>
+      <div class="row formula" id="ee4">
+<a name="e4"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/befdb3455aa64e9fbdbf6c57076aa13df0196472.jpg">
+      </div></div>
+</div>
+      <div class="row formula" id="ee5">
+<a name="e5"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/738829a9b3aa092c33ce391331cdf7471066ed87.jpg">
+      </div></div>
+</div>
+      <p>Finally, for the ﬁxed beams its equivalents parameters are presented in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee6"><span class="sci-ico-fileFormula"></span>Eqs. (6)</a> and (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee7"><span class="sci-ico-fileFormula"></span>7</a>) <sup>[</sup><span class="ref"><sup class="xref xrefblue">17</sup><span class="refCtt closed"><span>[17] H. Soriano, Introdução a Dinâmica de Estruturas(Elsevier, Rio de Janeiro, 2014).</span></span></span><sup>,</sup><span class="ref"><sup class="xref xrefblue">18</sup><span class="refCtt closed"><span>[18] A.K. Chopra, Dynamics of Structures (Prentice Hall, New Jersey, 1995).</span></span></span><sup>]</sup>.</p>
+      <div class="row formula" id="ee6">
+<a name="e6"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/1806151bd7e424eb3206710f73a1b43e0387aea3.jpg">
+      </div></div>
+</div>
+      <div class="row formula" id="ee7">
+<a name="e7"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/f8777905fb55472f184b71edd4454b0913b1c052.jpg">
+      </div></div>
+</div>
+      <p>From <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee2"><span class="sci-ico-fileFormula"></span>Eqs. (2)</a> to (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee7"><span class="sci-ico-fileFormula"></span>7</a>) the term E is the Young's modulus of material, I is the second moment of area, <i>l</i> is the length of the beam and m' is the linear mass distribution of the beam (<i>m/l</i>). Thus, the ﬁrst natural frequency [rad/s] of the system is obtained according to<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee8"><span class="sci-ico-fileFormula"></span>Eq. (8)</a>
+				</p>
+      <div class="row formula" id="ee8">
+<a name="e8"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/7944c6535df0e8aad64c18a5a47d456b62943468.jpg">
+      </div></div>
+</div>
+      <p>The natural frequency in Hertz,</p>
+      <div class="row formula" id="ee9">
+<a name="e9"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/3bdddd4f746411fa243ea4ec1802009efa964f35.jpg">
+      </div></div>
+</div>
+      <p>A long study of the classical theory of beams can be seen in Refs. <sup>[</sup><span class="ref"><sup class="xref xrefblue">17</sup><span class="refCtt closed"><span>[17] H. Soriano, Introdução a Dinâmica de Estruturas(Elsevier, Rio de Janeiro, 2014).</span><br><br><span>[18] A.K. Chopra, Dynamics of Structures (Prentice Hall, New Jersey, 1995).</span><br><br><span>[19] M. Paz, Structural Dynamics: Theory and Computation(Springer Science &amp; Business Media, Berlin , 2012).</span></span></span><sup>-</sup><span class="ref"><sup class="xref xrefblue">20</sup><span class="refCtt closed"><span>[20] R. Shih, Introduction to Finite Element Analysis Using SolidWorks Simulation 2014 (SDC publications, Missioon, 2014).</span></span></span><sup>]</sup>.</p>
+      
+        <h2>4.1. Finite element simulation</h2>
+        <p>A modal analysis was made using the SolidWorks software for comparison. For the analyzed beam, we used two types of beams for simulation, a steel beam and another aluminum beam, with the same properties of the beams used in experimental analysis (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Table 1</a>). It is not purpose of this work detail this analysis because of it is a very well-documented analysis in the literature <sup>[</sup><span class="ref"><sup class="xref xrefblue">20</sup><span class="refCtt closed"><span>[20] R. Shih, Introduction to Finite Element Analysis Using SolidWorks Simulation 2014 (SDC publications, Missioon, 2014).</span><br><br><span>[21] T. Stolarski, Y. Nakasone and S. Yoshimoto, Engineering Analysis with ANSYS Software (Butterworth-Heinemann, Oxford, 2011).</span></span></span><sup>-</sup><span class="ref"><sup class="xref xrefblue">22</sup><span class="refCtt closed"><span>[22] E. Madenci and I. Guven, The Finite Element Method and Applications in Engineering Using ANSYS® (Springer, Berlin, 2015).</span></span></span><sup>]</sup>. The results are shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Table 2</a>. This type of analysis based on finite element it can be performed in various software used by the scientific community, there are commercial, student and free versions of these software.</p>
+        <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Table 1</strong><br>
+            Physical properties of the beams used in the experimental analysis
+          <br>
+</div>
+</div>
+        <div class="row table" id="t2">
+<a name="t2"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Table 2</strong><br>
+            Comparison between the results for obtaining the natural frequencies through analytical method, experimental method and finite elements method.
+          <br>
+</div>
+</div>
+        <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. 4</a> shows the cantilever beam modeled on the software used and <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Fig. 5</a> shows the results of simulation in which are obtained the natural frequencies of interest.</p>
+        <p>
+          <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 4</strong><br>
+              Cantilever beam model in SolidWorks.
+            <br>
+</div>
+</div>
+        </p>
+        <p>
+          <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 5</strong><br>
+              Result of modal analysis simulation.
+            <br>
+</div>
+</div>
+        </p>
+      
+    
+      <h1 class="articleSectionTitle">5. Experimental analysis</h1>
+      <p>For the experimental analysis was used two types of beams and its properties are described in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Table 1</a>.</p>
+      <p>For each beam three type of fixations were proposed for the vibration analysis:</p>
+      <div>
+        <ul list-type="bullet">
+<li>
+            <p>Cantilever;</p>
+          </li>
+<li>
+            <p>Propped;</p>
+          </li>
+<li>
+            <p>Fixed.</p>
+          </li>
+</ul>
+      </div>
+      <p>To fix the beams was used two clamps type C of 2". The experiment apparatus with the beams is shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Fig. 6</a>.</p>
+      <p>
+        <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 6</strong><br>
+            (a) cantilever beam (b) propped beam (c) fixed beam.
+          <br>
+</div>
+</div>
+      </p>
+      <p>The purpose of the measurements is to obtain signals in the time-domain of the acceleration (accelerometer), angular velocity (gyroscope) and position (ultrasound sensor). As accelerometer and gyroscope are integrated on the same sensor, in the cantilever beam experiment the sensor was fixed in the free end of the beam with double-sided tape. In the propped and fixed beams experiments the sensor was positioned at the geometric center of the upper face of the beam. The described arrangements are shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Fig. 7</a>.</p>
+      <p>
+        <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 7</strong><br>
+            (a) Sensor (cantilever) (b) Sensor (propped and fixed).
+          <br>
+</div>
+</div>
+      </p>
+      <p>To obtain the magnitude of the position beyond the clamp type C of 2" was also used universal support in Delta, which has the function to fix the solderless breadboard and ultrasound distance sensor. In the case of the cantilever, the universal support in delta was positioned so that the ultrasonic sensor attached thereto was placed parallel to the beam. In the cantilever-supported and bi-cantilever cases, the universal support in delta was positioned so that the ultrasonic sensor was positioned parallel to the beam in center of the beam. Again, the described arrangements are shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a>.</p>
+      <p>
+        <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 8</strong><br>
+            (a) Ultrasound (in balance) (b) Ultrasound (cantilever-supported and bi-cantilever).
+          <br>
+</div>
+</div>
+      </p>
+      <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Figure 9</a> shows the circuit diagram necessary for use of the sensor (accelerometer/gyroscope), it takes 4 cables for its connection to the board, the red cable is providing power for the board, connecting 5 V output of the Arduino to the VCC pin of the sensor. The green cable is responsible for binding of the "ground wire" connecting the two GND terminals present in Arduino board and the sensor. The black and white cables are responsible for conducting communication via the I2C protocol between the Arduino board and the sensor. The black cable connects the pins SDA present on the board and the sensor while the white cable connects the SCL pins. SDA and SCL means Serial Data and Serial Clock. The SDA pin effectively transfers data and the SCL serves for timing between the devices, so that the communication by SDA may have reliability. Both the sending and receiving of data is performed using the SDA line. A detailed study of the I2C protocol, can be seen in Ref. <sup>[</sup><span class="ref"><sup class="xref xrefblue">23</sup><span class="refCtt closed"><span>[23] http://i2c.info/i2c-bus-specification, accessed 28/05/2015.</span><br><a href="http://i2c.info/i2c-bus-specification" target="_blank">http://i2c.info/i2c-bus-specification...
+            </a></span></span><sup>]</sup>.</p>
+      <p>
+        <div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 9</strong><br>
+            Circuit diagram for the use of the sensor (accelerometer/gyroscope).
+          <br>
+</div>
+</div>
+      </p>
+      <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Figure 10</a> shows the circuit diagram necessary for using ultrasound sensor distance, as the diagram shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Fig. 9</a> too, it takes 4 cables for the connection to the board, the red cable is that is providing power to ultrasound sensor by connecting the output of 5 V of the Arduino to the pin VCC sensor. The Black cable is responsible for binding the "ground wire", linking the two GND terminal present on the Arduino board and on the ultrasound sensor. The white cable is responsible for sending an electrical signal to the sensor, which will trigger a sound wave in the direction of the beam, according to the configuration done through software, the pin responsible for sending the signal to the ultrasound sensor is digital pin 12, connected to the trigger pin. The yellow cable is responsible for sending the electrical signal generated by the reception of the reflected sound wave on the beam. In this process the Arduino calculates the round trip time of the sound wave and the distance from the sensor to the object. The settings of the above parameters are made through software programing by an element called sketch. The sketch is the name that Arduino uses for the program. It's the unit of code that is uploaded to run on the Arduino board. A more detailed study of the subject can be found in Ref.<sup>[</sup><span class="ref"><sup class="xref xrefblue">24</sup><span class="refCtt closed"><span>[24] S. Monk, Programação com Arduino (Bookman, Porto Alegre, 2013).</span></span></span><sup>]</sup>.</p>
+      <p>
+        <div class="row fig" id="f10">
+<a name="f10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 10</strong><br>
+            Circuit diagram for use of the ultrasound sensor.
+          <br>
+</div>
+</div>
+      </p>
+      <p>The acquisition of the signals was made with 2048 points and sampling frequency of 248 Hz, thus respecting the Nyquist criterion <sup>[</sup><span class="ref"><sup class="xref xrefblue">25</sup><span class="refCtt closed"><span>[25] J. Unpingco, Python for Signal Processing(Springer, Berlin , 2013).</span></span></span><sup>]</sup> with that one can obtain the acceleration, velocity and position magnitudes in the time domain. The MPU-6050 Sensor does not deliver the acquisitive signals with values in S.I. it is necessary make the conversion. For the accelerometer, this procedure is done by multiplying the signal elements by a conversion factor. This relationship is shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee10"><span class="sci-ico-fileFormula"></span>Eq. (10)</a>
+				</p>
+      <div class="row formula" id="ee10">
+<a name="e10"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/2c213fcd0ce7604107194d184322e18b283b675c.jpg">
+      </div></div>
+</div>
+      <p>In <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee10"><span class="sci-ico-fileFormula"></span>Eq. (10)</a><i>a<sub>z</sub></i> is the acceleration signal in S.I,<i>g</i>is the local constant acceleration of gravity. The factor 2048 is a sensor constant, this value is used for the range of +-16g. For other measuring range one should check the new constant in the sensor datasheet <sup>[</sup><span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>[14] http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf.</span><br><a href="http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank">http://43zrtwysvxb2gf29r5o0athu.wpengine...
+            </a></span></span><sup>]</sup>.</p>
+      <p>The signals obtained from the gyro sensor are also not delivered in S.I. and the conversion ratio is shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee11"><span class="sci-ico-fileFormula"></span>Eq. (11)</a>
+				</p>
+      <div class="row formula" id="ee11">
+<a name="e11"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/dce670ab57de4b4a3e44e9875828c728ef404a56.jpg">
+      </div></div>
+</div>
+      <p>The factor of 16.4 is a sensor constant, this value is used for the range +-2000°/s. Again, for other measuring range one should check the new constant in the sensor datasheet <sup>[</sup><span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>[14] http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf.</span><br><a href="http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank">http://43zrtwysvxb2gf29r5o0athu.wpengine...
+            </a></span></span><sup>]</sup>.</p>
+      <p>In the case of the signal obtained through the ultrasound sensor conversion must be made from centimeters to meters.</p>
+      <p>An analysis of the signals in the frequency domain is performed. For such was used the FFT algorithm (Fast Fourier Transform) <sup>[</sup><span class="ref"><sup class="xref xrefblue">24</sup><span class="refCtt closed"><span>[24] S. Monk, Programação com Arduino (Bookman, Porto Alegre, 2013).</span></span></span><sup>]</sup>. The implementation of the algorithm is done in Python language using the scipy library and its signal processing tools (scipy.signal) <sup>[</sup><span class="ref"><sup class="xref xrefblue">25</sup><span class="refCtt closed"><span>[25] J. Unpingco, Python for Signal Processing(Springer, Berlin , 2013).</span></span></span><sup>]</sup>. The graphs of the signals in the time domain and frequency domain are made using the matplotlib library <sup>[</sup><span class="ref"><sup class="xref xrefblue">27</sup><span class="refCtt closed"><span>[27] A. Devert, Matplotlib Plotting Cookbook (Packt Publishing Ltd, Birmingham , 2014).</span></span></span><sup>]</sup>. The FFT is applied to the acceleration signals, so to obtain the response in the frequency domain of the ultrasound and the gyroscope signals a numerical derivation must be aplied. For the numerical differentiation was used the numpy library <sup>[</sup><span class="ref"><sup class="xref xrefblue">27</sup><span class="refCtt closed"><span>[27] A. Devert, Matplotlib Plotting Cookbook (Packt Publishing Ltd, Birmingham , 2014).</span></span></span><sup>]</sup>. It is emphasized that any other computational tool can be used for this procedure, such as Matlab and Mathematica, for example.</p>
+    
+      <h1 class="articleSectionTitle">6. Results</h1>
+      <p>In the experimental procedure fifteen measurements were performed with each sensor (accelerometer, gyroscope, ultrasound), for each type of fixation proposed in aluminum and steel beams, thus obtaining a total of 270 signals. As mentioned above, signals were obtained with 2048 points and sampling frequency of 248 Hz, respecting the Nyquist criterion <sup>[</sup><span class="ref"><sup class="xref xrefblue">25</sup><span class="refCtt closed"><span>[25] J. Unpingco, Python for Signal Processing(Springer, Berlin , 2013).</span></span></span><sup>]</sup>. <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf11"><span class="sci-ico-fileFigure"></span>Figure 11</a> shows the signal at time domain obtained from the accelerometer to a cantilever-supported aluminum beam.</p>
+      <p>
+        <div class="row fig" id="f11">
+<a name="f11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 11</strong><br>
+            Response in the time domain of the cantilever-supported beam in aluminum by accelerometer.
+          <br>
+</div>
+</div>
+      </p>
+      <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf12"><span class="sci-ico-fileFigure"></span>Figure 12</a> presents a sample signal in the frequency domain for the aluminum beam cantilever-supported with a value of 44,02 Hz.</p>
+      <p>
+        <div class="row fig" id="f12">
+<a name="f12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 12</strong><br>
+            Response in the frequency domain of the cantilever-supported aluminum beam.
+          <br>
+</div>
+</div>
+      </p>
+      <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf13"><span class="sci-ico-fileFigure"></span>Figure 13</a> shows the time domain signal of a sample obtained from a gyroscope sensor of the aluminum bi-cantilever beam.</p>
+      <p>
+        <div class="row fig" id="f13">
+<a name="f13"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 13</strong><br>
+            Response in the time domain of the bi-cantilever aluminum beam with gyroscope sensor.
+          <br>
+</div>
+</div>
+      </p>
+      <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf14"><span class="sci-ico-fileFigure"></span>Figure 14</a> presents a sample signal in the frequency domain, for the bi-cantilever aluminum beam with a value of 63.89 Hz, for obtaining the response a conversion was made by multiplying each element of the signal to its respect distance to the beam sensor position to convert the angular velocity into linear velocity. The numerical derivation of the linear velocity signal was applied to obtain the acceleration signal and subsequent application of FFT.</p>
+      <p>
+        <div class="row fig" id="f14">
+<a name="f14"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 14</strong><br>
+            Response in the frequency domain of the bi-cantilever aluminum beam.
+          <br>
+</div>
+</div>
+      </p>
+      <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf15"><span class="sci-ico-fileFigure"></span>Figure 15</a> shows the signal in time domain of the sample obtained with ultrasonic distance sensor to the cantilever steel beam.</p>
+      <p>
+        <div class="row fig" id="f15">
+<a name="f15"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 15</strong><br>
+            Response in the time domain of the cantilever steel beam at ultrasound sensor.
+          <br>
+</div>
+</div>
+      </p>
+      <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf16"><span class="sci-ico-fileFigure"></span>Figure 16</a> shows a sample signal in the frequency domain, for cantilever steel beam with a value of 10.04 Hz, to obtain the frequency response a numerical derivation was applied twice in the position signal obtained through the ultrasonic distance sensor, then the FFT was applied.</p>
+      <p>
+        <div class="row fig" id="f16">
+<a name="f16"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf16"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figure 16</strong><br>
+            Response in the frequency domain of the cantilever steel beam.
+          <br>
+</div>
+</div>
+      </p>
+      <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Table 2</a> presents the results obtained in the experimental analysis for steel and aluminum beams and makes the comparison with analytical results and the finite element through computer simulation.</p>
+    
+      <h1 class="articleSectionTitle">7. Conclusions and Prospects</h1>
+      <p>The objective of this paper was to present a proposal instrumentation for vibration analysis in the time domain and in the frequency domain, for educational purposes, aimed at simplicity of operation, good accurate results and low cost. The Arduino platform was proved to be suitable for use as signal acquisition for educational system. The sensors proved to be suitable for the proposed application, to have good accuracy and very low cost. The use of the Python language for signal processing is justified to be a free-open-software and their libraries for numerical computation are widely used by the scientific community in various areas of knowledge.</p>
+      <p>Note that in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Table 2</a>, the experimental results are very close to the values obtained analytically and by computer simulation, with all the sensors. It is noticed that, in general, the best experimental values are obtained using the accelerometer. This due to the fact that the signals obtained with ultrasound and gyroscope must be numerically derived for obtaining the acceleration magnitude and later applying FFT to obtain the response in the frequency domain. In the accelerometer signals it's not necessary this differentiation procedure.</p>
+      <p>Although the results obtained with Arduino platform were satisfactory, current with the literature and with the results of the computer simulation, one should emphasize that the main application of this platform is the prototyping of electronic designs, therefore some problems may be encountered when this platform is used for the purpose of acquiring experimental data, such as excessive noise of some sensors in the measurements. In this work the ultrasound sensor presented this problem. Apart from that, more complex mechanical systems is recommended the use of specific acquisition systems.</p>
+      
+        <h2>7.1. Future work</h2>
+        <p>As an extension of this work are proposed:</p>
+        <div>
+          <ul list-type="bullet">
+<li>
+              <p>Use of other sensors, such as infrared and LED;</p>
+            </li>
+<li>
+              <p>Improved data acquisition system through the use of computational platform Raspberry Pi in conjunction with the Arduino platform;</p>
+            </li>
+<li>
+              <p>System application proposed to other mechanical systems;</p>
+            </li>
+<li>
+              <p>Obtaining the system damping factor and other physical parameters and modes of the structure;</p>
+            </li>
+<li>
+              <p>Introduction and analysis of external forces of the system<sup>[</sup><span class="ref"><sup class="xref xrefblue">28</sup><span class="refCtt closed"><span>[28] A. Hjor and M. Holmberg, Measuring Mechanical Vibrations Using Arduino as a Slave I/O to an EPICS Control System(Uppsala University, Uppsala, 2015), available at https://www.diva-portal.org/smash/get/diva2:839696/FULLTEXT01.pdf.</span><br><a href="https://www.diva-portal.org/smash/get/diva2:839696/FULLTEXT01.pdf" target="_blank">https://www.diva-portal.org/smash/get/di...
+            </a></span></span><sup>]</sup>;</p>
+            </li>
+<li>
+              <p>Study deformation in the system with the use of strain gauges and Arduino.</p>
+            </li>
+</ul>
+        </div>
+      
+    </div>
+<div class="articleSection" data-anchor="References">
+<h1 class="articleSectionTitle">References</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> S.S. Rao and F.F. Yap, <i>Mechanical Vibrations</i>(Addison-Wesley, Boston, 1995), 3<sup>rd</sup>ed.</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> B. Balachandran and E. Magrab, <i>Vibrations</i>(Cengage Learning, Toronto, 2008), 2<sup>nd</sup> ed.</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> R. Haberman, <i>Mathematical Models: Mechanical Vibrations, Population Dynamics, and Traffic Flow</i> (Siam, Philadelphia, 1998).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> A.A. Shabana, <i>Theory of Vibration: An Introduction</i>(Springer Science &amp; Business Media, Berlin, 2012).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> J. Sarik and I. Kymissis, in: <i>Frontiers in Education Conference</i>, edited by Y. Wang (IEEE, New York, 2010), p. T3C-1.</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> R. Balogh, in <i>Proceedings of the 1st International Conference on Robotics in Education</i>, edited by R. Stelzer (Slovak University of Technology, Bratislava, 2010), p. 119.</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física <b>33</b> , 4503, (2011).</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> M. Monteiro, C. Cabeza e A.C. Marti, Revista Brasileira de Ensino de Física <b>37</b> , 1303 (2015).</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> M. Bhmer, <i>Beginning Android ADK with Arduino</i>(Apress, New York, 2012).</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> M. Shoaib, H. Scholten and P.JM. Havinga, in <i>Ubiquitous Intelligence and Computing</i>, edited by D. Zhang (IEEE, New York , 2013), p. 80.</div>
+</li>
+<li>
+<sup class="xref big">[11]</sup><div> I. König, A. Q. Memon e K. David, In: <i>Wireless Communication Systems</i>, edited by A. Mitschele-Thiel (IEEE, New York , 2011), p. 1.</div>
+</li>
+<li>
+<sup class="xref big">[12]</sup><div> Sung-Hun Shin <i>et al.</i>, in <i>ICT Convergence</i>, edited by I. Sohn (IEEE, New York , 2011), p. 772.</div>
+</li>
+<li>
+<sup class="xref big">[13]</sup><div> https://www.arduino.cc/en/Main/arduinoBoardMega2560, accessed 20/07/2015.<br><a href="https://www.arduino.cc/en/Main/arduinoBoardMega2560" target="_blank">» https://www.arduino.cc/en/Main/arduinoBoardMega2560</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[14]</sup><div> http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf<br><a href="http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank">» http://43zrtwysvxb2gf29r5o0athu.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[15]</sup><div> http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf<br><a href="http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf" target="_blank">» http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[16]</sup><div> F. Arnold, R. Arthur, L.G. Roger e M. Oliveira, Revista Brasileira de Ensino de Física <b>33</b> , 4311 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[17]</sup><div> H. Soriano, <i>Introdução a Dinâmica de Estruturas</i>(Elsevier, Rio de Janeiro, 2014).</div>
+</li>
+<li>
+<sup class="xref big">[18]</sup><div> A.K. Chopra, <i>Dynamics of Structures</i> (Prentice Hall, New Jersey, 1995).</div>
+</li>
+<li>
+<sup class="xref big">[19]</sup><div> M. Paz, <i>Structural Dynamics: Theory and Computation</i>(Springer Science &amp; Business Media, Berlin , 2012).</div>
+</li>
+<li>
+<sup class="xref big">[20]</sup><div> R. Shih, <i>Introduction to Finite Element Analysis Using SolidWorks Simulation 2014</i> (SDC publications, Missioon, 2014).</div>
+</li>
+<li>
+<sup class="xref big">[21]</sup><div> T. Stolarski, Y. Nakasone and S. Yoshimoto, <i>Engineering Analysis with ANSYS Software</i> (Butterworth-Heinemann, Oxford, 2011).</div>
+</li>
+<li>
+<sup class="xref big">[22]</sup><div> E. Madenci and I. Guven, <i>The Finite Element Method and Applications in Engineering Using ANSYS®</i> (Springer, Berlin, 2015).</div>
+</li>
+<li>
+<sup class="xref big">[23]</sup><div> http://i2c.info/i2c-bus-specification, accessed 28/05/2015.<br><a href="http://i2c.info/i2c-bus-specification" target="_blank">» http://i2c.info/i2c-bus-specification</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[24]</sup><div> S. Monk, <i>Programação com Arduino</i> (Bookman, Porto Alegre, 2013).</div>
+</li>
+<li>
+<sup class="xref big">[25]</sup><div> J. Unpingco, <i>Python for Signal Processing</i>(Springer, Berlin , 2013).</div>
+</li>
+<li>
+<sup class="xref big">[26]</sup><div> F.J. Blanco-Silva. <i>Learning SciPy for Numerical and Scientific Computing</i> (Packt Publishing Ltd, Birmingham, 2013).</div>
+</li>
+<li>
+<sup class="xref big">[27]</sup><div> A. Devert, <i>Matplotlib Plotting Cookbook</i> (Packt Publishing Ltd, Birmingham , 2014).</div>
+</li>
+<li>
+<sup class="xref big">[28]</sup><div> A. Hjor and M. Holmberg, <i>Measuring Mechanical Vibrations Using Arduino as a Slave I/O to an EPICS Control System</i>(Uppsala University, Uppsala, 2015), available at https://www.diva-portal.org/smash/get/diva2:839696/FULLTEXT01.pdf<br><a href="https://www.diva-portal.org/smash/get/diva2:839696/FULLTEXT01.pdf" target="_blank">» https://www.diva-portal.org/smash/get/diva2:839696/FULLTEXT01.pdf</a>
+</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Publication Dates">
+<h1 class="articleSectionTitle">Publication Dates</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publication in this collection</strong><br>Mar 2016</li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="History">
+<h1 class="articleSectionTitle">History</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Received</strong><br>25 July 2015</li>
+<li>
+<strong>Accepted</strong><br>30 Sept 2015</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Creative Common - by 4.0"></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">This is an Open Access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">About the authors</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Marcus Varanis </strong><strong>*</strong><br><div>Faculdade de Engenharia, Universidade Federal do Grande Dourados, Dourados, MS, Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Anderson Langone Silva </strong><br><div>Faculdade de Engenharia, Universidade Federal do Grande Dourados, Dourados, MS, Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Pedro Henrique Ayres Brunetto </strong><br><div>Faculdade de Engenharia, Universidade Federal do Grande Dourados, Dourados, MS, Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Rafael Ferreira Gregolin </strong><br><div>Faculdade de Engenharia, Universidade Federal do Grande Dourados, Dourados, MS, Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">*Endereço de correspondência:<a href="mailto:marcusvaranis@ufgd.edu.br">marcusvaranis@ufgd.edu.br</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figures | Tables | Formulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figures
+                    (16)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tables
+                    (2)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Formulas
+                    (11)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 1</strong><br>
+            Arduino Mega 2560 Rev3 Board.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 2</strong><br>
+              (a) GY-521 board with accelerometer MPU-6050 and (b) HC-SR04 distance sensor.
+            </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 3</strong><br>
+            Beams and equivalent system.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 4</strong><br>
+              Cantilever beam model in SolidWorks.
+            </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 5</strong><br>
+              Result of modal analysis simulation.
+            </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 6</strong><br>
+            (a) cantilever beam (b) propped beam (c) fixed beam.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 7</strong><br>
+            (a) Sensor (cantilever) (b) Sensor (propped and fixed).
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 8</strong><br>
+            (a) Ultrasound (in balance) (b) Ultrasound (cantilever-supported and bi-cantilever).
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 9</strong><br>
+            Circuit diagram for the use of the sensor (accelerometer/gyroscope).
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 10</strong><br>
+            Circuit diagram for use of the ultrasound sensor.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 11</strong><br>
+            Response in the time domain of the cantilever-supported beam in aluminum by accelerometer.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 12</strong><br>
+            Response in the frequency domain of the cantilever-supported aluminum beam.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 13</strong><br>
+            Response in the time domain of the bi-cantilever aluminum beam with gyroscope sensor.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 14</strong><br>
+            Response in the frequency domain of the bi-cantilever aluminum beam.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 15</strong><br>
+            Response in the time domain of the cantilever steel beam at ultrasound sensor.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figure 16</strong><br>
+            Response in the frequency domain of the cantilever steel beam.
+          </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Table 1</strong><br>
+            Physical properties of the beams used in the experimental analysis
+          </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Table 2</strong><br>
+            Comparison between the results for obtaining the natural frequencies through analytical method, experimental method and finite elements method.
+          </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/2aba6a157956db72a7560dadfd1c0fad8b03d29b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 1   
+            Arduino Mega 2560 Rev3 Board.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/2aba6a157956db72a7560dadfd1c0fad8b03d29b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/f82f5ddb76862106f85cee39b273636e8d9b64ef.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 2   
+              (a) GY-521 board with accelerometer MPU-6050 and (b) HC-SR04 distance sensor.
+            <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/f82f5ddb76862106f85cee39b273636e8d9b64ef.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/c3811d4f865f1d6c3f9f6f0083a0925654ba07f6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 3   
+            Beams and equivalent system.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/c3811d4f865f1d6c3f9f6f0083a0925654ba07f6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/0ba29f078ecedc832897d8fc084c0c22bc13d026.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 4   
+              Cantilever beam model in SolidWorks.
+            <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/0ba29f078ecedc832897d8fc084c0c22bc13d026.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/2c5ab10da2cbc939fdb96f0893fe8756dd962b75.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 5   
+              Result of modal analysis simulation.
+            <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/2c5ab10da2cbc939fdb96f0893fe8756dd962b75.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/d52ff78f9de57b0b468ec32fca4b2dc7d365adb4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 6   
+            (a) cantilever beam (b) propped beam (c) fixed beam.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/d52ff78f9de57b0b468ec32fca4b2dc7d365adb4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/c6d8196d04f34c01c43b5501d7fa5c20e0145e81.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 7   
+            (a) Sensor (cantilever) (b) Sensor (propped and fixed).
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/c6d8196d04f34c01c43b5501d7fa5c20e0145e81.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/1713d4b69958c7c649ce9a74c0d35daae9145fa8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 8   
+            (a) Ultrasound (in balance) (b) Ultrasound (cantilever-supported and bi-cantilever).
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/1713d4b69958c7c649ce9a74c0d35daae9145fa8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/5fa4c2b9667f49ac4ef7eb290da55d55ebd9154b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 9   
+            Circuit diagram for the use of the sensor (accelerometer/gyroscope).
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/5fa4c2b9667f49ac4ef7eb290da55d55ebd9154b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/f3664b0595e215c628e36c5253d3374ecc66bb58.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 10   
+            Circuit diagram for use of the ultrasound sensor.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/f3664b0595e215c628e36c5253d3374ecc66bb58.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/dd6ee802c7f71ee7c016b7155f53daa9e8cc789c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 11   
+            Response in the time domain of the cantilever-supported beam in aluminum by accelerometer.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/dd6ee802c7f71ee7c016b7155f53daa9e8cc789c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/74169fad9d46b62b81d641920c5ab08e2a72e350.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 12   
+            Response in the frequency domain of the cantilever-supported aluminum beam.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/74169fad9d46b62b81d641920c5ab08e2a72e350.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/05b6ff9dc091515d05ba7914eb0eaf3130427f0d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 13   
+            Response in the time domain of the bi-cantilever aluminum beam with gyroscope sensor.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/05b6ff9dc091515d05ba7914eb0eaf3130427f0d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/62378a810ae037dee90604086a3ba778ffff1ba6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 14   
+            Response in the frequency domain of the bi-cantilever aluminum beam.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/62378a810ae037dee90604086a3ba778ffff1ba6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/18d93385b570c7c0780807bd6d330b659ae6d88a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 15   
+            Response in the time domain of the cantilever steel beam at ultrasound sensor.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/18d93385b570c7c0780807bd6d330b659ae6d88a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/203e4dd3729faff4d7e023ec7a204a70cb59ecf0.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figure 16   
+            Response in the frequency domain of the cantilever steel beam.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/203e4dd3729faff4d7e023ec7a204a70cb59ecf0.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Table 1</strong>    
+            Physical properties of the beams used in the experimental analysis
+          <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+            <colgroup>
+              <col width="33%">
+              <col width="33%">
+              <col width="33%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th align="center">Beam A</th>
+                <th align="center">Beam B</th>
+              </tr>
+              <tr>
+                <th align="left">Material</th>
+                <th align="center">Stainless steel</th>
+                <th align="center">Aluminum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Young’s modulus (GPa)</td>
+                <td align="center">190</td>
+                <td align="center">69</td>
+              </tr>
+              <tr>
+                <td>Mass (kg)</td>
+                <td align="center">0,133</td>
+                <td align="center">0,023</td>
+              </tr>
+              <tr>
+                <td>Length (m)</td>
+                <td align="center">0,6</td>
+                <td align="center">0,3</td>
+              </tr>
+              <tr>
+                <td>Width - cross section (m)</td>
+                <td align="center">2,774 x 10<sup>-2</sup>
+</td>
+                <td align="center">3,4 x 10<sup>-2</sup>
+</td>
+              </tr>
+              <tr>
+                <td>Height - cross section (m)</td>
+                <td align="center">1,04 x 10<sup>-3</sup>
+</td>
+                <td align="center">1,0 x 10<sup>-3</sup>
+</td>
+              </tr>
+            </tbody>
+          </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Table 2</strong>    
+            Comparison between the results for obtaining the natural frequencies through analytical method, experimental method and finite elements method.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+            <colgroup>
+              <col width="12%">
+              <col width="15%">
+              <col width="15%">
+              <col width="12%">
+              <col width="15%">
+              <col width="15%">
+              <col width="15%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th rowspan="2"></th>
+                <th rowspan="2"></th>
+                <th align="center" rowspan="2">Analytical method (Hz)</th>
+                <th align="center" rowspan="2">FEM (Hz)</th>
+                <th align="center" colspan="3" style="border-bottom-style:solid;border-bottom-width:thin">Experimental (Hz)</th>
+              </tr>
+              <tr>
+                <th align="center">Accelerometer</th>
+                <th align="center">Gyroscope</th>
+                <th align="center">Ultrasound</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Steel</td>
+                <td>Cantilever</td>
+                <td align="center">9,408</td>
+                <td align="center">9,356</td>
+                <td align="center">9,380</td>
+                <td align="center">9,38</td>
+                <td align="center">10,05</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Cantilever-supported</td>
+                <td align="center">18,068</td>
+                <td align="center">18,023</td>
+                <td align="center">15,96</td>
+                <td align="center">15,96</td>
+                <td align="center">20,81</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Bi-Cantilever</td>
+                <td align="center">26,218</td>
+                <td align="center">26,566</td>
+                <td align="center">24,58</td>
+                <td align="center">24,38</td>
+                <td align="center">23,11</td>
+              </tr>
+              <tr>
+                <td>Aluminum</td>
+                <td>Cantilever</td>
+                <td align="center">10,009</td>
+                <td align="center">9,513</td>
+                <td align="center">9,80</td>
+                <td align="center">9,76</td>
+                <td align="center">9,45</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Cantilever-supported</td>
+                <td align="center">43,257</td>
+                <td align="center">43,129</td>
+                <td align="center">44,02</td>
+                <td align="center">44,00</td>
+                <td align="center">45,13</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Bi-Cantilever</td>
+                <td align="center">62,771</td>
+                <td align="center">62,923</td>
+                <td align="center">63,02</td>
+                <td align="center">63,89</td>
+                <td align="center">61,33</td>
+              </tr>
+            </tbody>
+          </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/ba6bca0a9a42207c43409342aab4b46dbd1f3249.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/ba6bca0a9a42207c43409342aab4b46dbd1f3249.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/9e73619acaed7fb233ca63c81cd513c24efef681.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/9e73619acaed7fb233ca63c81cd513c24efef681.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/b608e4d37afbcd794c1149db99f291333b569984.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/b608e4d37afbcd794c1149db99f291333b569984.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/befdb3455aa64e9fbdbf6c57076aa13df0196472.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/befdb3455aa64e9fbdbf6c57076aa13df0196472.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/738829a9b3aa092c33ce391331cdf7471066ed87.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/738829a9b3aa092c33ce391331cdf7471066ed87.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/1806151bd7e424eb3206710f73a1b43e0387aea3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/1806151bd7e424eb3206710f73a1b43e0387aea3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/f8777905fb55472f184b71edd4454b0913b1c052.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/f8777905fb55472f184b71edd4454b0913b1c052.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/7944c6535df0e8aad64c18a5a47d456b62943468.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/7944c6535df0e8aad64c18a5a47d456b62943468.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/3bdddd4f746411fa243ea4ec1802009efa964f35.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/3bdddd4f746411fa243ea4ec1802009efa964f35.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/2c213fcd0ce7604107194d184322e18b283b675c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/2c213fcd0ce7604107194d184322e18b283b675c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/dce670ab57de4b4a3e44e9875828c728ef404a56.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rT6fVfTg3VPSGbCLSBqHVBj/dce670ab57de4b4a3e44e9875828c728ef404a56.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">How to cite</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copy</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Varanis, Marcus et al. Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform. Revista Brasileira de Ensino de Física [online]. 2016, v. 38, n. 1 [Accessed CURRENTDATE] , 1301. Available from: &lt;https://doi.org/10.1590/S1806-11173812063&gt;. Epub 01 Apr 2016. ISSN 1806-9126. https://doi.org/10.1590/S1806-11173812063.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?lang=en&amp;format=pdf">
+                      
+                        Inglês
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform&#34; &#34;Varanis, Marcus&#34; &#34;Silva, Anderson Langone&#34; &#34;Brunetto, Pedro Henrique Ayres&#34; &#34;Gregolin, Rafael Ferreira&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform&#34; &#34;Varanis, Marcus&#34; &#34;Silva, Anderson Langone&#34; &#34;Brunetto, Pedro Henrique Ayres&#34; &#34;Gregolin, Rafael Ferreira&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/rT6fVfTg3VPSGbCLSBqHVBj/?lang=en">English</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172016000100401&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11173812063" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11173812063">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11173812063" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11173812063">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11173812063"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11173812063" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11173812063">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11173812063" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Instrumentation for mechanical vibrations analysis in the time domain and frequency domain using the Arduino platform
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11173812063">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

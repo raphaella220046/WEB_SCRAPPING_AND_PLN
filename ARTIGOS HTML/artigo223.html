@@ -1,0 +1,2188 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão"/>
+<meta property="og:description" content="Apresentamos o software MUFCosm, construído em Python, destinado ao estudo das diferentes etapas..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Cuzinatto, R.R.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Alfenas">
+        
+        <meta name="citation_author" content="de Morais, E.M.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Alfenas">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="36"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172014000100012"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Apresentamos o software MUFCosm, construído em Python, destinado ao estudo das diferentes etapas de evolução do universo através do modelo unificado para o fluido cosmológico. Este modelo simplifica a descrição das grandes eras evolutivas do cosmos, mas demanda a utilização de métodos numéricos de grande precisão. O software é uma ferramenta para efetuar interativamente os processamentos numéricos e avaliar as propriedades cosmológicas do modelo unificado para o fluido cosmológico. O mesmo software pode ser usado para estudar o comportamento do fator de escala do universo para cada um dos modelos clássicos de Friedmann, em que temos apenas uma componente de fluido dominante (matéria, radiação, inflaton ou constante cosmológica), o que dá um caráter pedagógico para esse trabalho."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2014-03"></meta>
+<meta name="citation_keywords" content="software"></meta><meta name="citation_keywords" content="cosmologia"></meta><meta name="citation_keywords" content="fluido cosmológico"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2014.v36n1/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2014.v36n1/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172014000100012 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 36 
+                (1)
+            <span class="_separator"> • </span>Mar 2014</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172014000100012" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172014000100012</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172014000100012"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Software MUFCosm as a tool for studying the standard cosmological models</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> R.R. Cuzinatto </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Poços de Caldas,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Alfenas,  Instituto de Ciência e Tecnologia ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> E.M. de Morais </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Poços de Caldas,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Alfenas,  Instituto de Ciência e Tecnologia ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Apresentamos o software MUFCosm, construído em Python, destinado ao estudo das diferentes etapas de evolução do universo através do modelo unificado para o fluido cosmológico. Este modelo simplifica a descrição das grandes eras evolutivas do cosmos, mas demanda a utilização de métodos numéricos de grande precisão. O software é uma ferramenta para efetuar interativamente os processamentos numéricos e avaliar as propriedades cosmológicas do modelo unificado para o fluido cosmológico. O mesmo software pode ser usado para estudar o comportamento do fator de escala do universo para cada um dos modelos clássicos de Friedmann, em que temos apenas uma componente de fluido dominante (matéria, radiação, inflaton ou constante cosmológica), o que dá um caráter pedagógico para esse trabalho.</p>
+<p>software; cosmologia; fluido cosmológico</p>
+</div>
+<hr>
+<div>
+<p>This work presents the software MUFCosm that is built in Phyton for the study of the different evolution eras of the Cosmos through the unified model for the cosmic fluid. This model simplifies the description of the main phases of the universe, but at the same time introduces the need of numerical integration of the dynamical equations. The software is a useful tool for carrying out the numerical processing and assess the physical properties of the unified model for the cosmic fluid. Software MUFCosm can also be used for studying the behavior of the scale factor related to each one of the classic Friedmann models, which deal with a single-component fluid at a particular era - matter, radiation, inflation or dark energy (cosmological constant). This latter feature of the software makes this paper a pedagogical piece of work.</p>
+<p>software; cosmology; cosmic fluid</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>
+      <b>Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão</b>
+    </p>
+<p></p>
+<p>
+      <b>Software MUFCosm as a tool for studying the standard cosmological models</b>
+    </p>
+<p></p>
+<p>R.R. Cuzinatto<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        cuzinatto@gmail.com. 
+      </span></span></span>; E.M. de Morais</p>
+<p></p>
+<p>Instituto de Ciência e Tecnologia, Universidade Federal de Alfenas, Poços de Caldas, MG, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Apresentamos o software MUFCosm, construído em Python, destinado ao estudo das diferentes etapas de evolução do universo através do modelo unificado para o fluido cosmológico. Este modelo simplifica a descrição das grandes eras evolutivas do cosmos, mas demanda a utilização de métodos numéricos de grande precisão. O software é uma ferramenta para efetuar interativamente os processamentos numéricos e avaliar as propriedades cosmológicas do modelo unificado para o fluido cosmológico. O mesmo software pode ser usado para estudar o comportamento do fator de escala do universo para cada um dos modelos clássicos de Friedmann, em que temos apenas uma componente de fluido dominante (matéria, radiação, inflaton ou constante cosmológica), o que dá um caráter pedagógico para esse trabalho.</p>
+<p></p>
+<p><b>Palavras-chave:</b> software, cosmologia, fluido cosmológico.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>This work presents the software MUFCosm that is built in Phyton for the study of the different evolution eras of the Cosmos through the unified model for the cosmic fluid. This model simplifies the description of the main phases of the universe, but at the same time introduces the need of numerical integration of the dynamical equations. The software is a useful tool for carrying out the numerical processing and assess the physical properties of the unified model for the cosmic fluid. Software MUFCosm can also be used for studying the behavior of the scale factor related to each one of the classic Friedmann models, which deal with a single-component fluid at a particular era - matter, radiation, inflation or dark energy (cosmological constant). This latter feature of the software makes this paper a pedagogical piece of work.</p>
+<p></p>
+<p><b>Keywords:</b> software, cosmology, cosmic fluid.</p>
+<p></p>
+<p>
+      <b>1 Introdução</b>
+    </p>
+<p></p>
+<p>A cosmologia é a ciência que o estuda do universo como um todo. Ela tem como um de seus objetivos mais básicos a determinação do comportamento e as dimensões deste ao longo do tempo [1].</p>
+<p></p>
+<p>Com a descoberta das leis da física, surgiram as primeiras tentativas de aplicação destas ao universo. Porém, a ausência de dados experimentais era um problema, pois não se podia comprovar por observações o que as equações propunham.</p>
+<p></p>
+<p>A descrição mais completa do universo veio com a teoria da relatividade geral, formulada por Albert Einstein [2, 3]. Com ela, era possível determinar o universo como tendo um comportamento dinâmico. Na visão de Einstein, o universo era eterno e estático, fato este que fez com que ele alterasse suas equações com a adição de uma chamada constante cosmológica que estabilizaria o universo [4].</p>
+<p></p>
+<p>O principal colaborador com a cosmologia dessa época foi o cientista russo Alexander Friedmann [5]. Ele abandonou a premissa de um universo monótono e estudou a sua dinâmica pela aplicação das equações de Einstein. Com elas, ele formulou em 1922 a relação</p>
+<p></p>
+<p>
+      <div class="row fig" id="4a0eb4472ed4cd6b3f73e56320e8b69ee531324a">
+<a name="4a0eb4472ed4cd6b3f73e56320e8b69ee531324a"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg4a0eb4472ed4cd6b3f73e56320e8b69ee531324a"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4a0eb4472ed4cd6b3f73e56320e8b69ee531324a.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>que é uma equação diferencial que relaciona a escala do universo (<i>a</i>), densidade de energia (ε), curvatura (<i>k</i>), as constantes fundamentais velocidade da luz (<i>c</i>) e constante gravitacional (<i>G</i>) além de (<i>R</i>) que é uma grandeza com dimensões de comprimento e representa o raio atual do universo.</p>
+<p></p>
+<p>A equação de Friedmann propunha apenas mais um modelo de universo, até que em 1929 o astrônomo norte americano Edwin Hubble observou o afastamento das galáxias, provando a dinâmica do universo [6]. Com isso, a equação de Friedmann se tornou a principal ferramenta de estudo dos cosmólogos. Mais recentemente, a medição da radiação cósmica de fundo comprovou a teoria do <i>big bang</i> para origem do universo e sua evolução dinâmica .</p>
+<p></p>
+<p>Quando se aponta o telescópio ao céu, podemos ver nitidamente duas importantes componentes do universo: a radiação e a matéria bariônica (formada por átomos). Ao estudar a dinâmica de galáxias, os físicos encontraram evidências de uma outra componente: a matéria escura [7-9], que tem propriedades semelhantes a matéria bariônica, porém, é muito mais densa. Devido à semelhança, matéria escura e matéria bariônica são consideradas a mesma componente do universo: matéria.</p>
+<p></p>
+<p>Com aplicação das propriedades termodinâmicas de cada uma dessas componentes na equação de Friedmann, foi possível prever que quando o universo era muito jovem, sua densidade de energia era composta basicamente por radiação, ou seja, a radiação era dominante. Ao passar do tempo, a densidade de energia da matéria superou a da radiação deixando a densidade de energia do universo dominada pela matéria. Ambos os comportamentos previam um crescimento desacelerado do raio do universo [1].</p>
+<p></p>
+<p>Recentemente, foi comprovado que o universo atualmente está crescendo aceleradamente [10-12]. Como nenhuma das componentes descritas acima pode culminar em um comportamento desse tipo, os cosmólogos consideraram a possibilidade de uma terceira componente atuante. Nenhuma experiência ou observação foi capaz de determinar qual seria esta componente, que ficou conhecida apenas como energia escura.</p>
+<p></p>
+<p>O modelo mais difundido para energia escura é o da constante cosmológica de Einstein. Essa constante tem a propriedade de se antepor a gravidade, gerando uma repulsão. É descrita por um campo escalar de densidade de energia constante, diferentemente da densidade de energia da radiação e da matéria, que diminuem hiperbolicamente com o tempo [13]. Desse modo, em algum tempo recente (relativamente), a densidade de energia da matéria e radiação se tornaram menor que a densidade de energia da constante cosmológica, que fez com que o universo se expandisse aceleradamente devido a repulsão por ela gerada.</p>
+<p></p>
+<p>Além da equação de Friedmann, duas outras equações descrevem o comportamento do universo. A equação do fluido (derivada da primeira lei da Termodinâmica)</p>
+<p></p>
+<p>
+      <div class="row fig" id="41a38d7198faab4198bd265b30867cf1b8b13a6e">
+<a name="41a38d7198faab4198bd265b30867cf1b8b13a6e"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg41a38d7198faab4198bd265b30867cf1b8b13a6e"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/41a38d7198faab4198bd265b30867cf1b8b13a6e.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>e a equação de estado</p>
+<p></p>
+<p>
+      <div class="row fig" id="9a5ed154fdcba8a76f4e572f1cfb8a38939d6147">
+<a name="9a5ed154fdcba8a76f4e572f1cfb8a38939d6147"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg9a5ed154fdcba8a76f4e572f1cfb8a38939d6147"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/9a5ed154fdcba8a76f4e572f1cfb8a38939d6147.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde ε é a densidade de energia, <i>P</i> é a pressão e ω é conhecido como parâmetro da equação de estado. Cada uma das componentes são associadas a um valor diferente deste parâmetro. Para a radiação, este parâmetro vale 1/3, para matéria vale 0 e -1 para constante cosmológica.</p>
+<p></p>
+<p>Para solucionar problemas de conexão causal entre diferentes regiões afastadas no céu, e eliminar dificuldades em se justificar a geometria plana do espaço, os cientistas teóricos propuseram um crescimento exponencial vertiginoso logo no início do universo. Essa dinâmica acelerada primordial foi denominada inflação [16, 17]. A descrição completa desse período é extremamente custosa em termos matemáticos e físicos, porém, pode-se aproximar um comportamento semelhante definindo que o crescimento exponencial foi resultado do domínio de uma componente com parâmetro da equação de estado igual a -1 (tal como a constante cosmológica).</p>
+<p></p>
+<p>
+      <b>2 Modelo unificado</b>
+    </p>
+<p></p>
+<p>Baseados nos dados observacionais, os cosmólogos elaboraram um modelo de universo, chamado modelo de mercado ou modelo padrão. Nele, foi considerado que no período em que determinada componente era dominante, apenas o parâmetro da equação de estado referente àquela componente era relevante (no modelo de mercado não é considerado o período inflacionário). Desse modo, o parâmetro da equação de estado permanece valendo 1/3 durante o período em que a radiação domina, passando para 0 no período de domínio da matéria chegando ao valor de -1 juntamente com período de domínio da constante cosmológica [1]. O problema do modelo de mercado é que as transições entre os períodos de domínio ocorrem de forma descontínua, impossibilitando assim resoluções de equações diferenciais nos intervalos de transição.</p>
+<p></p>
+<p>O modelo unificado para o fluido cosmológico [18] tem como objetivo contornar essa dificuldade propondo uma única equação de estado que seja uma função contínua do tempo referente a toda a história do universo. Este modelo toma o universo como dotado de geometria plana (<i>k</i> = 0) e composto apenas por uma componente que tem o parâmetro da equação de estado variável com o tempo (ω (<i>t</i>)). O período inflacionário, que ocorre no período de dominação da radiação, também é considerado. Essa equação de estado tem a forma</p>
+<p></p>
+<p>
+      <div class="row fig" id="00e464629ecd5e5dde51ef28dcfefb68d8f38c39">
+<a name="00e464629ecd5e5dde51ef28dcfefb68d8f38c39"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg00e464629ecd5e5dde51ef28dcfefb68d8f38c39"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/00e464629ecd5e5dde51ef28dcfefb68d8f38c39.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>em que a função ω <i>(t</i>) deve ter o comportamento tal como o ilustrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>. O problema apresentado pelo modelo de mercado é que esse comportamento é descontínuo e a função ω (<i>t</i>) não pode ser utilizada nas Eqs. (2) e (3) se o que se deseja é integrar a Eq. (2) para todos os períodos de evolução do universo continuamente.</p>
+<div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Utilizando as propriedades da função <i>Theta de Heaviside</i> [19, 20] em sua parametrização em termos da função arctan, encontramos a seguinte função com o comportamento semelhante ao da requerida (ver <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>)</p>
+<p></p>
+<p>
+      <div class="row fig" id="4b81a6a288febd0203b47d180735965244b36323">
+<a name="4b81a6a288febd0203b47d180735965244b36323"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg4b81a6a288febd0203b47d180735965244b36323"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4b81a6a288febd0203b47d180735965244b36323.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde ω<sub>1</sub> = 1/3 , ω<sub>2</sub> = -1 , ω<sub>3</sub> = 1/3 , ω<sub>4</sub> = 0 e ω<sub>5</sub> = -1. Os tempo <i>t</i><sub>i</sub> são os valores absolutos de tempo em que as mudanças de comportamento de ω (<i>t</i>) ocorrem. A constante α é um parâmetro livre denominado constante de suavização, que faz com que a função dada na Eq. (5) se aproxime da função contínua por pedaços (ver <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>) a medida que α cresça. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a> ilustra uma comparação entre esses dois comportamentos.</p>
+<div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Com as Eqs. (1), (2) e (4), foi possível encontrar uma equação diferencial que rege o comportamento do fator de escala do universo em relação ao tempo [18, 21].</p>
+<p></p>
+<p>
+      <div class="row fig" id="dd92358d010e984edb1eaa329ed065926935c30c">
+<a name="dd92358d010e984edb1eaa329ed065926935c30c"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgdd92358d010e984edb1eaa329ed065926935c30c"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/dd92358d010e984edb1eaa329ed065926935c30c.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>em que ω (<i>t</i>) é dado pela Eq. (5). Essa equação diferencial não tem solução analítica e depende de métodos numéricos para ser integrada. Para essa integração foi escolhido o método de Runge-Kutta de quarta ordem [22].</p>
+<p></p>
+<p>Usualmente, o período inflacionário é descrito como sendo uma consequência da transição de fase de um campo escalar <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg">, em que o potencial <i>V</i> associado à esse campo passa de um estado de maior energia para outro de menor energia [5, 23]. Com o modelo unificado para o fluido cosmológico, torna-se possível a obtenção de um campo escalar <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg"> unificado que satisfaz as condições</p>
+<p></p>
+<p>
+      <div class="row fig" id="4c792524d94522c8e050710b9bb7c07286d11f0a">
+<a name="4c792524d94522c8e050710b9bb7c07286d11f0a"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg4c792524d94522c8e050710b9bb7c07286d11f0a"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4c792524d94522c8e050710b9bb7c07286d11f0a.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>em que ε é a densidade de energia e <i>P</i> é a pressão. Este campo <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg"> está associado ao potencial <i>V</i> (<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg">) válido por toda a história do universo.</p>
+<p></p>
+<p>
+      <b>3 Software MUFCosm [24]</b>
+    </p>
+<p></p>
+<p>O software MUFCosm<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">2</strong>
+         O software MUFCosm está disponível no sítio 
+        <a href="http://mufcosm.webnode.com/downloads/" target="_blank">http://mufcosm.webnode.com/downloads/</a>. No mesmo sítio encontram-se os links de onde se pode obter o interpretador Python, bem como os módulos necessários para rodar o arquivo executável do programa MUFCosm. 
+      </span></span></span> foi desenvolvido com o intuito de facilitar o árduo trabalho algébrico e ter um maior controle da qualidade dos métodos de integração numérica. Sua tela inicial é basicamente divida em três partes, conforme <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>.</p>
+<p></p>
+<p>
+      <div class="row fig" id="f03">
+<a name="f03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<p></p>
+<p>Na parte superior esquerda, logo abaixo do título, estão as caixas de entrada dos dados das propriedades de cada período de domínio das várias componentes cósmicas (<i>inflaton</i>, radiação, materia e energia escura) mimetizadas pelo fluido unificado. Essas propriedades são os tempos iniciais e finais do período e o valor que o parâmetro da equação de estado deve assumir. A aba R1 diz respeito ao período de domínio da radiação logo após o <i>big bang</i> (explosão que deu origem ao espaço-tempo) e antes do início de Inflação. Nessa aba devemos fixar ω = 1/3; os tempos inicial e final são fixados em valores arbitrários.<span class="ref footnote"><sup class="xref">3</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">3</strong>
+         Os tempos inicial 
+        
+          t
+        
+        i e final 
+        
+          t
+        
+        f (com 
+        
+          t
+        
+        f &gt; 
+        
+          t
+        
+        i) são escolhidos arbitrariamente porque estamos interessados mais no comportamento funcional do modelo - que deve ser nitidamente observado nas curvas 
+        a (
+        t), ω (
+        t) e 
+        V (
+        ) - e menos interessados na descrição realística da evolução cósosmica - a qual, embora possível, torna as curvas 
+        a (
+        t), ω (
+        t) e 
+        V (
+        ) difíceis de serem visualizadas. 
+      </span></span></span> A aba I é o espaço onde se deve entrar os dados do período inflacionário, onde, por exemplo, ω = 1. A aba R2 é aquela do segundo domínio da radiação, correspondente ao período pós-inflação e pré-matéria. A aba M refere-se ao período de domínio da matéria, e, finalmente, a aba Λ da conta do período em que o fluido unificado comporta-se como a constante cosmológica (ω = -1).</p>
+<p></p>
+<p>Ao lado da caixa de entrada dos parâmetros, está a caixa de entrada dos dados referentes ao processo de integração numérica. Abaixo dela, uma caixa de mensagens, onde o software mostra ao usuário a sequência de ações executadas. À direita da tela do programa, uma grande caixa onde os gráficos podem ser visualizados.</p>
+<p></p>
+<p>O MUFCosm foi implementado em linguagem de programação <i>Python</i>, devido à maior legibilidade do código fonte em comparação às linguagens tradicionais [25]. Além disso, a linguagem Python é ótima para implementação de <i>GUI</i> (interface gráfica com o usuário, ou seja, são os recursos que permitem a interação entre o usuário e o computador através do mouse e teclado) pois vem com uma interface orientada a objetos padrão para a <i>API</i> (Interface de Programação de Aplicativos) de GUI, chamada <i>Tkinter</i>. Juntamente com um pacote gratuito de extensões conhecido como <i>PMW</i> (Python Megawidgets), essa linguagem de programação é uma poderosa ferramenta de interação entre máquina e usuário [26].</p>
+<p></p>
+<p>A maior vantagem quanto ao uso de Python se dá pela facilidade de trabalhar com recursos de computação científica, tais como gerar os gráficos e processamentos numéricos [27]. Com a utilização do módulo <i>matplotlib</i>, é possível obter gráficos de alta qualidade e ainda salvá-los em uma ampla gama de formatos, tudo de maneira interativa [28, 29].</p>
+<p></p>
+<p>
+      <b>3.1 Entrada de dados</b>
+    </p>
+<p></p>
+<p>Nessa área (ver <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. 4</a>), o usuário informa as características de cada período. Os valores mostrados na figura foram escolhidos de forma a gerar gráficos com mudança de comportamento visível.<span class="ref footnote"><sup class="xref">4</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">4</strong>
+         Enfatizamos que esses valores escolhidos não priorizam a correspondência com as previsões; os valores de tempo cosmológico realísticos geram gráficos com escala que dificulta a identificação dos pontos de inflexão, inviabilizando a identificação dos diferentes regimes evolutivos (que é justamente o que queremos estudar com o nosso 
+        toy-model). 
+      </span></span></span> Nessa área, o usuário poderá entrar com um valor de ω e os tempos absolutos em que este é vigente. A imagem na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. 4</a> mostra o gráfico do comportamento do fator de escala do universo para aquele valor de ω fornecido.</p>
+<div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>3.2 Análise de dados e construção dos gráficos</b>
+    </p>
+<p></p>
+<p>Na aba Análise Numérica, ilustrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Fig. 5</a>, o usuário fornece os dados necessários para integrar numericamente a Eq. (6) para a derivada temporal do fator de escala (<i>da</i>/<i>dt</i>). O método de Runge-Kutta necessita de um ponto inicial conhecido, que chamamos de (<i>t</i><sub>vi</sub><i>, a</i><sub>vi</sub>). O usuário fornece os valores de <i>t</i><sub>vi</sub> e <i>a</i><sub>vi</sub> nos dois primeiros campos da aba Análise Numérica. O campo <i>H</i><sub>0</sub>, referente a constante de Hubble, é o valor que o <i>parâmetro de Hubble</i><span class="ref footnote"><sup class="xref">5</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">5</strong>
+         O parâmetro de Hubble é definido em termos do fator de escala 
+        a (
+        t) e de sua derivada temporal 
+         como 
+        . 
+      </span></span></span> assume no tempo atual. Os campos α e <i>Grau</i> referem-se respectivamente à <i>constante de suavização</i> e o grau de precisão do método numérico.</p>
+<div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Com os campos <i>QTDE. de Pontos</i> é possível ter um controle independente do passo de análise numérica em cada período. Dessa forma, os períodos mais críticos (tal como o início da expansão à partir do <i>big bang</i>) podem ser integrados com um precisão bastante grande e ao mesmo tempo, os períodos de comportamento mais estabilizados (como o domínio da materia) podem ser integrados com um passo de analise maior, ganhando em tempo de processamento de dados.</p>
+<p></p>
+<p>Os três botões na parte inferior dessa <i>widget</i> são respectivamente para <i>Ajuda</i> (símbolo com o sinal de interrogação), <i>Plotagem de Relatórios</i> (feita após a análise concluída; representado pelo conjunto de três folhas) e, por último, a execução da <i>Análise Numérica</i> (cujo ícone é uma calculadora).</p>
+<p></p>
+<p>Na aba "<i>a</i> × <i>t</i>" (vide <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Fig. 6</a>), são encontrados os dados referentes a construção do gráfico de <i>a</i> (<i>t</i>). Nessa aba, o usuário pode escolher o título do gráfico assim como os títulos dos eixos coordenados. É possível também selecionar estilo e cor da linha. Se for de interesse, o usuário pode determinar, no campo <i>Especificar Intervalo,</i> regiões específicas para serem visualizadas ajustando adequadamente os valores mínimo e máximo da abscissa e da ordenda. Os ícones no canto inferior direito dão as opções de salvar a figura (símbolo com o disquete), abri-la com o visualizador do módulo <i>matplotlib</i> (ícone com as curvas de um gráfico) ou pré-visualizá-la na própria tela de trabalho do MUFCosm (botão com a lupa). As abas "ω × <i>t</i>" e "<i>V</i> × <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg">" são compostas pelos mesmos elementos, porém, os gráficos exibidos são outros: o do parâmetro da equação de estado ω que caracteriza o período cosmológico em função do tempo universal <i>t</i> e o do potencial <i>V</i> em função do campo escalar unificado <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg">.</p>
+<div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>3.3 Gráficos gerados</b>
+    </p>
+<p></p>
+<p><b>Parâmetro </b><b>ω</b><b> em função do tempo</b> A função para ω (<i>t</i>) dada na Eq. (5) é contínua e descreve o comportamento do parâmetro da equação de estado no tempo. Através da aba "ω × <i>t</i>", o MUFCosm gera o gráfico desse comportamento que pode ser observado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Fig. 7</a>.</p>
+<div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p><b>Fator de escala em função de tempo</b> Como ω é uma função contínua do tempo, a Eq. (6) para o fator de escala <i>a</i> (<i>t</i>) pode ser integrada numericamente. O MUFCosm faz essa integração de forma rápida e interativa, sendo que o usuário não necessita ter nenhum conhecimento em linguagens de programação e nenhuma habilidade com softwares matemáticos. Um exemplo de gráfico do fator de escala gerado pode ser visualizado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a>.</p>
+<div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p><b>Potencial em função do campo escalar</b><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg"> O MUFCosm gera também o gráfico do potencial em função de um campo escalar unificado referente a história do universo (ver <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Fig. 9</a>), satisfazendo as condições preditas na Eq. (7). </p>
+<div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>4 Comentários finais</b>
+    </p>
+<p></p>
+<p>Na introdução desse artigo apresentamos as equações fundamentais da cosmologia, as quais, quando resolvidas, dão a forma da função <i>a</i> (<i>t</i>) para o parâmetro de distâncias do universo. Essa função terá formas diferentes para cada componente que se supõe dominante em um dado momento da evolução cósmica. Por exemplo, para uma era dominada pela radiação, tem-se <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/1e8374fceef03c22e1f008465afc160d42bb259e.jpg">, cf. se lê nas Refs. [1, 13] Os outros componentes possíveis considerados aqui são a matéria sem pressão (ordinária e escura), o campo de inflação e a constante cosmológica. O modelo cosmológico para o fluido unificado pretende considerar todas essas componentes de forma sequêncial e com uma equação de estado <i>P</i>=ω<i>ρ</i> contínua. Essa equação de estado é um tanto complicada, dada em termos de uma somatória com funções arctan. Isso torna as equações diferencias para <i>a</i> (<i>t</i>) difíceis de resolver. Escrevemos o software MUFCosm para resolver essa conta numericamente.</p>
+<p></p>
+<p>O software MUFCosm apresenta uma interface gráfica do tipo janelas, que o torna de fácil utilização pelo usuário não familiarizado com programação. Conforme descrito detalhadamente ao longo do texto desse artigo, é possível digitar os parâmetros do modelo cosmológico que se quer estudar, quer seja a solução <i>a</i> (<i>t</i>) para o universo dominado pela radiação, quer seja para o modelo completo com quatro componentes.</p>
+<p></p>
+<p>Os resultados numéricos conseguidos à partir do MUFCOsm são consistentes com os resultados numéricos que se obtém de um software de cálculo analítico e numérico muito conhecido e confiável, o Mathematica®. De fato, escrevemos um código de comandos no Mathematica [24] incluindo as equações do modelo unificado, em particular as Eqs. (5) e (6). Esse código integra numericamente a equação para o fator de escala fornecendo o gráfico de <i>a</i> (<i>t</i>). Antes disso, escreve-se a função ω (<i>t</i>) usando o Mathematica para calcular explicitamente a combinação de termos da Eq. (5). Com <i>a</i> (<i>t</i>) e ω (<i>t</i>) obtemos ε (<i>t</i>) usando as Eqs. (2) e (3). Munidos com as formas funcionais de ε (<i>t</i>) e <i>P</i> (<i>t</i>) - Eq. (3) - é possível resolver o sistema (7) para obter o campo escalar <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg"> associado ao fluido unificado e o potencial V (<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg">). As funções ω (<i>t</i>) e a (<i>t</i>) obtidas com este processo, realizado com o software Mathematica, aparecem na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Fig. 10</a>.</p>
+<div class="row fig" id="f10">
+<a name="f10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>As curvas da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Fig. 10</a> apresentam o mesmo comportamento funcional das curvas correspondentes ω (<i>t</i>), <i>a</i> (<i>t</i>) e <i>V</i> (<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg">) obtidas a partir do nosso software MUFCosm,cf. as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Figs. (7)</a>, (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>8</a>) e (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>9</a>). Isso é um teste de consistência importante para o nosso código computacional e confere confiabilidade ao software MUFCosm que produzimos. </p>
+<p></p>
+<p>O fato de podermos controlar os parâmetros do modelo dá ao software um caráter educacional importante. Em verdade, o estudante que começa a aprender cosmologia pode usar o software para aprender as características dinâmicas dos períodos distintos da evolução cósmica. Esse estudante pode focar sua atenção nas eras de inflação, de domínio da radiação, de predominância da matéria ou de prevalecimento da Constante Cosmológica, de maneira isolada ou combinando duas ou mais componentes. A resposta é imediata após a entrada dos dados e o comportamento funcional do fator de escala é exibido na forma de um gráfico no próprio corpo do programa. Além disso, o modelo unificado apresenta uma solução para <i>a</i> (<i>t</i>) que inclui sequencialmente e continuamente as quatro componentes principais do universo e isso não é assunto coberto por livros introdutórios de cosmologia, o que só enfatiza a característica pedagógica desse trabalho.</p>
+<p></p>
+<p>
+      <b>Agradecimentos</b>
+    </p>
+<p></p>
+<p>Os autores agradecem a FAPEMIG (processo CEX APQ 04440-10) pelo apoio financeiro.</p>
+<p></p>
+<p>
+      <b>Referências</b>
+    </p>
+<p></p>
+<p>[1] B. Ryden, <i>Introduction to Cosmology</i> (Addison Wesley, San Francisco, 2003). </p>
+<p></p>
+<p>[2] S. Weinberg, <i>Gravitation and Cosmology</i> (John Wiley &amp; Sons, New York, 1972). </p>
+<p></p>
+<p>[3] T. P. Cheng, <i>Relativity, Gravitation and Cosmology: A Basic Introdution</i> (Oxford University Press, New York, 2005). </p>
+<p></p>
+<p>[4] R. C. Tolman, <i>Relativity, Thermodynamics and Cosmology</i> (Oxford University Press, Oxford, 1934). </p>
+<p></p>
+<p>[5] J.A. Peacock, <i>Cosmological Physics</i> (Cambride University Press, Cambridge, 1999). </p>
+<p></p>
+<p>[6] E. Hubble, <i>Procedings of the National Academy of Science</i> <b>15</b>, (1929). </p>
+<p></p>
+<p>[7] R.E. Souza, <i>Introdução à Cosmologia</i> (Editora da Universidade de São Paulo, São Paulo, 2004). </p>
+<p></p>
+<p>[8] D.W. Sciama, <i>Modern Cosmology and the Dark Matter Problem</i> (Cambridge University Press, New York, 2003). </p>
+<p></p>
+<p>[9] A. Liddle, <i>An Introduction to Modern Cosmology</i> (Wiley, San Francisco, 2003), 2ª ed. </p>
+<p></p>
+<p>[10] S. Perlmutter <i>et al</i>., Nature <b>392</b>, 51 (1998). </p>
+<p></p>
+<p>[11] A.G. Riess, A.V. Filippenko, P. Challis, A. Clocchiatti, A. Diercks, P.M. Garnavich, R.L. Gilliland, C.J. Hogan, S. Jha, R.P. Kirshner, B. Leiundgut, M.M. Phillips, D. Reiss, B.P. Schmidt, R.A. Schommer, R.C. Smith, J. Spyromilio, C. Stubbs, N.B. Suntzeff, J. Tonry, The Astronomical Journal <b>116</b>, 1009 (1998). </p>
+<p></p>
+<p>[12] D.N. Spergel, L. Verde, H. V. Peiris, E. Komatsu, M. R. Nolta, C. L. Bennett, M. Halpern, G. Hinshaw, N. Jarosik, A. Kogut, M. Limon, S. S. Meyer, L. Page, G. S. Tucker, J. L. Weiland, E. Wollack, E. L. Wright, Astrophys. J. Suppl. <b>148</b>, 175 (2003). </p>
+<p></p>
+<p>[13] V. Mukhanov, <i>Physical Foundations of Cosmology</i> (Cambridge University Press, New York, 2005). </p>
+<p></p>
+<p>[14] R. K. Pathria, <i>Statistical Mechanics</i> (Butterworth-Heinemann, Oxford, 1996), 2ª ed. </p>
+<p></p>
+<p>[15] S. Weinberg, <i>Cosmology</i> (Oxford University Press, New York, 2008). </p>
+<p></p>
+<p>[16] A.H. Guth, Phys. Rev. D <b>23</b>, 357 (1981). </p>
+<p></p>
+<p>[17] A.H. Guth, <i>O Universo Inflacionário</i> (Campus, Rio de Janeiro, 1997). </p>
+<p></p>
+<p>[18] R.R. Cuzinatto and E.M. Morais, <i>Unified Equation of State for the Cosmological Fluid</i>, to be published (in preparation). </p>
+<p></p>
+<p>[19] S. Nair, <i>Advanced Topics in Applied Mathematics: For Engineering and Physical Sciences</i> (Cambridge University Press, New York, 2011). </p>
+<p></p>
+<p>[20] K.B. Oldhan, J. Myland, J. Spanier, <i>An Atlas of Functions: with Equator, the atlas functions calculator</i> (Springer, New York, 2008), 2ª ed. </p>
+<p></p>
+<p>[21] E.M. Morais, <i>Modelo Unificado para o Fluido Cosmológico</i>. Monografia de iniciação científica. Publicação interna do ICT/UNIFAL-MG. Disponível em <a href="http://mufcosm.webnode.com/downloads/" target="_blank">http://mufcosm.webnode.com/downloads/</a>. </p>
+<p></p>
+<p>[22] J.D. Santos e C.S. Zanoni, <i>Métodos Numéricos</i> (Ed. Universitária da UFPE, Recife, 2006). </p>
+<p></p>
+<p>[23] S. Bonometto, V. Gorini, U. Moschella, <i>Modern Cosmology</i> (IOP Publishing, Bristol, 2002). </p>
+<p></p>
+<p>[24] <a href="http://mufcosm.webnode.com/downloads/" target="_blank">http://mufcosm.webnode.com/downloads/</a>.</p>
+<p></p>
+<p>[25] L.E. Borges, <i>Python para Desenvolvedores</i>. 2ed. Disponível em <a href="http://ark4n.wordpress.com/python/" target="_blank">http://ark4n.wordpress.com/python/</a>. </p>
+<p></p>
+<p>[26] M. Lutz, <i>Programming Python</i> (O'Reilly Media, Sebastopol, 2011), 4ªed. </p>
+<p></p>
+<p>[27] H.P. Langtangen, <i>A</i> Primer on Scientific Programming with Python (Springer, Heidelberg, 2012), 3ª ed. </p>
+<p></p>
+<p>[28] <i>S. Tosi, Matplotlib for Python Developers (Packt Publishing, Birmingham, 2009). </i></p>
+<p></p>
+<p>[29] J. Hunter, D. Dale, E. Firing, M. Droettboom, <i>Matplotlib User's Guide, 2013</i>. Disponível em <a href="http://matplotlib.org/Matplotlib.pdf" target="_blank">http://matplotlib.org/Matplotlib.pdf</a>. </p>
+<p></p>
+<p>Recebido em 12/6/2013 </p>
+<p></p>
+<p> Aceito em 1/7/2013 </p>
+<p></p>
+<p> Publicado em 6/2/2014</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:cuzinatto@gmail.com">cuzinatto@gmail.com</a>. </div>
+      </li>
+      <li>
+        <span class="xref big">2</span>
+        <div> O software MUFCosm está disponível no sítio </div>
+        <div>
+<a href="http://mufcosm.webnode.com/downloads/" target="_blank">http://mufcosm.webnode.com/downloads/</a>. No mesmo sítio encontram-se os links de onde se pode obter o interpretador Python, bem como os módulos necessários para rodar o arquivo executável do programa MUFCosm. </div>
+      </li>
+      <li>
+        <span class="xref big">3</span>
+        <div> Os tempos inicial </div>
+        <div>
+          <i>t</i>
+        </div>
+        <div>
+<sub>i</sub> e final </div>
+        <div>
+          <i>t</i>
+        </div>
+        <div>
+<sub>f</sub> (com </div>
+        <div>
+          <i>t</i>
+        </div>
+        <div>
+<sub>f</sub> &gt; </div>
+        <div>
+          <i>t</i>
+        </div>
+        <div>
+<sub>i</sub>) são escolhidos arbitrariamente porque estamos interessados mais no comportamento funcional do modelo - que deve ser nitidamente observado nas curvas </div>
+        <div>
+<i>a</i> (</div>
+        <div>
+<i>t</i>), ω (</div>
+        <div>
+<i>t</i>) e </div>
+        <div>
+<i>V</i> (</div>
+        <div>
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg">) - e menos interessados na descrição realística da evolução cósosmica - a qual, embora possível, torna as curvas </div>
+        <div>
+<i>a</i> (</div>
+        <div>
+<i>t</i>), ω (</div>
+        <div>
+<i>t</i>) e </div>
+        <div>
+<i>V</i> (</div>
+        <div>
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/72571b30e4f90dff9fc23cc5b80d743da4c68c90.jpg">) difíceis de serem visualizadas. </div>
+      </li>
+      <li>
+        <span class="xref big">4</span>
+        <div> Enfatizamos que esses valores escolhidos não priorizam a correspondência com as previsões; os valores de tempo cosmológico realísticos geram gráficos com escala que dificulta a identificação dos pontos de inflexão, inviabilizando a identificação dos diferentes regimes evolutivos (que é justamente o que queremos estudar com o nosso </div>
+        <div>
+<i>toy-model</i>). </div>
+      </li>
+      <li>
+        <span class="xref big">5</span>
+        <div> O parâmetro de Hubble é definido em termos do fator de escala </div>
+        <div>
+<i>a</i> (</div>
+        <div>
+<i>t</i>) e de sua derivada temporal </div>
+        <div>
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/478d3fd02df64a369e24c1cda0842f27d693c7bd.jpg"> como </div>
+        <div>
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/9b66168de582c3708b8b6090dc8196905119ce0d.jpg">. </div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] B. Ryden, <i>Introduction    to Cosmology</i> (Addison Wesley, San Francisco, 2003).</div></li>
+<li><div>[2] S. Weinberg,    <i>Gravitation and Cosmology</i> (John Wiley &amp; Sons, New York, 1972).</div></li>
+<li><div>[3] T. P. Cheng,    <i>Relativity, Gravitation and Cosmology: A Basic Introdution</i> (Oxford University    Press, New York, 2005).</div></li>
+<li><div>[4] R. C. Tolman,    <i>Relativity, Thermodynamics and Cosmology</i> (Oxford University Press, Oxford,    1934).</div></li>
+<li><div>[5] J.A. Peacock,    <i>Cosmological Physics</i> (Cambride University Press, Cambridge, 1999).</div></li>
+<li><div>[6] E. Hubble,    <i>Procedings of the National Academy of Science</i> <b>15</b>, (1929).</div></li>
+<li><div>[7] R.E. Souza,    <i>Introdução à Cosmologia</i> (Editora da Universidade    de São Paulo, São Paulo, 2004).</div></li>
+<li><div>[8] D.W. Sciama,    <i>Modern Cosmology and the Dark Matter Problem</i> (Cambridge University Press,    New York, 2003).</div></li>
+<li><div>[9] A. Liddle,    <i>An Introduction to Modern Cosmology</i> (Wiley, San Francisco, 2003), 2ª    ed.</div></li>
+<li><div>[10] S. Perlmutter    <i>et al</i>, Nature <b>392</b>, 51 (1998).</div></li>
+<li><div>[11] A.G. Riess,    A.V. Filippenko, P. Challis, A. Clocchiatti, A. Diercks, P.M. Garnavich, R.L.    Gilliland, C.J. Hogan, S. Jha, R.P. Kirshner, B. Leiundgut, M.M. Phillips, D.    Reiss, B.P. Schmidt, R.A. Schommer, R.C. Smith, J. Spyromilio, C. Stubbs, N.B.    Suntzeff, J. Tonry, The Astronomical Journal <b>116</b>, 1009 (1998).</div></li>
+<li><div>[12] D.N. Spergel,    L. Verde, H. V. Peiris, E. Komatsu, M. R. Nolta, C. L. Bennett, M. Halpern,    G. Hinshaw, N. Jarosik, A. Kogut, M. Limon, S. S. Meyer, L. Page, G. S. Tucker,    J. L. Weiland, E. Wollack, E. L. Wright, Astrophys. J. Suppl. <b>148</b>, 175    (2003).</div></li>
+<li><div>[13] V. Mukhanov,    <i>Physical Foundations of Cosmology</i> (Cambridge University Press, New York,    2005).</div></li>
+<li><div>[14] R. K. Pathria,    <i>Statistical Mechanics</i> (Butterworth-Heinemann, Oxford, 1996), 2ª    ed.</div></li>
+<li><div>[15] S. Weinberg,    <i>Cosmology</i> (Oxford University Press, New York, 2008).</div></li>
+<li><div>[16] A.H. Guth,    Phys. Rev. D <b>23</b>, 357 (1981).</div></li>
+<li><div>[17] A.H. Guth,    <i>O Universo Inflacionário</i> (Campus, Rio de Janeiro, 1997).</div></li>
+<li><div>[18] R.R. Cuzinatto    and E.M. Morais, <i>Unified Equation of State for the Cosmological Fluid</i>,    to be published (in preparation).</div></li>
+<li><div>[19] S. Nair, <i>Advanced    Topics in Applied Mathematics: For Engineering and Physical Sciences</i> (Cambridge    University Press, New York, 2011).</div></li>
+<li><div>[20] K.B. Oldhan,    J. Myland, J. Spanier, <i>An Atlas of Functions: with Equator, the atlas functions    calculator</i> (Springer, New York, 2008), 2ª ed.</div></li>
+<li><div>[21] E.M. Morais,    <i>Modelo Unificado para o Fluido Cosmológico</i> Monografia de iniciação    científica. Publicação interna do ICT/UNIFAL-MG. Disponível    em http://mufcosm.webnode.com/downloads/</div></li>
+<li><div>[22] J.D. Santos    e C.S. Zanoni, <i>Métodos Numéricos</i> (Ed. Universitária    da UFPE, Recife, 2006).</div></li>
+<li><div>[23] S. Bonometto,    V. Gorini, U. Moschella, <i>Modern Cosmology</i> (IOP Publishing, Bristol, 2002).</div></li>
+<li><div>[25] L.E. Borges,    <i>Python para Desenvolvedores</i> 2ed. Disponível em http://ark4n.wordpress.com/python/</div></li>
+<li><div>[26] M. Lutz, <i>Programming    Python</i> (O'Reilly Media, Sebastopol, 2011), 4ªed.</div></li>
+<li><div>[27] H.P. Langtangen,    <i>A</i> Primer on Scientific Programming with Python (Springer, Heidelberg,    2012), 3ª ed.</div></li>
+<li><div>[28] <i>S. Tosi,    Matplotlib for Python Developers (Packt Publishing, Birmingham, 2009).</i>
+</div></li>
+<li><div>[29] J. Hunter,    D. Dale, E. Firing, M. Droettboom, <i>Matplotlib User's Guide, 2013</i> Disponível    em http://matplotlib.org/Matplotlib.pdf</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        cuzinatto@gmail.com. 
+      
+        2
+         O software MUFCosm está disponível no sítio 
+        http://mufcosm.webnode.com/downloads/. No mesmo sítio encontram-se os links de onde se pode obter o interpretador Python, bem como os módulos necessários para rodar o arquivo executável do programa MUFCosm. 
+      
+        3
+         Os tempos inicial 
+        
+          t
+        
+        i e final 
+        
+          t
+        
+        f (com 
+        
+          t
+        
+        f &gt; 
+        
+          t
+        
+        i) são escolhidos arbitrariamente porque estamos interessados mais no comportamento funcional do modelo - que deve ser nitidamente observado nas curvas 
+        a (
+        t), ω (
+        t) e 
+        V (
+        ) - e menos interessados na descrição realística da evolução cósosmica - a qual, embora possível, torna as curvas 
+        a (
+        t), ω (
+        t) e 
+        V (
+        ) difíceis de serem visualizadas. 
+      
+        4
+         Enfatizamos que esses valores escolhidos não priorizam a correspondência com as previsões; os valores de tempo cosmológico realísticos geram gráficos com escala que dificulta a identificação dos pontos de inflexão, inviabilizando a identificação dos diferentes regimes evolutivos (que é justamente o que queremos estudar com o nosso 
+        toy-model). 
+      
+        5
+         O parâmetro de Hubble é definido em termos do fator de escala 
+        a (
+        t) e de sua derivada temporal 
+         como 
+        . 
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>29 Abr 2014</li>
+<li>
+<strong>Data do Fascículo</strong><br>Mar 2014</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>12 Jun 2013</li>
+<li>
+<strong>Aceito</strong><br>01 Jul 2013</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> R.R. Cuzinatto </strong><br><div>
+          ,  Poços de Caldas,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Alfenas,  Instituto de Ciência e Tecnologia ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> E.M. de Morais </strong><br><div>
+          ,  Poços de Caldas,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Alfenas,  Instituto de Ciência e Tecnologia ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist"><li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (10)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/a0b2b2531ee16d6c8b19d977fd626cb4c74f63bb.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/a0b2b2531ee16d6c8b19d977fd626cb4c74f63bb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/883b9c073fd90ee4178f6aa3c0f3749763efd202.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/883b9c073fd90ee4178f6aa3c0f3749763efd202.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/63586188c441c7ec08a131142f82ccc40de37034.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/63586188c441c7ec08a131142f82ccc40de37034.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/6952a568f72090227f78adb5c4ca392e4ad68582.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/6952a568f72090227f78adb5c4ca392e4ad68582.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/992674d97f9650857bfec69cd3cbe47625f2ef60.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/992674d97f9650857bfec69cd3cbe47625f2ef60.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/fdf8e6b2aef8c44f11e91a6c02e50286a57a229f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/fdf8e6b2aef8c44f11e91a6c02e50286a57a229f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/619d8cb2fe036d101a000607668c1b8ff4081c65.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/619d8cb2fe036d101a000607668c1b8ff4081c65.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/8ef4e1ba55b6371b9aa2a5ce93f62527abcdabd1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/8ef4e1ba55b6371b9aa2a5ce93f62527abcdabd1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/6e1c0059f8b403bec42b7505e4203958f9197878.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/6e1c0059f8b403bec42b7505e4203958f9197878.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/77a75064abc58896175d46aa6ee40260881d70c8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/77a75064abc58896175d46aa6ee40260881d70c8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg4a0eb4472ed4cd6b3f73e56320e8b69ee531324a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4a0eb4472ed4cd6b3f73e56320e8b69ee531324a.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4a0eb4472ed4cd6b3f73e56320e8b69ee531324a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg41a38d7198faab4198bd265b30867cf1b8b13a6e" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/41a38d7198faab4198bd265b30867cf1b8b13a6e.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/41a38d7198faab4198bd265b30867cf1b8b13a6e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg9a5ed154fdcba8a76f4e572f1cfb8a38939d6147" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/9a5ed154fdcba8a76f4e572f1cfb8a38939d6147.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/9a5ed154fdcba8a76f4e572f1cfb8a38939d6147.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg00e464629ecd5e5dde51ef28dcfefb68d8f38c39" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/00e464629ecd5e5dde51ef28dcfefb68d8f38c39.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/00e464629ecd5e5dde51ef28dcfefb68d8f38c39.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg4b81a6a288febd0203b47d180735965244b36323" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4b81a6a288febd0203b47d180735965244b36323.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4b81a6a288febd0203b47d180735965244b36323.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgdd92358d010e984edb1eaa329ed065926935c30c" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/dd92358d010e984edb1eaa329ed065926935c30c.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/dd92358d010e984edb1eaa329ed065926935c30c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg4c792524d94522c8e050710b9bb7c07286d11f0a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4c792524d94522c8e050710b9bb7c07286d11f0a.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/G4DgqpxC4DJ4mjSfhZDNRfh/4c792524d94522c8e050710b9bb7c07286d11f0a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Cuzinatto, R.R. e de Morais, E.M.Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão. Revista Brasileira de Ensino de Física [online]. 2014, v. 36, n. 1 [Acessado CURRENTDATE] , 1312. Disponível em: &lt;https://doi.org/10.1590/S1806-11172014000100012&gt;. Epub 29 Abr 2014. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172014000100012.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão&#34; &#34;Cuzinatto, R.R.&#34; &#34;de Morais, E.M.&#34; &#34;2014&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão&#34; &#34;Cuzinatto, R.R.&#34; &#34;de Morais, E.M.&#34; &#34;2014&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/G4DgqpxC4DJ4mjSfhZDNRfh/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172014000100012&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172014000100012" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172014000100012">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172014000100012" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172014000100012">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172014000100012"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172014000100012" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172014000100012">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172014000100012" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Software MUFCosm como ferramenta de estudo dos modelos da cosmologia padrão
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172014000100012">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

@@ -1,0 +1,2453 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso"/>
+<meta property="og:description" content="Resumo Neste artigo é apresentada a utilização de um sensor de umidade para o Arduino no..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+
+
+    <meta name="citation_author" content="Cássaro, Fabio A.M."></meta>
+    <meta name="citation_author" content="Oliveira, Jocenei A.T. de"></meta>
+    <meta name="citation_author" content="Cruz, Hernani"></meta>
+    <meta name="citation_author" content="Pires, Luiz F."></meta>
+    <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="42"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2019-0130"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Resumo Neste artigo é apresentada a utilização de um sensor de umidade para o Arduino no levantamento da curva característica de retenção de água por um sistema poroso, tal como, por exemplo, o solo. Essa curva é muito importante nos estudos ligados à caracterização físico-hídrica do meio poroso. Sua determinação possibilita a investigação das propriedades de retenção de água pelo meio poroso e também a obtenção de parâmetros ligados à geometria dos poros que o compõe. Os pontos experimentais foram interpolados usando a equação de van Genuchten e um modelo simples para a descrição dos poros presentes nas amostras porosas investigadas é apresentado. Este trabalho também teve por objetivo apresentar metodologia inovativa para a realização de experimentos em laboratórios de Física aplicada a estudantes de Engenharias, principalmente: a Ambiental, a Civil e a Agronômica."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2019-09-09"></meta>
+<meta name="citation_keywords" content="Ensino de Física"></meta><meta name="citation_keywords" content="Distribuição de poros"></meta><meta name="citation_keywords" content="Função capacidade de água"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2020.v42/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2020.v42/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172020000100502 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Pesquisa em Ensino de Física</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 42 <span class="_separator"> • </span>2020</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2019-0130" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2019-0130</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0130"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">The use of an Arduino moisture sensor for determining of the water retention curve of a porous systems</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Fabio A.M. Cássaro </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil<div class="corresp">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:fcassaro@uepg.br">fcassaro@uepg.br</a>.</div>
+<a href="http://orcid.org/0000-0002-7240-3947" class="btnContribLinks orcid">http://orcid.org/0000-0002-7240-3947</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Jocenei A.T. de Oliveira </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Hernani Cruz </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Luiz F. Pires </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil<a href="http://orcid.org/0000-0001-5073-5900" class="btnContribLinks orcid">http://orcid.org/0000-0001-5073-5900</a>
+</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumo">
+<h1 class="articleSectionTitle">Resumo</h1>
+<p>Neste artigo é apresentada a utilização de um sensor de umidade para o Arduino no levantamento da curva característica de retenção de água por um sistema poroso, tal como, por exemplo, o solo. Essa curva é muito importante nos estudos ligados à caracterização físico-hídrica do meio poroso. Sua determinação possibilita a investigação das propriedades de retenção de água pelo meio poroso e também a obtenção de parâmetros ligados à geometria dos poros que o compõe. Os pontos experimentais foram interpolados usando a equação de van Genuchten e um modelo simples para a descrição dos poros presentes nas amostras porosas investigadas é apresentado. Este trabalho também teve por objetivo apresentar metodologia inovativa para a realização de experimentos em laboratórios de Física aplicada a estudantes de Engenharias, principalmente: a Ambiental, a Civil e a Agronômica.</p>
+<p><strong>Palavras-chave:</strong><br>Ensino de Física; Distribuição de poros; Função capacidade de água</p>
+</div>
+<div class="articleSection" data-anchor="Abstract">
+<h1 class="articleSectionTitle">Abstract</h1>
+<p>In this paper, we present the use of an Arduino moisture sensor for determining the water retention curve of a porous system, such as, for instance, the soil. This curve is extremely important in studies related to the physical-hydric characterization of a porous systems. Its determination permits examining soil water retention properties and obtaining pore geometry parameters related to the system under investigation. The experimental data was fitted using the van Genuchten equation and a simple model for describing the pores presented in the investigated samples is presented. This work had also the objective of introducing innovative methodology for presenting experimental activities in Applied Physics for undergraduate students of Engineering, such as: Environmental, Agronomic and Civil.</p>
+<p><strong>Keywords:</strong><br>Physics teaching; Pore distribution; Water capacity function</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>Estudos de retenção de água em meios porosos, tal como, o solo, são de extrema importância em áreas como as engenharias civil, agronômica e ambiental. A capacidade do solo em reter água influencia diretamente, por exemplo, na quantidade de água disponível para uma determinada cultura agrícola se desenvolver satisfatoriamente <span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] D. Hillel, Introduction to Environmental Soil Physics (Academic Press, San Diego, 1998).</span></span></span>.</p>
+      <p>Uma baixa capacidade de retenção de água pelo solo pode ser um indicativo da presença de poros de grandes calibres neste meio poroso. Esses poros são em grande parte responsáveis pela infiltração de água a grandes velocidades na matriz do solo. Se nessa água existirem contaminantes (pesticidas, herbicidas, etc), estes poderão ser transportados rapidamente ao lençol freático, o que faz com que não tenham tempo de se degradar durante o processo de infiltração [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] R.N. Onody, A.N.D. Posadas e S. Crestana, J. of Appl. Phys. 78, 2970 (1995).</span></span></span>,<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] P.M. Dellamatrice e R.T.R. Monteiro, Rev. Bras. Eng. Agríc. Ambient. 18, 1296 (2014).</span></span></span>]. Desta forma, sérios riscos à saúde humana podem decorrer desta infiltração de água a altas velocidades.</p>
+      <p>A quantidade de água no solo também pode afetar a qualidade das obras na área de construção civil <span class="ref"><strong class="xref xrefblue">[4]</strong><span class="refCtt closed"><span>[4] E. Ganju, S. Rahman, M. Prezzi, R. Salgado e N. Siddiki, Relatório FHWA/IN/JTRP-2016/27, Joint Transportation Research Program Publication, West Lafayette (2016).</span></span></span>. Por este motivo, é importante a verificação de como este solo retém e conduz a água em seu interior, de modo que, por exemplo, a impermeabilização dos materiais a serem utilizados na construção civil seja adequada. A quantidade de água no solo também é extremamente importante em obras de pavimentação.</p>
+      <p>A água se movimenta no solo por diferenças de potenciais (químico, hidráulico, gravitacional, etc) e a sua retenção envolve situações de equilíbrio <span class="ref"><strong class="xref xrefblue">[5]</strong><span class="refCtt closed"><span>[5] W.A. Jury e R. Horton, Soil Physics (Wiley, New York, 2004).</span></span></span>. Uma característica importante do solo é a sua curva de retenção de água (CRA). A partir dela é possível, por exemplo, fazer inferência sobre a distribuição de poros neste meio poroso assim como sobre suas funções hidráulico-energéticas [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] D. Hillel, Introduction to Environmental Soil Physics (Academic Press, San Diego, 1998).</span></span></span>,<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>[6] R. Armindo e O. Wendroth, Soil Sci. Soc. Am. J. 80, 1167 (2016).</span></span></span>]. Portanto, neste sentido a obtenção da CRA é importante para estudantes dos cursos de Engenharia, Agronomia, Ciências Ambientais, Física do Solo e etc.</p>
+      <p>Neste artigo propomos a utilização de um sensor de umidade para o Arduino no levantamento da CRA de amostras porosas constituídas de areia. Devido à simplicidade e relativo baixo custo, o esquema experimental aqui proposto possui grande potencial para ser utilizado em aulas práticas nos cursos de graduação mencionados anteriormente. A exploração de vários conceitos físicos envolvidos nas medidas e a interpretação dos resultados obtidos, certamente contribuirá para uma formação mais especializada dos estudantes desses cursos.</p>
+    
+      <h1 class="articleSectionTitle">2. Materiais e Métodos</h1>
+      
+        <h2>2.1. Amostras porosas</h2>
+        <p>As amostras analisadas foram preparadas utilizando-se areia com granulometrias escolhidas. A primeira amostra foi constituída de areia com diâmetros característicos entre 212 e 500 <math><mi>μ</mi><mtext>m</mtext></math> e a segunda com diâmetros entre 500 e 100 μm. A primeira é caracterizada como sendo uma areia fina e a segunda como uma areia média.</p>
+        <p>Para a realização dos experimentos, as amostras foram acondicionadas em cilindros, cujas dimensões internas eram de aproximadamente 5 cm de diâmetro e 5 cm de altura. Portanto, o volume das amostras analisadas foi de aproximadamente <math><mn>98</mn><mtext>
+						</mtext><msup><mtext>cm</mtext><mn>3</mn></msup></math>.</p>
+      
+      
+        <h2>2.2. Umidade à base de volume</h2>
+        <p>A umidade à base de volume "<math><mrow><msub><mi>θ</mi><mi>V</mi></msub></mrow></math>" foi determinada pelo quociente entre o volume da amostra "<math><mrow><msub><mi>V</mi><mi>c</mi></msub></mrow></math>" (a do recipiente no qual a amostra foi acondicionada) e da água presente em seu interior "<math><mrow><msub><mi>V</mi><mrow><mi>a</mi><mi>g</mi></mrow></msub></mrow></math>" (a que foi gradativamente adicionada à amostra).</p>
+        <p>A expressão dessa umidade a base de volume é apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq1"><span class="sci-ico-fileFormula"></span>equação 1</a>.</p>
+        <div class="row formula" id="eeq1">
+<a name="eq1"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(1)</span>
+          <math display="block" id="m1">
+            <mrow>
+              <msub>
+                <mi>θ</mi>
+                <mi>v</mi>
+              </msub>
+              <mo>=</mo>
+              <msub>
+                <mi>V</mi>
+                <mi>c</mi>
+              </msub>
+              <mo>/</mo>
+              <msub>
+                <mi>V</mi>
+                <mrow>
+                  <mi>a</mi>
+                  <mi>g</mi>
+                </mrow>
+              </msub>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      
+      
+        <h2>2.3. Calibração do sensor</h2>
+        <p>A calibração do sensor (modelo YL-39) consiste em se relacionar a leitura M indicada pelo sensor à <math><mrow><msub><mi>θ</mi><mrow><mi>V</mi><mtext>
+									</mtext></mrow></msub></mrow></math> presente na amostra porosa.</p>
+        <p>Isso foi feito adicionando-se, pouco a pouco, quantidades conhecidas de água na base de uma amostra de areia, com grãos de diâmetros característicos entre 500 e 212 μm, até que a mesma fosse saturada. A quantidade de água acrescentada para a saturação da amostra analisada ficou torno de 40 ml, a qual foi acrescentada à amostra de aproximadamente 5 em 5 ml.</p>
+        <p>Cabe aqui salientar que para cada uma das medições usadas na calibração, esperou-se tempo suficiente para que os valores de M fossem obtidos no equilíbrio, o qual ocorre ao final da redistribuição, por capilaridade, da água acrescentada no interior da amostra.</p>
+        <p>Para o sensor e amostras utilizados, esse tempo ficou entre 10 e 15 minutos a cada nova umidade da amostra. Uma forma de se verificar o equilíbrio da redistribuição, é pelo acompanhamento temporal do valor de M, o qual se torna constante a partir do instante que o equilíbrio é atingido.</p>
+        <p>Além das medições para a amostra umedecida, a curva de calibração também levou em conta o valor de M para a amostra seca ao ar, o qual foi obtido antes de se iniciar o umedecimento da amostra.</p>
+      
+      
+        <h2>2.4. Curva de retenção de água (CRA)</h2>
+        <p>A curva de retenção foi obtida para a amostra de granulometria mais fina nas tensões entre 1 e 7 kPa, e a de granulometria mais grossa, entre tensões de 1 e 2,6 kPa.</p>
+        <p>Os pontos experimentais, relacionando a tensão e a umidade volumétrica, foram interpolados utilizando-se a equação de van Genuchten <span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] F.A.M. Cássaro, L.F. Pires, R.A. dos Santos, D. Giménez e K. Reichardt, R. Bras. Ci. do Solo 32, 2555 (2008).</span></span></span>, a qual é apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>equação 2</a>.</p>
+        <div class="row formula" id="eeq2">
+<a name="eq2"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(2)</span>
+          <math display="block" id="m2">
+            <mrow>
+              <msub>
+                <mi>θ</mi>
+                <mi>v</mi>
+              </msub>
+              <mo>=</mo>
+              <msub>
+                <mi>θ</mi>
+                <mi>r</mi>
+              </msub>
+              <mo>+</mo>
+              <mfrac>
+                <mrow>
+                  <msub>
+                    <mi>θ</mi>
+                    <mi>s</mi>
+                  </msub>
+                  <mo>−</mo>
+                  <msub>
+                    <mi>θ</mi>
+                    <mi>r</mi>
+                  </msub>
+                </mrow>
+                <mrow>
+                  <msup>
+                    <mrow>
+                      <mrow>
+                        <mo>[</mo>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>+</mo>
+                          <msup>
+                            <mrow>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>α</mi>
+                                  <mi>h</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mi>n</mi>
+                          </msup>
+                        </mrow>
+                        <mo>]</mo>
+                      </mrow>
+                    </mrow>
+                    <mi>m</mi>
+                  </msup>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>na qual, <math><mrow><msub><mi>θ</mi><mi>S</mi></msub></mrow></math> é a umidade de saturação <math><mrow><msub><mi>θ</mi><mi>r</mi></msub></mrow></math> é a umidade residual da amostra, <math><mi>α</mi></math>, n e m são parâmetros de ajuste. Em geral, utiliza-se a aproximação de Mualem <math><mrow><mo>(</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn><mo>−</mo><mn>1</mn><mo>/</mo><mi>n</mi></mrow><mo>)</mo></mrow></math>
+					<span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] F.A.M. Cássaro, L.F. Pires, R.A. dos Santos, D. Giménez e K. Reichardt, R. Bras. Ci. do Solo 32, 2555 (2008).</span></span></span>.</p>
+      
+      
+        <h2>2.5. Função capacidade de água (FCA) e equação da capilaridade</h2>
+        <p>A primeira derivada da CR representada em termos de diâmetros característicos "d", a FCA, fornece uma ideia de como os poros de uma amostra porosa estão distribuídos em termos de seus tamanhos <span class="ref"><strong class="xref xrefblue">[8]</strong><span class="refCtt closed"><span>[8] D.E. Radcliffe e J. Simunek, Soil Physics with Hydrus (CRC Press, Boca Raton, 2010).</span></span></span>.</p>
+        <p>A partir da equação de van Genuchten (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>Eq. 2</a>), a expressão da FCA é fornecida por:</p>
+        <div class="row formula" id="eeq3">
+<a name="eq3"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(3)</span>
+          <math display="block" id="m3">
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mrow>
+                  <mfrac>
+                    <mrow>
+                      <mi>d</mi>
+                      <msub>
+                        <mi>θ</mi>
+                        <mi>v</mi>
+                      </msub>
+                    </mrow>
+                    <mrow>
+                      <mi>d</mi>
+                      <mi>h</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+                <mo>|</mo>
+              </mrow>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mi>θ</mi>
+                        <mi>s</mi>
+                      </msub>
+                      <mo>−</mo>
+                      <msub>
+                        <mi>θ</mi>
+                        <mi>r</mi>
+                      </msub>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mi>m</mi>
+                  <mi>n</mi>
+                  <mi>α</mi>
+                  <msup>
+                    <mrow>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mi>α</mi>
+                          <mi>h</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <mi>n</mi>
+                      <mo>−</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mrow>
+                  <msup>
+                    <mrow>
+                      <mrow>
+                        <mo>[</mo>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>+</mo>
+                          <msup>
+                            <mrow>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>α</mi>
+                                  <mi>h</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mi>n</mi>
+                          </msup>
+                        </mrow>
+                        <mo>]</mo>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <mi>m</mi>
+                      <mo>+</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>O diâmetro característico dos poros da amostra é fornecido pela equação da capilaridade, apresentada a seguir:</p>
+        <div class="row formula" id="eeq4">
+<a name="eq4"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(4)</span>
+          <math display="block" id="m4">
+            <mrow>
+              <mi>d</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mn>4</mn>
+                  <mi>γ</mi>
+                  <mi>cos</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mi>φ</mi>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mrow>
+                  <msub>
+                    <mi>ρ</mi>
+                    <mrow>
+                      <mi>a</mi>
+                      <mi>g</mi>
+                    </mrow>
+                  </msub>
+                  <mi>g</mi>
+                  <mi>h</mi>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>na qual, <math><mi>γ</mi></math> é a tensão superficial da água, <math><mi>ϕ</mi></math> o ângulo de contato da água e as paredes do poro <math><mrow><mrow><mo>(</mo><mrow><mi>φ</mi><mo>≈</mo><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>, <math><mrow><msub><mi>ρ</mi><mrow><mi>a</mi><mi>g</mi></mrow></msub></mrow></math> a densidade da água, g a aceleração da gravidade, e h a tensão à qual a amostra é submetida</p>
+        <p>Para valores típicos dos parâmetros físicos envolvidos na equação, essa equação se torna:</p>
+        <div class="row formula" id="eeq5">
+<a name="eq5"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(5)</span>
+          <math display="block" id="m5">
+            <mrow>
+              <mi>d</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mn>298</mn>
+                </mrow>
+                <mi>h</mi>
+              </mfrac>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>a qual fornece o diâmetro característico do poro em micrômetros <math><mrow><mrow><mo>(</mo><mrow><mi>μ</mi><mi>m</mi></mrow><mo>)</mo></mrow></mrow></math> a partir da tensão h aplicada à amostra dada em quilo Pascais <math><mrow><mrow><mo>(</mo><mrow><mi>k</mi><mi>P</mi><mi>a</mi></mrow><mo>)</mo></mrow></mrow></math>.</p>
+      
+      
+        <h2>2.6 Modelo simplificado de Hilpert e Miller para a descrição dos poros de um meio poroso</h2>
+        <p>No modelo simplificado de Hilpert e Miller (HM) <span class="ref"><strong class="xref xrefblue">[9]</strong><span class="refCtt closed"><span>[9] M. Hilpert e C.T. Miller, Adv. Water Res. 24, 243 (2001).</span></span></span> o sistema poroso é idealizado como sendo constituído por um conjunto de esferas rígidas que formam uma estrutura do tipo cúbica simples (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1a</a>). A intersecção das esferas com a célula unitária associada a essa estrutura determina o menor diâmetro do poro encontrado nesse meio poroso (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figuras 1a</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>1b</a>) e o vazio encontrado entre as esferas nesse arranjo determina o diâmetro do maior poro (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figuras 1a</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>1c</a>)</p>
+        <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+            a) Célula unitária associada à estrutura Cúbica Simples. b) Corte mostrando a geometria do menor poro da estrutura (determinado pelo plano paralelo a uma das faces dela, cinza claro na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>figura 1a</a>) c) Corte mostrando a geometria do maior poro encontrado na estrutura (determinado pelo plano diagonal a ela, cinza escuro na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>figura 1a</a>).
+          <br>
+</div>
+</div>
+        <p>Em corte, as geometrias utilizadas para se encontrar esses diâmetros são apresentadas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figuras 1(b)</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>1(c)</a>
+				</p>
+        <p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Da Figura 1(b)</a> observa-se a seguinte relação entre o diâmetro do poro "<math><mrow><msub><mi>d</mi><mi>P</mi></msub></mrow></math>" e o diâmetro "<math><mrow><mi>D</mi><mo>=</mo><mn>2</mn><mi>r</mi></mrow></math>" das partículas que compõem o sistema poroso: <math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>r</mi><mo>+</mo><msub><mi>d</mi><mi>P</mi></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>=</mo><mn>2</mn><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>r</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⇔</mo><msub><mi>d</mi><mi>P</mi></msub><mo>=</mo><mn>2</mn><mi>r</mi><mrow><mo>(</mo><mrow><msqrt><mn>2</mn></msqrt><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mo>,</mo><mn>414</mn><mi>D</mi></mrow></math>
+				</p>
+        <p>O maior poro encontrado nesse mesmo empacotamento, o qual está localizado no interior da célula unitária é descrito pela geometria apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>.</p>
+        <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+            Pontos utilizados e a equação de calibração do sensor de umidades.
+          <br>
+</div>
+</div>
+        <p>Da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1(c)</a> observa-se a seguinte relação entre o maior diâmetro do poro "<math><mrow><msub><mi>d</mi><mi>P</mi></msub></mrow></math>" e o diâmetro "<math><mrow><mi>D</mi><mo>=</mo><mn>2</mn><mi>r</mi></mrow></math>" das partículas que compõem o sistema poroso: <math><mrow><msup><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>r</mi><mo>+</mo><msub><mi>D</mi><mi>P</mi></msub></mrow><mo>)</mo></mrow></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>r</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>r</mi><msqrt><mn>2</mn></msqrt><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⇔</mo><msub><mi>D</mi><mi>P</mi></msub><mo>=</mo><mn>2</mn><mi>r</mi><mrow><mo>(</mo><mrow><msqrt><mn>3</mn></msqrt><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mo>,</mo><mn>732</mn><mi>D</mi></mrow></math>
+				</p>
+        <p>Ao se analisar uma amostra composta pela mistura de partículas de vários diâmetros característicos, <i>D</i> é tomado como a média aritmética entre os diâmetros das maiores e das menores partículas que a compõe. Desta forma, considerando-se as areias de granulometrias 212-500 μm e 500-100 μm, esses diâmetros médios são, respectivamente, 356 e 750 μm.</p>
+      
+    
+      <h1 class="articleSectionTitle">3. Resultados Obtidos</h1>
+      <p>Os pontos utilizados para a calibração do sensor de umidade e a curva de calibração proposta para a interpolação dele é apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>.</p>
+      <p>Verifica-se que a curva proposta interpola muito bem os pontos experimentais, visto que o valor do coeficiente de determinação apresentado está muito próximo de 1 <math><mrow><mo stretchy="false">(</mo><msup><mi>r</mi><mn>2</mn></msup><mo>≈</mo><mn>0</mn><mo>,</mo><mn>996</mn><mo stretchy="false">)</mo></mrow></math>.</p>
+      <p>Partindo-se dessa expressão, a umidade de uma amostra pode ser calculada a partir dos valores de M indicados pelo sensor como segue:</p>
+      <div class="row formula" id="eeq6">
+<a name="eq6"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(6)</span>
+        <math display="block" id="m6">
+          <mrow>
+            <msub>
+              <mi>θ</mi>
+              <mi>v</mi>
+            </msub>
+            <mo>=</mo>
+            <mfrac>
+              <mn>1</mn>
+              <mrow>
+                <mn>2</mn>
+                <mo>,</mo>
+                <mn>763</mn>
+              </mrow>
+            </mfrac>
+            <mi>ln</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <mn>1024</mn>
+                    <mo>,</mo>
+                    <mn>9</mn>
+                  </mrow>
+                  <mi>M</mi>
+                </mfrac>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>Como pode ser observado, o sensor utilizado não possui uma resposta linear com a umidade da amostra. Portanto, a realização da calibração constitui-se numa importante tarefa, a qual deve ser conduzida inicialmente para a realização de experimentos envolvendo o sensor e as amostras porosas de interesse.</p>
+      <p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a> são apresentadas as curvas de retenção das duas amostras analisadas e na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela 1</a> os coeficientes de ajuste da equação de van Genuchten <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] M.Th. van Genuchten, Soil Sci. Soc. Am. J. 44, 892 (1980).</span></span></span> para os pontos obtidos para a CRA.</p>
+      <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          Curvas de retenção para as areias investigadas. Nelas são apresentadas as tensões relativas aos poros do modelo simplificado de HM para cada amostra.
+        <br>
+</div>
+</div>
+      <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Coeficientes de ajuste da equação de van Genuchten <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] M.Th. van Genuchten, Soil Sci. Soc. Am. J. 44, 892 (1980).</span></span></span> e o coeficiente de determinação <math><mrow><msup><mtext>r</mtext><mn>2</mn></msup></mrow></math>associado aos ajustes.
+        <br>
+</div>
+</div>
+      <p>É interessante observar que as maiores variações do conteúdo de água para a areia mais fina (212-500 μm) ocorrem no intervalo de tensões localizadas entre 1 e 5 kPa enquanto que para a mais grossa (500-1000 \textmu m) estas ocorrem entre 0,5 e 1 kPa. Isto é um indicativo de que, em média, amostras de texturas mais finas possuem capilares com dimensões características menores, nos quais as forças capilares são de maior intensidade, exigindo maiores valores de tensões aplicadas para serem drenados.</p>
+      <p>As FCAs das amostras analisadas são apresentadas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a>.</p>
+      <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+          FCAs das amostras investigadas. Nelas são apresentados os diâmetros que aparecem no modelo simplificado de HM para cada amostra investigada.
+        <br>
+</div>
+</div>
+      <p>Como observado na curva de retenção, as FCAs indicam que a amostra de granulometria mais fina, areia 212-500 μm, possui em média poros de diâmetros característicos menores. O pico da distribuição para essa amostra ocorre em um valor de diâmetro ao redor de 160 μm, o qual corresponde na curva de retenção a uma tensão aplicada de aproximadamente 2 kPa. Já para a amostra de granulometria mais grossa, areia 500-100 μm, esses valores ficam, respectivamente, em torno de 400 <math><mi>μ</mi><mtext>m</mtext></math> e 0,75 kPa.</p>
+      <p>Quanto ao modelo (HM) os limites relativos aos poros maiores e menores, respectivamente, <math><mrow><mn>0</mn><mo>,</mo><mn>732</mn><mi>D</mi><mtext>
+						</mtext><mtext>e</mtext><mtext>
+						</mtext><mn>0</mn><mo>,</mo><mn>41</mn><mi>D</mi></mrow></math>, estão indicados nas FCAs e CRAs relativas às amostras analisadas (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figuras 3</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>4</a>).</p>
+      <p>Verifica-se que grande parte da água das amostras é extraída entre esses dois limites o que indica que o modelo, em média, descreve razoavelmente os poros que devem estar presentes nas amostras.</p>
+      <p>Desta forma, a calibração do sensor de umidade permitiu a determinação da CRA com bastante sucesso. A curva de distribuição de poros foi obtida a partir da CRA e possibilitou inferir-se sobre a estrutura do meio poroso analisado. Estas duas propriedades físicas, a retenção e a distribuição dos poros da amostra, são de extrema importância nas áreas de Engenharias Civil, Agronômica e Ambiental. Desta forma, o experimento proposto e os procedimentos apresentados possuem grande potencial e podem ser facilmente implementados nos cursos de Física Experimental para cursos nessas áreas da Engenharia.</p>
+    
+      <h1 class="articleSectionTitle">4. Conclusão</h1>
+      <p>Apresentou-se a utilização de um sensor de umidade para o Arduino no levantamento de pontos para a determinação da curva de retenção de amostras porosas constituídas de areias. Mostrou-se que uma etapa importante do estudo consiste na determinação da curva de calibração para o sensor, uma vez que a equação de calibração mais adequada para o sensor utilizado foi do tipo exponencial pois, o coeficiente de determinação associado à essa interpolação foi muito próximo de 1 <math><mrow><mo stretchy="false">(</mo><msup><mi>r</mi><mn>2</mn></msup><mo>≈</mo><mn>0</mn><mo>,</mo><mn>996</mn><mo stretchy="false">)</mo></mrow></math>. Os pontos das CRAs foram interpolados com sucesso pela equação de van Genuchten com coeficientes de determinação acima de 0,996. Das CRAs obtidas mostrou-se que os limites descritos no modelo HM <math><mrow><mtext>(0,41</mtext><mi>D</mi><mtext>e 0,732</mtext><mi>D</mi><mtext>)</mtext></mrow></math> são aqueles entre os quais ocorrem as maiores variações da umidade das amostras estudadas. Além disso a análise das FCAs mostra que grande parte dos poros das amostras se concentra entre esses limites</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> D. Hillel, <i>Introduction to Environmental Soil Physics</i> (Academic Press, San Diego, 1998).</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> R.N. Onody, A.N.D. Posadas e S. Crestana, J. of Appl. Phys. <b>78</b>, 2970 (1995).</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> P.M. Dellamatrice e R.T.R. Monteiro, Rev. Bras. Eng. Agríc. Ambient. <b>18</b>, 1296 (2014).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> E. Ganju, S. Rahman, M. Prezzi, R. Salgado e N. Siddiki, Relatório FHWA/IN/JTRP-2016/27, Joint Transportation Research Program Publication, West Lafayette (2016).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> W.A. Jury e R. Horton, <i>Soil Physics</i> (Wiley, New York, 2004).</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> R. Armindo e O. Wendroth, Soil Sci. Soc. Am. J. <b>80</b>, 1167 (2016).</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> F.A.M. Cássaro, L.F. Pires, R.A. dos Santos, D. Giménez e K. Reichardt, R. Bras. Ci. do Solo <b>32</b>, 2555 (2008).</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> D.E. Radcliffe e J. Simunek, <i>Soil Physics with Hydrus</i> (CRC Press, Boca Raton, 2010).</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> M. Hilpert e C.T. Miller, Adv. Water Res. <b>24</b>, 243 (2001).</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> M.Th. van Genuchten, Soil Sci. Soc. Am. J. <b>44</b>, 892 (1980).</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>09 Set 2019</li>
+<li>
+<strong>Data do Fascículo</strong><br>2020</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>04 Jun 2019</li>
+<li>
+<strong>Aceito</strong><br>12 Jul 2019</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Fabio A.M. Cássaro </strong><strong>
+            *
+          </strong><br><div>Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0002-7240-3947" class="btnContribLinks orcid">http://orcid.org/0000-0002-7240-3947</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Jocenei A.T. de Oliveira </strong><br><div>Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Hernani Cruz </strong><br><div>Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Luiz F. Pires </strong><br><div>Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0001-5073-5900" class="btnContribLinks orcid">http://orcid.org/0000-0001-5073-5900</a></li></ul>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:fcassaro@uepg.br">fcassaro@uepg.br</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (1)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (6)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+            a) Célula unitária associada à estrutura Cúbica Simples. b) Corte mostrando a geometria do menor poro da estrutura (determinado pelo plano paralelo a uma das faces dela, cinza claro na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>figura 1a</a>) c) Corte mostrando a geometria do maior poro encontrado na estrutura (determinado pelo plano diagonal a ela, cinza escuro na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>figura 1a</a>).
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+            Pontos utilizados e a equação de calibração do sensor de umidades.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          Curvas de retenção para as areias investigadas. Nelas são apresentadas as tensões relativas aos poros do modelo simplificado de HM para cada amostra.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+          FCAs das amostras investigadas. Nelas são apresentados os diâmetros que aparecem no modelo simplificado de HM para cada amostra investigada.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Coeficientes de ajuste da equação de van Genuchten <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] M.Th. van Genuchten, Soil Sci. Soc. Am. J. 44, 892 (1980).</span></span></span> e o coeficiente de determinação <math><mrow><msup><mtext>r</mtext><mn>2</mn></msup></mrow></math>associado aos ajustes.
+        </div>
+</div></div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(5)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(6)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/FJXpBxtTVtqvNvCysSJvVyc/2900b396ba34ddf9933e95f44a0dccdb7ecd58ff.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+            a) Célula unitária associada à estrutura Cúbica Simples. b) Corte mostrando a geometria do menor poro da estrutura (determinado pelo plano paralelo a uma das faces dela, cinza claro na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>figura 1a</a>) c) Corte mostrando a geometria do maior poro encontrado na estrutura (determinado pelo plano diagonal a ela, cinza escuro na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>figura 1a</a>).
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/FJXpBxtTVtqvNvCysSJvVyc/2900b396ba34ddf9933e95f44a0dccdb7ecd58ff.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/FJXpBxtTVtqvNvCysSJvVyc/98e360ee45b858cfe4b99a96997581061dac0dff.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+            Pontos utilizados e a equação de calibração do sensor de umidades.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/FJXpBxtTVtqvNvCysSJvVyc/98e360ee45b858cfe4b99a96997581061dac0dff.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/FJXpBxtTVtqvNvCysSJvVyc/b159aa3c54d84bd89121ecaeb482d9b5bd3c56c2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          Curvas de retenção para as areias investigadas. Nelas são apresentadas as tensões relativas aos poros do modelo simplificado de HM para cada amostra.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/FJXpBxtTVtqvNvCysSJvVyc/b159aa3c54d84bd89121ecaeb482d9b5bd3c56c2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/FJXpBxtTVtqvNvCysSJvVyc/5c5bc222d01d372a893153f89f8522d4477c65fb.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+          FCAs das amostras investigadas. Nelas são apresentados os diâmetros que aparecem no modelo simplificado de HM para cada amostra investigada.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/FJXpBxtTVtqvNvCysSJvVyc/5c5bc222d01d372a893153f89f8522d4477c65fb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Coeficientes de ajuste da equação de van Genuchten <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] M.Th. van Genuchten, Soil Sci. Soc. Am. J. 44, 892 (1980).</span></span></span> e o coeficiente de determinação <math><mrow><msup><mtext>r</mtext><mn>2</mn></msup></mrow></math>associado aos ajustes.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="14%">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="left">Amostra</th>
+              <th align="center">
+                <math>
+                  <msub>
+                    <mi>θ</mi>
+                    <mtext>s</mtext>
+                  </msub>
+                  <mtext>
+									</mtext>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msup>
+                        <mrow>
+                          <mtext>cm</mtext>
+                        </mrow>
+                        <mn>3</mn>
+                      </msup>
+                      <mo>/</mo>
+                      <msup>
+                        <mrow>
+                          <mtext>cm</mtext>
+                        </mrow>
+                        <mn>3</mn>
+                      </msup>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </math>
+              </th>
+              <th align="center">
+                <math>
+                  <msub>
+                    <mi>θ</mi>
+                    <mtext>r</mtext>
+                  </msub>
+                  <mtext>
+									</mtext>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msup>
+                        <mrow>
+                          <mtext>cm</mtext>
+                        </mrow>
+                        <mn>3</mn>
+                      </msup>
+                      <mo>/</mo>
+                      <msup>
+                        <mrow>
+                          <mtext>cm</mtext>
+                        </mrow>
+                        <mn>3</mn>
+                      </msup>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </math>
+              </th>
+              <th align="center">
+                <math>
+                  <mi>α</mi>
+                </math>
+              </th>
+              <th align="center">n</th>
+              <th align="center">
+                <math>
+                  <mtext>m</mtext>
+                  <mo>=</mo>
+                  <mn>1-1</mn>
+                  <mo>/</mo>
+                  <mtext>n</mtext>
+                </math>
+              </th>
+              <th align="center">
+                <math>
+                  <msup>
+                    <mtext>r</mtext>
+                    <mn>2</mn>
+                  </msup>
+                </math>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">212-500 <math><mi>μ</mi><mtext>m</mtext></math>
+							</td>
+              <td align="center">0,314</td>
+              <td align="center">0,068</td>
+              <td align="center">0,052</td>
+              <td align="center">6,576</td>
+              <td align="center">0,848</td>
+              <td align="center">0,9998</td>
+            </tr>
+            <tr>
+              <td align="left">500-1000 <math><mi>μ</mi><mtext>m</mtext></math>
+							</td>
+              <td align="center">0,242</td>
+              <td align="center">0,079</td>
+              <td align="center">0,131</td>
+              <td align="center">8,927</td>
+              <td align="center">0,888</td>
+              <td align="center">0,9959</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m1">
+            <mrow>
+              <msub>
+                <mi>θ</mi>
+                <mi>v</mi>
+              </msub>
+              <mo>=</mo>
+              <msub>
+                <mi>V</mi>
+                <mi>c</mi>
+              </msub>
+              <mo>/</mo>
+              <msub>
+                <mi>V</mi>
+                <mrow>
+                  <mi>a</mi>
+                  <mi>g</mi>
+                </mrow>
+              </msub>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m2">
+            <mrow>
+              <msub>
+                <mi>θ</mi>
+                <mi>v</mi>
+              </msub>
+              <mo>=</mo>
+              <msub>
+                <mi>θ</mi>
+                <mi>r</mi>
+              </msub>
+              <mo>+</mo>
+              <mfrac>
+                <mrow>
+                  <msub>
+                    <mi>θ</mi>
+                    <mi>s</mi>
+                  </msub>
+                  <mo>−</mo>
+                  <msub>
+                    <mi>θ</mi>
+                    <mi>r</mi>
+                  </msub>
+                </mrow>
+                <mrow>
+                  <msup>
+                    <mrow>
+                      <mrow>
+                        <mo>[</mo>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>+</mo>
+                          <msup>
+                            <mrow>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>α</mi>
+                                  <mi>h</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mi>n</mi>
+                          </msup>
+                        </mrow>
+                        <mo>]</mo>
+                      </mrow>
+                    </mrow>
+                    <mi>m</mi>
+                  </msup>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m3">
+            <mrow>
+              <mrow>
+                <mo>|</mo>
+                <mrow>
+                  <mfrac>
+                    <mrow>
+                      <mi>d</mi>
+                      <msub>
+                        <mi>θ</mi>
+                        <mi>v</mi>
+                      </msub>
+                    </mrow>
+                    <mrow>
+                      <mi>d</mi>
+                      <mi>h</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+                <mo>|</mo>
+              </mrow>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mi>θ</mi>
+                        <mi>s</mi>
+                      </msub>
+                      <mo>−</mo>
+                      <msub>
+                        <mi>θ</mi>
+                        <mi>r</mi>
+                      </msub>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mi>m</mi>
+                  <mi>n</mi>
+                  <mi>α</mi>
+                  <msup>
+                    <mrow>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mi>α</mi>
+                          <mi>h</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <mi>n</mi>
+                      <mo>−</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mrow>
+                  <msup>
+                    <mrow>
+                      <mrow>
+                        <mo>[</mo>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>+</mo>
+                          <msup>
+                            <mrow>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>α</mi>
+                                  <mi>h</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mi>n</mi>
+                          </msup>
+                        </mrow>
+                        <mo>]</mo>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <mi>m</mi>
+                      <mo>+</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m4">
+            <mrow>
+              <mi>d</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mn>4</mn>
+                  <mi>γ</mi>
+                  <mi>cos</mi>
+                  <mrow>
+                    <mo>(</mo>
+                    <mi>φ</mi>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mrow>
+                  <msub>
+                    <mi>ρ</mi>
+                    <mrow>
+                      <mi>a</mi>
+                      <mi>g</mi>
+                    </mrow>
+                  </msub>
+                  <mi>g</mi>
+                  <mi>h</mi>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(5)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m5">
+            <mrow>
+              <mi>d</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mn>298</mn>
+                </mrow>
+                <mi>h</mi>
+              </mfrac>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(6)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m6">
+          <mrow>
+            <msub>
+              <mi>θ</mi>
+              <mi>v</mi>
+            </msub>
+            <mo>=</mo>
+            <mfrac>
+              <mn>1</mn>
+              <mrow>
+                <mn>2</mn>
+                <mo>,</mo>
+                <mn>763</mn>
+              </mrow>
+            </mfrac>
+            <mi>ln</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <mn>1024</mn>
+                    <mo>,</mo>
+                    <mn>9</mn>
+                  </mrow>
+                  <mi>M</mi>
+                </mfrac>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Cássaro, Fabio A.M. et al. Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso. Revista Brasileira de Ensino de Física [online]. 2020, v. 42 [Acessado CURRENTDATE] , e20190130. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2019-0130&gt;. Epub 09 Set 2019. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2019-0130.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso&#34; &#34;Cássaro, Fabio A.M.&#34; &#34;Oliveira, Jocenei A.T. de&#34; &#34;Cruz, Hernani&#34; &#34;Pires, Luiz F.&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso&#34; &#34;Cássaro, Fabio A.M.&#34; &#34;Oliveira, Jocenei A.T. de&#34; &#34;Cruz, Hernani&#34; &#34;Pires, Luiz F.&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/FJXpBxtTVtqvNvCysSJvVyc/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172020000100502&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2019-0130" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2019-0130">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2019-0130" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2019-0130">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2019-0130"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2019-0130" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2019-0130">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0130" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0130">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

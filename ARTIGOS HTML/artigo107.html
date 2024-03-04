@@ -1,0 +1,2034 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Proposta experimental para análise das variáveis de estado dos gases com Arduino Proposta experimental para análise das variáveis de estado dos gases com Arduino </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Proposta experimental para análise das variáveis de estado dos gases com Arduino"/>
+<meta property="og:description" content="Resumo Por se tratar de uma ciência amplamente aplicada nos ramos tecnológicos, é essencial que..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Cardoso, João Michels">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Santa Catarina">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0003-4959-3516">
+        <meta name="citation_author" content="Zannin, Marcelo">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Santa Catarina">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="41"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2019-0028"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Proposta experimental para análise das variáveis de estado dos gases com Arduino
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Resumo Por se tratar de uma ciência amplamente aplicada nos ramos tecnológicos, é essencial que a física seja ensinada a partir de demonstrações dos fenômenos e com relações entre teoria e prática. No entanto, por diversos motivos, os professores optam por aulas puramente expositivas. De maneira geral, verifica-se que, dessa forma, os alunos não se interessam pela disciplina e absorvem o conhecimento de forma mecânica. O presente estudo objetivou a construção de um produto educacional de baixo custo, utilizando a plataforma Arduino, para demonstrar a relação entre as variáveis de estado de um gás ideal em aulas do Ensino Médio. Os resultados demonstraram que, mesmo com materiais simples, é possível a construção de um aparato experimental capaz de extrair dados quantitativos e sua utilização em aula pode contribuir na construção do conhecimento de forma potencialmente significativa."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2019-06-19"></meta>
+<meta name="citation_keywords" content="Física"></meta><meta name="citation_keywords" content="Experimentação"></meta><meta name="citation_keywords" content="Ensino Médio"></meta><meta name="citation_keywords" content="Arduino"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2019.v41n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2019.v41n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172019000400605 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 41 
+                (4)
+            <span class="_separator"> • </span>2019</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2019-0028" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2019-0028</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0028"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Proposta experimental para análise das variáveis de estado dos gases com Arduino<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Experimental proposal for analysis of the state variables of gases with Arduino</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> João Michels Cardoso </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Universidade Federal de Santa Catarina, Araranguá, SC, Brasil<div class="corresp">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:jmichelsc@hotmail.com">jmichelsc@hotmail.com</a>
+				</div>
+<a href="http://orcid.org/0000-0003-4959-3516" class="btnContribLinks orcid">http://orcid.org/0000-0003-4959-3516</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Marcelo Zannin </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade Federal de Santa Catarina, Araranguá, SC, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumo">
+<h1 class="articleSectionTitle">Resumo</h1>
+<p>Por se tratar de uma ciência amplamente aplicada nos ramos tecnológicos, é essencial que a física seja ensinada a partir de demonstrações dos fenômenos e com relações entre teoria e prática. No entanto, por diversos motivos, os professores optam por aulas puramente expositivas. De maneira geral, verifica-se que, dessa forma, os alunos não se interessam pela disciplina e absorvem o conhecimento de forma mecânica. O presente estudo objetivou a construção de um produto educacional de baixo custo, utilizando a plataforma Arduino, para demonstrar a relação entre as variáveis de estado de um gás ideal em aulas do Ensino Médio. Os resultados demonstraram que, mesmo com materiais simples, é possível a construção de um aparato experimental capaz de extrair dados quantitativos e sua utilização em aula pode contribuir na construção do conhecimento de forma potencialmente significativa.</p>
+<p><strong>Palavras-chave:</strong><br>Física; Experimentação; Ensino Médio; Arduino</p>
+</div>
+<div class="articleSection" data-anchor="Abstract">
+<h1 class="articleSectionTitle">Abstract</h1>
+<p>Since it is a widely applied science in the technological fields, it is essential that physics be taught from demonstrations of phenomena and relating theory and practice. However, for lots of reasons, teachers choose mainly expository classes. In general, it is verified that, in such way, the students are not interested in the subject and absorb knowledge in a mechanical way. The present study aimed at the construction of a low cost educational product using the Arduino platform to demonstrate the relationship between the state variables of an ideal gas in secondary school classes. The results showed that, even with simple materials, it is possible to construct an experimental apparatus capable to extract quantitative data and its use in class may contribute to the construction of knowledge in a potentially significant way.</p>
+<p><strong>Keywords:</strong><br>Physics; Experimentation; High School; Arduino</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>As ciências da natureza – física, química e biologia - fazem uso de leis, modelos matemáticos e representações para a interpretação dos dados empíricos, explicação de fenômenos cotidianos e aplicações em diversos setores da indústria. Todavia, apesar da relevância dos assuntos tratados nessas disciplinas, os professores relatam constantemente a falta de interesse e, consequentemente, baixo desempenho por parte dos alunos. A física, por essência, deve ser estudada relacionando a teoria com a prática. No entanto, por diversas razões – tempo, infraestrutura e deficiências em sua formação – os professores não realizam experimentos, o que pode ser um dos fatores para a falta de aprendizagem e interesse pelo conteúdo.</p>
+      <div><blockquote>
+        <p>[...] grande parte da dificuldade encontrada por esses alunos quanto ao aprendizado de Física se dá pela ausência de laboratórios didáticos, que servem como instrumentos de verificação dos fenômenos físicos em complementaridade aos estudos teóricos realizados em sala de aula. As atividades práticas em laboratórios fomentam nos alunos um conhecimento único a respeito da importância do aprendizado de Física e de sua aplicação no dia-a-dia, facilitando o seu aprendizado.<span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] J.C.X. Silva e C.E. Santos, Rev. Bras. Ens. Fís. 39, 1401 (2017).</span></span></span>
+				</p>
+      </blockquote></div>
+      <p>Podem ser aplicadas diversas iniciativas para minimizar a atual má formação em física na educação básica e despertar o interesse dos discentes pelas áreas de ciência e tecnologia.<span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] J.C.X. Silva e C.E. Santos, Rev. Bras. Ens. Fís. 39, 1401 (2017).</span></span></span> O envolvimento dos alunos com o experimento deve constar no planejamento de tais experiências didáticas. Professores da <i>American Association of Physics Teachers</i> afirmam que as atividades “<i>hands on</i>”, onde os alunos manipulam os dados do experimento, estimulam seu interesse, motivação e concentração nas aulas <span class="ref"><strong class="xref xrefblue">[2]</strong><span class="refCtt closed"><span>[2] https://www.aapt.org/resources/policy/RoleOfLabs.cfm, acessado em 16/01/2019.</span><br><a href="https://www.aapt.org/resources/policy/RoleOfLabs.cfm" target="_blank">https://www.aapt.org/resources/policy/Ro...
+            </a></span></span>.</p>
+      <p>Os custos dos experimentos didáticos em física têm diminuído nos últimos anos e muitas propostas de baixo custo estão sendo sugeridas na literatura [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Rev. Bras. Ens. Fís. 33, 1702 (2011).</span></span></span>, <span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] J.A. Santos, Instrumentação Eletrônica com o Arduino Aplicada ao Ensino de Física. Dissertação de Mestrado, Universidade Federal Rural de Pernambuco, Recife (2015).</span></span></span> e <span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] S. Siveira e M. Girardi, Rev. Bras. Ens. Fís. 39, 4502 (2017).</span></span></span>]. Todavia, ainda existem muitos experimentos não acessíveis por questões financeiras. Nesse sentido, a plataforma Arduino têm se destacado nas iniciativas de introdução de experimentação e aquisição de dados no ensino. Ela possui, além do baixo custo, material de consulta abundante disponível na internet, é de fácil utilização para leigos em programação e possibilita a interação com diversos fenômenos físicos abordados no ensino médio. Além disso, é uma ótima ferramenta para experimentação, capaz de construir instrumentos científicos de baixo custo e provar princípios físicos <span class="ref"><strong class="xref xrefblue">[6]</strong><span class="refCtt closed"><span>[6] M.M.P.C. Moreira, M.C. Romeu, F.R.V. Alves e F.R.O. Silva, Cad. Bras. Ens. Fís. 35, 721 (2018).</span></span></span>.</p>
+      <p>Dentre os diversos objetos de estudo da disciplina de Física no ensino médio, destaca-se – usualmente na segunda série – o estudo da termologia. Os conceitos de temperatura e calor, dilatação térmica, gases ideais, termodinâmica, entre outros, são tratados a partir de modelos simples que, no entanto, são sustentação para aqueles que optam pela área tecnológica, dada a vasta aplicabilidade de tais conceitos <span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] T.O. Camel e C.A.L. Filgueiras, Quí. Nov. 36, 738 (2013).</span></span></span>. Além de sua importância como base para o ensino superior, tais conteúdos são recorrentes nos exames – ENEM e vestibulares – para ingresso no ensino superior.</p>
+      <p>Nesse sentido, o presente trabalho propõe a construção de um aparato experimental de baixo custo com utilização do Arduino para demonstrar as proporções entre pressão, volume e temperatura de uma amostra gasosa. O artigo está dividido da seguinte forma: a sessão 2 apresenta os materiais necessários e as etapas de montagem do kit experimental, bem como os programas utilizados e o algoritmo escrito na Arduino IDE. Na terceira sessão estão dispostos os experimentos possíveis e sugestões para aplicações didáticas do kit experimental. A quarta e última sessão apresenta as considerações finais e perspectivas futuras para o estudo.</p>
+    
+      <h1 class="articleSectionTitle">2. Construção do experimento</h1>
+      
+        <h2>2.1. Programas utilizados</h2>
+        <p>Alguns softwares são requisitos para a implementação da atividade prática, conforme a presente metodologia. São eles:</p>
+        <ul list-type="bullet">
+<li>
+            <p><b>Arduino IDE:</b> é a interface de programação do Arduino. Seu download está disponível no site da plataforma (<a href="https://www.arduino.cc/en/Main/Software" target="_blank">https://www.arduino.cc/en/Main/Software</a>) e é nessa interface que o algoritmo é desenvolvido;</p>
+          </li>
+<li>
+            <p><b>PLX-DAQ:</b> trata-se de um suplemento de software para o Microsoft Excel. Ele adquire dados de qualquer microcontrolador e eleva os números em colunas à medida que eles chegam. Essa ferramenta fornece uma fácil análise de planilha de dados coletados no campo, análise laboratorial de sensores e monitoramento de equipamentos em tempo real. Foi utilizada para transposição dos dados lidos pelos sensores para o editor de planilhas para a construção dos gráficos em tempo real. Pode ser obtido no site de sua desenvolvedora, a empresa Parallax (<a href="https://www.parallax.com/downloads/plx-daq" target="_blank">https://www.parallax.com/downloads/plx-daq</a>).</p>
+          </li>
+<li>
+            <p><b>Microsoft Office/Excel 2000 ou 2003</b><sup>®</sup>: são os editores de planilhas suportados pelo programa PLX-DAQ. Não foram feitos testes com versões mais novas.</p>
+          </li>
+<li>
+            <p><b>Microsoft Windows 7<sup>®</sup> ou versão anterior:</b> a funcionalidade do programa PLX-DAQ foi testada somente no sistema operacional Windows 7. O programa funcionou perfeitamente, apesar de a Parallax indicar que o mesmo requer Windows 98.</p>
+          </li>
+</ul>
+      
+      
+        <h2>2.2. Bibliotecas utilizadas</h2>
+        <p>Bibliotecas são, em programação, conjuntos de funções já escritas por outros programadores. O site do Arduino fornece algumas bibliotecas e ferramentas de busca para outras (<a href="https://www.arduino.cc/en/Reference/Libraries" target="_blank">https://www.arduino.cc/en/Reference/Libraries</a>). Além disso, o próprio programa Arduino IDE possui, em versões mais recentes, um buscador de bibliotecas em Sketch &gt; Import Library. Para o programa desenvolvido, são necessárias as seguintes bibliotecas:</p>
+        <ul list-type="bullet">
+<li>
+            <p><b>Wire.h:</b> essa biblioteca permite que você se comunique com dispositivos I2C (Inter-Integrated Circuit). No programa, ela tem a função de comunicação com o sensor de temperatura e pressão BMP180.</p>
+          </li>
+<li>
+            <p><b>Adafruit_BMP085.h:</b> é uma biblioteca específica para o sensor BMP180. Ela simplifica a programação para o seu funcionamento.</p>
+          </li>
+<li>
+            <p><b>Ultrasonic.h:</b> é a biblioteca para o sensor ultrassônico utilizado na leitura da distância (volume). Torna mais fácil a programação para o funcionamento do sensor.</p>
+          </li>
+<li>
+            <p><b>LiquidCrystal.h:</b> essa biblioteca permite que a placa Arduino controle um display LCD. Está relacionada com a leitura dos dados no visor LCD.</p>
+          </li>
+</ul>
+      
+      
+        <h2>2.3. O algoritmo</h2>
+        <p>Foi utilizado o Arduino por seu baixo custo e vasto material disponível na internet, conforme mencionado anteriormente. O algoritmo foi escrito na linguagem própria da plataforma – semelhante à linguagem C - no software Arduino IDE <span class="ref"><strong class="xref xrefblue">[8]</strong><span class="refCtt closed"><span>[8] M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fís. 33, 4503 (2011).</span></span></span>. O objetivo é medir as variáveis pressão, volume e temperatura do ar contido em um cilindro.</p>
+        <p>O volume do cilindro foi medido de forma indireta, através da distância entre o pistão e a base, com o sensor HC-SR04. Trata-se de um sensor de distância ultrassônico que, segundo o <i>datasheet</i> do produto, possui <i>range</i> de leitura de 2 cm até 4 m e <i>accuracy</i> de 3 mm. Para leitura de temperatura e pressão, utilizou-se o sensor BMP 180 para Arduino. Segundo o <i>datasheet</i> do produto, sua <i>range</i> de leitura é 300-1100 hPa e sua <i>accuracy</i> é de 0,5 hPa.</p>
+        <p>Além disso, foi utilizado um display LCD para mostrar os valores lidos, tornando possível a utilização do kit experimental sem o computador. O algoritmo – disponível no <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/52f79780f159cc0bac38ecac24c83d0661ef2a0c.pdf">Apêndice</a> - possui linhas de código específicas para o PLX-DAQ exportar os dados para o Excel.</p>
+        <p>O algoritmo em questão pode ser descrito pelo fluxograma demonstrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>.</p>
+        <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+            Fluxograma simplificado do algoritmo.
+          <br>
+</div>
+</div>
+        <p>O algoritmo completo, presente no <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/52f79780f159cc0bac38ecac24c83d0661ef2a0c.pdf">Apêndice</a>, pode ser adaptado – com conhecimento básico da linguagem de programação do Arduino – dependendo da necessidade do usuário.</p>
+      
+      
+        <h2>2.4. Montagem do experimento</h2>
+        <p>Os materiais utilizados na montagem do kit experimental estão descritos na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela 1</a>. Em geral, são materiais de baixo custo e fácil acesso.</p>
+        <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+            Materiais utilizados para montar o experimento
+          <br>
+</div>
+</div>
+        <p>A peça principal do experimento, o cilindro de PVC com êmbolo móvel, é construída, em um primeiro momento, com duas tampas do mesmo material. Na tampa de baixo deve ser feito um furo e um vinco para a passagem dos cabos, conforme a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>.</p>
+        <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+            Tampa inferior do cilindro. Construída com um tampão de PVC e perfurada para a passagem de 8 jumpers fêmea/macho. A vedação é feita com cola quente.
+          <br>
+</div>
+</div>
+        <p>A tampa superior precisa ser perfurada cinco vezes: um furo central para a passagem da guia do êmbolo e quatro para a passagem de ar que permite o movimento do pistão, conforme a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a>.</p>
+        <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+            Tampa superior do cilindro. Deve ser encaixada na parte superior do cilindro para manter o pistão no prumo.
+          <br>
+</div>
+</div>
+        <p>Com o cilindro montado, podem ser feitos o pistão e a guia para movimentá-lo. O pistão é feito com um tampão de PVC e uma borracha de vedação. A peça, demonstrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a>, é furada com o mesmo diâmetro da barra de aço utilizada como guia e uma fenda deve ser feita em sua lateral, para o encaixe do o-ring utilizado na vedação.</p>
+        <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+            Montagem do pistão. O anel de borracha não deve ficar frouxo nem apertado demais.
+          <br>
+</div>
+</div>
+        <p>A guia é fixada no pistão com uma pequena porca. No outro lado da guia coloca-se um pino, também fixado através de uma porca, para facilitar a movimentação do conjunto. O resultado está exposto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a>.</p>
+        <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+            Guia do pistão pronta.
+          <br>
+</div>
+</div>
+        <p>O Arduino deve ser instalado em uma extremidade da plataforma de MDF. A protoboard colada no centro e o cilindro na outra extremidade. Para fixação do pistão, utilizam-se as duas hastes metálicas. Essas, além de fixarem o cilindro na plataforma, permitem melhor movimentação para o pistão e garantem que as tampas não estourem com o aumento da pressão. Detalhes da fixação do cilindro podem ser vistos na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>.</p>
+        <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+            Fixação do cilindro na plataforma. Recomenda-se fechar o cilindro e fixa-lo após todos os testes com os sensores que estão dentro do mesmo.
+          <br>
+</div>
+</div>
+        <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Figura 7</a> mostra os sensores na tampa inferior do cilindro. Algumas dificuldades podem ser encontradas para uma boa vedação do mesmo. Orienta-se utilizar o tubo e as tampas de PVC com diâmetro, no mínimo, de 60 mm, para acomodar os sensores. O experimento descrito no presente artigo utilizou bitolas de 80 mm.</p>
+        <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+            Sensores fixados no cilindro.
+          <br>
+</div>
+</div>
+        <p>Para o funcionamento do algoritmo descrito anteriormente, o circuito foi montado conforme a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a>, sendo que os sensores foram colocados, através de jumpers, dentro do cilindro e não diretamente na protoboard.</p>
+        <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+            Circuito do Arduino.
+          <br>
+</div>
+</div>
+        <p>O produto educacional completo pode ser visualizado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Figura 9</a>.</p>
+        <div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 9</strong><br>
+            O produto educacional.
+          <br>
+</div>
+</div>
+      
+    
+      <h1 class="articleSectionTitle">3. A funcionalidade do kit experimental</h1>
+      <p>A vedação foi o principal desafio encontrado na construção do kit. Foi constatado que não é possível uma vedação perfeita, verifica-se um pequeno escape de ar ao movimentar o pistão. Mesmo assim, o experimento é capaz de demonstrar a relação entre pressão e volume com grande eficiência.</p>
+      <p>A relação entre pressão e volume <span class="ref"><strong class="xref xrefblue">[9]</strong><span class="refCtt closed"><span>[9] H.C. Van Ness e M.M. Abbot, Introdução à Termodinâmica da Engenharia Química (LTC, Rio de Janeiro, 2000), v. 1, p. 54.</span></span></span> pode ser verificada com a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Figura 10</a>, que demonstra medições realizadas com o pistão sendo pressionado:</p>
+      <div class="row fig" id="f10">
+<a name="f10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 10</strong><br>
+          Pressionando o Pistão. Verifica-se aumento da pressão com a diminuição de volume causada pelo movimento do pistão.
+        <br>
+</div>
+</div>
+      <p>O diagrama de dispersão obtido para o ensaio descrito acima está exposto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf11"><span class="sci-ico-fileFigure"></span>Figura 11</a>. A linha de tendência corresponde à função potência calculada pelo método dos mínimos quadrados. O coeficiente de determinação obtido foi de 0,9773, demonstrando que os dados se ajustam à equação de uma hipérbole.</p>
+      <div class="row fig" id="f11">
+<a name="f11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 11</strong><br>
+          Gráfico de uma Isoterma. Os dados experimentais demonstram a proporção inversa entre pressão e volume à temperatura constante.
+        <br>
+</div>
+</div>
+      <p>A planilha foi configurada para construção automática do gráfico através dos dados importados pelo PLX-DAQ. Esse suplemento apresenta a possibilidade de construção do gráfico, análise da equação e do coeficiente de determinação de forma automática. No entanto, a ferramenta também permite que os dados sejam somente importados para o Excel e o processo de plotagem do gráfico seja feita de forma manual, o que, do ponto de vista pedagógico, pode ser bastante valioso para os alunos que aprenderão a manipular uma planilha de dados.</p>
+      <p>O produto P x V é proporcional à temperatura em Kelvin e uma variação perceptível em termos percentuais nessa escala termométrica é muito difícil de ocorrer. Portanto, essa relação de proporcionalidade é difícil de ser demonstrada, visto que não é possível causar grandes variações de temperatura no cilindro, pois o mesmo pode se deformar. Essa informação foi utilizada para a discussão em classe.</p>
+      <p>Mantendo o pistão na mesma posição e aquecendo o cilindro com auxílio de um secador de cabelo, verifica-se na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf12"><span class="sci-ico-fileFigure"></span>Figura 12</a> a relação entre pressão e temperatura.</p>
+      <div class="row fig" id="f12">
+<a name="f12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 12</strong><br>
+          Pressão e Temperatura. Os dados demonstram aumento da pressão com a elevação de temperatura <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] P.W. Atkins, Físico-Química (LTC, Rio de Janeiro, 2008), v. 1, p. 10.</span></span></span>. Todavia, o gráfico obtido não é de qualidade, dada a pequena variação relativa alcançada e o tempo necessário para obtê-la.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">4. Considerações finais</h1>
+      <p>O experimento sugerido pelo presente artigo demonstrou resultados pertinentes para uma metodologia de construção de um produto educacional para demonstração experimental quantitativa do comportamento das variáveis de estado de um gás ideal. Foi observado que na literatura existem diversas propostas de aplicações de experimentos didáticos de baixo custo, especialmente em artigos recentes nas revistas de ensino de física. Tais propostas demonstram-se executáveis e apresentam bons resultados quando são inseridas em sequências didáticas planejadas e com objetivos bem definidos. O Arduino destaca-se pela capacidade de demonstrações qualitativas de fenômenos físicos, mas, especialmente, pela coleta de dados quantitativos. Desse modo, o desenvolvimento de projetos de aplicação do mesmo em procedimentos experimentais voltados ao ensino deve continuar a crescer nos próximos anos.</p>
+      <p>Na construção do produto educacional pôde-se perceber que, além do baixo custo, a vasta quantidade de material e a comunidade online tornam o Arduino vantajoso também no fato de que qualquer um pode pesquisar, aprender e desenvolver projetos com o mesmo. Além disso, todos os materiais utilizados na construção do produto educacional foram de baixo custo e facilmente encontrados. Houve diversas dificuldades na construção do kit experimental – destacam-se a escolha dos materiais adequados e a vedação do cilindro -, todavia, com o presente trabalho, essa prática pode ser replicada facilmente pelo docente que tiver interesse.</p>
+    </div>
+<div class="articleSection" data-anchor="Agradecimentos">
+<h1 class="articleSectionTitle">Agradecimentos</h1>
+      
+      <p>Os autores deste trabalho agradecem à Coordenação de Aperfeiçoamento de Pessoal de Nível Superior, à Universidade Federal de Santa Catarina e à Sociedade Brasileira de Física.</p>
+    </div>
+<div class="articleSection" data-anchor="Supplementary material">
+<h1 class="articleSectionTitle">Supplementary material</h1>
+        
+        <p>O seguinte material suplementar está disponível online:</p>
+        <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/52f79780f159cc0bac38ecac24c83d0661ef2a0c.pdf">
+          Apêndice
+        </a>
+      </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> J.C.X. Silva e C.E. Santos, Rev. Bras. Ens. Fís. <b>39</b>, 1401 (2017).</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> https://www.aapt.org/resources/policy/RoleOfLabs.cfm, acessado em 16/01/2019.<br><a href="https://www.aapt.org/resources/policy/RoleOfLabs.cfm" target="_blank">» https://www.aapt.org/resources/policy/RoleOfLabs.cfm</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Rev. Bras. Ens. Fís. <b>33</b>, 1702 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> J.A. Santos, <i>Instrumentação Eletrônica com o Arduino Aplicada ao Ensino de Física.</i> Dissertação de Mestrado, Universidade Federal Rural de Pernambuco, Recife (2015).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> S. Siveira e M. Girardi, Rev. Bras. Ens. Fís. <b>39</b>, 4502 (2017).</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> M.M.P.C. Moreira, M.C. Romeu, F.R.V. Alves e F.R.O. Silva, Cad. Bras. Ens. Fís. <b>35</b>, 721 (2018).</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> T.O. Camel e C.A.L. Filgueiras, Quí. Nov. <b>36</b>, 738 (2013).</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fís. <b>33</b>, 4503 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> H.C. Van Ness e M.M. Abbot, <i>Introdução à Termodinâmica da Engenharia Química</i> (LTC, Rio de Janeiro, 2000), v. 1, p. 54.</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> P.W. Atkins, <i>Físico-Química</i> (LTC, Rio de Janeiro, 2008), v. 1, p. 10.</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>19 Jun 2019</li>
+<li>
+<strong>Data do Fascículo</strong><br>2019</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>06 Fev 2019</li>
+<li>
+<strong>Revisado</strong><br>18 Abr 2019</li>
+<li>
+<strong>Aceito</strong><br>07 Maio 2019</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> João Michels Cardoso </strong><strong>
+            *
+          </strong><br><div>Universidade Federal de Santa Catarina, Araranguá, SC, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0003-4959-3516" class="btnContribLinks orcid">http://orcid.org/0000-0003-4959-3516</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Marcelo Zannin </strong><br><div>Universidade Federal de Santa Catarina, Araranguá, SC, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:jmichelsc@hotmail.com">jmichelsc@hotmail.com</a>
+				</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (12)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (1)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+            Fluxograma simplificado do algoritmo.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+            Tampa inferior do cilindro. Construída com um tampão de PVC e perfurada para a passagem de 8 jumpers fêmea/macho. A vedação é feita com cola quente.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Tampa superior do cilindro. Deve ser encaixada na parte superior do cilindro para manter o pistão no prumo.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Montagem do pistão. O anel de borracha não deve ficar frouxo nem apertado demais.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Guia do pistão pronta.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Fixação do cilindro na plataforma. Recomenda-se fechar o cilindro e fixa-lo após todos os testes com os sensores que estão dentro do mesmo.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+            Sensores fixados no cilindro.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+            Circuito do Arduino.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+            O produto educacional.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 10</strong><br>
+          Pressionando o Pistão. Verifica-se aumento da pressão com a diminuição de volume causada pelo movimento do pistão.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 11</strong><br>
+          Gráfico de uma Isoterma. Os dados experimentais demonstram a proporção inversa entre pressão e volume à temperatura constante.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 12</strong><br>
+          Pressão e Temperatura. Os dados demonstram aumento da pressão com a elevação de temperatura <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] P.W. Atkins, Físico-Química (LTC, Rio de Janeiro, 2008), v. 1, p. 10.</span></span></span>. Todavia, o gráfico obtido não é de qualidade, dada a pequena variação relativa alcançada e o tempo necessário para obtê-la.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+            Materiais utilizados para montar o experimento
+          </div>
+</div></div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/3eb57bb5bea9c04b5a4dc8729e175b5c8082b2ca.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+            Fluxograma simplificado do algoritmo.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/3eb57bb5bea9c04b5a4dc8729e175b5c8082b2ca.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/b0f83c6545f9c4744bedbe132a466914b5829dca.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+            Tampa inferior do cilindro. Construída com um tampão de PVC e perfurada para a passagem de 8 jumpers fêmea/macho. A vedação é feita com cola quente.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/b0f83c6545f9c4744bedbe132a466914b5829dca.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/ed0701895854cd85eaee6975670de993d5bccf51.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Tampa superior do cilindro. Deve ser encaixada na parte superior do cilindro para manter o pistão no prumo.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/ed0701895854cd85eaee6975670de993d5bccf51.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/fc8ab31d68ef1836bd4ce94c084ce5537cc0bbf9.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Montagem do pistão. O anel de borracha não deve ficar frouxo nem apertado demais.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/fc8ab31d68ef1836bd4ce94c084ce5537cc0bbf9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/df90cce7320c2d51afba66096d04872ab0f7d6ef.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Guia do pistão pronta.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/df90cce7320c2d51afba66096d04872ab0f7d6ef.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/f9361abddecca5b574dba8cb55364618b87f9204.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Fixação do cilindro na plataforma. Recomenda-se fechar o cilindro e fixa-lo após todos os testes com os sensores que estão dentro do mesmo.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/f9361abddecca5b574dba8cb55364618b87f9204.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/27118c49f4fa73f33cd2bf7075d38cb7e1628b35.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+            Sensores fixados no cilindro.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/27118c49f4fa73f33cd2bf7075d38cb7e1628b35.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/98438af3bc019f01bd01ad9dfdd97ddafa19502a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+            Circuito do Arduino.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/98438af3bc019f01bd01ad9dfdd97ddafa19502a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/fb8cd9a2ea786ae667df5b0db5cdaaf15a23db3c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+            O produto educacional.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/fb8cd9a2ea786ae667df5b0db5cdaaf15a23db3c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/056ba08f9b36de2aced2a19949d65976bef3ab33.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 10   
+          Pressionando o Pistão. Verifica-se aumento da pressão com a diminuição de volume causada pelo movimento do pistão.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/056ba08f9b36de2aced2a19949d65976bef3ab33.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/e97838cbe76784ef22c0b42da87cc43e8565d2cc.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 11   
+          Gráfico de uma Isoterma. Os dados experimentais demonstram a proporção inversa entre pressão e volume à temperatura constante.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/e97838cbe76784ef22c0b42da87cc43e8565d2cc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/8321d02d11c3fd5f94ac25f93ac6c01348b386d3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 12   
+          Pressão e Temperatura. Os dados demonstram aumento da pressão com a elevação de temperatura <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] P.W. Atkins, Físico-Química (LTC, Rio de Janeiro, 2008), v. 1, p. 10.</span></span></span>. Todavia, o gráfico obtido não é de qualidade, dada a pequena variação relativa alcançada e o tempo necessário para obtê-la.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/8321d02d11c3fd5f94ac25f93ac6c01348b386d3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+            Materiais utilizados para montar o experimento
+          <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+            <colgroup width="100%">
+              <col>
+            </colgroup>
+            <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+              <tr>
+                <th align="center">Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">Chapa de MDF</td>
+              </tr>
+              <tr>
+                <td align="left">Cano PVC</td>
+              </tr>
+              <tr>
+                <td align="left">Tampões para Cano PVC</td>
+              </tr>
+              <tr>
+                <td align="left">Anel de Vedação O-Ring</td>
+              </tr>
+              <tr>
+                <td align="left">Grafite em Pó</td>
+              </tr>
+              <tr>
+                <td align="left">Barras de Aço</td>
+              </tr>
+              <tr>
+                <td align="left">Porcas Sextavadas</td>
+              </tr>
+              <tr>
+                <td align="left">Cola Quente</td>
+              </tr>
+              <tr>
+                <td align="left">Placa Arduino UNO R3</td>
+              </tr>
+              <tr>
+                <td align="left">Jumpers</td>
+              </tr>
+              <tr>
+                <td align="left">Sensor BMP 180</td>
+              </tr>
+              <tr>
+                <td align="left">Sensor HC-SR04</td>
+              </tr>
+              <tr>
+                <td align="left">Display LCD Arduino</td>
+              </tr>
+              <tr>
+                <td align="left">Potenciômetro WH148-1</td>
+              </tr>
+              <tr>
+                <td align="left">Protoboard</td>
+              </tr>
+              <tr>
+                <td align="left">Conector Bateria</td>
+              </tr>
+              <tr>
+                <td align="left">Bateria 9V</td>
+              </tr>
+            </tbody>
+          </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Cardoso, João Michels e Zannin, MarceloProposta experimental para análise das variáveis de estado dos gases com Arduino. Revista Brasileira de Ensino de Física [online]. 2019, v. 41, n. 4 [Acessado CURRENTDATE] , e20190028. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2019-0028&gt;. Epub 19 Jun 2019. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2019-0028.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Proposta experimental para análise das variáveis de estado dos gases com Arduino&#34; &#34;Cardoso, João Michels&#34; &#34;Zannin, Marcelo&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Proposta experimental para análise das variáveis de estado dos gases com Arduino&#34; &#34;Cardoso, João Michels&#34; &#34;Zannin, Marcelo&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/qVfLtSY4TNQRfyWBFWTvgSm/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172019000400605&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2019-0028" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2019-0028">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2019-0028" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2019-0028">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2019-0028"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2019-0028" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2019-0028">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0028" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Proposta experimental para análise das variáveis de estado dos gases com Arduino
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0028">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

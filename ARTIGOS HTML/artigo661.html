@@ -1,0 +1,1723 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Medindo a aceleração de um elevador Medindo a aceleração de um elevador </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Medindo a aceleração de um elevador"/>
+<meta property="og:description" content="Apresentamos neste trabalho o processo de medição da aceleração de um elevador utilizando..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Franco, Rodrigo da Silva">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Pampa">
+        
+        <meta name="citation_author" content="Marranghello, Guilherme Frederico">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Pampa">
+        
+        <meta name="citation_author" content="Rocha, Fábio Saraiva da">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Pelotas">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="38"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11173812097"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Medindo a aceleração de um elevador
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Apresentamos neste trabalho o processo de medição da aceleração de um elevador utilizando recursos eletrônicos e computacionais disponíveis em um tablet através de um aplicativo chamado Physics Toolbox Accelerometer desenvolvido para o sistema operacional Android. Os dados coletados com o uso dos sensores eletrônicos embarcados no tablet foram convenientemente tratados através do programa computacional SciDAVis . A metodologia utilizada se mostra potencialmente promissora para práticas de ensino de física que busquem a inovação no laboratório didático através do uso de tecnologias emergentes e de baixo custo."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2016-04-05"></meta>
+<meta name="citation_keywords" content="ensino de física"></meta><meta name="citation_keywords" content="M-learning"></meta><meta name="citation_keywords" content="aceleração"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2016.v38n1/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2016.v38n1/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172016000100408 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 38 
+                (1)
+            <span class="_separator"> • </span>Mar 2016</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11173812097" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11173812097</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812097"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0"></span>Medindo a aceleração de um elevador<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Measuring the acceleration of an elevator</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Rodrigo da Silva Franco </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Campus Bagé, Universidade Federal do Pampa, Bagé, RS, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Guilherme Frederico Marranghello </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong><div class="corresp">* Endereço de correspondência: <a href="mailto:gfmarranghello@gmail.com">gfmarranghello@gmail.com</a>.</div>Campus Bagé, Universidade Federal do Pampa, Bagé, RS, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Fábio Saraiva da Rocha </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Centro de Integração do Mercosul, Universidade Federal de Pelotas, Eldorado do Sul, RS, Brasil.</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Apresentamos neste trabalho o processo de medição da aceleração de um elevador utilizando recursos eletrônicos e computacionais disponíveis em um <i>tablet</i> através de um aplicativo chamado <i>Physics Toolbox Accelerometer</i> desenvolvido para o sistema operacional Android. Os dados coletados com o uso dos sensores eletrônicos embarcados no <i>tablet</i> foram convenientemente tratados através do programa computacional <i>SciDAVis</i> . A metodologia utilizada se mostra potencialmente promissora para práticas de ensino de física que busquem a inovação no laboratório didático através do uso de tecnologias emergentes e de baixo custo.</p>
+<p><strong>Palavras-chave:</strong><br>ensino de física; M-learning; aceleração</p>
+</div>
+<hr>
+<div>
+<p>We present the process of measuring the acceleration of an elevator developed with the use of electronic and computing resources available on a tablet and the use of an application called Physics Toolbox Accelerometer developed for the Android operating system. The data collected with the use of electronic sensors embedded in the tablet were conveniently treated by the computer program SciDAVis. The methodology has shown to be potentially promising for practices of teaching physics that seek innovation in the teaching laboratory through the use of emerging technologies with low costs.</p>
+<p><strong>Keywords:</strong><br>physics teaching; M-learning; acceleration</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>O ensino de física, assim como de outras áreas do conhecimento, continua essencialmente centrado nos conteúdos, sem apresentar contextualização com o dia a dia dos estudantes, baseando-se, na maioria das vezes, apenas em aulas expositivas tradicionais. Nesta perspectiva verifica-se que alguns livros didáticos de física trazem seus conteúdos basicamente centrados em cálculos matemáticos, sendo esse um dos possíveis fatores pela desmotivação dos estudantes <sup>[</sup><span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] M.C. Scorsatto, Uma Abordagem Alternativa para o Ensino da Física: Consumo Racional de Energia. Dissertação de Mestrado, Univates, 2010. </span></span></span><sup>]</sup>. Buscando vencer essa barreira, partimos de um exercício facilmente encontrado em livros de Física 1, exemplificado aqui <sup>[</sup><span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] D.H. Young e A.R. Freedman, Física I (Pearson, São Paulo, 2006) v. 1, p.57. </span></span></span><sup>]</sup>:</p>
+      <ol type="1"><li>
+          <p>Estime a velocidade máxima e o módulo da aceleração de um elevador. Você precisa usar suas observações sobre o tempo que o elevador leva para ir de um andar para outro e a distância percorrida quando o elevador acelera até sua velocidade máxima ou quando diminui de velocidade até parar.</p>
+        </li></ol>
+      <p>O número de propostas para o ensino de física através do uso de <i>tablets</i> e <i>smartphones</i> vem crescendo. Dentre algumas propostas, podemos destacar o trabalho de Vieira, Lara e Amaral <sup>[</sup><span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] L.P. Vieira, V.O.M. Lara e D.F. Amaral, Revista Brasileira de Ensino de Física 36, 3505 (2014). </span></span></span><sup>]</sup> que buscam auxílio em um recurso bastante comum nestes equipamentos, a câmera fotográfica, para investigar a lei do inverso do quadrado para a intensidade luminosa. Monteiro, Cabeza e Marti <sup>[</sup><span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>[4] M. Monteiro, C. Cabeza e A.C. Marti, Revista Brasileira de Ensino de Física 37, 1303 (2015). </span></span></span><sup>]</sup> trazem um estudo sobre as potencialidades de um sensor comumente presente nestes equipamentos, o acelerômetro. Por fim, vale ressaltar a dissertação de mestrado de Vieira <sup>[</sup><span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] 5 L.P. Vieira, Experimentos de Física com Tablets e Smartphones. Dissertação de Mestrado, UFRJ, 2013. </span></span></span><sup>]</sup> onde é possível encontrar uma grande variedade de experimentos relacionados à s mais diversas potencialidades que um <i>tablet</i> ou <i>smartphone</i> tem a oferecer.</p>
+      <p>Desenvolvemos este trabalho com o objetivo de medir a aceleração de um elevador utilizando recursos computacionais disponíveis gratuitamente na internet. Para realizarmos a medição da aceleração do elevador, foi necessário instalar em um <i>tablet</i> o aplicativo <i>Physics Toolbox Accelerometer</i>, recurso computacional que mede a aceleração de objetos em unidades de g (aceleração da gravidade). Os dados experimentais de aceleração foram convenientemente analisamos utilizando o programa computacional de uso gratuito <i>Scientific Data Visualization</i> (SciDAVis) visando a confecção de tabelas, gráficos e mudança de unidades de medida.</p>
+    
+      <h1 class="articleSectionTitle">2. Recursos utilizados </h1>
+      <p>O processo de medida apresentado neste trabalho utilizou um <i>tablet</i> da marca Samsung, modelo Galaxy Note 10.1, que possui um acelerômetro LSM330DLC que mede até 19,6133 m/s<sup>2</sup> com uma resolução de 0,00957 m/s<sup>2</sup>. Neste dispositivo móvel foi instalado um aplicativo chamado <i>Physics Toolbox Accelerometer</i>, encontrado no repositório de aplicativos <i>Play Store</i> (<a href="https://play.google.com/store/apps?hl=pt%7B_%7DBR" target="_blank">https://play.google.com/store/apps?hl=pt{_}BR</a>). O sensor acelerômetro apresenta o resultado de medidas de aceleração em três eixos de coordenadas (<i>x, y, z</i>). Pode-se usar qualquer eixo para medir a aceleração gravitacional em unidades de 1 g (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>), bastando orientar convenientemente o dispositivo com o eixo escolhido na direção do movimento que se deseja sondar. Nos <i>tablets</i> e <i>smartphones</i> em geral, o posicionamento padrão do sensor de aceleração é no centro de massa do aparelho, tendo os eixos <i>x</i> e <i>y</i> dispostos no plano do aparelho e o eixo <i>z</i> perpendicular a <i>x</i> e <i>y</i> . O sensor de aceleração é construído na tecnologia MEMS (<i>Microelectromechanical Systems</i> ). Tipicamente, o sensor que mede aceleração de um dispositivo móvel é capaz de alcançar valores desta grandeza entre ±2 g, onde <i>g</i> é a aceleração da gravidade. Esta escala de medidas se mostra satisfatória para nossos objetivos se refere sempre a um referencial inercial que pode ser o chão do laboratório. A descrição física básica de um acelerômetro está documentada na literatura <sup>[</sup><span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>[6] 6 F.S. Da Rocha, G.F. Marranghello e M.M. Lucchese, Caderno Brasileiro de Ensino de Física 31, 98 (2014).</span></span></span><sup>]</sup>. O programa SciDA- Vis (<a href="http://scidavis.sourceforge.net/" target="_blank">http://scidavis.sourceforge.net/</a>) foi utilizado para a construção dos gráficos e análises dos dados.</p>
+      <p>
+        <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+            Imagem da tela do aplicativo "Physics Toolbox Accelerometer".
+          <br>
+</div>
+</div>
+      </p>
+    
+      <h1 class="articleSectionTitle">3. Realizando as medidas </h1>
+      <p>Para encontrar os valores de aceleração de um elevador, primeiramente deve-se ir até o móvel que será o alvo de estudo, juntamente com o <i>tablet</i> " ou outro aparelho que tenha instalado o aplicativo <i>Physics Toolbox Accelerometer.</i> O <i>tablet</i> deve ser <i>colocado</i> na base do elevador para fazer as medidas no sentido subida/descida. É importante salientar que a cada variação de aceleração do elevador se grave a medida obtida operando convenientemente o aplicativo que irá gerar um arquivo de dados relativos às grandezas aceleração e tempo. Nesta primeira etapa do trabalho apenas colhemos e gravamos os dados.</p>
+      <p>Na segunda etapa importamos os dados do aplicativo gravados em um cartão de memória através de um computador. Os dados experimentais podem ser dispostos numa tabela usando, por exemplo, o programa <i>Calc</i> do pacote de programas de uso livre chamado <i>LibreOffice</i>, fazendo as conversões necessárias para expressar os resultados em m/s<sup>2</sup>, pois o aplicativo <i>Physics Toolbox Accelerometer</i> mede a aceleração em unidades de 1 g. Na terceira e ultima etapa deste trabalho, útilizando-se o programa SciDAVis, analisa-se os resultados gráficos de aceleração <i>versus</i> tempo para cada medida de dados coletados.</p>
+      <p>Na terceira e última etapa deste trabalho, utilizando-se o programa <i>SciDAVis</i>, analisa-se os resultados gráficos de aceleração <i>versus</i> tempo para cada medida de dados coletados.</p>
+    
+      <h1 class="articleSectionTitle">4. Discussão e análise dos dados a partir da representação gráfica </h1>
+      <p>Como podemos obter o valor da aceleração de um elevador? A resposta é bem simples: analisando um gráfico de aceleração <i>versus</i> tempo. Apresentaremos dois gráficos, mostrando diferentes fases dos movimentos (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2a</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2b</a>).</p>
+      <p>
+        <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+            a. Gráfico da aceleração versus tempo para um elevador subindo. b. - Gráfico da aceleração versus tempo para um elevador descendo.
+          <br>
+</div>
+</div>
+      </p>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2a</a> fornece o valor da aceleração do elevador ao subir do quinto ao décimo andar de um prédio. É possível observar no intervalo entre 3 e 4 s um ruído, provavelmente oriundo do fechamento das portas do elevador. Em seguida, o elevador arranca com grande aceleração, de forma abrupta, e, em seguida, vai reduzindo gradativamente a sua aceleração, até que por volta de 7 s podemos considerar o elevador como um objeto que se move com velocidade constante. Ao final do trajeto percebemos uma forte aceleração com sinal negativo, o que indica a frenagem do elevador. Esta primeira frenagem é seguida por outra, ainda mais intensa. Um passageiro do elevador pode, em alguns casos, dependendo da idade do elevador ou da existência de janelas, identificar a primeira frenagem como o momento em que o elevador reduz sua velocidade para que, na segunda frenagem, pare na posição correta. Podemos ver no gráfico um movimento oscilatório fortemente amortecido ao final da segunda frenagem, quando o elevador estabiliza em sua posição final.</p>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2b</a> fornece o valor da aceleração do elevador ao descer do oitavo ao quarto andar do mesmo prédio. Em ambos os casos observamos três grandes picos. Esses representam dois tipos de aceleração, sendo de arrancada e de freada. A única diferença entre as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figs. 2a</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>2b</a> é o sinal da aceleração nos diferentes trechos do trajeto devido ao fato de uma figura representar um elevador no movimento de subida e o outro no movimento de descida.</p>
+      <p>Analisando a oscilação final da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2b</a> e escrevendo uma equação matemática da mesma, chegamos à <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Eq. (1)</a>.</p>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3</a> apresenta o gráfico (em vermelho na versão eletrônica) gerado pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Eq. (1)</a>.</p>
+      <p>
+        <div class="row formula" id="ee1">
+<a name="e1"></a><div class="col-md-12"><div class="formula-container">
+          <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/48f69cbbce13767861ebe9fac7d017808dfdf5a6.jpg">
+        </div></div>
+</div>
+      </p>
+      <p>
+        <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+            Gráfico da aceleração versus tempo para um elevador descendo e o traçado (em vermelho na versão eletrônica) da função cuja forma analítica está dada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Eq. (1)</a>.
+          <br>
+</div>
+</div>
+      </p>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela 1</a> apresenta o módulo da aceleração dos três picos para um conjunto de cinco medidas, lembrando que: os valores da aceleração do 1° pico referem-se à aceleração de arrancada do elevador; os valores do 2° pico referem-se à primeira freada do elevador e; os valores da aceleração do 3° pico referem-se à freada final do elevador. Também apresentamos a média destes valores, estando de acordo com os resultados encontrados em livros-texto direcionados à componente curricular de graduação e voltados ao estudo da mecânica, geralmente nomeadas Física I ou Física Geral I.</p>
+      <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Valor da aceleração de arrancada e freada. Destaca-se a média aritmética dos valores das acelerações dos cinco andares em cada pico.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">5. Considerações finais </h1>
+      <p>Apresentamos os resultados de medida da aceleração de um elevador obtidos através do uso de um dispositivo <i>tablet</i> que tem instalado um aplicativo de leitura do sensor de aceleração embarcado. Podemos pensar num maior espaço para estes dispositivos computacionais dentro de um laboratório didático de física ou mesmo fora dele, aproveitando a mobilidade que este representa. A prática proposta pode estimular o desenvolvimento de experimentos em que coleta, armazenamento e apresentação da informação é realizada com maior dinamismo, mobilidade e simplicidade que quando comparamos com os processos de medida relativos aos laboratórios didáticos. A possibilidade do aluno utilizar um dispositivo móvel em experimentos de física pode abrir muitas perspectivas de estudo de fenômenos físicos que fazem parte do cotidiano do aluno e o desenvolvimento de novas ações investigativas. Acreditamos que, através de propostas do tipo apresentada aqui, é possível que aparelhos computacionais móveis tipo <i>tablet</i> e<i>smartphone</i> com aplicativos de leitura multisensores e armazenamento de dados conquistem maior espaço dentro de nossas propostas educacionais.</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> M.C. <i>Scorsatto, Uma Abordagem Alternativa para o Ensino da Física: Consumo Racional de Energia</i> Dissertação de Mestrado, Univates, 2010. </div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> D.H. Young e A.R. Freedman, <i>Física I</i> (Pearson, São Paulo, 2006) v. 1, p.57. </div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> L.P. Vieira, V.O.M. Lara e D.F. Amaral, Revista Brasileira de Ensino de Física 36, 3505 (2014). </div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> M. Monteiro, C. Cabeza e A.C. Marti, Revista Brasileira de Ensino de Física 37, 1303 (2015). </div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> 5 L.P. Vieira, <i>Experimentos de Física com Tablets e Smartphones</i> Dissertação de Mestrado, UFRJ, 2013. </div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> 6 F.S. Da Rocha, G.F. Marranghello e M.M. Lucchese, Caderno Brasileiro de Ensino de Física 31, 98 (2014).</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publicação nesta coleção</strong><br>Mar 2016</li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>17 Ago 2015</li>
+<li>
+<strong>Aceito</strong><br>15 Set 2015</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Creative Common - by 4.0"></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">Este é um artigo publicado em acesso aberto (Open Access) sob a licença Creative Commons Attribution, que permite uso, distribuição e reprodução em qualquer meio, sem restrições desde que o trabalho original seja corretamente citado.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Rodrigo da Silva Franco </strong><br><div>Campus Bagé, Universidade Federal do Pampa, Bagé, RS, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Guilherme Frederico Marranghello </strong><strong>*</strong><br><div>Campus Bagé, Universidade Federal do Pampa, Bagé, RS, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Fábio Saraiva da Rocha </strong><br><div>Centro de Integração do Mercosul, Universidade Federal de Pelotas, Eldorado do Sul, RS, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">* Endereço de correspondência: <a href="mailto:gfmarranghello@gmail.com">gfmarranghello@gmail.com</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (3)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (1)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (1)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+            Imagem da tela do aplicativo "Physics Toolbox Accelerometer".
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+            a. Gráfico da aceleração versus tempo para um elevador subindo. b. - Gráfico da aceleração versus tempo para um elevador descendo.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Gráfico da aceleração versus tempo para um elevador descendo e o traçado (em vermelho na versão eletrônica) da função cuja forma analítica está dada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Eq. (1)</a>.
+          </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Valor da aceleração de arrancada e freada. Destaca-se a média aritmética dos valores das acelerações dos cinco andares em cada pico.
+        </div>
+</div></div>
+<div role="tabpanel" class="tab-pane " id="schemes"><div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div></div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/7e5f5e7ee4aaf7958f22002b4fd1fd4d61607f6b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+            Imagem da tela do aplicativo "Physics Toolbox Accelerometer".
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/7e5f5e7ee4aaf7958f22002b4fd1fd4d61607f6b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/cd1ed156cc96bf8e0b7841807a98957d80ff0b5b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+            a. Gráfico da aceleração versus tempo para um elevador subindo. b. - Gráfico da aceleração versus tempo para um elevador descendo.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/cd1ed156cc96bf8e0b7841807a98957d80ff0b5b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/5bc3e761ba83b9ee8989c632bb988f87e3d85ebe.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Gráfico da aceleração versus tempo para um elevador descendo e o traçado (em vermelho na versão eletrônica) da função cuja forma analítica está dada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Eq. (1)</a>.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/5bc3e761ba83b9ee8989c632bb988f87e3d85ebe.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Valor da aceleração de arrancada e freada. Destaca-se a média aritmética dos valores das acelerações dos cinco andares em cada pico.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup>
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Medidas</th>
+              <th>Andares analisados</th>
+              <th>Aceleração do 1º pico (m/s<sup>2</sup>)</th>
+              <th>Aceleração do 2º pico (m/s<sup>2</sup>)</th>
+              <th>Aceleração do 3º pico (m/s<sup>2</sup>)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Térreo ao 5º</td>
+              <td>1,368</td>
+              <td>1,652</td>
+              <td>2,535</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>5º ao 10º</td>
+              <td>1,373</td>
+              <td>1,555</td>
+              <td>2,640</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>8º ao 4º</td>
+              <td>1,469</td>
+              <td>1,665</td>
+              <td>2,646</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>8º ao 5º</td>
+              <td>1,460</td>
+              <td>1,665</td>
+              <td>2,738</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>9º ao térreo</td>
+              <td>1,364</td>
+              <td>1,669</td>
+              <td>2,254</td>
+            </tr>
+            <tr>
+              <td>Média</td>
+              <td>
+							</td>
+              <td>1,40</td>
+              <td>1,641</td>
+              <td>2,562</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/48f69cbbce13767861ebe9fac7d017808dfdf5a6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/48f69cbbce13767861ebe9fac7d017808dfdf5a6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Franco, Rodrigo da Silva, Marranghello, Guilherme Frederico e Rocha, Fábio Saraiva daMedindo a aceleração de um elevador. Revista Brasileira de Ensino de Física [online]. 2016, v. 38, n. 1 [Acessado CURRENTDATE] , 1308. Disponível em: &lt;https://doi.org/10.1590/S1806-11173812097&gt;. Epub 05 Abr 2016. ISSN 1806-9126. https://doi.org/10.1590/S1806-11173812097.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Medindo a aceleração de um elevador&#34; &#34;Franco, Rodrigo da Silva&#34; &#34;Marranghello, Guilherme Frederico&#34; &#34;Rocha, Fábio Saraiva da&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Medindo a aceleração de um elevador&#34; &#34;Franco, Rodrigo da Silva&#34; &#34;Marranghello, Guilherme Frederico&#34; &#34;Rocha, Fábio Saraiva da&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/Bqz7tBWrVWgXcv3Qvd7WNps/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172016000100408&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11173812097" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11173812097">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11173812097" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11173812097">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11173812097"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11173812097" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11173812097">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11173812097" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Medindo a aceleração de um elevador
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11173812097">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

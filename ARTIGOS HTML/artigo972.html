@@ -1,0 +1,2423 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Oscilações paramétricas: uma simulação numérica Oscilações paramétricas: uma simulação numérica </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Oscilações paramétricas: uma simulação numérica"/>
+<meta property="og:description" content="Um pêndulo com seu ponto de sustentação oscilante e um pêndulo cujo comprimento varia..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Rulli, Clodoaldo Cordeiro">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de São Carlos">
+        
+        <meta name="citation_author" content="Rino, José Pedro">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de São Carlos">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="29"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="71"></meta>
+    <meta name="citation_lastpage" content="78"></meta>
+    <meta name="citation_doi" content="10.1590/S1806-11172007000100013"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Oscilações paramétricas: uma simulação numérica
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Um pêndulo com seu ponto de sustentação oscilante e um pêndulo cujo comprimento varia periodicamente pertencem à classe de sistemas físicos ditos paramétricos. Em regime de pequenas oscilações tais sistemas são bem descritos pela a equação de Mathieu como já foi demonstrado. Neste trabalho as equações de movimento para estes dois osciladores paramétricos são integradas numericamente sem se restringir apenas ao regime de pequenas oscilações. Mapas de Poincaré são obtidos mostrando que comportamentos caótico e estável podem coexistir para um mesmo conjunto de parâmetros que caracteriza o sistema."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2007"></meta>
+<meta name="citation_keywords" content="pêndulo paramétrico"></meta><meta name="citation_keywords" content="simulação computacional"></meta><meta name="citation_keywords" content="caos"></meta><meta name="citation_keywords" content="mapa de Poicaré"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2007.v29n1/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2007.v29n1/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172007000100013 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 29 
+                (1)
+            <span class="_separator"> • </span>2007</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172007000100013" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172007000100013</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172007000100013"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Oscilações paramétricas: uma simulação numérica<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Parametric oscillations: a numerical simulation</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Clodoaldo Cordeiro Rulli </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  São Carlos,  
+          ,  
+        ,  Universidade Federal de São Carlos,  Departamento de Física ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> José Pedro Rino </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  São Carlos,  
+          ,  
+        ,  Universidade Federal de São Carlos,  Departamento de Física ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Um pêndulo com seu ponto de sustentação oscilante e um pêndulo cujo comprimento varia periodicamente pertencem à classe de sistemas físicos ditos paramétricos. Em regime de pequenas oscilações tais sistemas são bem descritos pela a equação de Mathieu como já foi demonstrado. Neste trabalho as equações de movimento para estes dois osciladores paramétricos são integradas numericamente sem se restringir apenas ao regime de pequenas oscilações. Mapas de Poincaré são obtidos mostrando que comportamentos caótico e estável podem coexistir para um mesmo conjunto de parâmetros que caracteriza o sistema.</p>
+<p>pêndulo paramétrico; simulação computacional; caos; mapa de Poicaré</p>
+</div>
+<hr>
+<div>
+<p>A pendulum with oscillating attached point and a pendulum with the periodically changing length belongs to a class of physical systems called parametric. In the regime of small oscillations such systems are very well described through the Mathieu equations. In this work the equations of motion for these two parametric oscillators are numerically integrated without any restriction of small oscillations. Poincaré maps are obtained, showing that the chaotic and stable behavior can coexist for a given set of parameters which characterizes the system.</p>
+<p>Parametric pendulum; computational simulation; chaos; Poincaré maps</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>Oscilações paramétricas: uma simulação numérica</p>
+<p></p>
+<p>
+      <b>Parametric oscillations: a numerical simulation</b>
+    </p>
+<p></p>
+<p>Clodoaldo Cordeiro Rulli; José Pedro Rino<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        djpr@df.ufscar.br.
+      </span></span></span></p>
+<p></p>
+<p> Departamento de Física, Universidade Federal de São Carlos, São Carlos, SP, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Um pêndulo com seu ponto de sustentação oscilante e um pêndulo cujo comprimento varia periodicamente pertencem à classe de sistemas físicos ditos paramétricos. Em regime de pequenas oscilações tais sistemas são bem descritos pela a equação de Mathieu como já foi demonstrado. Neste trabalho as equações de movimento para estes dois osciladores paramétricos são integradas numericamente sem se restringir apenas ao regime de pequenas oscilações. Mapas de Poincaré são obtidos mostrando que comportamentos caótico e estável podem coexistir para um mesmo conjunto de parâmetros que caracteriza o sistema.</p>
+<p></p>
+<p><b>Palavras-chave:</b> pêndulo paramétrico, simulação computacional, caos, mapa de Poicaré.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p> A pendulum with oscillating attached point and a pendulum with the periodically changing length belongs to a class of physical systems called parametric. In the regime of small oscillations such systems are very well described through the Mathieu equations. In this work the equations of motion for these two parametric oscillators are numerically integrated without any restriction of small oscillations. Poincaré maps are obtained, showing that the chaotic and stable behavior can coexist for a given set of parameters which characterizes the system.</p>
+<p></p>
+<p><b>Keywords:</b> Parametric pendulum, computational simulation, chaos, Poincaré maps.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p> O estudo das oscilações harmônicas, forçadas, amortecidas e mesmo de osciladores acoplados é comum nos cursos de mecânica. Um outro sistema relacionado aos osciladores harmônicos, mas que em geral não faz parte de nenhum curso de mecânica, ou mesmo de livros-texto, são os osciladores paramétricos.</p>
+<p></p>
+<p> A física paramétrica trata da descrição e estudo de sistemas onde ao menos um dos parâmetros que o caracteriza varia com o tempo. Nos casos em que a variação do parâmetro provoca no sistema um movimento oscilatório, temos a chamada oscilação paramétrica. Oscilações paramétricas são bastante comuns na física do estado sólido e física do plasma. Em circuitos RLC, por exemplo, um efeito similar é observado quando se varia o valor da capacitância C periodicamente. Isso levou à criação de amplificadores paramétricos. Também são observadas oscilações paramétricas na trajetória de partículas em betatrons, ou no simples ato de se balançar em um balanço, sem ser empurrado por ninguém (pois nesse caso tratar-se-ia de ressonância simples), entre outros ([1]-[10]). Como outros exemplos de sistemas paramétricos podemos citar o pêndulo no qual o comprimento do fio varia com o tempo e o pêndulo onde o ponto de suspensão movimenta-se na direção vertical. Nestes dois últimos exemplos, que serão estudados com maior detalhe mais adiante, consideraremos que o parâmetro varie periodicamente no tempo.</p>
+<p></p>
+<p> Inúmeros estudos já foram feitos sobre esses sistemas, porém esses estudos foram restritos apenas a pequenas oscilações [11]. Neste caso a equação de movimento é a bem conhecida equação de Mathieu. </p>
+<p></p>
+<p> Neste trabalho nos propomos a estudar dois sistemas que apresentam oscilações paramétricas resolvendo as equações de movimento no caso geral. Para tanto faremos uso de soluções numéricas para a análise do problema.</p>
+<p></p>
+<p>
+      <b>2. A equação de Mathieu</b>
+    </p>
+<p></p>
+<p> A equação</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e88cdbd1d9fa802453c0e6572a25716598ec5abd.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde w<sub>0</sub> é a freqüência natural de oscilação do sistema e w é a freqüência com a qual o parâmetro oscilante varia, <i>h</i> é a amplitude de variação da freqüência natural e f<sub>0</sub> uma constante, é conhecida como equação de Mathieu. Ela foi apresentada por Mathieu em 1868 como resultado das oscilações de membranas elípticas [12].</p>
+<p></p>
+<p> Para pequenas oscilações dos sistemas paramétricos essa equação descreve muito bem seu comportamento, ajudando-nos a chegar à importante conclusão:</p>
+<p></p>
+<p> Para w ~ <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/8a904b524161e3ed7eb47d83e372ba94a95080be.gif">, sendo <i>n</i> um número inteiro, a amplitude das oscilações aumenta rapidamente - ressonância paramétrica.</p>
+<p></p>
+<p> Neste caso dizemos que o sistema encontra-se em um regime de instabilidade paramétrica. Fora desse domínio não ocorre nenhum aumento de amplitude, permanecendo constante a amplitude de oscilação. </p>
+<p></p>
+<p> De um modo geral, podemos dizer que a equação de Mathieu é um caso especial da equação de Hill</p>
+<p></p>
+<p><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/576e67e57aa00d9c8d6f4032584b6d5a7d8cd2fc.gif"> [<i>p</i>(<i>t</i>) <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/70aa2b7eeb9bda03f6a111f97cc697be58f0c305.gif">(<i>t</i>)] + <i>q</i>(<i>t</i>) <i>x</i>(<i>t</i>) = 0,</p>
+<p></p>
+<p>em que <i>p</i>(<i>t</i>) e <i>q</i>(<i>t</i>) são funções periódicas e <i>p</i>(<i>t</i>) é contínua e nunca se anula.</p>
+<p></p>
+<p> Como um artifício matemático, podemos fazer uma mudança de variável de <i>t</i> para t de modo que</p>
+<p></p>
+<p>
+      <div class="row fig" id="7cc4f5b1ab3387d3cd9359faf7cf490e82ce59ae">
+<a name="7cc4f5b1ab3387d3cd9359faf7cf490e82ce59ae"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg7cc4f5b1ab3387d3cd9359faf7cf490e82ce59ae"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/7cc4f5b1ab3387d3cd9359faf7cf490e82ce59ae.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Substituindo na equação de Hill teremos</p>
+<p></p>
+<p><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/1942d5dde9af3922a7138d9d9531065a8f7ab55c.gif"> + <i>p</i>(t) <i>q</i>(t) <i>x</i>(t) = 0.</p>
+<p></p>
+<p>Definindo y<sup>2</sup>(t) = <i>p</i>(t) <i>q</i>(t) obtemos</p>
+<p></p>
+<p><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/1942d5dde9af3922a7138d9d9531065a8f7ab55c.gif"> + y<sup>2</sup> (t) <i>x</i> (t) = 0,</p>
+<p></p>
+<p> e por uma questão de comodidade podemos fazer t ® <i>t</i> e então</p>
+<p></p>
+<p><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e7fd063ca0a13af2b7b9d25f53f5bd6df7cd229c.gif"> + y<sup>2</sup> (<i>t</i>) <i>x</i> (<i>t</i>) = 0.</p>
+<p></p>
+<p>Para o caso mais simples em que</p>
+<p></p>
+<p>y<sup>2</sup> (<i>t</i>) = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/57380499579bfcd9a74143ca9201942d6b0d4e5e.gif"> (1 + <i>h cos</i> (w<i>t</i>)),</p>
+<p></p>
+<p>teremos a equação de Mathieu apresentada no início.</p>
+<p></p>
+<p> Para o caso de <i>h</i> « 1 e w = 2w<sub>0</sub> + e, sendo e « 1, pode-se mostrar que a equação de Mathieu tem solução analítica aproximada sendo possível determinar a condição de instabilidade paramétrica [13]. A ressonância, neste caso, somente ocorrerá quando</p>
+<p></p>
+<p>
+      <div class="row fig" id="6f788a4e1416f5418acc587dfa90ab260defadc7">
+<a name="6f788a4e1416f5418acc587dfa90ab260defadc7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg6f788a4e1416f5418acc587dfa90ab260defadc7"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/6f788a4e1416f5418acc587dfa90ab260defadc7.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>A escolha de w ~ 2w<sub>0</sub> foi feita por ser aí mais evidente o efeito do aumento de amplitude. Para w ~ w<sub>0</sub>, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/19e1926bb85c7f1e2984a6628b3d82655a0f27db.gif">w<sub>0</sub>, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/489a20a24e29aba875decb45eabc6790b70b19bf.gif">w<sub>0</sub>... o aumento da amplitude também ocorre, porém muito lentamente.</p>
+<p></p>
+<p>
+      <b>3. Pêndulo com comprimento variável</b>
+    </p>
+<p></p>
+<p> Como primeiro caso estudaremos um pêndulo que tem seu comprimento variando periodicamente. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a> ilustra este sistema no qual o momento de inércia do pêndulo varia periodicamente.</p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A força total que atua na massa suspensa <i>m</i> é a soma da força peso e da tração na corda, ou seja</p>
+<p></p>
+<p> No sistema de referência inercial instantâneo com eixos orientados ao longo da corda (direção radial) e perpendicular à corda (direção tangencial), a força <b>F</b> pode ser decomposta como</p>
+<p></p>
+<p><b>F</b><sub>tan</sub> = <b>P</b><sub>tan</sub> + <b>T</b><sub>tan</sub> = <i>m</i><b>a</b><sub>tan</sub>, </p>
+<p></p>
+<p><b>F</b><i><sub>rad</sub></i> = <b>P</b><i><sub>rad</sub></i> + <b>T</b><i><sub>rad</sub></i> = <i>m</i><b>a</b><i><sub>rad</sub></i>.</p>
+<p></p>
+<p>Enquanto a componente radial nos fornece a intensidade da tensão na corda (o que não é o interesse no momento) a componente tangencial da tensão é nula, resultando para a aceleração na direção tangencial simplesmente</p>
+<p></p>
+<p>-<i>g</i> sin (q (<i>t</i>)) = <i>a</i><sub>tan</sub>,</p>
+<p></p>
+<p>sendo q(<i>t</i>) o ângulo que a corda faz com a vertical. Para se determinar <i>a</i><sub>tan</sub> é conveniente primeiro obtê-la no sistema de referência cartesiano (<i>x, y</i>) . Em qualquer instante a posição da massa <i>m</i> é descrita por</p>
+<p></p>
+<p>
+      <div class="row fig" id="730d5746582bc4d312a8ee3617e50ed0e3d7a329">
+<a name="730d5746582bc4d312a8ee3617e50ed0e3d7a329"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg730d5746582bc4d312a8ee3617e50ed0e3d7a329"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/730d5746582bc4d312a8ee3617e50ed0e3d7a329.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p> sendo <i>l</i>(<i>t</i>) o comprimento do pêndulo. Considerando que o comprimento do pêndulo seja descrito por <i>l</i>(<i>t</i>) = <i>l</i><sub>0 </sub>+ <i>a</i> sin (w<i>t</i>) , podemos calcular <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e7fd063ca0a13af2b7b9d25f53f5bd6df7cd229c.gif"> e <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/26a64d9eb758346da65f1b3317896cd6270784a7.gif">. Finalmente, lembrando que uma rotação dos eixos (<i>x, y</i>) nas direções ao longo do fio e perpendiculares ao mesmo resulta em</p>
+<p></p>
+<p><i>a</i><sub>tan</sub> = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/62e5849ddc0865729d46bbf2239a5a2b2abbfbce.gif">cos (q) + <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/23925ea8a16553d3c20e2c86152da7b6feedad7a.gif">sin (q), </p>
+<p></p>
+<p><i>a<sub>rad</sub></i> = -<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/62e5849ddc0865729d46bbf2239a5a2b2abbfbce.gif"> sin (q) + <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/23925ea8a16553d3c20e2c86152da7b6feedad7a.gif"> cos (q).</p>
+<p></p>
+<p> Escrevendo a freqüência em unidades de w<sub>0</sub> = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/7a476e1ce9fbb41aac90a6682f864f8906358502.gif">, o comprimento do pêndulo em unidades do comprimento máximo <i>l</i><sub>0</sub> e o tempo em unidades do inverso de w<sub>0</sub>, a equação de movimento da componente tangencial será</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/326e137638fb5ad2b451a8b98d5dda74cbcb2045.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> sendo l = <i>a</i>/<i>l</i><sub>0</sub>, w a freqüência de oscilação do fio, em unidades de w<sub>0</sub>.</p>
+<p></p>
+<p> Para facilitar a solução do problema, como um recurso matemático, podemos fazer a seguinte substituição na Eq. (2)</p>
+<p></p>
+<p><i>z</i> (<i>t</i>) = (1 + l sin (w<i>t</i>)) q (<i>t</i>),</p>
+<p></p>
+<p>o que elimina a dependência da derivada de primeira ordem em q (<i>t</i>) , resultando em</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm03">
+<a name="frm03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/290fa9e37f3fa19dacc495fab7087f068b5ac2b3.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Para o caso de pequenas oscilações (sin (<i>z </i>(<i>t</i>)) » <i>z</i>(<i>t</i>)) e l « 1, podemos mostrar que próximo da ressonância a equação de movimento será dada por</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm04">
+<a name="frm04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/2d1e9712583501d51b7e3b4d43fb9dd43dd9f5de.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> que é a equação de Mathieu para w<sub>0</sub> = 1, e <i>h</i> = 3l e f<sub>0</sub> = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/84cf649a20667aa22494d7fa0d2882e14b5d5ba2.gif">. Segundo as Eqs. (4) e (1) neste limite de pequenas oscilações teremos</p>
+<p></p>
+<p>
+      <div class="row fig" id="cc75db481014940f2bd9d438d8f9718045a14a9e">
+<a name="cc75db481014940f2bd9d438d8f9718045a14a9e"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgcc75db481014940f2bd9d438d8f9718045a14a9e"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/cc75db481014940f2bd9d438d8f9718045a14a9e.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p> o que mostra que a instabilidade paramétrica ocorrerá somente se</p>
+<p></p>
+<p>
+      <div class="row fig" id="b5d6f1ef53894e05a16c7b80825923e5dee87a3d">
+<a name="b5d6f1ef53894e05a16c7b80825923e5dee87a3d"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgb5d6f1ef53894e05a16c7b80825923e5dee87a3d"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/b5d6f1ef53894e05a16c7b80825923e5dee87a3d.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p> (Lembrar que w está escrito em unidades de w<sub>0</sub>).</p>
+<p></p>
+<p>
+      <b>4. Pêndulo com ponto de suspensão oscilante</b>
+    </p>
+<p></p>
+<p> Como segundo caso estudado, consideramos um pêndulo que tem seu ponto de sustentação oscilando periodicamente como ilustrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a>. Neste caso, apesar do comprimento <i>l</i> do pêndulo manter-se constante, o ponto de sustentação oscila segundo a equação <i>h</i>(<i>t</i>) = <i>h</i><sub>0</sub> sin(w<i>t</i>).</p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Neste caso, seguindo o mesmo esquema anterior, teremos</p>
+<p></p>
+<p>
+      <div class="row fig" id="1138d3346ab6aa7a956c07076e2784bb5387ae52">
+<a name="1138d3346ab6aa7a956c07076e2784bb5387ae52"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg1138d3346ab6aa7a956c07076e2784bb5387ae52"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/1138d3346ab6aa7a956c07076e2784bb5387ae52.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>resultando para a equação de movimento</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm05">
+<a name="frm05"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/a0c3ad491b4103320d53a5b03fda8de2d359b6e4.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> onde já foram feitas as mesmas considerações utilizadas na Eq. (3) (observe aqui que l = <i>h</i><sub>0</sub>/<i>l</i><sub>0</sub>). Note que na Eq. (5) temos q(<i>t</i>) , que é o ângulo que o fio faz com a vertical em função do tempo, ao passo que na Eq. (3) temos <i>z </i>(<i>t</i>) = <i>f</i> (q(<i>t</i>)).</p>
+<p></p>
+<p> Uma vez que a equação de movimento não depende de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif"> (<i>t</i>), não é necessária uma substituição semelhante à que foi utilizada na Eq. (2). Considerando q(<i>t</i>) « 1 e w ~ 2, teremos</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm06">
+<a name="frm06"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/ca71349bf86e5045ef26ba453cd0af85b700f802.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> que é a equação de Mathieu com w<sub>0</sub> = 1, e <i>h</i> = 4l (basta reconsiderar o tempo inicial para eliminar o sinal negativo) [14].</p>
+<p></p>
+<p> No limite de pequenas oscilações ([13]) teremos</p>
+<p></p>
+<p>-2l &lt; e &lt; 2l,</p>
+<p></p>
+<p>ou seja, a instabilidade paramétrica somente será observada se</p>
+<p></p>
+<p>2(1 - l) &lt; w &lt; 2(1 + l).</p>
+<p></p>
+<p> A solução apresentada por Landau e Lifschitz [13], como já foi dito, somente é válida para pequenas oscilações. Ora, a característica principal da ressonância é o rápido crescimento da amplitude de oscilação. Isso nos indica então que essas soluções somente serão válidas para algumas poucas oscilações a partir do tempo inicial. Para se conhecer o comportamento do sistema em qualquer instante e qualquer situação, devido à complexidade da equação diferencial que descreve esse tipo de problema, devemos procurar soluções numéricas.</p>
+<p></p>
+<p>
+      <b>5. Simulação numérica</b>
+    </p>
+<p></p>
+<p> As equações de movimento (2) e (5) foram integradas numericamente utilizando o método de Runge-Kutta de quarta ordem [15]. Como dados de entrada fornecemos os valores iniciais q(0) de cada função, os respectivos valores <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif">( 0) de suas derivadas no tempo inicial, a freqüência w de variação do parâmetro oscilante, o comprimento relativo l de variação do parâmetro (amplitude de variação do comprimento do fio no primeiro caso ou amplitude de oscilação do ponto de sustentação no segundo caso), o número <i>N<sub>c</sub></i> de ciclos a ser observado e o número <i>N<sub>d</sub></i> de divisões do período de oscilação do parâmetro variante para o cálculo do tamanho D<i>t</i> de cada passo (D<i>t</i> = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/0771021519ea9406600f99693e39f6916035fa36.gif">) de integração. Podemos ainda substituir esses valores de w e l nas Eqs. (4) e (6) para obtermos uma aproximação analítica em cada caso de acordo com Landau.</p>
+<p></p>
+<p> O erro de cada passo no método de Runge-Kutta é uma função do tamanho do passo de integração D<i>t</i>,</p>
+<p></p>
+<p><i>E</i> (D<i>t</i>) ~ (D<i>t</i>)<sup>5</sup>,</p>
+<p></p>
+<p>portanto, se escolhermos <i>N<sub>d</sub></i> de forma que D<i>t</i> ~ 10<sup>-2</sup> teremos <i>E</i>(10<sup>-2</sup>) ~ 10<sup>-10</sup>, o que é desprezível, exceto nos casos que apresentarem comportamento caótico.</p>
+<p></p>
+<p>
+      <b>6. O espaço de fase e o mapa de Poincaré</b>
+    </p>
+<p></p>
+<p> Analisaremos agora o comportamento desses osciladores paramétricos e a possível utilização da equação de Mathieu como ferramenta para encontrarmos soluções analíticas para os mesmos. Começaremos nosso estudo considerando o espaço de fase dos osciladores no caso em que l = 0, ou seja, quando não houver qualquer tipo de variação do parâmetro em questão. Neste caso tanto a Eq. (2) quanto a Eq. (5) tomarão a forma</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm07">
+<a name="frm07"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/77f453d15e511ffb45034fc4d74f739cf08404b7.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> que é a equação de movimento do pêndulo simples. Analisando seu espaço de fase temos</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm08">
+<a name="frm08"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/066988178b6c160dfeb1e13919600c75e00d2168.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> As órbitas no espaço de fase (q, W) do pêndulo simples são curvas que satisfazem a Eq. (9), que é uma equação de conservação de energia, com um termo de energia cinética <i>T</i> = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/ca23e7fbf925bd5637edc9786ad06508ebe1fad3.gif"> e um termo de energia potencial <i>U</i> = -cos(q) . Como podemos ver no gráfico de <i>U </i>× q (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>), o potencial tem valores mínimos (pontos de equilíbrio estáveis) em q = 2<i>n</i>p nos quais <i>U</i> = -1, e pontos de valores máximos (pontos de equilíbrio instáveis) em q = 2(<i>n</i> + 1) p nos quais <i>U</i> = 1. Por uma questão de simetria somente consideraremos q no intervalo [-p, p] O espaço de fase do pêndulo simples pode ser visto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a>. Nela vemos: </p>
+<p></p>
+<p> (a) Um ponto fixo ( 0,0) que corresponde à situação em que o pêndulo encontra-se em repouso no seu ponto de energia mínima. Nessa condição ele permanece imóvel durante todo o decorrer do tempo (ponto (a)); </p>
+<p></p>
+<p> (b) Uma região com órbitas fechadas no espaço de fase ( -1 &lt; <i>E </i>&lt; 1) , o que corresponde a movimentos periódicos (curva (b)); </p>
+<p></p>
+<p> (c) Uma curva fechada (<i>E</i> = 1) que liga os dois pontos de equilíbrio instável e que é o limite entre a região interior, onde as curvas são fechadas, e a região exterior, de curvas abertas (curva (c)); </p>
+<p></p>
+<p> (d) Uma região onde as curvas são abertas que correspondem a órbitas não periódicas, devido ao fato de que nesta região o pêndulo tem energia cinética suficiente para transpor a barreira potencial em q = p (curva d).</p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig04">
+<a name="fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Um esboço do tipo de movimento do pêndulo para as situações (b) e (d) pode ser visto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a>.</p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para pequenas oscilações, sin(q(<i>t</i>)) » q(<i>t</i>) , e a Eq. (7) tomará a forma</p>
+<p></p>
+<p><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/35fad460916fa2789804f25e8421714b6a3622ad.gif"> (<i>t</i>) + q (<i>t</i>) = 0,</p>
+<p></p>
+<p>que é a equação do oscilador harmônico com w<sub>0</sub> = 1. Esse resultado é exatamente o mesmo obtido para a equação de Mathieu (Eq. (1))com <i>h</i> = 0.</p>
+<p></p>
+<p> Conforme l aumenta de valor, o comportamento do espaço de fase altera-se. Como um exemplo, analisaremos o mapa de Poincaré (já que espaço de fase torna-se muito complicado neste caso) do sistema descrito pela Eq. (2) com w = 1 e l = 0,005. Como podemos ver na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig06"><span class="sci-ico-fileFigure"></span>Fig. 6</a>, uma região caótica surge nas vizinhanças da curva <i>E</i> = 1, que é justamente a curva que separa a região das órbitas fechadas da região das órbitas abertas, e que liga os dois pontos de equilíbrio instável do sistema. Utilizando os mesmos valores de w e l na Eq. (5) obtém-se uma figura muito semelhante à <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig06"><span class="sci-ico-fileFigure"></span>Fig. 6</a>, apresentando basicamente a mesma estrutura. Conforme cresce l, a espessura da região que apresenta comportamento caótico aumenta. A espessura e a complexidade das regiões caóticas também dependem do valor de freqüência w. Os mapas de Poincaré apresentam maior complexidade quando w ~ 2.</p>
+<div class="row fig" id="fig06">
+<a name="fig06"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>7. Análise dos comportamentos</b>
+    </p>
+<p></p>
+<p> Antes de começarmos a análise do comportamento dos pêndulos em cada uma das circunstâncias comentadas na seção anterior, faremos um breve comentário a respeito dos possíveis valores de q. O ângulo q aqui considerado é o ângulo que o fio do pêndulo faz com a vertical. É contado a partir do ponto de repouso e cresce no sentido anti-horário (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig7a"><span class="sci-ico-fileFigure"></span>Fig. 7a</a>). Devido à simetria do problema, o ponto representado pelo ângulo p é equivalente ao representado por -p (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig7a"><span class="sci-ico-fileFigure"></span>Fig. 7b</a>). Por causa disso é que, na seção anterior, afirmamos que somente consideraríamos o intervalo [-p, p]. Qualquer valor de ângulo maior que p ou menor que -p pode ser substituído por um ângulo equivalente cujo valor se encontre dentro dos limites desse intervalo (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig7c"><span class="sci-ico-fileFigure"></span>Figs. 7c</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig7c"><span class="sci-ico-fileFigure"></span>7d</a>).</p>
+<div class="row fig" id="fig7a">
+<a name="fig7a"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig7a"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <div class="row fig" id="22651cb42ae427e6d73dfc25ee20c2ddf12e2c76">
+<a name="22651cb42ae427e6d73dfc25ee20c2ddf12e2c76"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg22651cb42ae427e6d73dfc25ee20c2ddf12e2c76"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/22651cb42ae427e6d73dfc25ee20c2ddf12e2c76.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <div class="row fig" id="fig7c">
+<a name="fig7c"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig7c"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<p></p>
+<p>No gráfico da evolução temporal de q, a descontinuidade observada no exemplo da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig08"><span class="sci-ico-fileFigure"></span>Fig. 8a</a> é apenas aparente. Neste exemplo o gráfico descreve uma situação em que o ângulo aumenta até atingir o valor p (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig08"><span class="sci-ico-fileFigure"></span>Fig. 8b</a>), que é o limite superior do intervalo, e passa, a partir desse ponto, a ser representado por valores correspondentes negativos dentro do intervalo supra citado. Assim, apesar dessa descontinuidade gráfica da evolução temporal, o movimento descrito é contínuo no espaço. Os pontos localizados no limite superior do gráfico q × <i> t</i> são equivalentes aos pontos do limite inferior do mesmo.</p>
+<div class="row fig" id="fig08">
+<a name="fig08"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Analisando o comportamento do sistema, conforme aumentam os valores de l e w, estes exibem diferentes comportamentos de acordo com sua condição inicial. Nas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig09"><span class="sci-ico-fileFigure"></span>Figs. 9</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig10"><span class="sci-ico-fileFigure"></span>10</a> podemos ver os mapas de Poincaré dos dois sistemas aqui estudados. Neste mapa, bem como nos demais utilizados neste estudo, cada curva ou região com um certo comportamento característico, foi obtida com no mínimo 5000 períodos de oscilação. No primeiro caso, (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig09"><span class="sci-ico-fileFigure"></span>Fig. 9</a>), trata-se do pêndulo com comprimento variável com l = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/b0e2d532062e7bb4defe135c1525de2fffdc5ea9.gif"> e w = 2 e no segundo caso, (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig10"><span class="sci-ico-fileFigure"></span>Fig. 10</a>), trata-se do pêndulo com ponto de suspensão variável onde consideramos l = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/f536bc7890cc21b9828a435958b77b0de9df4574.gif"> e w = 2. É possível em ambos os casos perceber três regiões com diferentes características: (a) uma região central, em torno de (0, 0) , na qual as órbitas são periódicas, embora não harmônicas; (b) uma região (em torno da região de órbitas fechadas) onde o regime é caótico; (c) uma região exterior a essa duas que apresenta várias órbitas abertas. As "ilhas" de estabilidade que aparecem em meio à região caótica possuem órbitas abertas. Essa região central onde as órbitas são fechadas pode passar a fazer parte da região caótica quando l for muito grande na freqüência de ressonância.</p>
+<div class="row fig" id="fig09">
+<a name="fig09"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig10">
+<a name="fig10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para visualizar esses diferentes comportamentos dinâmicos, integramos as equações de movimento para cada um dos dois osciladores com os valores de w e l citados acima respectivamente. No primeiro caso (pêndulo com comprimento variável) as condições iniciais utilizadas foram: (a) q<sub>0</sub> = 0,01, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif"><sub>0</sub> = 0,0; (b) q<sub>0</sub> = 2,80, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif"><sub>0</sub> = 0,0; (c) q<sub>0</sub> = 0,0, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif"><sub>0</sub> = 3,0. Os resultados podem ser vistos na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig11"><span class="sci-ico-fileFigure"></span>Fig. 11</a>. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig12a"><span class="sci-ico-fileFigure"></span>Fig. 12</a> temos a apresentação de resultados similares para o pêndulo com ponto de suspensão variável. As condições iniciais utilizadas foram: (a) q<sub>0</sub> = 0,01, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif"><sub>0</sub> = 0; (b) q<sub>0</sub> = 2,0, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif"><sub>0</sub> = 0,0; (c) q<sub>0</sub> = 0,0, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif"><sub>0</sub> = 3,0. Um esboço do movimento real dos resultados apresentados nas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig12a"><span class="sci-ico-fileFigure"></span>Figs. 12a</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig12b"><span class="sci-ico-fileFigure"></span>12b</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig12c"><span class="sci-ico-fileFigure"></span>12c</a> pode ser visto nas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig13a"><span class="sci-ico-fileFigure"></span>Figs. 13a</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig13a"><span class="sci-ico-fileFigure"></span>13b</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig13c"><span class="sci-ico-fileFigure"></span>13c</a> respectivamente.</p>
+<div class="row fig" id="fig11">
+<a name="fig11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig12a">
+<a name="fig12a"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig12a"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <div class="row fig" id="e6c032fe405294f4ac92e219607d9ebe5e49bdb0">
+<a name="e6c032fe405294f4ac92e219607d9ebe5e49bdb0"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImge6c032fe405294f4ac92e219607d9ebe5e49bdb0"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e6c032fe405294f4ac92e219607d9ebe5e49bdb0.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <div class="row fig" id="fig12b">
+<a name="fig12b"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig12b"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <div class="row fig" id="fig12c">
+<a name="fig12c"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig12c"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<div class="row fig" id="fig13a">
+<a name="fig13a"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig13a"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <div class="row fig" id="3fc1006ace62c3a6eaecf4201e18cd1d11945df3">
+<a name="3fc1006ace62c3a6eaecf4201e18cd1d11945df3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg3fc1006ace62c3a6eaecf4201e18cd1d11945df3"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/3fc1006ace62c3a6eaecf4201e18cd1d11945df3.gif"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <div class="row fig" id="fig13c">
+<a name="fig13c"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig13c"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<p></p>
+<p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig14"><span class="sci-ico-fileFigure"></span>Fig. 14</a> vemos a comparação entre o resultado obtido pela integração numérica da Eq. (5) e a equação de Mathieu (1), que para este sistema toma a forma apresentada em na Eq. (6). Utilizamos l = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/f536bc7890cc21b9828a435958b77b0de9df4574.gif"> e w = 2 com as condições iniciais q<sub>0</sub> = 0,01, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d09168de0821053ddda958270baedac67b495354.gif"><sub>0</sub> = 0.</p>
+<div class="row fig" id="fig14">
+<a name="fig14"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig14"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Como podemos ver, o resultado da equação de Mathieu somente coincide com o resultado da integração da equação do pêndulo com ponto de suspensão fixo para pequenos valores de q(<i>t</i>). O motivo pelo qual a equação de Mathieu deixa de valer quando os valores de q aumentam é o fato dos termos de potências iguais ou maiores que 2, que são desprezíveis para ângulos menores que 0,1 rad tornarem-se significativos para ângulos maiores. Resultado semelhante pode ser visto na integração da Eq. (3) e na sua comparação com o resultado obtido pela Eq. (4).</p>
+<p></p>
+<p>
+      <b>8. Conclusão</b>
+    </p>
+<p></p>
+<p> A equação de Mathieu está para os osciladores paramétricos da mesma forma que a equação do oscilador harmônico está para as oscilações anarmônicas: ambas são aproximações da equação geral para pequenos valores de deslocamento em torno de um ponto de equilíbrio (e pequena variação do parâmetro no caso de Mathieu), e que portanto somente são válidas para pequenos valores de deslocamento. A principal importância da equação de Mathieu é determinar a condição de instabilidade paramétrica.</p>
+<p></p>
+<p> A estrutura do mapa de Poincaré torna-se mais complexa à medida que w e l variam, fazendo em certos casos surgirem regiões de comportamento caótico (veja <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig15"><span class="sci-ico-fileFigure"></span>Fig. 15</a>).</p>
+<div class="row fig" id="fig15">
+<a name="fig15"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig15"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Vimos também que comportamentos caóticos e estáveis podem coexistir para um mesmo conjunto de parâmetros, dependendo apenas da condição inicial do sistema. Percebe-se também que um movimento iniciado numa região permanece restrito a ela, sem nunca abandoná-la ou escapar para outra região.</p>
+<p></p>
+<p>Recebido em 28/9/2005; Revisado em 25/1/2006; Aceito em 14/3/2006</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:djpr@df.ufscar.br">djpr@df.ufscar.br</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] F.L. Curzon, A.L.H. Loke, M.E. Lefrançois    and K.E. Novik, Am. J. Phys. <b>63</b>, 132 (1995). </div></li>
+<li><div>[2] Y.T. Millev and M.A.B. Whitaker, Am. J. Phys.    63, 1146 (1995). </div></li>
+<li><div>[3] W. Case, Am. J. Phys. <b>48</b>, 218 (1980).    </div></li>
+<li><div>[4] W.B. Case and M.A. Swanson, Am. J. Phys.    <b>58</b>, 463 (1990). </div></li>
+<li><div>[5] T.E. Clayton, Am. J. Phys. <b>45</b>, 723    (1977). </div></li>
+<li><div>[6] D.R. Rowland, Am. J. Phys. <b>72</b>, 758    (2004). </div></li>
+<li><div>[7] E. Butikov, Comp. Sci. Eng.<b> May-June</b>,    76 (1999) </div></li>
+<li><div>[8] J.B. McLaughlin, J. Stat.Phys. <b>24</b>,    375 (1981) </div></li>
+<li><div>[9] B.P. Koch, R.W. Leven, B. Pompe, and C. Wilke,    Phys. Lett. <b>96A</b>, 219 (1983) </div></li>
+<li><div>[10] R.W. Leven and B.P. Koch, Phys. Lett. <b>86A</b>,    71 (1981). </div></li>
+<li><div>[11] L. Ruby, Am. J. Phys. <b>64</b>, 39 (1996).    </div></li>
+<li><div>[12] M. Abramowitz and I.A. Stegun, <i>Handbook    of Mathematical Functions</i>, reprinted by Dover, New York, 1965, chap. 20.    </div></li>
+<li><div>[13] L.D. Landau e E.M. Lifschitz, <i>Mecânica</i>    (Ed. Mir, Moscou, 1978), p. 136-142. </div></li>
+<li><div>[14] F. Pinto, The Physics Teacher <b>31, 336</b>    (1993). </div></li>
+<li><div>[15] G.B. Arfken and H.J. Weber, <i>Mathematical    Methods for Physicists</i> (Academic Press, London, 1995), 4 ed, p. 530.</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        djpr@df.ufscar.br.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>15 Jun 2007</li>
+<li>
+<strong>Data do Fascículo</strong><br>2007</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Aceito</strong><br>14 Mar 2006</li>
+<li>
+<strong>Revisado</strong><br>25 Jan 2006</li>
+<li>
+<strong>Recebido</strong><br>28 Set 2005</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Clodoaldo Cordeiro Rulli </strong><br><div>
+          ,  São Carlos,  
+          ,  
+        ,  Universidade Federal de São Carlos,  Departamento de Física ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> José Pedro Rino </strong><br><div>
+          ,  São Carlos,  
+          ,  
+        ,  Universidade Federal de São Carlos,  Departamento de Física ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (19)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (8)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig7a"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig7c"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig12a"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig12b"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig12c"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig13a"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig13c"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e16789fc78279a3447c738e5cf64c27e7c11ad1a.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e16789fc78279a3447c738e5cf64c27e7c11ad1a.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/f1fbec519792fda3f0e4a1d4d7bc41d9f9eeacbc.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/f1fbec519792fda3f0e4a1d4d7bc41d9f9eeacbc.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/2387392859658de33ddc6ea0e774e750bc873fc0.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/2387392859658de33ddc6ea0e774e750bc873fc0.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/74ac7363cefb6477090ef3c2953bad03862c8b2b.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/74ac7363cefb6477090ef3c2953bad03862c8b2b.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/020fcf22f1b3be47d7f2394b7aceade38e7a8abd.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/020fcf22f1b3be47d7f2394b7aceade38e7a8abd.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/1d53de1f7291937ef4a364c8be85a3180f9ebc94.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/1d53de1f7291937ef4a364c8be85a3180f9ebc94.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig7a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig7c" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d7fd4b1d33499b7e3804a5af974eee5ce4773600.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/d7fd4b1d33499b7e3804a5af974eee5ce4773600.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/b70db5b3aaf46f122ccdbc499313703fe94239ad.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/b70db5b3aaf46f122ccdbc499313703fe94239ad.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/aec38a6a5a45a7f87227c3f80039945a92feb84b.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/aec38a6a5a45a7f87227c3f80039945a92feb84b.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/01c24b675322c3b6e29be1b7daef25d6fee54550.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/01c24b675322c3b6e29be1b7daef25d6fee54550.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/cdda29e50a943969198b0145758b2469c3ffc9a2.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/cdda29e50a943969198b0145758b2469c3ffc9a2.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig12a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig12b" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/a8a0a7cbb59bcc1447967652b5da59ef58ec7eaa.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/a8a0a7cbb59bcc1447967652b5da59ef58ec7eaa.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig12c" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/75b455ca0a816a0d1a11a44ca1b967add132eeb1.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/75b455ca0a816a0d1a11a44ca1b967add132eeb1.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig13a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig13c" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/fc17cd6186477fed55a581a930a078ce732f4e02.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/fc17cd6186477fed55a581a930a078ce732f4e02.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/7aabc19f884000a0d703399dc6eaefc0b273a191.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/7aabc19f884000a0d703399dc6eaefc0b273a191.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/9710ba979cb7306b456eed89a8d36777c3b0bad2.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/9710ba979cb7306b456eed89a8d36777c3b0bad2.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e88cdbd1d9fa802453c0e6572a25716598ec5abd.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e88cdbd1d9fa802453c0e6572a25716598ec5abd.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/326e137638fb5ad2b451a8b98d5dda74cbcb2045.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/326e137638fb5ad2b451a8b98d5dda74cbcb2045.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/290fa9e37f3fa19dacc495fab7087f068b5ac2b3.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/290fa9e37f3fa19dacc495fab7087f068b5ac2b3.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/2d1e9712583501d51b7e3b4d43fb9dd43dd9f5de.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/2d1e9712583501d51b7e3b4d43fb9dd43dd9f5de.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/a0c3ad491b4103320d53a5b03fda8de2d359b6e4.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/a0c3ad491b4103320d53a5b03fda8de2d359b6e4.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/ca71349bf86e5045ef26ba453cd0af85b700f802.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/ca71349bf86e5045ef26ba453cd0af85b700f802.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/77f453d15e511ffb45034fc4d74f739cf08404b7.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/77f453d15e511ffb45034fc4d74f739cf08404b7.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/066988178b6c160dfeb1e13919600c75e00d2168.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/066988178b6c160dfeb1e13919600c75e00d2168.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg7cc4f5b1ab3387d3cd9359faf7cf490e82ce59ae" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/7cc4f5b1ab3387d3cd9359faf7cf490e82ce59ae.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/7cc4f5b1ab3387d3cd9359faf7cf490e82ce59ae.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg6f788a4e1416f5418acc587dfa90ab260defadc7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/6f788a4e1416f5418acc587dfa90ab260defadc7.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/6f788a4e1416f5418acc587dfa90ab260defadc7.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg730d5746582bc4d312a8ee3617e50ed0e3d7a329" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/730d5746582bc4d312a8ee3617e50ed0e3d7a329.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/730d5746582bc4d312a8ee3617e50ed0e3d7a329.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgcc75db481014940f2bd9d438d8f9718045a14a9e" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/cc75db481014940f2bd9d438d8f9718045a14a9e.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/cc75db481014940f2bd9d438d8f9718045a14a9e.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgb5d6f1ef53894e05a16c7b80825923e5dee87a3d" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/b5d6f1ef53894e05a16c7b80825923e5dee87a3d.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/b5d6f1ef53894e05a16c7b80825923e5dee87a3d.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg1138d3346ab6aa7a956c07076e2784bb5387ae52" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/1138d3346ab6aa7a956c07076e2784bb5387ae52.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/1138d3346ab6aa7a956c07076e2784bb5387ae52.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg22651cb42ae427e6d73dfc25ee20c2ddf12e2c76" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/22651cb42ae427e6d73dfc25ee20c2ddf12e2c76.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/22651cb42ae427e6d73dfc25ee20c2ddf12e2c76.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImge6c032fe405294f4ac92e219607d9ebe5e49bdb0" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e6c032fe405294f4ac92e219607d9ebe5e49bdb0.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/e6c032fe405294f4ac92e219607d9ebe5e49bdb0.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg3fc1006ace62c3a6eaecf4201e18cd1d11945df3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/3fc1006ace62c3a6eaecf4201e18cd1d11945df3.gif"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/dBGFCkZ7mzGMKzwGvNy8XHr/3fc1006ace62c3a6eaecf4201e18cd1d11945df3.gif"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Rulli, Clodoaldo Cordeiro e Rino, José PedroOscilações paramétricas: uma simulação numérica. Revista Brasileira de Ensino de Física [online]. 2007, v. 29, n. 1 [Acessado CURRENTDATE] , pp. 71-78. Disponível em: &lt;https://doi.org/10.1590/S1806-11172007000100013&gt;. Epub 15 Jun 2007. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172007000100013.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Oscilações paramétricas: uma simulação numérica&#34; &#34;Rulli, Clodoaldo Cordeiro&#34; &#34;Rino, José Pedro&#34; &#34;2007&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Oscilações paramétricas: uma simulação numérica&#34; &#34;Rulli, Clodoaldo Cordeiro&#34; &#34;Rino, José Pedro&#34; &#34;2007&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/dBGFCkZ7mzGMKzwGvNy8XHr/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172007000100013&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172007000100013" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172007000100013">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172007000100013" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172007000100013">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172007000100013"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172007000100013" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172007000100013">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172007000100013" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Oscilações paramétricas: uma simulação numérica
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172007000100013">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

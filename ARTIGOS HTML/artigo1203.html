@@ -1,0 +1,2002 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Em busca do Prêmio Nobel - Versão beta Em busca do Prêmio Nobel - Versão beta </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Em busca do Prêmio Nobel - Versão beta"/>
+<meta property="og:description" content="Descreve-se a estrutura, funcionalidades e possibilidades de implementação da versão beta do..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Santos, Carlos Alberto dos">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal Rural do Semiárido">
+        
+        <meta name="citation_author" content="Aquino, Eliabe Maxsuel de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal Rural do Semiárido">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="40"></meta>
+<meta name="citation_number" content="3"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2017-0317"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Em busca do Prêmio Nobel - Versão beta
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Descreve-se a estrutura, funcionalidades e possibilidades de implementação da versão beta do jogo educacional multiplataforma Em busca do Prêmio Nobel. O jogo se desenvolve em dois ambientes, administrados por um código PHP. O ambiente de aprendizagem consiste em páginas de conteúdo em HTML e mapas conceituais confeccionados com a ferramenta CmapTools. O ambiente de jogo consiste em um banco de dados MySQL, com questões e telas de transição com a participação do Mestre-Orientador, um personagem similar ao Mestre de Jogo ou Narrador nos jogos de RPG. Essa estrutura modular e aberta permite que o jogo seja implementado em qualquer área de conhecimento que se deseje. Basta inserir no ambiente de aprendizagem, as páginas de conteúdo HTML pertinentes ao assunto, e incluir no ambiente de jogo o banco de questões correspondentes e as respectivas telas de transição."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2018-02-01"></meta>
+<meta name="citation_keywords" content="jogo educacional ensino de física"></meta><meta name="citation_keywords" content="ensino de ciências"></meta><meta name="citation_keywords" content="RPG"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2018.v40n3/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2018.v40n3/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172018000300601 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 40 
+                (3)
+            <span class="_separator"> • </span>2018</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2017-0317" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2017-0317</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2017-0317"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Em busca do Prêmio Nobel - Versão beta<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">In search of the Nobel Prize - Beta version</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Carlos Alberto dos Santos </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong><div class="corresp">*Endereço de correspondência: <a href="mailto:cas.ufrgs@gmail.com">cas.ufrgs@gmail.com</a>.</div>Mestrado Nacional Profissional em Ensino de Física, Centro de Ciências Exatas e Naturais, Universidade Federal Rural do Semiárido, Av. Francisco Mota, 572, 59.625-900, Mossoró, RN, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Eliabe Maxsuel de Aquino </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Mestrado Nacional Profissional em Ensino de Física, Centro de Ciências Exatas e Naturais, Universidade Federal Rural do Semiárido, Av. Francisco Mota, 572, 59.625-900, Mossoró, RN, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Descreve-se a estrutura, funcionalidades e possibilidades de implementação da versão beta do jogo educacional multiplataforma <b>Em busca do Prêmio Nobel</b>. O jogo se desenvolve em dois ambientes, administrados por um código PHP. O ambiente de aprendizagem consiste em páginas de conteúdo em HTML e mapas conceituais confeccionados com a ferramenta CmapTools. O ambiente de jogo consiste em um banco de dados MySQL, com questões e telas de transição com a participação do Mestre-Orientador, um personagem similar ao Mestre de Jogo ou Narrador nos jogos de RPG. Essa estrutura modular e aberta permite que o jogo seja implementado em qualquer área de conhecimento que se deseje. Basta inserir no ambiente de aprendizagem, as páginas de conteúdo HTML pertinentes ao assunto, e incluir no ambiente de jogo o banco de questões correspondentes e as respectivas telas de transição.</p>
+<p><strong>Palavras-chave:</strong><br>jogo educacional ensino de física; ensino de ciências; RPG</p>
+</div>
+<hr>
+<div>
+<p>It will be described in this paper, the structure, funcionalities and implementation possibilities of a multiplataform game named <b>In search of the Nobel Prize</b>, in its beta version. The learning environment consists of HTML content pages and concept maps elaborated with CmapTools. The game environment consists of a MySQL database with questions and transition screens with the participation of a Master Advisor, a character similar to the Game Master or Narrator in RPG games. This modular and open structure enable the game implementation in several knowledge areas. It is enough to add content pages in the learning environment, as well as the question database and associate transition screens pertinent to the knowledge area.</p>
+<p><strong>Keywords:</strong><br>educacional game physics teaching; Science teaching; RPG</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>Já faz muito tempo que educadores de várias áreas do conhecimento vêm investigando o uso de jogos educacionais em sala da aula [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] M. Bopp, Affective and Emotional Aspects of Human-Computer Interaction, editado por M. Pivec (iOS Press, Clifton, 2006)</span></span></span>,<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] D. Craciun, J. Sci. Arts Year 10, 175 (2010).</span></span></span>]. De um modo geral esses jogos podem ser classificados em duas grandes categorias: jogos de mesa e jogos digitais. Vamos tratar aqui unicamente dos jogos digitais. Boas revisões da literatura a esse respeito estão disponíveis em [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>[3] M.-C. Li and C.-C. Tsai, J. Sci. Educ. Technol. 22, 877 (2013).</span></span></span>–<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] D.B. Clark, E.E. Tanner-Smith and S.S. Killingsworth, Rev. Educ. Res. 86, 79 (2016).</span></span></span>]. Uma modalidade de jogo educacional que tem sido objeto de inúmeras pesquisas recentemente é conhecido pela sigla RPG (roleplaying game), que pode ser traduzido como jogo de interpretação de papéis. Ele pode ser elaborado como jogo de mesa e como jogo digital. Embora o jogo <b>Em busca do Prêmio Nobel</b>, tenha elementos similares àqueles típicos de RPG, ele não pode ser classificado como tal. Portanto, não discutiremos aqui especificamente os jogos tipo RPG.</p>
+      <p>Muitos dos jogos digitais (incluindo-se os tipo RPG) se inspiram ou têm pontos em comum com os hipertextos elaborados a partir do final dos anos 1990….[<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>[6] U. Wechselberger, in: Trans. Edutainment II, edited by Z. Pan, A.D. Cheok, W. Müller, and A. El Rhabili (Springer-Verlag, Berlin, 2009), p. 90104.</span></span></span>] Foi por essa linha de criação que surgiu a ideia do presente jogo, o qual inspira-se em hipertextos que um dos autores (CAS) elaborou no início dos anos 2000. O caráter inovador daquele hipertexto sobre eletricidade e magnetismo, incluindo em sua estrutura janelas <i>pop-up</i>, animações e experimentos virtuais levou a CAPES a conceder-lhe, em 2003, um prêmio no âmbito do Programa de Apoio à Pesquisa em Educação a Distância. Da mesma forma, a Associação Brasileira de Educação a Distância (ABED) concedeu-lhe, em 2004, o Prêmio ABED / UNIVERSIA de Objetos de Aprendizagem. O material continua disponível no servidor do Instituto de Física da UFRGS<span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+        
+          <a href="https://www.if.ufrgs.br/tex/fis142/mod00/" target="_blank">https://www.if.ufrgs.br/tex/fis142/mod00/</a>
+        
+      </span></span></span>.</p>
+      <p>O jogo foi concebido naquela oportunidade com estrutura geral apresentada no fluxograma da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>. Entre os detalhes imaginados, destacam-se:</p>
+      <ol type="1">
+<li>
+          <p>Ganha o PN quem chegar ao final do 10<math display="inline" id="m1"><msup><mrow></mrow><mrow><mi mathvariant="normal">o</mi></mrow></msup></math>. mapa conceitual (MC), ou seja o 10<math display="inline" id="m2"><msup><mrow></mrow><mrow><mi mathvariant="normal">o</mi></mrow></msup></math>. ponto de um conjunto aleatoriamente selecionado pelo programa. Para cada MC, o programa sorteia questões até que o jogador acerte uma.</p>
+        </li>
+<li>
+          <p>Na alternativa “apenas navegar”, o usuário pode navegar por uma linha do tempo conceitual ou pelo espaço dos MCs. Esta é a opção de pura aprendizagem do usuário.</p>
+        </li>
+<li>
+          <p>Na alternativa “jogar”, o usuário passa de um MC a outro se tiver sucesso na resposta de uma questão de múltipla escolha.</p>
+        </li>
+<li>
+          <p>Um fator de sorte será acrescentado caso o usuário acerte a questão: (1) Normal: ganha um ponto; (2) Sorte: ganha dois pontos; (3) Azar: não ganha nada.</p>
+        </li>
+<li>
+          <p>Incluir um contador de pontos para que o usuário saiba o quão longe está de ganhar o PN.</p>
+        </li>
+<li>
+          <p>Incluir contador de tempo. Quando o jogador acaba, o contador para, registrando o tempo dispendido pelo usuário para ganhar o PN.</p>
+        </li>
+</ol>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Fluxograma original do Jogo do Prêmio Nobel.
+        <br>
+</div>
+</div>
+      <p>Como será visto mais adiante, a atual versão do jogo é menos centrada em mapas conceituais do que a versão originalmente imaginada. Todavia, a estrutura básica do jogo foi mantida. A sua implementação não foi possível desde a origem, pela incapacidade do autor do jogo em encontrar um colaborador com expertise computacional e disposição de trabalho adequadas à tarefa.</p>
+      <p>Revisando a literatura atual, percebemos que a ideia original do presente jogo é conceptualmente similar a jogos elaborados recentemente [<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>[7] S. Samuelson, H.M. Halff, L. Halff and C. Brown, in: 3rd IEEE International Conference on Digital Game and Intellitgent Toy Enhanced Learning, Kaohsiung, Taiwan, 2010, editado por G. Biswas, D. Carr, Y.S. Chee and W.Y. Hwang (IEEE Computer Society, Los Alamitos, 2010), p. 166.</span></span></span>–<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>[9] T.V. Paula, E.V.P. Souza, T.G.N. Silva, D.M. Silva and M.E.N.P. Ribeiro, Holos 31, 98 (2015).</span></span></span>], o que nos motivou a investir a enorme energia necessária para sua implementação.</p>
+    
+      <h1 class="articleSectionTitle">2. O algoritmo e suas funcionalidades</h1>
+      <p>O jogo se desenvolve em dois ambientes administrados por um código PHP<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">2</strong>
+        <a href="https://secure.php.net/manual/pt_BR/intro-whatis.php" target="_blank">https://secure.php.net/manual/pt_BR/intro-whatis.php</a>.
+      </span></span></span>, com auxílio do yiiframework na versão 2<span class="ref footnote"><sup class="xref">3</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">3</strong>
+        
+          <a href="http://www.yiiframework.com/" target="_blank">http://www.yiiframework.com/</a>
+        
+      </span></span></span>. O ambiente de aprendizagem consiste em páginas de conteúdo em HTML e mapas conceituais confeccionados com a ferramenta CmapTools<span class="ref footnote"><sup class="xref">4</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">4</strong>
+        <a href="https://cmap.ihmc.us/" target="_blank">https://cmap.ihmc.us/</a>.
+      </span></span></span>. O ambiente de jogo consiste em um banco de dados MySQL<span class="ref footnote"><sup class="xref">5</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">5</strong>
+        
+          <a href="https://www.mysql.com/" target="_blank">https://www.mysql.com/</a>
+        
+      </span></span></span>, com questões e telas de transição com a participação do Mestre-Orientador, um personagem similar ao Mestre de Jogo ou Narrador nos jogos de RPG. Todo o sistema está baseado na arquitetura MVC (Model-view-controller)<span class="ref footnote"><sup class="xref">6</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">6</strong>
+        
+          <a href="https://pt.wikipedia.org/wiki/MVC" target="_blank">https://pt.wikipedia.org/wiki/MVC</a>
+        
+      </span></span></span>
+			</p>
+      <p>Como ilustrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>, a arquitetura MVC opera em três camadas:</p>
+      <ul list-type="bullet">
+<li>
+          <p>Camada de modelo responsável pela leitura, escrita e validação dos dados do banco.</p>
+        </li>
+<li>
+          <p>Camada de visão, por meio da qual os dados e informações são exibidos ao usuário. É o que de fato o usuário vê, ou seja é a exibição das páginas HTML e das questões.</p>
+        </li>
+<li>
+          <p>Camada de controle responsável pela comunicação com o usuário. Ela lhe envia notificações e recebe as respostas do usuário.</p>
+        </li>
+</ul>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Esquema operacional da arquitetura MVC (Model-view-controller).
+        <br>
+</div>
+</div>
+      <p>Nessa versão beta, os desafios consistem unicamente em questões típicas do ENEM, mas a próxima versão, cujo algoritmo já está em elaboração, conta com a inclusão de experimentos virtuais que possam ser manipulados para permitir avaliação.</p>
+      <p>O usuário tem duas alternativas: estudar ou jogar. Para jogar ele deverá passar por um teste de admissão, ou seja, acertar três questões sucessivas de nível fácil. Para estudar ele tem o conteúdo apresentado sob a forma de hipertextos e sob a forma de mapas conceituais. Vejamos as interfaces do jogo e suas funcionalidades.</p>
+      
+        <h2>2.1. A interface do administrador</h2>
+        <p>O menu de administração do jogo é apresentado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a> O administrador pode configurar diversas componentes do jogo, sendo duas dessas componentes de extrema importância: o conteúdo de aprendizagem (hipertextos e mapas conceituais) e os desafios ao jogador (questões de múltipla escolha). Vamos concentrarmo-nos nas questões, que podem ser distribuídas por tópicos e por graus de dificuldade. Estamos utilizando a atomística para a aplicação da versão beta, cujo conteúdo foi dividido em quatro tópicos: modelo atômico, propriedades atômicas da matéria, tabela periódica e radioatividade. As questões foram elaboradas com três graus de dificuldade: fácil, intermediário e difícil.</p>
+        <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+            Menu de administração do jogo.
+          <br>
+</div>
+</div>
+        <p>A interface para o cadastramento de questões é apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a>. Na parte superior está o campo para inserção do enunciado. Se a questão tiver figura, ela deve ser inserida no campo “Figura”. Cada questão tem uma imagem de entrada e uma de saída, a serem discutidas mais adiante. O administrador deve informar a qual tópico a questão se refere e o seu nível de dificuldade. Depois de informar as alternativas para as respostas, o administrador deve informar qual a alternativa correta.</p>
+        <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+            Interface para o cadastramento de questões.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>2.2. A interface de aprendizagem</h2>
+        <p>A interface de aprendizagem consiste de hipertextos e mapas conceituais. Os hipertextos consistem em páginas de conteúdo (contidas na biblioteca) e em páginas com as biografias dos cientistas mais importantes da área na qual o jogo está sendo aplicado. Apenas como ilustração apresentaremos na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a> o menu da biblioteca de atomística</p>
+        <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+            Menu da biblioteca.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>2.3. A interface do jogador</h2>
+        <p>Uma vez aprovado no teste de admissibilidade, ou seja uma vez tendo acertado sequencialmente três questões fáceis, o jogador ingressa no jogo na categoria Graduação. Ele tem que passar por mais duas categorias antes de se candidatar ao Prêmio Nobel: Mestrado e Doutorado.</p>
+        <p>Ele passa da Graduação para o Mestrado quando acertar no mínimo três questões fáceis de cada um dos quatro tópicos. Para passar para a categoria Doutorado o jogador deve acertar no mínimo três questões intermediárias de cada tópico e, finalmente, para ganhar o Prêmio Nobel (PN) ele deve acertar no mínimo três questões difíceis de cada tópico. Ou seja, para ganhar o PN o jogador tem que acertar no mínimo 36 questões. Por que no mínimo?</p>
+        <p>Por duas razões. Para colocar no jogo a sorte e o azar, e para simular o que ocorre na vida de qualquer cientista. É muito frequente o cientista perder parte do seu trabalho, quando tenta publica-lo. Por exemplo, se ele tenta publicar um resultado que foi anteriormente obtido e publicado por outro, sem seu conhecimento, é grande a chance de o trabalho não ser aceito. Mesmo que o trabalho seja aceito, ele pode ficar em desvantagem na corrida pelo PN, porque a paternidade da sua descoberta é atribuída a outro cientista. Para simular essa situação colocamos um elemento de imprevisibilidade no algoritmo. Quando o jogador responde corretamente a última questão de cada nível (Graduação, Mestrado e Doutorado), o programa sorteia SORTE ou AZAR. Se der SORTE, ele passa para o nível seguinte ou ganha o PN. Se der AZAR, ele terá que responder nova questão, e só passará para o nível seguinte ou ganhará o PN, se acertar a última questão e tiver SORTE. Qualquer que seja o caso, o programa apresenta uma tela de congratulação ou explicando o infortúnio, conforme ilustram as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figuras 6</a>A e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>6</a>B</p>
+        <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+            (A) Congratulação pela passagem para o grau de Doutorado; (B) Consolando pelo infortúnio.
+          <br>
+</div>
+</div>
+        <p>Cada questão tem uma tela de entrada e outra de saída. A tela de entrada é exibida antes da questão. Sua finalidade é alertar o jogador para o tipo de questão que ele vai ter que responder. Ele pode fazer uma autoanálise do seu conhecimento em relação ao tema, e se for o caso decidir estuda-lo antes de responder a questão. Neste caso ele sai da área de jogo e vai para a área de aprendizagem (mapas conceituais ou hipertextos).</p>
+        <p>A tela de saída é exibida se o jogador errar a questão. Sua finalidade é informar a origem do erro e encaminha-lo para a área da biblioteca que trata do assunto abordado na questão. A título de ilustração apresentaremos o enunciado de uma questão, sua tela de entrada (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Figura 7</a>) e sua tela de saída (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a>).</p>
+        <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+            Antes de ver o enunciado da questão, o jogador sabe qual o tema abordado, por meio de uma tela como esta.
+          <br>
+</div>
+</div>
+        <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+            Quando o jogador erra, ele sabe a razão do erro e é encaminhado para o ponto da biblioteca onde encontra o hipertexto que trata o assunto da questão.
+          <br>
+</div>
+</div>
+        <div><blockquote>
+          <p>Entre os vários modelos atômicos, um dos mais conhecidos é aquele elaborado por Joseph John Thomson, conhecido na literatura como modelo do pudim de ameixa, segundo o qual:</p>
+        </blockquote></div>
+        <ol type="a">
+<li>
+            <p>os elétrons têm caráter corpuscular e de onda, simultaneamente.</p>
+          </li>
+<li>
+            <p>no centro do átomo existe um núcleo muito pequeno e denso, cercado por elétrons.</p>
+          </li>
+<li>
+            <p>os elétrons giram em torno do núcleo em órbitas elípticas.</p>
+          </li>
+<li>
+            <p>os elétrons giram em torno do núcleo em órbitas circulares.</p>
+          </li>
+<li>
+            <p>o átomo é constituído por uma mistura homogênea de cargas elétricas positivas e negativas.</p>
+          </li>
+</ol>
+      
+    
+      <h1 class="articleSectionTitle">3. Possibilidades de utilização em sala de aula e considerações finais</h1>
+      <p>O jogo “Em busca do Prêmio Nobel”, como aqui proposto tem uma estrutura aberta que permite sua utilização em qualquer área do conhecimento e de acordo com qualquer teoria de ensino-aprendizagem. Tudo vai depender do conteúdo inserido e da forma como o jogo será utilizado em sala de aula. Para a primeira aplicação elaboramos hipertextos e mapas conceituais pertinentes à área da atomística, em estilo típico dos livros didáticos destinados ao ensino médio.</p>
+      <p>Assim, a vinculação a eventuais teorias pedagógicas ficará por conta do professor que utilizar o material. Por exemplo, um professor que deseje basear sua prática pedagógica de acordo com a teoria de Ausubel [<span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>[10] M.A. Moreira e E.F.S. Masini, Aprendizagem Significativa: A Teoria de David Ausubel (Moraes, São Paulo, 1982).</span></span></span>,<span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>[11] D.P. Ausubel, Educational Psychology: A Cognitive View (Holt, Rinehart and Winston, New York, 1968).</span></span></span>], poderá antes da utilização do jogo trabalhar com os subsunçores ou ideias-âncoras pertinentes à atomística. Da mesma forma, um professor que queira seguir a orientação de Vygotsky [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>[12] L.S. Vygotski, A Formação Social Da Mente (Livraria Martins Fontes, São Paulo, 1991).</span></span></span>,<span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>[13] A. Gaspar e I.C.C. Monteiro, Investig. em Ensino Ciências 10, 227 (2005).</span></span></span>] deverá programar atividades com grande interação social entre os alunos.</p>
+      <p>Por exemplo, para estimular a socialização do conhecimento e ao mesmo tempo premiar os mais bem sucedidos no jogo, oficinas foram ministradas pelos primeiros alunos que passaram de nível. O primeiro aluno que passou da Graduação para o Mestrado coordenou uma oficina sobre como superou as dificuldades do jogo naquela primeira fase. Oficinas similares ocorreram durante a passagem do Mestrado para o Doutorado, e um grande evento em sala de aula foi organizado quando o primeiro aluno que ganhou o Prêmio Nobel de Atomística. Relatos dessa aplicação, que ainda encontra-se em andamento, serão oportunamente submetidos a publicação.</p>
+    </div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList footnote">
+      <li>
+        <span class="xref big">1</span>
+        <div>
+          <a href="https://www.if.ufrgs.br/tex/fis142/mod00/" target="_blank">https://www.if.ufrgs.br/tex/fis142/mod00/</a>
+        </div>
+      </li>
+      <li>
+        <span class="xref big">2</span>
+        <div>
+<a href="https://secure.php.net/manual/pt_BR/intro-whatis.php" target="_blank">https://secure.php.net/manual/pt_BR/intro-whatis.php</a>.</div>
+      </li>
+      <li>
+        <span class="xref big">3</span>
+        <div>
+          <a href="http://www.yiiframework.com/" target="_blank">http://www.yiiframework.com/</a>
+        </div>
+      </li>
+      <li>
+        <span class="xref big">4</span>
+        <div>
+<a href="https://cmap.ihmc.us/" target="_blank">https://cmap.ihmc.us/</a>.</div>
+      </li>
+      <li>
+        <span class="xref big">5</span>
+        <div>
+          <a href="https://www.mysql.com/" target="_blank">https://www.mysql.com/</a>
+        </div>
+      </li>
+      <li>
+        <span class="xref big">6</span>
+        <div>
+          <a href="https://pt.wikipedia.org/wiki/MVC" target="_blank">https://pt.wikipedia.org/wiki/MVC</a>
+        </div>
+      </li>
+    </ul></div>
+</div>
+<div class="articleSection" data-anchor="Material suplementar">
+<h1 class="articleSectionTitle">Material suplementar</h1>
+        
+        <p>O seguinte material suplementar está disponível online:</p>
+        <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/e32b29ac39d2c360092ad6b3d014aad6c80d4824.pdf">
+          
+            Em busca do Prêmio Nobel - Versão beta
+          
+        </a>
+      </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> M. Bopp, <i>Affective and Emotional Aspects of Human-Computer Interaction</i>, editado por M. Pivec (iOS Press, Clifton, 2006)</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> D. Craciun, J. Sci. Arts Year <b>10</b>, 175 (2010).</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> M.-C. Li and C.-C. Tsai, J. Sci. Educ. Technol. <b>22</b>, 877 (2013).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> D. Tomic and B. Divjak, J. Inf. Organ. Sci. <b>35</b>, 15 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> D.B. Clark, E.E. Tanner-Smith and S.S. Killingsworth, Rev. Educ. Res. <b>86</b>, 79 (2016).</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> U. Wechselberger, in: <i>Trans. Edutainment II</i>, edited by Z. Pan, A.D. Cheok, W. Müller, and A. El Rhabili (Springer-Verlag, Berlin, 2009), p. 90104.</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> S. Samuelson, H.M. Halff, L. Halff and C. Brown, in: <i>3rd IEEE International Conference on Digital Game and Intellitgent Toy Enhanced Learning</i>, Kaohsiung, Taiwan, 2010, editado por G. Biswas, D. Carr, Y.S. Chee and W.Y. Hwang (IEEE Computer Society, Los Alamitos, 2010), p. 166.</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> F.C.C. Campos, A.F. Oliveira, J.R.N. da Silva, EmRede <b>2</b>, 8 (2014).</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> T.V. Paula, E.V.P. Souza, T.G.N. Silva, D.M. Silva and M.E.N.P. Ribeiro, Holos <b>31</b>, 98 (2015).</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> M.A. Moreira e E.F.S. Masini, <i>Aprendizagem Significativa: A Teoria de David Ausubel</i> (Moraes, São Paulo, 1982).</div>
+</li>
+<li>
+<sup class="xref big">[11]</sup><div> D.P. Ausubel, <i>Educational Psychology: A Cognitive View</i> (Holt, Rinehart and Winston, New York, 1968).</div>
+</li>
+<li>
+<sup class="xref big">[12]</sup><div> L.S. Vygotski, <i>A Formação Social Da Mente</i> (Livraria Martins Fontes, São Paulo, 1991).</div>
+</li>
+<li>
+<sup class="xref big">[13]</sup><div> A. Gaspar e I.C.C. Monteiro, Investig. em Ensino Ciências <b>10</b>, 227 (2005).</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publicação nesta coleção</strong><br>2018</li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>19 Out 2017</li>
+<li>
+<strong>Revisado</strong><br>22 Nov 2017</li>
+<li>
+<strong>Aceito</strong><br>28 Nov 2017</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Carlos Alberto dos Santos </strong><strong>*</strong><br><div>Mestrado Nacional Profissional em Ensino de Física, Centro de Ciências Exatas e Naturais, Universidade Federal Rural do Semiárido, Av. Francisco Mota, 572, 59.625-900, Mossoró, RN, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Eliabe Maxsuel de Aquino </strong><br><div>Mestrado Nacional Profissional em Ensino de Física, Centro de Ciências Exatas e Naturais, Universidade Federal Rural do Semiárido, Av. Francisco Mota, 572, 59.625-900, Mossoró, RN, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">*Endereço de correspondência: <a href="mailto:cas.ufrgs@gmail.com">cas.ufrgs@gmail.com</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist"><li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (8)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Fluxograma original do Jogo do Prêmio Nobel.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Esquema operacional da arquitetura MVC (Model-view-controller).
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Menu de administração do jogo.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Interface para o cadastramento de questões.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Menu da biblioteca.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            (A) Congratulação pela passagem para o grau de Doutorado; (B) Consolando pelo infortúnio.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+            Antes de ver o enunciado da questão, o jogador sabe qual o tema abordado, por meio de uma tela como esta.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+            Quando o jogador erra, ele sabe a razão do erro e é encaminhado para o ponto da biblioteca onde encontra o hipertexto que trata o assunto da questão.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Menu de administração do jogo.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Interface para o cadastramento de questões.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Menu da biblioteca.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            (A) Congratulação pela passagem para o grau de Doutorado; (B) Consolando pelo infortúnio.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+            Antes de ver o enunciado da questão, o jogador sabe qual o tema abordado, por meio de uma tela como esta.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+            Quando o jogador erra, ele sabe a razão do erro e é encaminhado para o ponto da biblioteca onde encontra o hipertexto que trata o assunto da questão.
+          </div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/14e374aa65cef2d06c224b0a36150748aa56ae50.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Fluxograma original do Jogo do Prêmio Nobel.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/14e374aa65cef2d06c224b0a36150748aa56ae50.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/afdc71fb2b4379d9cd163645bf71f62ec933ee59.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Esquema operacional da arquitetura MVC (Model-view-controller).
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/afdc71fb2b4379d9cd163645bf71f62ec933ee59.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/0d7501f7e54dda7c53a92cb44ee519e7ba58cf3f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Menu de administração do jogo.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/0d7501f7e54dda7c53a92cb44ee519e7ba58cf3f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/101a01e4b72862ab0400dc0793f604b0100a3f70.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Interface para o cadastramento de questões.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/101a01e4b72862ab0400dc0793f604b0100a3f70.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/55c3c4c2e45d9cd5e50419d568705a162fdf6d83.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Menu da biblioteca.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/55c3c4c2e45d9cd5e50419d568705a162fdf6d83.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/1e201ae1a1569d4a6e4d3500cad417644fe0bae3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            (A) Congratulação pela passagem para o grau de Doutorado; (B) Consolando pelo infortúnio.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/1e201ae1a1569d4a6e4d3500cad417644fe0bae3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/47ffba0d38d98f8416cf0072c82995def1b0b5e5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+            Antes de ver o enunciado da questão, o jogador sabe qual o tema abordado, por meio de uma tela como esta.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/47ffba0d38d98f8416cf0072c82995def1b0b5e5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/118c5a1369261ff13b6ffa15e47447a455c068bd.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+            Quando o jogador erra, ele sabe a razão do erro e é encaminhado para o ponto da biblioteca onde encontra o hipertexto que trata o assunto da questão.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/118c5a1369261ff13b6ffa15e47447a455c068bd.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/0d7501f7e54dda7c53a92cb44ee519e7ba58cf3f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Menu de administração do jogo.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/0d7501f7e54dda7c53a92cb44ee519e7ba58cf3f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/101a01e4b72862ab0400dc0793f604b0100a3f70.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Interface para o cadastramento de questões.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/101a01e4b72862ab0400dc0793f604b0100a3f70.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/55c3c4c2e45d9cd5e50419d568705a162fdf6d83.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Menu da biblioteca.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/55c3c4c2e45d9cd5e50419d568705a162fdf6d83.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/1e201ae1a1569d4a6e4d3500cad417644fe0bae3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            (A) Congratulação pela passagem para o grau de Doutorado; (B) Consolando pelo infortúnio.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/1e201ae1a1569d4a6e4d3500cad417644fe0bae3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/47ffba0d38d98f8416cf0072c82995def1b0b5e5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+            Antes de ver o enunciado da questão, o jogador sabe qual o tema abordado, por meio de uma tela como esta.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/47ffba0d38d98f8416cf0072c82995def1b0b5e5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/118c5a1369261ff13b6ffa15e47447a455c068bd.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+            Quando o jogador erra, ele sabe a razão do erro e é encaminhado para o ponto da biblioteca onde encontra o hipertexto que trata o assunto da questão.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/118c5a1369261ff13b6ffa15e47447a455c068bd.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Santos, Carlos Alberto dos e Aquino, Eliabe Maxsuel deEm busca do Prêmio Nobel - Versão beta. Revista Brasileira de Ensino de Física [online]. 2018, v. 40, n. 3 [Acessado CURRENTDATE] , e3501. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2017-0317&gt;. Epub 01 Fev 2018. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2017-0317.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Em busca do Prêmio Nobel - Versão beta&#34; &#34;Santos, Carlos Alberto dos&#34; &#34;Aquino, Eliabe Maxsuel de&#34; &#34;2018&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Em busca do Prêmio Nobel - Versão beta&#34; &#34;Santos, Carlos Alberto dos&#34; &#34;Aquino, Eliabe Maxsuel de&#34; &#34;2018&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/hyJcdZMJMvfFqTCDxgLP7Wh/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172018000300601&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2017-0317" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2017-0317">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2017-0317" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2017-0317">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2017-0317"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2017-0317" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2017-0317">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2017-0317" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Em busca do Prêmio Nobel - Versão beta
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2017-0317">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

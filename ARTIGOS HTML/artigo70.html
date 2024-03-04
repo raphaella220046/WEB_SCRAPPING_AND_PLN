@@ -1,0 +1,2207 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Polinômio dos quadrados mínimos condicionado Polinômio dos quadrados mínimos condicionado </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Polinômio dos quadrados mínimos condicionado"/>
+<meta property="og:description" content="O ajustamento polinomial a dados experimentais pelo método de quadrados mínimos é muito usado, e..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Dotto, Oclide J.">
+        
+            <meta name="citation_author_affiliation" content="Universidade de Caxias do Sul">
+        
+        <meta name="citation_author" content="Dornelles Filho, Adalberto A.">
+        
+            <meta name="citation_author_affiliation" content="Universidade de Caxias do Sul">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="28"></meta>
+<meta name="citation_number" content="3"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="397"></meta>
+    <meta name="citation_lastpage" content="401"></meta>
+    <meta name="citation_doi" content="10.1590/S1806-11172006000300017"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Polinômio dos quadrados mínimos condicionado
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="O ajustamento polinomial a dados experimentais pelo método de quadrados mínimos é muito usado, e aqui estudamos a introdução de uma simples modificação, que, em certos casos, é mais adequada, isto é, condicionamos o polinômio a conter um dado ponto. Incluímos uma implementação do correspondente algoritmo em MATLAB."></meta>
+<meta name="citation_article_type" content="brief-report"></meta>
+<meta name="citation_publication_date" content="2006"></meta>
+<meta name="citation_keywords" content="ajustamento"></meta><meta name="citation_keywords" content="quadrados mínimos"></meta><meta name="citation_keywords" content="condicionamento"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2006.v28n3/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2006.v28n3/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172006000300017 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Notas e Discussões</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 28 
+                (3)
+            <span class="_separator"> • </span>2006</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172006000300017" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172006000300017</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172006000300017"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Polinômio dos quadrados mínimos condicionado<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">The constrained least squares polynomial</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Oclide J. Dotto </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Caxias do Sul,  
+          ,  
+        ,  Universidade de Caxias do Sul,  Departamento de Matemática e Estatística ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Adalberto A. Dornelles Filho </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Caxias do Sul,  
+          ,  
+        ,  Universidade de Caxias do Sul,  Departamento de Matemática e Estatística ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>O ajustamento polinomial a dados experimentais pelo método de quadrados mínimos é muito usado, e aqui estudamos a introdução de uma simples modificação, que, em certos casos, é mais adequada, isto é, condicionamos o polinômio a conter um dado ponto. Incluímos uma implementação do correspondente algoritmo em MATLAB.</p>
+<p>ajustamento; quadrados mínimos; condicionamento</p>
+</div>
+<hr>
+<div>
+<p>Since the least-squares polynomial fit is used very often, we study here a simple modification that is more suitable for some cases, that is, we constrain the polynomial to pass through a given point, besides satisfying the least-squares property. We include an implementation of the corresponding algorithm in MATLAB.</p>
+<p>data fitting; least squares; constraint</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>NOTAS E DISCUSSÃO</b>
+    </p>
+<p></p>
+<p>Polinômio dos quadrados mínimos condicionado</p>
+<p></p>
+<p>
+      <b>The constrained least squares polynomial</b>
+    </p>
+<p></p>
+<p> Oclide J. Dotto<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        ojdotto@ucs.br.
+      </span></span></span>; Adalberto A. Dornelles Filho </p>
+<p></p>
+<p> Departamento de Matemática e Estatística, Universidade de Caxias do Sul, Caxias do Sul, RS, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>O ajustamento polinomial a dados experimentais pelo método de quadrados mínimos é muito usado, e aqui estudamos a introdução de uma simples modificação, que, em certos casos, é mais adequada, isto é, condicionamos o polinômio a conter um dado ponto. Incluímos uma implementação do correspondente algoritmo em MATLAB.</p>
+<p></p>
+<p><b>Palavras-chave:</b> ajustamento, quadrados mínimos, condicionamento. </p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p> Since the least-squares polynomial fit is used very often, we study here a simple modification that is more suitable for some cases, that is, we constrain the polynomial to pass through a given point, besides satisfying the least-squares property. We include an implementation of the corresponding algorithm in MATLAB.</p>
+<p></p>
+<p><b>Keywords:</b> data fitting, least squares, constraint. </p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>É popular o ajustamento polinomial discreto dos quadrados mínimos (q. m.). Para evocar o processo desse ajustamento, consideremos os dados da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a>, onde a primeira linha forma uma seqüência finita crescente.</p>
+<div class="row table" id="tab01">
+<a name="tab01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p> Suponhamos que queiramos ajustar a esses dados o polinômio </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/584d66855be6167ed38ca7b2b3bc7af1f14b1fdc.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>de ordem <i>k</i> &lt; <i>n</i> dos q. m. A melhor maneira de obter a solução é o uso da álgebra linear como segue. Começamos gerando a matriz de planejamento (<i>design matrix</i> [1]) </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/833f97b14dfbedf20a3496a5654a86afa401e3a8.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> de ordem (<i>n</i>+1)×(<i>k</i>+1), determinada pelo vetor <b>x</b> = [ <i>x</i><sub>0</sub><i>x</i><sub>1</sub> ... <i>x<sub>n</sub></i> ]<sup><i>t</i></sup>. A solução única (porque <b>X</b> é não-singular) da equação normal </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm03">
+<a name="frm03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/d3f3e5f439339f542f2e08516579a546436411ad.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>é o vetor <b>a</b> dos coeficientes do polinômio dos q. m. (1). </p>
+<p></p>
+<p> Do ponto de vista dos métodos de resolução numérica de (3), o uso da matriz de planejamento pode levar a imprecisões uma vez que <b>X</b> se torna mal-condicionada quando sua ordem é alta. No entanto, isso não é relevante na maioria dos casos práticos, onde dificilmente a ordem do polinômio ajustado é maior que 3. </p>
+<p></p>
+<p> O desenvolvimento mais completo da teoria e solução numérica dos quadrados mínimos foi feita por Åke Björck em [2], mas pode ser encontrado em muitos bons livros de álgebra linear, como [3, 4, 5]. Uma introdução rápida sobre a solução dos q. m. encontra-se em [6]. </p>
+<p></p>
+<p> Façamos aqui uma pequena digressão útil. Na estimativa da solução <b>Xa</b> = <b>y</b> mediante o método dos q. m., é conveniente às vezes ponderar essa estimativa, isto é, usar e <i>equação normal ponderada </i></p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm04">
+<a name="frm04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/54cbd68455117709c0c4684b379227186fc76e0e.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>em vez da equação normal ordinária (3), escolhendo, para matriz de ponderação <b>W</b>, uma conveniente matriz simétrica definida positiva, que minimize o vetor residual <b>r</b> : = <b>Xa</b> - <b>y</b> no sentido dos q. m. associados ao produto interno definido por <b>W</b>, o que significa simplesmente minimizar <b>r</b><sup><i>t</i></sup><b>Wr</b>. É conhecido [7] que a escolha <i>ótima</i> é a inversa da matriz <b>V</b> = [ <i>v<sub>ij</sub></i> ] das variâncias-covariâncias dos vetores aleatórios das observações, <b>y</b><sub><i>i</i></sub> = [ <i>y</i><sub>1<i>i</i></sub><i>y</i><sub>2<i>i</i></sub> ... <i>y<sub>mi</sub></i>]<sup><i>t</i></sup>, <i>i</i> = 0, 1, ..., <i>n</i>, isto é, <b>W</b> = <b>V</b><sup>-1</sup> (cf. também [2, 8]). Ainda, caso os desvios possam ser supostos não-correlacionados, todas as covariâncias são nulas e <b>V</b> se reduz a uma matriz diagonal, cujos elementos diagonais são as variâncias, que medem a dispersão dos desvios em torno da média, e, nesse caso, para inverter <b>V</b>, basta inverter esses elementos diagonais (que são não-nulos). O efeito do uso de <b>V</b><sup>-1</sup> para ponderação é terem menor peso os desvios maiores. </p>
+<p></p>
+<p> Voltemos agora ao assunto central do artigo. A curva que representa geometricamente o polinômio dos q. m. não passa pelos pontos definidos pelos dados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a>, a não ser que coincida com a do polinômio de interpolação, o que ocorre quando <i>k = n</i>. No entanto, em certos casos, pela natureza do problema, sabemos de antemão que deve passar por determinado ponto, mesmo que esse ponto não figure entre os dados. </p>
+<p></p>
+<p> A um polinômio dos q. m., forçado a passar por um ponto <i>P</i><sub>0</sub> escolhido previamente, chamamos de <i>polinômio dos q. m. condicionado</i>, ou polinômio dos q. m. ancorado no ponto P<sub>0</sub>. </p>
+<p></p>
+<p>
+      <b>2. Reta dos quadrados mínimos ancorada na origem</b>
+    </p>
+<p></p>
+<p> A lei de Hooke estabelece que, quando uma força <i>F</i> é aplicada a uma mola homogênea, o alongamento <i>x</i> da mola varia linearmente com essa força, dentro de limites, isto é, </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm05">
+<a name="frm05"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/177d0a41e624c1dc1db3df7345fed9867a4b594b.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> onde <i>a</i> é dita a constante de Hooke da mola. Para determinar <i>a</i>, executamos experimentos que fornecem uma tabela de duas linhas com os valores de <i>F</i> dados e os valores de <i>x</i> resultantes. Em seguida ajustamos a reta dos q. m. aos dados e a declividade dessa reta é uma estimativa da constante de Hooke da mola. Essa reta quase certamente não passa pela origem, mesmo que a origem se inclua nos dados. No entanto, idealmente, deveria passar pela origem, pois o alongamento é nulo para uma força aplicada nula. </p>
+<p></p>
+<p> Para forçar a reta dos q. m. a passar pela origem, basta achar a solução dos q. m. do sistema linear</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm06">
+<a name="frm06"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/b18d0197e55f60341773ad3d131d0a0a90429df0.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Uma relação de proporcionalidade direta entre duas grandezas, como em (5), ocorre com freqüência. Outros exemplos são: a intensidade <i>i</i> e a tensão <i>v</i> de uma corrente elétrica aplicada a um resistor, a força <i>F</i> e aceleração resultante <i>a</i> aplicada a um móvel, etc. </p>
+<p></p>
+<p>
+      <b>Exemplo 1</b>
+    </p>
+<p></p>
+<p> Vejamos um caso específico. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab02"><span class="sci-ico-fileTable"></span>Tabela 2</a> mostra os valores do alongamento <i>x</i> (em centímetros) de uma mola <i>vs</i>. força de tração <i>F</i> (em Newtons) aplicada, ambos em módulo. </p>
+<div class="row table" id="tab02">
+<a name="tab02"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p> Aqui a reta dos q. m. tem por equação </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm07">
+<a name="frm07"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/d67dd67b53806faf46c9b3f22f7fa2260f19be42.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>e a reta dos q. m. ancorada na origem</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm08">
+<a name="frm08"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/55432e7890779fe8ffccc0c958e2db4f48eab48c.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a> mostra ambas as retas. A primeira não contém a origem. Vemos que as declividades, em unidades coerentes, não coincidem, embora sejam próximas, e é razoável dizer que o valor <i>a</i> = 0,76 é uma estimativa melhor que <i>a</i> = 0,78 para a constante da mola. </p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Para a reta dos q. m. ancorada na origem, a equação matricial (3) pode ser reescrita como </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm09">
+<a name="frm09"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/f28780c5d44c9d54900ac6543b296f29488a8065.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>De (9) deduzimos que <i>a</i> declividade a dessa reta é dada por</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm10">
+<a name="frm10"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/ed0d94de028751738f809daeda21e172911eb0c1.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Em laboratórios de ensino, em vez da fórmula (10), é usada comumente a fórmula</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm11">
+<a name="frm11"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/caad1281b589f8d92561f7bd413ed668db639ebe.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> que expressa a média aritmética <i>a</i> das declividades <i>y<sub>i</sub>/x<sub>i</sub></i> das retas, cada uma das quais contendo a origem e um ponto (<i>x<sub>i</sub>,y<sub>i</sub></i>). A expressão (11) é bastante intuitiva e produz um resultado levemente diferente (<i>a</i> = 0,73, no caso) e, por outro lado, parece não ter nenhuma relação com (10). De fato, elas não são equivalentes. Mas é interessante observar o que segue. </p>
+<p></p>
+<p> Primeiro, adotando a equação normal ponderada (4) e a inversa <b>V</b><sup>-1</sup> da matriz das variâncias-covariâncias para matriz de ponderação, a fórmula (9) passa a escrever-se </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm12">
+<a name="frm12"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/3a1a70230c5a59b42df7f2ba23a6bb98d80f1ecd.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p> Segundo, suponhamos que, para cada <i>i</i> Î {0, 1, 2, ...,<i>n</i> }, tenhamos feito um conjunto de <i>m</i> observações <i>y</i><sub>1<i>i</i></sub><i>, y</i><sub>2<i>i</i></sub><i>, ..., y<sub>mi</sub></i>; então podemos falar da matriz das variâncias-covariâncias dos vetores aleatórios dessas observações, <b>y</b><sub><i>i</i></sub> = [ <i>y</i><sub>1<i>i</i></sub><i> y</i><sub>2<i>i</i></sub><i> ... y<sub>mi</sub></i>]<sup><i>t</i></sup><i>, i </i>= 0, 1, 2, ..., <i>n</i>. Usando a fórmula normal (12), ponderada pela inversa da matriz <b>V</b> = [ <i>v<sub>ij</sub></i> ] das variâncias-covariâncias, ou ponderando as declividades <i>y<sub>i</sub>/x<sub>i</sub></i> em (11) pelos inversos das correspondentes variâncias dessas declividades (ao invés de tomar a média aritmética), obtemos por ambos os caminhos a fórmula</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm13">
+<a name="frm13"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/666bacf6b6f6420d9cd08882a42e3bc1280e96d2.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde pusemos <i>v<sub>i</sub></i> : = <i>v<sub>ii</sub></i> (variâncias) e admitimos <i>v<sub>ij</sub></i> = 0, se <i>i ¹ j</i> (covariâncias nulas). Com relação a ponderação em (13), lembramos que, por uma propriedade da variância, temos: </p>
+<p></p>
+<p>var <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/3c9f1013d05f9bec107fd5fa1533f494a8bb7237.gif">,</p>
+<p></p>
+<p>e o denominador principal em (13) é a soma dos inversos dessas variâncias. </p>
+<p></p>
+<p> Notamos que a fórmula (10) é recuperada de (13) supondo <i>v</i><sub>0</sub> = <i>v</i><sub>1</sub> = ... = <i>v<sub>n</sub></i>, e, com uma simplificação maior, que a fórmula (11) segue de (13), usando as correspondentes variâncias do vetor das declividades</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm14">
+<a name="frm14"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/c53e7a601c664eda4ab659a889a461206e89155e.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>todas iguais a 1/(<i>n</i>+1), isto é, para <i>i </i>= 0, 1, 2 ..., <i>n</i>. Isso explica porque as fórmulas (10) e (11) não são equivalentes. </p>
+<p></p>
+<p>
+      <b>3. Polinômio dos quadrados mínimos condicionado</b>
+    </p>
+<p></p>
+<p> Em vez de ancorar na origem a reta dos q. m., podemos ancorá-la num ponto qualquer. Mas tratemos do caso geral: mostremos como ancorar o polinômio de ordem <i>k</i> dos q. m. num ponto escolhido (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>). O procedimento é feito em três etapas: </p>
+<div><blockquote>
+      <p> 1. operamos uma translação de eixos de maneira que a nova origem seja o ponto (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>); para isso basta subtrair <i>x</i><sub>0</sub> das abscissas e <i>y</i><sub>0</sub> das ordenadas dos dados; </p>
+      <p> 2. ajustamos aos dados transformados o polinômio <i>q</i> dos q. m. ancorado na origem, como no Exemplo 1; </p>
+      <p> 3. fazemos, por último, a transformação inversa da executada na etapa 1, obtendo o polinômio final dos q. m., <i>p</i>(<i>x</i>) = <i>q</i>(<i>x - x</i><sub>0</sub>), ancorado em (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>). </p>
+    </blockquote></div>
+<p></p>
+<p> Suponhamos que os dados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a> já tenham sofrido a alteração descrita na etapa 1. Para operacionalizar a etapa 2, suprimimos a última coluna da matriz de planejamento (2), obtendo uma matriz que indicaremos com <b>U</b>, e achamos a solução a dos q. m. do sistema linear </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm15">
+<a name="frm15"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/af271928f852f328607fc3db3115e49198ac7190.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>O vetor-solução <b>a</b> será formado pelos coeficientes do polinômio <i>q</i> ancorado na origem, descrito na etapa 2. Para o caso de uma reta, a equação matricial (15) torna-se uma equação escalar, da forma (9), onde <b>x</b> e <b>y</b> são os vetores dos dados. </p>
+<p></p>
+<p> No <strong>apêndice</strong> implementamos esse algoritmo em MATLAB, com o nome polqmcond. O programa produz também a correspondente visualização geométrica. </p>
+<p></p>
+<p>
+      <b>Exemplo 2</b>
+    </p>
+<p></p>
+<p> Consideremos a integral elíptica completa</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm16">
+<a name="frm16"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/3d8c1f934d9dea6ca6f53c7a6500be2da028ae28.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Mediante integração numérica, obtemos os valores de <i>E</i>(<i>x</i>) (com <i>x</i> dado em graus) e construímos a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab03"><span class="sci-ico-fileTable"></span>Tabela 3</a>. </p>
+<div class="row table" id="tab03">
+<a name="tab03"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p> Se olharmos para a distribuição desses dados, veremos que um ajustamento parabólico é adequado. Além disso, é óbvio que <i>E</i>(0) = p/2. Então é indicado ancorar a parábola dos q. m. no ponto (0, p/2). Utilizando o programa polqmcond, obtemos essa parábola </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm17">
+<a name="frm17"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/e8686864a764586ae48e38d1ad972ff42121cbb4.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>A parábola ''livre'' dos q. m. é dada por </p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm18">
+<a name="frm18"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/ddbac7ece271644d91430cc62c4a012ef888225f.gif">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a> exibe ambas as parábolas. Visualmente elas se superpõem em quase todo o trajeto. </p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p> Para compararmos os dois ajustamentos, os testamos nos pontos <i>x</i> = 2, 12, 17, 27. Obtivemos a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab04"><span class="sci-ico-fileTable"></span>Tabela 4</a> na qual a segunda linha contém os valores de <i>E</i>(<i>x</i>) obtidos por integração numérica aqui considerados exatos, a terceira linha os valores de <i>P</i>(<i>x</i>) do ajustamento dos q. m. ancorado, e a quarta linha os valores de <i>Q</i>(<i>x</i>) do ajustamento livre.</p>
+<div class="row table" id="tab04">
+<a name="tab04"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p> Vemos que, nesse exemplo, o ajustamento ancorado é melhor para os pontos próximos ao ponto ancorador, como era esperado, e longe dele os ajustamentos tendem a ser equivalentes. Claramente, para um ajustamento linear, por exemplo, a situação longe da âncora é outra, como mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>. </p>
+<p></p>
+<p>
+      <b>4. Comentários finais</b>
+    </p>
+<p></p>
+<p> Nos laboratórios de ensino, é bastante comum realizar experimentos para obter o coeficiente de proporcionalidade entre duas grandezas diretamente proporcionais. Se for usado o recurso do ajuste linear dos q. m., disponível em algumas calculadoras científicas, dificilmente obteremos uma reta que passe exatamente pela origem. Uma elegante solução para essa dificuldade é usar a fórmula (10) que decorre do ajustamento dos q. m. ancorado na origem. </p>
+<p></p>
+<p> Mais geral, mostramos que é possível e relativamente fácil, ao ajustarmos um polinômio dos quadrados mínimos, condicioná-lo a conter um ponto de interesse. Poder-se-ia tentar desenvolver um algoritmo que o condicione a conter mais de um ponto, contanto que ainda retenha um número de graus de liberdade suficientemente elevado. Por exemplo, um caso extremo oposto é condicionar uma reta dos q. m. a conter dois pontos, o que corresponde a ela ficar com zero graus de liberdade e equivale ao problema trivial de achar a equação da reta que passa por esses dois pontos. Não temos certeza se há interesse prático nessa generalização de ancoragem. De qualquer maneira, parece-nos que o caso interessante, exeqüível e útil, é a ancoragem em um ponto apenas. </p>
+<p></p>
+<p>
+      <b>Agradecimento</b>
+    </p>
+<p></p>
+<p>Os autores agradecem ao parecerista a gentil apreciação do artigo, assim como as sugestões. </p>
+<p></p>
+<p>Recebido em 20/2/2006; Revisado em 15/5/2006; Aceito em 29/5/2006 </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:ojdotto@ucs.br">ojdotto@ucs.br</a>.</div>
+      </li>
+    </p>
+<p></p>
+<p></p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] Richard A. Johnson and Dean W. Wichern, <i>Applied    Multivariate Analysis</i> (Prentice Hall, Nova York, 2002) </div></li>
+<li><div>[2] Ĺke Björck, <i>Numerical Methods for Least    Squares Problems</i> (SIAM, Philadelphia, 1966). </div></li>
+<li><div>[3] James W. Demmel, <i>Applied Numerical Linear    Algebra</i> (SIAM, Philadelphia, 1997). </div></li>
+<li><div>[4] Gene H. Golub and Charles F. Van Loan, <i>Matrix    Computations</i> (The John Hopkins University Press, London, 1996). </div></li>
+<li><div>[5] Lloyd N. Trefethen and David Bau III, <i>Numerical    Linear Algebra</i> (SIAM, Philadelphia, 1997). </div></li>
+<li><div>[6] Mário Barone Júnior, <i>Álgebra Linear</i>    (IME-USP, Săo Paulo, 2005), 3Ş ed. </div></li>
+<li><div>[7] Gilbert Strang and Kay Borre, <i>Linear    Algebra, Geodesy and GPS</i> (Wellesley-Cambridge Press, Wellesley, 1997). </div></li>
+<li><div>[8] José Henrique Vuolo, <i>Fundamentos da Teoria    de Erros</i> (Ed. Edgard Blücher Ltda., Săo Paulo, 2005), 2Ş ed. </div></li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="apêndice">
+<h1 class="articleSectionTitle">apêndice</h1>
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/672d2d0524c17706f5860950dc9dd31543977e44.gif">
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        ojdotto@ucs.br.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>06 Nov 2006</li>
+<li>
+<strong>Data do Fascículo</strong><br>2006</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Aceito</strong><br>29 Maio 2006</li>
+<li>
+<strong>Revisado</strong><br>15 Maio 2006</li>
+<li>
+<strong>Recebido</strong><br>20 Fev 2006</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Oclide J. Dotto </strong><br><div>
+          ,  Caxias do Sul,  
+          ,  
+        ,  Universidade de Caxias do Sul,  Departamento de Matemática e Estatística ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Adalberto A. Dornelles Filho </strong><br><div>
+          ,  Caxias do Sul,  
+          ,  
+        ,  Universidade de Caxias do Sul,  Departamento de Matemática e Estatística ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (2)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (18)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm17"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm18"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/629f01200d6cb2bcef6a41999e9739c152ac320a.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/629f01200d6cb2bcef6a41999e9739c152ac320a.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/6623f1611721b5cfaba8ae74b1586c083aeb4969.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/6623f1611721b5cfaba8ae74b1586c083aeb4969.gif"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/cd88c808d318a64ba672907e08dc9045ee072927.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/cd88c808d318a64ba672907e08dc9045ee072927.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/46e3cf9ce881fcc46a618c5a9e04c3dc95150735.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/46e3cf9ce881fcc46a618c5a9e04c3dc95150735.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/d9987758903787d22676a0646853bffe3fa85199.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/d9987758903787d22676a0646853bffe3fa85199.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/f3ba0fa9c0601de7ede231f6c5793bd84eced435.gif" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/f3ba0fa9c0601de7ede231f6c5793bd84eced435.gif"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/584d66855be6167ed38ca7b2b3bc7af1f14b1fdc.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/584d66855be6167ed38ca7b2b3bc7af1f14b1fdc.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/833f97b14dfbedf20a3496a5654a86afa401e3a8.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/833f97b14dfbedf20a3496a5654a86afa401e3a8.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/d3f3e5f439339f542f2e08516579a546436411ad.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/d3f3e5f439339f542f2e08516579a546436411ad.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/54cbd68455117709c0c4684b379227186fc76e0e.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/54cbd68455117709c0c4684b379227186fc76e0e.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/177d0a41e624c1dc1db3df7345fed9867a4b594b.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/177d0a41e624c1dc1db3df7345fed9867a4b594b.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/b18d0197e55f60341773ad3d131d0a0a90429df0.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/b18d0197e55f60341773ad3d131d0a0a90429df0.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/d67dd67b53806faf46c9b3f22f7fa2260f19be42.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/d67dd67b53806faf46c9b3f22f7fa2260f19be42.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/55432e7890779fe8ffccc0c958e2db4f48eab48c.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/55432e7890779fe8ffccc0c958e2db4f48eab48c.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/f28780c5d44c9d54900ac6543b296f29488a8065.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/f28780c5d44c9d54900ac6543b296f29488a8065.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/ed0d94de028751738f809daeda21e172911eb0c1.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/ed0d94de028751738f809daeda21e172911eb0c1.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/caad1281b589f8d92561f7bd413ed668db639ebe.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/caad1281b589f8d92561f7bd413ed668db639ebe.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/3a1a70230c5a59b42df7f2ba23a6bb98d80f1ecd.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/3a1a70230c5a59b42df7f2ba23a6bb98d80f1ecd.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/666bacf6b6f6420d9cd08882a42e3bc1280e96d2.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/666bacf6b6f6420d9cd08882a42e3bc1280e96d2.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/c53e7a601c664eda4ab659a889a461206e89155e.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/c53e7a601c664eda4ab659a889a461206e89155e.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/af271928f852f328607fc3db3115e49198ac7190.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/af271928f852f328607fc3db3115e49198ac7190.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/3d8c1f934d9dea6ca6f53c7a6500be2da028ae28.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/3d8c1f934d9dea6ca6f53c7a6500be2da028ae28.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm17" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/e8686864a764586ae48e38d1ad972ff42121cbb4.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/e8686864a764586ae48e38d1ad972ff42121cbb4.gif"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm18" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/ddbac7ece271644d91430cc62c4a012ef888225f.gif"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/kdJTs4xk85B7s4QCLL8Fwwy/ddbac7ece271644d91430cc62c4a012ef888225f.gif"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Dotto, Oclide J. e Dornelles Filho, Adalberto A.Polinômio dos quadrados mínimos condicionado. Revista Brasileira de Ensino de Física [online]. 2006, v. 28, n. 3 [Acessado CURRENTDATE] , pp. 397-401. Disponível em: &lt;https://doi.org/10.1590/S1806-11172006000300017&gt;. Epub 06 Nov 2006. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172006000300017.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Polinômio dos quadrados mínimos condicionado&#34; &#34;Dotto, Oclide J.&#34; &#34;Dornelles Filho, Adalberto A.&#34; &#34;2006&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Polinômio dos quadrados mínimos condicionado&#34; &#34;Dotto, Oclide J.&#34; &#34;Dornelles Filho, Adalberto A.&#34; &#34;2006&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/kdJTs4xk85B7s4QCLL8Fwwy/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172006000300017&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172006000300017" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172006000300017">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172006000300017" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172006000300017">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172006000300017"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172006000300017" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172006000300017">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172006000300017" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Polinômio dos quadrados mínimos condicionado
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172006000300017">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

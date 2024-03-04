@@ -1,0 +1,2477 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão"/>
+<meta property="og:description" content="Resumo Geralmente os laboratórios didáticos das escolas de ensino médio e das instituições de..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Cid, A.S.">
+        
+            <meta name="citation_author_affiliation" content="Centro Federal de Educação Tecnológica Celso Suckow da Fonseca">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-7690-0054">
+        <meta name="citation_author" content="Correa, T.">
+        
+            <meta name="citation_author_affiliation" content="Universidade do Estado do Rio de Janeiro">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-5853-6885">
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="41"></meta>
+<meta name="citation_number" content="3"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2018-0333"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Resumo Geralmente os laboratórios didáticos das escolas de ensino médio e das instituições de ensino que ofertam graduações em Física e áreas correlatas não possuem equipamentos e/ou práticas experimentais sobre hidrodinâmica. Aplicações de relevância tecnológica tais como o tubo de Pitot ou o tubo de Venturi são estudados, geralmente, como simples aplicações matemáticas da Equação de Bernoulli para fluidos ideais. Visando contribuir para a remediação deste problema é proposto nesse artigo a construção de um tubo de Venturi fabricado com materiais de baixo custo e equipado com uma placa microcontroladora Arduino e sensores de pressão modelo BMP280. O aparato proposto nesse artigo permite a visualização de gráficos, gerados em tempo real, da variação da pressão interna em um ponto com o transcorrer do tempo e estabelece relações empíricas entre pressão, velocidade e área do tubo. O aparato já foi utilizado em cursos técnicos integrados do CEFET/Valença e em curso de Física Experimental que compõe a grade curricular da graduação em Engenharia de Alimentos da mesma instituição. Essa prática faz parte de um projeto que visa criar recursos didáticos para desenvolver atividades de ensino baseados no conceito de aprendizagem ativa, utilizando o método Predizer -- Observar -- Explicar (POE)."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2019-02-18"></meta>
+<meta name="citation_keywords" content="Hidrodinâmica"></meta><meta name="citation_keywords" content="Arduino"></meta><meta name="citation_keywords" content="Tubo de Venturi"></meta><meta name="citation_keywords" content="laboratório didático"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2019.v41n3/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2019.v41n3/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172019000300606 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 41 
+                (3)
+            <span class="_separator"> • </span>2019</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2018-0333" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2018-0333</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2018-0333"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Venturino: analysis of pressure variation in a Venturi's tube using Arduino and pressure sensor</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> A.S. Cid </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Centro Federal de Educação Tecnológica Celso Suckow da Fonseca, Valença, RJ, Brasil<div class="corresp">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:asilvacid@gmail.com">asilvacid@gmail.com</a>.</div>
+<a href="http://orcid.org/0000-0001-7690-0054" class="btnContribLinks orcid">http://orcid.org/0000-0001-7690-0054</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> T. Correa </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade do Estado do Rio de Janeiro, Instituto de Aplicação Fernando Rodrigues da Silveira, Departamento de Ciências da Natureza, Rio de Janeiro, RJ, Brasil<a href="http://orcid.org/0000-0001-5853-6885" class="btnContribLinks orcid">http://orcid.org/0000-0001-5853-6885</a>
+</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumo">
+<h1 class="articleSectionTitle">Resumo</h1>
+<p>Geralmente os laboratórios didáticos das escolas de ensino médio e das instituições de ensino que ofertam graduações em Física e áreas correlatas não possuem equipamentos e/ou práticas experimentais sobre hidrodinâmica. Aplicações de relevância tecnológica tais como o tubo de Pitot ou o tubo de Venturi são estudados, geralmente, como simples aplicações matemáticas da Equação de Bernoulli para fluidos ideais. Visando contribuir para a remediação deste problema é proposto nesse artigo a construção de um tubo de Venturi fabricado com materiais de baixo custo e equipado com uma placa microcontroladora Arduino e sensores de pressão modelo BMP280. O aparato proposto nesse artigo permite a visualização de gráficos, gerados em tempo real, da variação da pressão interna em um ponto com o transcorrer do tempo e estabelece relações empíricas entre pressão, velocidade e área do tubo. O aparato já foi utilizado em cursos técnicos integrados do CEFET/Valença e em curso de Física Experimental que compõe a grade curricular da graduação em Engenharia de Alimentos da mesma instituição. Essa prática faz parte de um projeto que visa criar recursos didáticos para desenvolver atividades de ensino baseados no conceito de aprendizagem ativa, utilizando o método Predizer -- Observar -- Explicar (POE).</p>
+<p><strong>Palavras-chave:</strong><br>Hidrodinâmica; Arduino; Tubo de Venturi; laboratório didático</p>
+</div>
+<div class="articleSection" data-anchor="Abstract">
+<h1 class="articleSectionTitle">Abstract</h1>
+<p>Usually, didactic labors inside schools and inside institutions which offers Physics graduations or related areas does not have equipments or experimental practice about hydrodynamics theme. Important technological applies like Pitot or Venturi tubes are considered only from mathematics perspectives without connection between industry or technological fields and the developed theory. This paper proposes a Venturi tube construction using low cost materials to solve at least in part the lack of hydrodynamics experimental practices. The tube is connected to model BMP280 pressure sensors controlled by a microcontroller board arduino. The apparatus allows to print graphics, created in real time, about how pressure changes at a fixed point over time and establish empirics links between pressure, fluid speed and tube area. It had done in technical courses from CEFET/Valença and in an experimental Physics course which composes the Food Engineering grade. This experiment is inside a project that aims to create didactic resources to develop teaching activities supported by learning activities concepts through Predict -- Observe -- Explain method (POE).</p>
+<p><strong>Keywords:</strong><br>Hydrodinamics; Arduino; Venturi's Tube; didatic laboratory</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>A elaboração de atividades experimentais que visam compreender o funcionamento dos tubos de Venturi e de Pitot permitem desenvolver, simultaneamente, conceitos básicos da Mecânica dos Fluidos e estabelecer conexões com o universo científico, tecnológico e social. A Mecânica dos Fluidos possui diversas aplicações interessantes, por exemplo, na aviação. Para endossar a relevância do tema basta destacar que o tubo de Pitot é um dispositivo utilizado em aviões capaz de gerar dados sobre a velocidade de navegação e fundamental para garantir a estabilidade e segurança dos voos. Inclusive, a perícia que investigou as causas do acidente protagonizado pelo Air Bus 447 em 2009, aeronave da Air France, na rota Rio de Janeiro -- Paris, apontou as falhas do sistema de descongelamento como causa principal para a queda da aeronave <span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] https://brasil.estadao.com.br/noticias/geral,justica-francesa-reconhece-crime-na-queda-do-voo-447,616651, acessado em 12/06/2018.</span><br><a href="https://brasil.estadao.com.br/noticias/geral,justica-francesa-reconhece-crime-na-queda-do-voo-447,616651" target="_blank">https://brasil.estadao.com.br/noticias/g...
+            </a></span></span>. Apesar da relevância do conteúdo, nos cursos de ensino médio e graduações, normalmente, não são estabelecidas conexões entre a teoria e suas aplicações mais relevantes. Ao examinar os principais livros didáticos adotados, tanto do ensino médio [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] C. Xavier e B. Barreto, Física aula por aula (FTD, São Paulo, 2010), v. 2, p. 80.</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[3] L.A. Guimarães e M.F. Boa, Mecânica (Galera, Niterói, 2010), v. 1, p. 420.</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[4] A.G. Filho e C. Toscano, Física: Interação e Tecnologia (Leya, Lisboa, 2016), 2ª ed.</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[5] L.F. Fuke e K. Yamamoto, Física para o ensino médio (Saraiva, São Paulo, 2016), 4ª ed.</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[6] A. Gaspar, Compreendendo a Física (Ática, São Paulo, 2016), 3ª ed.</span></span></span>-<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>[7] A. Máximo, B. Alvarenga e C. Guimarães, Física: Contexto e Aplicações (Scipione, Rio de Janeiro, 2016), 2ª ed.</span></span></span>] quanto do ensino superior [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>[8] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2016), v. 2, p. 85.</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[9] D.K. Randall, Física: Uma abordagem estratégica (Bookman, Porto Alegre, 2009), v. 2, p. 465.</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[10] H.D. Young e R.A. Freedman, Física 2: Termodinâmica e Ondas (Addison Wesley, São Paulo, 2003), v. 2, p. 85.</span></span></span>
+				<span class="ref"><strong class="xref xrefblue">-11</strong><span class="refCtt closed"><span>[11] H.M. Nussenzveig, Curso de Física Básica (Blucher, São Paulo, 2014), v. 2, p. 25.</span></span></span>], nota-se que quando o tema é desenvolvido, quase sempre é seguida a mesma sequência didática: definição de fluxo, equação da continuidade, equação de Bernoulli e dois problemas tradicionais -- o tubo de Venturi e o tubo de Pitot. Entretanto, frequentemente, ambos são abordados como meros exemplos focados em manipulações matemáticas da equação de Bernoulli, descontextualizando-os das aplicações.</p>
+      <p>Á metodologia tradicional, focada em aplicações matemáticas, soma-se o fato dos laboratórios didáticos das escolas e universidades estarem desprovidos, salvo algumas exceções, de equipamentos que permitam realizar práticas experimentais adequadas e relevantes de Mecânica dos Fluidos. Ainda, quando os equipamentos estão disponíveis e práticas experimentais são realizadas, comumente, estão construídas para servirem de simples ilustração teórica baseadas no modelo de laboratório estruturado (<i>cookbook,</i> em inglês). Nesse modelo o estudante recebe o equipamento e um roteiro para montar e/ou realizar os experimentos que os levam a respostas formatadas a fim de serem comparadas com o resultado teórico esperado sem que aconteçam elaboração de hipóteses, construção de modelos e discussões sobre suas limitações de aplicabilidade.</p>
+      <p>Em vista de sanar, ao menos em parte, a escassez de atividades experimentais sobre hidrodinâmica no contexto discutido, relatamos no presente artigo a construção de um tubo de Venturi fabricado com materiais de baixo custo associado a uma placa microcontroladora Arduino e sensores de pressão, denominado a partir desse instante como Venturino. O microcontrolador Arduino foi criado em 2005, desenvolvido com a finalidade de ser uma solução de baixo custo para estudo de programação, automação e designs em geral. Desde então tem sido empregado com sucesso em propostas que associam o ensino de ciências, em especial da Física, com TIC's (Tecnologias de Informação e Comunicação). Na literatura podemos encontrar diversas propostas para sua utilização no ensino de Física [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>[12] M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física 33, 4503 (2011).</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[13] H. Cordova e A.C. Tort, Revista Brasileira de Ensino de Física 38, 2308 (2016).</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[14] A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física 33, 1702 (2011).</span></span></span>
+				<span class="ref"><strong class="xref xrefblue">-15</strong><span class="refCtt closed"><span>[15] L.R.M. Carvalho e H.S. Amorim, Revista Brasileira de Ensino de Física 36, 3501 (2014).</span></span></span>] contudo é inédita a associação do Arduino ao tubo de Venturi para aferir a pressão hidrodinâmica em tempo real a fim de levar o estudante a realizar a conexão entre os conceitos básicos que sustentam a equação de Bernoulli: pressão do fluido, área da seção transversal do tubo e velocidade de escoamento do fluido. Além disso, ainda é possível encontrar trabalhos que propõem experimentos de hidrodinâmica construídos com materiais de baixo custo [<span class="ref"><sup class="xref xrefblue">16</sup><span class="refCtt closed"><span>[16] L.H. Barbosa, C.E. Mora, P.H. Talero e J.O. Organista, Revista Brasileira de Ensino de Física 33, 4309 (2011).</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[17] V.L.B. Jesus e M.A.V. Macedo Junior, Revista Brasileira de Ensino de Física 33, 1507 (2011).</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[18] L. Verchenko, A.G. Dickman e J.R.F. Ferreira, Revista Brasileira de Ensino de Física 31, 3301 (2009).</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[19] B.C.S. Grandi, Caderno Brasileiro de Ensino de Física 7, 73 (1990).</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[20] E.J. Souza, Caderno Brasileiro de Ensino de Física 34, 530 (2017).</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[21] A.A.D. Filho, Caderno Brasileiro de Ensino de Física 13, 76 (1996).</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[22] R. Qin e C. Duan, Jounal of Physics: Conf. Ser. 916, 012038 (2017).</span></span></span>
+				<span class="ref"><strong class="xref xrefblue">-23</strong><span class="refCtt closed"><span>[23] J. Haysom e M. Bowen, Predict, Observe, Explain: Activities Enhancing Scientific Understandin (NSTA Press, Arlington, 2010).</span></span></span>], mas também é inédita a construção de um tubo de Venturi que associa a tecnologia Arduino e materiais de baixo custo. O equipamento proposto é portátil, leve e gerou um custo de aproximadamente 80 reais.</p>
+      <p>O aparato proposto neste artigo foi utilizado em duas turmas do 2° ano do ensino médio integrado do CEFET/Valença e em uma turma do curso de Física Experimental que compõe a grade curricular do curso de Engenharia de Alimentos do CEFET/Valença.</p>
+      <p>Ao final desse trabalho é apresentada, ainda, uma sugestão de construção de atividade baseado no método Predizer -- Observar -- Explicar (POE) em contraponto ao modelo de laboratório estruturado. O POE foi originalmente concebido como uma ferramenta de avaliação formativa da aprendizagem para ser empregado concomitantemente a um experimento qualitativo, demonstrado pelo professor em aulas teóricas, após ministrar o conteúdo. Porém atualmente, a metodologia POE tem sido mais utilizada como uma estratégia de promoção de aprendizagem em diversas áreas de ciências [<span class="ref"><sup class="xref xrefblue">24</sup><span class="refCtt closed"><span>[24] C.W. Liew Effectiveness of Predict-Observe-Explain Technique (Lambert Academic Publishing, Düsseldorf, 2009)</span></span></span>
+				<span class="ref"><sup class="xref xrefblue"></sup><span class="refCtt closed"><span>[25] R.J. Santos e D.G.G. Sasaki Revista Brasileira de Ensino de Física 37, 3506 (2015).</span></span></span>
+				<span class="ref"><strong class="xref xrefblue">-26</strong><span class="refCtt closed"><span>[26] D.G.G. Sasaki e V.L.B. Jesus Revista Brasileira de Ensino de Física 39, 2403 (2017).</span></span></span>] e já existem pesquisas que comprovam a eficiência do método também com simulações computacionais [<span class="ref"><sup class="xref xrefblue">27</sup><span class="refCtt closed"><span>[27] P.K. Tao e R.F. Gunstone Journal of Research in Science Teaching 36 859 (1999).</span></span></span>
+				<span class="ref"><strong class="xref xrefblue">-28</strong><span class="refCtt closed"><span>[28] O. Balen e P.A. Netz Acta Scientiae 7, 29 (2005).</span></span></span>] e vídeos <span class="ref"><strong class="xref xrefblue">[29]</strong><span class="refCtt closed"><span>[29] M. Kearney e D.F Treagust Australian Journal of Educational Technology 17 64 (2001).</span></span></span>. O POE hoje está presente em diversos países, desde a educação básica até os primeiros anos do ensino superior, e se insere na tendência mundial conhecida como metodologias de aprendizagem centrada no estudante, uma vez que torna o aluno autônomo e sujeito da construção do próprio conhecimento <span class="ref"><strong class="xref xrefblue">[30]</strong><span class="refCtt closed"><span>[30] A.S. Cid e D.G.G. Sasaki, in Anais do XVII Encontro de Pesquisa em Ensino de Física, (SBF, Campos do Jordão, 2018).</span></span></span>.</p>
+      <p>O trabalho segue então a seguinte estrutura: na segunda seção é feito um resumo teórico do tema a ser explorado; na terceira seção é descrita a montagem do arranjo experimental, materiais necessários, programação e custo estimado; na quarta seção são apresentadas sugestões de atividades experimentais realizadas com o Venturino; na quinta seção são apresentados resultados obtidos com o uso do aparato e da sua aplicação em aulas experimentais; por fim, a sexta seção encerra o trabalho com as conclusões.</p>
+    
+      <h1 class="articleSectionTitle">2. A Equação de Bernoulli e o Tubo de Venturi</h1>
+      <p>A Equação de Bernoulli, ou Princípio de Bernoulli, foi apresentada na obra <i>Hydrodynamica</i> (1738) pelo matemático suíço Daniel Bernoulli <span class="ref"><strong class="xref xrefblue">[31]</strong><span class="refCtt closed"><span>[31] J. Westerweel, Nederlands Tijdschrift voor Natuurkunde 82, 218 (2016).</span></span></span>. A equação representa uma aplicação do princípio de conservação de energia para fluidos ideais, que nos possibilita relacionar a velocidade do fluido com a pressão no mesmo. Inspirado na equação de Bernoulli, o físico italiano Giovanni Battista Venturi criou o tubo de Venturi, um aparato utilizado para obter a velocidade do escoamento de um líquido incompressível. No tubo um líquido atravessa uma região com maior seção transversal e em seguida outra região de menor seção transversal. A partir da diferença de pressão entre as duas regiões, aferida através do deslocamento de colunas do líquido, é possível obter as velocidades do líquido nas regiões. Um exemplo de tubo de Venturi pode ser visto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>
+			</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Tubo de Venturi
+        <br>
+</div>
+</div>
+      <p>Considerando o tubo da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>, de acordo com a equação de Bernoulli, temos a relação entre os pontos 1 e 2:</p>
+      <div class="row formula" id="eeq1">
+<a name="eq1"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(1)</span>
+        <math display="block" id="m1">
+          <mrow>
+            <msub>
+              <mi>p</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>+</mo>
+            <mi>d</mi>
+            <mi>g</mi>
+            <msub>
+              <mi>h</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>+</mo>
+            <mfrac>
+              <mrow>
+                <mi>d</mi>
+                <msub>
+                  <mi>v</mi>
+                  <mn>1</mn>
+                </msub>
+                <msup>
+                  <mrow></mrow>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mn>2</mn>
+            </mfrac>
+            <mo>=</mo>
+            <msub>
+              <mi>p</mi>
+              <mn>2</mn>
+            </msub>
+            <mo>+</mo>
+            <mi>d</mi>
+            <mi>g</mi>
+            <msub>
+              <mi>h</mi>
+              <mn>2</mn>
+            </msub>
+            <mo>+</mo>
+            <mfrac>
+              <mrow>
+                <mi>d</mi>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn>
+                </msub>
+                <msup>
+                  <mrow></mrow>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mn>2</mn>
+            </mfrac>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>Onde p<sub>n</sub> é a pressão no ponto n, d é a densidade do fluido, g é a aceleração da gravidade, h<sub>n</sub> é a altura do ponto n em relação ao chão e v<sub>n</sub> a velocidade do fluido no ponto n. De acordo com a equação da continuidade para fluidos incompressíveis, temos que,</p>
+      <div class="row formula" id="eeq2">
+<a name="eq2"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(2)</span>
+        <math display="block" id="m2">
+          <mtable columnalign="left">
+            <mtr>
+              <mtd>
+                <mspace width="6.0em"></mspace>
+              </mtd>
+              <mtd columnalign="left">
+                <msub>
+                  <mi>A</mi>
+                  <mn>1</mn>
+                </msub>
+                <msub>
+                  <mi>v</mi>
+                  <mn>1</mn>
+                </msub>
+                <mo>=</mo>
+                <msub>
+                  <mi>A</mi>
+                  <mn>2</mn>
+                </msub>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn>
+                </msub>
+                <mo>⇒</mo>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn>
+                </msub>
+                <mo>=</mo>
+                <mfrac linethickness="1">
+                  <mrow>
+                    <msub>
+                      <mi>A</mi>
+                      <mn>1</mn>
+                    </msub>
+                    <msub>
+                      <mi>v</mi>
+                      <mn>1</mn>
+                    </msub>
+                  </mrow>
+                  <mrow>
+                    <msub>
+                      <mi>A</mi>
+                      <mn>2</mn>
+                    </msub>
+                  </mrow>
+                </mfrac>
+              </mtd>
+            </mtr>
+          </mtable>
+        </math>
+      </div></div>
+</div>
+      <p>Onde A<sub>n</sub> é a área de seção reta do tubo em n. Inserindo a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>Eq. 2</a> na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq1"><span class="sci-ico-fileFormula"></span>Eq. 1</a> e isolando v<sub>1</sub>, teremos:</p>
+      <div class="row formula" id="eeq3">
+<a name="eq3"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(3)</span>
+        <math display="block" id="m3">
+          <mrow>
+            <msub>
+              <mi>v</mi>
+              <mn>1</mn>
+            </msub>
+            <msqrt>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>2</mn>
+                          <mi>d</mi>
+                        </mfrac>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <msub>
+                              <mi>p</mi>
+                              <mn>2</mn>
+                            </msub>
+                            <mo>−</mo>
+                            <msub>
+                              <mi>p</mi>
+                              <mn>1</mn>
+                            </msub>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mo>+</mo>
+                        <mn>2</mn>
+                        <mi>g</mi>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <msub>
+                              <mi>h</mi>
+                              <mn>2</mn>
+                            </msub>
+                            <mo>−</mo>
+                            <msub>
+                              <mi>h</mi>
+                              <mn>1</mn>
+                            </msub>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>−</mo>
+                    <msub>
+                      <mi>A</mi>
+                      <mn>1</mn>
+                    </msub>
+                    <msup>
+                      <mrow></mrow>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>/</mo>
+                    <msub>
+                      <mi>A</mi>
+                      <mn>2</mn>
+                    </msub>
+                    <msup>
+                      <mrow></mrow>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </msqrt>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>Portanto, é possível obter as velocidades v<sub>n</sub> através de medidas experimentais das pressões p<sub>1</sub> e p<sub>2</sub>, das alturas h<sub>1</sub> e h<sub>2</sub> e das áreas A<sub>1</sub> e A<sub>2</sub>.</p>
+    
+      <h1 class="articleSectionTitle">3. Arranjo Experimental</h1>
+      <p>O arranjo experimental consiste do Venturino (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>), um aspirador de pó para gerar fluxo de ar no interior do tubo e um computador para visualização dos gráficos de pressão interna em função do tempo, gerados pelo software Arduino IDE (versão 1.8.5) <span class="ref"><strong class="xref xrefblue">[32]</strong><span class="refCtt closed"><span>[32] https://www.arduino.cc/en/Main/Software, acessado em 31/05/2018.</span><br><a href="https://www.arduino.cc/en/Main/Software" target="_blank">https://www.arduino.cc/en/Main/Software...
+            </a></span></span>. O aspirador utilizado foi o modelo <i>Easy Clean Turbo</i> da Philco de 1800 W de potência elétrica. O custo aproximado do Venturino (não incluso aspirador e computador) é de 8 reais. Apresentaremos nas seções seguintes os materiais utilizados e descreveremos o processo de montagem.</p>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Venturino
+        <br>
+</div>
+</div>
+      
+        <h2>3.1. O tubo</h2>
+        <p>Para a confecção do tudo foram utilizados os seguintes materiais:</p>
+        <ul list-type="bullet">
+<li>
+            <p>Um tubo de PVC de 75 mm de diâmetro e comprimento de 50 cm;</p>
+          </li>
+<li>
+            <p>Um tubo de PVC de 50 mm de diâmetro e comprimento de 34 cm;</p>
+          </li>
+<li>
+            <p>Uma luva de redução PVC soldável de 75 para 50 mm;</p>
+          </li>
+<li>
+            <p>Dois bicos para torneira de plástico com diâmetro de 3/4;</p>
+          </li>
+<li>
+            <p>Furadeira, broca e serra copo;</p>
+          </li>
+<li>
+            <p>Massa adesiva (durepoxi) e adesivo plástico para PVC.</p>
+          </li>
+</ul>
+        <p>A construção do tubo é simples, consiste no acoplamento dos dois tubos (de 75 e 50 mm) através da luva de redução soldável e da aplicação do adesivo plástico para PVC. Ainda, em cada tubo, aproximadamente na metade do comprimento, é feita uma abertura com uma serra copo para instalação do bico para torneira. O bico, após encaixado na abertura, é fixado com a massa adesiva. Finalizada a construção do tubo devemos acoplar a saída do aspirador de pó a uma das extremidades do tubo (a extremidade utilizada não influencia nos resultados obtidos).</p>
+      
+      
+        <h2>3.2. Arduino e sensor de pressão</h2>
+        <p>Para realizar a aferição da pressão em tempo real no tubo de Venturi são necessários os seguintes componentes:</p>
+        <ul list-type="bullet">
+<li>
+            <p>Uma placa Arduino;</p>
+          </li>
+<li>
+            <p>Dois sensores de pressão BMP280;</p>
+          </li>
+<li>
+            <p>9 jumpers macho/fêmea;</p>
+          </li>
+<li>
+            <p>Uma protoboard (opcional);</p>
+          </li>
+<li>
+            <p>Cola de silicone.</p>
+          </li>
+</ul>
+        <p>O sensor de pressão BMP280 é um sensor piezo-resistivo, capaz de converter forças atuantes sobre ele em diferença de potencial elétrico. No raio de funcionamento entre 940 e 1100 hPa, à temperatura ambiente, apresenta uma exatidão de aproximadamente ± 0.12 hPa (equivalente a cerca de ± 1 m) <span class="ref"><strong class="xref xrefblue">[33]</strong><span class="refCtt closed"><span>[33] Bosch Sensortec, Data Sheet: BMP 280 Digital Pressure Sensor (Bosch, Reutlingen, 2015).</span></span></span>.</p>
+        <p>Em nosso aparato utilizamos a placa Arduino NANO, no entanto outras placas podem também ser utilizadas, como a mais conhecida Arduino UNO. A protoboard é opcional, facilita as ligações do circuito, no entanto não é essencial à construção do aparato. A instalação dos dois sensores de pressão BMP280 foi realizada fazendo um furo em cada tubo, de espessura suficiente para permitir a passagem dos quatro fios necessários à instalação de cada um. Em seguida os sensores foram puxados para dentro do tubo utilizando um arame como guia, preso na extremidade dos fios. Finalmente, os furos pelos quais passam os fios são vedados com cola de silicone. A cola também permite manter os sensores fixos. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a> exibe o detalhe do sensor posicionado dentro do tubo.</p>
+        <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+            Detalhe do sensor de pressão instalado dentro do tubo.
+          <br>
+</div>
+</div>
+        <p>
+          <b>Circuito</b>
+        </p>
+        <p>A ligação do sensor ao Arduino não envolve muitas complexidades. O sensor possui seis conexões, conforme é visto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a> das quais apenas quatro serão utilizadas em ambos os sensores: VCC, GND, SCK/SCL e SDA/SDI.</p>
+        <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+            Sensor de pressão BMP280.
+          <br>
+</div>
+</div>
+        <p>Os sensores comunicam-se com o Arduino através de “endereços” pré-estabelecidos, sendo o mesmo para todos os modelos de BMP280, no entanto, devido ao uso simultâneo de dois sensores torna-se imperioso a alteração do “endereço” de um deles para que não haja conflito. Essa operação é feita ao conectar a entrada SDO de um dos sensores ao pino 5V do Arduino. As conexões VCC e GND de cada sensor são conectadas, respectivamente, às entradas 5V e GND do Arduino, enquanto as outras conexões devem ser conectadas em pinos apropriados, que podem ser distintos em cada modelo de placa. Especificamente para a placa Arduino NANO (e também para a UNO) os pinos apropriados são os pinos A4 (SDA/SDI) e A5 (SCL/SCK). Como alguns pinos do Arduino receberão múltiplas conexões, a utilização da protoboard é recomendada. Vale ressaltar que o sensor pode apresentar os pinos soldados ou não e isso depende do local de aquisição. Caso os pinos não sejam soldados será necessário, ainda, um ferro de solda. O esquema do circuito pode ser visto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a>.</p>
+        <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+            Esquema do circuito.
+          <br>
+</div>
+</div>
+        <p>
+          <b>Código</b>
+        </p>
+        <p>Com todo o aparato instalado e sensores conectados à placa Arduino, resta efetuar o envio do código para a mesma. Para isso é preciso acessar a página do Arduino <span class="ref"><strong class="xref xrefblue">[16]</strong><span class="refCtt closed"><span>[16] L.H. Barbosa, C.E. Mora, P.H. Talero e J.O. Organista, Revista Brasileira de Ensino de Física 33, 4309 (2011).</span></span></span> e baixar o programa Arduino IDE, disponível gratuitamente para Windows, Mac OS e Linux. Após baixado e instalado, deve-se adicionar na pasta do programa, em <i>libraries</i>, as bibliotecas necessárias, que podem ser encontradas em nosso <i>github</i><span class="ref"><strong class="xref xrefblue">[34]</strong><span class="refCtt closed"><span>[34] https://github.com/thiagoca3/venturino, acessado em 06/08/2018.</span><br><a href="https://github.com/thiagoca3/venturino" target="_blank">https://github.com/thiagoca3/venturino...
+            </a></span></span>, assim como o código. Adicionadas as bibliotecas, basta abrir o arquivo do código e carregar para a placa, previamente conectada à porta USB do computador. Em seguida, na Arduino IDE, clique em Ferramentas e em Plotter Serial, para observar o gráfico das pressões em função do tempo. Inicialmente, com o aspirador desligado, os gráficos das pressões devem estar próximos, no entanto, devido aos sensores não serem perfeitamente iguais, pode haver uma pequena diferença nos valores da pressão, possível de ser corrigida através de modificação no código, em local indicado no mesmo através de comentários. Feita a correção o código deve ser novamente carregado para a placa. Um passo a passo da utilização da Arduino IDE pode ser encontrada na seguinte referência <span class="ref"><strong class="xref xrefblue">[35]</strong><span class="refCtt closed"><span>[35] T. Correa, Arduino &amp; Pi Lab, disponível em https://arduinopilab.wordpress.com/2017/03/28/arduino-primeiros-passos/, acessado em 31/05/2018.</span><br><a href="https://arduinopilab.wordpress.com/2017/03/28/arduino-primeiros-passos/" target="_blank">https://arduinopilab.wordpress.com/2017/...
+            </a></span></span>. O código, além de poder ser baixado em nosso <i>github</i>, encontra-se no <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/edc8ac99fea1e6b0af4e78a956e74a4e8b434888.pdf">Apêndice</a> do artigo. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a> podemos ver o gráfico visualizado na serial plotter, inicialmente com o aspirador desligado e em seguida com ele ligado. O eixo vertical apresenta a pressão nos tubos em Pascal, enquanto o eixo horizontal apresenta o tempo transcorrido desde o momento em que o plotter serial foi aberto, em milissegundos. No aparato a curva azul corresponde ao sensor de pressão instalado no tubo maior (75 mm), enquanto a curva vermelha corresponde ao sensor de pressão instalado no tubo menor (50 mm).</p>
+        <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+            Gráfico visualizado na serial plotter em Niterói a 25 m acima do nível do mar.
+          <br>
+</div>
+</div>
+      
+    
+      <h1 class="articleSectionTitle">4. Experimentos</h1>
+      <p>Essa seção objetiva sugerir e discutir experimentos possíveis de serem realizados com o Venturino.</p>
+      
+        <h2>4.1. Experimento 1: Monitoramento da pressão interna do tubo</h2>
+        <p>O Venturino permite correlacionar, através de gráficos construídos em tempo real, a pressão interna do fluido e a área da seção transversal do tubo pelo qual desloca-se esse mesmo fluido. Um fluxo de ar é gerado quando o aspirador de pó é ligado e a pressão é monitorada ao longo do tempo nos pontos onde estão localizados os sensores BMP280. De acordo com a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>, a pressão interna do fluido é maior na região monitorada pelo sensor correspondente a curva azul do que a pressão na região monitorada pelo sensor correspondente a curva vermelha. Essa observação já estabelece uma relação empírica entre área e pressão, além de permitir o entendimento da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq1"><span class="sci-ico-fileFormula"></span>Eq. 1</a> com maior profundidade. Esse experimento permite concluir que quanto menor a área de seção transversal menor é a pressão interna do fluido.</p>
+      
+      
+        <h2>4.2. Experimento 2: Efeito da pressão interna sobre bolinhas de isopor</h2>
+        <p>Um segundo experimento interessante consiste em tapar os dois bicos de saída de ar do Venturino com bolinhas de isopor (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Figura 7</a>) e verificar que a bolinha associada ao diâmetro maior (bico 1) cai antes da bolinha associada ao diâmetro menor (bico 2) ao realizar rotação em torno do eixo transversal. Para entender o efeito é necessário considerar que as bolinhas estão submetidas, simultaneamente, a pressão interna do fluido e a pressão atmosférica externa. A pressão atmosférica é igual sobre ambas as bolinhas, enquanto a pressão interna é menor sobre a bolinha posicionada no bico 2 conforme discutido no Experimento 1. A força resultante sobre as duas bolinhas aponta no sentido de fora para dentro do tubo, uma vez que a pressão atmosférica é maior do que a pressão ao longo do tubo quando existe o fluxo de ar (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>). Contudo, no bico 1 a diferença entre a pressão atmosférica e a pressão interna é menor do que a diferença entre a pressão atmosférica e a pressão interna no bico 2. Através desse raciocínio explica-se o fato da bolinha 2 cair posteriormente a bolinha 1 quando o tubo é rotacionado lentamente. Esse experimento é de fácil realização e serve para mostrar que a queda das bolinhas não depende somente da pressão interna do fluido e sim da resultante das forças que atuam sobre as mesmas. Ressalta-se ainda que o efeito é o mesmo independente da saída do tubo pela qual o aspirador é acoplado e a Física do problema é análoga se ao invés do aspirador for utilizado um equipamento que injete ar no interior do tubo.</p>
+        <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+            Demonstração do Experimento 2.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>4.3. Experimento 3: Efeito das saídas de ar nas medidas de pressão.</h2>
+        <p>A equação de Bernoulli, sabemos, é obtida através da lei de conservação de energia e, consequentemente, não é aplicável em situações para as quais existem fontes ou saídas de ar ao longo do tubo. No Venturino existem duas saídas de ar que podem ser utilizadas para suscitar discussões sobre a validade da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq1"><span class="sci-ico-fileFormula"></span>equação 1</a>. Essa discussão torna-se possível ao realizar uma comparação entre a velocidade teórica, calculada através da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq3"><span class="sci-ico-fileFormula"></span>equação 3</a>, e a velocidade experimental. A velocidade experimental pode ser estimada conhecendo o fluxo de ar associado ao modelo de aspirador empregado. Essa informação, algumas vezes, é possível obter no manual do equipamento. Quando o fluxo não constar no manual é possível ter uma ideia de ordem de grandeza através da consulta a manuais de outros modelos semelhantes.</p>
+      
+    
+      <h1 class="articleSectionTitle">5. Resultados</h1>
+      <p>Nesta seção são apresentados os resultados vinculados aos testes iniciais, além dos resultados obtidos na aplicação dos experimentos propostos na seção anterior.</p>
+      
+        <h2>5.1. Teste de validação do sensor BMP280</h2>
+        <p>O Venturino foi submetido a testes preliminares entre os dias seis e vinte de abril de dois mil e dezoito em duas cidades fluminenses: Niterói e Valença. O primeiro teste consistiu em comparar a diferença de pressão atmosférica entre as duas cidades, aferidas com o aparato, e a diferença de pressão calculada utilizando o princípio de Stevin e altitudes das cidades provenientes de uma base de dados <span class="ref"><strong class="xref xrefblue">[36]</strong><span class="refCtt closed"><span>[36] https://www.daftlogic.com/sandbox-google-maps-find-altitude.htm, acessado em 31/05/2018.</span><br><a href="https://www.daftlogic.com/sandbox-google-maps-find-altitude.htm" target="_blank">https://www.daftlogic.com/sandbox-google...
+            </a></span></span>. Em Niterói o valor médio obtido para a pressão atmosférica foi de 101240 Pa, enquanto em Valença o valor médio obtido foi igual a 95595 Pa, resultando numa diferença de pressão de 5645 Pa entre as duas cidades. Através de consulta à base de dados Daft Logic obtivemos para a cidade de Niterói uma altitude de 25 m acima do nível do mar, e para a cidade de Valença uma altitude de 535 m acima do nível do mar. Utilizando o princípio de Stevin e considerando entre as duas localidades densidade do ar constante igual a 1,165 kg/m<sup>3</sup>, e aceleração da gravidade constante igual a 9,788 m/s<sup>2</sup> superior <span class="ref"><strong class="xref xrefblue">[37]</strong><span class="refCtt closed"><span>[37] M.A. Sousa e A.A. Santos, Rev. Bras. Geof. 28, 2 (2010).</span></span></span>, obtivemos uma diferença de pressão igual a 5815,5 Pa entre as duas cidades. Podemos observar que a diferença de pressão obtida com o Venturino e a calculada diferem aproximadamente em 3%, sendo a primeira menor, justamente devido à densidade do ar e a aceleração da gravidade diminuírem com a altitude.</p>
+      
+      
+        <h2>5.2. Cálculo das velocidades do fluido em cada seção do Venturino</h2>
+        <p>Um segundo teste consiste em comparar as velocidades obtidas através das <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>Eqs. 2</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq3"><span class="sci-ico-fileFormula"></span>3</a> com as velocidades tabeladas em manuais de aspiradores de pó. O experimento foi realizado com o aspirador ligado na cidade de Valença, obtendo o gráfico apresentado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a>. As curvas azul e vermelha apresentam, respectivamente, as pressões nos tubos de 75 e 50 mm. Utilizando as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq3"><span class="sci-ico-fileFormula"></span>Eqs. 3</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>2</a>, obtém-se as respectivas velocidades do ar nos tubos maior e menor: 8,08 m/s e 18,11 m/s. O manual do modelo de aspirador utilizado não faz referência à velocidade do fluxo de ar, no entanto o valor obtido para a mesma no tubo de menor diâmetro (que possui mesmo diâmetro da saída do aspirador), é compatível com velocidades associadas ao fluxo gerado por aspiradores de outros modelos semelhantes e com mesma potência Ao comparar as velocidades calculadas com aquelas fornecidas nos manuais de aspiradores pode permitir, ainda, uma discussão sobre a validade da equação de Bernoulli e, portanto de conservação de energia.</p>
+        <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+            Gráfico obtido na cidade de Valença. A curva azul representa a pressão no tubo de 75 mm, já a curva vermelha a pressão no tubo de 50 mm.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>5.3. Aplicação dos experimentos sugeridos</h2>
+        <p>Os experimentos propostos nesse artigo foram reproduzidos em sala de aula dentro da perspectiva do método de aprendizagem ativa conhecido como Predizer-Observar-Explicar (POE) <span class="ref"><strong class="xref xrefblue">[38]</strong><span class="refCtt closed"><span>[38] R.T. White e R.F. Gunstone, Probing Understanding (London Falmer, 1992).</span></span></span>. Não constitui objetivo desse trabalho discutir a metodologia de ensino-aprendizagem empregada mas sim subsidiar escolas e professores com experimentos de baixo custo no campo da hidrodinâmica. Contudo, para que o leitor sacie a necessidade de sugestão para aplicação dos experimentos de acordo com um referencial teórico indica-se, veementemente, a leitura do trabalho “<i>Uma proposta de ensino do princípio de Stevin através do método Predizer-Observar-Explicar (POE)</i>”<span class="ref"><strong class="xref xrefblue">[30]</strong><span class="refCtt closed"><span>[30] A.S. Cid e D.G.G. Sasaki, in Anais do XVII Encontro de Pesquisa em Ensino de Física, (SBF, Campos do Jordão, 2018).</span></span></span>. As considerações sobre metodologia para a construção das aulas de hidrodinâmica para as quais foram utilizadas o Venturino faz-se análoga a discussão do trabalho citado. No apêndice o leitor poderá consultar a atividade POE, aplicada nas salas de aula, como sugestão de utilização dos experimentos. Ressalta-se que a atividade POE sugerida no apêndice gerou resultados positivos no sentido de que grande parte dos alunos construíram qualitativamente as relações entre pressão, velocidade e diâmetro do tubo necessárias para o entendimento da equação de continuidade e da equação de Bernoulli para fluidos ideais. A confirmação do sucesso está amparada pela análise prévia das respostas dos alunos para a atividade e de outros instrumentos avaliativos que foram aplicados posteriormente. Todavia a discussão metodológica, os recursos didáticos empregados, os conflitos cognitivos emergentes nas respostas geradas pelos alunos e a análise dos instrumentos de avaliação são o escopo de um segundo artigo.</p>
+      
+    
+      <h1 class="articleSectionTitle">6. Conclusões</h1>
+      <p>O Venturino foi construído e aplicado seguindo os experimentos sugeridos na terceira e quarta seção. A aplicação foi realizada em duas turmas de 2° ano dos cursos de Alimentos e Química e em uma turma do curso de graduação em Engenharia de Alimentos, ambas do CEFET/Valença. Em cada um dos casos os experimentos foram empregados com sucesso aliados a metodologia POE de aprendizagem ativa. Os experimentos realizados permitiram discutir a variação da pressão com a altitude através dos gráficos obtidos em Niterói e em Valença, além de estabelecer uma relação empírica entre a pressão interna de um fluido e a área da seção transversal do tubo que o contém através dos gráficos gerados pelos sensores BMP280 controlados pela plataforma Arduino. Finalmente, a análise dos dados de pressão gerados pelos sensores permite obter as velocidades do ar no interior de cada tubo. Para despertar o interesse pela compreensão de hidrodinâmica por parte dos alunos foi feita a leitura de uma reportagem sobre acidentes aéreos ocasionados por problemas com o tubo de Pitot <span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] https://brasil.estadao.com.br/noticias/geral,justica-francesa-reconhece-crime-na-queda-do-voo-447,616651, acessado em 12/06/2018.</span><br><a href="https://brasil.estadao.com.br/noticias/geral,justica-francesa-reconhece-crime-na-queda-do-voo-447,616651" target="_blank">https://brasil.estadao.com.br/noticias/g...
+            </a></span></span>. A contextualização do conteúdo aliada aos recursos experimentais, motivaram maior participação dos alunos nas aulas de Física posteriores e aguçaram a curiosidade. Portanto, esse trabalho fornece subsídio para desenvolver o tema hidrodinâmica em sala de aula através da construção de um aparato de baixo custo e realiza propostas de atividades lúdicas e experimentais. Essas atividades permitem construir as relações entre as grandezas relevantes para o entendimento inicial do tema hidrodinâmica: velocidade, pressão e área da seção transversal.</p>
+    </div>
+<div class="articleSection" data-anchor="Supplementary material">
+<h1 class="articleSectionTitle">Supplementary material</h1>
+        
+        <p>O seguinte material suplementar está disponível online:</p>
+        <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/edc8ac99fea1e6b0af4e78a956e74a4e8b434888.pdf">
+          Apêndice
+        </a>
+      </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> https://brasil.estadao.com.br/noticias/geral,justica-francesa-reconhece-crime-na-queda-do-voo-447,616651, acessado em 12/06/2018.<br><a href="https://brasil.estadao.com.br/noticias/geral,justica-francesa-reconhece-crime-na-queda-do-voo-447,616651" target="_blank">» https://brasil.estadao.com.br/noticias/geral,justica-francesa-reconhece-crime-na-queda-do-voo-447,616651</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> C. Xavier e B. Barreto, <i>Física aula por aula</i> (FTD, São Paulo, 2010), v. 2, p. 80.</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> L.A. Guimarães e M.F. Boa, <i>Mecânica</i> (Galera, Niterói, 2010), v. 1, p. 420.</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> A.G. Filho e C. Toscano, <i>Física: Interação e Tecnologia</i> (Leya, Lisboa, 2016), 2ª ed.</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> L.F. Fuke e K. Yamamoto, <i>Física para o ensino médio</i> (Saraiva, São Paulo, 2016), 4ª ed.</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> A. Gaspar, <i>Compreendendo a Física</i> (Ática, São Paulo, 2016), 3ª ed.</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> A. Máximo, B. Alvarenga e C. Guimarães, <i>Física: Contexto e Aplicações</i> (Scipione, Rio de Janeiro, 2016), 2ª ed.</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> D. Halliday, R. Resnick e J. Walker, <i>Fundamentos de Física</i> (LTC, Rio de Janeiro, 2016), v. 2, p. 85.</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> D.K. Randall, <i>Física: Uma abordagem estratégica</i> (Bookman, Porto Alegre, 2009), v. 2, p. 465.</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> H.D. Young e R.A. Freedman, <i>Física 2: Termodinâmica e Ondas</i> (Addison Wesley, São Paulo, 2003), v. 2, p. 85.</div>
+</li>
+<li>
+<sup class="xref big">[11]</sup><div> H.M. Nussenzveig, <i>Curso de Física Básica</i> (Blucher, São Paulo, 2014), v. 2, p. 25.</div>
+</li>
+<li>
+<sup class="xref big">[12]</sup><div> M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física <b>33</b>, 4503 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[13]</sup><div> H. Cordova e A.C. Tort, Revista Brasileira de Ensino de Física <b>38</b>, 2308 (2016).</div>
+</li>
+<li>
+<sup class="xref big">[14]</sup><div> A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física <b>33</b>, 1702 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[15]</sup><div> L.R.M. Carvalho e H.S. Amorim, Revista Brasileira de Ensino de Física <b>36</b>, 3501 (2014).</div>
+</li>
+<li>
+<sup class="xref big">[16]</sup><div> L.H. Barbosa, C.E. Mora, P.H. Talero e J.O. Organista, Revista Brasileira de Ensino de Física <b>33</b>, 4309 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[17]</sup><div> V.L.B. Jesus e M.A.V. Macedo Junior, Revista Brasileira de Ensino de Física <b>33</b>, 1507 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[18]</sup><div> L. Verchenko, A.G. Dickman e J.R.F. Ferreira, Revista Brasileira de Ensino de Física <b>31</b>, 3301 (2009).</div>
+</li>
+<li>
+<sup class="xref big">[19]</sup><div> B.C.S. Grandi, Caderno Brasileiro de Ensino de Física <b>7</b>, 73 (1990).</div>
+</li>
+<li>
+<sup class="xref big">[20]</sup><div> E.J. Souza, Caderno Brasileiro de Ensino de Física <b>34</b>, 530 (2017).</div>
+</li>
+<li>
+<sup class="xref big">[21]</sup><div> A.A.D. Filho, Caderno Brasileiro de Ensino de Física <b>13</b>, 76 (1996).</div>
+</li>
+<li>
+<sup class="xref big">[22]</sup><div> R. Qin e C. Duan, Jounal of Physics: Conf. Ser. <b>916</b>, 012038 (2017).</div>
+</li>
+<li>
+<sup class="xref big">[23]</sup><div> J. Haysom e M. Bowen, <i>Predict, Observe, Explain: Activities Enhancing Scientific Understandin</i> (NSTA Press, Arlington, 2010).</div>
+</li>
+<li>
+<sup class="xref big">[24]</sup><div> C.W. Liew <i>Effectiveness of Predict-Observe-Explain Technique</i> (Lambert Academic Publishing, Düsseldorf, 2009)</div>
+</li>
+<li>
+<sup class="xref big">[25]</sup><div> R.J. Santos e D.G.G. Sasaki Revista Brasileira de Ensino de Física <b>37</b>, 3506 (2015).</div>
+</li>
+<li>
+<sup class="xref big">[26]</sup><div> D.G.G. Sasaki e V.L.B. Jesus Revista Brasileira de Ensino de Física <b>39</b>, 2403 (2017).</div>
+</li>
+<li>
+<sup class="xref big">[27]</sup><div> P.K. Tao e R.F. Gunstone Journal of Research in Science Teaching <b>36</b> 859 (1999).</div>
+</li>
+<li>
+<sup class="xref big">[28]</sup><div> O. Balen e P.A. Netz Acta Scientiae <b>7</b>, 29 (2005).</div>
+</li>
+<li>
+<sup class="xref big">[29]</sup><div> M. Kearney e D.F Treagust Australian Journal of Educational Technology <b>17</b> 64 (2001).</div>
+</li>
+<li>
+<sup class="xref big">[30]</sup><div> A.S. Cid e D.G.G. Sasaki, in <i>Anais do XVII Encontro de Pesquisa em Ensino de Física</i>, (SBF, Campos do Jordão, 2018).</div>
+</li>
+<li>
+<sup class="xref big">[31]</sup><div> J. Westerweel, Nederlands Tijdschrift voor Natuurkunde <b>82</b>, 218 (2016).</div>
+</li>
+<li>
+<sup class="xref big">[32]</sup><div> https://www.arduino.cc/en/Main/Software, acessado em 31/05/2018.<br><a href="https://www.arduino.cc/en/Main/Software" target="_blank">» https://www.arduino.cc/en/Main/Software</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[33]</sup><div> Bosch Sensortec, <i>Data Sheet: BMP 280 Digital Pressure Sensor</i> (Bosch, Reutlingen, 2015).</div>
+</li>
+<li>
+<sup class="xref big">[34]</sup><div> https://github.com/thiagoca3/venturino, acessado em 06/08/2018.<br><a href="https://github.com/thiagoca3/venturino" target="_blank">» https://github.com/thiagoca3/venturino</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[35]</sup><div> T. Correa, <i>Arduino &amp;</i> Pi Lab, disponível em https://arduinopilab.wordpress.com/2017/03/28/arduino-primeiros-passos/, acessado em 31/05/2018.<br><a href="https://arduinopilab.wordpress.com/2017/03/28/arduino-primeiros-passos/" target="_blank">» https://arduinopilab.wordpress.com/2017/03/28/arduino-primeiros-passos/</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[36]</sup><div> https://www.daftlogic.com/sandbox-google-maps-find-altitude.htm, acessado em 31/05/2018.<br><a href="https://www.daftlogic.com/sandbox-google-maps-find-altitude.htm" target="_blank">» https://www.daftlogic.com/sandbox-google-maps-find-altitude.htm</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[37]</sup><div> M.A. Sousa e A.A. Santos, Rev. Bras. Geof. <b>28</b>, 2 (2010).</div>
+</li>
+<li>
+<sup class="xref big">[38]</sup><div> R.T. White e R.F. Gunstone, <i>Probing Understanding</i> (London Falmer, 1992).</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publicação nesta coleção</strong><br>2019</li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>30 Nov 2018</li>
+<li>
+<strong>Aceito</strong><br>07 Jan 2019</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> A.S. Cid </strong><strong>
+            *
+          </strong><br><div>Centro Federal de Educação Tecnológica Celso Suckow da Fonseca, Valença, RJ, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0001-7690-0054" class="btnContribLinks orcid">http://orcid.org/0000-0001-7690-0054</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> T. Correa </strong><br><div>Universidade do Estado do Rio de Janeiro, Instituto de Aplicação Fernando Rodrigues da Silveira, Departamento de Ciências da Natureza, Rio de Janeiro, RJ, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0001-5853-6885" class="btnContribLinks orcid">http://orcid.org/0000-0001-5853-6885</a></li></ul>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:asilvacid@gmail.com">asilvacid@gmail.com</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (8)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (3)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Tubo de Venturi
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Venturino
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Detalhe do sensor de pressão instalado dentro do tubo.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Sensor de pressão BMP280.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Esquema do circuito.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Gráfico visualizado na serial plotter em Niterói a 25 m acima do nível do mar.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Detalhe do sensor de pressão instalado dentro do tubo.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Sensor de pressão BMP280.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Esquema do circuito.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Gráfico visualizado na serial plotter em Niterói a 25 m acima do nível do mar.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+            Demonstração do Experimento 2.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+            Gráfico obtido na cidade de Valença. A curva azul representa a pressão no tubo de 75 mm, já a curva vermelha a pressão no tubo de 50 mm.
+          </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/4a48b66e8952d233acc2e3944e708d6ebac1224f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Tubo de Venturi
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/4a48b66e8952d233acc2e3944e708d6ebac1224f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/039b7248371c37867c0d8f432a059ec6c31acdbc.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Venturino
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/039b7248371c37867c0d8f432a059ec6c31acdbc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/4abe176d8a58345997edae5f2ab5f361a9773712.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Detalhe do sensor de pressão instalado dentro do tubo.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/4abe176d8a58345997edae5f2ab5f361a9773712.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/ae5e86d2c33c67a27f4edeaf5d69b49497b2b44d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Sensor de pressão BMP280.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/ae5e86d2c33c67a27f4edeaf5d69b49497b2b44d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/a689c48cb3a0fb73e683d85ee1b5039cfd5f1161.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Esquema do circuito.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/a689c48cb3a0fb73e683d85ee1b5039cfd5f1161.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/d376a43015681edfa4b3f7179dcc8d2c188440a9.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Gráfico visualizado na serial plotter em Niterói a 25 m acima do nível do mar.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/d376a43015681edfa4b3f7179dcc8d2c188440a9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/4abe176d8a58345997edae5f2ab5f361a9773712.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Detalhe do sensor de pressão instalado dentro do tubo.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/4abe176d8a58345997edae5f2ab5f361a9773712.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/ae5e86d2c33c67a27f4edeaf5d69b49497b2b44d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Sensor de pressão BMP280.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/ae5e86d2c33c67a27f4edeaf5d69b49497b2b44d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/a689c48cb3a0fb73e683d85ee1b5039cfd5f1161.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Esquema do circuito.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/a689c48cb3a0fb73e683d85ee1b5039cfd5f1161.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/d376a43015681edfa4b3f7179dcc8d2c188440a9.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Gráfico visualizado na serial plotter em Niterói a 25 m acima do nível do mar.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/d376a43015681edfa4b3f7179dcc8d2c188440a9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/ff2acca60a04c9a82998a077b3cb95b791fcab56.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+            Demonstração do Experimento 2.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/ff2acca60a04c9a82998a077b3cb95b791fcab56.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/e3a368fbda4f5d1ebe8f6fe81de815c061906941.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+            Gráfico obtido na cidade de Valença. A curva azul representa a pressão no tubo de 75 mm, já a curva vermelha a pressão no tubo de 50 mm.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/ZsbyCkCxLnNNs3FhcSSLHLF/e3a368fbda4f5d1ebe8f6fe81de815c061906941.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m1">
+          <mrow>
+            <msub>
+              <mi>p</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>+</mo>
+            <mi>d</mi>
+            <mi>g</mi>
+            <msub>
+              <mi>h</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>+</mo>
+            <mfrac>
+              <mrow>
+                <mi>d</mi>
+                <msub>
+                  <mi>v</mi>
+                  <mn>1</mn>
+                </msub>
+                <msup>
+                  <mrow></mrow>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mn>2</mn>
+            </mfrac>
+            <mo>=</mo>
+            <msub>
+              <mi>p</mi>
+              <mn>2</mn>
+            </msub>
+            <mo>+</mo>
+            <mi>d</mi>
+            <mi>g</mi>
+            <msub>
+              <mi>h</mi>
+              <mn>2</mn>
+            </msub>
+            <mo>+</mo>
+            <mfrac>
+              <mrow>
+                <mi>d</mi>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn>
+                </msub>
+                <msup>
+                  <mrow></mrow>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mn>2</mn>
+            </mfrac>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m2">
+          <mtable columnalign="left">
+            <mtr>
+              <mtd>
+                <mspace width="6.0em"></mspace>
+              </mtd>
+              <mtd columnalign="left">
+                <msub>
+                  <mi>A</mi>
+                  <mn>1</mn>
+                </msub>
+                <msub>
+                  <mi>v</mi>
+                  <mn>1</mn>
+                </msub>
+                <mo>=</mo>
+                <msub>
+                  <mi>A</mi>
+                  <mn>2</mn>
+                </msub>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn>
+                </msub>
+                <mo>⇒</mo>
+                <msub>
+                  <mi>v</mi>
+                  <mn>2</mn>
+                </msub>
+                <mo>=</mo>
+                <mfrac linethickness="1">
+                  <mrow>
+                    <msub>
+                      <mi>A</mi>
+                      <mn>1</mn>
+                    </msub>
+                    <msub>
+                      <mi>v</mi>
+                      <mn>1</mn>
+                    </msub>
+                  </mrow>
+                  <mrow>
+                    <msub>
+                      <mi>A</mi>
+                      <mn>2</mn>
+                    </msub>
+                  </mrow>
+                </mfrac>
+              </mtd>
+            </mtr>
+          </mtable>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m3">
+          <mrow>
+            <msub>
+              <mi>v</mi>
+              <mn>1</mn>
+            </msub>
+            <msqrt>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>2</mn>
+                          <mi>d</mi>
+                        </mfrac>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <msub>
+                              <mi>p</mi>
+                              <mn>2</mn>
+                            </msub>
+                            <mo>−</mo>
+                            <msub>
+                              <mi>p</mi>
+                              <mn>1</mn>
+                            </msub>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mo>+</mo>
+                        <mn>2</mn>
+                        <mi>g</mi>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <msub>
+                              <mi>h</mi>
+                              <mn>2</mn>
+                            </msub>
+                            <mo>−</mo>
+                            <msub>
+                              <mi>h</mi>
+                              <mn>1</mn>
+                            </msub>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>−</mo>
+                    <msub>
+                      <mi>A</mi>
+                      <mn>1</mn>
+                    </msub>
+                    <msup>
+                      <mrow></mrow>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>/</mo>
+                    <msub>
+                      <mi>A</mi>
+                      <mn>2</mn>
+                    </msub>
+                    <msup>
+                      <mrow></mrow>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </msqrt>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Cid, A.S. e Correa, T.Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão. Revista Brasileira de Ensino de Física [online]. 2019, v. 41, n. 3 [Acessado CURRENTDATE] , e20180333. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2018-0333&gt;. Epub 18 Fev 2019. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2018-0333.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão&#34; &#34;Cid, A.S.&#34; &#34;Correa, T.&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão&#34; &#34;Cid, A.S.&#34; &#34;Correa, T.&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/ZsbyCkCxLnNNs3FhcSSLHLF/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172019000300606&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2018-0333" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2018-0333">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2018-0333" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2018-0333">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2018-0333"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2018-0333" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2018-0333">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2018-0333" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Venturino: análise da variação de pressão em um tubo de Venturi utilizando Arduino e sensor de pressão
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2018-0333">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

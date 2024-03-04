@@ -1,0 +1,1861 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Simulação de Monte Carlo do modelo de crescimento cinético interagente Simulação de Monte Carlo do modelo de crescimento cinético interagente </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Simulação de Monte Carlo do modelo de crescimento cinético interagente"/>
+<meta property="og:description" content="O modelo de crescimento cinético interagente (ou Interacting Growth Walk - IGW) pertence a uma..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Rockenbach, Renata">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual do Oeste do Paraná">
+        
+        <meta name="citation_author" content="Zara, Reginaldo A.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual do Oeste do Paraná">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="32"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="4305-1"></meta>
+    <meta name="citation_lastpage" content="4305-7"></meta>
+    <meta name="citation_doi" content="10.1590/S1806-11172010000400005"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Simulação de Monte Carlo do modelo de crescimento cinético interagente
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="O modelo de crescimento cinético interagente (ou Interacting Growth Walk - IGW) pertence a uma classe de modelos de crescimento usada para simular processos de polimerização. Ele gera cadeias auto-exclusivas, ou seja, que não se auto interceptam, que podem ser usadas no estudo de propriedades de cadeias poliméricas em diferentes temperaturas. O modelo foi investigado através de simulações de Monte Carlo e a análise das propriedades físicas das configuraááes geradas foi efetuada. Foram avaliadas as distribuições de comprimento dos crescimentos frustrados pelo fenômeno de auto-aprisionamento para crescimentos desenvolvidos sob diferentes temperaturas, verificando que o modelo IGW gera cadeias auto-exclusivas longas a baixas temperaturas e que sua eficiência é maior quanto menor for a temperatura. Isto constrasta com os métodos usuais de geração de cadeias auto-exclusivas baseadas em modelos de caminhadas aleatárias (ou SAW -Self Avoiding Walks) para os quais os efeitos de auto-interseção são mais severos para baixas temperaturas. Partindo das distribuições de comprimento das configurações geradas e das frações de sucesso de crescimento foram avaliados os comprimentos médios das configurações e as distribuições de contatos como função da temperatura. Os resultados corroboram as observações de Narasimhan et al. de que existe uma transição Q equivalente àquela observada em modelos SAW e complementa a análise do modelo IGW definido sobre redes quadradas."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2010-12"></meta>
+<meta name="citation_keywords" content="modelos de crescimento"></meta><meta name="citation_keywords" content="transição Θ"></meta><meta name="citation_keywords" content="caminhadas auto-exclusivas"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2010.v32n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2010.v32n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172010000400005 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 32 
+                (4)
+            <span class="_separator"> • </span>Dez 2010</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172010000400005" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172010000400005</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172010000400005"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Simulação de Monte Carlo do modelo de crescimento cinético interagente<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Monte Carlo simulation of the interacting growth model</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Renata Rockenbach </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Cascavel,  
+          ,  Paraná,  
+        ,  Universidade Estadual do Oeste do Paraná,  Centro de Ciências Exatas e Tecnológicas ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Reginaldo A. Zara </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Cascavel,  
+          ,  Paraná,  
+        ,  Universidade Estadual do Oeste do Paraná,  Centro de Ciências Exatas e Tecnológicas ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>O modelo de crescimento cinético interagente (ou Interacting Growth Walk - IGW) pertence a uma classe de modelos de crescimento usada para simular processos de polimerização. Ele gera cadeias auto-exclusivas, ou seja, que não se auto interceptam, que podem ser usadas no estudo de propriedades de cadeias poliméricas em diferentes temperaturas. O modelo foi investigado através de simulações de Monte Carlo e a análise das propriedades físicas das configuraááes geradas foi efetuada. Foram avaliadas as distribuições de comprimento dos crescimentos frustrados pelo fenômeno de auto-aprisionamento para crescimentos desenvolvidos sob diferentes temperaturas, verificando que o modelo IGW gera cadeias auto-exclusivas longas a baixas temperaturas e que sua eficiência é maior quanto menor for a temperatura. Isto constrasta com os métodos usuais de geração de cadeias auto-exclusivas baseadas em modelos de caminhadas aleatárias (ou SAW -Self Avoiding Walks) para os quais os efeitos de auto-interseção são mais severos para baixas temperaturas. Partindo das distribuições de comprimento das configurações geradas e das frações de sucesso de crescimento foram avaliados os comprimentos médios das configurações e as distribuições de contatos como função da temperatura. Os resultados corroboram as observações de Narasimhan et al. de que existe uma transição Q equivalente àquela observada em modelos SAW e complementa a análise do modelo IGW definido sobre redes quadradas.</p>
+<p>modelos de crescimento; transição Θ; caminhadas auto-exclusivas</p>
+</div>
+<hr>
+<div>
+<p>The interacting growth model (IGW) belongs to a class of growth models used to simulate polymerization processes. In this work it was investigated by means of Monte Carlo simulations and a statistical analysis of the properties of the self avoiding configurations was made. We evaluated the distributions of growths frustrated by self trapping for growths carried out under different temperatures. The IGW model generates long chains at low temperatures and its efficiency is improved when the temperature is lowered. This fact contrasts with the usual methods of generating self avoiding chain based on models of self avoinding walks (SAW). Using the distributions of the configurations generated and the fractions and successful growth we evaluated the mean lengths of growths and the distribution of contacts as a function of the temperature. The results confirm the findings of Narasimhan et al. that there is a transition Θ equivalent to that observed in SAW models and complements the analysis of the model defined on square networks.</p>
+<p>growth models; theta-transition; self-avoiding walks</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>
+      <b>Simulação de Monte Carlo do modelo de crescimento cinético interagente</b>
+    </p>
+<p></p>
+<p>
+      <b>Monte Carlo simulation of the interacting growth model</b>
+    </p>
+<p></p>
+<p>Renata Rockenbach; Reginaldo A. Zara<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        razara@unioeste.br.
+      </span></span></span></p>
+<p></p>
+<p>Universidade Estadual do Oeste do Paraná, Centro de Ciências Exatas e Tecnológicas, Colegiado de Ciência da Computação, Cascavel, PR, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>O modelo de crescimento cinético interagente (ou <i>Interacting Growth Walk - IGW</i>) pertence a uma classe de modelos de crescimento usada para simular processos de polimerização. Ele gera cadeias auto-exclusivas, ou seja, que não se auto interceptam, que podem ser usadas no estudo de propriedades de cadeias poliméricas em diferentes temperaturas. O modelo foi investigado através de simulações de Monte Carlo e a análise das propriedades físicas das configuraááes geradas foi efetuada. Foram avaliadas as distribuições de comprimento dos crescimentos frustrados pelo fenômeno de auto-aprisionamento para crescimentos desenvolvidos sob diferentes temperaturas, verificando que o modelo IGW gera cadeias auto-exclusivas longas a baixas temperaturas e que sua eficiência é maior quanto menor for a temperatura. Isto constrasta com os métodos usuais de geração de cadeias auto-exclusivas baseadas em modelos de caminhadas aleatárias (ou <i>SAW -Self Avoiding Walks</i>) para os quais os efeitos de auto-interseção são mais severos para baixas temperaturas. Partindo das distribuições de comprimento das configurações geradas e das frações de sucesso de crescimento foram avaliados os comprimentos médios das configurações e as distribuições de contatos como função da temperatura. Os resultados corroboram as observações de Narasimhan <i>et al.</i> de que existe uma transição Θ equivalente àquela observada em modelos SAW e complementa a análise do modelo IGW definido sobre redes quadradas.</p>
+<p></p>
+<p><b>Palavras-chave:</b> modelos de crescimento, transição Θ, caminhadas auto-exclusivas.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>The interacting growth model (IGW) belongs to a class of growth models used to simulate polymerization processes. In this work it was investigated by means of Monte Carlo simulations and a statistical analysis of the properties of the self avoiding configurations was made. We evaluated the distributions of growths frustrated by self trapping for growths carried out under different temperatures. The IGW model generates long chains at low temperatures and its efficiency is improved when the temperature is lowered. This fact contrasts with the usual methods of generating self avoiding chain based on models of self avoinding walks (SAW). Using the distributions of the configurations generated and the fractions and successful growth we evaluated the mean lengths of growths and the distribution of contacts as a function of the temperature. The results confirm the findings of Narasimhan <i>et al.</i> that there is a transition Θ equivalent to that observed in SAW models and complements the analysis of the model defined on square networks.</p>
+<p></p>
+<p><b>Keywords:</b> growth models, theta-transition, self-avoiding walks.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>Polímeros são moléculas grandes formadas por unidades menores chamadas de monômeros. Se todos os monômeros são iguais a molécula é chamada de homopolímero em constraste com os heteropolímeros formados por monômeros de tipos diferentes [1, 2]. Quando se analisa o polímero em escalas de comprimento maior do que o tamanho de seus constituintes individuais muitas de suas propriedades podem ser descritas de maneira aproximada, desprezando-se a natureza química exata dos monômeros. Nestes casos verifica-se que, dependendo da temperatura, as cadeias poliméricas em bons solventes podem ser encontradas em uma conformação estendida ou em uma configuração colapsada sendo a temperatura de transição entre as diferentes conformações chamada de ponto Θ [1, 2].</p>
+<p></p>
+<p>A caminhada aleatória auto-exclusiva [1, 2] (<i>Self Avoiding Walk - SAW</i>) é um modelo simples para homopolímero linear em um bom solvente descrevendo fisicamente a transição Θ. Traçar uma caminhada aleatória entre dois pontos consiste em estabelecer um caminho ou trajetória que não se intercepta. Descrever a caminhada aleatória em uma rede é uma maneira simples de introduzir o modelo <i>SAW</i>: a caminhada aleatória auto-exclusiva em uma rede é um passeio aleatório no qual cada sítio pode ser visitado por um caminhante somente uma vez. No contexto dos polímeros, cada passo da caminhada representa um monômero enquanto a trajetória completa representa a molécula. A restrição às auto-interseções evita que os monômeros se sobreponham buscando incorporar ao modelo o chamado "efeito de volume excluído" [1, 2].</p>
+<p></p>
+<p>Considere a geração de uma cadeia de <i>N</i> monômeros através do modelo de caminhada aleatória auto-exclusiva. Uma das formas de gerar esta cadeia em uma rede de número de coordenação <i>z</i> consiste em considerar "um caminhante" que parte de uma posição inicial na rede com o objetivo de efetuar uma caminhada de <i>N</i> passos visitando, a cada passo, um sítio diferente. Se o trajeto da caminhada é não reversível, para cada passo existem (z-1) possíveis opções de movimento que possuem a mesma probabilidade de ocorrência, sendo que a escolha do sítio a ser visitado é feita ao acaso. É possível que o caminhante tente mover-se para um sítio já visitado anteriormente contrariando a restrição de auto-exclusão e a caminhada é interrompida. Nas situações em que a condição de auto-exclusão é satisfeita, à medida em que a caminhada prossegue a probabilidade de auto-interseção cresce e, com isso, a geração de caminhadas aleatórias muito longas é comprometida.</p>
+<p></p>
+<p>O modelo de caminhada aleatória descrito acima é atérmico, ou seja, efeitos de temperatura não são levados em conta. Porém é possível incluir interações entre os monômeros combinando efeitos de volume excluído com atração entre monômeros vizinhos não sequencialmente conectados: quando um par de monômeros não consecutivos na trajetória tornam-se primeiros vizinhos na rede diz-se que eles formam um <i>contato</i> e a energia da configuração, que chamaremos de energia de contato, decresce por uma quantidade ε enquanto a energia total da cadeia decresce por uma quantidade dada pela soma das energias de todos os contatos. Com isso, o modelo pode ser investigado utilizando a estatística de Boltzmann e suas propriedades físicas podem ser calculadas para diferentes temperaturas.</p>
+<p></p>
+<p>Quando se utiliza a simulação de Monte Carlo [3] para gerar configurações de cadeias de comprimento <i>N</i> as propriedades físicas destas cadeias podem ser estimadas através de médias no <i>ensemble</i> de configurações. Em um algoritmo de amostragem simples cada cadeia é construída a partir de seu passo inicial, sua energia é calculada e seu peso de Boltzmann para a média de <i>ensemble</i> é computado. Porém, toda vez que a caminhada for interrompida por auto-interseção em um passo <i>t</i> &lt; <i>N</i> uma nova cadeia deve ser iniciada e todo o esforço para construir a cadeia anterior é perdido. Para <i>N</i> grande a maioria das tentativas de crescimento de cadeias auto-exclusivas falha uma vez que a probabilidade de que uma cadeia cresça sem auto-interseções diminui quando seu comprimento aumenta e, por isso, o método de amostragem simples é ineficiente para cadeias longas [10, 11].</p>
+<p></p>
+<p>Uma série de algoritmos mais refinados foram propostos de forma a gerar cadeias longas o suficiente para que a análise das configurações possa ser utilizada para a investigação de cadeias poliméricas, entre os quais destacam-se os algoritmos de Rosenbluth [10] e o PERM-B [11, 12]. Nestes algoritmos cada passo da caminhada é escolhido somente entre os sítios não ocupados eliminando muitas das auto-interseções. Porém isto cria um viés que favorece a formação de cadeias compactas sendo necessária a compensação deste viés através da atribuição de pesos específicos às configurações. Um dos problemas destes métodos é que se gasta muito tempo gerando configurações que possuem um peso associado muito baixo. Seria então interessante gerar apenas as conformações "mais importantes", evitando conformações cujos pesos sejam desprezíveis. Para isto diferentes algoritmos podem ser utilizados como, por exemplo, os algoritmos de Metropolis [3, 13], de Glauber [3, 13], de pivotação [15] ou algoritmos <i>snake slithering</i> [16]. Nestes algoritmos uma sequência de configurações ou conformações é gerada a partir de uma configuração inicial de <i>N</i> monômeros construída por algum método de geração de cadeias auto-exclusivas. A geração de uma configuração à uma temperatura <i>T</i> partindo de uma configuração prévia é um processo estocástico que consiste em produzir, sequecialmente, pequenas alterações na cadeia (movendo alguns de seus monômeros para outras posições) e decidir se a nova configuração será aceita ou se a antiga será mantida. Embora cada algoritmo possa ter uma dinâmica específica, ou seja, um conjunto diferente de regras para a produção de novas conformações, a aceitação da nova configuração depende das energias nova e antiga e é estimada de acordo com o peso de Boltzmann</p>
+<p></p>
+<p>
+      <div class="row fig" id="250e0dabb9154ce8602e9dc3ce787d9e062d079f">
+<a name="250e0dabb9154ce8602e9dc3ce787d9e062d079f"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg250e0dabb9154ce8602e9dc3ce787d9e062d079f"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/250e0dabb9154ce8602e9dc3ce787d9e062d079f.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>k<sub>B</sub></i> é a constante de Boltzmann, <i>T</i> é a temperatura e Δ<i>E</i> = E<sub>nova</sub> - E<sub>antiga</sub>, com Δ<i>E</i> = ∞ se a nova configuração produzir auto-interseção.</p>
+<p></p>
+<p>O procedimento descrito gera uma sequência de configurações, algumas idênticas à anterior e outras levemente modificadas o que revela um problema do método. Como as médias de ensemble são calculadas como médias sobre as configurações geradas, se uma dada configuração for rejeitada e a configuração anterior for novamente computada para a estatística, médias de <i>ensemble</i> incorretas podem ser estimadas. O viés introduzido pela correlação entre configurações subsequentes deve ser evitado deixando a simulação evoluir por um certo número de passos (conhecido como tempo de correlação) sem que as grandezas sejam computadas para a estatística.</p>
+<p></p>
+<p>Recentemente Narasimhan e colaboradores [4, 5] introduziram um algoritmo de caminhada interagente que representa um polímero linear que cresce mais rápido do que pode relaxar, ou seja, cada cadeia cresce diretamente à temperatura <i>T</i> batizado de modelo de crescimento interagente (<i>Interacting Growth Walk-IGW</i>). Ele difere dos modelos existentes na literatura pois ao invés de utilizar a energia total de uma dada configuração para estimar o seu peso de Boltzmann associado, o algoritmo IGW gera configurações auto-exclusivas para qualquer temperatura <i>T</i> &gt; 0 baseando-se em energias locais associadas a cada passo da caminhada. A virtude do algoritmo está em reduzir as chances de auto-interseção gerando configurações mais longas que o algoritmo SAW, porém, reproduzindo o comportamento do modelo SAW acima, abaixo e no ponto Θ. Isto torna o IGW um excelente gerador de conformações de cadeias auto-exclusivas longas uma vez que a média configuracional dos pesos associados aos crescimentos efetuadas via IGW fornece uma estimativa da função de partição canônica [5].</p>
+<p></p>
+<p>Neste trabalho o modelo de crescimento cinético de Narasimhan <i>et al.</i> foi simulado e uma análise estatística das propriedades das configurações geradas foi efetuada com o objetivo de apresentar a caracterização completa das configurações das cadeias geradas. Nas próximas seções são descritos os detalhes do modelo IGW de forma algoritmica, definindo-o sobre uma rede quadrada. É descrita também a avaliação das distribuições de comprimento das caminhadas frustradas por auto-interseção para diferentes temperaturas e discute-se a eficiência do algoritmo em gerar cadeias longas em comparação com a geração de cadeias auto-exclusivas baseadas em modelos SAW. Por fim, partindo das distribuições de comprimento das configurações geradas e das frações de sucesso de crescimento são avaliados os comprimentos médios das configurações e as distribuições de contatos como função da temperatura.</p>
+<p></p>
+<p>
+      <b>2. O modelo de crescimento cinético interagente</b>
+    </p>
+<p></p>
+<p>O modelo de crescimento cinético interagente proposto por Narasimham <i>et al.</i> [4, 5] é um modelo generalizado que incorpora efeitos de temperatura ao modelo de crescimento cinético de Majid [6, 7]. O modelo de Majid faz parte de uma classe de modelos de crescimento de cadeias que simulam um processo de polimerização [14] e cujas propriedades físicas assemelham-se à de um polímero no ponto Θ. No modelo de Majid um polímero "cresce" em uma rede, partindo de um ponto inicial, adicionando a cada iteração (passo de tempo) um novo monômero à cadeia. Neste trabalho utiliza-se uma versão do modelo que gera cadeias poliméricas lineares, ou seja, durante o processo de crescimento do polímero ramificações não são permitidas. Nesta seção o modelo de crescimento cinético interagente (<i>IGW</i>) é apresentado de forma algoritmica, definido sobre uma rede quadrada homogênea e isotrópica.</p>
+<p></p>
+<p>Uma rede quadrada pode ser representada por uma matriz cujos elementos representam os sítios da rede. Considerando uma matriz quadrada com um número <i>L</i> (ímpar) de linhas e colunas pode-se escolher um sistema de referências Cartesiano <i>x-y</i> de forma que o elemento central coincida com a origem do sistema. Neste sistema de referência, em uma rede homogênea de espaçamento unitário, a posição de um sítio da rede é dada por <b>r</b> = <i>x</i><b>i</b> + <i>y</i><b>j</b> onde (<i>x</i> ,<i>y</i>) são as coordenadas do elemento na matriz e <b>i</b> e <b>j</b> são os vetores unitários. Para efeitos do modelo <i>IGW</i> cada sítio pode assumir o estado vazio (não ocupado por um monômero) ou ocupado. No instante <i>t</i> = 0 todos os sítios estão vazios, exceto o sítio central (em <b>r</b><sub>0</sub> = <b>0</b>), o qual é considerado a semente do crescimento.</p>
+<p></p>
+<p>Assim como no modelo de Majid, no <i>IGW</i> o crescimento de uma cadeia polimérica é um processo iterativo que adiciona, a cada iteração, um novo monômero a uma cadeia pré-existente. O crescimento começa com uma semente central e continua adicionando, a cada passo (iteração), um novo monômero à cadeia. O novo monômero adicionado à posição <b>r</b><i><sub>k</sub></i> em um passo <i>t</i> é chamado de sítio ativo ao qual pode ser conectado um (e somente um) monômero no passo (<i>t </i> + 1), ou seja, não são permitidas bifurcações. Considerando a rede homogênea e isotrópica, no primeiro passo o crescimento ocorre para qualquer direção disponível com igual probabilidade. Porém, para <i>t</i> &gt; 1 o crescimento deve obedecer a um conjunto de vínculos geométricos e energéticos que levam em conta tanto o efeito de volume excluído quanto a interação entre os monômeros.</p>
+<p></p>
+<p>Os efeitos de volume excluído são levados em conta considerando o crescimento auto-exclusivo, ou seja, cada sítio da rede não pode ser ocupado por um monômero mais do que uma vez. Diferente do modelo de caminhada aleatória auto-exclusiva onde o próximo passo da caminhada é escolhido aleatoriamente entre todos os primeiros vizinhos do sítio ativo (exceto o sítio do passo anterior), no IGW o crescimento ocorre somente para algum dos primeiros vizinhos do sítio ativo disponíveis para ocupação (vazio). Como consequência da proibição da múltipla ocupação o crescimento pode ser interrompido se o sítio ativo for totalmente envolvido por sítios ocupados (auto aprisionamento), ou seja, se <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/b2dae5a0f21c45646bd3fa76c5a24cd486524208.jpg"> representa o conjunto de sítios não ocupados na vizinhança do sítio ativo, o crescimento será interrompido se <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/b2dae5a0f21c45646bd3fa76c5a24cd486524208.jpg"> = ∅.</p>
+<p></p>
+<p>Uma vez que os vínculos geométricos sejam satisfeitos (<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/b2dae5a0f21c45646bd3fa76c5a24cd486524208.jpg">≠ ∅) o crescimento continua para um sítio j ∈ <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/b2dae5a0f21c45646bd3fa76c5a24cd486524208.jpg"> segundo uma probabilidade que depende dos vínculos energéticos. Os modelos de polímeros mais simples consideram interações de curto alcance entre monômeros vizinhos porém não consecutivos ao longo da cadeia. Para isto uma energia constante atrativa -ε (com ε &gt; 0) é adicionada quando dois monômeros não sequencialmente conectados tornam-se vizinhos na rede (costuma-se dizer que estes monômeros fazem um <i>contato</i> e ε é a energia de contato).</p>
+<p></p>
+<p>Definindo um "número de ocupação" <i>n<sub>c</sub>j</i>=1(0) se o crescimento para o sítio <i>j</i> (não) implica em um contato, a energia ε(<i>j</i>) associada ao crescimento para o sítio <i>j</i> é dada por</p>
+<p></p>
+<p>
+      <div class="row fig" id="66a7534edd59a1ab7fbbb0d584a042f8fbe66f7f">
+<a name="66a7534edd59a1ab7fbbb0d584a042f8fbe66f7f"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg66a7534edd59a1ab7fbbb0d584a042f8fbe66f7f"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/66a7534edd59a1ab7fbbb0d584a042f8fbe66f7f.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>e a probabilidade de que o crescimento ocorra ocupando o sítio <i>j</i> é expressa como</p>
+<p></p>
+<p>
+      <div class="row fig" id="f3c0bf6730d1d7eac9d24171045b537d5f638f9d">
+<a name="f3c0bf6730d1d7eac9d24171045b537d5f638f9d"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgf3c0bf6730d1d7eac9d24171045b537d5f638f9d"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/f3c0bf6730d1d7eac9d24171045b537d5f638f9d.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>qt</i> são os elementos em <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/b2dae5a0f21c45646bd3fa76c5a24cd486524208.jpg">. Como se trata de um modelo crescimento um dos sítios disponíveis na vizinhança do sítio ativo será obrigatoriamente ocupado, mesmo que para isto tenha que ser consultado mais de uma vez.</p>
+<p></p>
+<p>A simulação consiste em acompanhar o processo de crescimento da cadeia desde a semente até que um número de passos <i>N</i> definido de antemão seja atingido. Para <i>N</i> grande o crescimento pode ser interrompido em um passo <i>t</i> &lt; <i>N</i> devido ao aprisionamento geométrico do sítio ativo. Neste caso o crescimento é frustrado e um novo crescimento é iniciado a partir da semente. Porém pode-se desenvolver uma análise estatística da frustração do processo de forma a obter informações sobre as propriedades das cadeias e fornecer uma caracterização adequada do modelo confinado à rede. Nas próximas seções descreve-se alguns tópicos desta análise a partir da simulação do modelo IGW em redes quadradas.</p>
+<p></p>
+<p>
+      <b>3. Resultados e discussão</b>
+    </p>
+<p></p>
+<p>Considere a simulação do crescimento sequencial de <i>R</i> moléculas com um comprimento requerido de <i>N</i> passos. Devido aos vínculos geométricos somente um número <i>S</i> de cadeias atingem o comprimento requerido. Assim, a quantidade <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/2fec34f1fc706d68d2fb0a9a4ed4b662938c5f47.jpg"> daqui por diante será chamada de fração de sucessos. De maneira equivalente, se <i>F</i> é o número de crescimentos interrompidos por aprisionamento, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/18e5692af05f85fccdcf5f698a029fa6bd3b62cc.jpg"> será a fração de falhas ou fracassos de crescimento da cadeia.</p>
+<p></p>
+<p>Durante as simulações adotamos ε = 1 para a energia de contato. Foi simulado um total de 2.0 × 10<sup>6</sup> crescimentos de cadeias de diferentes tamanhos <i>N</i> e as frações de sucesso foram computadas como função da temperatura. Para a melhor clareza dos resultados a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a> mostra a fração de sucessos como função de β para crescimentos de comprimento <i>N</i> = 300 e <i>N</i> = 500 passos. Para baixos valores de β (altas temperaturas) somente uma pequena fração de crescimentos atinge o comprimento requerido sendo que esta fração diminui com o aumento de <i>N</i>. Porém, com o aumento de β, a fração de sucessos cresce continuamente e atinge seu valor máximo (<i>s</i> = 1) para β &gt; 4, ou seja, o número de caminhadas que atingem o comprimento requerido cresce com a diminuição da temperatura o que permite que cadeias longas possam ser obtidas com facilidade. Isto contrasta com a modelagem de cadeias auto-exclusivas por meio de algoritmos tipo PERM-B para os quais a obtenção de cadeias longas em baixas temperaturas é mais rara uma vez que auto-interseções tornam-se mais frequentes.</p>
+<div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Como a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a> revela, para o regime de baixas temperaturas todos os crescimentos atingem o número de passos requerido e com o aumento da temperatura uma fração cada vez maior de crescimentos é frustrada. Para os crescimentos frustrados pode-se investigar o número de monômeros que constituem a cadeia no instante da interrupção do crescimento. Este tipo de análise foi efetuado estimando a frequência <i>p</i>(<i>l</i>) com que o crescimento é interrompido por auto-aprisionamento exatamente no passo <i>L</i> (ao final da simulação esta frequência pode ser identificada com a probabilidade de que um crescimento seja interrompido exatamente no passo <i>L</i>). Obviamente, para o regime de baixa temperatura <i>p</i>(<i>l</i>) = δ (<i>l</i>, <i>N</i>), onde δ(<i>l</i>, <i> N</i>) é a distribuição delta de Kronecker usual. Por outro lado, para temperatura infinita (β = 0) o modelo de crescimento cinético atérmico é recuperado e a distribuição <i>p</i>(<i>l</i>) deve coincidir com a distribuição computada por Hemmer e Hemmer [8, 9], a qual aponta para um crescimento mais provável de 33 passos e tamanho médio das cadeias de 71 passos para crescimentos realizados sobre rede quadrada. Como o modelo IGW incorpora efeitos de temperatura ao modelo de crescimento cinético, ele permite investigar as distribuições de probabilidade <i>p</i>(<i>l</i>) para diferentes valores de temperatura e a partir delas, avaliar o comportamento do comprimento médio das caminhadas como função da temperatura.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a> mostra a distribuição de probabilidade de que o crescimento seja interrompido exatamente no passo <i>L</i> para diferentes valores de β (restritos ao regime de alta temperatura), considerando que p(l) é calculada sobre os crescimentos interrompidos. Ao efetuar a estimativa de <i>p</i>(<i>l</i>) para β = 0) observa-se uma distribuição equivalente àquela obtida por Hemmer e Hemmer [8, 9] para o modelo de crescimento cinético atérmico, ou seja, para ambos os casos o comprimento mais provável e o comprimento médio das cadeias coincidem além da verificacação de que cadeias muito longas possuem baixa probabilidade de ocorrência. À medida em que os crescimentos são executados em temperatura mais baixa a distribuição de comprimentos de caminhadas interrompidas é alterada uma vez que crescimentos com maior número de passos tornam-se cada vez mais frequentes enquanto a frequência de interrupções com comprimentos curtos é reduzida gradativamente. Percebe-se novamente um contraste com os métodos de geração de cadeias SAW tais como os algoritmos de Rosenbluth e PERM-B os quais exibem severos problemas de auto-interseção quando busca-se gerar cadeias longas a baixas temperaturas. Com isso o IGW constitui uma boa opção para a geração de cadeias longas para temperaturas finitas.</p>
+<div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Os comprimentos médios das cadeias geradas podem ser calculados a partir das distribuições <i>p</i>(<i>l</i>). Para o caso β = 0, considerando que (N &gt; 500) ≅ 0 pode-se calcular o comprimento médio do crescimento como <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/4d5c18609a21c777cb3b1fe250758398474ace20.jpg"> o que leva a (<i>l</i>) = 71 em concordância com os valores obtidos por Hemmer e Hemmer. No extremo oposto (β → ∞) onde p(l) = δ(<i>l</i>, <i>N</i>), (<i>l</i>)=δ(<i>l</i>,<i>N</i>), (<i>l</i>) = 500. Para valores intermediários de β a fração de sucessos assume valores 0 &lt; <i>s</i> &lt; 1 e o comprimento médio das caminhadas não pode ser calculado diretamente uma vez que deve-se levar em conta tanto as caminhadas interrompidas quanto as completadas, conforme é mostrado a seguir.</p>
+<p></p>
+<p>Considere um <i>ensemble</i> de <i>R</i> moléculas com um comprimento requerido de <i>N</i> passos. Seja <i>n</i>(<i>l</i>) o número de crescimentos interrompidos exatamente no passo <i>L</i>. A probabilidade de que um crescimento <i>k</i> seja interrompido (ou falhe) exatamente no passo <i>l</i> pode ser estimada como</p>
+<p></p>
+<p>
+      <div class="row fig" id="7308b491c5ac1ce9ed23d27de251812b65f7d0b5">
+<a name="7308b491c5ac1ce9ed23d27de251812b65f7d0b5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg7308b491c5ac1ce9ed23d27de251812b65f7d0b5"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/7308b491c5ac1ce9ed23d27de251812b65f7d0b5.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>enquanto a probabilidade de que o crescimento não tenha sido completado corresponde à fração de fracassos</p>
+<p></p>
+<p>
+      <div class="row fig" id="c7c6750bdeec1892fc1c9c2f87bbf1970244c285">
+<a name="c7c6750bdeec1892fc1c9c2f87bbf1970244c285"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgc7c6750bdeec1892fc1c9c2f87bbf1970244c285"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/c7c6750bdeec1892fc1c9c2f87bbf1970244c285.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>O conjunto <i>p<sub>k</sub></i>(<i>l<sub>k</sub></i>) para todas as cadeias interrompidas fornece a distribuição de probabilidade de que as cadeias tenham sido interrompidas exatamente no passo <i>l</i> conforme discutido anteriomente. Com isso, o comprimento médio das cadeias interrompidas é dado por</p>
+<p></p>
+<p>
+      <div class="row fig" id="38b68971d86dd23b3114ea7f974fbea8d275523a">
+<a name="38b68971d86dd23b3114ea7f974fbea8d275523a"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg38b68971d86dd23b3114ea7f974fbea8d275523a"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/38b68971d86dd23b3114ea7f974fbea8d275523a.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde a soma é efetuada sobre as caminhadas que falharam.</p>
+<p></p>
+<p>Como <i>F</i> corresponde ao número total de crescimentos interrompidos então <i>S</i> = <i>R - F</i> é o número de crescimentos (ou cadeias) que atingiram o comprimento <i>N</i> requerido (número de sucessos) e a probabilidade de que uma caminhada tenha sido completada é dada pela fração de sucessos</p>
+<p></p>
+<p>
+      <div class="row fig" id="40ae834fcfe86590e49e61d728c3f067ef562aea">
+<a name="40ae834fcfe86590e49e61d728c3f067ef562aea"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg40ae834fcfe86590e49e61d728c3f067ef562aea"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/40ae834fcfe86590e49e61d728c3f067ef562aea.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>A contribuição para o comprimento médio dos crescimentos completados para a simulação de <i>R</i> cadeias é dada por</p>
+<p></p>
+<p>
+      <div class="row fig" id="e3bbccb54e55cc1df99e5c1bae0f351c7e0f95b1">
+<a name="e3bbccb54e55cc1df99e5c1bae0f351c7e0f95b1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImge3bbccb54e55cc1df99e5c1bae0f351c7e0f95b1"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/e3bbccb54e55cc1df99e5c1bae0f351c7e0f95b1.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde a soma é efetuada somente sobre os crescimentos completados. Neste caso todas as cadeias têm o mesmo comprimento (<i>l<sub>k</sub></i>≡ N) e a equação acima assume a forma simples</p>
+<p></p>
+<p>
+      <div class="row fig" id="0f58c06143fb15f695c528deea003c8b47cc6c87">
+<a name="0f58c06143fb15f695c528deea003c8b47cc6c87"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg0f58c06143fb15f695c528deea003c8b47cc6c87"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/0f58c06143fb15f695c528deea003c8b47cc6c87.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Por fim, o comprimento médio das cadeias obtidas na simulação de <i>R</i> caminhadas deve ser estimado levando em conta as contribuições do comprimento médio das caminhadas fracassadas e completadas, respeitando a frequência relativa dos eventos, ou seja</p>
+<p></p>
+<p>
+      <div class="row fig" id="257ecaa0146788939c7f5dec263fe515612caee7">
+<a name="257ecaa0146788939c7f5dec263fe515612caee7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg257ecaa0146788939c7f5dec263fe515612caee7"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/257ecaa0146788939c7f5dec263fe515612caee7.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3</a> mostra o comprimento médio das cadeias como função de β para simulações de crescimentos de comprimento requerido de <i>N</i> = 500 passos. Para valores de β baixos o comprimento médio da caminhada é próximo ao valor observado para o modelo de crescimento cinético atérmico porém, aumentando gradativamente com β uma vez que caminhadas mais longas tornam-se cada vez mais frequentes. Para β&gt; βΘ o comprimento médio das caminhadas aproxima-se rapidamente do valor requerido <i>N</i>, ou seja, o crescimento de caminhadas cinéticas torna-se mais eficiente quanto menor for a temperatura. Embora não coincida numericamente, a quantidade βΘ é equivalente ao ponto crítico dos modelos SAW, e marca uma transição de fase entre as fases estendida e colapsada das cadeias.</p>
+<div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>As energias totais das configurações obtidas também podem ser avaliadas como função da temperatura. Como cada contato contribui com uma energia ε, a energia total de uma configuração a uma dada temperatura é dada pelo produto entre ε e o número de contatos Φ formados durante o processo de crescimento. Como o número total de contatos depende do número de passos atingido, pode-se trabalhar com o nômero de contatos por passo do crescimento cinético <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/6e74d2070b3203df6cbbf23012a0d9aecc0aa117.jpg"> onde <i>T</i> é o número de passos com o qual o crescimento é interrompido. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. 4</a> mostra a distribuição de Φ para diferentes valores de β para <i>N</i> = 500.</p>
+<div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para o regime de alta temperatura (β baixo) a formação de contatos ocorre ocasionalmente e, por isso, a probabilidade de obtenção de cadeias com energia não nula é diferente de zero. Mesmo para o caso β = 0 ocorre a formação de contatos ainda que seja de forma aleatória. Diminuindo a temperatura a formação de contatos é favorecida como pode ser observado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. 4</a>. Como os contatos são formados somente durante o processo de crescimento o sítio ativo deve sempre estar na vizinhança de sítios já visitados o que, a princípio, poderia causar aprisionamentos com maior frequência. No entanto, como a frequência de aprisionamento diminui pode-se concluir que as configurações geradas são geometricamente mais compactas embora possam existir ilhas de sítios a serem visitados totalmente circundadas por sítios visitados e, desta forma, inacessíveis para o sítio ativo de crescimento. Os sítios que encontram-se nas bordas internas destas ilhas não poderão estabelecer contatos fazendo com que, mesmo para cadeias suficientemente longas, o número de contatos seja menor que o valor máximo possível. Este efeito pode ser visto na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Fig. 5</a> que mostra uma sequência de configurações de cadeias geradas para crescimentos de 500 passos para diferentes valores de β. Para baixa temperatura (valores altos de β) as configurações são totalmente compactas e o número de contatos por passo aproxima-se da unidade porém, com aumento da temperatura as cadeias formadas tornam-se cada vez mais estendidas na rede, diminuindo o número de contatos e aumentando o número de regiões nas quais o crescimento pode ser auto-aprisionado.</p>
+<div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>4. Conclusão</b>
+    </p>
+<p></p>
+<p>Neste trabalho o modelo de crescimento cinético de Narasimhan <i>et al.</i> [4, 5] foi investigado através de simulações de Monte e uma análise estatística das propriedades das configurações geradas foi efetuada. Foram avaliadas as distribuições de comprimento dos crescimentos frustrados por auto-aprisionamento para crescimentos desenvolvidos sob diferentes temperaturas, verificando que o modelo IGW gera cadeias auto-exclusivas longas a baixas temperaturas e que sua eficiência é maior quanto menor for a temperatura. Isto constrasta com os métodos usuais de geração de cadeias auto-exclusivas baseados em modelos de caminhadas aleatórias para os quais os efeitos de auto-interseção são mais severos quanto menor for a temperatura. Partindo das distribuições de comprimento das configurações geradas e das frações de sucesso de crescimento foram avaliados os comprimentos médios das configurações e as distribuições de contatos como função da temperatura. Os resultados confirmam e complementam as observações de Narasimhan <i>et al.</i> de que existe uma transição Θ equivalente àquela observada em modelos SAW.</p>
+<p></p>
+<p>
+      <b>Agradecimentos</b>
+    </p>
+<p></p>
+<p>R. Rockenback agradece o apoio financeiro da Fundação Araucária, através do PIBIC/UNIOESTE/Fundação Araucária.</p>
+<p></p>
+<p>Recebido em 23/10/2009; Aceito em 22/12/2009; Publicado em 28/2/2011</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:razara@unioeste.br">razara@unioeste.br</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] P.J.    Flory, <i>Principles of Polymer Physics</i> (Cornell University Press, Ithaca,    1971).</div></li>
+<li><div>[2] P.G.    de Gennes, <i>Scaling Concepts in Polymer Physics</i> (Cornell University Press,    Ithaca, 1988).</div></li>
+<li><div>[3] D.    P. Landau and K. Binder, <i>A Guide to Monte Carlo Simulations in Statistical    Physics</i> (Cambridge University Press, Cambridge, 2000).</div></li>
+<li><div>[4] S.L.    Narasimhan, P.S.R. Krishna, K.P.N. Murthy and M. Ramanadham, Phys. Rev. E <b>65</b>,    R010801 (2002).</div></li>
+<li><div>[5] S.L.    Narasimhan, P.S.R. Krishna, M. Ponmurugan and K.P.N. Murthy, J. Chem. Phys.    <b>128</b>, 014105 (2008).</div></li>
+<li><div>[6] I.    Majid, N. Jan, A. Coniglio and H.E. Stanley, Phys. Rev. Lett. <b>52</b>, 1257    (1984).</div></li>
+<li><div>[7] J.W.    Lyklema and K. Kremer, Phys. Rev. Lett. <b>55</b>, 2091 (1985).</div></li>
+<li><div>[8] S.    Hemmer and P.C. Hemmer, J. Chem. Phys. <b>81</b>, 584 (1984).</div></li>
+<li><div>[9] S.    Hemmer and P.C. Hemmer, Phys. Rev. A <b>34</b>, 3304 (1986).</div></li>
+<li><div>[10] M.N.    Rosenbluth and A.W. Rosenbluth, J. Chem. Phys. <b>23</b>, 356 (1955).</div></li>
+<li><div>[11] U.    Bastolla and P. Grassberger, J. Stat. Phys. <b>89</b>, 1061 (1997).</div></li>
+<li><div>[12] P.    Grassberger, Phys. Rev. E <b>56</b>, 3682 (1997).</div></li>
+<li><div>[13] K.    Binder and D.W. Heermann, <i>Monte Carlo Simulation in Statistical Physics:    An introduction</i> (Springer-Verlag, Berlin, 1992).</div></li>
+<li><div>[14] T.    Vicsek, <i>Fractal Growth Phenomena</i> (World Scientic, Singapore, 1989).</div></li>
+<li><div>[15] N.    Madras and A.E. Sokal, J. Stat. Phys. <b>50</b>, 109 (1988).</div></li>
+<li><div>[16] A.D.    Sokal, in: <i>Monte Carlo and Molecular Dynamics Simulations in Polymer Science</i>    (Oxford University Press, New York, 1989), pp. 47-124.</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        razara@unioeste.br.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>04 Abr 2011</li>
+<li>
+<strong>Data do Fascículo</strong><br>Dez 2010</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Aceito</strong><br>22 Dez 2009</li>
+<li>
+<strong>Recebido</strong><br>23 Out 2009</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Renata Rockenbach </strong><br><div>
+          ,  Cascavel,  
+          ,  Paraná,  
+        ,  Universidade Estadual do Oeste do Paraná,  Centro de Ciências Exatas e Tecnológicas ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Reginaldo A. Zara </strong><br><div>
+          ,  Cascavel,  
+          ,  Paraná,  
+        ,  Universidade Estadual do Oeste do Paraná,  Centro de Ciências Exatas e Tecnológicas ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist"><li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (5)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/ab37a84045b52fe1acfe884e9cbbe8398144abb5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/ab37a84045b52fe1acfe884e9cbbe8398144abb5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/4e0a18df040f9fe392591dd620686294a51defe2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/4e0a18df040f9fe392591dd620686294a51defe2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/e2926ea68c667e52a6bcc48e66d2e0c59f10f60d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/e2926ea68c667e52a6bcc48e66d2e0c59f10f60d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/b9379e0e974ee04ad94a59d9e063ff0176758ce1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/b9379e0e974ee04ad94a59d9e063ff0176758ce1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/70a8855d41dac3cf034c2e54e378f8471963bf0f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/70a8855d41dac3cf034c2e54e378f8471963bf0f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg250e0dabb9154ce8602e9dc3ce787d9e062d079f" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/250e0dabb9154ce8602e9dc3ce787d9e062d079f.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/250e0dabb9154ce8602e9dc3ce787d9e062d079f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg66a7534edd59a1ab7fbbb0d584a042f8fbe66f7f" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/66a7534edd59a1ab7fbbb0d584a042f8fbe66f7f.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/66a7534edd59a1ab7fbbb0d584a042f8fbe66f7f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgf3c0bf6730d1d7eac9d24171045b537d5f638f9d" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/f3c0bf6730d1d7eac9d24171045b537d5f638f9d.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/f3c0bf6730d1d7eac9d24171045b537d5f638f9d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg7308b491c5ac1ce9ed23d27de251812b65f7d0b5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/7308b491c5ac1ce9ed23d27de251812b65f7d0b5.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/7308b491c5ac1ce9ed23d27de251812b65f7d0b5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgc7c6750bdeec1892fc1c9c2f87bbf1970244c285" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/c7c6750bdeec1892fc1c9c2f87bbf1970244c285.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/c7c6750bdeec1892fc1c9c2f87bbf1970244c285.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg38b68971d86dd23b3114ea7f974fbea8d275523a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/38b68971d86dd23b3114ea7f974fbea8d275523a.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/38b68971d86dd23b3114ea7f974fbea8d275523a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg40ae834fcfe86590e49e61d728c3f067ef562aea" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/40ae834fcfe86590e49e61d728c3f067ef562aea.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/40ae834fcfe86590e49e61d728c3f067ef562aea.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImge3bbccb54e55cc1df99e5c1bae0f351c7e0f95b1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/e3bbccb54e55cc1df99e5c1bae0f351c7e0f95b1.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/e3bbccb54e55cc1df99e5c1bae0f351c7e0f95b1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg0f58c06143fb15f695c528deea003c8b47cc6c87" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/0f58c06143fb15f695c528deea003c8b47cc6c87.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/0f58c06143fb15f695c528deea003c8b47cc6c87.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg257ecaa0146788939c7f5dec263fe515612caee7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/257ecaa0146788939c7f5dec263fe515612caee7.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/mLCd8VWsdHGNBw5DcqX6wvk/257ecaa0146788939c7f5dec263fe515612caee7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Rockenbach, Renata e Zara, Reginaldo A.Simulação de Monte Carlo do modelo de crescimento cinético interagente. Revista Brasileira de Ensino de Física [online]. 2010, v. 32, n. 4 [Acessado CURRENTDATE] , pp. 4305-1-4305-7. Disponível em: &lt;https://doi.org/10.1590/S1806-11172010000400005&gt;. Epub 04 Abr 2011. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172010000400005.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Simulação de Monte Carlo do modelo de crescimento cinético interagente&#34; &#34;Rockenbach, Renata&#34; &#34;Zara, Reginaldo A.&#34; &#34;2010&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Simulação de Monte Carlo do modelo de crescimento cinético interagente&#34; &#34;Rockenbach, Renata&#34; &#34;Zara, Reginaldo A.&#34; &#34;2010&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/mLCd8VWsdHGNBw5DcqX6wvk/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172010000400005&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172010000400005" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172010000400005">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172010000400005" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172010000400005">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172010000400005"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172010000400005" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172010000400005">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172010000400005" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Simulação de Monte Carlo do modelo de crescimento cinético interagente
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172010000400005">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

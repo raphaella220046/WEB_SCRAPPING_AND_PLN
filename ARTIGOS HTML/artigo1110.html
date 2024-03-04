@@ -1,0 +1,1927 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Ilustração de incertezas em medidas utilizando experimentos de queda livre Ilustração de incertezas em medidas utilizando experimentos de queda livre </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Ilustração de incertezas em medidas utilizando experimentos de queda livre"/>
+<meta property="og:description" content="O conhecimento da incerteza de uma medida é crucial para obter conclusões a partir de resultados..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Coluci, Vitor R.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual de Campinas">
+        
+        <meta name="citation_author" content="Paulino, Guilherme">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual de Campinas">
+        
+        <meta name="citation_author" content="Souza, Diego C. de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual de Campinas">
+        
+        <meta name="citation_author" content="Vasconcelos, Elba P.R.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual de Campinas">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="35"></meta>
+<meta name="citation_number" content="2"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172013000200026"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Ilustração de incertezas em medidas utilizando experimentos de queda livre
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="O conhecimento da incerteza de uma medida é crucial para obter conclusões a partir de resultados experimentais. Erros aleatórios, comuns em experimentos, produzem uma distribuição dos valores medidos que segue o formato gaussiano. Neste trabalho desenvolvemos uma montagem baseada no fenômeno de queda livre para auxiliar na ilustração do conceito de incerteza em medidas. Os tempos de queda de um objeto foram obtidos automaticamente pela placa Arduino e exibidos na forma de um histograma na tela do computador. A visualização do histograma foi feita em tempo real e permitiu verificar o aparecimento do aspecto gaussiano à medida que repetições do experimento eram realizadas."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2013-06"></meta>
+<meta name="citation_keywords" content="incerteza em medidas"></meta><meta name="citation_keywords" content="queda livre"></meta><meta name="citation_keywords" content="placa Arduino"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2013.v35n2/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2013.v35n2/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172013000200026 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Desenvolvimento em Ensino de Física</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 35 
+                (2)
+            <span class="_separator"> • </span>Jun 2013</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172013000200026" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172013000200026</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172013000200026"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Ilustração de incertezas em medidas utilizando experimentos de queda livre<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Illustration of uncertanties in measurements by using free fall experiments</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Vitor R. Coluci </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Guilherme Paulino </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Diego C. de Souza </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>
+          ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Elba P.R. Vasconcelos </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>
+          ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>O conhecimento da incerteza de uma medida é crucial para obter conclusões a partir de resultados experimentais. Erros aleatórios, comuns em experimentos, produzem uma distribuição dos valores medidos que segue o formato gaussiano. Neste trabalho desenvolvemos uma montagem baseada no fenômeno de queda livre para auxiliar na ilustração do conceito de incerteza em medidas. Os tempos de queda de um objeto foram obtidos automaticamente pela placa Arduino e exibidos na forma de um histograma na tela do computador. A visualização do histograma foi feita em tempo real e permitiu verificar o aparecimento do aspecto gaussiano à medida que repetições do experimento eram realizadas.</p>
+<p>incerteza em medidas; queda livre; placa Arduino</p>
+</div>
+<hr>
+<div>
+<p>The knowledge of the uncertainty of a measurement is crucial to draw conclusions from experimental results. Random errors are common in experiments and they produce a distribution of measured values that follows the Gaussian shape. In this work, we developed an apparatus based on the free fall phenomenon to assist in the illustration of the concept of uncertainty in measurements. The free fall time of an object has been obtained automatically by the Arduino board and displayed as a histogram on the computer screen. The visualization of the histogram was produced in real time and allowed to check the appearance of the Gaussian shape as the experiment was repeated.</p>
+<p>uncertainty in measurements; free fall; Arduino platform</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p><b>DESENVOLVIMENTO EM ENISNO DE FÍSICA</b></p>
+<p></p>
+<p><b>Ilustração de incertezas em medidas utilizando experimentos de queda livre</b></p>
+<p></p>
+<p><b>Illustration of uncertanties in measurements by using free fall experiments</b></p>
+<p></p>
+<p> Vitor R. ColuciI,<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding"><strong class="fn-title">1</strong> E-mail: vitor@ft.unicamp.br.</span></span></span>; Guilherme Paulino; Diego C. de Souza; Elba P.R. Vasconcelos</p>
+<p></p>
+<p>Faculdade de Tecnologia, Universidade de Campinas, Limeira, SP, Brasil</p>
+<p></p>
+<p><b>RESUMO</b></p>
+<p></p>
+<p>O conhecimento da incerteza de uma medida é crucial para obter conclusões a partir de resultados experimentais. Erros aleatórios, comuns em experimentos, produzem uma distribuição dos valores medidos que segue o formato gaussiano. Neste trabalho desenvolvemos uma montagem baseada no fenômeno de queda livre para auxiliar na ilustração do conceito de incerteza em medidas. Os tempos de queda de um objeto foram obtidos automaticamente pela placa Arduino e exibidos na forma de um histograma na tela do computador. A visualização do histograma foi feita em tempo real e permitiu verificar o aparecimento do aspecto gaussiano à medida que repetições do experimento eram realizadas.</p>
+<p></p>
+<p><b>Palavras-chave:</b> incerteza em medidas, queda livre, placa Arduino.</p>
+<p></p>
+<p><b>ABSTRACT</b></p>
+<p></p>
+<p>The knowledge of the uncertainty of a measurement is crucial to draw conclusions from experimental results. Random errors are common in experiments and they produce a distribution of measured values that follows the Gaussian shape. In this work, we developed an apparatus based on the free fall phenomenon to assist in the illustration of the concept of uncertainty in measurements. The free fall time of an object has been obtained automatically by the Arduino board and displayed as a histogram on the computer screen. The visualization of the histogram was produced in real time and allowed to check the appearance of the Gaussian shape as the experiment was repeated.</p>
+<p></p>
+<p><b>Keywords:</b> uncertainty in measurements, free fall, Arduino platform.</p>
+<p></p>
+<p><b>1. Introdução</b></p>
+<p></p>
+<p>Os conceitos de medidas e suas incertezas são importantes para a formação geral em física e áreas afins. No ensino superior, esses conceitos são geralmente introduzidos e trabalhados em disciplinas de laboratório. No Ensino Médio, por outro lado, esses conceitos são raramente abordados. Uma abordagem introdutória desses conceitos com uma discussão do método científico poderia contribuir para corrigir a visão equivocada dos alunos do Ensino Médio de que a física é um conjunto de fórmulas "mágicas'' inventadas por gênios da ciência.</p>
+<p></p>
+<p>Quando o conceito de incerteza é abordado, muitas vezes é apresentado por meio da análise de medidas de comprimento ou de tempo. A partir dessas medidas, solicita-se ao aluno cálculos de média e desvio padrão e a elaboração de histogramas. No caso particular de medidas de comprimento (medições do alcance em experimentos de lançamento de projéteis, por exemplo), a obtenção do histograma pode ser tediosa já que o experimento precisa ser repetido inúmeras vezes. Além disso, é necessário programar um tempo para a elaboração do histograma. Isso porque geralmente os alunos ainda estão aprendendo a construir gráficos no computador no estágio do curso em que são apresentados os conceitos de medidas e incertezas.</p>
+<p></p>
+<p>O formato do histograma de medidas de um experimento realizado e repetido várias vezes sob as mesmas condições segue o padrão de uma função gaussiana [1, 2]. Isso ocorre devido a presença de erros aleatórios inerentes do experimento. Dessa forma, ao se aumentar o número de medidas, o aspecto gaussiano vai se tornando evidente. Esse fato pode ser verificado com o uso da chamada tábua de Galton [3] (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>). Proposta por Francis Galton em 1889 para ilustrar a distribuição normal, a tábua tem na parte superior um repositório de esferas (de vidro, por exemplo) que, quando liberadas, atravessam uma região formada por obstáculos (pregos) que as desviam de sua trajetória inicial de maneira aleatória. Após a travessia, as esferas se acumulam em canais que permitem quantificar o número de esferas que chega em cada região da parte inferior. Com a liberação das esferas do repositório, um padrão gaussiano vai aparecendo [4].</p>
+<div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br> - Esquema da táabua de Galton. Bolas de gude são liberadas da parte superior e atravessam um região formada por pregos. Após passar por essa região, atingem a parte inferior onde se acumulam em canais.<br>
+</div>
+</div>
+<p></p>
+<p>Neste trabalho desenvolvemos uma montagem para auxiliar na ilustração do conceito de incerteza em medidas. De forma análoga à tábua de Galton, a montagem permite a visualização simultânea do histograma durante a realização das medidas e a observação do padrão gaussiano quando mais repetições do experimento são realizadas. A montagem sugerida pode ser utilizada em sala de aula tanto no Ensino Médio, para introduzir os conceitos de medidas e incertezas, como no ensino superior, para complementar às aulas já existentes sobre o tema.</p>
+<p></p>
+<p>A montagem foi feita para coletar dados de tempo referentes ao fenômeno de queda livre. Por ser um fenômeno familiar tanto aos alunos do Ensino Médio como do ensino superior, o entendimento do processo de medida se torna mais fácil. A queda livre de um objeto vem sendo estudada há várias décadas [5-12]. Esses trabalhos, voltados ao Ensino de Física, enfatizaram principalmente a determinação da aceleração da gravidade por distintas maneiras e com diferentes graus de precisão utilizando, por exemplo, pulsos elétricos [5], sensores ópticos [6, 9, 11], som [10] e câmera digital [12]. No entanto, pelo nosso conhecimento, ainda nenhum trabalho utilizou o fenômeno de queda livre para ilustrar incertezas em medidas.</p>
+<p></p>
+<p><b>2. Montagem</b></p>
+<p></p>
+<p><b>2.1. Construção</b></p>
+<p></p>
+<p>A montagem é composta por uma esfera de metal, um eletroímã, sensores ópticos, circuitos de aquisição e um computador. A esfera, inicialmente presa a um eletroímã, é liberada do repouso (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 2</a>). Durante a queda, a posição da esfera é detectada por dois sensores ópticos separados por uma distância conhecida. O tempo de queda da esfera é determinado por meio de sinais elétricos enviados pelos sensores a uma placa de aquisição. Essa placa determina a diferença de tempo da passagem da esfera pelos dois sensores e envia a informação ao computador para a visualização posterior dos dados.</p>
+<div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br> - Visão geral da montagem do experimento de queda livre utilizado para a visualização de histogramas de tempos de queda.<br>
+</div>
+</div>
+<p></p>
+<p>Ao se repetir o experimento de liberação da esfera, um histograma dos dados de tempo pode ser construído. Esse histograma apresenta as variações nos valores obtidos das medidas de tempo.</p>
+<p></p>
+<p>Utilizamos um eletroímã para permitir que a esfera fosse liberada praticamente sempre do mesmo ponto (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 2</a>). O eletroímã foi construído enrolando-se um fio de cobre de 1 mm de diâmetro num cilindro de ferro (2 mm de diâmetro e 9 cm de comprimento) num total de aproximadamente 300 voltas (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3a</a>). Um circuito para o eletroímã foi projetado para que este fosse desligado/ligado por um interruptor (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figs. 3</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>4</a>). Esse tipo de mecanismo facilita a repetição do experimento, processo que deve ser feito diversas vezes para que o formato gaussiano do histograma seja melhor visualizado.</p>
+<div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Figura 3 - (a) Eletroímã utilizado para manter a esfera parada antes de iniciar a queda. (b) Circuitos de gerenciamento dos sensores e do eletroímã e a placa de aquisiçãoo Arduino.</p>
+<div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Figura 4 - Circuito de controle do eletroímã.</p>
+<p></p>
+<p>A detecção da passagem da esfera em pontos específicos no eixo vertical foi feita utilizando diodos emissores de luz azul e fotodiodos (sensores). Quando a esfera interrompia a passagem de luz, um sinal era enviado a um circuito que gerencia os dois sensores (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Fig. 5</a>).</p>
+<div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br> - Circuito para coleta de sinais dos sensores e transmissão de dados para a placa Arduino.<br>
+</div>
+</div>
+<p></p>
+<p>Neste circuito, as bases dos transistores BC548 são diretamente conectadas na resposta de saída dos sensores ópticos. A corrente é fotogerada apenas na presença de um feixe luminoso no fotodiodo por um diodo emissor de luz que compõe o sensor. Quando existe fotocorrente na base do transistor, este estará saturado. No momento em que ocorre interrupção deste feixe, o transistor entrará em corte. O circuito integrado 7408 possui portas lógicas AND, que são utilizadas no circuito para adequar o sinal proveniente do coletor do transistor em níveis apenas digitais (lógica TTL, 0 V ou 5 V). Isto é feito comparando este sinal com o sinal constante fornecido pela fonte de alimentação +Vcc (nível lógico alto). Este procedimento resulta em um sinal de saída puramente digital para a comunicação com a placa de aquisição. A aquisição de dados é feita a partir do momento em que os feixes são interrompidos. A frequência de operação do cristal de <i>clock</i> da placa de aquisição é utilizada para contar o tempo em <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/e6d354e4b2b8099c596d48c27436bc3ff86021aa.jpg"> desde que a placa é inicializada. Assim, após ambos os sensores serem acionados pela interrupção do feixe luminoso, a placa calcula a diferença de tempo e envia esse valor para o computador portátil no padrão ASCII, via comunicação serial USB.</p>
+<p></p>
+<p>A placa de aquisição utilizada neste trabalho foi a placa Arduino [13, 14]. A placa Arduino é uma plataforma de prototipagem eletrônica de <i>hardware</i> livre baseada no microcontrolador ATmega328 que possui opções de entrada e saída digitais e analógicas. Outros trabalhos voltados para o Ensino de Física utilizaram a placa Arduino para a investigação de fenômenos mecânicos, térmicos [15] e eletrônicos [16] e mostraram que a placa Arduino é uma opção muito interessante para experimentos didáticos devido ao seu baixo custo e versatilidade de utilização.</p>
+<p></p>
+<p>A programação da placa Arduino é feita por meio de linguagem própria, baseada na linguagem <i>Wiring</i> [13, 17]. O código fonte utilizado para a placa Arduino para a determinação do tempo de queda entre os sensores é apresentado a seguir.</p>
+<p></p>
+<p>/* Recebe os sinais elétricos e imprime a diferença de tempo na saída serial */</p>
+<p></p>
+<p>// Utiliza entradas digitais 6 e 7</p>
+<p></p>
+<p>int sensor1 = 7;</p>
+<p></p>
+<p>int sensor2 = 6;</p>
+<p></p>
+<p>int leitura = 0;</p>
+<p></p>
+<p>unsigned long t1=0, t2=0;</p>
+<p></p>
+<p>float t;</p>
+<p></p>
+<p>// Define as portas dos sensores e</p>
+<p></p>
+<p>// a velocidade de transmissão de</p>
+<p></p>
+<p>// dados (9600 bits/s)</p>
+<p></p>
+<p>void setup() {</p>
+<p></p>
+<p>pinMode (sensor1,INPUT);</p>
+<p></p>
+<p>pinMode (sensor2,INPUT);</p>
+<p></p>
+<p>Serial.begin (9600);</p>
+<p></p>
+<p>}</p>
+<p></p>
+<p>// Laço principal do programa</p>
+<p></p>
+<p>void loop() {</p>
+<p></p>
+<p>// Determina tempo decorrido da liberação da</p>
+<p></p>
+<p>// esfera até o passar pelo sensor 1</p>
+<p></p>
+<p>if (digitalRead(sensor1)==HIGH) {</p>
+<p></p>
+<p>t1=micros();</p>
+<p></p>
+<p>}</p>
+<p></p>
+<p>// Determina tempo decorrido da liberação da</p>
+<p></p>
+<p>// esfera até passar pelo sensor 2</p>
+<p></p>
+<p>if (digitalRead(sensor2)==HIGH) {</p>
+<p></p>
+<p>t2=micros();</p>
+<p></p>
+<p>// Variavel auxiliar para garantir apenas</p>
+<p></p>
+<p>// uma contagem de tempo</p>
+<p></p>
+<p>leitura = 1;</p>
+<p></p>
+<p>}</p>
+<p></p>
+<p>if( leitura == 1 ){</p>
+<p></p>
+<p>// Entra somente se a esfera tiver passado</p>
+<p></p>
+<p>// pelos sensores 1 e 2</p>
+<p></p>
+<p>// Calcula tempo de queda em milisegundos</p>
+<p></p>
+<p>t = (t2-t1)/1000.0;</p>
+<p></p>
+<p>leitura=0;</p>
+<p></p>
+<p>// Imprime o valor de t na porta serial</p>
+<p></p>
+<p>Serial.println(t,3);</p>
+<p></p>
+<p>// Aguarda 1 segundo para nova contagem delay(1000);</p>
+<p></p>
+<p>}</p>
+<p></p>
+<p>}</p>
+<p></p>
+<p>Os fotodiodos utilizados possuem uma corrente sensível à variação de luminosidade, cuja precisão de tempo de corte é da ordem de ns [18]. Portanto, a limitação da precisão do tempo obtido é dada basicamente pela placa Arduino, cujo tempo de aquisição é da ordem de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/cb2ca1c82fcad08b688b16d10b9c30b2bbf52b60.jpg"> [13].</p>
+<p></p>
+<p>A visualização dos dados de tempo de queda é feita utilizando um histograma construído com o <i>software</i> gratuito <b>Processing</b> [19]. O <b>Processing</b> permite uma comunicação direta com a placa <b>Arduino</b> e fornece muitas possibilidades para se trabalhar com a visualização dos dados processados por ela. O código fonte para o programa <b>Processing</b> que foi utilizado para gerar os histogramas pode ser obtido em [20].</p>
+<p></p>
+<p><b>2.2. Testes</b></p>
+<p></p>
+<p>Para testar a montagem construída, realizamos medidas de tempo para diferentes distâncias entre os sensores e obtivemos a aceleração da esfera. Utilizamos uma esfera de aço de 1.90 ± 0.05 cm de diâmetro. Como a distância máxima percorrida pela esfera durante a queda é de aproximadamente 35 cm (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a>), o efeito do atrito da esfera com o ar foi considerado desprezível. Mohazzabi calculou que, para uma esfera de aço de 2 cm de diâmetro, não considerar o atrito do ar leva a um erro no tempo de queda de apenas 0.02% para uma distância de 50 cm [21]. Como no nosso experimento temos uma distância inferior a esta, o erro deve ser ainda menor. Assim, desprezando-se o atrito do ar, a aceleração da esfera deve ser o valor da aceleração da gravidade. Nessas condições, a queda da esfera (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Fig. 6</a>) é descrita por um movimento acelerado</p>
+<p></p>
+<p><div class="row fig" id="343ed3755c0c0be5f52bb25733d1c6ef822cbe51">
+<a name="343ed3755c0c0be5f52bb25733d1c6ef822cbe51"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg343ed3755c0c0be5f52bb25733d1c6ef822cbe51"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/343ed3755c0c0be5f52bb25733d1c6ef822cbe51.jpg"></div></a></div>
+</div></p>
+<div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6.</strong><br> Esquema da montagem do experimento de queda livre.<br>
+</div>
+</div>
+<p></p>
+<p>onde <i>S</i> é a posição vertical da esfera medida a partir do primeiro sensor <i>S</i><sub>1</sub>, <i>t</i> é o tempo, <i>g</i> é a aceleração da gravidade e <i>v</i><sub>0</sub> é a velocidade que a esfera possui ao passar por <i>S</i><sub>1</sub>. O valor de <i>v</i><sub>0</sub> é <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/495edaf009ffee524f336c0ece58521327c3add6.jpg"> onde <i>d</i> é a distância da extremidade (inferior) da esfera que não está em contato com o eletroímã até <i>S</i><sub>1</sub>. A disposição dos sensores foi tal que <i>D</i> = 4.90 ± 0.05 cm e <i>d</i> = 3.00 ± 0.05 cm.</p>
+<p></p>
+<p>Com os tempos de queda obtidos para diferentes valores de <i>S</i> (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Fig. 7</a>), o seguinte ajuste quadrático foi obtido (<i>t</i> em ms e <i>S</i> em cm)</p>
+<p></p>
+<p><div class="row fig" id="87bb1f149803bc20daa989f6c7e809bb07f524a7">
+<a name="87bb1f149803bc20daa989f6c7e809bb07f524a7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg87bb1f149803bc20daa989f6c7e809bb07f524a7"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/87bb1f149803bc20daa989f6c7e809bb07f524a7.jpg"></div></a></div>
+</div></p>
+<div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Figura 7 - Comportamento obtido para a distância (<i>S</i>) entre os sensores em função do tempo de queda (<i>t</i>). O ajuste quadrático aos pontos experimentais também é apresentado (coeficiente de correlação R<sup>2</sup>=0.999993). As barras de erros associadas aos pontos experimentais são menores que o tamanho dos pontos.</p>
+<p></p>
+<p>Desse ajuste obtivemos <i>d</i> = 3.0 ± 0.3 cm e <i>g</i> = 9.67 ± 0.07 m/s<sup>2</sup>. O valor de <i>g</i> obtido é menor em 1.2% do valor teórico esperado para Limeira-SP (9.7879342 m/s<sup>2</sup>) segundo a fórmula da gravidade teórica (fórmula de Somiglinana) do sistema de referência geodésica WGS84 [22]. Dessa forma, os valores de <i>d</i> e <i>g</i> obtidos estão muito próximos dos valores esperados indicando que a montagem está fornecendo os valores corretos. Podemos ver que, embora o objetivo principal da montagem não foi de se realizar estudos de cinemática e determinar <i>g</i>, a montagem também pode ser utilizada para essa finalidade.</p>
+<p></p>
+<p><b>3. Resultados</b></p>
+<p></p>
+<p>Um exemplo da tela produzida pelo Processing que é exibida no computador é apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a>. Nessa tela são exibidos o histograma dos valores e o valor da última medida realizada.</p>
+<div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br> - Imagem produzida pelo Processing para o histograma obtido com 42 medidas do tempo de queda utilizando a montagem apresentada na Fig. 2.<br>
+</div>
+</div>
+<p></p>
+<p>Como demonstração da montagem proposta e ilustração do aparecimento do aspecto gaussiano do histograma, realizamos um experimento onde foram realizadas 250 medidas de tempo de queda. Os histogramas obtidos em diferentes instantes do experimento (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Fig. 9</a>) apresentaram a evolução da distribuição das medidas para o padrão gaussiano conforme aumentávamos o número <i>N</i> de realizações do experimento. Um ajuste do conjunto completo de medidas com uma função gaussiana (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Fig. 9</a> - linha tracejada) forneceu uma gaussiana de média 181.63 ms e desvio padrão de 0.09 ms.</p>
+<p></p>
+<p><div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+	</p>
+<p></p>
+<p>Figura 
+  9 - Histogramas para medidas de tempo de queda obtidos com a montagem proposta 
+  (Fig. 2). A função gaussiana ajustada para 250 medidas e apresentada 
+  em linha tracejada.</p>
+<p></p>
+<p>Como o experimento é de fácil execução e repetição, pode-se pedir a um grupo de alunos que realize o experimento enquanto o professor discute os conceitos envolvidos. A montagem permite realizar pelo menos 3 medidas/min de forma que um tempo típico para obter 50 medidas seria inferior a 15 min. Como observado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a>, um conjunto de 50 medidas já seria suficiente para ilustrar o aspecto gaussiano das medidas. </p>
+<p></p>
+<p>A montagem utilizada permitiu a aquisição automática de dados de tempo e exibição desses dados em tempo real. Como apontado por Haag <i>et al.</i> [23], a aquisição automática de dados nos laboratórios didáticos de física otimiza o tempo de realização dos experimentos e permite enriquecer a aprendizagem dos alunos utilizando maneiras alternativas para a compreensão dos fenômenos estudados.</p>
+<p></p>
+<p><b>4. Conclusões</b></p>
+<p></p>
+<p>A aquisição automática de dados de tempo de queda no experimento de queda livre permitiu ilustrarmos o conceito de incerteza em medidas por meio da visualização em tempo real do histograma de medidas. A utilização da plataforma Arduino facilitou o processo de aquisição e mostrou-se novamente uma ferramenta muito versátil para experimentos didáticos. Além da ilustração do conceito de incertezas e de erros aleatórios e sistemáticos, a montagem sugerida neste trabalho também permite ao professor trabalhar outros conceitos em sala de aula. Por exemplo, o conceito de <i>modelo</i> pode ser ilustrado por meio da determinação de leis científicas, utilizando o ajuste de curvas para obter quantidades físicas como a aceleração da gravidade.</p>
+<p></p>
+<p><b>Agradecimentos</b></p>
+<p></p>
+<p>Os autores agradecem o Serviço de Apoio ao Estudante (SAE)/UNICAMP, FAPESP e CNPq pelo apoio financeiro, à Fabio R. Chagas por sua contribuição nos estágios iniciais desse trabalho e ao Prof. Hélio S. de Amorim do Instituto de Física da Universidade Federal do Rio de Janeiro pelas informações sobre a placa Arduino fornecidas no início do trabalho.</p>
+<p></p>
+<p>Recebido em 16/5/2012 </p>
+<p></p>
+<p> Aceito em 11/2/2013 </p>
+<p></p>
+<p> Publicado em 28/5/2013</p>
+<p></p>
+<p><li>
+<span class="xref big">1</span><div> E-mail: </div>
+<div>
+<a href="mailto:vitor@ft.unicamp.br">vitor@ft.unicamp.br</a>.</div>
+</li></p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] G.L. Squires,    <i>Practical Physics</i> (McGraw-Hill Publishing Company Limited, London, 1968).</div></li>
+<li><div>[2] J.H. Vuolo,    <i>Fundamentos da Teoria de Erros</i> (Editora Edgard Blucher Ltda, São    Paulo, SP, 1992).</div></li>
+<li><div>[3] F. Galton,    <i>Natural Inheritance</i> (MacMillan, 1889), p. 63-65, disponível em    http://www.galton.org, acessado    em 16/4/2013.</div></li>
+<li><div>[4] V.V. Kozlov    and M.Y. Mitrofanova, Regular and Chaotic Dynamics <b> 8</b>, 431 (2003)</div></li>
+<li><div>[5] R.A. Nelson,    Am. J. Phys. <b> 49</b>, 829 (1981)</div></li>
+<li><div>[6] S.M. Quick,    Am. J. Phys. <b> 57</b>, 814 (1989)</div></li>
+<li><div>[7] A. Edgar, Am.    J. Phys. <b> 59</b>, 568 (1991)</div></li>
+<li><div>[8] K. Wick and    K. Ruddick, Am. J. Phys. <b> 67</b>, 962 (1999)</div></li>
+<li><div>[9] G. Dionisio    e W.C. Magno, Revista Brasileira de Ensino de Física <b> 29</b>, 287    (2007)</div></li>
+<li><div>[10] J.A. White,    A. Medina, F.L. Roman and S. Velasco, The Physics Teacher <b> 45</b>, 175 (2007)</div></li>
+<li><div>[11] M. Garg, Kalimullah,    P. Arun and F.M.S. Lima, Am. J. Phys. <b> 75</b>, 254 (2007)</div></li>
+<li><div>[12] E.P.M. Corveloni,    E.S. Gomes, A.R. Sampaio, A.F. Mendes, V.L.L. Costa e R.C. Viscovini, Revista    Brasileira de Ensino de Física <b> 31</b>, 3504 (2009)</div></li>
+<li><div>[13] http://www.arduino.cc/, acessado em 16/4/2013<br><a href="http://http://www.arduino.cc/" target="_blank">» link</a>
+</div></li>
+<li><div>[14] Jonathan Oxer    and Hugh Blemings, <i>Practical Arduino: Cool Projects for Open Source Hardware</i>    (Apress, New York, 2009), 1ª ed.</div></li>
+<li><div>[15] A.R. de Souza,    A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim,    Revista Brasileira de Ensino de Física <b> 33</b>, 1702 (2011)</div></li>
+<li><div>[16] M.A. Cavalcante,    C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física    <b> 33</b>, 4503 (2011)</div></li>
+<li><div>[17] http://wiring.org.co/, acessado em 16/4/2013<br><a href="http://http://wiring.org.co/" target="_blank">» link</a>
+</div></li>
+<li><div>[18] Albert P.    Malvino, <i>Eletrônica</i> (Editora Makron Books, São Paulo, SP,    1997), v. 1, 4ª ed.</div></li>
+<li><div>[19] http://www.processing.org/, acessado em 16/4/2013<br><a href="http://http://www.processing.org/" target="_blank">» link</a>
+</div></li>
+<li><div>[20] http://www.ft.unicamp.br/vitor/lie/a.zip, acessado em 16/4/2013<br><a href="http://http://www.ft.unicamp.br/vitor/lie/a.zip" target="_blank">» link</a>
+</div></li>
+<li><div>[21] P. Mohazzabi,    The Physics Teacher <b>49</b>, 89 (2011)</div></li>
+<li><div>[22] H. Moritz,    Journal of Geodesy <b>74</b>, 128 (2000)</div></li>
+<li><div>[23] R. Haag, I.S.    Araujo e E.A. Veit, Física na Escola <b> 6</b>(1), 69 (2005)</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">1 E-mail: vitor@ft.unicamp.br.</div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>05 Jul 2013</li>
+<li>
+<strong>Data do Fascículo</strong><br>Jun 2013</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>16 Maio 2012</li>
+<li>
+<strong>Aceito</strong><br>11 Fev 2013</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Vitor R. Coluci </strong><br><div>
+          ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Guilherme Paulino </strong><br><div>
+          ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Diego C. de Souza </strong><br><div>
+          ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Elba P.R. Vasconcelos </strong><br><div>
+          ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist"><li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (9)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br> - Esquema da táabua de Galton. Bolas de gude são liberadas da parte superior e atravessam um região formada por pregos. Após passar por essa região, atingem a parte inferior onde se acumulam em canais.</div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br> - Visão geral da montagem do experimento de queda livre utilizado para a visualização de histogramas de tempos de queda.</div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br> - Circuito para coleta de sinais dos sensores e transmissão de dados para a placa Arduino.</div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6.</strong><br> Esquema da montagem do experimento de queda livre.</div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br> - Imagem produzida pelo Processing para o histograma obtido com 42 medidas do tempo de queda utilizando a montagem apresentada na Fig. 2.</div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/7db231ebbe5d9da6d5b2ff41ee6f9a96e2a03caa.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1    - Esquema da táabua de Galton. Bolas de gude são liberadas da parte superior e atravessam um região formada por pregos. Após passar por essa região, atingem a parte inferior onde se acumulam em canais.<br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/7db231ebbe5d9da6d5b2ff41ee6f9a96e2a03caa.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/03c95dc8f6351f1c3fdca58f3c45e64626192621.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2    - Visão geral da montagem do experimento de queda livre utilizado para a visualização de histogramas de tempos de queda.<br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/03c95dc8f6351f1c3fdca58f3c45e64626192621.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/ae337bcc3733905243b765d55901d690be86948c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/ae337bcc3733905243b765d55901d690be86948c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/4ef66d05dc05d2ddb164a9c83d97da4ecf99e395.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/4ef66d05dc05d2ddb164a9c83d97da4ecf99e395.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/1dc07741bf8b2b27e92ef8fa40b4a3798dfb8637.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5    - Circuito para coleta de sinais dos sensores e transmissão de dados para a placa Arduino.<br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/1dc07741bf8b2b27e92ef8fa40b4a3798dfb8637.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/fab8260e25cadb2551dc89f3e69399f307d4dc31.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6.    Esquema da montagem do experimento de queda livre.<br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/fab8260e25cadb2551dc89f3e69399f307d4dc31.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/fc8852193c6717b2dd6a55c30dbd4880a86d7575.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/fc8852193c6717b2dd6a55c30dbd4880a86d7575.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/8db7aded3c1a958c29e8206ac3d1f24e2dda540a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8    - Imagem produzida pelo Processing para o histograma obtido com 42 medidas do tempo de queda utilizando a montagem apresentada na Fig. 2.<br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/8db7aded3c1a958c29e8206ac3d1f24e2dda540a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/33e199c55d375c93b574be45280eef2a528e85c6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/33e199c55d375c93b574be45280eef2a528e85c6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg343ed3755c0c0be5f52bb25733d1c6ef822cbe51" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/343ed3755c0c0be5f52bb25733d1c6ef822cbe51.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/343ed3755c0c0be5f52bb25733d1c6ef822cbe51.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg87bb1f149803bc20daa989f6c7e809bb07f524a7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/87bb1f149803bc20daa989f6c7e809bb07f524a7.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/87bb1f149803bc20daa989f6c7e809bb07f524a7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Coluci, Vitor R. et al. Ilustração de incertezas em medidas utilizando experimentos de queda livre. Revista Brasileira de Ensino de Física [online]. 2013, v. 35, n. 2 [Acessado CURRENTDATE] , 2013. Disponível em: &lt;https://doi.org/10.1590/S1806-11172013000200026&gt;. Epub 05 Jul 2013. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172013000200026.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Ilustração de incertezas em medidas utilizando experimentos de queda livre&#34; &#34;Coluci, Vitor R.&#34; &#34;Paulino, Guilherme&#34; &#34;Souza, Diego C. de&#34; &#34;Vasconcelos, Elba P.R.&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Ilustração de incertezas em medidas utilizando experimentos de queda livre&#34; &#34;Coluci, Vitor R.&#34; &#34;Paulino, Guilherme&#34; &#34;Souza, Diego C. de&#34; &#34;Vasconcelos, Elba P.R.&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/YK3TYhDh3hCYc3QJ8FHztvh/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172013000200026&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172013000200026" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172013000200026">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172013000200026" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172013000200026">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172013000200026"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172013000200026" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172013000200026">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000200026" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Ilustração de incertezas em medidas utilizando experimentos de queda livre
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000200026">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

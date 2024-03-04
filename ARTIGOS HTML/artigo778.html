@@ -1,0 +1,3092 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Medida de &lt;inline-formula&gt;&lt;mml:math display=&#34;inline&#34; id=&#34;m1&#34;&gt;&lt;mml:mi&gt;g&lt;/mml:mi&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; com a placa Arduino em um experimento simples de queda livre Medida de &lt;inline-formula&gt;&lt;mml:math display=&#34;inline&#34; id=&#34;m1&#34;&gt;&lt;mml:mi&gt;g&lt;/mml:mi&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; com a placa Arduino em um experimento simples de queda livre </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Medida de &lt;inline-formula&gt;&lt;mml:math display=&#34;inline&#34; id=&#34;m1&#34;&gt;&lt;mml:mi&gt;g&lt;/mml:mi&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; com a placa Arduino em um experimento simples de queda livre"/>
+<meta property="og:description" content="Um modo simples de medir a aceleração da gravidade g no laboratório de física do ensino médio e..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Cordova, H.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Rio de Janeiro">
+        
+        <meta name="citation_author" content="Tort, A. C.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Rio de Janeiro">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="38"></meta>
+<meta name="citation_number" content="2"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2015-0012"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Medida de &lt;inline-formula&gt;&lt;mml:math display=&#34;inline&#34; id=&#34;m1&#34;&gt;&lt;mml:mi&gt;g&lt;/mml:mi&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; com a placa Arduino em um experimento simples de queda livre
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Um modo simples de medir a aceleração da gravidade g no laboratório de física do ensino médio e de física básica no ensino universitário com um microcontrolador da família Arduíno é proposto. Resultados experimentais com um erro relativo de 0,1% são apresentados e comparados com o valor local de g medido pelo Observatório Nacional, Rio de Janeiro."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2016-05-10"></meta>
+<meta name="citation_keywords" content="aceleração da gravidade"></meta><meta name="citation_keywords" content="queda livre"></meta><meta name="citation_keywords" content="Arduino"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2016.v38n2/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2016.v38n2/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172016000200407 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 38 
+                (2)
+            <span class="_separator"> • </span>Jun 2016</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2015-0012" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2015-0012</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2015-0012"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Medida de <math display="inline" id="m1"><mi>g</mi></math> com a placa Arduino em um experimento simples de queda livre<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Measurement of <math display="inline" id="m2"><mi>g</mi></math> with an Arduino microcontroller in a simple free fall experiment</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> H. Cordova </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Mestrado Profissional em Ensino de Física, Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> A. C. Tort </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong><div class="corresp">*Endereço de correspondência: <a href="mailto:tort@if.ufrj.br">tort@if.ufrj.br</a>.</div>Mestrado Profissional em Ensino de Física, Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Um modo simples de medir a aceleração da gravidade <math display="inline" id="m3"><mi>g</mi></math> no laboratório de física do ensino médio e de física básica no ensino universitário com um microcontrolador da família Arduíno é proposto. Resultados experimentais com um erro relativo de <math display="inline" id="m4"><mn>0</mn><mo>,</mo><mn>1</mn><mspace width="0.3em"></mspace><mi>%</mi></math> são apresentados e comparados com o valor local de <math display="inline" id="m5"><mi>g</mi></math> medido pelo Observatório Nacional, Rio de Janeiro.</p>
+<p><strong>Palavras-chave:</strong><br>aceleração da gravidade; queda livre; Arduino</p>
+</div>
+<hr>
+<div>
+<p>A simple way of measuring the terrestrial acceleration <math display="inline" id="m6"><mi>g</mi></math> in the basic lab that makes use of the Arduino microcontroller is proposed. Experimental results with a relative error of <math display="inline" id="m7"><mn>0</mn><mo>,</mo><mn>1</mn><mspace width="0.3em"></mspace><mi>%</mi></math> were obtained and compared with the local value of <math display="inline" id="m8"><mi>g</mi></math> as measured by the Brazilian National Observatory at Rio de Janeiro.</p>
+<p><strong>Keywords:</strong><br>gravitational accleration; free fall; Arduino</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>Um dos muitos modos possíveis de medir a aceleração da gravidade <math display="inline" id="m9"><mi>g</mi></math> é deixar cair verticalmente um corpo a partir de uma altura predeterminada <math display="inline" id="m10"><mi>h</mi></math> e medir a duração do seu tempo de queda. Como a velocidade inicial é nula, segue que:</p>
+      <div class="row formula" id="ee1">
+<a name="e1"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(1)</span>
+        <math display="block" id="m11">
+          <mi>g</mi>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mn>2</mn>
+              <mi>h</mi>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mi>t</mi>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>onde <math display="inline" id="m12"><mi>t</mi></math> é a duração da queda. Embora a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>Eq.(1)</a> possa ser introduzida nos primeiros estágios do ensino da cinemática e seja o fundamento de uma das maneiras mais simples de medir <math display="inline" id="m13"><mi>g</mi></math>, a rapidez com que a queda livre acontece pode tornar o experimento frustante para um novato. É possível melhorar os resultados por meio de circuitos eletrônicos capazes de determinar intervalos de tempo com pelo menos <math display="inline" id="m14"><mn>1</mn><mi>∕</mi><mn>10</mn></math> de milissegundo de resolução, veja por exemplo [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>[1] J.A. Blackburn and R. Koenig Am. J. Phys. 44, 855 (1976).</span></span></span>], mas estas técnicas são mais apropriadas para os laboratórios didáticos avançados dos cursos de graduação. Por outro lado, o uso cada vez mais difundido dos modernos microcontroladores de baixo custo, como por exemplo, a família de microcontroladores ou placas Arduíno [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>[2] M.A. Cavalcante, A. Bonizzia e L.C.P. Gomes, Rev. Bras. En. Fís. 30, 2501 (2008).</span></span></span>–<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>[6] H S. Amorim, M.A. Dias e V. Soares, Rev. Bras. En. Fís. 37, 4310 (2015).</span></span></span>], capazes de medir intervalos de tempo na faixa de mili e microssegundos permite obter resultados perfeitamente aceitáveis no laboratório de física do ensino médio e de física básica no ensino universitário, mesmo que em uma primeira abordagem, por conveniência pedagógica, desprezemos os efeitos da resistência do ar e outros efeitos espúrios. Nossa prática experimental nos diz que enquanto <math display="inline" id="m15"><mi>h</mi></math> for uma altura inferior a <math display="inline" id="m16"><mn>1</mn></math> metro tais efeitos podem ser desconsiderados em uma primeira abordagem. Nas próximas seções discutiremos como isto pode ser feito.</p>
+    
+      <h1 class="articleSectionTitle">2. Arranjo experimental</h1>
+      <p>O arranjo experimental é mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>. Uma pequena esfera de aço de <math display="inline" id="m17"><mn>9</mn><mspace width="0.3em"></mspace></math>mm de diâmetro está inicialmente presa entre duas alavancas metálicas, uma fixa e outra móvel. Estas duas alavancas fazem parte do sensor superior, que também funciona como plataforma de lançamento da esferinha, veja a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>. A alavanca móvel, presa à alavanca fixa por meio de um ou mais atilhos de borracha, pressiona a esferinha contra a alavanca fixa. Enquanto a esferinha de aço estiver presa e logo em contato com as alavancas, teremos uma voltagem de <math display="inline" id="m18"><mn>5</mn></math>V (nível alto) na porta 12 da placa Arduíno. Quando a alavanca móvel for manualmente empurrada para o lado e a esfera liberada, o circuito ficará aberto e a voltagem cai para <math display="inline" id="m19"><mn>0</mn></math>V (nível baixo) na porta 12. Depois de cair uma altura predeterminada <math display="inline" id="m20"><mi>h</mi></math>, a esfera atinge o sensor inferior - <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a> - que consiste em uma base de madeira móvel ligeiramente inclinada que sob o efeito do impacto com a esfera aciona um contato elétrico levando a porta 11 do Arduíno para nível alto. Assim que a esfera rola para fora da base esta porta retorna ao nível baixo, veja o esquema da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a> onde também é mostrado o circuito de apoio. O microcontrolador Arduíno registra o instante da liberação e do impacto, logo, a duração do tempo queda, depois permanece inativo durante 10 segundos antes de estar pronto para a próxima medida. A esfera é então recolocada na posição inicial levando o sensor superior novamente para o nível alto, permitindo uma nova medida. No sensor superior, há um furo de 1 mm de diâmetro onde a esfera deve ser encaixada, garantindo sempre o mesmo ponto de lançamento sem risco de mudança na altura. A altura medida é a distância entre o ponto de impacto da esfera no sensor inferior e a sua parte inferior, quando esta ainda está presa no sensor superior, assim o diâmetro da esfera não causa erros. A altura <math display="inline" id="m21"><mi>h</mi></math> foi medida com uma trena metálica com divisões de 1 mm. O espaço entre os contatos elétricos do sensor inferior é muito inferior a <math display="inline" id="m22"><mn>1</mn><mspace width="0.3em"></mspace></math>mm. Convém ressaltar que a esfera metálica, assim como os contatos metálicos dos sensores, devem estar perfeitamente limpos para evitar interrupções indevidas na comunicação com a placa Arduíno. O código-fonte para aquisição de dados com Arduino é mostrado no <strong>Apêndice</strong>. Para informações sobre a programação da placa Arduino, veja por exemplo, [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] A.R. de Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev Bras. En. Fís. 33, 1702 (2011).</span></span></span>] e referências ali citadas.</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Visão geral do arranjo experimental.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Sensores superior (esquerda) e inferior (direita). No desenho, por clareza, o espaço entre os contatos elétricos no sensor inferior está exagerado, no experimento ele é inferior a <math display="inline" id="m23"><mn>1</mn><mspace width="0.3em"></mspace></math> mm. O peso da esfera ao atingir a base do sensor inferior permite que os contatos se toquem e ao rolar para fora da base, permite que a mola restaure a condição inicial.
+        <br>
+</div>
+</div>
+      <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          Detalhes do sensor superior e plataforma de lançamento. Note que a esferinha fica encaixada em um pequeno furo e ali mantida pela pressão mecânica gerada pelo atilho de borracha. A esferinha é liberada quando a alavanca móvel é empurrada lateralmente. Ao lado, o circuito de apoio.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">3. Resultados experimentais</h1>
+      <p>Para <math display="inline" id="m24"><mi>h</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>943</mn><mspace width="0.3em"></mspace></math>m com <math display="inline" id="m25"><mi>δ</mi><mi>h</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>001</mn><mspace width="0.3em"></mspace></math>m e <math display="inline" id="m26"><mi>δ</mi><mi>t</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>001</mn><mspace width="0.3em"></mspace></math>s, os tempos de queda vertical a partir do repouso são mostrados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela 1</a>.</p>
+      <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Medidas dos tempos de queda-livre. A duração média da queda é de <math display="inline" id="m27"><mn>0</mn><mo>,</mo><mn>439</mn><mspace width="0.3em"></mspace></math>s.
+        <br>
+</div>
+</div>
+      <p>Os valores obtidos para <math display="inline" id="m52"><msub><mrow><mi>g</mi></mrow><mrow><mi>i</mi></mrow></msub></math> correspondem ao valor médio de cada medida obtido a partir da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee1"><span class="sci-ico-fileFormula"></span>equação (1)</a> da seguinte forma:</p>
+      <div class="row formula" id="ee2">
+<a name="e2"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(2)</span>
+        <math display="block" id="m53">
+          <msub>
+            <mrow>
+              <mover accent="true">
+                <mi>g</mi>
+                <mo>¯</mo>
+              </mover>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mrow>
+                  <mi>g</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mspace width="0.3em"></mspace>
+                  <mstyle>
+                    <mtext>máx</mtext>
+                  </mstyle>
+                </mrow>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mrow>
+                  <mi>g</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mspace width="0.3em"></mspace>
+                  <mstyle>
+                    <mtext>mín</mtext>
+                  </mstyle>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>onde</p>
+      <div class="row formula" id="ee3">
+<a name="e3"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(3)</span>
+        <math display="block" id="m54">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+              <mspace width="0.3em"></mspace>
+              <mstyle>
+                <mtext>máx</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mn>2</mn>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>h</mi>
+                  <mo>+</mo>
+                  <mi>δ</mi>
+                  <mi>h</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mrow>
+                          <mi>t</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>i</mi>
+                        </mrow>
+                      </msub>
+                      <mi>−</mi>
+                      <mi>δ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>;</mo>
+        </math>
+      </div></div>
+</div>
+      <p>e</p>
+      <div class="row formula" id="ee4">
+<a name="e4"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(4)</span>
+        <math display="block" id="m55">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+              <mspace width="0.3em"></mspace>
+              <mstyle>
+                <mtext>mín</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mn>2</mn>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>h</mi>
+                  <mi>−</mi>
+                  <mi>δ</mi>
+                  <mi>h</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mrow>
+                          <mi>t</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>i</mi>
+                        </mrow>
+                      </msub>
+                      <mo>+</mo>
+                      <mi>δ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>A incerteza individual <math display="inline" id="m56"><mi>δ</mi><msub><mrow><mi>g</mi></mrow><mrow><mi>i</mi></mrow></msub></math> pode ser calculada com a expressão</p>
+      <div class="row formula" id="ee5">
+<a name="e5"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(5)</span>
+        <math display="block" id="m57">
+          <mi>δ</mi>
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mrow>
+                  <mi>g</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mspace width="0.3em"></mspace>
+                  <mstyle>
+                    <mtext>máx</mtext>
+                  </mstyle>
+                </mrow>
+              </msub>
+              <mi>−</mi>
+              <msub>
+                <mrow>
+                  <mi>g</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mspace width="0.3em"></mspace>
+                  <mstyle>
+                    <mtext>mín</mtext>
+                  </mstyle>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>ou do modo usual [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>[8] J.G. Taylor, An Introduction to Error Analysis (University Science Books, Boulder, 1982), 2nd ed.</span></span></span>]. O resultado é <math display="inline" id="m58"><mi>δ</mi><msub><mrow><mi>g</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><mn>0</mn><mo>,</mo><mn>055</mn><mspace width="0.3em"></mspace></math> m/s<math display="inline" id="m59"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math> para todas as vinte e uma medidas individuais. Os resultados para <math display="inline" id="m60"><msub><mrow><mover accent="true"><mi>g</mi><mo>¯</mo></mover></mrow><mrow><mi>i</mi></mrow></msub></math> são mostrados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Tabela 2</a>. O valor médio de <math display="inline" id="m61"><msub><mrow><mover accent="true"><mi>g</mi><mo>¯</mo></mover></mrow><mrow><mi>i</mi></mrow></msub></math> é <math display="inline" id="m62"><mn>9</mn><mo>,</mo><mn>778</mn><mspace width="0.3em"></mspace></math> m/s<math display="inline" id="m63"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math> e o desvio padrão da média ou erro padrão é <math display="inline" id="m64"><mn>0</mn><mo>,</mo><mn>012</mn><mspace width="0.3em"></mspace></math>m/s<math display="inline" id="m65"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>, logo o experimento nos dá</p>
+      <div class="row formula" id="ee6">
+<a name="e6"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(6)</span>
+        <math display="block" id="m66">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mstyle>
+                <mtext>exp.</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mn>9</mn>
+          <mo>,</mo>
+          <mn>78</mn>
+          <mtext>
+					</mtext>
+          <mi>±</mi>
+          <mtext>
+					</mtext>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>01</mn>
+          <mstyle>
+            <mtext>m/s</mtext>
+            <mstyle>
+              <msup>
+                <mrow></mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mstyle>
+            <mtext></mtext>
+          </mstyle>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <div class="row table" id="t2">
+<a name="t2"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 2</strong><br>
+          Valores de <math display="inline" id="m67"><msub><mrow><mover accent="true"><mi>g</mi><mo>¯</mo></mover></mrow><mrow><mi>i</mi></mrow></msub></math>; a incerteza de cada medida individual é <math display="inline" id="m68"><mi>δ</mi><msub><mrow><mi>g</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><mi>δ</mi><mi>g</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>055</mn><mspace width="0.3em"></mspace></math>m/s<math display="inline" id="m69"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>.
+        <br>
+</div>
+</div>
+      <p>O resultado dado pela <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemee6"><span class="sci-ico-fileFormula"></span>Eq. (6)</a> deve ser comparado com uma aproximação apropriada ao valor de <math display="inline" id="m97"><mi>g</mi></math> local medido por Souza e Santos do Observatório Nacional [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>[9] M.A. de Souza e A.A. dos Santos Absolute gravimetry on the Agulhas Negras calibration line, Rev. Bras. Geof. 28, 165 (2010).</span></span></span>] em 2010,</p>
+      <div class="row formula" id="ee7">
+<a name="e7"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(7)</span>
+        <math display="block" id="m98">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mstyle>
+                <mtext>Rio de Janeiro</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mn>978</mn>
+          <mspace width="0.3em"></mspace>
+          <mn>789</mn>
+          <mo>,</mo>
+          <mn>852</mn>
+          <mtext>
+					</mtext>
+          <mi>±</mi>
+          <mtext>
+					</mtext>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>011</mn>
+          <mstyle>
+            <mtext>mGal</mtext>
+          </mstyle>
+          <mo>,</mo>
+        </math>
+      </div></div>
+</div>
+      <p>onde <math display="inline" id="m99"><mn>1</mn><mspace width="0.3em"></mspace><mstyle><mtext>mGal</mtext></mstyle><mo>=</mo><mn>1</mn><mspace width="0.3em"></mspace><mi>×</mi><mspace width="0.3em"></mspace><mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mi>−</mi><mn>5</mn></mrow></msup><mspace width="0.3em"></mspace></math>m/s<math display="inline" id="m100"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>. Para fins de comparação com o resultado experimental obtido basta que consideremos o valor aproximado</p>
+      <div class="row formula" id="ee8">
+<a name="e8"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(8)</span>
+        <math display="block" id="m101">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mstyle>
+                <mtext>Rio.</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mtext>
+					</mtext>
+          <mi>≈</mi>
+          <mtext>
+					</mtext>
+          <mn>9</mn>
+          <mo>,</mo>
+          <mn>79</mn>
+          <mstyle>
+            <mtext>m/s</mtext>
+            <mstyle>
+              <msup>
+                <mrow></mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mstyle>
+            <mtext></mtext>
+          </mstyle>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>O desvio percentual relativo é</p>
+      <div class="row formula" id="ee9">
+<a name="e9"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(9)</span>
+        <math display="block" id="m102">
+          <mfrac>
+            <mrow>
+              <mo>|</mo>
+              <mn>9</mn>
+              <mo>,</mo>
+              <mn>79</mn>
+              <mi>−</mi>
+              <mn>9</mn>
+              <mo>,</mo>
+              <mn>78</mn>
+              <mo>|</mo>
+            </mrow>
+            <mrow>
+              <mn>9</mn>
+              <mo>,</mo>
+              <mn>79</mn>
+            </mrow>
+          </mfrac>
+          <mspace width="0.3em"></mspace>
+          <mi>×</mi>
+          <mspace width="0.3em"></mspace>
+          <mn>100</mn>
+          <mtext>
+					</mtext>
+          <mi>≈</mi>
+          <mtext>
+					</mtext>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mspace width="0.3em"></mspace>
+          <mi>%</mi>
+          <mo>.</mo>
+        </math>
+      </div></div>
+</div>
+      <p>Nosso resultado pode também ser comparado com os obtidos com outros métodos, veja por exemplo, as referências [<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>[7] C.E. Aguiar e F. Laudares, Am. J. Phys. 71, 499 (2003).</span></span></span>, <span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>[10] J.A. White, A. Medina, F.L. Román and S. Velasco, Phys. Teach. 45 175 (2007)</span></span></span>–<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>[12] O. Schwarz, P. Vogt e J. Kunh, Phys. Teach. 51 312 (2013).</span></span></span>]. É possível medir também com o modelo de placa Arduino que utilizamos (Mega 2560) intervalos de tempo com precisão de microssegundos, mas, no caso do arranjo experimental proposto, os registros das durações temporais são instáveis e muitos dados devem ser descartados, o que nos parece inconveniente desde um ponto de vista pedagógico</p>
+    
+      <h1 class="articleSectionTitle">4. Comentários finais</h1>
+      <p>O fator que realmente diferencia esta proposta experimental no nível do laboratório do ensino médio é a possibilidade de medir intervalos de tempo com precisão de milissegundos com um arranjo simples e de baixo custo. De fato, o custo total - sem contar o computador - pode ser igual ou menor do que R<math display="inline" id="m103"><mi>$</mi><mspace width="0.3em"></mspace><mn>60</mn></math>. Neste experimento usamos um microcontrolador Arduíno Mega, que pode ser substituído pelo Arduíno UNO de menor custo, sem necessidade de alteração na programação. Versões mais baratas dos microcontroladores Arduíno originais, os Garaginos, podem ser encontradas por R<math display="inline" id="m104"><mi>$</mi><mn>45</mn><mo>,</mo><mn>00</mn></math> (a versão similar); a <i>protoboard</i> de 170 furos, custa por volta de R<math display="inline" id="m105"><mi>$</mi><mn>6</mn><mo>,</mo><mn>00</mn></math>, e muitas vezes acompanha o <i>kit</i> Arduíno. Os dois resistores e os fios também são de baxíssimo custo. A base dos sensores foi feita com restos de madeira e as alavancas com sucata de alumínio. A mola que recoloca o sensor inferior na posição inicial foi tirada de uma impressora fora de uso.</p>
+      <p>Um dos autores do presente trabalho (H.C.) testou com sucesso o experimento com a colaboração voluntária dos alunos do terceiro ano do ensino médio de uma escola pública localizada no município do Rio de Janeiro. O experimento foi realizado no contraturno quando os alunos permanecem na escola sem a obrigação de estar em sala de aula. Como quase sempre acontece quando os alunos tem a oportunidade de “colocar a mão na massa”, a resposta foi gratificante para o professor. Mas deve ser observado que não foi exigido dos alunos que programassem o microcontrolador. Isto foi feito pelo professor e deste modo os alunos puderam concentrar-se na física envolvida no experimento e no tratamento dos dados que procuramos fazer do modo mais simples possível. Em condições regulares, os autores estimam que duas aulas de 50 minutos seriam suficientes para que os alunos pudessem realizar com eficácia o experimento. Na primeira aula seriam apresentados os fundamentos teóricos e o arranjo experimental dando a oportunidade aos alunos de familiarizaremse com o processo da medida a ser feita. Na segunda aula, os alunos poderiam então colher os dados e analisá-los.</p>
+      <p>Mas, notemos que nada impede que havendo disponibilidade de tempo, rudimentos da programação do micontrolador Arduíno também possam ser introduzidos.<span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+        A programação do microcontrolador Arduíno é feita em C++.
+      </span></span></span> A questão da introdução do ensino de programação é contorversa, mas aqui, dada a simplicidade do experimento, ela é opcional.</p>
+      <p>Um experimento como este apresenta muitas possibilidades pedagógicas. Pode ser utilizado como uma experiência de laboratório de física básica em um curso formal, um projeto extraclasse para um grupo de alunos ou um projeto individual. Observe também que embora pensado para o laboratório básico nos níveis médio e universitário, este experimento pode ser realizado facilmente em casa por um aluno ou um amador interessado. Há uma comunidade Arduino formada por grupos que atuam nas redes sociais e que são totalmente dedicados à troca de experiências e informações envolvendo o uso e a programação do microcontrolador Arduíno e muitos de nossos alunos participam desses grupos.</p>
+    </div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList footnote">
+      <li>
+        <span class="xref big">1</span>
+        <div>A programação do microcontrolador Arduíno é feita em C<math display="inline" id="m106"><msup><mrow></mrow><mrow><mo>+</mo><mo>+</mo></mrow></msup></math>.</div>
+      </li>
+    </ul></div>
+</div>
+<div class="articleSection" data-anchor="Agradecimentos">
+<h1 class="articleSectionTitle">Agradecimentos</h1>
+      
+      <p>Os autores agradecem ao colega Dr. V. Soares pela leitura crítica do manuscrito original e aos árbitros pelas sugestões pertinentes.</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] J.A. Blackburn and R. Koenig Am. J. Phys. <b>44</b>, 855 (1976).</div></li>
+<li><div>[2] M.A. Cavalcante, A. Bonizzia e L.C.P. Gomes, Rev. Bras. En. Fís. <b>30</b>, 2501 (2008).</div></li>
+<li><div>[3] M.A. Cavalcante, C.R.C. Tavolar e E. Molisani, Rev. Bras. En. Fís. <b>33</b>, 4503 (2011).</div></li>
+<li><div>[4] V.R. Coluci, G. Paulino, D.C. de Souza e E.P.R. Vasconcelos, Rev. Bras. En. Fís. <b>35</b>, 2506 (2013).</div></li>
+<li><div>[5] A.R. de Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev Bras. En. Fís. <b>33</b>, 1702 (2011).</div></li>
+<li><div>[6] H S. Amorim, M.A. Dias e V. Soares, Rev. Bras. En. Fís. <b>37</b>, 4310 (2015).</div></li>
+<li><div>[7] C.E. Aguiar e F. Laudares, Am. J. Phys. <b>71</b>, 499 (2003).</div></li>
+<li><div>[8] J.G. Taylor, <i>An Introduction to Error Analysis</i> (University Science Books, Boulder, 1982), 2nd ed.</div></li>
+<li><div>[9] M.A. de Souza e A.A. dos Santos <i>Absolute gravimetry on the Agulhas Negras calibration line</i>, Rev. Bras. Geof. <b>28</b>, 165 (2010).</div></li>
+<li><div>[10] J.A. White, A. Medina, F.L. Román and S. Velasco, Phys. Teach. <b>45</b> 175 (2007)</div></li>
+<li><div>[11] R. De Luca e S. Ganci Rev. Bras. En. Fís. <b>33</b>, 3301 (2011).</div></li>
+<li><div>[12] O. Schwarz, P. Vogt e J. Kunh, Phys. Teach. <b>51</b> 312 (2013).</div></li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Apêndice: código de aquisição de dados com Arduino">
+<h1 class="articleSectionTitle">Apêndice: código de aquisição de dados com Arduino</h1>
+        
+        <p>Por razões pedagógicas, o código-fonte utilizado é simples e procura obter apenas o tempo de duração da queda. Para maiores informações sobre a programação da placa Arduino ver [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>[5] A.R. de Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev Bras. En. Fís. 33, 1702 (2011).</span></span></span>,<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>[6] H S. Amorim, M.A. Dias e V. Soares, Rev. Bras. En. Fís. 37, 4310 (2015).</span></span></span>].<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span></a>
+				</p>
+        <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+      </div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publicação nesta coleção</strong><br>Jun 2016</li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>08 Dez 2015</li>
+<li>
+<strong>Aceito</strong><br>04 Jan 2016</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> H. Cordova </strong><br><div>Mestrado Profissional em Ensino de Física, Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> A. C. Tort </strong><strong>*</strong><br><div>Mestrado Profissional em Ensino de Física, Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">*Endereço de correspondência: <a href="mailto:tort@if.ufrj.br">tort@if.ufrj.br</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (2)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (9)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Visão geral do arranjo experimental.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Sensores superior (esquerda) e inferior (direita). No desenho, por clareza, o espaço entre os contatos elétricos no sensor inferior está exagerado, no experimento ele é inferior a <math display="inline" id="m23"><mn>1</mn><mspace width="0.3em"></mspace></math> mm. O peso da esfera ao atingir a base do sensor inferior permite que os contatos se toquem e ao rolar para fora da base, permite que a mola restaure a condição inicial.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          Detalhes do sensor superior e plataforma de lançamento. Note que a esferinha fica encaixada em um pequeno furo e ali mantida pela pressão mecânica gerada pelo atilho de borracha. A esferinha é liberada quando a alavanca móvel é empurrada lateralmente. Ao lado, o circuito de apoio.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+          
+            
+            
+          
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Medidas dos tempos de queda-livre. A duração média da queda é de <math display="inline" id="m27"><mn>0</mn><mo>,</mo><mn>439</mn><mspace width="0.3em"></mspace></math>s.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 2</strong><br>
+          Valores de <math display="inline" id="m67"><msub><mrow><mover accent="true"><mi>g</mi><mo>¯</mo></mover></mrow><mrow><mi>i</mi></mrow></msub></math>; a incerteza de cada medida individual é <math display="inline" id="m68"><mi>δ</mi><msub><mrow><mi>g</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><mi>δ</mi><mi>g</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>055</mn><mspace width="0.3em"></mspace></math>m/s<math display="inline" id="m69"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(5)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(6)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(7)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(8)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemee9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(9)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/CCDM8Xwr8hhjVRDvTVk3hcQ/ef48c2bbd07030a5e5c18647e5869ca4be2590c9.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Visão geral do arranjo experimental.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/CCDM8Xwr8hhjVRDvTVk3hcQ/ef48c2bbd07030a5e5c18647e5869ca4be2590c9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/CCDM8Xwr8hhjVRDvTVk3hcQ/e8aa76babb37bb39420d37b13c92962b334f445c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Sensores superior (esquerda) e inferior (direita). No desenho, por clareza, o espaço entre os contatos elétricos no sensor inferior está exagerado, no experimento ele é inferior a <math display="inline" id="m23"><mn>1</mn><mspace width="0.3em"></mspace></math> mm. O peso da esfera ao atingir a base do sensor inferior permite que os contatos se toquem e ao rolar para fora da base, permite que a mola restaure a condição inicial.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/CCDM8Xwr8hhjVRDvTVk3hcQ/e8aa76babb37bb39420d37b13c92962b334f445c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/CCDM8Xwr8hhjVRDvTVk3hcQ/f4b34a4e12b8545335121ec8e4bd35c0c714b89d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          Detalhes do sensor superior e plataforma de lançamento. Note que a esferinha fica encaixada em um pequeno furo e ali mantida pela pressão mecânica gerada pelo atilho de borracha. A esferinha é liberada quando a alavanca móvel é empurrada lateralmente. Ao lado, o circuito de apoio.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/CCDM8Xwr8hhjVRDvTVk3hcQ/f4b34a4e12b8545335121ec8e4bd35c0c714b89d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Medidas dos tempos de queda-livre. A duração média da queda é de <math display="inline" id="m27"><mn>0</mn><mo>,</mo><mn>439</mn><mspace width="0.3em"></mspace></math>s.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="16%">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="left">Med.</th>
+              <th align="center">
+<math display="inline" id="m28"><msub><mrow><mi>t</mi></mrow><mrow><mi>i</mi></mrow></msub></math> (s)</th>
+              <th align="center">Med.</th>
+              <th align="center">
+<math display="inline" id="m29"><msub><mrow><mi>t</mi></mrow><mrow><mi>i</mi></mrow></msub></math> (s)</th>
+              <th align="center">Med.</th>
+              <th align="center">
+<math display="inline" id="m30"><msub><mrow><mi>t</mi></mrow><mrow><mi>i</mi></mrow></msub></math> (s)</th>
+            </tr>
+          </thead>
+          <tbody style="border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <td align="left">1</td>
+              <td align="center">
+                
+                  <math display="inline" id="m31">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+              <td align="center">8</td>
+              <td align="center">
+                
+                  <math display="inline" id="m32">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+              <td align="center">15</td>
+              <td align="center">
+                
+                  <math display="inline" id="m33">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="left">2</td>
+              <td align="center">
+                
+                  <math display="inline" id="m34">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+              <td align="center">9</td>
+              <td align="center">
+                
+                  <math display="inline" id="m35">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+              <td align="center">16</td>
+              <td align="center">
+                
+                  <math display="inline" id="m36">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="left">3</td>
+              <td align="center">
+                
+                  <math display="inline" id="m37">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>440</mn>
+                  </math>
+                
+              </td>
+              <td align="center">10</td>
+              <td align="center">
+                
+                  <math display="inline" id="m38">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>440</mn>
+                  </math>
+                
+              </td>
+              <td align="center">17</td>
+              <td align="center">
+                
+                  <math display="inline" id="m39">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="left">4</td>
+              <td align="center">
+                
+                  <math display="inline" id="m40">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+              <td align="center">11</td>
+              <td align="center">
+                
+                  <math display="inline" id="m41">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+              <td align="center">18</td>
+              <td align="center">
+                
+                  <math display="inline" id="m42">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="left">5</td>
+              <td align="center">
+                
+                  <math display="inline" id="m43">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+              <td align="center">12</td>
+              <td align="center">
+                
+                  <math display="inline" id="m44">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>440</mn>
+                  </math>
+                
+              </td>
+              <td align="center">19</td>
+              <td align="center">
+                
+                  <math display="inline" id="m45">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="left">6</td>
+              <td align="center">
+                
+                  <math display="inline" id="m46">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+              <td align="center">13</td>
+              <td align="center">
+                
+                  <math display="inline" id="m47">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>440</mn>
+                  </math>
+                
+              </td>
+              <td align="center">20</td>
+              <td align="center">
+                
+                  <math display="inline" id="m48">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="left">7</td>
+              <td align="center">
+                
+                  <math display="inline" id="m49">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>438</mn>
+                  </math>
+                
+              </td>
+              <td align="center">14</td>
+              <td align="center">
+                
+                  <math display="inline" id="m50">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>440</mn>
+                  </math>
+                
+              </td>
+              <td align="center">21</td>
+              <td align="center">
+                
+                  <math display="inline" id="m51">
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>439</mn>
+                  </math>
+                
+              </td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 2</strong>    
+          Valores de <math display="inline" id="m67"><msub><mrow><mover accent="true"><mi>g</mi><mo>¯</mo></mover></mrow><mrow><mi>i</mi></mrow></msub></math>; a incerteza de cada medida individual é <math display="inline" id="m68"><mi>δ</mi><msub><mrow><mi>g</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><mi>δ</mi><mi>g</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>055</mn><mspace width="0.3em"></mspace></math>m/s<math display="inline" id="m69"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="16%">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="center">Med.</th>
+              <th align="center">
+<math display="inline" id="m70"><msub><mrow><mover accent="true"><mi>g</mi><mo>¯</mo></mover></mrow><mrow><mi>i</mi></mrow></msub></math> (m/s<math display="inline" id="m71"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>)</th>
+              <th align="center">Med.</th>
+              <th align="center">
+<math display="inline" id="m72"><msub><mrow><mover accent="true"><mi>g</mi><mo>¯</mo></mover></mrow><mrow><mi>i</mi></mrow></msub></math> (m/s<math display="inline" id="m73"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>)</th>
+              <th align="center">Med.</th>
+              <th align="center">
+<math display="inline" id="m74"><msub><mrow><mover accent="true"><mi>g</mi><mo>¯</mo></mover></mrow><mrow><mi>i</mi></mrow></msub></math> (m/s<math display="inline" id="m75"><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup></math>)</th>
+            </tr>
+          </thead>
+          <tbody style="border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <td align="center">1</td>
+              <td align="center">
+                
+                  <math display="inline" id="m76">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+              <td align="center">8</td>
+              <td align="center">
+                
+                  <math display="inline" id="m77">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+              <td align="center">15</td>
+              <td align="center">
+                
+                  <math display="inline" id="m78">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="center">2</td>
+              <td align="center">
+                
+                  <math display="inline" id="m79">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+              <td align="center">9</td>
+              <td align="center">
+                
+                  <math display="inline" id="m80">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+              <td align="center">16</td>
+              <td align="center">
+                
+                  <math display="inline" id="m81">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="center">3</td>
+              <td align="center">
+                
+                  <math display="inline" id="m82">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>742</mn>
+                  </math>
+                
+              </td>
+              <td align="center">10</td>
+              <td align="center">
+                
+                  <math display="inline" id="m83">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>742</mn>
+                  </math>
+                
+              </td>
+              <td align="center">17</td>
+              <td align="center">
+                
+                  <math display="inline" id="m84">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="center">4</td>
+              <td align="center">
+                
+                  <math display="inline" id="m85">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+              <td align="center">11</td>
+              <td align="center">
+                
+                  <math display="inline" id="m86">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+              <td align="center">18</td>
+              <td align="center">
+                
+                  <math display="inline" id="m87">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="center">5</td>
+              <td align="center">
+                
+                  <math display="inline" id="m88">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+              <td align="center">12</td>
+              <td align="center">
+                
+                  <math display="inline" id="m89">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>742</mn>
+                  </math>
+                
+              </td>
+              <td align="center">19</td>
+              <td align="center">
+                
+                  <math display="inline" id="m90">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="center">6</td>
+              <td align="center">
+                
+                  <math display="inline" id="m91">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+              <td align="center">13</td>
+              <td align="center">
+                
+                  <math display="inline" id="m92">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>742</mn>
+                  </math>
+                
+              </td>
+              <td align="center">20</td>
+              <td align="center">
+                
+                  <math display="inline" id="m93">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+            </tr>
+            <tr>
+              <td align="center">7</td>
+              <td align="center">
+                
+                  <math display="inline" id="m94">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>831</mn>
+                  </math>
+                
+              </td>
+              <td align="center">14</td>
+              <td align="center">
+                
+                  <math display="inline" id="m95">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>742</mn>
+                  </math>
+                
+              </td>
+              <td align="center">21</td>
+              <td align="center">
+                
+                  <math display="inline" id="m96">
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>786</mn>
+                  </math>
+                
+              </td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m11">
+          <mi>g</mi>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mn>2</mn>
+              <mi>h</mi>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mi>t</mi>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m53">
+          <msub>
+            <mrow>
+              <mover accent="true">
+                <mi>g</mi>
+                <mo>¯</mo>
+              </mover>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mrow>
+                  <mi>g</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mspace width="0.3em"></mspace>
+                  <mstyle>
+                    <mtext>máx</mtext>
+                  </mstyle>
+                </mrow>
+              </msub>
+              <mo>+</mo>
+              <msub>
+                <mrow>
+                  <mi>g</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mspace width="0.3em"></mspace>
+                  <mstyle>
+                    <mtext>mín</mtext>
+                  </mstyle>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m54">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+              <mspace width="0.3em"></mspace>
+              <mstyle>
+                <mtext>máx</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mn>2</mn>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>h</mi>
+                  <mo>+</mo>
+                  <mi>δ</mi>
+                  <mi>h</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mrow>
+                          <mi>t</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>i</mi>
+                        </mrow>
+                      </msub>
+                      <mi>−</mi>
+                      <mi>δ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>;</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m55">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+              <mspace width="0.3em"></mspace>
+              <mstyle>
+                <mtext>mín</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mn>2</mn>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>h</mi>
+                  <mi>−</mi>
+                  <mi>δ</mi>
+                  <mi>h</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <msub>
+                        <mrow>
+                          <mi>t</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>i</mi>
+                        </mrow>
+                      </msub>
+                      <mo>+</mo>
+                      <mi>δ</mi>
+                      <mi>t</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+          <mo>.</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(5)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m57">
+          <mi>δ</mi>
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mrow>
+                  <mi>g</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mspace width="0.3em"></mspace>
+                  <mstyle>
+                    <mtext>máx</mtext>
+                  </mstyle>
+                </mrow>
+              </msub>
+              <mi>−</mi>
+              <msub>
+                <mrow>
+                  <mi>g</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mspace width="0.3em"></mspace>
+                  <mstyle>
+                    <mtext>mín</mtext>
+                  </mstyle>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+            </mrow>
+          </mfrac>
+          <mo>,</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(6)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m66">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mstyle>
+                <mtext>exp.</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mn>9</mn>
+          <mo>,</mo>
+          <mn>78</mn>
+          <mtext>
+					</mtext>
+          <mi>±</mi>
+          <mtext>
+					</mtext>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>01</mn>
+          <mstyle>
+            <mtext>m/s</mtext>
+            <mstyle>
+              <msup>
+                <mrow></mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mstyle>
+            <mtext></mtext>
+          </mstyle>
+          <mo>.</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(7)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m98">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mstyle>
+                <mtext>Rio de Janeiro</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mo>=</mo>
+          <mn>978</mn>
+          <mspace width="0.3em"></mspace>
+          <mn>789</mn>
+          <mo>,</mo>
+          <mn>852</mn>
+          <mtext>
+					</mtext>
+          <mi>±</mi>
+          <mtext>
+					</mtext>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>011</mn>
+          <mstyle>
+            <mtext>mGal</mtext>
+          </mstyle>
+          <mo>,</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(8)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m101">
+          <msub>
+            <mrow>
+              <mi>g</mi>
+            </mrow>
+            <mrow>
+              <mstyle>
+                <mtext>Rio.</mtext>
+              </mstyle>
+            </mrow>
+          </msub>
+          <mtext>
+					</mtext>
+          <mi>≈</mi>
+          <mtext>
+					</mtext>
+          <mn>9</mn>
+          <mo>,</mo>
+          <mn>79</mn>
+          <mstyle>
+            <mtext>m/s</mtext>
+            <mstyle>
+              <msup>
+                <mrow></mrow>
+                <mrow>
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mstyle>
+            <mtext></mtext>
+          </mstyle>
+          <mo>.</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(9)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m102">
+          <mfrac>
+            <mrow>
+              <mo>|</mo>
+              <mn>9</mn>
+              <mo>,</mo>
+              <mn>79</mn>
+              <mi>−</mi>
+              <mn>9</mn>
+              <mo>,</mo>
+              <mn>78</mn>
+              <mo>|</mo>
+            </mrow>
+            <mrow>
+              <mn>9</mn>
+              <mo>,</mo>
+              <mn>79</mn>
+            </mrow>
+          </mfrac>
+          <mspace width="0.3em"></mspace>
+          <mi>×</mi>
+          <mspace width="0.3em"></mspace>
+          <mn>100</mn>
+          <mtext>
+					</mtext>
+          <mi>≈</mi>
+          <mtext>
+					</mtext>
+          <mn>0</mn>
+          <mo>,</mo>
+          <mn>1</mn>
+          <mspace width="0.3em"></mspace>
+          <mi>%</mi>
+          <mo>.</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/CCDM8Xwr8hhjVRDvTVk3hcQ/ffb2bdfd9f5fa0447873255620cf1fe4a41f94fb.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/CCDM8Xwr8hhjVRDvTVk3hcQ/ffb2bdfd9f5fa0447873255620cf1fe4a41f94fb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Cordova, H. e Tort, A. C.Medida de g com a placa Arduino em um experimento simples de queda livre. Revista Brasileira de Ensino de Física [online]. 2016, v. 38, n. 2 [Acessado CURRENTDATE] , e2308. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2015-0012&gt;. Epub 10 Maio 2016. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2015-0012.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Medida de &lt;inline-formula&gt;&lt;mml:math display=&#34;inline&#34; id=&#34;m1&#34;&gt;&lt;mml:mi&gt;g&lt;/mml:mi&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; com a placa Arduino em um experimento simples de queda livre&#34; &#34;Cordova, H.&#34; &#34;Tort, A. C.&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Medida de &lt;inline-formula&gt;&lt;mml:math display=&#34;inline&#34; id=&#34;m1&#34;&gt;&lt;mml:mi&gt;g&lt;/mml:mi&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; com a placa Arduino em um experimento simples de queda livre&#34; &#34;Cordova, H.&#34; &#34;Tort, A. C.&#34; &#34;2016&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/CCDM8Xwr8hhjVRDvTVk3hcQ/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172016000200407&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2015-0012" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2015-0012">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2015-0012" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2015-0012">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2015-0012"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2015-0012" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2015-0012">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2015-0012" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Medida de &lt;inline-formula&gt;&lt;mml:math display=&#34;inline&#34; id=&#34;m1&#34;&gt;&lt;mml:mi&gt;g&lt;/mml:mi&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; com a placa Arduino em um experimento simples de queda livre
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2015-0012">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

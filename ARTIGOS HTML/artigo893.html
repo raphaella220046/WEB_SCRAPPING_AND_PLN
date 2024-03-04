@@ -1,0 +1,2282 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino"/>
+<meta property="og:description" content="Desde 2018, o aprofundamento teórico da componente de física – na área de Ciências da Natureza e..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Amorim, Cleber Alexandre de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual Paulista (UNESP)">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0003-4123-2740">
+        <meta name="citation_author" content="Villas-Bôas, Lúcia Adriana">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual Paulista (UNESP)">
+        
+        <meta name="citation_author" content="Morais, Flávio José de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual Paulista (UNESP)">
+        
+        <meta name="citation_author" content="Matulovic, Mariana">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual Paulista (UNESP)">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-6626-4621">
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="43"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2021-0267"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Desde 2018, o aprofundamento teórico da componente de física – na área de Ciências da Natureza e suas Tecnologias – subdivide-se nas seguintes unidades temáticas de conhecimento: matéria e energia; vida, Terra e cosmos; tecnologia e linguagem científica. Neste contexto, o ensino de física deve ter como um dos seus pilares, na sociedade contemporânea, a busca por explicações a respeito das novas tecnologias integradas à vida, à profissão e ao cotidiano do estudante, tendo como suporte a indissociabilidade entre a teoria e prática no processo de ensino-aprendizagem. O presente artigo tem como objetivo destacar a potencialidade da articulação do ensino de física, subsidiado por projetos e prática, com aporte das tecnologias. Particularmente, neste trabalho expõe-se três ensaios experimentais a respeito do sismógrafo para ser aplicado no contexto da sala de aula. Propõe-se delinear uma ferramenta que atua como um laboratório em sala de aula, auxiliando professores e alunos em uma melhor assimilação de conceitos da área de Ciências da Natureza e suas Tecnologias, de modo a dotá-los com demonstrações e experimentos científicos que os conduzam a decisões à luz da ciência e do saber científico."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2021-09-17"></meta>
+<meta name="citation_keywords" content="Arduino"></meta><meta name="citation_keywords" content="Interdisciplinaridade"></meta><meta name="citation_keywords" content="Novo Ensino Médio"></meta><meta name="citation_keywords" content="Ensino"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2021.v43/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2021.v43/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172021000100473 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 43 <span class="_separator"> • </span>2021</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2021-0267" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2021-0267</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0267"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 deed.en"></span>Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Development of a seismograph using piezoelectric sensors in Arduino platform</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Cleber Alexandre de Amorim </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong><div class="corresp">* Endereço de correspondência: <a href="mailto:cleber.amorim@unesp.br">cleber.amorim@unesp.br</a> </div>Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.<a href="http://orcid.org/0000-0003-4123-2740" class="btnContribLinks orcid">http://orcid.org/0000-0003-4123-2740</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Lúcia Adriana Villas-Bôas </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Flávio José de Morais </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Mariana Matulovic </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.<a href="http://orcid.org/0000-0001-6626-4621" class="btnContribLinks orcid">http://orcid.org/0000-0001-6626-4621</a>
+</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Desde 2018, o aprofundamento teórico da componente de física – na área de Ciências da Natureza e suas Tecnologias – subdivide-se nas seguintes unidades temáticas de conhecimento: matéria e energia; vida, Terra e cosmos; tecnologia e linguagem científica. Neste contexto, o ensino de física deve ter como um dos seus pilares, na sociedade contemporânea, a busca por explicações a respeito das novas tecnologias integradas à vida, à profissão e ao cotidiano do estudante, tendo como suporte a indissociabilidade entre a teoria e prática no processo de ensino-aprendizagem. O presente artigo tem como objetivo destacar a potencialidade da articulação do ensino de física, subsidiado por projetos e prática, com aporte das tecnologias. Particularmente, neste trabalho expõe-se três ensaios experimentais a respeito do sismógrafo para ser aplicado no contexto da sala de aula. Propõe-se delinear uma ferramenta que atua como um laboratório em sala de aula, auxiliando professores e alunos em uma melhor assimilação de conceitos da área de Ciências da Natureza e suas Tecnologias, de modo a dotá-los com demonstrações e experimentos científicos que os conduzam a decisões à luz da ciência e do saber científico.</p>
+<p><strong>Palavras-chave</strong><br>Arduino; Interdisciplinaridade; Novo Ensino Médio; Ensino</p>
+</div>
+<hr>
+<div>
+<p>Since 2018, the theoretical deepening of the physics component – in the area of Natural Sciences and its Technologies – is subdivided into the following thematic units of knowledge: matter and energy; life, Earth and cosmos; technology and scientific language. In this context, the teaching of physics must have as one of its pillars, in contemporary society, the search for explanations about new technologies integrated into the student’s life, profession and daily life, supported by the inseparability between theory and practice in the teaching-learning process. This article aims to highlight the potential of articulating physics education, subsidized by projects and practice, with the contribution of technologies. This work exposes three experimental tests about the seismograph to be applied in the context of the classroom. It is proposed to outline a tool that acts as a laboratory in the classroom, helping teachers and students in a better assimilation of concepts in Natural Sciences and its Technologies, in order to provide them with demonstrations and scientific experiments that lead them to decisions in the light of science and scientific knowledge.</p>
+<p><strong>Keywords</strong><br>Arduino; Interdisciplinarity; New High School; Teaching</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>A física, como ciência, vem tentando explicar as regularidades da natureza desde a antiguidade pré-clássica [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>1. R. Sousa, A Relação Do Homem Com A Natureza, disponível em: https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm.</span><br><a href="https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm" target="_blank">https://educador.brasilescola.uol.com.br...
+            </a></span></span>]. O ensino de física permite aos alunos do ensino fundamental e médio analisarem situações concretas e reais, possibilitando um maior entendimento da natureza e desenvolvendo um instinto investigativo. No Brasil o ensino de física inicia-se no 1o. ano do E.M. (Ensino Médio) e estende-se até o 3o. ano do E.M.</p>
+      <p>Caracteriza-se como letramento científico à capacidade que os estudantes têm de resolver problemas fundamentados em ciência e tecnologia. Dentre as competências almejadas para atingir esse letramento destacam-se: potencialidade de se explicar cientificamente os fenômenos naturais e tecnológicos; planejar, desenvolver e executar investigações do tipo científicas; analisar dados e indicativos científicos; validar teorias e argumentos ([<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>2. MINISTÉRIO DA EDUCAÇÃO, Relatório Brasil no PISA 2018, Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, Brasília (2019).</span></span></span>], 2018, p. 118).</p>
+      <p>O Programa de Avaliação Internacional de Estudantes (PISA) é um instrumento de análise do desempenho dos estudantes em escala mundial que contempla, atualmente, um estudo em 79 países. No âmbito das Ciências, o PISA avalia os estudantes mediante sete níveis de proficiências descritos por conjuntos de competências e habilidades que os mesmos devem alcançar em termos de letramento científico, mediante seus desenvolvimentos cognitivos para a faixa etária em questão (neste caso, para alunos de 15 anos) ([<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>2. MINISTÉRIO DA EDUCAÇÃO, Relatório Brasil no PISA 2018, Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, Brasília (2019).</span></span></span>]).</p>
+      <p>Nos dados expostos em [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>2. MINISTÉRIO DA EDUCAÇÃO, Relatório Brasil no PISA 2018, Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, Brasília (2019).</span></span></span>], 49,2% dos discentes brasileiros estão no nível 1 ou abaixo dele (1a, 1b abaixo de 1b)<span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+        Abaixo de 1b: sem especificação de habilidades a serem contempladas; 1b: associação mínima e básica entre os conhecimentos científicos e os fenômenos físicos e 1a: entendimento de frases curtas e passagens de texto.
+      </span></span></span> de proficiência em Ciências da edição do PISA 2018. Isso significa que quase 50% dos nossos estudantes adquiriram apenas as habilidades e competências mínimas da área, sendo 4% com ausência total delas. Outro dado importante refere-se aos percentis de estudantes que atingiram os níveis maiores, 6 e 7: nível 7 foi de 0% e nível 6 de 0,8%.</p>
+      <p>Em tempos de uma crescente onda de programas e <i>youtubers</i> que entretém os adolescentes para o tema projetos, sendo estes dos mais variados assuntos e aplicações, conectar novamente a cultura maker com o ensino de física atreladas às tecnologias 4.0 pode ser uma alternativa de amenização do lacuna que se abriu entre o ensinar e aprender em física.</p>
+      <p>A física é vista pela maioria dos estudantes como difícil e abstrata, principalmente devido ao excesso de linguagem matemática utilizada. Outros fatores que contribuem para a falta de interesse na disciplina de física são devido ao afastamento entre o que se ensina em sala de aula e o mundo exterior; além do distanciamento entre docente e discente e a falta de interdisciplinaridade. Uma forma de contornar estes problemas é através do uso de experimentos didáticos que possam elucidar o conteúdo teórico ministrado pelo professor em sala de aula ([<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>3. MINISTÉRIO DA EDUCAÇÃO, Base Nacional Comum Curricular – Ensino Médio, 17 de maio de 2021. Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf.</span><br><a href="http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf" target="_blank">http://basenacionalcomum.mec.gov.br/imag...
+            </a></span></span>]).</p>
+      <p>A Base Nacional Comum Curricular (BNCC) para o E.M., em vigência desde 2018, insere as disciplinas de física, biologia e química dentro da área de Ciências da Natureza e suas Tecnologias, sistematizando e aprofundando as competências e habilidades dessas componentes curriculares sob o escopo das temáticas Matéria e Energia; Vida e Evolução, Terra e Universo [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>3. MINISTÉRIO DA EDUCAÇÃO, Base Nacional Comum Curricular – Ensino Médio, 17 de maio de 2021. Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf.</span><br><a href="http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf" target="_blank">http://basenacionalcomum.mec.gov.br/imag...
+            </a></span></span>]. Adicionalmente, o plano curricular do estado de São Paulo ressalta a necessidade de transcender as fronteiras das teorias clássicas para atingir os desafios de uma sociedade moderna, agregando a essa temática uma nova área: Tecnologia e Linguagem Científica (Novo Ensino Médio [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>4. GOVERNO DO ESTADO DE SÃO PAULO, Currículo Paulista: etapa ensino médio 2020, 12 de junho de 2020. São Paulo, 2020. Disponível em:https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf.</span><br><a href="https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf" target="_blank">https://efape.educacao.sp.gov.br/curricu...
+            </a></span></span>]).</p>
+      <p>Compete, portanto, ao ensino de física “analisar situações-problema e avaliar aplicações do conhecimento científico e tecnológico e suas implicações no mundo, utilizando procedimentos e linguagens próprias das Ciências da Natureza” ([<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>3. MINISTÉRIO DA EDUCAÇÃO, Base Nacional Comum Curricular – Ensino Médio, 17 de maio de 2021. Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf.</span><br><a href="http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf" target="_blank">http://basenacionalcomum.mec.gov.br/imag...
+            </a></span></span>], 2018, p. 539). Entre as atividades as quais pretende-se atribuir aos discentes do ensino médio, destaca-se a necessidade de que os alunos se apropriem do conhecimento de forma significativa, garantindo sua autonomia. Aprender a aprender necessita de uma pedagogia voltada para situações didáticas favorecedoras a ela, para dar sentido ao que se aprende. Não se aprende apenas ouvindo, escrevendo, memorizando e reproduzindo conhecimentos em provas, é necessário a participação dos alunos de forma a protagonizar as situações de ensino-aprendizagem propostas.</p>
+      <p>Assim, este artigo tem como finalidade delinear uma proposta da construção de um experimento de um sismógrafo que possa atuar de forma paralela ao ensino teórico de conteúdos de física do Ensino Básico (fundamental e médio). Para isso apresentam-se três ensaios experimentais: <i>i</i>. oscilações sobre uma mesa de madeira aferida por um osciloscópio; <i>ii</i>. oscilações sobre uma mesa de madeira aferida por um sistema utilizando um Arduino e <i>iii</i>. oscilações sobre uma mesa de granito aferida por um Arduino. A proposta tem como foco demonstrar uma ferramenta que atua como um laboratório em sala de aula, auxiliando professores e alunos em uma melhor assimilação de conceitos da área de Ciências da Natureza e suas Tecnologias para os discentes do Ensino Básico.</p>
+    
+      <h1 class="articleSectionTitle">2. Discussão Teórica</h1>
+      <p>A construção do protótipo de um sismógrafo, com a plataforma Arduino, foi desenvolvida por meio de um simples circuito de condicionamento de sinais munido de poucos elementos eletrônicos, a saber: sonorizador piezoelétrico, resistores, LEDs e jumpers. A função principal de um dispositivo desse tipo é detectar vibrações sísmicas e emitir uma resposta visual ou sonora, possível apenas graças ao uso de um sensor piezoelétrico (de composição natural ou sintético).</p>
+      
+        <h2>2.1. Sensores Piezoelétricos</h2>
+        <p>Sensores são dispositivos cuja finalidade é detectar eventos ou mudanças no ambiente, respondendo a um estímulo. No caso do sensor piezelétrico, seu princípio de funcionamento baseia-se no efeito piezoelétrico, que consiste na indução de uma diferença de potencial quando uma força compressiva ou de tração é aplicada sobre o mesmo. Inversamente, uma tensão mecânica é produzida quando um campo elétrico é aplicado ao material, o que é chamado de efeito piezoelétrico reverso (Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F1"><span class="sci-ico-fileFigure"></span>1</a>) [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>5. B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text 51, 297 (2021).</span></span></span>].</p>
+        <div class="row fig" id="S2_F1">
+<a name="S2_F1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/a1afff15bc8499f0a4a26a836136d46e6e39b43b.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+            Ilustração esquemática dos efeitos piezoelétricos diretos e reversos (fonte; autores).
+          <br>
+</div>
+</div>
+        <p>O efeito piezoelétrico foi primeiro observado em cristais sem centro de simetria, tal como quartzo e turmalina e, posteriormente, em outros materiais policristalinos sintéticos, particularmente em materiais cerâmicos. Esses materiais têm uma estrutura de polarização dependendo dos átomos que compõem o cristal e da forma como os cristais são formados [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, 5, 041306 (2018).</span></span></span>].</p>
+        <p>Os dipolos elétricos dentro do material piezoelétrico são responsáveis pela criação da resposta elétrica/diferença de potencial através do material quando ele está conectado a um circuito externo. Cargas positivas e negativas são induzidas em várias partes na superfície do cristal quando este é tensionado em diferentes direções. No estado sem tensão, as cargas positivas e negativas estão num estado de equilíbrio e os dipolos elétricos se cancelam e, portanto, não há saída elétrica. Quando uma força externa é aplicada, ocorrem mudanças na posição relativa das cargas em relação umas às outras, o que resulta na mudança do momento de dipolo. Ou seja, o material está polarizado.</p>
+        <p>Quando o material fica deformado, ele mostra uma tendência de acumular carga positiva em uma extremidade e carga negativa no outro lado do material; a diferença de potencial criada permite que as cargas sejam conduzidas ao redor do circuito e esse fluxo de carga resulta na produção de eletricidade [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>5. B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text 51, 297 (2021).</span></span></span>, <span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, 5, 041306 (2018).</span></span></span>, <span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>7. A. Arnau and D. Soares, em: Piezoelectric Transducers and Applications, editado por A.A. Vives (Springer, Berlin 2008).</span></span></span>, <span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>8. S. Mishra, L. Unnikrishnan, S.K. Nayak and S. Mohanty, Macromol Mater Eng 304, 1800463 (2019).</span></span></span>]. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a> apresenta um modelo molecular simples que explica a geração de uma carga elétrica como resultado de uma força exercida sobre o material [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>5. B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text 51, 297 (2021).</span></span></span>].</p>
+        <div class="row fig" id="S2_F2">
+<a name="S2_F2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/402fd3ba7d19a1f85cd8ced02d3e99bd7817a660.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+            Modelo molecular simples para explicar o efeito piezoelétrico de (a) uma molécula não perturbada e (b) submetida a uma força externa (fonte; autores).
+          <br>
+</div>
+</div>
+        <p>A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F2"><span class="sci-ico-fileFigure"></span>2</a> mostra um material piezoelétrico no qual uma força de tração é aplicada. Quando uma pressão é exercida no material, uma densidade de carga ligada aparecerá nas superfícies do cristal em contato com os eletrodos. Esta polarização gera um campo elétrico que provoca o fluxo das cargas livres. Dependendo do sinal, as cargas livres se moverão em direção às extremidades onde a carga ligada de sinal oposto é gerada pela polarização do cristal. Esse fluxo de cargas livres permanecerá até que a carga livre neutralize o efeito de polarização. Ao retirar a pressão exercida no cristal, a polarização desaparecerá e o fluxo de cargas livres será revertido, retornando à condição inicial [<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>7. A. Arnau and D. Soares, em: Piezoelectric Transducers and Applications, editado por A.A. Vives (Springer, Berlin 2008).</span></span></span>].</p>
+      
+      
+        <h2>2.2. Aplicações</h2>
+        <p>A capacidade dos materiais piezoelétricos de converter energia mecânica em elétrica e, inversamente, energia elétrica em mecânica, tem sido explorada em diversas aplicações, tais como em receptores, acelerômetros, sonares, hidrofones, dentre outros [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. F.P.C. Souza, E. Schler e A.A. Susin, em: IX Salão de Iniciação Científica – 1997. (Porto Alegre, 1997).</span></span></span>, <span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>10. L.J. Medeiros, Hidrofone ultrassônico com piezoeletreto como elemento transdutor. Tese de Doutorado, Universidade de São Paulo, São Carlos (2014).</span></span></span>, <span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>11. E.T.F. Dias, Mapeamento de ambientes utilizando sonares e problemas inversos. Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, Curitiba (2015).</span></span></span>]. O efeito piezoelétrico direto é responsável pela capacidade do material de funcionar como um sensor enquanto que, ao efeito inverso, cabe operar como um atuador.</p>
+        <p>Materiais piezoelétricos têm sido amplamente utilizados para fabricar transdutores (conversor de energia elétrica em energia mecânica): sensores, atuadores e ressonadores, filtros para telecomunicação são alguns exemplos [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>12. A.C.C. Massone, S.O. Reis e F.M. Viola, Conhecimento &amp; Diversidade 11, 63 (2019).</span></span></span>, <span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>13. L.F.S.S. Ferreira, Sistema de geração de energia via sensores piezoelétricos. Trabalho de Conclusão de Curso, Centro Universitário de Brasília, Brasília (2017).</span></span></span>]. Atuam, também, como parte vital em contextos biomédicos tais como em imagens ecográficas; novas estratégias de imagem e uso em cirurgia ultrassônica; sensores miniaturizados e amplificadores portáteis; na indústria de transporte, como sensores de <i>air bag</i>, microbombas e micromotores [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>5. B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text 51, 297 (2021).</span></span></span>, <span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, 5, 041306 (2018).</span></span></span>, <span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>7. A. Arnau and D. Soares, em: Piezoelectric Transducers and Applications, editado por A.A. Vives (Springer, Berlin 2008).</span></span></span>, <span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>8. S. Mishra, L. Unnikrishnan, S.K. Nayak and S. Mohanty, Macromol Mater Eng 304, 1800463 (2019).</span></span></span>, <span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. F.P.C. Souza, E. Schler e A.A. Susin, em: IX Salão de Iniciação Científica – 1997. (Porto Alegre, 1997).</span></span></span>, <span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>10. L.J. Medeiros, Hidrofone ultrassônico com piezoeletreto como elemento transdutor. Tese de Doutorado, Universidade de São Paulo, São Carlos (2014).</span></span></span>, <span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>11. E.T.F. Dias, Mapeamento de ambientes utilizando sonares e problemas inversos. Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, Curitiba (2015).</span></span></span>, <span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>12. A.C.C. Massone, S.O. Reis e F.M. Viola, Conhecimento &amp; Diversidade 11, 63 (2019).</span></span></span>, <span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>13. L.F.S.S. Ferreira, Sistema de geração de energia via sensores piezoelétricos. Trabalho de Conclusão de Curso, Centro Universitário de Brasília, Brasília (2017).</span></span></span>, <span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>14. J.P. Polizzi, B. Fain e F. Maspero, em: Handbook of Silicon Based MEMS Materials and Technologies (Third Edition), editado por M. Tilli, M. Paulasto-Krockel, M. Petzold, H. Theuss, T. Motooka e V. Lindroos (Elsevier, Amsterdã, 2020), p. 879.</span></span></span>].</p>
+        <p>Recentemente, muitos grupos de pesquisa têm concentrado esforços no desenvolvimento de tecnologia <i>Energy Harvesting</i> com materiais piezoelétricos em razão, principalmente, de sua configuração simples, eficiência elevada de conversão e alta capacidade de serem integrados em sistemas mais complexos. O efeito piezoelétrico pode ser implementado para coletar energia mecânica de diversos mecanismos, que pode ser convertida em energia elétrica útil e utilizada para alimentar dispositivos eletrônicos portáteis [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>6. H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, 5, 041306 (2018).</span></span></span>, <span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>8. S. Mishra, L. Unnikrishnan, S.K. Nayak and S. Mohanty, Macromol Mater Eng 304, 1800463 (2019).</span></span></span>, <span class="ref"><sup class="xref xrefblue">15</sup><span class="refCtt closed"><span>15. S. Azmi, S.M.H. Varkiani, M. Latifi e R. Bagherzadeh, J Ind Text, 10.1177/1528083720928822 (2020).</span><br><a href="https://doi.org/10.1177/1528083720928822" target="_blank">https://doi.org/10.1177/1528083720928822...
+            </a></span></span>, <span class="ref"><sup class="xref xrefblue">16</sup><span class="refCtt closed"><span>16. M.R. Sarker, S. Julai, M.F.M. Sabri, S.M. Said, M.M. Islam e M. Tahir, Sensors and Actuators A: Physical 300, 111634 (2019).</span></span></span>].</p>
+      
+      
+        <h2>2.3. Utilização do piezoelétrico no sismógrafo</h2>
+        <p>A participação de estudantes em práticas em sala de aula é uma ferramenta importante para a assimilação de conceitos teóricos. A prática, como mecanismo de associação entre o conhecimento científico e a realidade, aproxima o estudante dos aspectos mais interessantes e variados das Ciências, conduzindo-os para o desenvolvimento de uma educação apta para o enfrentamento dos desafios cotidianos, de modo crítico e sustentável [<span class="ref"><sup class="xref xrefblue">17</sup><span class="refCtt closed"><span>17. A. Saraò, M. Clocchiatti, C. Barnaba e D. Zuliani, Seismol. Res. Lett. 87, 186 (2016).</span></span></span>].</p>
+        <p>Um exemplo de como uma atividade experimental pode otimizar a assimilação de um conjunto de conteúdos de física refere-se à simulação de um abalo sísmico por meio da construção de um sismógrafo constituído por um <i>hardware</i>, gerenciado por Arduino, e outros componentes eletrônicos.</p>
+        <p>O uso de <i>hardware</i> Arduino para a construção de sismógrafos não é inédito, sendo possível encontrar diversas referências abordando esse assunto, bem como vários experimentos escolares, como o apresentado por van Wijk et al. [<span class="ref"><sup class="xref xrefblue">18</sup><span class="refCtt closed"><span>18. K. Van Wijk, T. Channel, K. Viskupic e M.L. Smith, Phys. Teach. 51, 552 (2013).</span></span></span>]. Este experimento é importante pois, para atingir seu objetivo, os alunos têm que aplicar estratégias de resolução de problemas possibilitando o desenvolvimento de novas habilidades que não fazem parte de seu conhecimento prévio. Tal prática permite ao docente trabalhar diversos aspectos interdisciplinares, como elementos da física de um terremoto, diferentes conteúdos como energia e conservação de energia, noções básicas de linguagens de programação, além de uma investigação científica e tecnológica.</p>
+        <p>O conceito de energia e conservação de energia é um dos mais importantes trabalhados neste experimento. O processo de conservação é muito intuitivo para um estudante de E.M., visto que eles vivenciam e conhecem que a principal matriz energética brasileira é a hídrica e que é possível gerar energia elétrica através do movimento de marés, vento e sol. No entanto, a geração de energia através da pressão mecânica não é tão familiar. Tal fenômeno é devido ao efeito piezoelétrico, já descrito anteriormente, e que tem sua origem no século XIX.</p>
+        <p>Neste escopo, tem-se quatro aplicações principais para a captação de energia: piezoelétrica, eletromagnética, termoelétrica e fotovoltaica [<span class="ref"><sup class="xref xrefblue">19</sup><span class="refCtt closed"><span>19. N. Sezer e M. Koç, Nano Energy 80, 105567 (2020).</span></span></span>, <span class="ref"><sup class="xref xrefblue">20</sup><span class="refCtt closed"><span>20. P. Carneiro, M.P.S. Santos, A. Rodrigues, J.A.F. Ferreira, J.A.O. Simões, A.T. Marques e A.L. Kholkin, Applied Energy 260, 114191 (2020).</span></span></span>, <span class="ref"><sup class="xref xrefblue">21</sup><span class="refCtt closed"><span>21. A. Nozariasbmarz, H. Collins, K. Dsouza, M.H. Polash, M. Hosseini, M. Hyland, J. Liu, A. Malhotra, F.M. Ortiz, F. Mohaddes et al., Applied Energy 258, 114069 (2020).</span></span></span>, <span class="ref"><sup class="xref xrefblue">22</sup><span class="refCtt closed"><span>22. X. Yue, M. Kauer, M. Bellanger, O. Beard, M. Brownlow, D. Gibson, C. Clark, C. MacGregor e S. Song, IEEE Internet Things J. 4, 2092 (2017).</span></span></span>]. O uso de materiais piezoelétricos na geração de energia já vem sendo amplamente utilizado, como um exemplo, pode-se citar a inserção de sensores em pneus de carro. Tal aplicação demonstra-se atrativa visto que os pneus já se deformam naturalmente com o rodar dos veículos [<span class="ref"><sup class="xref xrefblue">23</sup><span class="refCtt closed"><span>23. N. Makki, R. Pop-Iliev, em: SPIE Smart Structures and Materials + Nondestructive Evaluation and Health Monitoring (San Diego, 2011).</span></span></span>]. Em [<span class="ref"><sup class="xref xrefblue">23</sup><span class="refCtt closed"><span>23. N. Makki, R. Pop-Iliev, em: SPIE Smart Structures and Materials + Nondestructive Evaluation and Health Monitoring (San Diego, 2011).</span></span></span>], os autores observaram que sob uma velocidade média de aproximadamente 100 Km/h é possível gerar até 4,6 Watt.</p>
+        <p>Uma outra aplicação foi implementada em uma casa noturna na Holanda cuja energia gerada foi de aproximadamente 10% da energia consumida pelo estabelecimento [<span class="ref"><sup class="xref xrefblue">24</sup><span class="refCtt closed"><span>24. E. Rosenthal, Partying helps power a dutch nightclub, New York Times, Nova Iorque, 23 de outubro de 2008.</span></span></span>]. A instalação dos geradores piezoelétricos em estradas também já foi colocada em prática. Em um projeto piloto feito pela empresa Innowattech, um trecho de 10 metros foi preparado com geradores piezoelétricos gerando até 1 KWh. Extrapolando para uma avenida de uma grande cidade com quatro faixas e extensão de 1,6 km é possível gerar cerca de 1 MWh. As opções são incontáveis, por exemplo, pode-se utilizar os geradores em trilhos de trem, calçadas, esteiras em aeroportos e shoppings.</p>
+        <p>Os contextos abordados evidenciam a transformação de energia mecânica em energia elétrica. João et al. demonstraram a eficiência da transformação de energia mecânica em eletricidade por meio de um sensor piezoelétrico [<span class="ref"><sup class="xref xrefblue">25</sup><span class="refCtt closed"><span>25. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. 41, e20180219 (2018).</span></span></span>].</p>
+        <p>No experimento proposto na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2_F3"><span class="sci-ico-fileFigure"></span>3</a> tem-se o seguinte processo de conversão de energia em curso: (i) energia potencial gravitacional (ii) esta energia será transformada em energia cinética é transferida para o sensor piezoelétrico (iii) conservação do momento linear para em seguida ser novamente transformada, agora para (iv) energia potencial elétrica [<span class="ref"><sup class="xref xrefblue">25</sup><span class="refCtt closed"><span>25. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. 41, e20180219 (2018).</span></span></span>].</p>
+        <div class="row fig" id="S2_F3">
+<a name="S2_F3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2_F3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9310e9bd52ebe54a94430bb21f0252278ff68e0d.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+            Processo de conversão de energia (i) energia potencial gravitacional, (ii) energia cinética, (iii) conservação do momento linear e (iv) energia potencial elétrica.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>2.4. Conservação da energia mecânicae do momento linear</h2>
+        <p>Quando um objeto é deixado cair, por exemplo um peso de massa <b><i>m</i></b> em direção a um sensor piezoelétrico, a Terra exerce uma força gravitacional <b>F</b><sub>g</sub> = m<b>g</b> nesse objeto, o sentido da força é o mesmo da direção do objeto. A força gravitacional atua no objeto aumentando sua energia cinética. O sistema objeto-Terra tem energia potencial quando o objeto está a uma distância <b><i>h</i></b> acima do solo e esta energia potencial é transformada em energia cinética. Este processo de conversão de energia ocorre de forma contínua enquanto o objeto está caindo. Define-se energia potencial gravitacional como</p>
+        <div class="row formula" id="eS2_E1">
+<a name="S2_E1"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(1)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <msub>
+                  <mi>U</mi>
+                  <mi>g</mi>
+                </msub>
+                <mo>=</mo>
+                <mrow>
+                  <mi>m</mi>
+                  <mo>⁢</mo>
+                  <mi>g</mi>
+                  <mo>⁢</mo>
+                  <mi>h</mi>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>onde g é aceleração gravitacional e <b><i>h</i></b> a altura do objeto em relação ao solo.</p>
+        <p>Quando o objeto se encontra a uma altura <b><i>h</i></b> acima do solo não há energia cinética, no entanto, a energia potencial gravitacional do sistema objeto-Terra é dada pela equação 1. O movimento de descida do objetivo, quando deixado cair, ocasiona o aumento de sua velocidade, bem como de sua energia cinética. Por outro lado, a energia potencial tende a diminuir pois <b><i>h</i></b> está diminuindo. Em outras palavras, a soma das energias cinética e potencial, energia mecânica do sistema (<i>E</i>), permanece constante. Este é um exemplo do princípio de conservação da energia mecânica. Observe que a energia mecânica total de um sistema permanece constante em qualquer sistema isolado de objetos que interagem apenas por meio de forças conservativas.</p>
+        <p>Como a energia mecânica total <i>E</i> de um sistema é definida como a soma das energias cinética e potencial, pode-se escrever</p>
+        <div class="row formula" id="eS2_E2">
+<a name="S2_E2"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(2)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mi>E</mi>
+                <mo>=</mo>
+                <mrow>
+                  <msub>
+                    <mi>E</mi>
+                    <mi>C</mi>
+                  </msub>
+                  <mo>+</mo>
+                  <msub>
+                    <mi>U</mi>
+                    <mi>g</mi>
+                  </msub>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>Considerando que toda energia potencial do sistema objeto-Terra seja convertida em energia cinética, e que se tratando de forças conservativas, pode-se relacionar estas energias da seguinte forma</p>
+        <div class="row formula" id="eS2_E3">
+<a name="S2_E3"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(3)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mfrac>
+                  <mn>1</mn>
+                  <mn>2</mn>
+                </mfrac>
+                <mo>⁢</mo>
+                <mi>m</mi>
+                <mo>⁢</mo>
+                <msup>
+                  <mi>v</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mo>=</mo>
+              <mrow>
+                <mi>m</mi>
+                <mo>⁢</mo>
+                <mi>g</mi>
+                <mo>⁢</mo>
+                <mpadded width="+5pt">
+                  <mi>h</mi>
+                </mpadded>
+              </mrow>
+              <mo>⟹</mo>
+              <mi>v</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>⁢</mo>
+                  <mi>g</mi>
+                  <mo>⁢</mo>
+                  <mi>h</mi>
+                </mrow>
+              </msqrt>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>O sistema descrito acima, integrado com o sensor piezoelétrico, constitui um conjunto de duas partículas isoladas, que interagem somente entre si. Assim como na energia, tem-se também que levar em consideração a conservação do momento linear, de acordo com a segunda Lei de Newton. Nesta perspectiva, Júnior et al. e Filho et al. [<span class="ref"><sup class="xref xrefblue">25</sup><span class="refCtt closed"><span>25. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. 41, e20180219 (2018).</span></span></span>, <span class="ref"><sup class="xref xrefblue">26</sup><span class="refCtt closed"><span>26. D.P. Meira, J.K.S. Kamassury, R.C.S. Meira, Rev. Bras. Ensino Fís. 39, e4302 (2017).</span></span></span>] caracterizaram que a tensão elétrica gerada é descrita segundo a relação</p>
+        <div class="row formula" id="eS2_E4">
+<a name="S2_E4"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(4)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mi>V</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mi>λ</mi>
+                  <mo>⁢</mo>
+                  <mi>F</mi>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <p>onde λ é uma constante de proporcionalidade e F é a força aplicada no sensor devido à transferência de energia dada pela equação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E2"><span class="sci-ico-fileFormula"></span>2</a>).</p>
+      
+    
+      <h1 class="articleSectionTitle">3. Materiais e Métodos</h1>
+      <p>Nesta seção apresentam-se os materiais e os métodos utilizados para a realização do experimento: construção de um sismógrafo utilizando sensor piezoelétrico na plataforma Arduino. Para uma melhor dentificação dos materiais estes serão apresentados na forma de lista:</p>
+      <ol type="1">
+<li>
+          i.
+          <p>Arduino UNO R3;</p>
+        </li>
+<li>
+          ii.
+          <p>Sensor piezoelétrico;</p>
+        </li>
+<li>
+          iii.
+          <p>Resistores (330 Ω e 1 MΩ);</p>
+        </li>
+<li>
+          iv.
+          <p>LEDs;</p>
+        </li>
+<li>
+          v.
+          <p>Bola de Gude<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">2</strong>
+         Durante o artigo, utiliza-se a expressão esfera para denotar a bola de gude.
+      </span></span></span> ;</p>
+        </li>
+<li>
+          vi.
+          <p>Osciloscópio.</p>
+        </li>
+</ol>
+      
+        <h2>3.1. Arduino UNO e sensor piezoelétrico</h2>
+        <p>Alguns materiais dispensam apresentações pois são de ampla aplicabilidade, como resistores, osciloscópio e computador. No entanto, tanto o Arduino UNO quanto o sensor piezoelétrico necessita que suas principais características sejam expostas. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F4"><span class="sci-ico-fileFigure"></span>4</a> ilustra estes dois elementos.</p>
+        <div class="row fig" id="S3_F4">
+<a name="S3_F4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/b44b1be0c89b182cfddfd17552b8f4a039ca7e9e.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+            (a) <i>Hardware</i> Arduino UNO R3, modelo utilizado no experimento enquanto em (b) o sensor piezoelétrico, imagem frontal e posterior.
+          <br>
+</div>
+</div>
+        <p>Arduino é um <i>hardware</i> simples e de código aberto para novos desenvolvimentos, capaz de ler diferentes entradas (analógica e/ou digital) e, mediante uma programação prévia, controlar um ou mais atuadores (motor, LED, etc.) A sua linguagem de programação é baseada em <i>Wiring</i> enquanto o <i>software</i>(IDE) é baseado em <i>Processing</i>. Composto por um microcontrolador e periféricos que potencializam suas funções, controlando vários dispositivos, isto o torna apto para ser aplicado em instrumentação embarcada e robótica [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. F.P.C. Souza, E. Schler e A.A. Susin, em: IX Salão de Iniciação Científica – 1997. (Porto Alegre, 1997).</span></span></span>].</p>
+        <p>O sonorizador piezoelétrico é uma pequena placa que vibra produzindo som, desde que uma corrente elétrica esteja passando por ela. Um material piezoelétrico reage a uma passagem de corrente pela vibração. Seu funcionamento é semelhante ao do <i>buzzer</i>(sonoro). Entretanto, este último é um pouco mais robusto e possui uma proteção, em geral plástica, que também serve como meio para controlar a propagação do som.</p>
+        <p>Os sonorizadores e os <i>buzzers</i> – ambos polarizados – são muito utilizados em dispositivos de sinalização como alarmes e buzinas. Isso quer dizer que eles possuem um terminal positivo e um terminal negativo que devem ser conectados de maneira adequada no circuito. Em resumo, <i>buzzer</i>é um elemento que internamente possui um material piezoelétrico que pode, ao ser submetido por um sinal elétrico pulsado, emitir som. Ele é capaz de reproduzir sons numa faixa de frequência que vai de 2–4 kHz, aproximadamente. Um dispositivo que emite sons pode ser utilizado de formas diferentes em seus projetos (por exemplo, ele funciona como um alarme ou até como um pequeno alto-falante que reproduz notas musicais).</p>
+      
+      
+        <h2>3.2. Descrição Experimental</h2>
+        <p>O objetivo deste artigo é apresentar aos docentes e discentes, principalmente aqueles do E.M., um experimento capaz de emular um terremoto. Utiliza-se uma esfera de aproximadamente 10 g como objeto gerador do tremor. Associa-se a distância horizontal (<i>l</i>) do sensor como o epicentro do terremoto e a altura (<i>h</i>) está relacionado com a intensidade do tremor. Dessa forma, espera-se que quanto mais próximo do epicentro e maior a energia, maior será a intensidade do sinal, assim como um sismógrafo convencional.</p>
+        <p>Segundo o sismólogo João Willy Corrêa Rosa, pesquisador da Universidade de Brasília, um fator importante na intensidade sentida está relacionado com a composição do solo. Se o tremor ocorrer sobre uma rocha dura, tende a tremer menos do que sobre um terreno arenoso ou argiloso. Segundo o pesquisador, a lâmina do solo funciona como uma lente amplificando o movimento do terremoto [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>9. F.P.C. Souza, E. Schler e A.A. Susin, em: IX Salão de Iniciação Científica – 1997. (Porto Alegre, 1997).</span></span></span>, <span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>10. L.J. Medeiros, Hidrofone ultrassônico com piezoeletreto como elemento transdutor. Tese de Doutorado, Universidade de São Paulo, São Carlos (2014).</span></span></span>, <span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>11. E.T.F. Dias, Mapeamento de ambientes utilizando sonares e problemas inversos. Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, Curitiba (2015).</span></span></span>].</p>
+        <p>Dessa maneira, propõe-se que o experimento descrito neste trabalho ocorra em duas superfícies diferentes (madeira e granito), constituindo duas etapas de análise, a saber: etapa (1): medições na superfície de madeira; etapa (2): medições na superfície de granito. Desse modo, pode-se verificar se a propagação do sinal depende do material, já que ambos possuem propriedades mecânicas bem distintas [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>12. A.C.C. Massone, S.O. Reis e F.M. Viola, Conhecimento &amp; Diversidade 11, 63 (2019).</span></span></span>, <span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>13. L.F.S.S. Ferreira, Sistema de geração de energia via sensores piezoelétricos. Trabalho de Conclusão de Curso, Centro Universitário de Brasília, Brasília (2017).</span></span></span>].</p>
+        <p>Cada etapa do ensaio constituiu de deixar a esfera cair de três alturas diferentes (<i>h</i><sub>1</sub> = 20 cm; <i>h</i><sub>2</sub> = 40 cm e <i>h</i><sub>3</sub> = 60 cm) para quatro distâncias horizontais distintas (l<sub>1</sub> = 10 cm; l<sub>2</sub> = 20 cm; l<sub>3</sub> = 40 cm e l<sub>4</sub> = 60 cm), sendo repetidos quatro vezes as medições – para cada altura e distância – de modo a verificar a acurácia dos dados. Em todos os experimentos a esfera não foi deixada cair sobre o sensor e, sim, a uma distância deste como apresentado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F5"><span class="sci-ico-fileFigure"></span>5</a>.</p>
+        <div class="row fig" id="S3_F5">
+<a name="S3_F5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/495b206be6d150dd15be8b1f55e4b19c2b9e4d46.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+            Esquema que descreve a posição vertical do objeto e suas respectivas posições horizontais. Adicionalmente é mostrado o <i>software</i> Arduino acoplado a um PC juntamente com o sensor piezoelétrico.
+          <br>
+</div>
+</div>
+        <p>Uma vez definidos os parâmetros experimentais, prossegue-se para a montagem dos componentes e suas ligações no Arduino e computador. A descrição e comentários do <i>firmware</i> inserido no Arduino estão expostos no Apêndice. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS3_F6"><span class="sci-ico-fileFigure"></span>6</a> ilustra o esquema elétrico da montagem utilizada no ensaio.</p>
+        <div class="row fig" id="S3_F6">
+<a name="S3_F6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS3_F6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/62dbe20067d14ef9e5b74ad1d6298c899410555c.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+            Montagem experimental do experimento envolvendo o Arduino, sensor piezoelétrico, resistores, LEDs e cabos.
+          <br>
+</div>
+</div>
+        <p>A partir da execução do experimento, em suas respectivas etapas, os resultados corroboraram com as hipóteses levantadas, conforme explícito na próxima seção.</p>
+      
+    
+      <h1 class="articleSectionTitle">4. Resultados e Discussão</h1>
+      <p>Segundo Júnior et al. e Filho et al. [<span class="ref"><sup class="xref xrefblue">25</sup><span class="refCtt closed"><span>25. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. 41, e20180219 (2018).</span></span></span>, <span class="ref"><sup class="xref xrefblue">26</sup><span class="refCtt closed"><span>26. D.P. Meira, J.K.S. Kamassury, R.C.S. Meira, Rev. Bras. Ensino Fís. 39, e4302 (2017).</span></span></span>], a Eq. (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E4"><span class="sci-ico-fileFormula"></span>4</a>) descreve uma relação linear entre a diferença de potencial e a força aplicada (dada pela Eq. (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E1"><span class="sci-ico-fileFormula"></span>1</a>)). A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F7"><span class="sci-ico-fileFigure"></span>7</a> mostra um gráfico da diferença de potência gerada em relação à força aplicada (gravitacional). Portanto, é possível observar a concordância dos dados com o modelo descrito pela Eq. (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E4"><span class="sci-ico-fileFormula"></span>4</a>) com <i>λ</i> = 6,40 ± 0,19.</p>
+      <div class="row fig" id="S4_F7">
+<a name="S4_F7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/2df9118f9842a60a266ca5127fb0090b8e5a61ab.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+          Figura referente à Eq. (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E4"><span class="sci-ico-fileFormula"></span>4</a>), mostrando a relação linear entre a diferença de potencial gerada com a força aplicada.
+        <br>
+</div>
+</div>
+      <p>Uma vez demonstrada a relação de transferência de energia mecânica para energia elétrica, coloca-se em prática nosso modelo de sismógrafo como descrito na seção material e métodos. Inicialmente utilizou-se um osciloscópio para aferir a diferença de potencial, pois é um instrumento mais sensível e serve de base comparativa para com os resultados medidos pelo Arduino.</p>
+      <p>Na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F8"><span class="sci-ico-fileFigure"></span>8</a> tem-se os resultados obtidos para o modelo de sismógrafo aferido por um osciloscópio – na etapa 1 (madeira) – sendo em (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F8"><span class="sci-ico-fileFigure"></span>8</a>a) exibidos os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto na (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F8"><span class="sci-ico-fileFigure"></span>8</a>b) são mostrados os valores máximos para os respectivos <i>L</i>’s e <i>h</i>’s.</p>
+      <div class="row fig" id="S4_F8">
+<a name="S4_F8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9aec312c0afd5c5fefbf0ac393758efeb34afc04.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+          Resultados obtidos para o modelo de sismógrafo aferido por um osciloscópio, sob uma superfície de madeira, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        <br>
+</div>
+</div>
+      <p>Durante a execução do experimento – em suas duas etapas – foi impossível manter a padronização do sinal devido a exigência de repetibilidade do movimento de descida das esferas (idênticos) e da flexibilidade de movimentos da esfera (em termos de reverberação do sinal e de quicar do material). No entanto, para efeito de comparação, tomou-se sempre a média entre o primeiro e o segundo sinal. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F8"><span class="sci-ico-fileFigure"></span>8</a>a mostra estes resultados comparando os <i>h</i>’s dentro de um mesmo L e, consequentemente, entre diferentes L’s.</p>
+      <p>É possível observar que a escala do osciloscópio é modificada da primeira medida para a última, L = 10 e 60 cm, respectivamente, evidenciando o aumento do sinal conforme a esfera é deixada cair mais próxima do sensor piezoelétrico. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F8"><span class="sci-ico-fileFigure"></span>8</a>b apresenta os valores máximos em função da energia (altura h), segundo a Eq. (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E1"><span class="sci-ico-fileFormula"></span>1</a>). O sinal obtido corrobora com o senso comum, de que quanto mais distante do sensor piezoelétrico, epicentro, menor o sinal obtido e, quanto maior a energia do tremor (maior altura – <i>h</i>), maior o sinal registrado.</p>
+      <p>Os resultados apresentados anteriormente são promissores para o ensino, tanto da física envolvida em um terremoto quanto para o estudo da conservação na energia. No entanto, o osciloscópio não é um instrumento comum nas instituições de ensino básico em razão, por exemplo, de seu custo elevado. Uma alternativa para substituir o osciloscópio, em termos de aquisição e apresentação dos dados, está na utilização do Arduino conectado ao computador.</p>
+      <p>Além de aprofundar nos conhecimentos de física, é possível trabalhar com os discentes conceitos matemáticos e de tecnologias, pois é necessário utilizar informações de lógica e programação para que o Arduino possa aferir o sinal que é enviado a suas entradas analógicas e saídas digitais. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F9"><span class="sci-ico-fileFigure"></span>9</a> mostra, na etapa (1), estes resultados obtidos por meio do Arduino para aferir o sinal da vibração do toque da esfera com a mesa de madeira.</p>
+      <div class="row fig" id="S4_F9">
+<a name="S4_F9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9defb45a89f6ad9ad4a1bcbdf49683958f687bf1.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 9</strong><br>
+          Resultados obtidos para o modelo de sismógrafo aferido por pelo Arduino, sob uma superfície de madeira, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        <br>
+</div>
+</div>
+      <p>A Figura (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F9"><span class="sci-ico-fileFigure"></span>9</a>a) mostra estes resultados comparando os <i>h</i>’s dentro de um mesmo L e, consequentemente, entre diferentes L’s. A escala horizontal foi mantida fixa para uma fácil comparação, tornando nítido que quanto mais distante da fonte geradora do tremor e quanto menor a energia, menor será o sinal captado pelo sensor piezoelétrico. A Figura (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F9"><span class="sci-ico-fileFigure"></span>9</a>b) apresenta os valores máximos em função da energia (altura <i>h</i>), segundo a Eq. (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E1"><span class="sci-ico-fileFormula"></span>1</a>). O sinal obtido também corrobora com o senso comum, de que quanto mais distante do sensor piezoelétrico menor o sinal obtido e, quanto maior a energia do tremor, maior o sinal registrado.</p>
+      <p>Os resultados da Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F9"><span class="sci-ico-fileFigure"></span>9</a> foram obtidos por processos análogos aos realizados para a aferição no osciloscópio. As curvas da Figura (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F9"><span class="sci-ico-fileFigure"></span>9</a>a) exprimem a média das medidas, bem como o desvio padrão obtido, sendo este último sinalizado por uma barra vertical inserida em cada ponto da curva. Observa-se na Figura (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F9"><span class="sci-ico-fileFigure"></span>9</a>b) o valor máximo de cada curva (quadruplicada), o valor médio e o respectivo desvio padrão. Assim como os resultados apresentados para o osciloscópio estes também obedeceram a Eq. <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E1"><span class="sci-ico-fileFormula"></span>1</a> e corroboram com as noções do senso comum sobre a natureza dos terremotos.</p>
+      <p>Embora seja possível construir o sismógrafo utilizando o osciloscópio para aferir o “abalo sísmico”, os resultados indicam que a utilização do Arduino é mais do que suficiente para estudar a física envolvida em um terremoto. Embora o Arduino exija conhecimento de programação, o processo de configuração de um osciloscópio não é trivial para um leigo. Além do mais, é possível aproveitar a mesma programação do Arduino em outros projetos.</p>
+      <p>Com vistas a consolidar a ideia de que o movimento/força do terremoto está intrinsecamente relacionado com o tipo de constituição do solo ao qual ele se propaga, a etapa (2) do experimento foi executada (somente para a captação das medidas pelo Arduino). A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F10"><span class="sci-ico-fileFigure"></span>10</a> exibe as medições aferidas.</p>
+      <div class="row fig" id="S4_F10">
+<a name="S4_F10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS4_F10"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/4305d4dd59e51668eaa5e13a6634d991c4959410.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 10</strong><br>
+          Resultados obtidos para o modelo de sismógrafo aferido por pelo Arduino, sob uma superfície de Granito, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        <br>
+</div>
+</div>
+      <p>Os resultados da Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS4_F10"><span class="sci-ico-fileFigure"></span>10</a> evidenciam que o sinal obtido na superfície de granito apresentou um valor até 4x maior do que aqueles encontrados na superfície de madeira. O lado negativo é que não foi possível observar a relação de epicentro e intensidade neste ensaio. No entanto, é possível confirmar a relação apresentada por João Willy Corrêa Rosa, que a lâmina do solo funciona como uma lente amplificando o movimento do terremoto.</p>
+    
+      <h1 class="articleSectionTitle">5. Conclusão</h1>
+      <p>Terremoto é um fenômeno natural inerente ao nosso planeta, não dependente da interferência humana. Sua grandiosidade é capaz tanto de impressionar por sua magnitude quanto de assustar pelo caos que pode causar. Aguçar a curiosidade do aluno é uma ótima estratégia para instigar sua procura pelo conhecimento.</p>
+      <p>O propósito deste trabalho é apresentar um sistema capaz de estudar a física dos terremotos além de conceitos como conservação e transferência de energia utilizando Arduino. Para isto utilizou-se uma esfera que foi deixada cair de alturas e de distâncias diferentes. O experimento foi realizado em duas superfícies, madeira e granito, os resultados demonstram a influência do solo na propagação de energia, similar ao observado na literatura. O uso posterior deste experimento pode ser uma ferramenta valiosa para estabelecer bases de estudo em salas de aula, agregando o microcontrolador Arduino e seus periféricos como um minilaboratório de física devido sua ampla variedade de aplicações.</p>
+    </div>
+<div class="articleSection" data-anchor="References">
+<h1 class="articleSectionTitle">References</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">1.</sup><div> R. Sousa, <i>A Relação Do Homem Com A Natureza</i>, disponível em: https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm<br><a href="https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm" target="_blank">» https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm</a>
+</div>
+</li>
+<li>
+<sup class="xref big">2.</sup><div> MINISTÉRIO DA EDUCAÇÃO, Relatório Brasil no PISA 2018, Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, Brasília (2019).</div>
+</li>
+<li>
+<sup class="xref big">3.</sup><div> MINISTÉRIO DA EDUCAÇÃO, <i>Base Nacional Comum Curricular – Ensino Médio</i>, 17 de maio de 2021. Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf<br><a href="http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf" target="_blank">» http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf</a>
+</div>
+</li>
+<li>
+<sup class="xref big">4.</sup><div> GOVERNO DO ESTADO DE SÃO PAULO, <i>Currículo Paulista: etapa ensino médio 2020</i>, 12 de junho de 2020. São Paulo, 2020. Disponível em:https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf<br><a href="https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf" target="_blank">» https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf</a>
+</div>
+</li>
+<li>
+<sup class="xref big">5.</sup><div> B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text <b>51</b>, 297 (2021).</div>
+</li>
+<li>
+<sup class="xref big">6.</sup><div> H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, <b>5</b>, 041306 (2018).</div>
+</li>
+<li>
+<sup class="xref big">7.</sup><div> A. Arnau and D. Soares, em: <i>Piezoelectric Transducers and Applications</i>, editado por A.A. Vives (Springer, Berlin 2008).</div>
+</li>
+<li>
+<sup class="xref big">8.</sup><div> S. Mishra, L. Unnikrishnan, S.K. Nayak and S. Mohanty, Macromol Mater Eng <b>304</b>, 1800463 (2019).</div>
+</li>
+<li>
+<sup class="xref big">9.</sup><div> F.P.C. Souza, E. Schler e A.A. Susin, em: <i>IX Salão de Iniciação Científica – 1997</i> (Porto Alegre, 1997).</div>
+</li>
+<li>
+<sup class="xref big">10.</sup><div> L.J. Medeiros, <i>Hidrofone ultrassônico com piezoeletreto como elemento transdutor</i> Tese de Doutorado, Universidade de São Paulo, São Carlos (2014).</div>
+</li>
+<li>
+<sup class="xref big">11.</sup><div> E.T.F. Dias, <i>Mapeamento de ambientes utilizando sonares e problemas inversos</i> Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, Curitiba (2015).</div>
+</li>
+<li>
+<sup class="xref big">12.</sup><div> A.C.C. Massone, S.O. Reis e F.M. Viola, Conhecimento &amp; Diversidade <b>11</b>, 63 (2019).</div>
+</li>
+<li>
+<sup class="xref big">13.</sup><div> L.F.S.S. Ferreira, <i>Sistema de geração de energia via sensores piezoelétricos</i> Trabalho de Conclusão de Curso, Centro Universitário de Brasília, Brasília (2017).</div>
+</li>
+<li>
+<sup class="xref big">14.</sup><div> J.P. Polizzi, B. Fain e F. Maspero, em: <i>Handbook of Silicon Based MEMS Materials and Technologies (Third Edition)</i>, editado por M. Tilli, M. Paulasto-Krockel, M. Petzold, H. Theuss, T. Motooka e V. Lindroos (Elsevier, Amsterdã, 2020), p. 879.</div>
+</li>
+<li>
+<sup class="xref big">15.</sup><div> S. Azmi, S.M.H. Varkiani, M. Latifi e R. Bagherzadeh, J Ind Text, 10.1177/1528083720928822 (2020).<br><a target="_blank" href="https://doi.org/10.1177/1528083720928822">» https://doi.org/10.1177/1528083720928822</a>
+</div>
+</li>
+<li>
+<sup class="xref big">16.</sup><div> M.R. Sarker, S. Julai, M.F.M. Sabri, S.M. Said, M.M. Islam e M. Tahir, Sensors and Actuators A: Physical <b>300</b>, 111634 (2019).</div>
+</li>
+<li>
+<sup class="xref big">17.</sup><div> A. Saraò, M. Clocchiatti, C. Barnaba e D. Zuliani, Seismol. Res. Lett. <b>87</b>, 186 (2016).</div>
+</li>
+<li>
+<sup class="xref big">18.</sup><div> K. Van Wijk, T. Channel, K. Viskupic e M.L. Smith, Phys. Teach. <b>51</b>, 552 (2013).</div>
+</li>
+<li>
+<sup class="xref big">19.</sup><div> N. Sezer e M. Koç, Nano Energy <b>80</b>, 105567 (2020).</div>
+</li>
+<li>
+<sup class="xref big">20.</sup><div> P. Carneiro, M.P.S. Santos, A. Rodrigues, J.A.F. Ferreira, J.A.O. Simões, A.T. Marques e A.L. Kholkin, Applied Energy <b>260</b>, 114191 (2020).</div>
+</li>
+<li>
+<sup class="xref big">21.</sup><div> A. Nozariasbmarz, H. Collins, K. Dsouza, M.H. Polash, M. Hosseini, M. Hyland, J. Liu, A. Malhotra, F.M. Ortiz, F. Mohaddes et al., Applied Energy <b>258</b>, 114069 (2020).</div>
+</li>
+<li>
+<sup class="xref big">22.</sup><div> X. Yue, M. Kauer, M. Bellanger, O. Beard, M. Brownlow, D. Gibson, C. Clark, C. MacGregor e S. Song, IEEE Internet Things J. <b>4</b>, 2092 (2017).</div>
+</li>
+<li>
+<sup class="xref big">23.</sup><div> N. Makki, R. Pop-Iliev, em: <i>SPIE Smart Structures and Materials + Nondestructive Evaluation and Health Monitoring</i> (San Diego, 2011).</div>
+</li>
+<li>
+<sup class="xref big">24.</sup><div> E. Rosenthal, Partying helps power a dutch nightclub, New York Times, Nova Iorque, 23 de outubro de 2008.</div>
+</li>
+<li>
+<sup class="xref big">25.</sup><div> J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. <b>41</b>, e20180219 (2018).</div>
+</li>
+<li>
+<sup class="xref big">26.</sup><div> D.P. Meira, J.K.S. Kamassury, R.C.S. Meira, Rev. Bras. Ensino Fís. <b>39</b>, e4302 (2017).</div>
+</li>
+</ul></div>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList footnote">
+      <li>
+        <span class="xref big">1</span>
+        <div>Abaixo de 1b: sem especificação de habilidades a serem contempladas; 1b: associação mínima e básica entre os conhecimentos científicos e os fenômenos físicos e 1a: entendimento de frases curtas e passagens de texto.</div>
+      </li>
+      <li>
+        <span class="xref big">2</span>
+        <div> Durante o artigo, utiliza-se a expressão esfera para denotar a bola de gude.</div>
+      </li>
+    </ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>17 Set 2021</li>
+<li>
+<strong>Data do Fascículo</strong><br>2021</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>27 Jul 2021</li>
+<li>
+<strong>Revisado</strong><br>02 Ago 2021</li>
+<li>
+<strong>Aceito</strong><br>04 Ago 2021</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png" alt="Creative Common - by 4.0 deed.en"></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Cleber Alexandre de Amorim </strong><strong>*</strong><br><div>Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0003-4123-2740" class="btnContribLinks orcid">http://orcid.org/0000-0003-4123-2740</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Lúcia Adriana Villas-Bôas </strong><br><div>Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Flávio José de Morais </strong><br><div>Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Mariana Matulovic </strong><br><div>Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0001-6626-4621" class="btnContribLinks orcid">http://orcid.org/0000-0001-6626-4621</a></li></ul>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">* Endereço de correspondência: <a href="mailto:cleber.amorim@unesp.br">cleber.amorim@unesp.br</a> </div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (10)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (4)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/a1afff15bc8499f0a4a26a836136d46e6e39b43b.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+            Ilustração esquemática dos efeitos piezoelétricos diretos e reversos (fonte; autores).
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/402fd3ba7d19a1f85cd8ced02d3e99bd7817a660.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+            Modelo molecular simples para explicar o efeito piezoelétrico de (a) uma molécula não perturbada e (b) submetida a uma força externa (fonte; autores).
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2_F3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9310e9bd52ebe54a94430bb21f0252278ff68e0d.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Processo de conversão de energia (i) energia potencial gravitacional, (ii) energia cinética, (iii) conservação do momento linear e (iv) energia potencial elétrica.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/b44b1be0c89b182cfddfd17552b8f4a039ca7e9e.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            (a) <i>Hardware</i> Arduino UNO R3, modelo utilizado no experimento enquanto em (b) o sensor piezoelétrico, imagem frontal e posterior.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/495b206be6d150dd15be8b1f55e4b19c2b9e4d46.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Esquema que descreve a posição vertical do objeto e suas respectivas posições horizontais. Adicionalmente é mostrado o <i>software</i> Arduino acoplado a um PC juntamente com o sensor piezoelétrico.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS3_F6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/62dbe20067d14ef9e5b74ad1d6298c899410555c.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Montagem experimental do experimento envolvendo o Arduino, sensor piezoelétrico, resistores, LEDs e cabos.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/2df9118f9842a60a266ca5127fb0090b8e5a61ab.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+          Figura referente à Eq. (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E4"><span class="sci-ico-fileFormula"></span>4</a>), mostrando a relação linear entre a diferença de potencial gerada com a força aplicada.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9aec312c0afd5c5fefbf0ac393758efeb34afc04.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+          Resultados obtidos para o modelo de sismógrafo aferido por um osciloscópio, sob uma superfície de madeira, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9defb45a89f6ad9ad4a1bcbdf49683958f687bf1.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+          Resultados obtidos para o modelo de sismógrafo aferido por pelo Arduino, sob uma superfície de madeira, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS4_F10"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/4305d4dd59e51668eaa5e13a6634d991c4959410.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 10</strong><br>
+          Resultados obtidos para o modelo de sismógrafo aferido por pelo Arduino, sob uma superfície de Granito, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2_E1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2_E2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2_E3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2_E4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/e3c800c1a2b3c837114be9b29e6c01ea8bb05394.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+            Ilustração esquemática dos efeitos piezoelétricos diretos e reversos (fonte; autores).
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/e3c800c1a2b3c837114be9b29e6c01ea8bb05394.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/fbb8899597edf957b931316a18cbb9e10496d5a1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+            Modelo molecular simples para explicar o efeito piezoelétrico de (a) uma molécula não perturbada e (b) submetida a uma força externa (fonte; autores).
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/fbb8899597edf957b931316a18cbb9e10496d5a1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2_F3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/50f774a8cb07372529c22f2a20b6f62db38f8419.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Processo de conversão de energia (i) energia potencial gravitacional, (ii) energia cinética, (iii) conservação do momento linear e (iv) energia potencial elétrica.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/50f774a8cb07372529c22f2a20b6f62db38f8419.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/a7f0d768bfa9689623b9894ddf56f185428acd05.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            (a) <i>Hardware</i> Arduino UNO R3, modelo utilizado no experimento enquanto em (b) o sensor piezoelétrico, imagem frontal e posterior.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/a7f0d768bfa9689623b9894ddf56f185428acd05.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/b2a236576573872eae38da1d6dcbfaee4645af5a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Esquema que descreve a posição vertical do objeto e suas respectivas posições horizontais. Adicionalmente é mostrado o <i>software</i> Arduino acoplado a um PC juntamente com o sensor piezoelétrico.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/b2a236576573872eae38da1d6dcbfaee4645af5a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS3_F6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/179de9fd822ca719efbe92fa07ecc9307f425e0a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Montagem experimental do experimento envolvendo o Arduino, sensor piezoelétrico, resistores, LEDs e cabos.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/179de9fd822ca719efbe92fa07ecc9307f425e0a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/5277517fd78bfe8160b86288d3cfe9d395faa5aa.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+          Figura referente à Eq. (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2_E4"><span class="sci-ico-fileFormula"></span>4</a>), mostrando a relação linear entre a diferença de potencial gerada com a força aplicada.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/5277517fd78bfe8160b86288d3cfe9d395faa5aa.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/34f01c9bb4f69f77a2d2e94aa7b717aa6b479a20.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+          Resultados obtidos para o modelo de sismógrafo aferido por um osciloscópio, sob uma superfície de madeira, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/34f01c9bb4f69f77a2d2e94aa7b717aa6b479a20.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/1b455594d6fc251ed9e1c9149eddfab87817fe36.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+          Resultados obtidos para o modelo de sismógrafo aferido por pelo Arduino, sob uma superfície de madeira, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/1b455594d6fc251ed9e1c9149eddfab87817fe36.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS4_F10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/3386c3cf3e3d5267d1e145c1b9113f33a690824b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 10   
+          Resultados obtidos para o modelo de sismógrafo aferido por pelo Arduino, sob uma superfície de Granito, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para <i>L</i>’s e <i>h</i>’s diferentes.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/3386c3cf3e3d5267d1e145c1b9113f33a690824b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2_E1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <msub>
+                  <mi>U</mi>
+                  <mi>g</mi>
+                </msub>
+                <mo>=</mo>
+                <mrow>
+                  <mi>m</mi>
+                  <mo>⁢</mo>
+                  <mi>g</mi>
+                  <mo>⁢</mo>
+                  <mi>h</mi>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2_E2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mi>E</mi>
+                <mo>=</mo>
+                <mrow>
+                  <msub>
+                    <mi>E</mi>
+                    <mi>C</mi>
+                  </msub>
+                  <mo>+</mo>
+                  <msub>
+                    <mi>U</mi>
+                    <mi>g</mi>
+                  </msub>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2_E3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mfrac>
+                  <mn>1</mn>
+                  <mn>2</mn>
+                </mfrac>
+                <mo>⁢</mo>
+                <mi>m</mi>
+                <mo>⁢</mo>
+                <msup>
+                  <mi>v</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mo>=</mo>
+              <mrow>
+                <mi>m</mi>
+                <mo>⁢</mo>
+                <mi>g</mi>
+                <mo>⁢</mo>
+                <mpadded width="+5pt">
+                  <mi>h</mi>
+                </mpadded>
+              </mrow>
+              <mo>⟹</mo>
+              <mi>v</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>⁢</mo>
+                  <mi>g</mi>
+                  <mo>⁢</mo>
+                  <mi>h</mi>
+                </mrow>
+              </msqrt>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2_E4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mi>V</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mi>λ</mi>
+                  <mo>⁢</mo>
+                  <mi>F</mi>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Amorim, Cleber Alexandre de et al. Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino. Revista Brasileira de Ensino de Física [online]. 2021, v. 43 [Acessado CURRENTDATE] , e20210267. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2021-0267&gt;. Epub 17 Set 2021. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2021-0267.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino&#34; &#34;Amorim, Cleber Alexandre de&#34; &#34;Villas-Bôas, Lúcia Adriana&#34; &#34;Morais, Flávio José de&#34; &#34;Matulovic, Mariana&#34; &#34;2021&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino&#34; &#34;Amorim, Cleber Alexandre de&#34; &#34;Villas-Bôas, Lúcia Adriana&#34; &#34;Morais, Flávio José de&#34; &#34;Matulovic, Mariana&#34; &#34;2021&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/TsxXdsWxbXmTmWSpvFKMTGF/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172021000100473&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2021-0267" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2021-0267">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2021-0267" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2021-0267">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2021-0267"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2021-0267" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2021-0267">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2021-0267" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2021-0267">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

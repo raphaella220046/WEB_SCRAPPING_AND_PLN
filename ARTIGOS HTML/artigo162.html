@@ -1,0 +1,2336 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - O método numérico de Numerov aplicado à equação de Schrödinger O método numérico de Numerov aplicado à equação de Schrödinger </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="O método numérico de Numerov aplicado à equação de Schrödinger"/>
+<meta property="og:description" content="Neste artigo mostra-se como resolver numericamente problemas de autovalor associados a equações..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Caruso, Francisco">
+        
+            <meta name="citation_author_affiliation" content="Centro Brasileiro de Pesquisas Físicas">
+        
+        <meta name="citation_author" content="Oguri, Vitor">
+        
+            <meta name="citation_author_affiliation" content="Universidade do Estado do Rio de Janeiro">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="36"></meta>
+<meta name="citation_number" content="2"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172014000200010"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            O método numérico de Numerov aplicado à equação de Schrödinger
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Neste artigo mostra-se como resolver numericamente problemas de autovalor associados a equações diferenciais ordinárias lineares de segunda ordem, contendo também termos que dependem da derivada primeira da variável incógnita. Nesse sentido, faz-se uma apresentação didática do método de Numerov e, em seguida, ele é aplicado a dois problemas clássicos da mecânica quântica não relativística cujas soluções analíticas são bem conhecidas: o oscilador harmônico simples e o átomo de hidrogênio. Os resultados numéricos são confrontados com os obtidos analiticamente."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2014-06"></meta>
+<meta name="citation_keywords" content="método de Numerov"></meta><meta name="citation_keywords" content="oscilador harmônico"></meta><meta name="citation_keywords" content="átomo de hidrogênio"></meta><meta name="citation_keywords" content="mecânica quântica"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2014.v36n2/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2014.v36n2/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172014000200010 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 36 
+                (2)
+            <span class="_separator"> • </span>Jun 2014</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172014000200010" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172014000200010</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172014000200010"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>O método numérico de Numerov aplicado à equação de Schrödinger<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Numerov umerical method applied to the Schrödinger equation</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Francisco Caruso </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Rio de Janeiro,  
+          ,  
+        ,  Centro Brasileiro de Pesquisas Físicas,  Laboratório de Física Experimental de Altas Energias ,  Brazil
+          ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Universidade do Estado do Rio de Janeiro,  Instituto de Física Armando Dias Tavares ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Vitor Oguri </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Universidade do Estado do Rio de Janeiro,  Instituto de Física Armando Dias Tavares ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Neste artigo mostra-se como resolver numericamente problemas de autovalor associados a equações diferenciais ordinárias lineares de segunda ordem, contendo também termos que dependem da derivada primeira da variável incógnita. Nesse sentido, faz-se uma apresentação didática do método de Numerov e, em seguida, ele é aplicado a dois problemas clássicos da mecânica quântica não relativística cujas soluções analíticas são bem conhecidas: o oscilador harmônico simples e o átomo de hidrogênio. Os resultados numéricos são confrontados com os obtidos analiticamente.</p>
+<p>método de Numerov; oscilador harmônico; átomo de hidrogênio; mecânica quântica</p>
+</div>
+<hr>
+<div>
+<p>In this paper it is shown how to solve numerically eigenvalue problems associated to second order linear ordinary differential equations, containing also terms which depend on the first derivative of the unknown variable. A didactic presentation of the Numerov Method is given and, in the sequel, it is applied to two quantum non-relativistic problems with well known analytical solutions: the simple harmonic oscillator and the hydrogen atom. The numerical results are compared to those obtained analytically.</p>
+<p>Numerov method; harmonic oscillator; hydrogen atom; quantum mechanics</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>
+      <b>O método numérico de Numerov aplicado à equação de Schrödinger</b>
+    </p>
+<p></p>
+<p>
+      <b>Numerov umerical method applied to the Schrödinger equation</b>
+    </p>
+<p></p>
+<p>Francisco CarusoI, II, <span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        
+          francisco.caruso@gmail.com
+        
+      </span></span></span>; Vitor Oguri<sup><b>II</b></sup></p>
+<p></p>
+<p><sup>I</sup>Laboratório de Física Experimental de Altas Energias, Centro Brasileiro de Pesquisas Físicas, Rio de Janeiro, RJ, Brasil </p>
+<p></p>
+<p><sup>II</sup>Instituto de Física Armando Dias Tavares, Universidade do Estado do Rio de Janeiro, Rio de Janeiro, RJ, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Neste artigo mostra-se como resolver numericamente problemas de autovalor associados a equações diferenciais ordinárias lineares de segunda ordem, contendo também termos que dependem da derivada primeira da variável incógnita. Nesse sentido, faz-se uma apresentação didática do método de Numerov e, em seguida, ele é aplicado a dois problemas clássicos da mecânica quântica não relativística cujas soluções analíticas são bem conhecidas: o oscilador harmônico simples e o átomo de hidrogênio. Os resultados numéricos são confrontados com os obtidos analiticamente.</p>
+<p></p>
+<p><b>Palavras-chave:</b> método de Numerov, oscilador harmônico, átomo de hidrogênio, mecânica quântica.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>In this paper it is shown how to solve numerically eigenvalue problems associated to second order linear ordinary differential equations, containing also terms which depend on the first derivative of the unknown variable. A didactic presentation of the Numerov Method is given and, in the sequel, it is applied to two quantum non-relativistic problems with well known analytical solutions: the simple harmonic oscillator and the hydrogen atom. The numerical results are compared to those obtained analytically.</p>
+<p></p>
+<p><b>Keywords:</b> Numerov method, harmonic oscillator, hydrogen atom, quantum mechanics.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>A grande maioria dos métodos numéricos, como os de Newton, Euler, Lagrange, Gauss, Fourier, Jacobi, Runge-Kutta e tantos outros, foi introduzida no contexto das aplicações em física, astronomia ou em outras de natureza técnica, como na aerodinâmica [Benzi]. Desde então, a análise numérica não era reconhecida como uma disciplina matemática e tal situação perdurou durante as quatro primeiras décadas do século XX. Hoje, apesar de alguns métodos numéricos serem ensinados nos cursos de física, no âmbito de disciplinas da matemática, pouca ênfase é dada a eles nas aplicações físicas. Com a popularização dos computadores portáteis, cada vez mais acessíveis ao grande público, e capazes de executar tarefas cada vez maiores e mais complexas, parece um contrassenso não explorá-los no ensino de física e de engenharia.</p>
+<p></p>
+<p>O matemático húngaro Peter Lax, do Instituto Courant da Universidade de Nova Iorque, reforça a relevância do ensino dos métodos numéricos destacando, com muita propriedade, seu aspecto universal e a importância de os alunos explorarem soluções de equações diferenciais utilizando computadores [2]:</p>
+<div><blockquote>
+      <p>Métodos numéricos têm a grande virtude que se aplicam universalmente. Quando são introduzidos métodos especiais para lidar com a lamentavelmente pequena classe de equações [diferenciais] que podem ser tratadas analiticamente, os alunos estão aptos a perder de vista a ideia geral de que cada equação diferencial tem uma solução e que essa solução é determinada unicamente pelos dados iniciais. Que hoje podemos utilizar computadores para explorar as soluções de equações [diferenciais] é verdadeiramente revolucionário; estamos apenas começando a vislumbrar as consequências.<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">2</strong>
+         Numerical methods have the great virtue that they apply universally. When special methods are introduced to deal with each one of the pitifully small class of [differential] equations that can be handled analytically, students are apt to lose sight of the general idea that every differential equation has a solution and that this solution is uniquely determined by initial data. That today we can use computers to explore the solutions of [differential] equations is truly revolutionary; we are only beginning to glimpse the consequences. 
+      </span></span></span></p>
+    </blockquote></div>
+<p></p>
+<p>Na confluência dessas duas tendências, procura-se divulgar aqui um poderoso método de cálculo numérico desenvolvido originalmente por Boris Vasil'evich Numerov [3-5], aplicando-o à equação de Schrödinger independente do tempo no caso de dois problemas típicos: o oscilador harmônico simples e o átomo de hidrogênio. Esses são bons exemplos didáticos, pois suas soluções analíticas são bem conhecidas.</p>
+<p></p>
+<p>O primeiro exemplo, para o qual se determina o espectro de energia do oscilador harmônico simples como um problema de autovalor, e as respectivas autofunções <i>ψ</i><i>(x)</i>, ou funções de onda, ilustra o comportamento de uma partícula em um poço de potencial unidimensional, quando a equação de Schrödinger não contém termos de derivada de primeira ordem.</p>
+<p></p>
+<p>No segundo exemplo, o qual envolve a equação de Schrödinger contendo termo de derivada primeira, uma variante do método original de Numerov será aplicada para se obter o espectro e a solução radial do átomo de hidrogênio.</p>
+<p></p>
+<p>Com esses exemplos, serão esboçados alguns detalhes do procedimento geral utilizado no cálculo da solução numérica de equações diferenciais de segunda ordem.</p>
+<p></p>
+<p>
+      <b>2. O método de Numerov</b>
+    </p>
+<p></p>
+<p>A motivação inicial de Numerov era poder calcular correções à trajetória do cometa Halley. Portanto, na prática, o <i>método de Numerov</i> foi desenvolvido, inicialmente, para determinar as soluções de problemas de autovalores associados a equações diferenciais ordinárias de 2a ordem da mecânica celeste, que não continham termos envolvendo a derivada primeira de uma função incógnita <i>y</i>(<i>x</i>), ou seja, equações da forma</p>
+<p></p>
+<p>
+      <div class="row fig" id="0a82be0982a1701e136c779ff73abb581742f85e">
+<a name="0a82be0982a1701e136c779ff73abb581742f85e"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg0a82be0982a1701e136c779ff73abb581742f85e"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/0a82be0982a1701e136c779ff73abb581742f85e.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Toda equação do tipo (1) pode ser substituída pelo seguinte sistema de equações de primeira ordem <span class="ref footnote"><sup class="xref">3</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">3</strong>
+         A Ref. [6] trata da solução numérica das equações diferenciais acopladas de primeira ordem que resultam da equação de Schrödinger.
+      </span></span></span></p>
+<p></p>
+<p>
+      <div class="row fig" id="f52635a8a9b89606394534c1446d75b5e15641f2">
+<a name="f52635a8a9b89606394534c1446d75b5e15641f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgf52635a8a9b89606394534c1446d75b5e15641f2"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/f52635a8a9b89606394534c1446d75b5e15641f2.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Os métodos tradicionais para resolver numericamente tal sistema de equações, como os de Euler ou de Runge-Kutta, consideram que os valores de <i>y</i>(<i>x</i>) e de d<i>y</i>/d<i>x</i> sejam conhecidos em um dado ponto do domínio [<i>a</i>,<i>b</i>] de validade do sistema, <i>i.e.</i>, são adequados para os chamados <i>problemas de valor inicial</i>.</p>
+<p></p>
+<p>Em mecânica quântica não relativística, nos problemas de estados ligados que envolvem uma partícula de massa <i>m</i> confinada em um poço de potencial <i>V</i>(<i>x</i>), em um dado intervalo <i>a</i>&lt;<i>x</i>&lt;<i>b</i>, as energias permitidas (<i>E</i>) e as correspondentes funções de onda ψ(<i>x</i>) que descrevem esses estados estacionários satisfazem a equação de autovalor de Schrödinger</p>
+<p></p>
+<p>
+      <div class="row fig" id="2c393cb9f76552b475e989148dd59aab19e797ee">
+<a name="2c393cb9f76552b475e989148dd59aab19e797ee"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg2c393cb9f76552b475e989148dd59aab19e797ee"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/2c393cb9f76552b475e989148dd59aab19e797ee.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>em que <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/1c9825ac943c6b5738793ccc9ee0011a847fbf40.jpg"> J.s é a constante de Planck reduzida.</p>
+<p></p>
+<p>Nesses casos, como não se conhece o valor da derivada primeira da função de onda, os métodos de Euler e Runge-Kutta não podem ser empregados. Entretanto, é possível estabelecer condições de continuidade para os valores de ψ e dψ/d<i>x</i> em dois ou mais pontos do domínio da função de onda, o que caracteriza os chamados <i>problemas de valor de contorno</i>.</p>
+<p></p>
+<p>Além de tornar desnecessária a transformação de uma equação diferencial de segunda ordem em um sistema de primeira ordem, o método de Numerov permite a determinação simultânea do espectro de energia da partícula e das autofunções associadas a cada valor de energia.</p>
+<p></p>
+<p>Como todo método numérico iterativo, a solução da Eq. (2) é construída por integrações sucessivas, realizadas passo a passo, a partir de valores arbitrários para possíveis soluções em um ou mais pontos do domínio de integração.</p>
+<p></p>
+<p>Assim, no método de Numerov, inicialmente, considera-se que a solução seja conhecida em dois pontos subsequentes do intervalo [<i>a</i>,<i>b</i>], por exemplo, em <i>ψ</i><i>(x-</i><i>δ</i><i>) e </i><i>ψ</i><i>(x)</i>, sendo δ uma quantidade arbitrariamente pequena, denominada <i>passo</i> da integração. A seguir, procura-se estabelecer, então, um algoritmo numérico para se determinar a solução no ponto seguinte, <i>ψ</i><i>(x+</i><i>δ</i><i>)</i>.</p>
+<p></p>
+<p>O ponto de partida para estabelecer esse algoritmo é a expansão de <i>ψ</i><i>(x±</i><i>δ</i><i>)</i> em séries de Taylor, até derivadas de quarta ordem, ou seja,</p>
+<p></p>
+<p>
+      <div class="row fig" id="05ee22d15cf1061fb9bb00b7ce108fa422af3ef2">
+<a name="05ee22d15cf1061fb9bb00b7ce108fa422af3ef2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg05ee22d15cf1061fb9bb00b7ce108fa422af3ef2"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/05ee22d15cf1061fb9bb00b7ce108fa422af3ef2.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Somando-se os termos <i>ψ</i><i>(x+</i><i>δ</i><i>) e </i><i>ψ</i><i>(x-</i><i>δ</i><i>)</i>, apenas as derivadas de ordem par sobrevivem e, portanto, chega-se a uma relação entre os valores de uma função em três pontos e sua derivada segunda, dada por</p>
+<p></p>
+<p>
+      <div class="row fig" id="7b3a3e49306d91b916094b7b8d393c97ada46caa">
+<a name="7b3a3e49306d91b916094b7b8d393c97ada46caa"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg7b3a3e49306d91b916094b7b8d393c97ada46caa"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7b3a3e49306d91b916094b7b8d393c97ada46caa.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Escrevendo a equação de Schrödinger unidimensional, Eq. (2), na forma conveniente</p>
+<p></p>
+<p>
+      <div class="row fig" id="e6e95b855e00f28a9d8ac5647c98bd0b6d9f64e4">
+<a name="e6e95b855e00f28a9d8ac5647c98bd0b6d9f64e4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImge6e95b855e00f28a9d8ac5647c98bd0b6d9f64e4"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e6e95b855e00f28a9d8ac5647c98bd0b6d9f64e4.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>e utilizando a Eq. (4) para substituir os termos que contêm derivadas de segunda ordem, obtém-se</p>
+<p></p>
+<p>
+      <div class="row fig" id="c6e02525e743aea564d2099ee22e67efca54263b">
+<a name="c6e02525e743aea564d2099ee22e67efca54263b"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgc6e02525e743aea564d2099ee22e67efca54263b"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c6e02525e743aea564d2099ee22e67efca54263b.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Reagrupando a Eq. (6), obtém-se a fórmula de diferenças de Numerov para o problema de uma partícula sob ação de um potencial unidimensional,</p>
+<p></p>
+<p>
+      <div class="row fig" id="3f6598a4a8a55c3f37a0b7e6cb6fef7218cd190d">
+<a name="3f6598a4a8a55c3f37a0b7e6cb6fef7218cd190d"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg3f6598a4a8a55c3f37a0b7e6cb6fef7218cd190d"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/3f6598a4a8a55c3f37a0b7e6cb6fef7218cd190d.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Na realidade, cabe notar que o algoritmo pode ser aplicado a qualquer equação diferencial ordinária linear e homogênea de segunda ordem que não contenha termos de derivada primeira.</p>
+<p></p>
+<p>Uma vez que o problema de interesse é um problema de autovalor, a técnica de integração numérica da equação unidimensional de Schrödinger para uma partícula em um poço depende de se associarem valores arbitrários convenientemente aos autovalores e às respectivas (possíveis) autofunções em 2 pontos do domínio do problema. Mas como fazê-lo? Com relação à escolha do valor inicial para a energia (primeiro autovalor), basta lembrar que, de acordo com a relação de incerteza de Heisenberg, a energia <i>E</i> de uma partícula em um poço de potencial <i>V</i>(<i>x</i>) deve ser maior que o valor mínimo do poço. Assim, considera-se, inicialmente, que <i>E</i> <sub>inicial</sub>=<i>V</i><sub>min</sub>+Δ<i>E</i>, com Δ<i>E</i>&gt;0.</p>
+<p></p>
+<p>A escolha de um valor para a energia determina 2 pontos, <i>x</i><sub>ℓ</sub> e <i>x</i><sub>r</sub>, nos quais o valor da energia é igual ao valor da energia potencial, e correspondem aos pontos de retrocesso de uma partícula cujo movimento obedece à mecânica clássica newtoniana. Ou seja, do ponto de vista da mecânica clássica, o movimento da partícula está restrito apenas à região [<i>x</i><sub>ℓ</sub>,<i>x</i><sub>r</sub>], na qual a energia é maior ou igual à energia potencial. As regiões <i>x</i>&lt;<i>x</i><sub>ℓ</sub> e <i>x</i>&gt;<i>x</i><sub>r</sub> são denominadas regiões classicamente proibidas, e estão assinaladas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>.</p>
+<div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Como a equação de Schrödinger admite soluções para essas regiões classicamente proibidas, para cada valor de energia, inicialmente, se atribuem valores para uma possível autofunção em 2 pontos das regiões classicamente proibidas, nos quais a função ψ praticamente se anula. Em geral, esses são os pontos limites <i>a</i> e <i>b</i>&gt;<i>a</i> do domínio de integração da função.</p>
+<p></p>
+<p>No entanto, a implementação do método de Numerov para a solução do problema ainda requer um esquema de iteração que utiliza a fórmula de Numerov em duas etapas: a partir de <i>a</i>, ou à esquerda de um dos pontos de retrocesso clássico, doravante denominado <i>match point</i> (<i>x</i><sub>match</sub>), e a partir de <i>b</i>, ou à direita do <i>match point</i>.</p>
+<p></p>
+<p>Desse modo, tomando-se arbitrariamente um valor inicial para a energia, e dois valores arbitrários sucessivos para a solução, a partir dos extremos inferior e superior do intervalo de integração [<i>a</i>,<i>b</i>], pode-se implementar o esquema de iteração do método nos dois sentidos, como:</p>
+<p></p>
+<p>1. Solução à esquerda do <i>match point</i> (<i>x</i>&lt;<i>x</i><sub>match</sub>).</p>
+<p></p>
+<p>Seja <i>E</i><sub>inicial</sub>=<i>V</i><sub>min</sub>+Δ<i>E</i> (Δ<i>E</i>/|<i>V</i><sub>min</sub>|≪1) um valor arbitrário para a energia da partícula. Arbitrando-se também valores para a função de onda, em 2 pontos sucessivos, a partir de <i>a</i>,</p>
+<p></p>
+<p>
+      <div class="row fig" id="2275fc2d6332141695bde5588a837590d0f506fe">
+<a name="2275fc2d6332141695bde5588a837590d0f506fe"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg2275fc2d6332141695bde5588a837590d0f506fe"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/2275fc2d6332141695bde5588a837590d0f506fe.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>e utilizando-se a fórmula de diferenças, Eq. (7), a solução à esquerda é construída sequencialmente até o <i>match point</i> (<i>x</i><sub>match</sub>), em que ψ<sup>ℓ</sup>(<i>x</i><sub>match</sub>)=ψ<sup>ℓ</sup><sub>match</sub>.</p>
+<p></p>
+<p>2. Solução à direita do <i>match point</i> (<i>x</i>&gt;<i>x</i><sub>match</sub>).</p>
+<p></p>
+<p>De maneira similar, para o mesmo valor <i>E</i><sub>inicial</sub>, arbitrando-se</p>
+<p></p>
+<p>
+      <div class="row fig" id="e5f1c6479ef4a14aed8c992c2c477bb0b150c4fe">
+<a name="e5f1c6479ef4a14aed8c992c2c477bb0b150c4fe"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImge5f1c6479ef4a14aed8c992c2c477bb0b150c4fe"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e5f1c6479ef4a14aed8c992c2c477bb0b150c4fe.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>a solução à direita, a partir de <i>b</i>, é construída sequencialmente até os pontos <i>x</i><sub>match</sub> e <i>x</i>=<i>x</i><sub>match</sub>-δ, em que</p>
+<p></p>
+<p>
+      <div class="row fig" id="d98375763e6af9fb0404098aecebda5ef281f9dd">
+<a name="d98375763e6af9fb0404098aecebda5ef281f9dd"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgd98375763e6af9fb0404098aecebda5ef281f9dd"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/d98375763e6af9fb0404098aecebda5ef281f9dd.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Para garantir a condição de contorno da solução, redefine-se a solução à esquerda conforme a Eq. (8) dada a seguir, e testa-se a condição de contorno das derivadas primeiras, segundo a Eq. (9).</p>
+<p></p>
+<p>O procedimento é repetido passo a passo, nos dois sentidos, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/a427dc66e9db871f453e108c8d90a1ba5b79dfa7.jpg">. Partindo-se de <i>a</i>, utilizando-se a fórmula de recorrência de Numerov associada à equação, se constrói a solução ψ<sup>ℓ</sup> até que se atinja o ponto de retrocesso clássico, por exemplo, mais próximo de <i>b</i>, no qual <i>E</i>=<i>V</i>(<i>x</i><sub>match</sub>), chamado de <i>match point</i>. Depois, a partir de <i>b</i>, faz-se o análogo, construindo-se a solução ψ<sup>r</sup> até o <i>match point</i>. Em princípio, as possíveis soluções ψ<sup>ℓ</sup> e ψ<sup>r</sup> não serão necessariamente iguais neste ponto <i>x</i>match. Para assegurar a continuidade da solução redefine-se ψ<sup>ℓ</sup> como</p>
+<p></p>
+<p>
+      <div class="row fig" id="c96dfa66f3fe37640f94063d6ec11d1e7af46050">
+<a name="c96dfa66f3fe37640f94063d6ec11d1e7af46050"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgc96dfa66f3fe37640f94063d6ec11d1e7af46050"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c96dfa66f3fe37640f94063d6ec11d1e7af46050.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Finalmente, verifica-se quão próximos são os valores das respectivas derivadas primeiras de ψ<sup>r</sup> e da nova função ψ<sup>ℓ</sup> assim escalonada, no <i>match point</i>.</p>
+<p></p>
+<p>Para se testar a condição de contorno das derivadas primeiras, tendo-se em conta as séries de Taylor para <i>ψ</i><i>(x+</i><i>δ</i><i>) e </i><i>ψ</i><i>(x-</i><i>δ</i><i>)</i>, até a primeira ordem, pode-se escrever</p>
+<p></p>
+<p>
+      <div class="row fig" id="e553bae84cf82cc64f5bb626c6063a70f96b3395">
+<a name="e553bae84cf82cc64f5bb626c6063a70f96b3395"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImge553bae84cf82cc64f5bb626c6063a70f96b3395"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e553bae84cf82cc64f5bb626c6063a70f96b3395.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>nas quais ψ<sub>match</sub>±1=ψ(<i>x</i><sub>match</sub>±δ).</p>
+<p></p>
+<p>Se a diferença entre esses valores for menor que o valor de um erro predefinido, interrompe-se o processo, confirmando-se o autovalor procurado e a respectiva autofunção como sendo</p>
+<p></p>
+<p>
+      <div class="row fig" id="f24dcdfd8ef37faeed68b9528e0cfd93818c12b9">
+<a name="f24dcdfd8ef37faeed68b9528e0cfd93818c12b9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgf24dcdfd8ef37faeed68b9528e0cfd93818c12b9"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/f24dcdfd8ef37faeed68b9528e0cfd93818c12b9.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Se a condição de continuidade das derivadas não for satisfeita, incrementa-se o valor da energia para a busca de um novo valor, que seja realmente um autovalor do problema, e de sua respectiva autofunção.</p>
+<p></p>
+<p>O processo pode ser repetido até que se determine o número desejado de autovalores e autofunções do problema.</p>
+<p></p>
+<p>Por se basear na expansão em série de Taylor até quarta ordem, o erro no método de Numerov [7] é bem menor do que o erro em métodos baseados em expansão em ordem mais baixa, como o de Runge-Kutta.</p>
+<p></p>
+<p>
+      <b>3. O oscilador harmônico</b>
+    </p>
+<p></p>
+<p>A equação de Schrödinger para uma partícula de massa <i>m</i> em um campo conservativo, tal como um poço de potencial unidimensional <i>V</i>(<i>x</i>), pode ser escrita como uma equação de autovalor</p>
+<p></p>
+<p>
+      <div class="row fig" id="a569eb7a636216458bbf9092dd90af2c5fd20b01">
+<a name="a569eb7a636216458bbf9092dd90af2c5fd20b01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImga569eb7a636216458bbf9092dd90af2c5fd20b01"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/a569eb7a636216458bbf9092dd90af2c5fd20b01.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>na qual as energias <i>E</i> são os autovalores e as funções <i>ψ</i><i>(x)</i>, as respectivas autofunções de quadrado integrável do operador hamiltoniano <i>H</i> dado por</p>
+<p></p>
+<p>
+      <div class="row fig" id="be4eb2f22a45ecb09fdaa5e58d9cff528334ba7d">
+<a name="be4eb2f22a45ecb09fdaa5e58d9cff528334ba7d"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgbe4eb2f22a45ecb09fdaa5e58d9cff528334ba7d"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/be4eb2f22a45ecb09fdaa5e58d9cff528334ba7d.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Considerando que um potencial físico real se anula no infinito, as autofunções também se anulam nos extremos de um dado intervalo [<i>a</i>,<i>b</i>] que será o domínio de integração da equação, <i>i.e.</i>, ψ(<i>a</i>)=ψ(<i>b</i>)=0.</p>
+<p></p>
+<p>Assim, de um outro ponto de vista, o problema do poço unidimensional é um problema de autovalor que envolve uma equação diferencial linear e homogênea de segunda ordem do tipo</p>
+<p></p>
+<p>
+      <div class="row fig" id="7a648548aa4b162a2bb19d6481c362794d44af99">
+<a name="7a648548aa4b162a2bb19d6481c362794d44af99"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg7a648548aa4b162a2bb19d6481c362794d44af99"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7a648548aa4b162a2bb19d6481c362794d44af99.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>sujeita a condições de contorno nos limites de um intervalo [<i>a</i>,<i>b</i>], sendo</p>
+<p></p>
+<p>
+      <div class="row fig" id="fde7e2097e7f2b1b1961ad271f334140f83c8880">
+<a name="fde7e2097e7f2b1b1961ad271f334140f83c8880"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgfde7e2097e7f2b1b1961ad271f334140f83c8880"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/fde7e2097e7f2b1b1961ad271f334140f83c8880.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Um exemplo típico de um problema em mecânica quântica, que envolve a equação de Schrödinger sem termo de derivada primeira, é a determinação dos autovalores e autofunções do oscilador harmônico de massa <i>m</i> e frequência natural ω, cuja energia potencial é dada por</p>
+<p></p>
+<p>
+      <div class="row fig" id="c8f2f824ab8c8da5a9e72a7f5f397ef690152d8d">
+<a name="c8f2f824ab8c8da5a9e72a7f5f397ef690152d8d"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgc8f2f824ab8c8da5a9e72a7f5f397ef690152d8d"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c8f2f824ab8c8da5a9e72a7f5f397ef690152d8d.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Assim, <i>k</i><sup>2</sup>(<i>x</i>) pode ser escrito como</p>
+<p></p>
+<p>
+      <div class="row fig" id="6219e6a3bf5a9e6a7882b9d9b142d605e744a54a">
+<a name="6219e6a3bf5a9e6a7882b9d9b142d605e744a54a"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg6219e6a3bf5a9e6a7882b9d9b142d605e744a54a"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/6219e6a3bf5a9e6a7882b9d9b142d605e744a54a.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>e a equação de Schrödinger pode ser escrita como</p>
+<p></p>
+<p>
+      <div class="row fig" id="7404bacb618752427321f28bdc088e186ea6d476">
+<a name="7404bacb618752427321f28bdc088e186ea6d476"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg7404bacb618752427321f28bdc088e186ea6d476"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7404bacb618752427321f28bdc088e186ea6d476.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>x</i> está em unidades de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/a7fe7f50a847cdf14e974c93cd1abbec516e1ccd.jpg"> e a energia ε, em unidades de ħω.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela 1</a> mostra a comparação dos 6 primeiros autovalores (ε) de um oscilador harmônico, calculados analítica e numericamente, em unidades de ħω, e a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a>, as correspondentes autofunções, numericamente determinadas, em função de <i>x</i>, onde <i>x</i> está em unidades de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/99c1a22c91c5c536d7b4380ed5dc9f7e5fb6a6c0.jpg"></p>
+<div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>4. O átomo de hidrogênio não relativístico</b>
+    </p>
+<p></p>
+<p>Apesar de ter sido desenvolvido para equações diferenciais ordinárias lineares e homogêneas de segunda ordem que não contenham termos de derivada primeira, o método de Numerov pode ser generalizado para abranger a presença de termos que contenham derivada primeira na equação diferencial, de modo a se poder considerar também problemas de autovalor [8].</p>
+<p></p>
+<p>De fato, no caso de equações lineares, toda equação diferencial de segunda ordem do tipo</p>
+<p></p>
+<p>
+      <div class="row fig" id="5cf33ca37b8e36dcc975a53ef8d09ce73e0a1ace">
+<a name="5cf33ca37b8e36dcc975a53ef8d09ce73e0a1ace"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg5cf33ca37b8e36dcc975a53ef8d09ce73e0a1ace"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/5cf33ca37b8e36dcc975a53ef8d09ce73e0a1ace.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>pode ser escrita em sua <i>forma normal</i> [9]</p>
+<p></p>
+<p>
+      <div class="row fig" id="ac2265f5e6ddf87a14a2fead56ae79b63f11ef4a">
+<a name="ac2265f5e6ddf87a14a2fead56ae79b63f11ef4a"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgac2265f5e6ddf87a14a2fead56ae79b63f11ef4a"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/ac2265f5e6ddf87a14a2fead56ae79b63f11ef4a.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde</p>
+<p></p>
+<p>
+      <div class="row fig" id="185e87b5a3e75c224694c90e376bed5557a75dbb">
+<a name="185e87b5a3e75c224694c90e376bed5557a75dbb"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg185e87b5a3e75c224694c90e376bed5557a75dbb"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/185e87b5a3e75c224694c90e376bed5557a75dbb.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>A equação radial de Schrödinger para uma partícula de massa <i>m</i> sob a ação de um campo elétrico coulombiano, como o elétron no átomo de hidrogênio, pode ser escrita como</p>
+<p></p>
+<p>
+      <div class="row fig" id="5c446722a1b3aaf74f398a28ec59574beeb88760">
+<a name="5c446722a1b3aaf74f398a28ec59574beeb88760"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg5c446722a1b3aaf74f398a28ec59574beeb88760"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/5c446722a1b3aaf74f398a28ec59574beeb88760.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Fazendo-se a substituição de variável <i>r</i>=<i>xa</i><sub>B</sub>, sendo <i>a</i><sub>B</sub>=ħ<sup>2</sup>/(<i>me</i><sup>2</sup>) o raio de Bohr, pode-se reescrever a equação diferencial anterior, Eq. (11), para uma nova função <i>y</i>(<i>x</i>)=<i>R</i>(<i>r</i>), como uma equação de autovalor</p>
+<p></p>
+<p>
+      <div class="row fig" id="fd75411afe7f2fdc315d56715b4eafe47e3a0214">
+<a name="fd75411afe7f2fdc315d56715b4eafe47e3a0214"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgfd75411afe7f2fdc315d56715b4eafe47e3a0214"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/fd75411afe7f2fdc315d56715b4eafe47e3a0214.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>em que ε= <i>E</i>/<i>e</i><sup>2</sup>/(2<i>a</i><sub>B</sub>) e <i>V</i>(<i>x</i>)= ℓ(ℓ+1)/<i>x</i><sup>2</sup> - 2/<i>x</i> são, respectivamente, a energia e o chamado potencial efetivo (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3</a>), em unidades atômicas.</p>
+<div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Nesse caso, a equação que se pretende resolver pelo método de Numerov apresenta um termo que envolve a derivada primeira, e pode ser expressa por</p>
+<p></p>
+<p>
+      <div class="row fig" id="08b1bfc825f94a2b3db146b540e3c44b9874a31f">
+<a name="08b1bfc825f94a2b3db146b540e3c44b9874a31f"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg08b1bfc825f94a2b3db146b540e3c44b9874a31f"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/08b1bfc825f94a2b3db146b540e3c44b9874a31f.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>onde</p>
+<p></p>
+<p>
+      <div class="row fig" id="da9deb6dac62334d93435d2fb89d51fda803b795">
+<a name="da9deb6dac62334d93435d2fb89d51fda803b795"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgda9deb6dac62334d93435d2fb89d51fda803b795"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/da9deb6dac62334d93435d2fb89d51fda803b795.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>De acordo com as expansões de Taylor, Eq. (3), pode-se reescrever a Eq. (13) como</p>
+<p></p>
+<p>
+      <div class="row fig" id="6a0ea013ce14af9dfcaeae84f3bcd613a41b7d90">
+<a name="6a0ea013ce14af9dfcaeae84f3bcd613a41b7d90"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg6a0ea013ce14af9dfcaeae84f3bcd613a41b7d90"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/6a0ea013ce14af9dfcaeae84f3bcd613a41b7d90.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>De maneira similar ao caso anterior, de acordo com a Eq. (4), pode-se escrever o termo do lado direito da Eq. (14) que contém derivadas de ordem 2, como</p>
+<p></p>
+<p>
+      <div class="row fig" id="df695c2516c1b5dd4f092c2fe35d274d516125d8">
+<a name="df695c2516c1b5dd4f092c2fe35d274d516125d8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgdf695c2516c1b5dd4f092c2fe35d274d516125d8"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/df695c2516c1b5dd4f092c2fe35d274d516125d8.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Substituindo as derivadas de primeira ordem pelas aproximações</p>
+<p></p>
+<p>
+      <div class="row fig" id="1ee7daca01d6b4131db14d60b21eed501f529989">
+<a name="1ee7daca01d6b4131db14d60b21eed501f529989"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg1ee7daca01d6b4131db14d60b21eed501f529989"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/1ee7daca01d6b4131db14d60b21eed501f529989.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>obtém-se</p>
+<p></p>
+<p>
+      <div class="row fig" id="b3ea1cbe5f63276202ed9db973c0ccd41827c7bc">
+<a name="b3ea1cbe5f63276202ed9db973c0ccd41827c7bc"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgb3ea1cbe5f63276202ed9db973c0ccd41827c7bc"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/b3ea1cbe5f63276202ed9db973c0ccd41827c7bc.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>ou seja,</p>
+<p></p>
+<p>
+      <div class="row fig" id="e6eda7ec781fc3aaf8e6b1c0204c16c8ba590133">
+<a name="e6eda7ec781fc3aaf8e6b1c0204c16c8ba590133"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImge6eda7ec781fc3aaf8e6b1c0204c16c8ba590133"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e6eda7ec781fc3aaf8e6b1c0204c16c8ba590133.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Levando em conta que o lado esquerdo da Eq. (14) é igual a</p>
+<p></p>
+<p>
+      <div class="row fig" id="8d3610abeca2e31114be54630114d774cb086e45">
+<a name="8d3610abeca2e31114be54630114d774cb086e45"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg8d3610abeca2e31114be54630114d774cb086e45"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/8d3610abeca2e31114be54630114d774cb086e45.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>pode-se escrever</p>
+<p></p>
+<p>
+      <div class="row fig" id="c8c1859111880bfb19ab932d09d45e02e89a9a75">
+<a name="c8c1859111880bfb19ab932d09d45e02e89a9a75"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgc8c1859111880bfb19ab932d09d45e02e89a9a75"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c8c1859111880bfb19ab932d09d45e02e89a9a75.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Reagrupando-se os termos, e fazendo-se</p>
+<p></p>
+<p>
+      <div class="row fig" id="dbddf3d752c46a6aedcb1bf2b94a9f7661d7ef88">
+<a name="dbddf3d752c46a6aedcb1bf2b94a9f7661d7ef88"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgdbddf3d752c46a6aedcb1bf2b94a9f7661d7ef88"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/dbddf3d752c46a6aedcb1bf2b94a9f7661d7ef88.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>obtém-se a equação de diferenças de Numerov para o problema, adequada à propagação da solução a partir do limites do intervalo de integração</p>
+<p></p>
+<p>
+      <div class="row fig" id="31215ee65abf3883df304f069732459b2c8472d2">
+<a name="31215ee65abf3883df304f069732459b2c8472d2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg31215ee65abf3883df304f069732459b2c8472d2"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/31215ee65abf3883df304f069732459b2c8472d2.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>A partir dessa fórmula pode-se implementar um procedimento análogo ao caso anterior para a construção de soluções da equação radial de Schrödinger no intervalo (0,∞).</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Tabela 2</a> mostra a comparação de alguns dos autovalores (ε) do átomo de hidrogênio, calculados analítica e numericamente para <i>l</i>=1, e a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Fig. 4</a>, as correspondentes soluções radiais.</p>
+<div class="row table" id="t2">
+<a name="t2"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>5. Comentário final</b>
+    </p>
+<p></p>
+<p>Os programas para implementar o método de Numerov foram desenvolvidos em <i>C</i>++, para o compilador Cint do ROOT, versão 5.25/2009. Por um problema de espaço, preferimos disponibilizar o código computacional no endereço <a href="https://dl.dropboxusercontent.com/u/8500922/numerov_program.pdf" target="_blank">https://dl.dropboxusercontent.com/u/8500922/numerov_program.pdf</a>.</p>
+<p></p>
+<p>Embora tenhamos apresentado apenas duas aplicações didáticas, o método de Numerov é suficientemente geral e robusto a ponto de poder ser usado em trabalhos científicos modernos, como a investigação da dependência dos níveis de energia do átomo de hidrogênio não relativístico com a dimensionalidade do espaço [10] ou a análise dos efeitos sobre a dinâmica de uma partícula eletricamente carregada interagindo com um potencial de Chern-Simons em duas dimensões espaciais [11].</p>
+<p></p>
+<p>Recebido em 20/9/2013 </p>
+<p></p>
+<p> Aceito em 23/11/2013 </p>
+<p></p>
+<p> Publicado em 11/5/2014</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+          <a href="mailto:francisco.caruso@gmail.com">francisco.caruso@gmail.com</a>
+        </div>
+      </li>
+      <li>
+        <span class="xref big">2</span>
+        <div> Numerical methods have the great virtue that they apply universally. When special methods are introduced to deal with each one of the pitifully small class of [differential] equations that can be handled analytically, students are apt to lose sight of the general idea that every differential equation has a solution and that this solution is uniquely determined by initial data. That today we can use computers to explore the solutions of [differential] equations is truly revolutionary; we are only beginning to glimpse the consequences. </div>
+      </li>
+      <li>
+        <span class="xref big">3</span>
+        <div> A Ref. [6] trata da solução numérica das equações diferenciais acopladas de primeira ordem que resultam da equação de Schrödinger.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] Michele Benzi,    <i>Key Moments in History of Numerical Analysis</i>, disponível em http://siam.lsu.edu/wp-content/uploads/2009/09/nahist.pdf,    acessado em 28/1/2013.</div></li>
+<li><div>[2] Peter Lax,    <i>apud</i> http://www.dougshaw.com/uhl/<br><a href="http://http://www.dougshaw.com/uhl/" target="_blank">» link</a>
+</div></li>
+<li><div>[3] Numerov, Boris    Vasil'evich. Publications de l'Observatoire Astrophysique Central de Russie    <b>II</b>, 188 (1923).</div></li>
+<li><div>[4] Boris Vasil'evich    Numerov, Monthly Notices of the Royal Astronomical Society <b>84</b>, 592 (1924).</div></li>
+<li><div>[5] Boris Vasil'evich    Numerov, Astronomische Nachrichten <b>230</b> 359 (1927).</div></li>
+<li><div>[6] A.C. Allison,    Journal of Computational Physics <b>6</b>, 378 (1970).</div></li>
+<li><div>[7] John M. Blatt,    Journal of Computational Physics <b>1</b>, 382 (1967).</div></li>
+<li><div>[8] J.P.Leroy and    R. Wallace, The Journal of Physical Chemistry <b>89</b>, 1928 (1985).</div></li>
+<li><div>[9] George F. Simmons,    <i>Differential Equations: With Applications and Historical Notes</i> (Tata    McGraw-Hill, New Dehli, 1974).</div></li>
+<li><div>[10] F. Caruso,    J. Martins and V. Oguri, Physics Letters A <b>377</b>, 694 (2013).</div></li>
+<li><div>[11] F. Caruso,    J.A. Helayël-Neto, J. Martins and V. Oguri, The European Physical Journal    B, Condensed Matter Physics, <b>86</b>, a.n. 324 (2013).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        
+          francisco.caruso@gmail.com
+        
+      
+        2
+         Numerical methods have the great virtue that they apply universally. When special methods are introduced to deal with each one of the pitifully small class of [differential] equations that can be handled analytically, students are apt to lose sight of the general idea that every differential equation has a solution and that this solution is uniquely determined by initial data. That today we can use computers to explore the solutions of [differential] equations is truly revolutionary; we are only beginning to glimpse the consequences. 
+      
+        3
+         A Ref. [6] trata da solução numérica das equações diferenciais acopladas de primeira ordem que resultam da equação de Schrödinger.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>03 Jul 2014</li>
+<li>
+<strong>Data do Fascículo</strong><br>Jun 2014</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>20 Set 2013</li>
+<li>
+<strong>Aceito</strong><br>23 Nov 2013</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Francisco Caruso </strong><br><div>
+          ,  Rio de Janeiro,  
+          ,  
+        ,  Centro Brasileiro de Pesquisas Físicas,  Laboratório de Física Experimental de Altas Energias ,  Brazil</div>
+<div>
+          ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Universidade do Estado do Rio de Janeiro,  Instituto de Física Armando Dias Tavares ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Vitor Oguri </strong><br><div>
+          ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Universidade do Estado do Rio de Janeiro,  Instituto de Física Armando Dias Tavares ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (2)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/ef38bf6d4bea04b673aa3709b956ef8937439baa.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/ef38bf6d4bea04b673aa3709b956ef8937439baa.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/76da3c4ddad4ed24856001ee5fb595ab358c3c3c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/76da3c4ddad4ed24856001ee5fb595ab358c3c3c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/1ee45472514423e570e15e8fbbc53fe7bffa498c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/1ee45472514423e570e15e8fbbc53fe7bffa498c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/54d064ab4229f2a9fe04916b564786613a3d9d7e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/54d064ab4229f2a9fe04916b564786613a3d9d7e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/657073a545a191f45b4843a9b577371022ab0f1b.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/657073a545a191f45b4843a9b577371022ab0f1b.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e2b7c0a2390fc2bdaede548c466964e91874b0fa.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e2b7c0a2390fc2bdaede548c466964e91874b0fa.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg0a82be0982a1701e136c779ff73abb581742f85e" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/0a82be0982a1701e136c779ff73abb581742f85e.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/0a82be0982a1701e136c779ff73abb581742f85e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgf52635a8a9b89606394534c1446d75b5e15641f2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/f52635a8a9b89606394534c1446d75b5e15641f2.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/f52635a8a9b89606394534c1446d75b5e15641f2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg2c393cb9f76552b475e989148dd59aab19e797ee" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/2c393cb9f76552b475e989148dd59aab19e797ee.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/2c393cb9f76552b475e989148dd59aab19e797ee.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg05ee22d15cf1061fb9bb00b7ce108fa422af3ef2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/05ee22d15cf1061fb9bb00b7ce108fa422af3ef2.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/05ee22d15cf1061fb9bb00b7ce108fa422af3ef2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg7b3a3e49306d91b916094b7b8d393c97ada46caa" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7b3a3e49306d91b916094b7b8d393c97ada46caa.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7b3a3e49306d91b916094b7b8d393c97ada46caa.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImge6e95b855e00f28a9d8ac5647c98bd0b6d9f64e4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e6e95b855e00f28a9d8ac5647c98bd0b6d9f64e4.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e6e95b855e00f28a9d8ac5647c98bd0b6d9f64e4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgc6e02525e743aea564d2099ee22e67efca54263b" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c6e02525e743aea564d2099ee22e67efca54263b.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c6e02525e743aea564d2099ee22e67efca54263b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg3f6598a4a8a55c3f37a0b7e6cb6fef7218cd190d" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/3f6598a4a8a55c3f37a0b7e6cb6fef7218cd190d.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/3f6598a4a8a55c3f37a0b7e6cb6fef7218cd190d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg2275fc2d6332141695bde5588a837590d0f506fe" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/2275fc2d6332141695bde5588a837590d0f506fe.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/2275fc2d6332141695bde5588a837590d0f506fe.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImge5f1c6479ef4a14aed8c992c2c477bb0b150c4fe" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e5f1c6479ef4a14aed8c992c2c477bb0b150c4fe.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e5f1c6479ef4a14aed8c992c2c477bb0b150c4fe.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgd98375763e6af9fb0404098aecebda5ef281f9dd" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/d98375763e6af9fb0404098aecebda5ef281f9dd.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/d98375763e6af9fb0404098aecebda5ef281f9dd.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgc96dfa66f3fe37640f94063d6ec11d1e7af46050" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c96dfa66f3fe37640f94063d6ec11d1e7af46050.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c96dfa66f3fe37640f94063d6ec11d1e7af46050.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImge553bae84cf82cc64f5bb626c6063a70f96b3395" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e553bae84cf82cc64f5bb626c6063a70f96b3395.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e553bae84cf82cc64f5bb626c6063a70f96b3395.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgf24dcdfd8ef37faeed68b9528e0cfd93818c12b9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/f24dcdfd8ef37faeed68b9528e0cfd93818c12b9.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/f24dcdfd8ef37faeed68b9528e0cfd93818c12b9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImga569eb7a636216458bbf9092dd90af2c5fd20b01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/a569eb7a636216458bbf9092dd90af2c5fd20b01.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/a569eb7a636216458bbf9092dd90af2c5fd20b01.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgbe4eb2f22a45ecb09fdaa5e58d9cff528334ba7d" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/be4eb2f22a45ecb09fdaa5e58d9cff528334ba7d.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/be4eb2f22a45ecb09fdaa5e58d9cff528334ba7d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg7a648548aa4b162a2bb19d6481c362794d44af99" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7a648548aa4b162a2bb19d6481c362794d44af99.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7a648548aa4b162a2bb19d6481c362794d44af99.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgfde7e2097e7f2b1b1961ad271f334140f83c8880" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/fde7e2097e7f2b1b1961ad271f334140f83c8880.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/fde7e2097e7f2b1b1961ad271f334140f83c8880.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgc8f2f824ab8c8da5a9e72a7f5f397ef690152d8d" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c8f2f824ab8c8da5a9e72a7f5f397ef690152d8d.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c8f2f824ab8c8da5a9e72a7f5f397ef690152d8d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg6219e6a3bf5a9e6a7882b9d9b142d605e744a54a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/6219e6a3bf5a9e6a7882b9d9b142d605e744a54a.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/6219e6a3bf5a9e6a7882b9d9b142d605e744a54a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg7404bacb618752427321f28bdc088e186ea6d476" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7404bacb618752427321f28bdc088e186ea6d476.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/7404bacb618752427321f28bdc088e186ea6d476.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg5cf33ca37b8e36dcc975a53ef8d09ce73e0a1ace" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/5cf33ca37b8e36dcc975a53ef8d09ce73e0a1ace.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/5cf33ca37b8e36dcc975a53ef8d09ce73e0a1ace.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgac2265f5e6ddf87a14a2fead56ae79b63f11ef4a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/ac2265f5e6ddf87a14a2fead56ae79b63f11ef4a.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/ac2265f5e6ddf87a14a2fead56ae79b63f11ef4a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg185e87b5a3e75c224694c90e376bed5557a75dbb" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/185e87b5a3e75c224694c90e376bed5557a75dbb.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/185e87b5a3e75c224694c90e376bed5557a75dbb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg5c446722a1b3aaf74f398a28ec59574beeb88760" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/5c446722a1b3aaf74f398a28ec59574beeb88760.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/5c446722a1b3aaf74f398a28ec59574beeb88760.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgfd75411afe7f2fdc315d56715b4eafe47e3a0214" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/fd75411afe7f2fdc315d56715b4eafe47e3a0214.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/fd75411afe7f2fdc315d56715b4eafe47e3a0214.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg08b1bfc825f94a2b3db146b540e3c44b9874a31f" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/08b1bfc825f94a2b3db146b540e3c44b9874a31f.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/08b1bfc825f94a2b3db146b540e3c44b9874a31f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgda9deb6dac62334d93435d2fb89d51fda803b795" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/da9deb6dac62334d93435d2fb89d51fda803b795.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/da9deb6dac62334d93435d2fb89d51fda803b795.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg6a0ea013ce14af9dfcaeae84f3bcd613a41b7d90" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/6a0ea013ce14af9dfcaeae84f3bcd613a41b7d90.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/6a0ea013ce14af9dfcaeae84f3bcd613a41b7d90.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgdf695c2516c1b5dd4f092c2fe35d274d516125d8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/df695c2516c1b5dd4f092c2fe35d274d516125d8.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/df695c2516c1b5dd4f092c2fe35d274d516125d8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg1ee7daca01d6b4131db14d60b21eed501f529989" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/1ee7daca01d6b4131db14d60b21eed501f529989.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/1ee7daca01d6b4131db14d60b21eed501f529989.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgb3ea1cbe5f63276202ed9db973c0ccd41827c7bc" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/b3ea1cbe5f63276202ed9db973c0ccd41827c7bc.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/b3ea1cbe5f63276202ed9db973c0ccd41827c7bc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImge6eda7ec781fc3aaf8e6b1c0204c16c8ba590133" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e6eda7ec781fc3aaf8e6b1c0204c16c8ba590133.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/e6eda7ec781fc3aaf8e6b1c0204c16c8ba590133.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg8d3610abeca2e31114be54630114d774cb086e45" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/8d3610abeca2e31114be54630114d774cb086e45.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/8d3610abeca2e31114be54630114d774cb086e45.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgc8c1859111880bfb19ab932d09d45e02e89a9a75" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c8c1859111880bfb19ab932d09d45e02e89a9a75.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/c8c1859111880bfb19ab932d09d45e02e89a9a75.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgdbddf3d752c46a6aedcb1bf2b94a9f7661d7ef88" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/dbddf3d752c46a6aedcb1bf2b94a9f7661d7ef88.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/dbddf3d752c46a6aedcb1bf2b94a9f7661d7ef88.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg31215ee65abf3883df304f069732459b2c8472d2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/31215ee65abf3883df304f069732459b2c8472d2.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/fhykmyrtHKFmGKDxdjczKss/31215ee65abf3883df304f069732459b2c8472d2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Caruso, Francisco e Oguri, VitorO método numérico de Numerov aplicado à equação de Schrödinger. Revista Brasileira de Ensino de Física [online]. 2014, v. 36, n. 2 [Acessado CURRENTDATE] , 2310. Disponível em: &lt;https://doi.org/10.1590/S1806-11172014000200010&gt;. Epub 03 Jul 2014. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172014000200010.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;O método numérico de Numerov aplicado à equação de Schrödinger&#34; &#34;Caruso, Francisco&#34; &#34;Oguri, Vitor&#34; &#34;2014&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;O método numérico de Numerov aplicado à equação de Schrödinger&#34; &#34;Caruso, Francisco&#34; &#34;Oguri, Vitor&#34; &#34;2014&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/fhykmyrtHKFmGKDxdjczKss/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172014000200010&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172014000200010" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172014000200010">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172014000200010" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172014000200010">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172014000200010"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172014000200010" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172014000200010">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172014000200010" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            O método numérico de Numerov aplicado à equação de Schrödinger
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172014000200010">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

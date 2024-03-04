@@ -1,0 +1,2940 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?format=html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system"/>
+<meta property="og:description" content="A system of N spin-1/2 particles interacting with a thermal reservoir is used as a pedagogical..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Prataviera, G.A.">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        <meta name="citation_author" content="Mizrahi, S.S.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de São Carlos">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="36"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?lang=en&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?format=xml&amp;lang=en"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172014000400004"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system
+            "></meta>
+
+<meta name="citation_language" content="en"></meta>
+
+<meta name="citation_abstract" content="A system of N spin-1/2 particles interacting with a thermal reservoir is used as a pedagogical example for advanced undergraduate and graduate students. We introduce and illustrate some methods, approximations, and phenomena related to dissipation and nonlinearity in many-particle physics. We start our analysis from the dynamical Sudarshan-Lindblad quantum master equation for the density operator of a system S interacting with a thermal reservoir R. We derive the quantum version of the so-called Bogoliubov-Born-Green-Kirkwood-Yvon (BBGKY) equations such that the master equation can be decomposed in a hierarchical set of N - 1 equations (N &gt; 1). The hierarchy is broken by introducing the mean-field approximation and reducing the problem to a nonlinear single particle system. In this scenario, the Hamiltonian is nonlinear (i.e., it depends on the state of &lt;S), although the superoperator responsible for the dissipation and decoherence of S remains unaffected. To provide a useful tool to students: (1) we discuss the physical approximations involved, (2) we derive the analytical solution to the mean values equations of motion resulting from the Hamiltonian, (3) we solve analytically the master equation in the stationary regime, (4) we obtain and discuss the solution of the nonlinear master equation, numerically, and finally, (5) we discuss the master equation beyond the mean-field approximation and show how to introduce higher order quantum correlations that have been previously neglected."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2014-12"></meta>
+<meta name="citation_keywords" content="master-equation"></meta><meta name="citation_keywords" content="spin system"></meta><meta name="citation_keywords" content="BBGKY hierarchy"></meta><meta name="citation_keywords" content="mean-field approximation"></meta><meta name="citation_keywords" content="nonlinearity"></meta><meta name="citation_keywords" content="dissipation"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2014.v36n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?lang=en&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?lang=en&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (Inglês)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2014.v36n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (Inglês)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172014000400004 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge"></span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 36 
+                (4)
+            <span class="_separator"> • </span>Dec 2014</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172014000400004" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172014000400004</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172014000400004"><span class="sci-ico-link"></span>copy</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Equação de Sudarshan-Lindblad de muitas partículas: aproximação de campo médio, não linearidade e dissipação em um sistema de spin</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> G.A. Prataviera </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Bibeirão Preto,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Faculdade de Economia, Administração e Contabilidade de Bibeirão Preto ,  Departamento de Administração,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> S.S. Mizrahi </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  São Paulo,  
+        ,  Universidade Federal de São Carlos,  Centro de Ciências Exatas e de Tecnologia ,  Departamento de Física,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">About the authors</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Abstracts"><h1 class="articleSectionTitle">Abstracts</h1></div>
+<div>
+<p>A system of N spin-1/2 particles interacting with a thermal reservoir is used as a pedagogical example for advanced undergraduate and graduate students. We introduce and illustrate some methods, approximations, and phenomena related to dissipation and nonlinearity in many-particle physics. We start our analysis from the dynamical Sudarshan-Lindblad quantum master equation for the density operator of a system S interacting with a thermal reservoir R. We derive the quantum version of the so-called Bogoliubov-Born-Green-Kirkwood-Yvon (BBGKY) equations such that the master equation can be decomposed in a hierarchical set of N - 1 equations (N &gt; 1). The hierarchy is broken by introducing the mean-field approximation and reducing the problem to a nonlinear single particle system. In this scenario, the Hamiltonian is nonlinear (i.e., it depends on the state of &lt;S), although the superoperator responsible for the dissipation and decoherence of S remains unaffected. To provide a useful tool to students: (1) we discuss the physical approximations involved, (2) we derive the analytical solution to the mean values equations of motion resulting from the Hamiltonian, (3) we solve analytically the master equation in the stationary regime, (4) we obtain and discuss the solution of the nonlinear master equation, numerically, and finally, (5) we discuss the master equation beyond the mean-field approximation and show how to introduce higher order quantum correlations that have been previously neglected.</p>
+<p>master-equation; spin system; BBGKY hierarchy; mean-field approximation; nonlinearity; dissipation</p>
+</div>
+<hr>
+<div>
+<p>Um sistema de N partículas de spin-1/2 interagindo com um reservatório térmico é usado como exemplo didático, dirigido a estudantes avançados de gr adução e de pós-graduação. Introduzimos e ilustramos alguns métodos, aproximações e fenômenos relacionados ã dissipação e ã não linearidade em física de muitas partículas. Iniciamos nossa análise a partir da equação mestra quântica de Sudarshan-Lindblad para o operador densidade de um sistema S interagindo com um reservatório térmico R. Deduzimos a versão quântica da chamada hierarquia Bogoliubov-Born-Green-Kirkwood-Yvon (BBGKY) de equações, de modo que a equação mestra seja decomposta em um conjunto de N - 1 equações em uma seqüência, hierárquica (N &gt; 1). A hieraquia é quebrada introduzindo-se a aproximação de campo médio e obtendo-se um problema não linear para um sistema de uma única partícula. Neste cenário, o Hamiltoniano é não linear (isto é, ele depende do estado de S), embora o superoperador responsável pela dissipação e decoerência permanece inalterado. Para dispor conceitos úteis aos estudantes discutimos: (1) as aproximações físicas envolvidas, (2) deduzimos a solução analítica para os valores médios das equações de movimento resultante do Hamiltoniano, (3) resolvemos, analiticamente, a equação mestra no regime estacionário, (4) deduzimos e discutimos a solução da equação mestra não linear numericamente e finalmente (5) discutimos a equação mestra além da aproximação de campo médio e mostramos como introduzir as correlações quânticas, de ordem mais alta, que não foram consideradas anteriormente.</p>
+<p>equação mestra; sistema de spin; hierarquia BBGKY; aproximação de campo médio; não linearidade; dissipação</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>
+      <b>Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system</b>
+    </p>
+<p></p>
+<p>
+      <b>Equação de Sudarshan-Lindblad de muitas partículas: aproximação de campo médio, não linearidade e dissipação em um sistema de spin</b>
+    </p>
+<p></p>
+<p>G.A. Prataviera<sup><b>I,</b></sup><span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+        E-mail: 
+        prataviera@usp.br. 
+      </span></span></span>; S.S. Mizrahi<sup><b>II</b></sup></p>
+<p></p>
+<p><sup>I</sup>Departamento de Administração, Faculdade de Economia, Administração e Contabilidade de Bibeirão Preto, Universidade de São Paulo, Bibeirão Preto, SP, Brazil </p>
+<p></p>
+<p><sup>II</sup>Departamento de Física, Centro de Ciências Exatas e de Tecnologia, Universidade Federal de São Carlos, São Carlos, SP, Brazil</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>A system of<i> N</i> spin-1/2 particles interacting with a thermal reservoir is used as a pedagogical example for advanced undergraduate and graduate students. We introduce and illustrate some methods, approximations, and phenomena related to dissipation and nonlinearity in many-particle physics. We start our analysis from the dynamical Sudarshan-Lindblad quantum master equation for the density operator of a system<i> S</i> interacting with a thermal reservoir <i>R</i>. We derive the quantum version of the so-called Bogoliubov-Born-Green-Kirkwood-Yvon (BBGKY) equations such that the master equation can be decomposed in a hierarchical set of<i> N</i> - 1 equations <i>(N</i> &gt; 1). The hierarchy is broken by introducing the mean-field approximation and reducing the problem to a nonlinear single particle system. In this scenario, the Hamiltonian is nonlinear<i> (i.e.,</i> it depends on the state of &lt;S), although the superoperator responsible for the dissipation and decoherence of<i> S</i> remains unaffected. To provide a useful tool to students: (1) we discuss the physical approximations involved, (2) we derive the analytical solution to the mean values equations of motion resulting from the Hamiltonian, (3) we solve analytically the master equation in the stationary regime, (4) we obtain and discuss the solution of the nonlinear master equation, numerically, and finally, (5) we discuss the master equation beyond the mean-field approximation and show how to introduce higher order quantum correlations that have been previously neglected.</p>
+<p></p>
+<p><b>Keywords:</b> master-equation, spin system, BBGKY hierarchy, mean-field approximation, nonlinearity, dissipation.</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Um sistema de<i> N</i> partículas de spin-1/2 interagindo com um reservatório térmico é usado como exemplo didático, dirigido a estudantes avançados de gr adução e de pós-graduação. Introduzimos e ilustramos alguns métodos, aproximações e fenômenos relacionados ã dissipação e ã não linearidade em física de muitas partículas. Iniciamos nossa análise a partir da equação mestra quântica de Sudarshan-Lindblad para o operador densidade de um sistema<i> S</i> interagindo com um reservatório térmico <i>R</i>. Deduzimos a versão quântica da chamada hierarquia Bogoliubov-Born-Green-Kirkwood-Yvon (BBGKY) de equações, de modo que a equação mestra seja decomposta em um conjunto de<i> N</i> - 1 equações em uma seqüência, hierárquica<i> (N</i> &gt; 1). A hieraquia é quebrada introduzindo-se a aproximação de campo médio e obtendo-se um problema não linear para um sistema de uma única partícula. Neste cenário, o Hamiltoniano é não linear (isto é, ele depende do estado de<i> S),</i> embora o superoperador responsável pela dissipação e decoerência permanece inalterado. Para dispor conceitos úteis aos estudantes discutimos: (1) as aproximações físicas envolvidas, (2) deduzimos a solução analítica para os valores médios das equações de movimento resultante do Hamiltoniano, (3) resolvemos, analiticamente, a equação mestra no regime estacionário, (4) deduzimos e discutimos a solução da equação mestra não linear numericamente e finalmente (5) discutimos a equação mestra além da aproximação de campo médio e mostramos como introduzir as correlações quânticas, de ordem mais alta, que não foram consideradas anteriormente.</p>
+<p></p>
+<p><b>Palavras-chave:</b> equação mestra, sistema de spin, hierarquia BBGKY, aproximação de campo médio, não linearidade, dissipação.</p>
+<p></p>
+<p>
+      <b>1. Introduction</b>
+    </p>
+<p></p>
+<p>Since the birth of quantum mechanics (QM) the investigation of irreversible processes has received special emphasis, with the aim of describing a physical system evolving in compliance with the human feeling that there exists an "arrow of time" in nature. The approaches had to go along with the observed physical systems where macroscopic phenomena evolve inexorably to an equilibrium or stationary state, so breaking the time symmetric microreversibility present in the dynamical Schrodinger equation.<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">2</strong>
+         That means that by changing
+         t by -
+         t, reverting the velocities, and replacing the initial conditions in the solution of the equation by the final ones does not lead us to the initial conditions after the same time interval
+         t has elapsed. 
+      </span></span></span> Since its incipience several thinkers have devoted efforts to describe the irreversible processes with the care to avoid the violation of the QM principles. For a few historical reading see the papers [1-12], and for a review we recommend, for example, the books [13-16].</p>
+<p></p>
+<p>The standard rationale to describe formally the time irreversibility of a system of interest<i> S</i> is to couple it to another one,<i> R</i>, chosen according to the phenomenon one wants to observe - such a system is sometimes called<i> the rest of the universe, the environment</i> or<i> the reservoir</i> - and make each other to interact via a convenient potential. Thence, as times go on, both systems will evolve and eventually intertwine their degrees of freedom and will share a common quantum state. However, since one does not have access (either by observation or through experiment) to the details of<i> R, </i>methodologically one proceeds as one commonly does in statistical theory: one gets the reduced probability function for<i> S</i> by integrating (or summing) over the variables representing the rest of the universe<i> R.</i> In quantum mechanical language one says that we calculate the trace over the system<i> R</i> degrees of freedom. So one remains with a dynamical equation, called master equation, for the state of the system S, represented by the density operator (or density matrix), which shall evolve irreversibly in time as originally sought. The master equation for<i> S</i> will contain the influence of<i> R </i>through the presence of extra terms depending on its parameters. This approach received a thorough attention essentially in the 1960's, as can be seen in the researches reported in Refs. [17-32], and for some more recent applications see Refs. [33-38]. In addition, in classical statistical mechanics [39] and in the stochastic processes literature [40], a master equation is a gainloss equation for the probabilities of the possible states of a system (involving also probability transitions rate), while in quantum mechanics, the master equation governs the density operator evolution in time [33].</p>
+<p></p>
+<p>Starting from equations that are time-reversible for the complete system<i> S +R,</i> the procedure to describe irreversibility in<i> S</i> consists in deducing a differential equation for the<i> S</i> state only, by calculating the trace over the degrees of freedom or washing out the detailed information about<i> R,</i> which leaves us with a new modified (time-irreversible) equation for<i> S</i> containing the parameters that were already present in<i> R</i> and also new ones as the absolute temperature. This approach leads to an essential equation known as Sudarshan-Lindblad (SL) Eq. [41-43], that describes irreversibility, decoherence, and dissipation in<i> S.</i> In addition, this approach has been applied to several recent papers related to the quantum measurement theory [44-48]. A recent paper was devoted to the derivation of that equation with the pedagogical purpose of being accessible for undergraduate students in physics, chemistry and mathematics, having a basic background on QM [49].</p>
+<p></p>
+<p>In this paper we have the concern to be quite pedagogical in order to assist advanced undergraduate and graduate students interested in many-particle physics, once it involves irreversibility, dissipation and nonlinearity for a many-particle system. We show that for a system<i> S</i> constituted by N free spin-1/2 particles (or, by the mathematical isomorphism, a system of two-level atoms) interacting with a thermal reservoir<i> R,</i> and adopting the mean-field approximation, the single-particle Sudarshan-Lindblad equation remains the same, although the Hamiltonian acquires, additionally, nonlinear terms,<i> i.e.,</i> they depend on the state of the system<i> S,</i> and the dynamical equations for the spin operators mean values become nonlinear. We obtain and digress on the solution of the nonlinear equations set, containing the single-particle mean values operators, and we show how to go beyond the mean-field approximation by introducing two-particle quantum correlations.</p>
+<p></p>
+<p>The article is organized as follows: In section 2. we introduce the Hamiltonian and the master equation describing the system of N spin-1/2 particles interacting with a thermal reservoir. In section 3., a mean-field approximation is developed and an effective single-particle nonlinear Hamiltonian is obtained. In section 4. we derive the analytical solution for the nonlinear meanvalues operators, whose motion is generated by the Hamiltonian without dissipative terms, and illustrate numerically the case with dissipation. In section 5. we discuss how to go beyond the mean-field approximation by introducing two-particle correlations. Finally, in section 6. we present a summary and the conclusions.</p>
+<p></p>
+<p>
+      <b>2. Evolution equation for a<i> N</i> spin-1/2 particles interacting with a reservoir</b>
+    </p>
+<p></p>
+<p>We consider dissipation in physical systems in the framework of the System-Reservoir interaction. In this framework, the full Hamiltonian describing a generic system of interest<i> S</i> interacting with a reservoir<i> R</i> in thermal equilibrium, is given by</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ01">
+<a name="equ01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/266c03e819c7cce7462a948d82ecce85f491e15d.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where<i> H<sub>S</sub></i> is the system of interest Hamiltonian,<i> H<sub>R</sub></i>is the reservoir Hamiltonian, and <i>H<sub>SR</sub></i> is the systemreservoir interaction Hamiltonian. As shown in Refs [33-35,49], by tracing over the reservoir degrees of freedom, considering a bilinear interaction between system and reservoir, and under the Markov approximation, the system density operator <i>ρ</i><i>S</i> has its evolution described by the Sudarshan-Lindblad master equation</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ02">
+<a name="equ02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/d63c156ba337d1ece65b5f1a5b2f716021a7a6e7.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>The superoperator <i>L</i>\Â\ is defined for an arbitrary system operator Â by</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ03">
+<a name="equ03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/33bedd0aacbf902cf6a0fd635b522c3fc37c177e.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where Γ is the decay rate constant, and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8989a120f40587d450fbd81b56bbd31aa30e4c6.jpg"> is the mean number of the reservoir quanta. In the right hand side (RHS) of Eq. (2), the first term describes the unitary evolution of <i>S</i>, while the last two terms are responsible for the non-unitary irreversible and dissipative evolution of<i> S.</i> By particular choices of<i> H<sub>S</sub></i> and the operator <i>Â,</i> the Eq. (2) has been applied to several problems related to dissipation in quantum optics and in measurement theory [33-35].</p>
+<p></p>
+<p>Here, we are interested in describing a system consisting of<i> N</i> spin-1/2 particles (or two-level atoms, since their description accepts the same algebra), interacting with a reservoir, and whose constituents do not interact with each other or, because their density is quite low their direct interaction can be neglected. In our case, the Hamiltonian (1) describing<i> N</i> particles interacting with the reservoir (an infinite number of harmonic oscillators) is given by [14]</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ04">
+<a name="equ04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/430bd06e4744290ec1a32121f1df49c9c10d9541.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ05">
+<a name="equ05"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/3c9e10c3475e16d31c07d6f3cc31c1d904b102d5.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>are the collective operators which satisfy the following commutation relations</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ06_07">
+<a name="equ06_07"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a57a598214d140995a0551af3db0f94ba78776fd.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>and, the single-particle spin operators for the particle<i> i </i>are <i>σ</i><sub>0</sub>(<i>i</i>) and <i>σ</i>±(<i>i</i>);<span class="ref footnote"><sup class="xref">3</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">3</strong>
+         With 
+        σ ± 
+        
+           (
+        
+        
+          σ
+        
+        x ± i
+        
+          σ
+        
+        y), where 
+        
+          σ
+        
+        x, 
+        
+          σ
+        
+        y, and 
+        
+          σ
+        
+        0 are represented by the Pauli matrices.
+      </span></span></span> <i>ω</i><sub>0</sub> is the transition frequency between the particles' two-states. The operators and <i>b<sup></sup><sub>k</sub></i> and <i>b<sub>k</sub></i> obey the commutation relation [<i>b<sub>k</sub></i>, <i>b<sup></sup><sub>k'</sub></i>] = <i>δ</i><i><sub>kk'</sub></i>; their rôle is to create and annihilate a quantum of energy, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/9475ce31ad596c2bf59df0953856be7565df5b60.jpg"><i>ω<sub>k</sub></i>, the reservoir <i>R</i>; <i>ω</i><sub><i>k</i></sub> is the angular frequency associated to <i>k</i>-th harmonic oscillator belonging to R. For the system-reservoir interaction, it is assumed that each oscillator interacts with all the particles with the same strength |<i>g<sub>k</sub></i>|. So, the master equation structure for the set of particles is identical to the one corresponding to the single-particle master equation [14] where the operators <i>σ</i> ±, <i>σ</i><sub>0</sub> are replaced by the collective ones<i> S±, S<sub>0</sub>. </i>Then, identifying the operator Â, in Eq. (2), with the collective operator<i> S+,</i> the Sudarshan-Lindblad<i> N</i> particles master equation acquires the form</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ08">
+<a name="equ08"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/fadb859d44c9ee74b3eb4bffe30e39865606b8be.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ09">
+<a name="equ09"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/89cbcd038f522117c30f9f2a35d351f2fa6d9f8a.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>is the <i>N</i>-particle density operator,<i> V</i> is the volume of the container, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8989a120f40587d450fbd81b56bbd31aa30e4c6.jpg"> = 1/ (e<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/9475ce31ad596c2bf59df0953856be7565df5b60.jpg"><sup><i>ω</i></sup>º/<sup><i>kBT</i></sup>- 1) is the mean number of the reservoir quanta at temperature <i>T</i>, and <i>k<sub>B</sub></i> is the BolRmann constant.</p>
+<p></p>
+<p>
+      <b>3. The nonlinear master equation</b>
+    </p>
+<p></p>
+<p>From Eq. (8) we will deduce a quantum equivalent to the Bogoliubov-Born-Green-Kirkwood-Yvon (BBGKY) hierarchy [50,51] of equations similar to the procedure in classical kinetic theory. The term hierarchy refers to the order of correlations between<i> K</i> particles, assumed as an approximation to the exact<i> N </i>particle master equation<i> (N &gt; K</i>). For example, an equation of evolution for the state of<i> K</i> particles will depend on the state of <i>K</i>+1 particles, with <i>K </i>+ 1 &lt; <i>N</i>.</p>
+<p></p>
+<p>The hierarchy is said to be broken whenever the state operator is written as of<i> K</i> + 1 particles is reduced as a sum of product of states involving less particles, <i>i.e</i>., introducing lowerorder correlations.</p>
+<p></p>
+<p>Let us consider a subsystem constituted of<i> K</i> particles (<i>K &lt; N</i>), whose density operator is obtained by calculating the trace over the remaining<i> K + 1, K + </i> 2,<i> ..., N</i> particles in Eq. (9). Then, the reduced density operator is written as</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ10">
+<a name="equ10"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/16de091511a2a0231cf1ab873394c6a506bad383.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>The equation of motion for <i>ρ<sub>K</sub></i> is obtained by calculating trace over the master equation (8), thus obtaining explicitly,</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ11">
+<a name="equ11"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a58537eb5faf7bf16c0f2f6938f1a37995fc4af0.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>The RHS of Eq.(11) contains terms having the following structures</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ12_14">
+<a name="equ12_14"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ba44e063d1143191f0c5b8afc128fb2bd1a6593b.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>with λ, λ' = -, 0, +. Detailing the calculations, the term (12) can be written as</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ15">
+<a name="equ15"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b3a9d32abb0b5b54ec57db563811ff6ed56ad4cb.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where the sum <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b92a4ce8a711f5b57af35122a87424dd7da3e449.jpg"><sub>1</sub>... is broken into two terms, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b92a4ce8a711f5b57af35122a87424dd7da3e449.jpg"><sub>1</sub>... + <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b92a4ce8a711f5b57af35122a87424dd7da3e449.jpg"><sub>k+1</sub>..., since the trace operation is done over the particles <i>K + 1</i>,..., <i>N</i>. The second term in the RHS of the last line in Eq. (15) is</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ16">
+<a name="equ16"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/df83b0b03647a24738fbe54b4aa616ba7521f1fc.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where all the<i> N - K</i> terms are equivalent, since the particles are assumed being identical. Therefore, using the cyclic property of the trace operation (<i>Tr(AB) = Tr(BA</i>)), it follows that</p>
+<p></p>
+<p>Then, Eq. (15) reduces to<div class="row formula" id="eequ17">
+<a name="equ17"></a><div class="col-md-12"><div class="formula-container"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/107318d9d77d67881013b9b93a2ab1a03df04412.jpg"></div></div>
+</div></p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ18">
+<a name="equ18"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/95c04f3d2452b7cff01d534c81720894e3043de1.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Now, considering the trace operation (13), and breaking again the sum <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b92a4ce8a711f5b57af35122a87424dd7da3e449.jpg"><sub>1 </sub>... as <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b92a4ce8a711f5b57af35122a87424dd7da3e449.jpg"><sub>1 </sub>... + <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b92a4ce8a711f5b57af35122a87424dd7da3e449.jpg"><sub>k + 1 </sub>..., obtain the following four terms</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ19">
+<a name="equ19"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/e6e62b3be246c104144e9e2a1f7262084110882f.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Evaluating explicitly each one separately we get:</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ20_21">
+<a name="equ20_21"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8d7cedd450daeb99e4ae69212f683129dedd396.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where the factor<i> N - K</i> is present because there are formally equivalent terms;</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ22_23">
+<a name="equ22_23"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b169e9ff6f9286d532e0e931a4f73cce970ca277.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>In Eqs. (22) and (23) the results are zero because the trace of a commutator is null, then Eq. (19) becomes</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ24">
+<a name="equ24"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/1f39ff6d8a8f2e25014541c50a4a8fb09a2045d2.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Analogously to the above procedure, for the Eq. (14) we have</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ25">
+<a name="equ25"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/499839b2dbdbb0ebe6b5b81bb60ec8efcca2321d.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>which results again in four terms. Looking at each one separately and following the same procedure as above, we get</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ26_29">
+<a name="equ26_29"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/45147a57d7784a9ad5e89e7c62be6cb029c9c7ce.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Therefore, Eq. (25) can be written as</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ30">
+<a name="equ30"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a743fffcaaa11b5963469fa1d655b3d27958ed53.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Thus, back to Eqs. (12)-(14), we obtain explicitly</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ31_33">
+<a name="equ31_33"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ddfa73c518c8cdc06e9ca6d36e5391871d245c0d.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Using the results in Eqs. (31)-(33) we obtain the following master equation for the reduced <i>K</i>-particle system</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ34">
+<a name="equ34"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/35edba23bafa9a266814e9d7896aa7051d4ead5b.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>with<i> K</i> = 1,2, ..., <i>N</i> - 1, and where<i> h.c.</i> stands for hermitian conjugate. It is worth noting that the master equation for the reduced density operator of<i> K</i> particles <i>ρ</i><i><sub>K</sub></i> depends on the density operator of<i> K +</i>1 particles, <i>ρ</i><i><sub>K+1</sub></i>. These <i>N</i> - 1 equations are similar to the BBGKY hierarchy, studied in several contexts related to the statistical mechanics of classical fluids [50,51]. For a single representative particle of the system (<i>K</i> = 1), the equation of motion for <i>ρ</i><sub>1</sub> is</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ35">
+<a name="equ35"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/18fbdc7c94f5a5f3fcd538b86d9685f94a80ca95.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>noting that it depends on the two-particle density operator <i>ρ</i><sub>2</sub>, and so on for the whole hierarchy. Thus, we still have a complex problem. In order to obtain a scenario easier to be handled mathematically, some kind of approximation needs to be done. A plausible physical argument to obtain some simplification for a dilute system consists in disregarding the higher order particle correlations. This is achieved when one does the factorization <i>ρ</i><sub>2</sub>(1,2) = <i>ρ</i><sub>1</sub>(1) <i>ρ</i><sub>1</sub>(2), so now a generic particle is assumed to move in a mean-field produced by all the other particles. This approximation is very similar to the well-known Hartree approximation or meanfield approximation used in atomic and condensed matter physics [52-54], which consist in a factorization as a product of single-particle states. Implementing this approximation, Eq. (35) reduces to a generic singleparticle master equation</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ36">
+<a name="equ36"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/20885fe393b401772e464504ae662717b838433d.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where a single-particle effective hermitian Hamiltonian is identified as</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ37">
+<a name="equ37"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/08b3d6d08d97b752baeb32721ce6864c71a53728.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>which contains nonlinear terms, obtained by grouping the second term in the RHS of Eq. (35) to the original commutator, namely <i>Tr<sub>2</sub></i> (<i>σ</i>±(2)<i>ρ</i><sub>2</sub>) = <i>ρ</i><sub>1</sub>(1)<i>Tr<sub>2</sub></i> (<i>σ</i>±(2)<i>ρ</i><sub>1</sub>(2)) = <i>ρ</i><sub>1</sub>(1) <i>σ</i>±, reminding that <i>Tr</i>(<i>ρ</i>Â) ≡Â is the mean value of an operator Â in the density operator formalism. The second term in the brackets in the Hamiltonian (37) represents a particle acted by an effective polarization field <i>E<sub>pol</sub> = i</i>(<i>N</i> - 1)Γ <i>σ</i>+/2<i>V</i> originated from the other (<i>N</i> - 1) particles that produce the mean-field effect, proportional to the uniform particle density (<i>N</i> - 1)=<i>V</i>. In this approximation, the structure of the Sudarshan- Lindblad dissipative terms remains the same, although the single-particle Hamiltonian acquires, additional nonlinear terms.</p>
+<p></p>
+<p>
+      <b>4. Dynamics</b>
+    </p>
+<p></p>
+<p>By noting that</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ38">
+<a name="equ38"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ffae0f814c6f5f01e0223c55ce95b0aeebf5ce66.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>the equations of motion for the single-particle operators mean values are obtained by inserting the RHS of Eq. (36) for <div class="row formula" id="ecar05">
+<a name="car05"></a><div class="col-md-12"><div class="formula-container">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/3de4be70874c2a1892b7ebf9f2c2fa75654f9ce9.jpg">. Then, we obtain the following nonlinear equations of motion for the volumetric density operators mean values,</div></div>
+</div></p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ39_40">
+<a name="equ39_40"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c1ae4ee7792deebb5d8c265587f22b4ccc93506e.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>The first term in the RHS of Eqs. (39), and the first and second terms in the RHS of Eq. (40) come from the evolution due the nonlinear Hamiltonian, while the last terms in both equations originate from the second term in the master equation (36), responsible for the dissipation mechanism.</p>
+<p></p>
+<p>As a first analysis, we will disregard dissipation and consider the evolution under the effective Hamiltonian (37) only. This consideration is valid for processes occurring in a time interval much shorter than the relaxation time, when the system becomes stationary. In this case, the dissipative terms in Eqs. (39) and (40) are disregarded, and the equations of motion for the mean values reduce to</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ41_42">
+<a name="equ41_42"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/83afbd57a9934bbb05614ea15375f0eb02b3df99.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>that can be solved exactly, once recognizing that</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ43">
+<a name="equ43"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/cbafdc30761b2806b9702e79061399bf09d64299.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>is a constant of motion. Thus, the equation of motion for σ<sub>0</sub> becomes a first order separable differential equation,</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ44">
+<a name="equ44"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/918eb8145a995118bc194e246455af6b2defae00.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>whose solution is</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ45">
+<a name="equ45"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/9f781e467d834ebd91e2977b5b88ca83042841ab.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where<i> A</i> = tanh<sup>-1</sup> (<i>σ</i><sub>0</sub>(0)<i>/R).</i> Substituting Eq. (45) into Eq. (42) and solving by integration we obtain the solution</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ46">
+<a name="equ46"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ac6d32c60b580dce8d8ca4a094727a9333074bc6.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where cosh (<i>A</i>) = (1- (<i>σ</i><sub>0</sub>(0)/<i>R</i>)<sup>2</sup>)<sup>-1/2</sup>.</p>
+<p></p>
+<p>In order to illustrate the theory, the excited state probability <i>ρ</i><i><sub>ee</sub></i> = (1 + <i>σ</i><sub>0</sub>)/2 is plotted in Fig. 4. as function of time for <i>ρ</i><i><sub>ee</sub></i>(0) = 1, Γ = 1, and for several values of <i>N</i>. Note that by having disregarded the dissipative terms there is no spontaneous decay. So, in the situation at hand the generic particle does not decay spontaneously when it is initially set in the excited state, namely <i>ρ</i><i><sub>ee</sub></i>(0) = 1, which is an unstable equilibrium point, since it lies in the excited state with zero dipole moment. The curves in Fig. 4. are obtained for <i>ρ</i><i><sub>ee</sub></i>(0) slightly smaller than 1. The decay profile is due the mean field created by the other particles, and not by dissipative Sudarshan-Lindblad terms. We note that the mean energy of the system Ê = <i>N</i><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/9475ce31ad596c2bf59df0953856be7565df5b60.jpg"><sup>ω</sup>o <i>σ</i><sub>0</sub>(<i>t</i>) is not a conserved quantity, it depends on the initial state, <i>ρ</i><i><sub>ee</sub></i>(0), being less than 1, when the spins tend to align along the effective polarization mean field.</p>
+<p></p>
+<p>
+      <div class="row fig" id="4469ca631e5292ffa22c0e7151f044db93085ac9">
+<a name="4469ca631e5292ffa22c0e7151f044db93085ac9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg4469ca631e5292ffa22c0e7151f044db93085ac9"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4469ca631e5292ffa22c0e7151f044db93085ac9.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>In fact, the equations of motion generated by the Hamiltonian (37) are equivalent to those describing the superradiant emission by a collection of two-level atoms in the framework of a semi-classical radiation theory [55], described by a single-particle mean-field Hamiltonian for the individual emitters as pointed out in Ref. [56].</p>
+<p></p>
+<p>We turn now to Eqs. (39) and (40). For<i> N = 1</i> the system reduces to a decoupled set of linear equations whose solutions are</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ47_48">
+<a name="equ47_48"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/f82d8eb32254d3ce0e9df615b6b7741690e9ea97.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>that contain a transient exponential decay and at long times attain the stationary values <i>σ</i><sub>0</sub>(∞) = -1/(2<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8989a120f40587d450fbd81b56bbd31aa30e4c6.jpg">+ 1) and <i>σ</i> ± (∞) = 0, respectively. For the system of Eqs. (39)-(40), when<i> N &gt;</i> 1, the analytical solution is possible only for the stationary state, otherwise a numerical calculation is necessary. The stationary solution is obtained by setting <i>d</i><i>σ</i><sub>0</sub>/<i>dt = d</i><i>σ</i>±/<i>dt</i> = 0, and solving the resulting algebraic equations whose solutions are identical to the case<i> N =</i> 1. Therefore, the stationary state does not depend on the number of particles and is determined solely by the reservoir temperature through the parameter <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8989a120f40587d450fbd81b56bbd31aa30e4c6.jpg"> that depends on the absolute temperature <i>T</i>. The deviation from an exponential decay is due to the nonlinear terms and it occurs at transient times. To illustrate the interplay between nonlinear and dissipative effects, in Fig. 4. we plotted <i>ρ</i><i><sub>ee</sub></i> as function of time for <i>ρ</i><i><sub>ee</sub></i>(0) = 1, Γ = 1, and setting the reservoir temperature at OK (<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8989a120f40587d450fbd81b56bbd31aa30e4c6.jpg"> = 0), for several values of<i> N.</i> For<i> N</i> = 1 we have a purely exponential decay (solid line) while for<i> N</i> &gt; 1 the deviation from the exponential decay at transient times due the nonlinear mean-field is remarkable (dashed and doted lines). This deviation is evidenced in the inset within the Fig. 4. drawn in logarithmic scale. Figure 4. is the same as Fig. 4. but for <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8989a120f40587d450fbd81b56bbd31aa30e4c6.jpg"> = 0.5; we note that at higher temperature the decay is faster and <i>ρ</i><i><sub>ee</sub>(t</i>) attains an asymptotic nonzero value for the stationary state that will depend on the temperature on the value of <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8989a120f40587d450fbd81b56bbd31aa30e4c6.jpg">.</p>
+<p></p>
+<p>
+      <div class="row fig" id="76674cc69500a6f60c6ab38681ba5c4e9b044598">
+<a name="76674cc69500a6f60c6ab38681ba5c4e9b044598"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg76674cc69500a6f60c6ab38681ba5c4e9b044598"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/76674cc69500a6f60c6ab38681ba5c4e9b044598.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <div class="row fig" id="8d66c6b77cb613ae7c9ec0f7fcf9eeb792eff237">
+<a name="8d66c6b77cb613ae7c9ec0f7fcf9eeb792eff237"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg8d66c6b77cb613ae7c9ec0f7fcf9eeb792eff237"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8d66c6b77cb613ae7c9ec0f7fcf9eeb792eff237.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <b>5. Beyond the mean-field approximation</b>
+    </p>
+<p></p>
+<p>Here we present a brief discussion on how to go beyond the single-particle mean-field approximation, which consists in the factorization <i>ρ</i><sub>2</sub>(1,2) = <i>ρ</i><sub>1</sub>(1)<i>ρ</i><sub>1</sub>(2), that disregards the two-particle correlations that exist, either in the initial conditions, or being generated by the interaction with the environment, if the gas is quite diluted, as the system of particles that evolve dynamically in time. Under stricter conditions, the correlations between the particles must be considered in order to describe the dynamics more faithfully, and this means that we have to add, at least, a two-particle operator χ(1, 2), such that</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ49">
+<a name="equ49"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8182652d4532acd0fc68f08b7faa0fbe15cca1d2.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>having the properties <i>Tr</i>2<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4004a18430fb8d07d05523fb0e9265bcf6d251ba.jpg">(1,2) = <i>Tr</i>1<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4004a18430fb8d07d05523fb0e9265bcf6d251ba.jpg">(1,2) = 0, where <i>Tr<sub>k</sub></i> means calculating the trace over the degrees of freedom of particle<i> k</i>. The operator <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4004a18430fb8d07d05523fb0e9265bcf6d251ba.jpg">(1, 2) contains all kind of two-particle correlations, it can be introduced within the initial conditions for <i>ρ</i><i><sub>2</sub>(</i>1,2), and its evolution in time will be ruled by the master equation. However, according to the BBGKY equation (34), if we set in its left hand side (LHS) the time derivative of a two-particle density operator, the RHS will contain a dependence on a three-particle density operator, <i>ρ</i><sub>3</sub>(1,2,3), and in order to solve the differential equation one should go a step further, namely set the time derivative on the LHS for a three-body operator and we shall get on the RHS of the equation a dependence on a four-particle operator. This procedure goes on until we set the exact equation for the <i>N</i>-particle problem. As this procedure increases in complexity, we have adopted the quite simple single-particle mean-field approximation. To go beyond this approximation, and still to extend the BBGKY equation that involves two-particle correlations, we can adopt the following ansatz for the three-particle density operator,</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ50">
+<a name="equ50"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/44a99a1fe65d9395f105e2d2df8544ecfc8b6463.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>which satisfies the requirements <i>Tr</i><sub>3</sub><i>ρ</i><sub>3</sub>(1, 2,3) = <i>ρ</i><sub>2</sub>(1,2),<i> Tr</i><sub>2</sub><i>ρ</i><sub>3</sub>( 1,2,3) = <i>ρ</i><sub>2</sub>(1,3) and<i> Tr</i><sub>1 </sub><i>ρ</i><sub>3</sub>(1,2,3) = <i>ρ</i><sub>2</sub>(2,3).</p>
+<p></p>
+<p>By introducing the correlation operator (49) in Eq. (50) we get</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ51">
+<a name="equ51"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/7b5b55d51590aa0ab5a9dcaaf06a36404ca2dec3.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Thus, the BBGKY equation reduces to a closed system of coupled differential equations involving the one-body density operator and the two-body correlation operator. The set of the dynamical equations for <i>ρ</i><sub>1</sub>(<i>k</i>) and <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4004a18430fb8d07d05523fb0e9265bcf6d251ba.jpg">(<i>j, k)</i> is still not easy to solve analytically, one could adopt a further simplification, that is known as the linear response approximation, where one looks for the correlations nearby a stationary or equilibrium state of the system, represented by the one-particle operator obtained under the mean-field approximation, namely, <i>ρ</i><sup>st</sup><sub>1</sub><i>(k</i>). This ansatz reduces the density operator (51) to</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ52">
+<a name="equ52"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a363b6cad6adb7c9b6fc05e51abc9f3a353bcba7.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>and the BBGKY becomes a dynamical equation for the correlation operator <div class="row formula" id="ecar06">
+<a name="car06"></a><div class="col-md-12"><div class="formula-container">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4004a18430fb8d07d05523fb0e9265bcf6d251ba.jpg">(j,k) only.</div></div>
+</div></p>
+<p></p>
+<p>In addition, the statistical operator for one and two particles can be written in terms of the Pauli matrices <i>σ</i> = (<i>σ</i><i><sub>x</sub></i>, <i>σ</i><i><sub>y</sub></i>, <i>σ</i><i><sub>z</sub></i>) and the unit operator <i>I</i>, which form a basis for 2×2 matrices [57]. Thus, for the one-particle density operator we have</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ53">
+<a name="equ53"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8bbde7eabf590f2ff678001360f8e4836e01f8bc.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>where <i>σ</i> = (<i>σ</i><i><sub>x</sub></i>, <i>σ</i><i><sub>y</sub></i> <i>σ</i><i><sub>z</sub></i>) is the so-called Bloch vector [16,35,57]; while the two-particle density operator, expanded in a basis formed by 16 two-particle spin operators, {<i>I</i><sub>1</sub>⊗ <i>I</i><sub>2</sub>, <i>I</i><sub>1</sub> ? <i>σ</i><i><sub>i</sub></i>(2), <i>σ</i><i><sub>i</sub></i>(1) ? <i>I</i><sub>2</sub>, <i>σ</i><i><sub>i</sub></i> (1) ? <i>σ</i><i><sub>j</sub></i>(2)}, has the following form [57]</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ54">
+<a name="equ54"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b21442269946288d82825586a5066e57ce0ef481.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>with<i> B<sub>ij</sub></i> = <i>σ</i><i><sub>i</sub></i>(1)<i>σ</i><i><sub>j</sub></i>(2) being the two-particle correlations coefficients. By writing</p>
+<p></p>
+<p>
+      <div class="row formula" id="eequ55">
+<a name="equ55"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b241fd53803911d9f0013415514e4e89294c6c32.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>the elements χ<sub><i>ij</i></sub> are identified with the entries of the matrix of covariances. The factor 4 was included for convenience. Inserting the Eq. (55) into Eq. (54), the Eqs. (49) and (51) are recovered, with the identification <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4004a18430fb8d07d05523fb0e9265bcf6d251ba.jpg"><sub>2</sub>(1,2) = χ<sub><i>ij</i></sub><i>σ</i><sub><i>i</i></sub> (1) ⊗ <i>σ</i><sub><i>j</i></sub>(2).</p>
+<p></p>
+<p>
+      <b>6. Summary and conclusions</b>
+    </p>
+<p></p>
+<p>The aim of this paper is to be pedagogical for advanced undergraduate and graduate students by introducing some techniques and approximations that arise in the physics that involves dissipation and nonlinearity in many-particle systems. Here we have considered a system<i> S</i> of<i> N</i> independent spin-1/2 particles interacting with a thermal reservoir R. We started with the dynamical quantum Sudarshan-Lindblad master equation for the <i>N</i>-particle density operator. From this point on we derived the quantum version of the BBGKY hierarchy of<i> K</i> equations for 1 &lt;<i> K</i> &lt;<i> N.</i> Then, by breaking the hierarchy we neglected interparticle correlations, obtaining thus an equation for a representative singleparticle. This is equivalent to introduce the mean-field approximation in the equation for an<i> N</i> particle system. This scenario leads to a quite similar Sudarshan-Lindblad equation for the single-particle density operator; however, a main difference arises: the Hamiltonian is now nonlinear, although the Sudarshan-Lindblad superoperator, responsible for the dissipation and decoherence in S, remains unaffected. In order to provide a useful tool to students interested in many-particle problems, we have discussed the physical approximations involved, we derived the analytical solution for the nonlinear mean-values operators, whose motion is generated by the nonlinear Hamiltonian without dissipative terms, and illustrate numerically the case with dissipation. We also included a discussion on how to go beyond the mean-field approximation by introducing two-particle correlations.</p>
+<p></p>
+<p>Finally, we believe that this paper can be useful for the reader interested in doing research in theoretical physics of many-particle systems. For some related papers on nonlinearity and dissipation in many-particle systems, see Refs. [58-66].</p>
+<p></p>
+<p>
+      <b>Acknowledgments</b>
+    </p>
+<p></p>
+<p>GAP and SSM, acknowledge financial support from FAPESP (São Paulo, SP, Brazil), through the INCT-IQ, and CNPq (DF, Brazil).</p>
+<p></p>
+<p>
+      <b>References</b>
+    </p>
+<p></p>
+<p>[1] L. Landau, Z. Phys.<b> 45,</b> 430 (1927) [ English translation in<i> Collected papers of L.D. Landau,</i> edited by D. Ter Haar (Gordon &amp; Breach, New York, 1965), p. 8] .</p>
+<p></p>
+<p>[2] F. Bloch, Phys. Zeit.<b> 29,</b> 58 (1928). </p>
+<p></p>
+<p>[3] W. Pauli, in<i> Probleme der Modernen Physik, Arnold Sommerfeld zum 60. Geburtstag</i>, edited by P. Debye (Hirzel, Leipzig, 1928), p. 30 [ English translation in <i>Collected Scientific Papers by Wolfgang Pauli,</i> edited by R. Kronig and V.F. Weisskopf (Interscience Publ., New York, 1964), p. 549] .</p>
+<p></p>
+<p>[4] V. Weisskopf and E. Wigner, Z. Phys.<b> 63,</b> 54 (1930). </p>
+<p></p>
+<p>[5] H. Bateman, Phys. Rev.<b> 38,</b> 815 (1931). </p>
+<p></p>
+<p>[6] P. Caldirola, Nuovo Cimento<b> 18,</b> 393 (1941). </p>
+<p></p>
+<p>[7] E. Kanai, Prog. Theor. Phys. <b>3</b>, 440 (1948). </p>
+<p></p>
+<p>[8] L. van Hove, Physica <b>23</b>, 441 (1957). </p>
+<p></p>
+<p>[9] P. Havas, Nuovo Cimento Suppl. <b>5</b>, 363 (1957). </p>
+<p></p>
+<p>[10] R.W. Zwanzig, J. Chem. Phys.<b> 28,</b> 365 (1958). </p>
+<p></p>
+<p>[11] M. Toda, J. Phys. Soc. Japan<b> 13,</b> 1266 (1958). </p>
+<p></p>
+<p>[12] E.H. Kerner, Can. J. Phys. <b>36</b>, 371 (1958). </p>
+<p></p>
+<p>[13] F. Haake, in<i> Quantum Statistics in Optics and Solid-State Physics,</i> v. 66 of Springer Tracts in Modern Physics, edited by G. Hõhler (Springer, Berlin, 1973), p. 98. </p>
+<p></p>
+<p>[14] W.H. Louisell,<i> Quantum Statistical Properties of Radiation</i> (Wiley, New York, 1973). </p>
+<p></p>
+<p>[15] E.B. Davies,<i> Quantum Theory of Open Systems</i> (Academic Press, London, 1976). </p>
+<p></p>
+<p>[16] H.-P. Breuer and F. Petruccione, <i> The Theory of Open Quantum Systems</i> (Oxford University Press, Oxford, 2002). </p>
+<p></p>
+<p>[17] I.R. SeniRky, Phys. Rev.<b> 119,</b> 670 (1960);<b> 124,</b> 642 (1961). </p>
+<p></p>
+<p>[18] J. Schwinger, J. Math. Phys. <b>2</b>, 407 (1961). </p>
+<p></p>
+<p>[19] R.W. Zwanzig, Physica<b> 30,</b> 1109 (1964). </p>
+<p></p>
+<p>[20] G.W. Ford, M. Kac, and P. Mazur, J. Math. Phys. <b>6</b>, 504 (1965). </p>
+<p></p>
+<p>[21] W.H. Louisell and L.P Walker, Phys. Rev. <b>137</b>, B204 (1965). </p>
+<p></p>
+<p>[22] I. Oppenheim and K.E. Shuler, Phys. Rev. <b>138</b>, B1007 (1965). </p>
+<p></p>
+<p>[23] W. Weidlich and F. Haake, Z. Phys.<b> 185,</b> 30 (1965). </p>
+<p></p>
+<p>[24] M. Lax, Phys. Rev.<b> 145,</b> 110 (1966). </p>
+<p></p>
+<p>[25] P. Ullersma, Physica<b> 32,</b> 56 (1966). </p>
+<p></p>
+<p>[26] R. Bonifacio and F. Haake, Z. Phys.<b> 200,</b> 526 (1967). </p>
+<p></p>
+<p>[27] W.H. Louisell and J.H. Marburger, IEEE J. Quant. Electron. <b>3</b>, 348 (1967). </p>
+<p></p>
+<p>[28] M.O. Scully and W.E. Lamb Jr., Phys. Rev. <b>159</b>, 208 (1967). </p>
+<p></p>
+<p>[29] A.A. Belavin, B.Y. Zel'dovich, A.M. Perelomov, and V.S. Popov, Zhurn. Eksp. Teor. Fiz.<b> 56,</b> 264 (1969) [Sov. Phys. - JETP <b>29</b>, 145 (1969)] .</p>
+<p></p>
+<p>[30] W. Peier, Physica<b> 57,</b> 565 (1972);<b> 58,</b> 229 (1972). </p>
+<p></p>
+<p>[31] K. Kraus, Ann. Phys. (N.Y.) <b>64</b>, 311 (1971). </p>
+<p></p>
+<p>[32] G.S. Agarwal, in<i> Progress in Optics, v. XI,</i> edited by E. Wolf (North Holland, Amsterdam, 1973), p. 1. </p>
+<p></p>
+<p>[33] H.J. Carmichael,<i> Statistical Methods in Quantum Optics 1: Master Equations and Fokker-Planck Equations </i> (Springer-Verlag, Berlin, 1999). </p>
+<p></p>
+<p>[34] C. W. Gardiner and P. Zoller,<i> Quantum Noise: A Handbook of Markovian and Non-Markovian Stochastic Process with Applications to Quantum Optics</i> (Springer-Verlag, Berlin, 2000), 2 ed. </p>
+<p></p>
+<p>[35] H. Wiseman and G. Milburn,<i> Quantum Measurement and Control(G</i>ambridge University Press, New York, 2010). </p>
+<p></p>
+<p>[36] A.V. Dodonov, S.S. Mizrahi, and V. V. Dodonov, Phys. Rev. E <b>75</b>, 011132 (2007). </p>
+<p></p>
+<p>[37] J.K. Gamble and J.F. Lindner, American Journal of Physics<b> 77</b> (3), 244 (2009). </p>
+<p></p>
+<p>[38] M. Bhattacharya, M.J.A. Stoutimore, and K.D. Osborn, and Ari Mizel, American Journal of Physics<b> 80, </b>810 (2012). </p>
+<p></p>
+<p>[39] F. Reif,<i> Fundamentals of Statistical and Thermal Physics</i> (Waveland Press Inc., Long Grove, 2008). </p>
+<p></p>
+<p>[40] N.G. Van Kampen,<i> Stochastic Processes is Physics and Chemistry</i> (North-Holland, Amsterdam, 1985). </p>
+<p></p>
+<p>[41] A. Kossakowski, Rep. Math. Phys.<b> 3,</b> 247 (1972). </p>
+<p></p>
+<p>[42] V. Gorini, A. Kossakowski, and E.C.G. Sudarshan, J. Math. Phys.<b> 17,</b> 821 (1976). </p>
+<p></p>
+<p>[43] G. Lindblad, Commun. Math. Phys.<b> 48,</b> 119 (1976). </p>
+<p></p>
+<p>[44] Ian Percival, <i> Quantum State Diffusion</i> (Cambridge University Press, Cambridge, 1998). </p>
+<p></p>
+<p>[45] A. Peres, Phys. Rev. A<b> 61,</b> 022116 (2000). </p>
+<p></p>
+<p>[46] J.D. Cresser, S.M. Barnett, J. Jeffers, and D.T. Pegg, Optics Communications<b> 264,</b> 352 (2006). </p>
+<p></p>
+<p>[47] C.A. Brasil, L. A. de Castro, and R. de J. Napolitano, Phys. Rev. A <b>84</b>, 022112 (2011). </p>
+<p></p>
+<p>[48] Yan Yan, Jian Zou, Bao-Ming Xu, Jun-Gang Li, and Bin Shao, Phys. Rev. A <b>88</b>, 032320 (2013). </p>
+<p></p>
+<p>[49] C.A. Brasil, F.F. Fanchini, and R. de J. Napolitano, Revista Brasileira de Ensino de Física <b>35</b>, 1303 (2013). </p>
+<p></p>
+<p>[50] R.L. Liboff,<i> Kinetic Theory</i> (Prentice Hall, New Jersey, 1990). </p>
+<p></p>
+<p>[51] D.A. McQuarrie,<i> Statistical Mechanics</i> (Harper, New York, 1976). </p>
+<p></p>
+<p>[52] S. Gasiorowics, <i> Quantum Physics</i> (Wiley, New York, 2003). </p>
+<p></p>
+<p>[53] R. Eisberg and R. Resnick,<i> Quantum Physics of Atoms, Molecules, Solids, Nuclei, and Particles</i> (Wiley, New York, 1985). </p>
+<p></p>
+<p>[54] A. Antunes, A.S. Santos, M.F. Silva, and R. Ragi, and V.S. Bagnato, Revista Brasileira de Ensino de Física <b>21,</b> 221 (1999). </p>
+<p></p>
+<p>[55] C.R. Stroud Jr., J.H. Eberly, W.L. Lama, and L. Mandel, Phys. Rev. A <b>5</b>, 1094 (1972). </p>
+<p></p>
+<p>[56] S.S. Mizrahi, Physics Letters A<b> 144,</b> 282 (1990). </p>
+<p></p>
+<p>[57] K. Blum,<i> Density Matrix Theory and Applications </i>(Plenum Press, New York, 1996). </p>
+<p></p>
+<p>[58] G. Lenz, P. Meystre, and E.M. Wright, Phys. Rev. Lett. <b>71</b> (20), 3271 (1993). </p>
+<p></p>
+<p>[59] G. Lenz, P. Meystre, and E.M. Wright, Phys. Rev. A <b>50</b> (2), 1681 (1994). </p>
+<p></p>
+<p>[60] W. Zhang, Phys. Lett. A.<b> 176,</b> 225 (1993). </p>
+<p></p>
+<p>[61] W. Zhang, D.F. Walls, and B.C. Sanders, Phys. Rev. Lett.<b> 72</b> (1), 60 (1994). </p>
+<p></p>
+<p>[62] Y. Castin and K. Maimer, Phys. Rev. A<b> 51</b> (5), R3426 (1995). </p>
+<p></p>
+<p>[63] Y. Castin and K. Maimer, Phys. Rev. A <b>54</b> (6), 5275 (1996). </p>
+<p></p>
+<p>[64] A. Rivas and M.A. Martin-Delgado, Ann. Phys. (NY) <b>331,</b> 9 (2013). </p>
+<p></p>
+<p>[65] L.P. Maia, G.A. Prataviera, and S.S. Mizrahi, Phys. Rev. A<b> 69,</b> 053802 (2004). </p>
+<p></p>
+<p>[66] G.A. Prataviera, A.C. Yoshida, and S.S. Mizrahi, Phys. Rev. A <b>87</b>, 043831 (2013). </p>
+<p></p>
+<p>Recebido em 5/5/2014 </p>
+<p></p>
+<p> Aceito em 12/7/2014 </p>
+<p></p>
+<p> Publicado em 3/10/2014</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div>E-mail: </div>
+        <div>
+<a href="mailto:prataviera@usp.br">prataviera@usp.br</a>. </div>
+      </li>
+      <li>
+        <span class="xref big">2</span>
+        <div> That means that by changing</div>
+        <div>
+<i> t</i> by -</div>
+        <div>
+<i> t,</i> reverting the velocities, and replacing the initial conditions in the solution of the equation by the final ones does not lead us to the initial conditions after the same time interval</div>
+        <div>
+<i> t</i> has elapsed. </div>
+      </li>
+      <li>
+        <span class="xref big">3</span>
+        <div> With </div>
+        <div>
+<i>σ</i> ± </div>
+        <div>
+          <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/3a68db61e20df80727fdfe96048c9658816e7469.jpg"> (
+        </div>
+        <div>
+          <i>σ</i>
+        </div>
+        <div>
+<i><sub>x</sub></i> ± i</div>
+        <div>
+          <i>σ</i>
+        </div>
+        <div>
+<i><sub>y</sub></i>), where </div>
+        <div>
+          <i>σ</i>
+        </div>
+        <div>
+<i><sub>x</sub></i>, </div>
+        <div>
+          <i>σ</i>
+        </div>
+        <div>
+<i><sub>y</sub></i>, and </div>
+        <div>
+          <i>σ</i>
+        </div>
+        <div>
+<sub>0</sub> are represented by the Pauli matrices.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] L. Landau, Z. Phys.<b> 45,</b> 430 (1927) [</div></li>
+<li><div>English translation in<i> Collected papers of L.D. Landau,</i> edited by D. Ter Haar (Gordon &amp; Breach, New York, 1965), p. 8]</div></li>
+<li><div>[2] F. Bloch, Phys. Zeit.<b> 29,</b> 58 (1928).</div></li>
+<li><div>[3] W. Pauli, in<i> Probleme der Modernen Physik, Arnold Sommerfeld zum 60. Geburtstag</i>, edited by P. Debye (Hirzel, Leipzig, 1928), p. 30 [</div></li>
+<li><div>English translation in <i>Collected Scientific Papers by Wolfgang Pauli,</i> edited by R. Kronig and V.F. Weisskopf (Interscience Publ., New York, 1964), p. 549]</div></li>
+<li><div>[4] V. Weisskopf and E. Wigner, Z. Phys.<b> 63,</b> 54 (1930).</div></li>
+<li><div>[5] H. Bateman, Phys. Rev.<b> 38,</b> 815 (1931).</div></li>
+<li><div>[6] P. Caldirola, Nuovo Cimento<b> 18,</b> 393 (1941).</div></li>
+<li><div>[7] E. Kanai, Prog. Theor. Phys. <b>3</b>, 440 (1948).</div></li>
+<li><div>[8] L. van Hove, Physica <b>23</b>, 441 (1957).</div></li>
+<li><div>[9] P. Havas, Nuovo Cimento Suppl. <b>5</b>, 363 (1957).</div></li>
+<li><div>[10] R.W. Zwanzig, J. Chem. Phys.<b> 28,</b> 365 (1958).</div></li>
+<li><div>[11] M. Toda, J. Phys. Soc. Japan<b> 13,</b> 1266 (1958).</div></li>
+<li><div>[12] E.H. Kerner, Can. J. Phys. <b>36</b>, 371 (1958).</div></li>
+<li><div>[13] F. Haake, in<i> Quantum Statistics in Optics and Solid-State Physics,</i> v. 66 of Springer Tracts in Modern Physics, edited by G. Hõhler (Springer, Berlin, 1973), p. 98.</div></li>
+<li><div>[14] W.H. Louisell,<i> Quantum Statistical Properties of Radiation</i> (Wiley, New York, 1973).</div></li>
+<li><div>[15] E.B. Davies,<i> Quantum Theory of Open Systems</i> (Academic Press, London, 1976).</div></li>
+<li><div>[16] H.-P. Breuer and F. Petruccione, <i> The Theory of Open Quantum Systems</i> (Oxford University Press, Oxford, 2002).</div></li>
+<li><div>[17] I.R. SeniRky, Phys. Rev.<b> 119,</b> 670 (1960);<b> 124,</b> 642 (1961).</div></li>
+<li><div>[18] J. Schwinger, J. Math. Phys. <b>2</b>, 407 (1961).</div></li>
+<li><div>[19] R.W. Zwanzig, Physica<b> 30,</b> 1109 (1964).</div></li>
+<li><div>[20] G.W. Ford, M. Kac, and P. Mazur, J. Math. Phys. <b>6</b>, 504 (1965).</div></li>
+<li><div>[21] W.H. Louisell and L.P Walker, Phys. Rev. <b>137</b>, B204 (1965).</div></li>
+<li><div>[22] I. Oppenheim and K.E. Shuler, Phys. Rev. <b>138</b>, B1007 (1965).</div></li>
+<li><div>[23] W. Weidlich and F. Haake, Z. Phys.<b> 185,</b> 30 (1965).</div></li>
+<li><div>[24] M. Lax, Phys. Rev.<b> 145,</b> 110 (1966).</div></li>
+<li><div>[25] P. Ullersma, Physica<b> 32,</b> 56 (1966).</div></li>
+<li><div>[26] R. Bonifacio and F. Haake, Z. Phys.<b> 200,</b> 526 (1967).</div></li>
+<li><div>[27] W.H. Louisell and J.H. Marburger, IEEE J. Quant. Electron. <b>3</b>, 348 (1967).</div></li>
+<li><div>[28] M.O. Scully and W.E. Lamb Jr., Phys. Rev. <b>159</b>, 208 (1967).</div></li>
+<li><div>[29] A.A. Belavin, B.Y. Zel'dovich, A.M. Perelomov, and V.S. Popov, Zhurn. Eksp. Teor. Fiz.<b> 56,</b> 264 (1969) [Sov. Phys. - JETP <b>29</b>, 145 (1969)]</div></li>
+<li><div>[30] W. Peier, Physica<b> 57,</b> 565 (1972);<b> 58,</b> 229 (1972).</div></li>
+<li><div>[31] K. Kraus, Ann. Phys. (N.Y.) <b>64</b>, 311 (1971).</div></li>
+<li><div>[32] G.S. Agarwal, in<i> Progress in Optics, v. XI,</i> edited by E. Wolf (North Holland, Amsterdam, 1973), p. 1.</div></li>
+<li><div>[33] H.J. Carmichael,<i> Statistical Methods in Quantum Optics 1: Master Equations and Fokker-Planck Equations </i> (Springer-Verlag, Berlin, 1999).</div></li>
+<li><div>[34] C. W. Gardiner and P. Zoller,<i> Quantum Noise: A Handbook of Markovian and Non-Markovian Stochastic Process with Applications to Quantum Optics</i> (Springer-Verlag, Berlin, 2000), 2 ed.</div></li>
+<li><div>[35] H. Wiseman and G. Milburn,<i> Quantum Measurement and Control(G</i>ambridge University Press, New York, 2010).</div></li>
+<li><div>[36] A.V. Dodonov, S.S. Mizrahi, and V. V. Dodonov, Phys. Rev. E <b>75</b>, 011132 (2007).</div></li>
+<li><div>[37] J.K. Gamble and J.F. Lindner, American Journal of Physics<b> 77</b> (3), 244 (2009).</div></li>
+<li><div>[38] M. Bhattacharya, M.J.A. Stoutimore, and K.D. Osborn, and Ari Mizel, American Journal of Physics<b> 80, </b>810 (2012).</div></li>
+<li><div>[39] F. Reif,<i> Fundamentals of Statistical and Thermal Physics</i> (Waveland Press Inc., Long Grove, 2008).</div></li>
+<li><div>[40] N.G. Van Kampen,<i> Stochastic Processes is Physics and Chemistry</i> (North-Holland, Amsterdam, 1985).</div></li>
+<li><div>[41] A. Kossakowski, Rep. Math. Phys.<b> 3,</b> 247 (1972).</div></li>
+<li><div>[42] V. Gorini, A. Kossakowski, and E.C.G. Sudarshan, J. Math. Phys.<b> 17,</b> 821 (1976).</div></li>
+<li><div>[43] G. Lindblad, Commun. Math. Phys.<b> 48,</b> 119 (1976).</div></li>
+<li><div>[44] Ian Percival, <i> Quantum State Diffusion</i> (Cambridge University Press, Cambridge, 1998).</div></li>
+<li><div>[45] A. Peres, Phys. Rev. A<b> 61,</b> 022116 (2000).</div></li>
+<li><div>[46] J.D. Cresser, S.M. Barnett, J. Jeffers, and D.T. Pegg, Optics Communications<b> 264,</b> 352 (2006).</div></li>
+<li><div>[47] C.A. Brasil, L. A. de Castro, and R. de J. Napolitano, Phys. Rev. A <b>84</b>, 022112 (2011).</div></li>
+<li><div>[48] Yan Yan, Jian Zou, Bao-Ming Xu, Jun-Gang Li, and Bin Shao, Phys. Rev. A <b>88</b>, 032320 (2013).</div></li>
+<li><div>[49] C.A. Brasil, F.F. Fanchini, and R. de J. Napolitano, Revista Brasileira de Ensino de Física <b>35</b>, 1303 (2013).</div></li>
+<li><div>[50] R.L. Liboff,<i> Kinetic Theory</i> (Prentice Hall, New Jersey, 1990).</div></li>
+<li><div>[51] D.A. McQuarrie,<i> Statistical Mechanics</i> (Harper, New York, 1976).</div></li>
+<li><div>[52] S. Gasiorowics, <i> Quantum Physics</i> (Wiley, New York, 2003).</div></li>
+<li><div>[53] R. Eisberg and R. Resnick,<i> Quantum Physics of Atoms, Molecules, Solids, Nuclei, and Particles</i> (Wiley, New York, 1985).</div></li>
+<li><div>[54] A. Antunes, A.S. Santos, M.F. Silva, and R. Ragi, and V.S. Bagnato, Revista Brasileira de Ensino de Física <b>21,</b> 221 (1999).</div></li>
+<li><div>[55] C.R. Stroud Jr., J.H. Eberly, W.L. Lama, and L. Mandel, Phys. Rev. A <b>5</b>, 1094 (1972).</div></li>
+<li><div>[56] S.S. Mizrahi, Physics Letters A<b> 144,</b> 282 (1990).</div></li>
+<li><div>[57] K. Blum,<i> Density Matrix Theory and Applications </i>(Plenum Press, New York, 1996).</div></li>
+<li><div>[58] G. Lenz, P. Meystre, and E.M. Wright, Phys. Rev. Lett. <b>71</b> (20), 3271 (1993).</div></li>
+<li><div>[59] G. Lenz, P. Meystre, and E.M. Wright, Phys. Rev. A <b>50</b> (2), 1681 (1994).</div></li>
+<li><div>[60] W. Zhang, Phys. Lett. A.<b> 176,</b> 225 (1993).</div></li>
+<li><div>[61] W. Zhang, D.F. Walls, and B.C. Sanders, Phys. Rev. Lett.<b> 72</b> (1), 60 (1994).</div></li>
+<li><div>[62] Y. Castin and K. Maimer, Phys. Rev. A<b> 51</b> (5), R3426 (1995).</div></li>
+<li><div>[63] Y. Castin and K. Maimer, Phys. Rev. A <b>54</b> (6), 5275 (1996).</div></li>
+<li><div>[64] A. Rivas and M.A. Martin-Delgado, Ann. Phys. (NY) <b>331,</b> 9 (2013).</div></li>
+<li><div>[65] L.P. Maia, G.A. Prataviera, and S.S. Mizrahi, Phys. Rev. A<b> 69,</b> 053802 (2004).</div></li>
+<li><div>[66] G.A. Prataviera, A.C. Yoshida, and S.S. Mizrahi, Phys. Rev. A <b>87</b>, 043831 (2013).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+        E-mail: 
+        prataviera@usp.br. 
+      
+        2
+         That means that by changing
+         t by -
+         t, reverting the velocities, and replacing the initial conditions in the solution of the equation by the final ones does not lead us to the initial conditions after the same time interval
+         t has elapsed. 
+      
+        3
+         With 
+        σ ± 
+        
+           (
+        
+        
+          σ
+        
+        x ± i
+        
+          σ
+        
+        y), where 
+        
+          σ
+        
+        x, 
+        
+          σ
+        
+        y, and 
+        
+          σ
+        
+        0 are represented by the Pauli matrices.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Publication Dates">
+<h1 class="articleSectionTitle">Publication Dates</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publication in this collection</strong><br>28 Nov 2014</li>
+<li>
+<strong>Date of issue</strong><br>Dec 2014</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="History">
+<h1 class="articleSectionTitle">History</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Accepted</strong><br>12 July 2014</li>
+<li>
+<strong>Received</strong><br>05 May 2014</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">About the authors</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> G.A. Prataviera </strong><br><div>
+          ,  Bibeirão Preto,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Faculdade de Economia, Administração e Contabilidade de Bibeirão Preto ,  Departamento de Administração,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> S.S. Mizrahi </strong><br><div>
+          ,  São Paulo,  
+        ,  Universidade Federal de São Carlos,  Centro de Ciências Exatas e de Tecnologia ,  Departamento de Física,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Formulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist"><li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Formulas
+                    (44)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ06_07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ12_14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ17"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ18"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ19"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ20_21"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ22_23"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ24"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ25"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ26_29"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ30"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ31_33"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ34"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ35"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ36"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ37"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ38"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemecar05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ39_40"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ41_42"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ43"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ44"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ45"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ46"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ47_48"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ49"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ50"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ51"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ52"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemecar06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ53"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ54"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeequ55"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/266c03e819c7cce7462a948d82ecce85f491e15d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/266c03e819c7cce7462a948d82ecce85f491e15d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/d63c156ba337d1ece65b5f1a5b2f716021a7a6e7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/d63c156ba337d1ece65b5f1a5b2f716021a7a6e7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/33bedd0aacbf902cf6a0fd635b522c3fc37c177e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/33bedd0aacbf902cf6a0fd635b522c3fc37c177e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/430bd06e4744290ec1a32121f1df49c9c10d9541.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/430bd06e4744290ec1a32121f1df49c9c10d9541.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/3c9e10c3475e16d31c07d6f3cc31c1d904b102d5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/3c9e10c3475e16d31c07d6f3cc31c1d904b102d5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ06_07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a57a598214d140995a0551af3db0f94ba78776fd.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a57a598214d140995a0551af3db0f94ba78776fd.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/fadb859d44c9ee74b3eb4bffe30e39865606b8be.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/fadb859d44c9ee74b3eb4bffe30e39865606b8be.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/89cbcd038f522117c30f9f2a35d351f2fa6d9f8a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/89cbcd038f522117c30f9f2a35d351f2fa6d9f8a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/16de091511a2a0231cf1ab873394c6a506bad383.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/16de091511a2a0231cf1ab873394c6a506bad383.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a58537eb5faf7bf16c0f2f6938f1a37995fc4af0.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a58537eb5faf7bf16c0f2f6938f1a37995fc4af0.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ12_14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ba44e063d1143191f0c5b8afc128fb2bd1a6593b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ba44e063d1143191f0c5b8afc128fb2bd1a6593b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b3a9d32abb0b5b54ec57db563811ff6ed56ad4cb.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b3a9d32abb0b5b54ec57db563811ff6ed56ad4cb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/df83b0b03647a24738fbe54b4aa616ba7521f1fc.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/df83b0b03647a24738fbe54b4aa616ba7521f1fc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ17" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/107318d9d77d67881013b9b93a2ab1a03df04412.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/107318d9d77d67881013b9b93a2ab1a03df04412.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ18" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/95c04f3d2452b7cff01d534c81720894e3043de1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/95c04f3d2452b7cff01d534c81720894e3043de1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ19" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/e6e62b3be246c104144e9e2a1f7262084110882f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/e6e62b3be246c104144e9e2a1f7262084110882f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ20_21" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8d7cedd450daeb99e4ae69212f683129dedd396.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c8d7cedd450daeb99e4ae69212f683129dedd396.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ22_23" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b169e9ff6f9286d532e0e931a4f73cce970ca277.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b169e9ff6f9286d532e0e931a4f73cce970ca277.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ24" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/1f39ff6d8a8f2e25014541c50a4a8fb09a2045d2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/1f39ff6d8a8f2e25014541c50a4a8fb09a2045d2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ25" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/499839b2dbdbb0ebe6b5b81bb60ec8efcca2321d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/499839b2dbdbb0ebe6b5b81bb60ec8efcca2321d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ26_29" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/45147a57d7784a9ad5e89e7c62be6cb029c9c7ce.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/45147a57d7784a9ad5e89e7c62be6cb029c9c7ce.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ30" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a743fffcaaa11b5963469fa1d655b3d27958ed53.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a743fffcaaa11b5963469fa1d655b3d27958ed53.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ31_33" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ddfa73c518c8cdc06e9ca6d36e5391871d245c0d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ddfa73c518c8cdc06e9ca6d36e5391871d245c0d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ34" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/35edba23bafa9a266814e9d7896aa7051d4ead5b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/35edba23bafa9a266814e9d7896aa7051d4ead5b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ35" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/18fbdc7c94f5a5f3fcd538b86d9685f94a80ca95.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/18fbdc7c94f5a5f3fcd538b86d9685f94a80ca95.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ36" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/20885fe393b401772e464504ae662717b838433d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/20885fe393b401772e464504ae662717b838433d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ37" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/08b3d6d08d97b752baeb32721ce6864c71a53728.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/08b3d6d08d97b752baeb32721ce6864c71a53728.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ38" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ffae0f814c6f5f01e0223c55ce95b0aeebf5ce66.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ffae0f814c6f5f01e0223c55ce95b0aeebf5ce66.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemecar05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/3de4be70874c2a1892b7ebf9f2c2fa75654f9ce9.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ39_40" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c1ae4ee7792deebb5d8c265587f22b4ccc93506e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/c1ae4ee7792deebb5d8c265587f22b4ccc93506e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ41_42" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/83afbd57a9934bbb05614ea15375f0eb02b3df99.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/83afbd57a9934bbb05614ea15375f0eb02b3df99.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ43" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/cbafdc30761b2806b9702e79061399bf09d64299.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/cbafdc30761b2806b9702e79061399bf09d64299.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ44" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/918eb8145a995118bc194e246455af6b2defae00.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/918eb8145a995118bc194e246455af6b2defae00.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ45" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/9f781e467d834ebd91e2977b5b88ca83042841ab.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/9f781e467d834ebd91e2977b5b88ca83042841ab.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ46" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ac6d32c60b580dce8d8ca4a094727a9333074bc6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/ac6d32c60b580dce8d8ca4a094727a9333074bc6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ47_48" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/f82d8eb32254d3ce0e9df615b6b7741690e9ea97.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/f82d8eb32254d3ce0e9df615b6b7741690e9ea97.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ49" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8182652d4532acd0fc68f08b7faa0fbe15cca1d2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8182652d4532acd0fc68f08b7faa0fbe15cca1d2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ50" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/44a99a1fe65d9395f105e2d2df8544ecfc8b6463.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/44a99a1fe65d9395f105e2d2df8544ecfc8b6463.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ51" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/7b5b55d51590aa0ab5a9dcaaf06a36404ca2dec3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/7b5b55d51590aa0ab5a9dcaaf06a36404ca2dec3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ52" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a363b6cad6adb7c9b6fc05e51abc9f3a353bcba7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/a363b6cad6adb7c9b6fc05e51abc9f3a353bcba7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemecar06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4004a18430fb8d07d05523fb0e9265bcf6d251ba.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ53" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8bbde7eabf590f2ff678001360f8e4836e01f8bc.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8bbde7eabf590f2ff678001360f8e4836e01f8bc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ54" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b21442269946288d82825586a5066e57ce0ef481.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b21442269946288d82825586a5066e57ce0ef481.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeequ55" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b241fd53803911d9f0013415514e4e89294c6c32.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/b241fd53803911d9f0013415514e4e89294c6c32.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg4469ca631e5292ffa22c0e7151f044db93085ac9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4469ca631e5292ffa22c0e7151f044db93085ac9.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/4469ca631e5292ffa22c0e7151f044db93085ac9.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg76674cc69500a6f60c6ab38681ba5c4e9b044598" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/76674cc69500a6f60c6ab38681ba5c4e9b044598.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/76674cc69500a6f60c6ab38681ba5c4e9b044598.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg8d66c6b77cb613ae7c9ec0f7fcf9eeb792eff237" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8d66c6b77cb613ae7c9ec0f7fcf9eeb792eff237.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/Zc8gB5jZS656ZPbHP3hBTbb/8d66c6b77cb613ae7c9ec0f7fcf9eeb792eff237.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">How to cite</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copy</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Prataviera, G.A. and Mizrahi, S.S.Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system. Revista Brasileira de Ensino de Física [online]. 2014, v. 36, n. 4 [Accessed CURRENTDATE] , 4303. Available from: &lt;https://doi.org/10.1590/S1806-11172014000400004&gt;. Epub 28 Nov 2014. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172014000400004.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?lang=en&amp;format=pdf">
+                      
+                        Inglês
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system&#34; &#34;Prataviera, G.A.&#34; &#34;Mizrahi, S.S.&#34; &#34;2014&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system&#34; &#34;Prataviera, G.A.&#34; &#34;Mizrahi, S.S.&#34; &#34;2014&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/Zc8gB5jZS656ZPbHP3hBTbb/?lang=en">English</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172014000400004&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172014000400004" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172014000400004">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172014000400004" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172014000400004">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172014000400004"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172014000400004" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172014000400004">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172014000400004" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Many-particle Sudarshan-Lindblad equation: mean-field approximation, nonlinearity and dissipation in a spin system
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172014000400004">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

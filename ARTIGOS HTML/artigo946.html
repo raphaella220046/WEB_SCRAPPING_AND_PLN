@@ -1,0 +1,3060 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Construção de um kit experimental com arduino para ensino de oscilações em tempo real Construção de um kit experimental com arduino para ensino de oscilações em tempo real </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Construção de um kit experimental com arduino para ensino de oscilações em tempo real"/>
+<meta property="og:description" content="O estudo das oscilações pode se configurar como uma rica oportunidade para o desenvolvimento de..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Matos Pereira, Pedro Davi">
+        
+            <meta name="citation_author_affiliation" content="Instituto de Física">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0003-0425-2451">
+        <meta name="citation_author" content="da Silva, Marcelo Souza">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal de Educação">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="43"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2021-0186"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Construção de um kit experimental com arduino para ensino de oscilações em tempo real
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="O estudo das oscilações pode se configurar como uma rica oportunidade para o desenvolvimento de atividades experimentais. Entretanto, devido a uma série de dificuldades instrumentais, muitos professores optam por trabalhar apenas com um cronometro para obtenção da frequência média das oscilações. A aquisição dos dados de posição em função do tempo está disponível, em geral, para quem tem acesso a kits experimentais caros. Neste artigo propomos a construção e utilização de um kit experimental para estudo de oscilações utilizando arduino. Por meio de um sensor ultrassônico HC-SR04, pode-se construir gráficos de posição (velocidade e aceleração) em tempo real, permitindo a visualização do comportamento senoidal apresentado pela teoria, e possibilitando maior compreensão do fenômeno além da determinação de grandezas físicas envolvidas. O kit inclui um software desenvolvido em C + ⁣ + , denominado PMOscillator, responsável pela aquisição, processamento, plotagem em tempo real e análise dos dados."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2021-10-08"></meta>
+<meta name="citation_keywords" content="Arduino"></meta><meta name="citation_keywords" content="oscilações"></meta><meta name="citation_keywords" content="kit didático"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2021.v43/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2021.v43/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172021000100734 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Produtos e Materiais Didáticos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 43 <span class="_separator"> • </span>2021</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2021-0186" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2021-0186</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0186"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 deed.en"></span>Construção de um kit experimental com arduino para ensino de oscilações em tempo real<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Experimental kit for studing real-time oscilations using arduino</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Pedro Davi Matos Pereira </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong><div class="corresp">* Endereço de correspondência: <a href="mailto:pedrophysicist@gmail.com">pedrophysicist@gmail.com</a> </div>Instituto de Física, Universidade Federal da Bahia, Campus Universitário de Ondina, Salvador, BA, Brasil.Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano, Grupo de Pesquisa em Ensino de Ciências, Salgueiro, PE, Brasil.<a href="http://orcid.org/0000-0003-0425-2451" class="btnContribLinks orcid">http://orcid.org/0000-0003-0425-2451</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Marcelo Souza da Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano, Grupo de Pesquisa em Ensino de Ciências, Salgueiro, PE, Brasil.</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>O estudo das oscilações pode se configurar como uma rica oportunidade para o desenvolvimento de atividades experimentais. Entretanto, devido a uma série de dificuldades instrumentais, muitos professores optam por trabalhar apenas com um cronometro para obtenção da frequência média das oscilações. A aquisição dos dados de posição em função do tempo está disponível, em geral, para quem tem acesso a kits experimentais caros. Neste artigo propomos a construção e utilização de um kit experimental para estudo de oscilações utilizando arduino. Por meio de um sensor ultrassônico HC-SR04, pode-se construir gráficos de posição (velocidade e aceleração) em tempo real, permitindo a visualização do comportamento senoidal apresentado pela teoria, e possibilitando maior compreensão do fenômeno além da determinação de grandezas físicas envolvidas. O kit inclui um <i>software</i> desenvolvido em C + ⁣ + , denominado <i>PMOscillator</i>, responsável pela aquisição, processamento, plotagem em tempo real e análise dos dados.</p>
+<p><strong>Palavras-chave:</strong><br>Arduino; oscilações; kit didático</p>
+</div>
+<hr>
+<div>
+<p>The study of oscillations can be configured as a rich opportunity for the development of experimental activities. However, due to a series of instrumental difficulties, many teachers choose to work only with a stopwatch to obtain the average frequency of the oscillations. To obtain from the data of position versus time is generally available for those who have access to expensive experimental kits. In this article we propose the construction and use of an experimental kit for study of oscillations using arduino, as well as a proposal of use. With a ultrassonic sensor HC-SR04, we can construct real position graphs, allowing a visualization of the sinusoidal behavior visualized in the theory, and also enabling a greater understanding of the phenomenon and the determination of the physical quantities involved. The kit includes a <i>software</i> developed in C + ⁣ + , called <i>PMOscillator</i>, responsible for the acquisition, processing, real-time plotting and data analysis.</p>
+<p><strong>Keywords</strong><br>Arduinox; oscilations; didatic instrumentation</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>O desenvolvimento de atividades experimentais educativas que possam exemplificar a intima relação entre os aspectos teóricos e experimentais que permeiam a construção do saber científico pode fomentar um ambiente de investigação que desperte a atenção e curiosidade dos alunos acerca do tema em questão. Quando se trata do estudo de oscilações mecânicas, no geral, adotam-se práticas experimentais baseadas na medição do período e da amplitude do sistema com os instrumentos régua e cronômetro. Embora esse tipo de estudo seja eficiente para verificar o comportamento periódico do movimento, não consegue explicitar o comportamento senoidal esperado para o gráfico da posição em função do tempo, devido à dificuldade na medição simultânea destas duas grandezas utilizando os instrumentos mencionados. Neste cenário, a necessidade de propor uma instrumentação acessível, e que permita a obtenção de dados mais fidedignos do sistema em estudo, podem tornar o estudo do tema mais estimulante. Algumas abordagens presentes na literatura utilizam ferramentas de videoanálise, como o Tracker [<span class="ref"><sup class="xref xrefblue">1</sup><span class="refCtt closed"><span>D. Brown, Tracker: Free Video Analysis and Modeling Tool for Physics Education, https://physlets.org/tracker/.</span><br><a href="https://physlets.org/tracker/" target="_blank">https://physlets.org/tracker/...
+            </a></span></span>]. Uma outra alternativa para isto é a utilização de ferramentas iterativas, como experiências assistidas pelo PC [<span class="ref"><sup class="xref xrefblue">2</sup><span class="refCtt closed"><span>A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física 33 , 1702 (2011).</span></span></span>]. Uma importante ferramenta nesta proposta é o arduino, placa de prototipagem eletrônica <i>open source</i> de baixo custo, fácil utilização e implementação [<span class="ref"><sup class="xref xrefblue">3</sup><span class="refCtt closed"><span>Página Oficial do Arduíno, disponível em: https://www.arduino.cc.</span><br><a href="https://www.arduino.cc" target="_blank">https://www.arduino.cc...
+            </a></span></span>]. Ela é amplamente utilizado em diversas áreas quando há a necessidade da elaboração de um dispositivo eletrônico; a exemplo, para o desenvolvimento de um sensor barato para monitoramento de líquidos [<span class="ref"><sup class="xref xrefblue">4</sup><span class="refCtt closed"><span>D.K. Fisher e R. Sui, IGR J. Agr. Eng. Int. 15 , 328 (2013).</span></span></span>], e a construção de um audiotermômetro para inclusão de estudantes cegos [<span class="ref"><sup class="xref xrefblue">5</sup><span class="refCtt closed"><span>H.P. Cordova, C.E. Aguiar, H.S. Amorim, K.S.O.M. Sathler e A.C.F. Santos, Revista Brasileira de Ensino de Física 40 , e2505 (2018).</span></span></span>]. Também encontra-se na literatura trabalhos na área de física e ensino de física, tendo como exemplo a construção de um dispositivo barato para análise do movimento de magnetos em tubos verticalmente orientados [<span class="ref"><sup class="xref xrefblue">6</sup><span class="refCtt closed"><span>R.M. Szmoski, A. Doff, V.M. Lenart, S.K. Schwiderke e L.V.G Fachini, Caderno Brasileiro de Ensino de Física 40 , e1505 (2017).</span></span></span>], onde se estudou a queda retardada do imã no tubo condutor com o sensor ultrassônico HC-SR04, e um dispositivo para construção de gráficos de movimento em tempo real [<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T Dorneles, Revista Brasileira de Ensino de Física 38 , 33503 (2016).</span></span></span>], onde se utilizou o arduino em conjunto com um sensor ultrassônico HC-SR04 e o software PLX-DAQ, que agrupa os dados recebidos numa planilha do Microsoft Excel para que depois possam ser plotados. No estudo de oscilações, mais uma vez, também é possível encontrar a aplicação do arduino, como a construção de instrumentação para análise de vibração no espaço da posição e das frequências estudando-se a oscilação de uma haste metálica com acelerômetro e giroscópio acoplados a ela [<span class="ref"><sup class="xref xrefblue">8</sup><span class="refCtt closed"><span>M. Varanis, A.L. Silva, P.H.A. Brunetto e R.F. Gregolin, Revista Brasileira de Ensino de Física 38 , 1301 (2016).</span></span></span>]. Contudo, quando utilizado para fins didáticos, na maioria das vezes os trabalhos são na área de eletrônica ou, na física, para eletricidade ou física moderna [<span class="ref"><sup class="xref xrefblue">9</sup><span class="refCtt closed"><span>S. Silveira, Desenvolvimento de um kit experimental com Arduino para o ensino de física moderna no ensino médio. Dissertação de Mestrado, Universidade Federal de Santa Catarina, Araranguá (2016).</span></span></span>, <span class="ref"><sup class="xref xrefblue">10</sup><span class="refCtt closed"><span>S. Silveira e M. Girardi, Revista Brasileira de Ensino de Física 39 , e4502 (2017).</span></span></span>, <span class="ref"><sup class="xref xrefblue">11</sup><span class="refCtt closed"><span>C.J.M. Souza e M.S. Silva, LINKSCIENCEPLACE-Interdisciplinary Scientific Journal 3, 82 (2016).</span></span></span>].</p>
+    
+      <h1 class="articleSectionTitle">2. O Kit Didático</h1>
+      <p>O kit proposto visa tornar o ensino de oscilações por meio da experimentação mais lúdico, permitindo relacionar o fenômeno de forma mais evidente com a teoria através da construção em tempo real de gráficos da posição em função do tempo de forma totalmente interativa.</p>
+      <p>O kit didático é pode ser subdivido em quatro partes:</p>
+      <ol type="i">
+<li>
+          <p>Um módulo medidor de distância;</p>
+        </li>
+<li>
+          <p>Software <i>PMOscillator</i>, responsável pela aquisição, por armazenar, plotar e analisar os dados medidos pelo módulo;</p>
+        </li>
+<li>
+          <p>Osciladores nos tipos pêndulo e massa-mola;</p>
+        </li>
+<li>
+          <p>Suportes para o oscilador e detector.</p>
+        </li>
+</ol>
+      
+        <h2>2.1. Medidor de distância</h2>
+        <p>O módulo medidor de distância, mostrado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F1"><span class="sci-ico-fileFigure"></span>1</a>, é a parte do kit capaz de verificar a posição do corpo oscilante em tempo real. Para isto, foi utilizado um sensor ultrassônico HC-SR04 ligado a um Arduino modelo Nano v3.0 [<span class="ref"><sup class="xref xrefblue">12</sup><span class="refCtt closed"><span>A. Nano, disponível em: https://store.arduino.cc/arduino-nano, acessado em 16/05/2021.</span><br><a href="https://store.arduino.cc/arduino-nano" target="_blank">https://store.arduino.cc/arduino-nano...
+            </a></span></span>], como ilustrado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F2"><span class="sci-ico-fileFigure"></span>2</a>. Ambos componentes foram armazenados numa caixa de montagem na cor preta, adaptada para o posicionamento do sensor e saída do cabo USB.</p>
+        <div class="row fig" id="S2F1">
+<a name="S2F1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/1062e55096b01519f5e5e3837d2b00a3afa7bd34.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+            Foto do módulo detetor de distância montado.
+          <br>
+</div>
+</div>
+        <div class="row fig" id="S2F2">
+<a name="S2F2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/ec28f4e17020294e5a80c9fa5ccce2804023b75b.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+            Arduino nano conectado so sensor HC-SR04.
+          <br>
+</div>
+</div>
+        <p>O HC-SR04 é um sensor de distância do tipo ultrassônico capaz de medir distâncias de 3 cm a 4 m com precisão de 3 mm [<span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>Datasheet do HC-SR04, disponível em: http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf.</span><br><a href="http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf" target="_blank">http://elecfreaks.com/estore/download/EF...
+            </a></span></span>]. O módulo possui um conjunto emissor-receptor de ondas sonoras na frequência de 40 kHz (ultrassom). Quando acionado, através de um sinal de 10 ms na porta Trigger, o dispositivo emite 8 pulsos ultrassônicos que refletirão no anteparo e retornarão ao detetor. O tempo entre a emissão e detecção é registrado e, conhecendo-se velocidade do som, a distância poderá ser determinada através da relação</p>
+        <p>
+          <div class="row formula" id="eS2E1">
+<a name="S2E1"></a><div class="col-md-12"><div class="formula-container">
+            <span class="label">(1)</span>
+            <math display="block">
+              <mrow>
+                <mrow>
+                  <mi>d</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>2</mn>
+                    </mfrac>
+                    <mo>⁢</mo>
+                    <msub>
+                      <mi>v</mi>
+                      <mi>s</mi>
+                    </msub>
+                    <mo>⁢</mo>
+                    <mi>t</mi>
+                  </mrow>
+                </mrow>
+                <mo>,</mo>
+              </mrow>
+            </math>
+          </div></div>
+</div>
+        </p>
+        <p>em que o <i>d</i> é a distância do sensor ao anteparo, <i>v</i> <sub><i>s</i></sub> é a velocidade do som no ar e <i>t</i> é o tempo referente a ida e volta do pulso, que deverá ser compensado pelo termo 1/2 presente na expressão. O processo descrito é melhor representado pelo diagrama da Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F3"><span class="sci-ico-fileFigure"></span>3</a>.</p>
+        <div class="row fig" id="S2F3">
+<a name="S2F3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/77cb74e52d04c86b07eedd3c9496b4bcbde23381.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+            Diagrama de tempo do HC-SR04.
+          <br>
+</div>
+</div>
+        <p>O arduino é o componente do medidor capaz de acionar o sensor a cada 0,1 s e verificar o tempo de deslocamento do pulso ultrassônico. O valor registrado é enviado via comunicação serial [<span class="ref"><sup class="xref xrefblue">14</sup><span class="refCtt closed"><span>Especificações da comunicação serial, disponível em: http://i2c.info/i2c-bus-specification, acessado em 16/05/2021.</span><br><a href="http://i2c.info/i2c-bus-specification" target="_blank">http://i2c.info/i2c-bus-specification...
+            </a></span></span>] através do cabo USB conectado a ele, que também é responsável por alimentar todo o circuito. O código programado na placa pode ser encontrado no apêndice.</p>
+        <p>Não obstante, o sensor ultrassônico HC-SR04 utilizado para medir distâncias possui abertura de campo de aproximadamente 15° para direita e para esquerda, como informado em seu <i>datasheet</i> [<span class="ref"><sup class="xref xrefblue">13</sup><span class="refCtt closed"><span>Datasheet do HC-SR04, disponível em: http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf.</span><br><a href="http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf" target="_blank">http://elecfreaks.com/estore/download/EF...
+            </a></span></span>], e representado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F4"><span class="sci-ico-fileFigure"></span>4</a> e na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F5"><span class="sci-ico-fileFigure"></span>5</a>. Isto significa que, a depender da distância e das dimensões do anteparo, outros objetos na abertura posicionados na região de alcance do detector poderão interferir nas medidas, reduzindo a precisão na aquisição dos dados. De acordo com Dworakowski et al. [<span class="ref"><sup class="xref xrefblue">7</sup><span class="refCtt closed"><span>L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T Dorneles, Revista Brasileira de Ensino de Física 38 , 33503 (2016).</span></span></span>], na prática a região que pode causar interferência é ainda menor, mas para garantir qualidade na produção e coleta de dados é aconselhável seguir as recomendações do fabricante.</p>
+        <div class="row fig" id="S2F4">
+<a name="S2F4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/153b6c1c81989cbcbb3d991874aa064c912c1ffb.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+            Representação da região do ângulo de abertura do sensor HC-SR04.
+          <br>
+</div>
+</div>
+        <div class="row fig" id="S2F5">
+<a name="S2F5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/698209fcbfd32b76f1732121f6ec68735ba9ea41.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+            Visão superior da região de aquisição do sensor HC-SR04, com anteparos posicionados a 10 cm e 20 cm de distância.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>2.2. Software</h2>
+        <p>As informações adquiridas pelo módulo medidor de distância deverão ser processadas e armazenadas pelo computador através de um software externo ao circuito. Para isto, foi desenvolvido um <i>software</i> em C + ⁣ + , denominado PMOscillator, com interface gráfica interativa e de fácil manuseio totalmente dedicado ao kit, como apresentado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F6"><span class="sci-ico-fileFigure"></span>6</a>. O professor poderá obtê-lo no repositório indicado na referência [<span class="ref"><sup class="xref xrefblue">15</sup><span class="refCtt closed"><span>Repositório do software PMOscillator, disponível em https://github.com/pmat0s/pmoscillator/, acessado em 16/05/2021.</span><br><a href="https://github.com/pmat0s/pmoscillator/" target="_blank">https://github.com/pmat0s/pmoscillator/...
+            </a></span></span>]. O software oferece ferramentas de análise dos dados aferidos, relacionando-os à teoria de oscilações, mas também pode ser utilizado para plotar a posição em função do tempo para outros experimentos em geral.</p>
+        <div class="row fig" id="S2F6">
+<a name="S2F6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/acb1d0f7649999debf2e8c468170e332a36b1e02.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+            Gráfico de posição plotado em tempo real.
+          <br>
+</div>
+</div>
+        
+          <h3>2.2.1. Aquisição e processamento</h3>
+          <p>Para utilizar o kit, basta conectar o módulo medidor de distância ao computador via USB que o <i>PMOscillator</i> o reconhece automaticamente. O software recebe do arduino o intervalo de tempo, em milissegundos, que um dos pulsos emitidos leva entre a saída e o retorno ao receptor. Esta informação é processada, de forma a transformá-la na distância do corpo até o sensor, através da aplicação da relação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS2E1"><span class="sci-ico-fileFormula"></span>1</a>).</p>
+          <p>Para isto, uma informação necessária é a velocidade do som no ar. O software estabelece como valor padrão 340<i>m</i>/<i>s</i>, que pode ser alterado através da opção de calibração. Posicionando-se um anteparo a uma distância conhecida, afere-se o tempo de deslocamento do pulso e, com isso, a velocidade do som é determinada.</p>
+        
+        
+          <h3>2.2.2. Análise</h3>
+          <p>O software também possui uma ferramenta de análise, mostrada na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F7"><span class="sci-ico-fileFigure"></span>7</a>, capaz de determinar a equação horária que melhor descreve um conjunto de pontos. Tomando como referência a curva senoidal</p>
+          <div class="row fig" id="S2F7">
+<a name="S2F7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/32c56a30ae55b2491c93c2f834429191d95bd793.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+              Valores dos parâmetros e seus respectivos erros na curva ajustada (em vermelho) no intervalo de tempo especificado pelo usuário.
+            <br>
+</div>
+</div>
+          <p>
+            <div class="row formula" id="eS2E2">
+<a name="S2E2"></a><div class="col-md-12"><div class="formula-container">
+              <span class="label">(2)</span>
+              <math display="block">
+                <mrow>
+                  <mrow>
+                    <mi>y</mi>
+                    <mo>=</mo>
+                    <mrow>
+                      <mrow>
+                        <mi>A</mi>
+                        <mo>⁢</mo>
+                        <mrow>
+                          <mi>sin</mi>
+                          <mo>⁡</mo>
+                          <mrow>
+                            <mo stretchy="false">(</mo>
+                            <mrow>
+                              <mrow>
+                                <mi>B</mi>
+                                <mo>⁢</mo>
+                                <mi>x</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mi>C</mi>
+                            </mrow>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                        </mrow>
+                      </mrow>
+                      <mo>+</mo>
+                      <mi>D</mi>
+                    </mrow>
+                  </mrow>
+                  <mo>,</mo>
+                </mrow>
+              </math>
+            </div></div>
+</div>
+          </p>
+          <p>o método consiste em encontrar os valores dos parâmetros <i>A</i>,<i>B</i>,<i>C</i> e <i>D</i> que minimizem a função</p>
+          <p>
+            <div class="row formula" id="eS2E3">
+<a name="S2E3"></a><div class="col-md-12"><div class="formula-container">
+              <span class="label">(3)</span>
+              <math display="block">
+                <mrow>
+                  <mrow>
+                    <mi>δ</mi>
+                    <mo>=</mo>
+                    <mrow>
+                      <munderover>
+                        <mo largeop="true" movablelimits="false" symmetric="true">∑</mo>
+                        <mrow>
+                          <mi>i</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mi>N</mi>
+                      </munderover>
+                      <msup>
+                        <mrow>
+                          <mo stretchy="false">|</mo>
+                          <mrow>
+                            <mrow>
+                              <mi>y</mi>
+                              <mo>⁢</mo>
+                              <mrow>
+                                <mo stretchy="false">(</mo>
+                                <msub>
+                                  <mi>x</mi>
+                                  <mi>i</mi>
+                                </msub>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </mrow>
+                            <mo>-</mo>
+                            <msub>
+                              <mi>y</mi>
+                              <mi>i</mi>
+                            </msub>
+                          </mrow>
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mn>2</mn>
+                      </msup>
+                    </mrow>
+                  </mrow>
+                  <mo>,</mo>
+                </mrow>
+              </math>
+            </div></div>
+</div>
+          </p>
+          <p>em que <i>x</i> <sub><i>i</i></sub> e <i>y</i> <sub><i>i</i></sub> são as coordenadas do i-ésimo ponto dentre os <i>N</i> compreendido no intervalo tomado para análise.</p>
+          <p>Para minimização, foi utilizado um o método de Levenberg-Marquardt [<span class="ref"><sup class="xref xrefblue">16</sup><span class="refCtt closed"><span>K. Levenberg, Quart. Appl. Math. 2 , 164 (1944).</span></span></span>, <span class="ref"><sup class="xref xrefblue">17</sup><span class="refCtt closed"><span>D. Marquardt, SIAM J. Appl. Math. 11 , 431 (1963)</span></span></span>, <span class="ref"><sup class="xref xrefblue">18</sup><span class="refCtt closed"><span>P.R. Gill, W. Murray e M.H. Wright, em: Practical Optimization (Academic Press, London, 1981), p. 136.</span></span></span>], utilizando-se o algoritmo implementado na biblioteca <i>GNU Scientific Library</i> [<span class="ref"><sup class="xref xrefblue">19</sup><span class="refCtt closed"><span>B. Gough, GNU scientific library reference manual (Network Theory Ltd. s.l, 2009).</span></span></span>].</p>
+        
+      
+      
+        <h2>2.3. Osciladores</h2>
+        <p>Como objetos de estudo, o kit permite, a princípio,<span class="ref footnote"><sup class="xref">1</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+        O kit pode ser facilmente adaptado para estudo de outros sistemas. A título de exemplo, o pêndulo amortecido.
+      </span></span></span> o estudo de osciladores do tipo pêndulo simples e massa-mola vertical. Ele permitirá determinar a posição do pêndulo ou da massa em função do tempo, e analisar os dados obtidos.</p>
+        
+          <h3>2.3. Pêndulo simples</h3>
+          <p>Para montagem do pêndulo, utiliza-se o suporte, massas e cordão inextensível, além do detetor de distâncias. O suporte oferece a possibilidade de pêndulos com fio de até 140 cm de comprimento. As massas contidas no kit foram construídas cada uma com duas unidades de cap PVC de 40 mm de diâmetro preenchidos com pesos de pesca; a menor massa possui 100 g e a maior, 420 g. As dimensões finais das massas foram 6 cm de altura e 4 cm de largura. A construção de massas nestas dimensões facilita a aquisição do detetor. Como a distribuição dos pesos de pesca não é necessariamente uniforme, é necessário considerar a localização do centro de massa nos resultados obtidos.</p>
+          <p>A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F8"><span class="sci-ico-fileFigure"></span>8</a> ilustra o aspecto final da montagem. Note que é necessário a utilização de um suporte auxiliar para o módulo detetor de distâncias, pois é necessário estar no nível das oscilações para que as medidas sejam realizadas corretamente.</p>
+          <div class="row fig" id="S2F8">
+<a name="S2F8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/dd8cc743b349dd3ddf031d4b398177b6011c3a5f.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+              Montagem para estudo do oscilador tipo pêndulo simples.
+            <br>
+</div>
+</div>
+        
+        
+          <h3>2.3.2. Massa-mola vertical</h3>
+          <p>Para montagem do massa-mola vertical, utiliza-se o suporte, massas e molas, além do detetor de distâncias. Os pesos utilizados são os mesmos do pêndulo. A Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F9"><span class="sci-ico-fileFigure"></span>9</a> ilustra o aspecto final da montagem. Note que neste caso a altura do suporte deve se adequar ao comprimento da mola distendida, uma vez não há ajuste de altura no posicionamento do detetor. Este é uma sugestão para testes iniciais, mas o suporte pode ser adaptado para outras configurações.</p>
+          <div class="row fig" id="S2F9">
+<a name="S2F9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigS2F9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/e9a29d4d264156c1ba75df031b941ca3e625dc1d.jpg"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 9</strong><br>
+              Montagem para estudo do oscilador massa-mola. O suporte para o sensor não é necessário neste caso.
+            <br>
+</div>
+</div>
+        
+      
+      
+        <h2>2.4. Suportes</h2>
+        <p>Os suportes foram feitos com tubos de PVC, devido ao baixo custo e facilidade de montagem. Além disto, a portabilidade oferecida pela utilização dos canos facilita o manuseio e transporte do kit pelo professor. O que seria diferente no caso da utilização de suportes feitos de alumínio, madeira ou ferro.</p>
+      
+    
+      <h1 class="articleSectionTitle">3. Proposta de Experimento</h1>
+      <p>Da teoria, sabe-se que a função horária da posição relacionada ao movimento tanto do pêndulo quanto do oscilador massa mola possui comportamento senoidal. Ou seja,</p>
+      <p>
+        <div class="row formula" id="eS3E4">
+<a name="S3E4"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(4)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>A</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mi>sin</mi>
+                    <mo>⁡</mo>
+                    <mrow>
+                      <mo stretchy="false">(</mo>
+                      <mrow>
+                        <mrow>
+                          <mi>ω</mi>
+                          <mo>⁢</mo>
+                          <mi>t</mi>
+                        </mrow>
+                        <mo>+</mo>
+                        <msub>
+                          <mi>φ</mi>
+                          <mn>0</mn>
+                        </msub>
+                      </mrow>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>em que <i>A</i> é a amplitude da oscilação, <i>φ</i> <sub>0</sub> é a fase inicial, relacionada à posição inicial do corpo, e ω é a frequência angular.</p>
+      <p>Tanto a amplitude quanto a posição são parâmetros de ajuste do sistema. Contudo, ω é intrínseco às características físicas do mesmo. No caso do pêndulo, ele se relaciona com o comprimento do fio e a aceleração gravitacional, podendo ser escrito como</p>
+      <p>
+        <div class="row formula" id="eS3E5">
+<a name="S3E5"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(5)</span>
+          <math display="block">
+            <mrow>
+              <mi>ω</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mfrac>
+                  <mi>g</mi>
+                  <mi>L</mi>
+                </mfrac>
+              </msqrt>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>ou, no caso do oscilador massa mola, ele se relaciona com a massa e a constante elástica da mola utilizada, dada pela expressão</p>
+      <p>
+        <div class="row formula" id="eS3E6">
+<a name="S3E6"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(6)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mi>ω</mi>
+                <mo>=</mo>
+                <msqrt>
+                  <mfrac>
+                    <mi>K</mi>
+                    <mi>m</mi>
+                  </mfrac>
+                </msqrt>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Com o kit é possível encontrar a função horária da posição, em tempo real, no formato</p>
+      <p>
+        <div class="row formula" id="eS3E7">
+<a name="S3E7"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(7)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mi>A</mi>
+                    <mo>⁢</mo>
+                    <mrow>
+                      <mi>sin</mi>
+                      <mo>⁡</mo>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mrow>
+                          <mrow>
+                            <mi>B</mi>
+                            <mo>*</mo>
+                            <mi>t</mi>
+                          </mrow>
+                          <mo>+</mo>
+                          <mi>C</mi>
+                        </mrow>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                    </mrow>
+                  </mrow>
+                  <mo>+</mo>
+                  <mi>D</mi>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Por comparação direta com (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS3E4"><span class="sci-ico-fileFormula"></span>4</a>), podemos relacionar os parâmetros do ajuste às grandezas físicas do sistema. Em especial, o parâmetro <i>B</i>, que corresponde à frequência angular, e o parâmetro <i>D</i>, relacionado à distância do ponto de equilíbrio do corpo até o sensor.</p>
+      <p>Com isto, pode-se variar as grandezas físicas envolvidas e investigar o comportamento da função horária, bem como período de oscilação. Para isto, o professor terá a autonomia de escolher uma teoria do laboratório didático para aplicar com seus alunos.</p>
+    
+      <h1 class="articleSectionTitle">4. Resultados do Experimento</h1>
+      <p>A precisão do sensor ultrassônico HC-SR04 de até 3<i>m</i> <i>m</i> oferece a possibilidade de obtenção de valores bem próximos da realidade. Por exemplo, realizando-se o experimento do pêndulo com comprimento do fio de 40<i>c</i> <i>m</i>, ajustando uma amplitude de 2<i>c</i> <i>m</i> e posicionando a uma distância inicial de 8,5<i>c</i> <i>m</i> obtivemos, através do ajuste não linear, os seguintes valores para as constantes:</p>
+      <p>
+        <div class="row formula" id="eS4Ex1">
+<a name="S4Ex1"></a><div class="col-md-12"><div class="formula-container">
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mi>A</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>2</mn>
+                    <mo>,</mo>
+                    <mrow>
+                      <mn>0</mn>
+                      <mo>±</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <mo>,</mo>
+                    <mn>2</mn>
+                    <mo rspace="4.2pt" stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mi>c</mi>
+                  <mo>⁢</mo>
+                  <mi>m</mi>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <div class="row formula" id="eS4Ex2">
+<a name="S4Ex2"></a><div class="col-md-12"><div class="formula-container">
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mi>B</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>4</mn>
+                    <mo>,</mo>
+                    <mrow>
+                      <mn>84</mn>
+                      <mo>±</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <mo>,</mo>
+                    <mn>04</mn>
+                    <mo rspace="4.2pt" stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <msup>
+                    <mi>s</mi>
+                    <mrow>
+                      <mo>-</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <div class="row formula" id="eS4Ex3">
+<a name="S4Ex3"></a><div class="col-md-12"><div class="formula-container">
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mi>C</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mo stretchy="false">(</mo>
+                  <mn>225</mn>
+                  <mo>,</mo>
+                  <mrow>
+                    <mn>8</mn>
+                    <mo>±</mo>
+                    <mn>7</mn>
+                  </mrow>
+                  <mo>,</mo>
+                  <mn>6</mn>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <div class="row formula" id="eS4Ex4">
+<a name="S4Ex4"></a><div class="col-md-12"><div class="formula-container">
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mi>D</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>8</mn>
+                    <mo>,</mo>
+                    <mrow>
+                      <mn>6</mn>
+                      <mo>±</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <mo>,</mo>
+                    <mn>1</mn>
+                    <mo rspace="4.2pt" stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mi>c</mi>
+                  <mo>⁢</mo>
+                  <mi>m</mi>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>como mostrado na Figura <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigS2F7"><span class="sci-ico-fileFigure"></span>7</a>. Os desvios associados são os erros estimados na regressão, que também são fornecidos pelo software. Os pontos obtidos na realização deste experimento apresentam baixo resíduo em relação à curva ajustada. A qualidade desta medida está associada à dimensão do oscilador, cujo diâmetro é próximo de 4 cm, ocupando quase toda a abertura de 4,5 cm do detetor à distância de 8,5 cm.</p>
+      <p>Note que a amplitude obtida neste caso é igual à que foi utilizada na configuração inicial e a distância <i>D</i> da posição de equilíbrio até o sensor foi determinada com discrepância de 1%. Com efeito, a equação (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS3E4"><span class="sci-ico-fileFormula"></span>4</a>) com os parâmetros ajustados pode ser expressa por</p>
+      <p>
+        <div class="row formula" id="eS4E8">
+<a name="S4E8"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(8)</span>
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>,</mo>
+                  <mrow>
+                    <mrow>
+                      <mn>0</mn>
+                      <mo>⁢</mo>
+                      <mrow>
+                        <mi>sin</mi>
+                        <mo>⁡</mo>
+                        <mrow>
+                          <mo stretchy="false">(</mo>
+                          <mn>4</mn>
+                          <mo>,</mo>
+                          <mrow>
+                            <mrow>
+                              <mpadded width="+1.7pt">
+                                <mn>84</mn>
+                              </mpadded>
+                              <mo>⁢</mo>
+                              <mi>t</mi>
+                            </mrow>
+                            <mo>+</mo>
+                            <mn>225</mn>
+                          </mrow>
+                          <mo>,</mo>
+                          <mn>8</mn>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </mrow>
+                    </mrow>
+                    <mo>+</mo>
+                    <mn>8</mn>
+                  </mrow>
+                  <mo>,</mo>
+                  <mn>6</mn>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Sendo <i>B</i> a frequência angular, representada por ω na expressão (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS3E5"><span class="sci-ico-fileFormula"></span>5</a>), podemos determinar o comprimento do pêndulo com base nos dados experimentais. Para isto, é necessário conhecer o valor da aceleração gravitacional no local <i>g</i>.</p>
+      <p>Para efeito de comparação, o valor da gravidade no local pode ser obtida por vias tradicionais utilizando o próprio pêndulo e um cronômetro. Uma forma precisa de fazer isto é aferir a frequência de oscilação através da medição do intervalo de tempo sobre 10 oscilações, por exemplo, e a repetição estatística da medida. Com esta, determina-se <i>g</i> utilizando-se a expressão (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeS3E5"><span class="sci-ico-fileFormula"></span>5</a>).</p>
+      <p>Ao realizar este experimento, com um pêndulo de comprimento <i>L</i> = (1,000 ± 0,002)<i>m</i>, com período de uma oscilação <i>T</i> = (2,004 ± 0,006), obtivemos como resultado</p>
+      <p>
+        <div class="row formula" id="eS4Ex5">
+<a name="S4Ex5"></a><div class="col-md-12"><div class="formula-container">
+          <math display="block">
+            <mrow>
+              <mrow>
+                <mi>g</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mrow>
+                      <mo stretchy="false">(</mo>
+                      <mn>9</mn>
+                      <mo>,</mo>
+                      <mrow>
+                        <mn>830</mn>
+                        <mo>±</mo>
+                        <mn>0</mn>
+                      </mrow>
+                      <mo>,</mo>
+                      <mn>062</mn>
+                      <mo rspace="7.5pt" stretchy="false">)</mo>
+                    </mrow>
+                    <mo>⁢</mo>
+                    <mi>m</mi>
+                  </mrow>
+                  <mo>/</mo>
+                  <msup>
+                    <mi>s</mi>
+                    <mn>2</mn>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>Este resultado está de acordo com valores obtidos em trabalho recente explorando diferentes métodos [<span class="ref"><sup class="xref xrefblue">20</sup><span class="refCtt closed"><span>F.M.L de Souza e S.C. Cardoso, Revista Brasileira de Ensino de Física 42, e20200202 (2020).</span></span></span>].</p>
+      <p>Utilizando-se o valor de <i>B</i> ajustado com sua incerteza estimada, considerando o valor da aceleração gravitacional determinado e propagando as devidas incertezas [<span class="ref"><sup class="xref xrefblue">21</sup><span class="refCtt closed"><span>J.H. Vuolo, Fundamentos da Teoria dos Erros, (Edgard Blücher LTDA, São Paulo, 1996), 2 ed., p. 113.</span></span></span>], pode-se chegar ao resultado</p>
+      <p>
+        <div class="row formula" id="eS4Ex6">
+<a name="S4Ex6"></a><div class="col-md-12"><div class="formula-container">
+          <math display="block">
+            <mrow>
+              <mrow>
+                <msup>
+                  <mi>L</mi>
+                  <mo>′</mo>
+                </msup>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mrow>
+                      <mn>42</mn>
+                      <mo>±</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <mo>,</mo>
+                    <mn>01</mn>
+                    <mo rspace="7.5pt" stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mi>m</mi>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+      </p>
+      <p>que possui discrepância de apenas 5% do comprimento do fio utilizado. Por outro lado, levando em conta as dimensões do corpo oscilante e considerando que o centro de massa esteja aproximadamente no centro geométrico, a expectativa teórica é <i>L</i> ≈ 43<i>cm</i>, o que torna a discrepância próxima de 2%.</p>
+      <p>O experimento apresenta excelente reprodutibilidade. Além disso, a depender da forma como o aluno realiza o experimento e a obtenção dos dados, é possível obter resultados ainda mais acurados. É importante ressaltar que a qualidade das medidas está diretamente ligada ao conjunto de pontos analisados, e o desenvolvimento da perspicácia investigativa envolvida na produção dos dados é uma das habilidades científicas que podem ser aprimoradas na execução de atividades como a que se propõe aqui.</p>
+    
+      <h1 class="articleSectionTitle">5. Conclusões</h1>
+      <p>Possibilitar que professores e estudantes que convivem com as mais diversas condições estruturais em laboratórios didáticos tenham acesso a um experimento que forneça dados com boa fidedignidade, que representem bem o fenômeno em estudo por um baixo custo, é um grande desafio para a área de instrumentação para o ensino de física. Neste artigo propomos a construção e utilização de um kit experimental utilizando arduino e disponibilizamos o software <i>PMOscillator</i> dedicado ao kit, possibilitando a plotagem em tempo real e análise dos dados. Este barato dispositivo permite, por meio de um sensor ultrassônico HC-SR04, construir gráficos de posição (velocidade e aceleração) em tempo real. A visualização do comportamento senoidal constatado pode ser comparado com a modelagem apresentada pela teoria, ou até mesmo determinado somente pela experimentação. Um outro aspecto que pode ser viabilizado com a utilização do kit proposto, é que o estudante pode participar da montagem do protótipo para aquisição de dados, conforme o processo de familiarização com as novas tecnologias ocorram, podem também surgir adaptações, novas propostas de investigações, características da apropriação do saber.</p>
+    </div>
+<div class="articleSection" data-anchor="Agradecimentos">
+<h1 class="articleSectionTitle">Agradecimentos</h1>
+      
+      <p>A Karla Pedroza Oliveira pela leitura crítica. Aos avaliadores pelas considerações realizadas que muito contribuíram para a melhoria de nosso trabalho. Ao programa PIBID – subprojeto de Física do IFSertãoPE, pelo fomento. À Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), pelo apoio financeiro.</p>
+    </div>
+<div class="articleSection" data-anchor="Apêndice">
+<h1 class="articleSectionTitle">Apêndice</h1>
+        
+        <a target="_blank" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/0b46738bb616afbb000c04e200202d90c8b77a32.pdf"></a>
+      </div>
+<div class="articleSection" data-anchor="References">
+<h1 class="articleSectionTitle">References</h1>
+<div class="ref-list"><ul class="refList">
+<li><div>D. Brown, <i>Tracker: Free Video Analysis and Modeling Tool for Physics Education</i>, https://physlets.org/tracker/<br><a href="https://physlets.org/tracker/" target="_blank">» https://physlets.org/tracker/</a>
+</div></li>
+<li><div>A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física 33 , 1702 (2011).</div></li>
+<li><div>Página Oficial do Arduíno, disponível em: https://www.arduino.cc<br><a href="https://www.arduino.cc" target="_blank">» https://www.arduino.cc</a>
+</div></li>
+<li><div>D.K. Fisher e R. Sui, IGR J. Agr. Eng. Int. 15 , 328 (2013).</div></li>
+<li><div>H.P. Cordova, C.E. Aguiar, H.S. Amorim, K.S.O.M. Sathler e A.C.F. Santos, Revista Brasileira de Ensino de Física 40 , e2505 (2018).</div></li>
+<li><div>R.M. Szmoski, A. Doff, V.M. Lenart, S.K. Schwiderke e L.V.G Fachini, Caderno Brasileiro de Ensino de Física 40 , e1505 (2017).</div></li>
+<li><div>L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T Dorneles, Revista Brasileira de Ensino de Física 38 , 33503 (2016).</div></li>
+<li><div>M. Varanis, A.L. Silva, P.H.A. Brunetto e R.F. Gregolin, Revista Brasileira de Ensino de Física 38 , 1301 (2016).</div></li>
+<li><div>S. Silveira, <i>Desenvolvimento de um kit experimental com Arduino para o ensino de física moderna no ensino médio</i> Dissertação de Mestrado, Universidade Federal de Santa Catarina, Araranguá (2016).</div></li>
+<li><div>S. Silveira e M. Girardi, Revista Brasileira de Ensino de Física 39 , e4502 (2017).</div></li>
+<li><div>C.J.M. Souza e M.S. Silva, LINKSCIENCEPLACE-Interdisciplinary Scientific Journal 3, 82 (2016).</div></li>
+<li><div>A. Nano, disponível em: https://store.arduino.cc/arduino-nano, acessado em 16/05/2021.<br><a href="https://store.arduino.cc/arduino-nano" target="_blank">» https://store.arduino.cc/arduino-nano</a>
+</div></li>
+<li><div>Datasheet do HC-SR04, disponível em: http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf<br><a href="http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf" target="_blank">» http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf</a>
+</div></li>
+<li><div>Especificações da comunicação serial, disponível em: http://i2c.info/i2c-bus-specification, acessado em 16/05/2021.<br><a href="http://i2c.info/i2c-bus-specification" target="_blank">» http://i2c.info/i2c-bus-specification</a>
+</div></li>
+<li><div>Repositório do software PMOscillator, disponível em https://github.com/pmat0s/pmoscillator/, acessado em 16/05/2021.<br><a href="https://github.com/pmat0s/pmoscillator/" target="_blank">» https://github.com/pmat0s/pmoscillator/</a>
+</div></li>
+<li><div>K. Levenberg, Quart. Appl. Math. 2 , 164 (1944).</div></li>
+<li><div>D. Marquardt, SIAM J. Appl. Math. 11 , 431 (1963)</div></li>
+<li><div>P.R. Gill, W. Murray e M.H. Wright, em: <i>Practical Optimization</i> (Academic Press, London, 1981), p. 136.</div></li>
+<li><div>B. Gough, <i>GNU scientific library reference manual</i> (Network Theory Ltd. s.l, 2009).</div></li>
+<li><div>F.M.L de Souza e S.C. Cardoso, Revista Brasileira de Ensino de Física 42, e20200202 (2020).</div></li>
+<li><div>J.H. Vuolo, <i>Fundamentos da Teoria dos Erros</i>, (Edgard Blücher LTDA, São Paulo, 1996), 2 ed., p. 113.</div></li>
+</ul></div>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList footnote">
+      <li>
+        <span class="xref big">1</span>
+        <div>O kit pode ser facilmente adaptado para estudo de outros sistemas. A título de exemplo, o pêndulo amortecido.</div>
+      </li>
+    </ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>08 Out 2021</li>
+<li>
+<strong>Data do Fascículo</strong><br>2021</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>18 Maio 2021</li>
+<li>
+<strong>Revisado</strong><br>06 Jul 2021</li>
+<li>
+<strong>Aceito</strong><br>26 Ago 2021</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png" alt="Creative Common - by 4.0 deed.en"></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Pedro Davi Matos Pereira </strong><strong>*</strong><br><div>Instituto de Física, Universidade Federal da Bahia, Campus Universitário de Ondina, Salvador, BA, Brasil.</div>
+<div>Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano, Grupo de Pesquisa em Ensino de Ciências, Salgueiro, PE, Brasil.</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0003-0425-2451" class="btnContribLinks orcid">http://orcid.org/0000-0003-0425-2451</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Marcelo Souza da Silva </strong><br><div>Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano, Grupo de Pesquisa em Ensino de Ciências, Salgueiro, PE, Brasil.</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">* Endereço de correspondência: <a href="mailto:pedrophysicist@gmail.com">pedrophysicist@gmail.com</a> </div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (9)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (14)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F1"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/1062e55096b01519f5e5e3837d2b00a3afa7bd34.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+            Foto do módulo detetor de distância montado.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/ec28f4e17020294e5a80c9fa5ccce2804023b75b.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+            Arduino nano conectado so sensor HC-SR04.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F3"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/77cb74e52d04c86b07eedd3c9496b4bcbde23381.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+            Diagrama de tempo do HC-SR04.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F4"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/153b6c1c81989cbcbb3d991874aa064c912c1ffb.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+            Representação da região do ângulo de abertura do sensor HC-SR04.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F5"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/698209fcbfd32b76f1732121f6ec68735ba9ea41.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Visão superior da região de aquisição do sensor HC-SR04, com anteparos posicionados a 10 cm e 20 cm de distância.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F6"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/acb1d0f7649999debf2e8c468170e332a36b1e02.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Gráfico de posição plotado em tempo real.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/32c56a30ae55b2491c93c2f834429191d95bd793.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+              Valores dos parâmetros e seus respectivos erros na curva ajustada (em vermelho) no intervalo de tempo especificado pelo usuário.
+            </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F7"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/32c56a30ae55b2491c93c2f834429191d95bd793.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+              Valores dos parâmetros e seus respectivos erros na curva ajustada (em vermelho) no intervalo de tempo especificado pelo usuário.
+            </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F8"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/dd8cc743b349dd3ddf031d4b398177b6011c3a5f.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+              Montagem para estudo do oscilador tipo pêndulo simples.
+            </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigS2F9"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/e9a29d4d264156c1ba75df031b941ca3e625dc1d.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+              Montagem para estudo do oscilador massa-mola. O suporte para o sensor não é necessário neste caso.
+            </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2E1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2E2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS2E3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3E4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3E5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(5)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3E6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(6)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS3E7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(7)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS4Ex1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS4Ex2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS4Ex3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS4Ex4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS4E8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(8)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS4Ex5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeS4Ex6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/80a0a1900bbb239fe9c07ba4cb6183ba914697b6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+            Foto do módulo detetor de distância montado.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/80a0a1900bbb239fe9c07ba4cb6183ba914697b6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/9dbdcc782bbb0ee4eb967b4b3cf09b54c6bef088.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+            Arduino nano conectado so sensor HC-SR04.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/9dbdcc782bbb0ee4eb967b4b3cf09b54c6bef088.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/7078f086b6567eb3ec012fbb0562dcfd1e591817.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+            Diagrama de tempo do HC-SR04.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/7078f086b6567eb3ec012fbb0562dcfd1e591817.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/ef57b76fd15f9c0a5ca805ee4cc0e9b2d31ab0eb.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+            Representação da região do ângulo de abertura do sensor HC-SR04.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/ef57b76fd15f9c0a5ca805ee4cc0e9b2d31ab0eb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/206a13797fed4af2e1bf7e4c9922e9a1c4ce7b0c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Visão superior da região de aquisição do sensor HC-SR04, com anteparos posicionados a 10 cm e 20 cm de distância.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/206a13797fed4af2e1bf7e4c9922e9a1c4ce7b0c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/22944016cb6c6f07feabae8de8bc318478601ec7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Gráfico de posição plotado em tempo real.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/22944016cb6c6f07feabae8de8bc318478601ec7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/c112d2d769d0222947573ffa3d7b776ccccae807.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+              Valores dos parâmetros e seus respectivos erros na curva ajustada (em vermelho) no intervalo de tempo especificado pelo usuário.
+            <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/c112d2d769d0222947573ffa3d7b776ccccae807.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/c112d2d769d0222947573ffa3d7b776ccccae807.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+              Valores dos parâmetros e seus respectivos erros na curva ajustada (em vermelho) no intervalo de tempo especificado pelo usuário.
+            <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/c112d2d769d0222947573ffa3d7b776ccccae807.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/477ad1d52397b84841f1e92d97adce6bda20bdc8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+              Montagem para estudo do oscilador tipo pêndulo simples.
+            <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/477ad1d52397b84841f1e92d97adce6bda20bdc8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigS2F9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/f402797d4ac53acc9fad7424dcc84c1f2e536f0e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+              Montagem para estudo do oscilador massa-mola. O suporte para o sensor não é necessário neste caso.
+            <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/f402797d4ac53acc9fad7424dcc84c1f2e536f0e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2E1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+              <mrow>
+                <mrow>
+                  <mi>d</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>2</mn>
+                    </mfrac>
+                    <mo>⁢</mo>
+                    <msub>
+                      <mi>v</mi>
+                      <mi>s</mi>
+                    </msub>
+                    <mo>⁢</mo>
+                    <mi>t</mi>
+                  </mrow>
+                </mrow>
+                <mo>,</mo>
+              </mrow>
+            </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2E2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+                <mrow>
+                  <mrow>
+                    <mi>y</mi>
+                    <mo>=</mo>
+                    <mrow>
+                      <mrow>
+                        <mi>A</mi>
+                        <mo>⁢</mo>
+                        <mrow>
+                          <mi>sin</mi>
+                          <mo>⁡</mo>
+                          <mrow>
+                            <mo stretchy="false">(</mo>
+                            <mrow>
+                              <mrow>
+                                <mi>B</mi>
+                                <mo>⁢</mo>
+                                <mi>x</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mi>C</mi>
+                            </mrow>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                        </mrow>
+                      </mrow>
+                      <mo>+</mo>
+                      <mi>D</mi>
+                    </mrow>
+                  </mrow>
+                  <mo>,</mo>
+                </mrow>
+              </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS2E3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+                <mrow>
+                  <mrow>
+                    <mi>δ</mi>
+                    <mo>=</mo>
+                    <mrow>
+                      <munderover>
+                        <mo largeop="true" movablelimits="false" symmetric="true">∑</mo>
+                        <mrow>
+                          <mi>i</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mi>N</mi>
+                      </munderover>
+                      <msup>
+                        <mrow>
+                          <mo stretchy="false">|</mo>
+                          <mrow>
+                            <mrow>
+                              <mi>y</mi>
+                              <mo>⁢</mo>
+                              <mrow>
+                                <mo stretchy="false">(</mo>
+                                <msub>
+                                  <mi>x</mi>
+                                  <mi>i</mi>
+                                </msub>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </mrow>
+                            <mo>-</mo>
+                            <msub>
+                              <mi>y</mi>
+                              <mi>i</mi>
+                            </msub>
+                          </mrow>
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mn>2</mn>
+                      </msup>
+                    </mrow>
+                  </mrow>
+                  <mo>,</mo>
+                </mrow>
+              </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3E4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mi>A</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mi>sin</mi>
+                    <mo>⁡</mo>
+                    <mrow>
+                      <mo stretchy="false">(</mo>
+                      <mrow>
+                        <mrow>
+                          <mi>ω</mi>
+                          <mo>⁢</mo>
+                          <mi>t</mi>
+                        </mrow>
+                        <mo>+</mo>
+                        <msub>
+                          <mi>φ</mi>
+                          <mn>0</mn>
+                        </msub>
+                      </mrow>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3E5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(5)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mi>ω</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mfrac>
+                  <mi>g</mi>
+                  <mi>L</mi>
+                </mfrac>
+              </msqrt>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3E6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(6)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mi>ω</mi>
+                <mo>=</mo>
+                <msqrt>
+                  <mfrac>
+                    <mi>K</mi>
+                    <mi>m</mi>
+                  </mfrac>
+                </msqrt>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS3E7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(7)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mi>A</mi>
+                    <mo>⁢</mo>
+                    <mrow>
+                      <mi>sin</mi>
+                      <mo>⁡</mo>
+                      <mrow>
+                        <mo stretchy="false">(</mo>
+                        <mrow>
+                          <mrow>
+                            <mi>B</mi>
+                            <mo>*</mo>
+                            <mi>t</mi>
+                          </mrow>
+                          <mo>+</mo>
+                          <mi>C</mi>
+                        </mrow>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                    </mrow>
+                  </mrow>
+                  <mo>+</mo>
+                  <mi>D</mi>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS4Ex1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mi>A</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>2</mn>
+                    <mo>,</mo>
+                    <mrow>
+                      <mn>0</mn>
+                      <mo>±</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <mo>,</mo>
+                    <mn>2</mn>
+                    <mo rspace="4.2pt" stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mi>c</mi>
+                  <mo>⁢</mo>
+                  <mi>m</mi>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS4Ex2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mi>B</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>4</mn>
+                    <mo>,</mo>
+                    <mrow>
+                      <mn>84</mn>
+                      <mo>±</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <mo>,</mo>
+                    <mn>04</mn>
+                    <mo rspace="4.2pt" stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <msup>
+                    <mi>s</mi>
+                    <mrow>
+                      <mo>-</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS4Ex3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mi>C</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mo stretchy="false">(</mo>
+                  <mn>225</mn>
+                  <mo>,</mo>
+                  <mrow>
+                    <mn>8</mn>
+                    <mo>±</mo>
+                    <mn>7</mn>
+                  </mrow>
+                  <mo>,</mo>
+                  <mn>6</mn>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS4Ex4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mi>D</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>8</mn>
+                    <mo>,</mo>
+                    <mrow>
+                      <mn>6</mn>
+                      <mo>±</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <mo>,</mo>
+                    <mn>1</mn>
+                    <mo rspace="4.2pt" stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mi>c</mi>
+                  <mo>⁢</mo>
+                  <mi>m</mi>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS4E8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(8)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mi>x</mi>
+                  <mo>⁢</mo>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mi>t</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>,</mo>
+                  <mrow>
+                    <mrow>
+                      <mn>0</mn>
+                      <mo>⁢</mo>
+                      <mrow>
+                        <mi>sin</mi>
+                        <mo>⁡</mo>
+                        <mrow>
+                          <mo stretchy="false">(</mo>
+                          <mn>4</mn>
+                          <mo>,</mo>
+                          <mrow>
+                            <mrow>
+                              <mpadded width="+1.7pt">
+                                <mn>84</mn>
+                              </mpadded>
+                              <mo>⁢</mo>
+                              <mi>t</mi>
+                            </mrow>
+                            <mo>+</mo>
+                            <mn>225</mn>
+                          </mrow>
+                          <mo>,</mo>
+                          <mn>8</mn>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                      </mrow>
+                    </mrow>
+                    <mo>+</mo>
+                    <mn>8</mn>
+                  </mrow>
+                  <mo>,</mo>
+                  <mn>6</mn>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS4Ex5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <mi>g</mi>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mrow>
+                      <mo stretchy="false">(</mo>
+                      <mn>9</mn>
+                      <mo>,</mo>
+                      <mrow>
+                        <mn>830</mn>
+                        <mo>±</mo>
+                        <mn>0</mn>
+                      </mrow>
+                      <mo>,</mo>
+                      <mn>062</mn>
+                      <mo rspace="7.5pt" stretchy="false">)</mo>
+                    </mrow>
+                    <mo>⁢</mo>
+                    <mi>m</mi>
+                  </mrow>
+                  <mo>/</mo>
+                  <msup>
+                    <mi>s</mi>
+                    <mn>2</mn>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeS4Ex6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><math display="block">
+            <mrow>
+              <mrow>
+                <msup>
+                  <mi>L</mi>
+                  <mo>′</mo>
+                </msup>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo stretchy="false">(</mo>
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mrow>
+                      <mn>42</mn>
+                      <mo>±</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <mo>,</mo>
+                    <mn>01</mn>
+                    <mo rspace="7.5pt" stretchy="false">)</mo>
+                  </mrow>
+                  <mo>⁢</mo>
+                  <mi>m</mi>
+                </mrow>
+              </mrow>
+              <mo>,</mo>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Matos Pereira, Pedro Davi e da Silva, Marcelo SouzaConstrução de um kit experimental com arduino para ensino de oscilações em tempo real. Revista Brasileira de Ensino de Física [online]. 2021, v. 43 [Acessado CURRENTDATE] , e20210186. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2021-0186&gt;. Epub 08 Out 2021. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2021-0186.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Construção de um kit experimental com arduino para ensino de oscilações em tempo real&#34; &#34;Matos Pereira, Pedro Davi&#34; &#34;da Silva, Marcelo Souza&#34; &#34;2021&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Construção de um kit experimental com arduino para ensino de oscilações em tempo real&#34; &#34;Matos Pereira, Pedro Davi&#34; &#34;da Silva, Marcelo Souza&#34; &#34;2021&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/yDycLpWkwRzgWDKk5djT3mB/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172021000100734&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2021-0186" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2021-0186">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2021-0186" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2021-0186">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2021-0186"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2021-0186" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2021-0186">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2021-0186" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Construção de um kit experimental com arduino para ensino de oscilações em tempo real
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2021-0186">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

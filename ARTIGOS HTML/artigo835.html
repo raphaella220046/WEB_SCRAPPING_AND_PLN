@@ -1,0 +1,2023 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Instrumento livre para medidas de movimento Instrumento livre para medidas de movimento </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Instrumento livre para medidas de movimento"/>
+<meta property="og:description" content="Este trabalho apresenta a validação de uma ferramenta computacional gratuita, que serve para..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Peña, Norberto">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal da Bahia">
+        
+        <meta name="citation_author" content="Credidio, Bruno Cecílio">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal da Bahia">
+        
+        <meta name="citation_author" content="Corrêa, Lorena Peixoto Nogueira Rodriguez Martinez Salles">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal da Bahia">
+        
+        <meta name="citation_author" content="França, Lucas Gabriel Souza">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal da Bahia">
+        
+        <meta name="citation_author" content="Cunha, Marcelo do Vale">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal da Bahia">
+        
+        <meta name="citation_author" content="Sousa, Marcos Cavalcanti de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal da Bahia">
+        
+        <meta name="citation_author" content="Vieira, João Paulo Bomfim Cruz">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal da Bahia">
+        
+        <meta name="citation_author" content="Miranda, José Garcia Vivas">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal da Bahia">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="35"></meta>
+<meta name="citation_number" content="3"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172013000300024"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Instrumento livre para medidas de movimento
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Este trabalho apresenta a validação de uma ferramenta computacional gratuita, que serve para obtenção de medidas contínuas de objetos em movimento. O software utiliza técnicas de visão computacional, reconhecimento de padrões e fluxo óptico, para viabilizar o rastreamento de objetos em vídeos, gerando dados de trajetória, velocidade, aceleração e movimento angular. O programa foi aplicado no rastreamento da esfera de um pêndulo aproximadamente simples. A metodologia utilizada para a validação toma como base a comparação dos valores medidos pelo programa, bem como os valores teóricos esperados segundo o modelo do pêndulo simples. O experimento se adequou ao método, pois foi construído respeitando os limites lineares do oscilador harmônico, minimizando as perdas de energia por atrito e tornando-o o mais ideal possível. Os resultados indicam que a ferramenta é sensível e precisa. Desvios menores do que um milímetro na medida da trajetória garantem a aplicabilidade do software em física, tanto em projetos de pesquisa quanto em tópicos de ensino."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2013-09"></meta>
+<meta name="citation_keywords" content="visão computacional"></meta><meta name="citation_keywords" content="pêndulo simples"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2013.v35n3/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2013.v35n3/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172013000300024 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Desenvolvimento em Ensino de Física</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 35 
+                (3)
+            <span class="_separator"> • </span>Set 2013</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172013000300024" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172013000300024</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172013000300024"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Instrumento livre para medidas de movimento<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Free instrument for measurements of motion</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Norberto Peña </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Faculdade de Ciências da Saúde ,  Departamento de Fisioterapia,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Bruno Cecílio Credidio </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Lorena Peixoto Nogueira Rodriguez Martinez Salles Corrêa </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Lucas Gabriel Souza França </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor5" class="dropdown-toggle" data-toggle="dropdown"><span> Marcelo do Vale Cunha </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor5">
+<strong></strong>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor6" class="dropdown-toggle" data-toggle="dropdown"><span> Marcos Cavalcanti de Sousa </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor6">
+<strong></strong>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor7" class="dropdown-toggle" data-toggle="dropdown"><span> João Paulo Bomfim Cruz Vieira </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor7">
+<strong></strong>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor8" class="dropdown-toggle" data-toggle="dropdown"><span> José Garcia Vivas Miranda </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor8">
+<strong></strong>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Este trabalho apresenta a validação de uma ferramenta computacional gratuita, que serve para obtenção de medidas contínuas de objetos em movimento. O software utiliza técnicas de visão computacional, reconhecimento de padrões e fluxo óptico, para viabilizar o rastreamento de objetos em vídeos, gerando dados de trajetória, velocidade, aceleração e movimento angular. O programa foi aplicado no rastreamento da esfera de um pêndulo aproximadamente simples. A metodologia utilizada para a validação toma como base a comparação dos valores medidos pelo programa, bem como os valores teóricos esperados segundo o modelo do pêndulo simples. O experimento se adequou ao método, pois foi construído respeitando os limites lineares do oscilador harmônico, minimizando as perdas de energia por atrito e tornando-o o mais ideal possível. Os resultados indicam que a ferramenta é sensível e precisa. Desvios menores do que um milímetro na medida da trajetória garantem a aplicabilidade do software em física, tanto em projetos de pesquisa quanto em tópicos de ensino.</p>
+<p>visão computacional; pêndulo simples</p>
+</div>
+<hr>
+<div>
+<p>This paper presents the validation of a computational tool that serves to obtain continuous measurements of moving objects. The software uses techniques of computer vision, pattern recognition and optical flow, to enable the tracking of objects in videos, generating data trajectory, velocity, acceleration and angular movement. The program was applied to track a ball around a simple pendulum. The methodology used for this validation takes as a basis for comparisons the measured values of the program as well as the theoretical values expected according to the model of a simple pendulum. The experiment is appropriate to the method because it was built within the limits of the linear harmonic oscillator, and energy losses due to friction had been minimized, making it the most ideal possible. The results indicate that the tool is sensitive and accurate. Deviations of less than a millimeter in the measurements of the trajectory ensure the applicability of the software on physics, either in research or in teaching topics.</p>
+<p>computer vision; simple pendulum</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>DESENVOLVIMENTO EM ENSINO DE FÍSICA</b>
+    </p>
+<p></p>
+<p>Instrumento livre para medidas de movimento</p>
+<p></p>
+<p>
+      <b>Free instrument for measurements of motion</b>
+    </p>
+<p></p>
+<p>Norberto Peña<sup><b>I</b></sup>; Bruno Cecílio Credidio<sup><b>II</b></sup>; Lorena Peixoto Nogueira Rodriguez Martinez Salles Corrêa<sup><b>II</b></sup>; Lucas Gabriel Souza França<sup><b>II</b></sup>; Marcelo do Vale Cunha<sup><b>II</b></sup>; Marcos Cavalcanti de Sousa<sup><b>II</b></sup>; João Paulo Bomfim Cruz Vieira<sup><b>II</b></sup>; José Garcia Vivas Miranda<sup><b>II, </b></sup><span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        vivasm@gmail.com. 
+      </span></span></span></p>
+<p></p>
+<p><sup>I</sup>Departamento de Fisioterapia, Faculdade de Ciências da Saúde, Universidade Federal da Bahia, Salvador, BA, Brasil </p>
+<p></p>
+<p><sup>II</sup>Laboratório de Física Nuclear Aplicada, Instituto de Física, Universidade Federal da Bahia, Salvador, BA, Brasil</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Este trabalho apresenta a validação de uma ferramenta computacional gratuita, que serve para obtenção de medidas contínuas de objetos em movimento. O software utiliza técnicas de visão computacional, reconhecimento de padrões e fluxo óptico, para viabilizar o rastreamento de objetos em vídeos, gerando dados de trajetória, velocidade, aceleração e movimento angular. O programa foi aplicado no rastreamento da esfera de um pêndulo aproximadamente simples. A metodologia utilizada para a validação toma como base a comparação dos valores medidos pelo programa, bem como os valores teóricos esperados segundo o modelo do pêndulo simples. O experimento se adequou ao método, pois foi construído respeitando os limites lineares do oscilador harmônico, minimizando as perdas de energia por atrito e tornando-o o mais ideal possível. Os resultados indicam que a ferramenta é sensível e precisa. Desvios menores do que um milímetro na medida da trajetória garantem a aplicabilidade do software em física, tanto em projetos de pesquisa quanto em tópicos de ensino.</p>
+<p></p>
+<p><b>Palavras-chave:</b> visão computacional, pêndulo simples.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>This paper presents the validation of a computational tool that serves to obtain continuous measurements of moving objects. The software uses techniques of computer vision, pattern recognition and optical flow, to enable the tracking of objects in videos, generating data trajectory, velocity, acceleration and angular movement. The program was applied to track a ball around a simple pendulum. The methodology used for this validation takes as a basis for comparisons the measured values of the program as well as the theoretical values expected according to the model of a simple pendulum. The experiment is appropriate to the method because it was built within the limits of the linear harmonic oscillator, and energy losses due to friction had been minimized, making it the most ideal possible. The results indicate that the tool is sensitive and accurate. Deviations of less than a millimeter in the measurements of the trajectory ensure the applicability of the software on physics, either in research or in teaching topics.</p>
+<p></p>
+<p><b>Keywords:</b> computer vision, simple pendulum.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>O estudo do movimento no ensino de física ou em laboratórios de pesquisa orbita, quase sempre, entre dois extremos: medidas de fácil obtenção e medidas com alta precisão e contínuas. As primeiras são imprecisas, necessitam de poucos recursos (normalmente se baseiam em cronômetros e réguas) e apresentam valores médios como resultado, como é o caso comum de experimentos em laboratório do ensino médio. No outro extremo aparecem medidas com alta precisão e contínuas, que utilizam tecnologias exigentes de recursos superiores e que são de difícil operação em relação às anteriores. O pesquisador/educador que busca medidas contínuas do movimento não encontra opções de instrumentos com características intermediárias.</p>
+<p></p>
+<p>Um importante exemplo dessa dualidade ocorre em instrumentos de análise do movimento humano. Para a compreensão de sua complexidade e caracterização é essencial uma análise objetiva da motricidade. Esta costuma ser realizada de forma clínica através de testes epidemiológicos [1, 2] ou utilizando tecnologias como plataformas de força [3], vídeo-análise [4], sistemas optoelectrônicos [5], eletro-goniômetros [6], giroscópios [7], eletromiógrafos [8-10] e acelerômetros [11]. Estes estudos utilizam instrumentos sofisticados e de alto custo, que analisam eventos relacionados com o deslocamento angular, reação das forças do chão e o controle motor em indivíduos e em populações. Aplicações simples em pesquisa ou educação se tornam inviáveis.</p>
+<p></p>
+<p>O crescimento constante da capacidade de processamento dos computadores, aliado à adoção de novos paradigmas de desenvolvimento colaborativos, permitem a construção de programas de alta complexidade com baixo custo. Em tempos atuais é factível, utilizando um computador pessoal, construir ferramentas de seguimento de fluxo em sequência de imagens capazes de prever a trajetória de pontos no espaço utilizando uma simples câmera de vídeo digital. As bibliotecas de tratamento de vídeo e visão computacional OpenCv [12] e OpenGinga [13] são exemplos desse avanço, pois colaborativa e gratuitamente disponibilizam diversas funções de tratamento de vídeo otimizadas, que permitem a elaboração de programas sofisticados de análise de movimento.</p>
+<p></p>
+<p>O objetivo geral deste trabalho é apresentar uma nova ferramenta de análise do movimento construída com base na biblioteca OpenCv, através da utilização de técnicas de visão computacional capazes de preencher a lacuna tecnológica com medidas precisas e de baixo custo. Também é apresentada uma metodologia de validação de instrumentos de medição de trajetórias com base em tecnologias de visão computacional.</p>
+<p></p>
+<p>
+      <b>2. O Instrumento</b>
+    </p>
+<p></p>
+<p>Trata-se de um medidor de parâmetros mecânicos do movimento (trajetória, velocidade e aceleração) com base em algoritmos de visão computacional aplicados a vídeos de objetos em movimento. O instrumental necessário consiste em uma câmera digital e o programa livre desenvolvido, o CVMob [14]. As especificações mínimas da câmera dependerão da velocidade com que ocorre o evento que se queira estudar. Para o fenômeno observado neste trabalho - um pêndulo simples - foi necessária uma câmera com resolução de filmagem de 640 x 480 pixels com uma taxa de captura de 30 quadros por segundo (fps). A partir dessas especificações foi possível uma descrição completa do movimento com medições da trajetória, velocidade e aceleração.</p>
+<p></p>
+<p>O CVMob é um software livre que utiliza técnicas de Visão Computacional com análise do fluxo de pixels em vídeos, para localização e acompanhamento de padrões de imagens. O CVMob foi desenvolvido no Instituto de Física da Universidade Federal da Bahia em linguagem C++, utilizando o <i>framework</i> QT4 e a biblioteca de visão computacional OpenCV.</p>
+<p></p>
+<p>Um experimento de validação foi realizado para identificar os limites de medidas do instrumento e pode ser generalizado para qualquer situação em que se utilizem técnicas de visão computacional como base de medida.</p>
+<p></p>
+<p>
+      <b>3. Métodos de validação</b>
+    </p>
+<p></p>
+<p>A implementação de uma nova ferramenta de medida requer uma imprescindível análise criteriosa de seu desempenho. De acordo com Ribeiro e colaboradores [15] existem dois parâmetros cruciais no desempenho de qualquer técnica analítica: a qualidade das medidas instrumentais e a confiabilidade estatística dos cálculos envolvidos no seu processamento. O estabelecimento dos limites de precisão desses parâmetros utiliza comparações com base em eventos teóricos conhecidos, leis e/ou estimativas anteriores sobre o fenômeno, o que assegura a aplicabilidade e o alcance da análise. Este conjunto de procedimentos é conhecido como validação.</p>
+<p></p>
+<p>O experimento utilizado na validação das medidas consistiu na determinação da trajetória e da velocidade máxima de um pêndulo solto a diferentes alturas. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1a</a> apresentamos uma ilustração esquemática. O pêndulo foi elevado a alturas conhecidas para estimação dos parâmetros. A equação de ajuste da projeção da trajetória no eixo <i>x</i> foi</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm01">
+<a name="frm01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/c2be093f761ce913f7f2cffe3c19291a78756ddc.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>na qual <i>Xo</i> e <i>tc </i>são parâmetros de ajuste que transladam a curva teórica para os valores iniciais medidos pelo CvMob, <i>A</i> é a amplitude e <i>w</i> o meio período. Para a validação do instrumento como estimador da velocidade utilizou-se a expressão teórica da velocidade máxima atingida em um pêndulo simples</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm02">
+<a name="frm02"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/5c8298bf1301dfead6580c88633c50ac14aeada2.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>h</i> representa a altura inicial do pêndulo e <i>g</i>, a aceleração da gravidade. A altura inicial <i>h</i> foi medida com o auxílio de um laser que, alinhado com a linha do pêndulo e os marcadores de altura no anteparo, faz com que o erro na configuração inicial seja menor que o diâmetro da projeção do feixe no anteparo (~2 mm). O pêndulo foi solto rompendo-se o fio de nylon que o prende a um suporte.</p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Como a liberação do pêndulo pode se tornar outra fonte de erros, o fio de nylon foi queimado para provocar o rompimento. Isto garantiu que a velocidade inicial da esfera massiva presa ao pêndulo fosse zero, uma vez que não existiu interação direta do experimentador com ela. A massa do pêndulo utilizado foi muito maior que a massa do fio de nylon, fazendo com que o aumento de massa do sistema devido ao nylon seja desprezível. Uma vez solto, o movimento foi filmado por dois períodos consecutivos, o que produz aproximadamente de 260 pontos medidos de trajetória, de acordo com as especificações da câmera e pêndulo.</p>
+<p></p>
+<p>As especificações do pêndulo foram: uma esfera de ferro com 7,52 cm de diâmetro equatorial, 670 g de massa presa por um fio com 3,00 m. A câmera utilizada foi uma Casio FX com uma resolução de filmagem de 640 x 480 pixels capturados a 30 fps, a partir de uma lente com distância focal de 35 mm.</p>
+<p></p>
+<p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a>, há um exemplo de tela do programa CvMob em um procedimento de medida. Os dados são capturados e exportados para uma planilha de cálculo de onde os valores da trajetória e da velocidade máxima são extraídos.</p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A precisão na aferição das medidas foi estimada em dois níveis: repetibilidade e precisão intermediária [15]. Foram utilizados três valores de altura inicial (baixo, médio e alto) para determinar a faixa de velocidade. Para aferir a repetibilidade foram executadas 27 duplicatas, 9 para cada faixa de velocidade. Para aferir a precisão intermediária foram executadas 24 duplicatas, ou seja, 8 duplicatas por faixa de velocidade.<span class="ref footnote"><sup class="xref">2</sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">2</strong>
+         Com exceção da altura inicial média da primeira aferição, que por problemas na captura de dois vídeos foi avaliada apenas 8 vezes.
+      </span></span></span> As aferições foram realizadas em dias diferentes, cada vez com uma equipe distinta, somando um total de 51 vídeos registrados. O diâmetro do pêndulo foi utilizado como escala de calibração nos vídeos.</p>
+<p></p>
+<p>
+      <b>4. Resultados da validação</b>
+    </p>
+<p></p>
+<p>Os vídeos gerados em cada repetição x aferição foram analisados com o programa CvMob e as medidas de trajetória e velocidade máxima comparadas com modelos teóricos.</p>
+<p></p>
+<p>
+      <b>4.1. Trajetória do pêndulo</b>
+    </p>
+<p></p>
+<p>A medida da trajetória, além do respectivo ajuste teórico de um dos vídeos estão na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>. Nota-se que a curva teórica passa por todos os pontos medidos. O ajuste dos dados ao modelo teórico (1) por mínimos quadrados resulta num coeficiente de correlação de Pearson de <i>R</i><sup>2</sup> = 0,99995 e a soma dos quadrados dos resíduos Υ = 2,066 x 10<sup> - 4</sup> m, o que leva a um desvio padrão do ajuste (DPA) de 8,97 x 10<sup> - 4</sup> m (~0.9 mm). O mesmo procedimento foi executado para todos os 51 vídeos, sendo obtido o valor do DPA para cada um deles. O valor máximo do DPA encontrado no conjunto de 51 vídeos analisados foi de 8,80 x 10<sup> - 3</sup> m.</p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a> são apresentados os resultados dos ajustes da trajetória para três valores de altura inicial nas duas aferições. Esses valores representam o erro padrão mínimo, o padrão médio e o padrão máximo, obtidos a partir da análise dos 51 vídeos.</p>
+<div class="row table" id="tab01">
+<a name="tab01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a> são indicados os valores da altura inicial <i>Ho</i>, do período 2<i>w</i>, do DPA e da aceleração da gravidade estimada mediante a Eq. (3)</p>
+<p></p>
+<p>
+      <div class="row formula" id="efrm03">
+<a name="frm03"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/f27dbe9ce6d71cc889736345f9729a3a4fd958e6.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>l </i>é o comprimento do fio que vai do ponto de apoio do pêndulo até o centro da esfera (3,00 m para 1ª aferição e 2,9 m para 2ª.</p>
+<p></p>
+<p>Os resultados apresentados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a> indicam uma pequena tendência de aumento do DPA com o aumento da altura inicial. Nota-se também que os erros para a segunda aferição foram maiores do que na primeira. Isso se deve às condições de luminosidade em que foram capturados os vídeos na segunda aferição. Na ocasião existia menos luz e as filmagens apresentaram um efeito de granularidade maior do que na primeira.</p>
+<p></p>
+<p>Para um melhor entendimento da origem das flutuações nas medidas, foi realizada uma avaliação de como os resíduos oscilam em torno da curva teórica ajustada. No gráfico da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a>, pode-se notar que os resíduos calculados a partir do vídeo sem nenhum tratamento (normal), apresentam dois pontos de descontinuidade em 3,8 e 7,7 s. Observando detalhadamente a filmagem, nota-se que no método de captura da câmera existe um mecanismo de interpolação de quadros. Para manter a taxa de captura constante a câmera inclui, em alguns momentos, uma cópia do quadro anterior. É ocasionada uma translação da curva e consequentemente um aumento no erro do ajuste. No exemplo da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a>, o vídeo foi tratado eliminando-se os dois quadros copiados e repetiu-se o procedimento de medida e estimativa do erro. Com essa alteração, as descontinuidades desapareceram e o erro diminuiu de 0,0039 m para 0,0030 m. Mesmo conhecendo a origem de parte do erro optou-se por manter o método sem tratamento, uma vez que o procedimento de busca e eliminação de quadros repetidos é complexo. Além disso, o objetivo proposto foi avaliar a precisão do método e do instrumento com todos os seus artefatos.</p>
+<div class="row fig" id="fig04">
+<a name="fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para avaliar a influência da flutuação na luminosidade da sala no algoritmo de busca para rastreamento do ponto, mediu-se as flutuações oriundas da trajetória de um ponto fixo no anteparo. Para todos os vídeos capturados, o desvio padrão das medidas não ultrapassou 0,0003 m no conjunto de medidas da primeira aferição e 0,0004 m na segunda, cerca de 10 vezes menor que o encontrado para pontos em movimento (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Tabela 1</a>). Desta forma, acredita-se que os erros estiveram relacionados aos seguintes fatores: atrito; deformação da imagem devido à lente da câmera; ruídos no circuito da câmera e às perdas devido ao processo de compactação da imagem.</p>
+<p></p>
+<p>
+      <b>4.2. Velocidade máxima do pêndulo</b>
+    </p>
+<p></p>
+<p>O segundo critério de validação do instrumento foi a comparação entre a velocidade máxima esperada pelo modelo teórico e a medida no instrumento.</p>
+<p></p>
+<p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab02"><span class="sci-ico-fileTable"></span>Tabela 2</a>, temos as médias dos valores medidos com seus respectivos valores teóricos e o desvio padrão experimental.</p>
+<div class="row table" id="tab02">
+<a name="tab02"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>Todos os desvios em relação à média apresentaram uma distribuição significativamente normal no teste de Kolmogorov Smirnov. Além disso, observou-se a comparação entre os valores médios com os teóricos, que evidenciam uma perfeita compatibilização, ao serem considerados os respectivos erros e desvios padrões.</p>
+<p></p>
+<p>Um importante fator no processo de validação é a linearidade das medidas. Os gráficos das <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Figs. 5</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig06"><span class="sci-ico-fileFigure"></span>6</a> mostram a correlação linear entre os valores medidos e os teóricos; desta, resultam correlações de <i>R</i><sup>2</sup> = 0,98 para primeira aferição e <i>R</i><sup>2</sup> = 0,9843 para a segunda com inclinações próximas a 1 (0,95 e 1,02) e interseções próximas a zero (0,04 e 0,02).</p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig06">
+<a name="fig06"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A sensibilidade do método foi definida pelos limites de detecção (LD) e de quantificação (LQ) [15]. O LD é a menor variação de velocidade que pode ser detectada pela técnica instrumental, enquanto o LQ é a mais baixa velocidade que pode ser quantificada. Os parâmetros da curva analítica LD e LQ podem ser observados na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab03"><span class="sci-ico-fileTable"></span>Tabela 3</a>.</p>
+<div class="row table" id="tab03">
+<a name="tab03"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>
+      <b>5. Conclusões</b>
+    </p>
+<p></p>
+<p>Uma margem de segurança de 5% abaixo dos limites regulatórios foi alcançada para todas as velocidades para as estimativas do LQ realizadas com 95% e 99% de confiança. Todas as faixas de velocidade apresentaram LD e LQ abaixo de 5% dos limites regulatórios para um nível de 99,9% de confiança. Os valores de LD foram sempre menores que os valores de LQ, conforme o esperado.</p>
+<p></p>
+<p>Após a análise dos resultados obtidos, verifica-se que a utilização da tecnologia computacional validada, constitui um meio facilitador da análise do movimento, a partir de dados objetivos e precisos. Trata-se de um projeto que utiliza tecnologia de fácil transferência, uma vez que o software utilizado é de licença Livre. A partir destes resultados, se espera a popularização do uso do CvMob, o incentivo às pesquisas sobre motricidade humana ou animal e uma contribuição direta à democratização das tecnologias.</p>
+<p></p>
+<p>Recebido em 11/12/2012 </p>
+<p></p>
+<p> Aceito em 21/3/2013 </p>
+<p></p>
+<p> Publicado em 26/9/2013</p>
+<p></p>
+<p>Copyright by the Sociedade Brasileira de Física. Printed in Brazil. </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:vivasm@gmail.com">vivasm@gmail.com</a>. </div>
+      </li>
+      <li>
+        <span class="xref big">2</span>
+        <div> Com exceção da altura inicial média da primeira aferição, que por problemas na captura de dois vídeos foi avaliada apenas 8 vezes.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] K. Berg, S. Wood-Dauphinee, J.I. Williams and D. Gayton, Physiotherapy   Canada <b>41</b>, 304 (1989).</div></li>
+<li><div>[2] M.A. Hughes and M.L. Schenkman, J. Rehabil. Res. Dev. <b>33</b>, 409 (1996).</div></li>
+<li><div>[3] H.C. Turner, R.M. Yate, G.E. Giddins and A.W. Miles, Proc Inst Mech Eng H. <b>218</b>, 461 (2004).</div></li>
+<li><div>[4] C. Papaxanthis, V. Dubost and T. Pozzo, Neuroscience <b>117</b>, 779   (2003).</div></li>
+<li><div>[5] F. Mourey, T. Pozzo, I. Rouhier-Marcer and J.P Didier, Age Ageing <b>27</b>, 137 (1998).</div></li>
+<li><div>[6] V. Dubost, O. Beauchet, P. Manckoundia, F. Herrmann and F. Mourey, Phys.   Ther. <b>85</b>, 404 (2005).</div></li>
+<li><div>[7] D. Giansanti, G. Maccioni, F. Bembenuti and V. Macellari, Med. Bio. Eng. Comp. <b>45</b>, 969 (2007).</div></li>
+<li><div>[8] P. Dehail, E. Bestaven, F. Muller, A. Mallet, B. Robert, I.   Bourdel-Marchasson and J. Petit, Clin. Biomech. (Bristol, Avon) <b>22</b>(10), 1096 (2007).</div></li>
+<li><div>[9] T. Yamada and S. Demura, Percept. Mot. Skills <b>101</b>, 695 (2005).</div></li>
+<li><div>[10] F. Goulart and J. Valls-Solé, Exp. Brain Res. <b>139</b>, 391 (2001).</div></li>
+<li><div>[11] W.G. Janssen, J.B. Bussmann, H.L. Horemans and H.J. Stam, Med. Biol. Eng.   Comput. <b>43</b>, 265 (2005).</div></li>
+<li><div>[12] http://opencv.willowgarage.com/wiki<br><a href="http://http://opencv.willowgarage.com/wiki" target="_blank">» link</a>
+</div></li>
+<li><div>[13] http://gingacdn.lavid.ufpb.br/projects/ginga-j<br><a href="http://http://gingacdn.lavid.ufpb.br/projects/ginga-j" target="_blank">» link</a>
+</div></li>
+<li><div>[14] http://cvmob.sourceforge.net<br><a href="http://http://cvmob.sourceforge.net" target="_blank">» link</a>
+</div></li>
+<li><div>[15] F.A.L. Ribeiro, M.M.C. Ferreira, S.C. Morano, L.R Silva and R.P. Schneider,   Quím. Nova <b>31</b>, 164 (2008).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        vivasm@gmail.com. 
+      
+        2
+         Com exceção da altura inicial média da primeira aferição, que por problemas na captura de dois vídeos foi avaliada apenas 8 vezes.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>31 Out 2013</li>
+<li>
+<strong>Data do Fascículo</strong><br>Set 2013</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>11 Dez 2012</li>
+<li>
+<strong>Aceito</strong><br>21 Mar 2013</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Norberto Peña </strong><br><div>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Faculdade de Ciências da Saúde ,  Departamento de Fisioterapia,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Bruno Cecílio Credidio </strong><br><div>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Lorena Peixoto Nogueira Rodriguez Martinez Salles Corrêa </strong><br><div>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Lucas Gabriel Souza França </strong><br><div>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Marcelo do Vale Cunha </strong><br><div>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Marcos Cavalcanti de Sousa </strong><br><div>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> João Paulo Bomfim Cruz Vieira </strong><br><div>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> José Garcia Vivas Miranda </strong><br><div>
+          ,  Salvador,  
+          ,  Bahia,  
+        ,  Universidade Federal da Bahia,  Instituto de Física ,  Laboratório de Física Nuclear Aplicada,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (6)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (3)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (3)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemefrm03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/7ba5566eed0d13a64cf4cd2fab374be84f012299.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/7ba5566eed0d13a64cf4cd2fab374be84f012299.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/e714670f74f7e3de5e4068317c60d1e42821a641.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/e714670f74f7e3de5e4068317c60d1e42821a641.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/c4a8e18b7ee62885c61b4b1744a6b3a1503f76b5.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/c4a8e18b7ee62885c61b4b1744a6b3a1503f76b5.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/80299f964a0e3b5c9b04d98895cf231db530e24f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/80299f964a0e3b5c9b04d98895cf231db530e24f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/457f888259e899a12b38f7459287c2a057954c46.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/457f888259e899a12b38f7459287c2a057954c46.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/1cffc3bb932fe22923ac42327dca3d951f6690ba.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/1cffc3bb932fe22923ac42327dca3d951f6690ba.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/f9429484186fdf612fa41fcdaff5eb60e2797c7b.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/f9429484186fdf612fa41fcdaff5eb60e2797c7b.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/b57f3512847c9e6ab496af3ca38c5bf392db973b.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/b57f3512847c9e6ab496af3ca38c5bf392db973b.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/df85a8460b97ec0169ea56cc010244c69843cada.jpg" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/df85a8460b97ec0169ea56cc010244c69843cada.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/c2be093f761ce913f7f2cffe3c19291a78756ddc.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/c2be093f761ce913f7f2cffe3c19291a78756ddc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/5c8298bf1301dfead6580c88633c50ac14aeada2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/5c8298bf1301dfead6580c88633c50ac14aeada2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemefrm03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/f27dbe9ce6d71cc889736345f9729a3a4fd958e6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6bJZMVXRcw9ZZvx8qWKNytM/f27dbe9ce6d71cc889736345f9729a3a4fd958e6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Peña, Norberto et al. Instrumento livre para medidas de movimento. Revista Brasileira de Ensino de Física [online]. 2013, v. 35, n. 3 [Acessado CURRENTDATE] , 3505. Disponível em: &lt;https://doi.org/10.1590/S1806-11172013000300024&gt;. Epub 31 Out 2013. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172013000300024.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Instrumento livre para medidas de movimento&#34; &#34;Peña, Norberto&#34; &#34;Credidio, Bruno Cecílio&#34; &#34;Corrêa, Lorena Peixoto Nogueira Rodriguez Martinez Salles&#34; &#34;França, Lucas Gabriel Souza&#34; &#34;Cunha, Marcelo do Vale&#34; &#34;Sousa, Marcos Cavalcanti de&#34; &#34;Vieira, João Paulo Bomfim Cruz&#34; &#34;Miranda, José Garcia Vivas&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Instrumento livre para medidas de movimento&#34; &#34;Peña, Norberto&#34; &#34;Credidio, Bruno Cecílio&#34; &#34;Corrêa, Lorena Peixoto Nogueira Rodriguez Martinez Salles&#34; &#34;França, Lucas Gabriel Souza&#34; &#34;Cunha, Marcelo do Vale&#34; &#34;Sousa, Marcos Cavalcanti de&#34; &#34;Vieira, João Paulo Bomfim Cruz&#34; &#34;Miranda, José Garcia Vivas&#34; &#34;2013&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/6bJZMVXRcw9ZZvx8qWKNytM/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172013000300024&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172013000300024" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172013000300024">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172013000300024" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172013000300024">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172013000300024"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172013000300024" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172013000300024">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000300024" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Instrumento livre para medidas de movimento
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172013000300024">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

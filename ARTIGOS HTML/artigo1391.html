@@ -1,0 +1,3593 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno"/>
+<meta property="og:description" content="Resumo No presente artigo, apresenta-se o método experimental de determinação da constante de..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Oliveira, Ivanor N. de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual do Sudoeste da Bahia">
+        
+        <meta name="citation_author" content="Ramos, Jorge A.P.">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual do Sudoeste da Bahia">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-9868-1235">
+        <meta name="citation_author" content="Silva, Wilton L.">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal de Educação Ciência e Tecnologia da Bahia">
+        
+        <meta name="citation_author" content="Chaves, Valteni D.">
+        
+            <meta name="citation_author_affiliation" content="Instituto Federal Baiano">
+        
+        <meta name="citation_author" content="Melo, Clênia A.O. de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual do Sudoeste da Bahia">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="42"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/1806-9126-RBEF-2019-0105"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Resumo No presente artigo, apresenta-se o método experimental de determinação da constante de Planck, uma das constantes físicas fundamentais, através do estudo das propriedades quânticas e ondulatórias do diodo emissor de luz (LED) numa maquete experimental automatizada, que contém um circuito eletrônico ligado a um computador utilizando o protocolo USB com o auxílio da plataforma Arduino. Os LEDs têm encontrado diversas aplicações, por exemplo: na iluminação doméstica, pública, nos semáforos, nos monitores de TV, computadores, para ler discos de CD e DVD em unidades de computador e em unidades de console de jogos, ou para transmitir sinais de controles remotos para equipamentos eletrônicos. O LED é uma ligação vital entre eletrônica e fotônica os lasers de semicondutor baseados em LEDs enviam sinais ópticos modulados através de fibras ópticas, atendendo à demanda cada vez maior da telecomunicação de banda larga e Internet. A automatização das medições e da elaboração dos dados dos experimentos de Física permite aos alunos aprofundar o conhecimento de métodos e técnicas do experimento, estudar aparelhos de pesquisa científica, dominar diferentes métodos de pesquisas experimentais, dominar métodos matemáticos e gráficos dos resultados obtidos e também a avaliação das medições realizadas."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2019-09-09"></meta>
+<meta name="citation_keywords" content="Ensino de Física"></meta><meta name="citation_keywords" content="Laboratório remoto"></meta><meta name="citation_keywords" content="Plataforma Arduíno"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2020.v42/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2020.v42/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172020000100401 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 42 <span class="_separator"> • </span>2020</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1806-9126-RBEF-2019-0105" class="_doi" target="_blank">https://doi.org/10.1590/1806-9126-RBEF-2019-0105</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0105"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by 4.0 "></span>Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Study of properties of Light Emission Diode (LED) for the determination of the Planck constant in a automated device with Arduino platform aid</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Ivanor N. de Oliveira </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Jorge A.P. Ramos </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil<div class="corresp">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:jorge@uesb.edu.br">jorge@uesb.edu.br</a>.</div>
+<a href="http://orcid.org/0000-0001-9868-1235" class="btnContribLinks orcid">http://orcid.org/0000-0001-9868-1235</a>
+</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Wilton L. Silva </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>Instituto Federal de Educação Ciência e Tecnologia da Bahia, Salvador, BA, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor4" class="dropdown-toggle" data-toggle="dropdown"><span> Valteni D. Chaves </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor4">
+<strong></strong>Instituto Federal Baiano, Salvador, BA, Brasil</ul></span><span class="dropdown"><a id="contribGroupTutor5" class="dropdown-toggle" data-toggle="dropdown"><span> Clênia A.O. de Melo </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor5">
+<strong></strong>Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumo">
+<h1 class="articleSectionTitle">Resumo</h1>
+<p>No presente artigo, apresenta-se o método experimental de determinação da constante de Planck, uma das constantes físicas fundamentais, através do estudo das propriedades quânticas e ondulatórias do diodo emissor de luz (LED) numa maquete experimental automatizada, que contém um circuito eletrônico ligado a um computador utilizando o protocolo USB com o auxílio da plataforma Arduino. Os LEDs têm encontrado diversas aplicações, por exemplo: na iluminação doméstica, pública, nos semáforos, nos monitores de TV, computadores, para ler discos de CD e DVD em unidades de computador e em unidades de console de jogos, ou para transmitir sinais de controles remotos para equipamentos eletrônicos. O LED é uma ligação vital entre eletrônica e fotônica os lasers de semicondutor baseados em LEDs enviam sinais ópticos modulados através de fibras ópticas, atendendo à demanda cada vez maior da telecomunicação de banda larga e Internet. A automatização das medições e da elaboração dos dados dos experimentos de Física permite aos alunos aprofundar o conhecimento de métodos e técnicas do experimento, estudar aparelhos de pesquisa científica, dominar diferentes métodos de pesquisas experimentais, dominar métodos matemáticos e gráficos dos resultados obtidos e também a avaliação das medições realizadas.</p>
+<p><strong>Palavras-chave:</strong><br>Ensino de Física; Laboratório remoto; Plataforma Arduíno</p>
+</div>
+<div class="articleSection" data-anchor="Abstract">
+<h1 class="articleSectionTitle">Abstract</h1>
+<p>In the present article, the experimental method of determination of Planck's constant, one of the fundamental physical constants, is presented by studying the quantum and wave properties of the light emitting diode (LED), in an automated experimental model which contains an electronic circuit connected to a computer using the USB protocol with the help of the Arduino platform. LEDs have found a variety of applications, for example: in home, public, in-house lighting, TV monitors, computers, to read CD and DVD discs in computer units and game console units, or to transmit signals from remote controls to electronic equipment. LED is a vital link between electronics and photonics: LED-based semiconductor lasers send modulated optical signals through fiber optics, catering to the ever-increasing demand for broadband and Internet telecommunication. The automation of measurements and data processing of Physics experiments allows students to deepen their knowledge of methods and techniques of the experiment, to study scientific research apparatus, to master different experimental research methods, to master mathematical methods and graphs of the results obtained, and also the evaluation of the measurements made.</p>
+<p><strong>Keywords:</strong><br>Physics Teaching; Remote laboratory; Arduino Platform</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h1 class="articleSectionTitle">1. Introdução</h1>
+      <p>A descoberta do diodo emissor de luz (LED) está relacionada a dois nomes: Henry Joseph Round no Laboratório de Marconi observou o fenômeno de eletroluminescência como um fenômeno em 1907 usando um cristal de carboneto de silício e um detector <span class="ref"><strong class="xref xrefblue">[1]</strong><span class="refCtt closed"><span>[1] H.J. Round, The Electrical World 49, 19 (1907).</span></span></span>, <span class="ref"><strong class="xref xrefblue">[2]</strong><span class="refCtt closed"><span>[2] The Road to the Transistor, disponível em: https://www.jmargolin.com/history/trans.htm, acessado em 04/05/2017.</span><br><a href="https://www.jmargolin.com/history/trans.htm" target="_blank">https://www.jmargolin.com/history/trans....
+            </a></span></span>, independentemente, o cientista Russo, Oleg Vladimirovitch Losev, descobriu o LED <span class="ref"><strong class="xref xrefblue">[3]</strong><span class="refCtt closed"><span>[3] O.V. Losev, Philosophical Magazine 5, 39 (1928).</span></span></span>. Em seus artigos científicos, publicados entre 1924 e 1930, Oleg V. Losev forneceu um estudo abrangente sobre o LED e delineou as suas aplicações. As suas pesquisas foram publicadas em revistas científicas da União Soviética, Alemanha e Inglaterra, entretanto elas não foram postas em prática durante várias décadas <span class="ref"><strong class="xref xrefblue">[4]</strong><span class="refCtt closed"><span>[4] T.H. Lee, The design of CMOS radio-frequency integrated circuits, (Cambridge University Press, Cambridge, 2003).</span></span></span>, <span class="ref"><strong class="xref xrefblue">[5]</strong><span class="refCtt closed"><span>[5] N. Zheludev, Nature Photonics 1, 4 (2007).</span></span></span>. Ele entendeu a natureza “fria” (não térmica) da emissão do LED, mediu seu atual limiar de emissão de luz, reconheceu que sua emissão está relacionada à ação de diodo e mediu, detalhadamente, a dependência tensão-corrente característica desse dispositivo eletrônico, mostrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Figura 1</a>
+				<span class="ref"><strong class="xref xrefblue">[3]</strong><span class="refCtt closed"><span>[3] O.V. Losev, Philosophical Magazine 5, 39 (1928).</span></span></span>.</p>
+      <div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 1</strong><br>
+          Gráfico das características I x V de um detector de carbeto de silício indicando limiar da emissão de luz <span class="ref"><strong class="xref xrefblue">[3]</strong><span class="refCtt closed"><span>[3] O.V. Losev, Philosophical Magazine 5, 39 (1928).</span></span></span>.
+        <br>
+</div>
+</div>
+      <p>Chama a atenção o fato de que Oleg Losev, um jovem técnico sem titulações científicas, conhecia os desenvolvimentos contemporâneos em Física <span class="ref"><strong class="xref xrefblue">[5]</strong><span class="refCtt closed"><span>[5] N. Zheludev, Nature Photonics 1, 4 (2007).</span></span></span>. Ele usou a teoria quântica de Einstein para explicar a ação do LED e chamou o processo de emissão de “efeito fotoelétrico inverso”. Além disso, ele propôs uma fórmula <span class="ref"><strong class="xref xrefblue">[6]</strong><span class="refCtt closed"><span>[6] O.V. Losev, Physik. Zeitschr 30, (1929).</span></span></span> relativa à queda de tensão no contato do diodo, U, a carga do elétron <i>e</i>, e a frequência de emissão da luz, ν, através da constante de Planck, <i>h</i>:</p>
+      <div class="row formula" id="eeq1">
+<a name="eq1"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(1)</span>
+        <math display="block" id="m1">
+          <mrow>
+            <mi>ν</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>e</mi>
+                <mi>U</mi>
+              </mrow>
+              <mi>h</mi>
+            </mfrac>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>A fórmula proposta por Oleg Losev, em 1929, resulta da igualdade entre as expressões quantitativas clássica e quântica da energia:</p>
+      <div class="row formula" id="eeq2">
+<a name="eq2"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(2)</span>
+        <math display="block" id="m2">
+          <mrow>
+            <mi>e</mi>
+            <msub>
+              <mi>U</mi>
+              <mi>o</mi>
+            </msub>
+            <mo>=</mo>
+            <mi>h</mi>
+            <mi>ν</mi>
+          </mrow>
+        </math>
+      </div></div>
+</div>
+      <p>onde <math><mrow><msub><mi>U</mi><mi>o</mi></msub></mrow></math> é a tensão limiar de emissão do LED.</p>
+      <p>No presente artigo, apresenta-se o método experimental para determinação da constante de Planck, uma das constantes físicas fundamentais, através do estudo das propriedades quânticas e ondulatórias do diodo emissor de luz (LED), numa maquete experimental automatizada que contém um circuito eletrônico ligado a um computador utilizando o protocolo USB com o auxílio da plataforma Arduíno. Esse componente eletrônico desempenha um papel importante na tecnologia atual. As suas aplicações estão presentes em diversas esferas da vida cotidiana, no trabalho, na vida doméstica e em ambientes públicos. Para exemplificar, vamos citar apenas algumas das suas aplicações. Ele é usado na iluminação doméstica, nos semáforos, na iluminação pública, nos monitores de TV, computadores, para ler discos de CD e DVD em unidades de computador e em unidades de console de jogos, ou para transmitir sinais de controles remotos para equipamentos eletrônicos. O mais importante, no entanto, é que o LED é uma ligação vital entre eletrônica e fotônica <span class="ref"><strong class="xref xrefblue">[5]</strong><span class="refCtt closed"><span>[5] N. Zheludev, Nature Photonics 1, 4 (2007).</span></span></span>: os lasers de semicondutor baseados em LEDs enviam sinais ópticos modulados através de fibras ópticas, atendendo à demanda cada vez maior da telecomunicação de banda larga e Internet.</p>
+      <p>A automatização das medições e da elaboração dos dados dos experimentos de Física tem como objetivo, em primeiro lugar, garantir aos estudantes do Curso de Licenciatura em Física da UESB, modalidade a distância, o acesso aos laboratórios remotos de Física Geral via Internet, mas também a sua utilização pelos estudantes do curso presencial de Física, o que permite aos alunos complementar as aulas teóricas, aprofundar o conhecimento de métodos e técnicas do experimento, estudar aparelhos de pesquisa científica e a familiarização com os mesmos, dominar diferentes métodos de pesquisas experimentais, dominar métodos matemáticos e gráficos dos resultados obtidos e também a avaliação das medições realizadas.</p>
+    
+      <h1 class="articleSectionTitle">2. O desenvolvimento dos primeiros LEDs coloridos</h1>
+      <p>O primeiro LED de espectro visível (vermelho) foi desenvolvido em 1962 por Nick Holonyak Jr., enquanto trabalhava na General Electric. Holonyak relatou, pela primeira vez, seu LED na revista Applied Physics Letters em 1 de dezembro de 1962 <span class="ref"><strong class="xref xrefblue">[7]</strong><span class="refCtt closed"><span>[7] H. Júnior e N. Bevacqua, Appl. Phys. Lett. 1, 4 (1962).</span></span></span>, <span class="ref"><strong class="xref xrefblue">[8]</strong><span class="refCtt closed"><span>[8] H. Wolinsky, U. I.'s Holonyak out to take some of Ediso's luster, (Chicago Sun-Times, Chicago, 2005).</span></span></span>. M. George Craford <span class="ref"><strong class="xref xrefblue">[9]</strong><span class="refCtt closed"><span>[9] T.P. Perry, IEEE Spectrum 32, 2 (1995).</span></span></span> um ex-aluno de pós-graduação de Holonyak, inventou o primeiro LED amarelo e melhorou o brilho dos LEDs vermelho e vermelho-alaranjado por um fator de dez em 1972 <span class="ref"><strong class="xref xrefblue">[10]</strong><span class="refCtt closed"><span>[10] Brief Biography Holonyak, Craford, Dupuis, disponível em https://www.simplyled.co.uk/blog/a-brief-history-of-the-led/, acessado em 18/04/2019.</span><br><a href="https://www.simplyled.co.uk/blog/a-brief-history-of-the-led/" target="_blank">https://www.simplyled.co.uk/blog/a-brief...
+            </a></span></span>. Em 1976, T. P. Pearsall criou os primeiros LEDs de alta luminosidade e alta eficiência para telecomunicações de fibra óptica, inventando novos materiais semicondutores especificamente adaptados para comprimentos de onda de transmissão de fibra óptica <span class="ref"><strong class="xref xrefblue">[11]</strong><span class="refCtt closed"><span>[11] T.S.M. Pearsall, Appl. Phys. Lett. 28, 9 (1976).</span></span></span>.</p>
+      
+        <h2>2.1. O LED azul</h2>
+        <p>Para revolucionar a tecnologia da iluminação ainda faltava desenvolver o LED azul. Como se sabe, somente a tríade formada pelas cores vermelha, verde e azul pode produzir a luz branca. Entretanto, a criação do diodo emissor de luz azul permaneceu um desafio por décadas, tanto para a comunidade científica, como para a indústria eletrônica. Os trabalhos desenvolvidos pelos cientistas japoneses Isamu Akasaki, Hiroshi Amano e Shuji Nakamura culminaram com a invenção do LED azul. Nos anos 1990 os seus trabalhos possibilitaram a produção de LEDs azuis eficientes, com estruturas complexas. Em 2014 eles receberam o Prêmio Nobel de Física pelo desenvolvimento do LED azul <span class="ref"><strong class="xref xrefblue">[12]</strong><span class="refCtt closed"><span>[12] The Nobel Prize in Physics 2014, disponível em https://kva.se/nobelphysics2014.</span><br><a href="https://kva.se/nobelphysics2014" target="_blank">https://kva.se/nobelphysics2014...
+            </a></span></span>.</p>
+      
+    
+      <h1 class="articleSectionTitle">3. O princípio de funcionamento do LED</h1>
+      <p>O princípio de funcionamento do LED (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Figura 2</a>) consiste da transformação da energia elétrica em radiação, que pode pertencer ao espectro visível ou infravermelho da luz.</p>
+      <div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 2</strong><br>
+          Partes constituintes do LED.
+        <br>
+</div>
+</div>
+      <p>A estrutura do LED é uma transição elétron-buraco, por isso, os mecanismos de passagem da corrente através de um diodo de semicondutor e de um LED são iguais. Os materiais da transição elétron-buraco da estrutura do LED são escolhidos de forma que os elétrons livres na região-n (emissor) possuem menor energia que na região-p (base). Na ausência de um campo elétrico externo, a difusão dos principais portadores de carga através da transição p-n (dos elétrons da região-n para a região-p e dos buracos em direção contrária)é impedida pelo campo elétrico interno denominado campo de contato. A intensidade <math><mrow><msub><mi>E</mi><mi>c</mi></msub></mrow></math> desse campo, a largura <i>d</i> da transição p-n e a diferença de potencial de contato <math><mrow><msub><mi>U</mi><mi>c</mi></msub></mrow></math> estão ligadas pela relação: <math><mrow><msub><mi>E</mi><mi>c</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>U</mi><mi>c</mi></msub></mrow><mi>d</mi></mfrac></mrow></math>. Devido ao campo elétrico do contato, para a passagem de um elétron da região-n para a região-p e de um buraco em direção oposta, é necessário realizar trabalho igual ao produto da carga do elétron pela diferença de potencial de contato, ou seja, é necessário superar a barreira de potencial <i>eU<sub>c</sub></i> (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Figura 3</a>).</p>
+      <div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 3</strong><br>
+          Campo elétrico interno E e barreira potencial de contato <i>eU<sub>c</sub></i>.
+        <br>
+</div>
+</div>
+      <p>Aplicando-se uma diferença de potencial <i>U</i>, diretamente polarizada, aos terminais do LED, a intensidade do campo elétrico externo E tem sentido contrário à intensidade do campo elétrico de contato <math><mrow><msub><mi>E</mi><mi>c</mi></msub></mrow></math>. Por isso, a barreira de potencial na transição p-n diminui e torna-se igual a <math><mrow><mi>e</mi><mo stretchy="false">(</mo><msub><mi>U</mi><mi>c</mi></msub><mo>−</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></math> e parte dos portadores principais de carga tem a possibilidade de superar a transição p-n (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf4"><span class="sci-ico-fileFigure"></span>Figura 4</a>).</p>
+      <div class="row fig" id="f4">
+<a name="f4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 4</strong><br>
+          Campos elétricos externo E, interno <math><mrow><msub><mi>E</mi><mi>c</mi></msub></mrow></math> e barreira potencial na transição p-n.
+        <br>
+</div>
+</div>
+      <p>Com isso, ocorre a injeção dos elétrons e buracos nas regiões p e n, correspondentemente. Quando o valor da tensão externa U torna-se próximo de <math><mrow><msub><mi>U</mi><mi>c</mi></msub></mrow></math>, a barreira de potencial <math><mrow><mi>e</mi><mo stretchy="false">(</mo><msub><mi>U</mi><mi>c</mi></msub><mo>−</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></math> e sua espessura <i>d</i> tendem a zero. Então, os elétrons e buracos vão ao encontro uns dos outros sem impedimento e a corrente elétrica cresce abruptamente. Ela é limitada apenas pela resistência elétrica intrínseca do diodo de semicondutor, o que leva a curva <i>I</i> vs <i>U</i> a possuir uma contribuição aproximadamente linear, a partir do momento em que o elétron adquire quantidade de energia necessária para efetuar a transição designada por <math><msub><mi>E</mi><mi>g</mi></msub></math>
+				<span class="ref"><strong class="xref xrefblue">[13]</strong><span class="refCtt closed"><span>[13] D. Halliday, R. Resnick e K.S. Krane, Física (Ed. LTC, Rio de Janeiro, 2004), v. 4.</span></span></span>, <span class="ref"><strong class="xref xrefblue">[14]</strong><span class="refCtt closed"><span>[14] S.L. de Moura, F.I da Silva, F.C.M. da Silva e J.A.V. dos Santos, Química Nova na Escola 33, 4 (2011).</span></span></span>. No LED, a energia da fonte de corrente elétrica, gasta para superar a barreira potencial <i>eU<sub>c</sub></i>, para cada portador, transforma-se em energia luminosa. Por isso, pode-se escrever:</p>
+      <div class="row formula" id="eeq3">
+<a name="eq3"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(3)</span>
+        <math display="block" id="m3">
+          <mi>e</mi>
+          <msub>
+            <mi>U</mi>
+            <mi>c</mi>
+          </msub>
+          <mo>=</mo>
+          <mi>h</mi>
+          <mi>ν</mi>
+        </math>
+      </div></div>
+</div>
+      <p>onde, a frequência da radiação do LED está ligada com o comprimento de onda, <math><mi>ν</mi><mo>=</mo><mi>c</mi><mo>/</mo><mi>λ</mi></math>, onde <i>c</i> é a velocidade da luz no vácuo. O comprimento de onda λ pode ser medido com o auxílio de uma rede de difração.</p>
+    
+      <h1 class="articleSectionTitle">4. Variantes de montagem da maquete experimental automatizada para a determinação da constante de Planck</h1>
+      <p>Para a determinação da constante de Planck, são conhecidas duas variantes de montagens da maquete experimental.</p>
+      
+        <h2>4.1. Primeira variante de montagem da maquete experimental</h2>
+        <p>A primeira variante de montagem é dada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a>, constituída por uma base na qual são instalados dois suportes: um contém uma régua graduada com zero central, onde se tem um LED ligado ao circuito eletrônico da plataforma Arduíno, que se comunica com o computador via USB; o outro suporte contém uma rede de difração unidimensional de 1000 linhas por mm. A rede de difração unidimensional é composta por transparências paralelas para seções de luz da mesma largura, que estão localizadas no mesmo plano. As áreas transparentes são separadas por lacunas opacas. Com a ajuda dessas redes, são feitas observações na luz transmitida. O padrão de difração na rede é o resultado da interferência mútua de ondas provenientes de todas as fendas. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a>, mostra-se, com o auxílio da rede de difração, um dos máximos secundários simétricos da luz emitida pelo LED vermelho.</p>
+        <div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 5</strong><br>
+            Maquete experimental para a determinação da constante de Planck - primeira variante de montagem.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>4.2. Observação do espectro de difração com a primeira variante da maquete experimental</h2>
+        <p>Como mostra, esquematicamente, a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>, a observação do espectro de difração da luz, nesse caso, é feita olhando-se diretamente através da rede de difração na direção da tela (ou da régua graduada) da maquete com o ambiente laboratorial escurecido. Assim é observado o espectro de difração sobre a tela ou sobre uma régua graduada com zero central, onde os máximos secundários de cada ordem se encontram em posições simétricas em relação ao máximo principal.</p>
+        <div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 6</strong><br>
+            Esquema óptico de observação do espectro de difração da emissão do LED - primeira variante de montagem da maquete.
+          <br>
+</div>
+</div>
+      
+      
+        <h2>4.3. Segunda variante de montagem da maquete experimental</h2>
+        <p>A segunda variante de montagem da maquete experimental permite a observação do espectro de difração da luz numa tela ou régua graduada (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Figura 7</a>) sem a necessidade de escurecer o ambiente. Ela difere da primeira pela posição do LED, agora no início da base da maquete e pela inserção de uma lente convergente antes da rede de difração. A vantagem dessa variante está na forma de observação do espectro de difração, que é visto diretamente na tela sem a necessidade de observação individual do espectro através da rede de difração (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Figura 6</a>) e em ambiente escuro.</p>
+        <div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 7</strong><br>
+            Esquema da segunda variante de montagem da maquete experimental.
+          <br>
+</div>
+</div>
+      
+    
+      <h1 class="articleSectionTitle">5. Maquete experimental construída para a determinação da constante de Planck</h1>
+      <p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a> mostra a segunda variante de montagem da maquete experimental.</p>
+      <div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 8</strong><br>
+          Segunda variante de montagem da maquete experimental para a determinação da constante de Planck.
+        <br>
+</div>
+</div>
+      
+        <h2>5.1. Esquema óptico da segunda variante da maquete experimental</h2>
+        <p>O esquema óptico da segunda variante da maquete experimental, dado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Figura 9</a>, mostra as posições de dois máximos secundários e do máximo principal do espectro de difração de um LED.</p>
+        <div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 9</strong><br>
+            Esquema óptico de observação do espectro de difração da emissão do LED - segunda variante de montagem da maquete.
+          <br>
+</div>
+</div>
+        <p>No presente trabalho nós escolhemos a segunda variante de montagem do experimento por permitir a observação do espectro de difração por todos os alunos no anteparo, com ambiente iluminado, ao passo que na primeira variante a observação do espectro é individual.</p>
+      
+      
+        <h2>5.2. Obtenção da fórmula de cálculo da constante de Planck</h2>
+        <p>De acordo com o conceito de energia como medida quantitativa das diferentes formas de movimento da matéria, podemos igualar as expressões quantitativas clássica e quântica da energia, obtidas na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq2"><span class="sci-ico-fileFormula"></span>equação 2</a>, e determinar o valor da constante de Planck <i>h</i>.</p>
+        <div class="row formula" id="eeq4">
+<a name="eq4"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(4)</span>
+          <math display="block" id="m4">
+            <mi>h</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>e</mi>
+                <msub>
+                  <mi>U</mi>
+                  <mi>o</mi>
+                </msub>
+              </mrow>
+              <mi>ν</mi>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+        <p>A expressão da frequência linear tem a seguinte forma:</p>
+        <div class="row formula" id="eeq5">
+<a name="eq5"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(5)</span>
+          <math display="block" id="m5">
+            <mi>ν</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mi>c</mi>
+              <mi>λ</mi>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+        <p>onde <i>c</i> é a velocidade da luz no vácuo.</p>
+        <p>Com o auxílio de uma rede de difração com período conhecido, pode-se determinar os comprimentos de onda da luz incidente medindo-se os ângulos de difração, segundo os quais são observados o máximo principal e um dos máximos secundários do espectro do LED. A fórmula de cálculo é a condição de formação dos máximos secundários:</p>
+        <div class="row formula" id="eeq6">
+<a name="eq6"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(6)</span>
+          <math display="block" id="m6">
+            <mi>d</mi>
+            <mi>sin</mi>
+            <mi>θ</mi>
+            <mo>=</mo>
+            <mi>m</mi>
+            <mi>λ</mi>
+            <mo>,</mo>
+            <mtext>
+						</mtext>
+            <mi>a</mi>
+            <mi>s</mi>
+            <mi>s</mi>
+            <mi>i</mi>
+            <mi>m</mi>
+            <mo>,</mo>
+            <mi>λ</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>d</mi>
+                <mi>sin</mi>
+                <msub>
+                  <mi>θ</mi>
+                  <mi>m</mi>
+                </msub>
+              </mrow>
+              <mi>m</mi>
+            </mfrac>
+            <mi>m</mi>
+            <mo>=</mo>
+            <mo>±</mo>
+            <mn>1</mn>
+            <mo>,</mo>
+            <mo>±</mo>
+            <mn>2</mn>
+            <mo>,</mo>
+            <mo>±</mo>
+            <mn>3</mn>
+            <mo>,</mo>
+            <mn>...</mn>
+          </math>
+        </div></div>
+</div>
+        <p>Utilizando as <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq5"><span class="sci-ico-fileFormula"></span>equações 5</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalSchemeeq6"><span class="sci-ico-fileFormula"></span>6</a>, obtemos:</p>
+        <div class="row formula" id="eeq7">
+<a name="eq7"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(7)</span>
+          <math display="block" id="m7">
+            <mi>h</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>e</mi>
+                <msub>
+                  <mi>U</mi>
+                  <mi>o</mi>
+                </msub>
+                <mi>d</mi>
+                <mi>sin</mi>
+                <msub>
+                  <mi>θ</mi>
+                  <mi>m</mi>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>m</mi>
+                <mi>c</mi>
+              </mrow>
+            </mfrac>
+          </math>
+        </div></div>
+</div>
+        <p>onde <i>d</i> é a constante de rede.</p>
+        <p>De acordo com o esquema óptico apresentado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Figura 9</a>, a tangente do ângulo θ é calculada pela fórmula <math><mi>tan</mi><mi>θ</mi><mo>=</mo><mfrac><mrow><msub><mi>y</mi><mi>m</mi></msub></mrow><mi>x</mi></mfrac></math>. O valor do ângulo θ é dado pela fórmula: <math><mi>θ</mi><mo>=</mo><mi>arctan</mi><mfrac><mrow><msub><mi>y</mi><mi>m</mi></msub></mrow><mi>x</mi></mfrac></math> , onde <math><msub><mi>y</mi><mi>m</mi></msub></math> é a distância medida, através da régua, desde a ordem zero de difração (máximo central) até a ordem de difração escolhida (máximo secundário); <i>x</i> é a distância entre a rede de difração e o ponto de luz criado na régua pela emissão do LED em ordem zero de difração.</p>
+      
+    
+      <h1 class="articleSectionTitle">6. Circuito eletrônico para a medição da dependência corrente x tensão de um elemento eletrônico de uma maquete experimental clássica</h1>
+      <p>Inicialmente, vamos analisar o esquema do circuito de medição dado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Figura 10</a>. A tensão de alimentação é dada em Ent.1 e Ent.2 e, como resultado, deve ser construído o gráfico da dependência da corrente através do dispositivo eletrônico (LED) versus tensão nele:</p>
+      <div class="row formula" id="eeq8">
+<a name="eq8"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(8)</span>
+        <math display="block" id="m8">
+          <msub>
+            <mi>I</mi>
+            <mi>D</mi>
+          </msub>
+          <mo>×</mo>
+          <msub>
+            <mi>U</mi>
+            <mi>D</mi>
+          </msub>
+        </math>
+      </div></div>
+</div>
+      <p>ou seja,</p>
+      <div class="row formula" id="eeq9">
+<a name="eq9"></a><div class="col-md-12"><div class="formula-container">
+        <span class="label">(9)</span>
+        <math display="block" id="m9">
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>U</mi>
+            <mrow>
+              <mi>s</mi>
+              <mi>a</mi>
+              <mi>i</mi>
+              <mi>d</mi>
+              <mi>a</mi>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mi>U</mi>
+            <mrow>
+              <mi>s</mi>
+              <mi>a</mi>
+              <mi>i</mi>
+              <mi>d</mi>
+              <mi>a</mi>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <msub>
+                <mi>R</mi>
+                <mn>1</mn>
+              </msub>
+            </mrow>
+          </mfrac>
+          <mo>×</mo>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>U</mi>
+            <mrow>
+              <mi>s</mi>
+              <mi>a</mi>
+              <mi>i</mi>
+              <mi>d</mi>
+              <mi>a</mi>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mi>U</mi>
+            <mrow>
+              <mi>s</mi>
+              <mi>a</mi>
+              <mi>i</mi>
+              <mi>d</mi>
+              <mi>a</mi>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </math>
+      </div></div>
+</div>
+      <div class="row fig" id="f10">
+<a name="f10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 10</strong><br>
+          Esquema do circuito de medição da dependência corrente x tensão.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">7. Estudo da dependência corrente/tensão do LED com o auxílio da plataforma Arduino</h1>
+      <p>O circuito da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Figura 10</a> não pode ser ligado diretamente ao Arduíno. Ele não possui um Circuito Conversor Digital - para - Analógico (CDA). Para realizar as medições com o auxílio do Arduino, o circuito de medição foi ampliado para que, no circuito resultante, os sinais de entrada possam ser formados por PWM + LPF (Modulação da largura de pulso + RC Filtro passa-baixa) <span class="ref"><strong class="xref xrefblue">[15]</strong><span class="refCtt closed"><span>[15] Measuring the IV Curve of Semiconductors Whith an Aduino disponível em https://www.instructables.com/id/Measuring-the-IV-Curve-of-Semiconductors-With-an-A/, acessado em 21/09/2018.</span><br><a href="https://www.instructables.com/id/Measuring-the-IV-Curve-of-Semiconductors-With-an-A/" target="_blank">https://www.instructables.com/id/Measuri...
+            </a></span></span>. A plataforma Arduino oferece uma série de vantagens em relação a outros dispositivos devido ao seu ambiente de programação simples e, claro, preços baixos e uma infinidade de placas de expansão. As placas do Arduino são construídas com base nos microprocessadores Atmel (site oficial do Atmel), bem como elementos de comunicação para programação e integração com outros circuitos. Devido às suas características técnicas e ao fato de que para o estudo da dependência corrente x tensão do dispositivo eletrônico nomeado acima não há exigência de velocidade, vamos utilizar a placa Arduíno Uno. Nesse sentido, foi utilizado o seguinte esquema de circuito eletrônico mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf11"><span class="sci-ico-fileFigure"></span>Figura 11</a>.</p>
+      <div class="row fig" id="f11">
+<a name="f11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 11</strong><br>
+          Esquema para medição de I x V <span class="ref"><strong class="xref xrefblue">[17]</strong><span class="refCtt closed"><span>[17] https://www.youtube.com/watch?v=nJaQxY6yl9Y, acessado em 15/04/2018.</span><br><a href="https://www.youtube.com/watch?v=nJaQxY6yl9Y" target="_blank">https://www.youtube.com/watch?v=nJaQxY6y...
+            </a></span></span>.
+        <br>
+</div>
+</div>
+      
+        <h2>7.1. Componentes eletrônicos utilizados</h2>
+        <ul list-type="bullet">
+<li>
+            <p>Placa Arduíno Uno;</p>
+          </li>
+<li>
+            <p>capacitor eletrolítico de 2200 μF;</p>
+          </li>
+<li>
+            <p>resistor de 120 Ohm;</p>
+          </li>
+<li>
+            <p>1 LED.</p>
+          </li>
+</ul>
+        <p>Na maquete mostrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a>, o feixe luminoso emitido pelo LED é colimado com o auxílio de uma lente convergente e se difrata ao incidir na rede de difração. Seu espectro pode ser observado, diretamente, num anteparo (tela, régua) ou com o auxílio de uma Web-câmera instalada na maquete sem a necessidade de escurecer o ambiente.</p>
+      
+    
+      <h1 class="articleSectionTitle">8. O Hardware</h1>
+      <p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf12"><span class="sci-ico-fileFigure"></span>Figura 12</a> é mostrada a montagem do circuito eletrônico, onde o LED encontra-se ligado em série com o resistor limitador de corrente, cuja resistência é de 120 ohm.</p>
+      <div class="row fig" id="f12">
+<a name="f12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 12</strong><br>
+          Montagem do circuito eletrônico ligado ao Arduino Uno.
+        <br>
+</div>
+</div>
+      <p>O terminal negativo(-) do capacitor e um dos terminais do resistor encontram-se conectados ao terminal de referência da placa Arduíno (gnd). Já o terminal positivo(+) do LED e do capacitor são conectados ao pino D6 da placa Arduíno. Deve-se salientar que este pino, D6, foi configurado por software para operar como uma saída PWM (Pulse Width Modulation). Como o sinal PWM fornece uma onda de corrente/tensão pulsada, foi necessário convertê-la numa saída analógica linear. Para tanto, foi utilizado um capacitor, cuja função principal é atuar como filtro. Como se sabe, os filtros são circuitos eletrônicos que deixam passar uma determinada banda de frequência sem atenuação e suprimem todas as outras frequências. A frequência na qual a supressão começa é chamada de frequência de corte. Desta forma, é possível produzir um sinal de corrente/tensão analógico com regulação efetuada via software. Finalmente, o terminal negativo do LED é conectado ao outro terminal do resistor limitador de corrente. Para encontrar a corrente e tensão presentes no LED foi adotada a seguinte metodologia:</p>
+      <ul list-type="bullet">
+<li>
+          <p>A entrada analógica <i>A</i><sub>1</sub> do Arduino, é utilizada para medir a tensão sobre o resistor, enquanto a entrada analógica <i>A<sub>o</sub></i> utilizada para medição da tensão total do circuito, ou seja, a tensão fornecida pela saída PWM no pino D6. Assim, é possível determinar a tensão sobre o LED subtraindo da tensão obtida na entrada <i>A<sub>o</sub></i> aquela encontrada na entrada <i>A</i><sub>1</sub>. Logo: <math><msub><mi>V</mi><mrow><mi>l</mi><mi>e</mi><mi>d</mi></mrow></msub><mo>=</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>o</mi></msub><mo>−</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mi>V</mi></math>.</p>
+        </li>
+<li>
+          <p>Para obtenção do valor da corrente no LED, foi utilizado a tensão obtida na entrada <i>A</i><sub>1</sub> , pois com ela é possível calcular a corrente que percorre o resistor utilizando a lei de Ohm. Como este resistor encontra-se ligado em série com LED, a corrente do LED é a mesma do resistor. A expressão utilizada para o cálculo foi: <math><mi>I</mi><mo>=</mo><mfrac><mrow><msub><mi>V</mi><mrow><msub><mi>A</mi><mn>1</mn></msub></mrow></msub></mrow><mrow><mn>120</mn><mi>Ω</mi></mrow></mfrac></math>.</p>
+        </li>
+<li>
+          <p>Finalmente, utilizando uma interface que permite a comunicação do Arduino com o Excel o gráfico da curva corrente X tensão do laser pode ser obtida no Excel.</p>
+        </li>
+</ul>
+    
+      <h1 class="articleSectionTitle">9. A comunicação do Arduíno com o computador</h1>
+      <p>Queremos transferir dados das medições do Arduíno para o Excel, um editor de planilhas da Microsoft que possui ferramentas de cálculo e construção de gráficos.</p>
+      
+        <h2>9.1. Procedimentos necessários para transferir dados das medições do Arduino para o Excel</h2>
+        <ol type="a">
+<li>
+            <p>Escrever o programa para o Arduíno (sketch) para transferir os dados das medições para o Excel;</p>
+            <p>
+              <div class="row fig" id="">
+<a name=""></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFig"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+            </p>
+          </li>
+<li>
+            <p>Instalar um programa, uma Macro PLX-DAQ, no computador, que vai permitir que o Excel receba os dados do Arduíno.</p>
+          </li>
+</ol>
+      
+      
+        <h2>9.2. O programa para o Arduíno</h2>
+        <p>Abaixo é dado o programa (Sketch) para o Arduíno em conformidade com o esquema eletrônico escolhido.</p>
+      
+    
+      <h1 class="articleSectionTitle">10. Apresentação dos resultados das medições</h1>
+      
+        <h2>10.1. A regressão linear</h2>
+        <p>Para a obtenção da tensão limiar <i>U<sub>o</sub></i> da emissão de radiação LED, torna-se necessário aplicar o método dos mínimos quadrados para ajustar a contribuição da parte quase retilínea das medições no gráfico através da regressão linear. O ajuste da curva obtida é dado pela função y=ax+b, equação da reta (variação linear). Omitindo-se os cálculos matemáticos, as expressões para o parâmetro <i>a</i> (coeficiente angular) e para o parâmetro <i>b</i> (coeficiente linear) procurados, têm as seguintes formas:</p>
+        <div class="row formula" id="eeq10a">
+<a name="eq10a"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(10a)</span>
+          <math display="block" id="m10a">
+            <mrow>
+              <mi>a</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>n</mi>
+                  <mstyle displaystyle="true">
+                    <msubsup>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>n</mi>
+                    </msubsup>
+                    <mrow>
+                      <msub>
+                        <mi>x</mi>
+                        <mi>i</mi>
+                      </msub>
+                      <msub>
+                        <mi>y</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mstyle>
+                  <mo>−</mo>
+                  <mstyle displaystyle="true">
+                    <msubsup>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>n</mi>
+                    </msubsup>
+                    <mrow>
+                      <msub>
+                        <mi>x</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mstyle>
+                  <mstyle displaystyle="true">
+                    <msubsup>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>n</mi>
+                    </msubsup>
+                    <mrow>
+                      <msub>
+                        <mi>y</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mstyle>
+                </mrow>
+                <mrow>
+                  <mi>n</mi>
+                  <mstyle displaystyle="true">
+                    <msubsup>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>n</mi>
+                    </msubsup>
+                    <mrow>
+                      <msubsup>
+                        <mi>x</mi>
+                        <mi>i</mi>
+                        <mn>2</mn>
+                      </msubsup>
+                    </mrow>
+                  </mstyle>
+                  <mo>−</mo>
+                  <msup>
+                    <mrow>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mstyle displaystyle="true">
+                            <msubsup>
+                              <mo>∑</mo>
+                              <mrow>
+                                <mi>i</mi>
+                                <mo>=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>n</mi>
+                            </msubsup>
+                            <mrow>
+                              <msub>
+                                <mi>x</mi>
+                                <mi>i</mi>
+                              </msub>
+                            </mrow>
+                          </mstyle>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mn>2</mn>
+                  </msup>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </div></div>
+</div>
+        <div class="row formula" id="eeq10b">
+<a name="eq10b"></a><div class="col-md-12"><div class="formula-container">
+          <span class="label">(10b)</span>
+          <math display="block" id="m10b">
+            <mi>b</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mn>1</mn>
+              <mi>n</mi>
+            </mfrac>
+            <mo stretchy="false">(</mo>
+            <mstyle displaystyle="true">
+              <munderover>
+                <mo>∑</mo>
+                <mrow>
+                  <mi>i</mi>
+                  <mo>=</mo>
+                  <mn>1</mn>
+                </mrow>
+                <mi>n</mi>
+              </munderover>
+              <mtext>
+							</mtext>
+            </mstyle>
+            <msub>
+              <mi>y</mi>
+              <mi>i</mi>
+            </msub>
+            <mo>−</mo>
+            <mi>a</mi>
+            <mstyle displaystyle="true">
+              <munderover>
+                <mo>∑</mo>
+                <mrow>
+                  <mi>i</mi>
+                  <mo>=</mo>
+                  <mn>1</mn>
+                </mrow>
+                <mi>n</mi>
+              </munderover>
+              <mtext>
+							</mtext>
+            </mstyle>
+            <msub>
+              <mi>x</mi>
+              <mi>i</mi>
+            </msub>
+            <mo stretchy="false">)</mo>
+          </math>
+        </div></div>
+</div>
+        <p>O valor do erro médio quadrático da aproximação examinada também pode ser obtido com o auxílio da teoria dos erros de medição das grandezas físicas <span class="ref"><strong class="xref xrefblue">[16]</strong><span class="refCtt closed"><span>[16] I.N. Oliveira, Erros de medição das grandezas físicas e elaboração dos resultados do experimento (Ed. UESB, Vitória da Conquista, 2018)</span></span></span>. Entretanto, utilizamos as ferramentas de cálculo e construção de gráficos do Excel na elaboração dos resultados. Foram realizadas medições da dependência I(mA) vs V(volt) dos dispositivos eletrônicos LEDs e, com o auxílio do software Excel foram obtida as curvas características dos mesmos.</p>
+      
+      
+        <h2>10.2. Gráficos da curva característica obtida com o Excel</h2>
+        <p>A solução utilizada para comunicação da plataforma Arduíno com o software Excel foi a ferramenta Parallax Data Acquisition tool (PLX-DAQ).</p>
+        <p>Esta ferramenta de software é uma add-in gratuita que pode ser agregada ao Microsoft Excel. Com ela, é possível estabelecer uma comunicação serial bidirecional do Computador com um Microcontrolador. O PLX-DAQ recebe e organiza os dados enviados pelo microcontrolador em linhas e colunas dentro de uma planilha Excel, tudo isto em tempo real. Depois de instalado, o PLX-DAQ pode receber várias customizações. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf13"><span class="sci-ico-fileFigure"></span>Figura 13</a> é apresentada a customização efetuada e utilizada neste trabalho.</p>
+        <div class="row fig" id="f13">
+<a name="f13"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 13</strong><br>
+            Configuração utilizada no PLX-DAQ.
+          <br>
+</div>
+</div>
+        <p>Para ativar o PLX-DAQ basta pressionar as teclas Ctrl + Q na planilha Excel. Como pode ser observado no código do programa instalado no Arduíno, somente dois botões foram necessários para este experimento. O botão denominado “Coletar Curva”, o qual é responsável por enviar o caractere “A” para o Arduíno.</p>
+        <p>No Arduíno, uma vez que este caractere é recebido, ele é armazenado na variável intitulada opção. Desta forma, o fluxo de código toma a decisão de coletar os dados de corrente e tensão do LED, enviando-os para a planilha Excel. Esta rotina é parcialmente apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf14"><span class="sci-ico-fileFigure"></span>Figura 14</a>. Caso o botão denominado “Zerar Planilha” seja selecionado no PLX-DAQ, o caractere “B” será enviado para o Arduíno. E, assim, todos os dados da planilha serão apagados.</p>
+        <div class="row fig" id="f14">
+<a name="f14"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 14</strong><br>
+            Código para a escolha da captura de dados e envio para a planilha Excel.
+          <br>
+</div>
+</div>
+        <p>Um trecho da rotina de código do programa instalado no microcontrolador da plataforma Arduíno que executa esta operação é apresentado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf15"><span class="sci-ico-fileFigure"></span>Figura 15</a>.</p>
+        <div class="row fig" id="f15">
+<a name="f15"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 15</strong><br>
+            Código para escolha da remoção dos dados da planilha Excel.
+          <br>
+</div>
+</div>
+        <p>De forma simplificada, o processo de obtenção da curva Corrente x Tensão no LED se dá da seguinte maneira: uma vez que a opção “Coletar Curva” for escolhida, o Arduíno iniciará o processo de aumentar passo a passo o comprimento do pulso PWM, e consequentemente a tensão de alimentação do circuito no qual o LED encontra-se interligado. Os valores analógicos de tensão sobre o LED e resistor são obtidos. Para minimizar ruídos característicos da conversão analógico digital, foi implementado um filtro digital passa baixa utilizando a operação de média. Os dados de corrente e tensão do LED, depois de tratados, são enviados para a planilha Excel (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf16"><span class="sci-ico-fileFigure"></span>Figura 16</a>).</p>
+        <div class="row fig" id="f16">
+<a name="f16"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf16"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 16</strong><br>
+            Curva Corrente x Tensão (Planilha do Excel).
+          <br>
+</div>
+</div>
+        <p>Os gráficos das curvas características Corrente x Tensão dos LEDs coloridos estudados são então plotados em tempo real. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf17"><span class="sci-ico-fileFigure"></span>Figura 17</a> mostra as curvas características dos LEDs coloridos com as respectivas regressões lineares.</p>
+        <div class="row fig" id="f17">
+<a name="f17"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf17"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Figura 17</strong><br>
+            Curvas características de LEDs coloridos com regressões lineares obtidas com o auxílio do Excel.
+          <br>
+</div>
+</div>
+      
+    
+      <h1 class="articleSectionTitle">11. Determinação da constante de Planck</h1>
+      <p>As determinações da constante de Planck foram obtidas de acordo com as características dos LEDs coloridos estudados, aplicando-se a fórmula (7), seção V. Nesse sentido, foram aplicadas as ferramentas de cálculo e construção de gráficos do Excel, com os dados da <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Tabela 1</a>.</p>
+      <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 1</strong><br>
+          Parâmetros para o cálculo da constante de Planck.
+        <br>
+</div>
+</div>
+      <p>Abaixo, nas <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Tabelas 2</a>, <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet3"><span class="sci-ico-fileTable"></span>3</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTablet4"><span class="sci-ico-fileTable"></span>4</a>, são dados os valores determinados da constante de Planck para os LEDs vermelho, verde e azul estudados experimentalmente.</p>
+      <div class="row table" id="t2">
+<a name="t2"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 2</strong><br>
+          Determinação da constante de Planck para o LED VERMELHO.
+        <br>
+</div>
+</div>
+      <div class="row table" id="t3">
+<a name="t3"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 3</strong><br>
+          Determinação da constante de Planck para o LED VERDE.
+        <br>
+</div>
+</div>
+      <div class="row table" id="t4">
+<a name="t4"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTablet4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong>Tabela 4</strong><br>
+          Determinação da constante de Planck para o LED AZUL.
+        <br>
+</div>
+</div>
+    
+      <h1 class="articleSectionTitle">12. Considerações finais</h1>
+      <p>Para determinação da constante de Planck foram construídos dois modelos de maquete experimental automatizada (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Figura 5</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a>), cuja diferença entre eles consiste no método de observação do espectro de difração da radiação emitida pelo LED numa régua graduada. Um dos modelos (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a>) possui uma lente convergente entre o LED e a rede de difração, para colimar a radiação dispersa do LED. A vantagem da utilização do modelo de maquete mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Figura 8</a> está em que não é necessário escurecer o ambiente para a visão do espectro da luz difratada projetado na régua graduada. O experimento realizado segue a crescente tendência de uso da plataforma Arduíno na automatização dos experimentos de Física Geral por oferecer uma série de vantagens em relação a outros dispositivos devido ao seu ambiente de programação simples e claro, preços baixos e uma infinidade de placas de expansão. Assim, na maquete experimental automatizada, construída para a determinação da constante de Planck, temos sistemas eletrônicos e de software que a controlam atualizados.</p>
+      <p>A principal atualização no sistema de controle é a interface de comunicação com o computador através do protocolo USB. Ele é baseado no microcontrolador ATMEL328 por meio da plataforma Arduíno. É importante observar que essa plataforma é um projeto de circuito de código aberto, baseado em microcontrolador da indústria Atmel. Uma placa física em código aberto baseada em um circuito de entradas e saídas simples. A mesma já possui conversor analógico/digital. Assim, é possível gerenciar o controle da maquete automatizada usando a interface USB do computador, por meio de um dispositivo de baixo custo. A escolha do LED no experimento para a determinação da constante de Planck é interessante porque suas aplicações estão presentes em diversas esferas importantes da vida cotidiana. O mais importante, no entanto, é que o LED é uma ligação vital entre eletrônica e fotônica.</p>
+      <p>A automatização das medições e da elaboração dos dados dos experimentos de Física tem como objetivo, em primeiro lugar, garantir aos estudantes do Curso de Licenciatura em Física da UESB, modalidade a distância, o acesso aos laboratórios remotos de Física Geral via Internet, mas também a sua utilização pelos estudantes do curso presencial de Física, o que permite aos alunos complementar as aulas teóricas, aprofundar o conhecimento de métodos e técnicas do experimento, estudar aparelhos de pesquisa científica e a familiarização com os mesmos, dominar diferentes métodos de pesquisas experimentais, dominar métodos matemáticos e gráficos dos resultados obtidos e também a avaliação das medições realizadas.</p>
+    </div>
+<div class="articleSection" data-anchor="Referências">
+<h1 class="articleSectionTitle">Referências</h1>
+<div class="ref-list"><ul class="refList">
+<li>
+<sup class="xref big">[1]</sup><div> H.J. Round, The Electrical World <b>49</b>, 19 (1907).</div>
+</li>
+<li>
+<sup class="xref big">[2]</sup><div> <i>The Road to the Transistor</i>, disponível em: https://www.jmargolin.com/history/trans.htm, acessado em 04/05/2017.<br><a href="https://www.jmargolin.com/history/trans.htm" target="_blank">» https://www.jmargolin.com/history/trans.htm</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[3]</sup><div> O.V. Losev, Philosophical Magazine <b>5</b>, 39 (1928).</div>
+</li>
+<li>
+<sup class="xref big">[4]</sup><div> T.H. Lee, <i>The design of CMOS radio-frequency integrated circuits</i>, (Cambridge University Press, Cambridge, 2003).</div>
+</li>
+<li>
+<sup class="xref big">[5]</sup><div> N. Zheludev, Nature Photonics <b>1</b>, 4 (2007).</div>
+</li>
+<li>
+<sup class="xref big">[6]</sup><div> O.V. Losev, Physik. Zeitschr <b>30</b>, (1929).</div>
+</li>
+<li>
+<sup class="xref big">[7]</sup><div> H. Júnior e N. Bevacqua, Appl. Phys. Lett. <b>1</b>, 4 (1962).</div>
+</li>
+<li>
+<sup class="xref big">[8]</sup><div> H. Wolinsky, <i>U. I.'s Holonyak out to take some of Ediso's luster</i>, (Chicago Sun-Times, Chicago, 2005).</div>
+</li>
+<li>
+<sup class="xref big">[9]</sup><div> T.P. Perry, IEEE Spectrum <b>32</b>, 2 (1995).</div>
+</li>
+<li>
+<sup class="xref big">[10]</sup><div> <i>Brief Biography Holonyak, Craford, Dupuis</i>, disponível em https://www.simplyled.co.uk/blog/a-brief-history-of-the-led/, acessado em 18/04/2019.<br><a href="https://www.simplyled.co.uk/blog/a-brief-history-of-the-led/" target="_blank">» https://www.simplyled.co.uk/blog/a-brief-history-of-the-led/</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[11]</sup><div> T.S.M. Pearsall, Appl. Phys. Lett. <b>28</b>, 9 (1976).</div>
+</li>
+<li>
+<sup class="xref big">[12]</sup><div> <i>The Nobel Prize in Physics 2014</i>, disponível em https://kva.se/nobelphysics2014<br><a href="https://kva.se/nobelphysics2014" target="_blank">» https://kva.se/nobelphysics2014</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[13]</sup><div> D. Halliday, R. Resnick e K.S. Krane, <i>Física</i> (Ed. LTC, Rio de Janeiro, 2004), v. 4.</div>
+</li>
+<li>
+<sup class="xref big">[14]</sup><div> S.L. de Moura, F.I da Silva, F.C.M. da Silva e J.A.V. dos Santos, Química Nova na Escola <b>33</b>, 4 (2011).</div>
+</li>
+<li>
+<sup class="xref big">[15]</sup><div> <i>Measuring the IV Curve of Semiconductors Whith an Aduino</i> disponível em https://www.instructables.com/id/Measuring-the-IV-Curve-of-Semiconductors-With-an-A/, acessado em 21/09/2018.<br><a href="https://www.instructables.com/id/Measuring-the-IV-Curve-of-Semiconductors-With-an-A/" target="_blank">» https://www.instructables.com/id/Measuring-the-IV-Curve-of-Semiconductors-With-an-A/</a>
+</div>
+</li>
+<li>
+<sup class="xref big">[16]</sup><div> I.N. Oliveira, <i>Erros de medição das grandezas físicas e elaboração dos resultados do experimento</i> (Ed. UESB, Vitória da Conquista, 2018)</div>
+</li>
+<li>
+<sup class="xref big">[17]</sup><div> https://www.youtube.com/watch?v=nJaQxY6yl9Y, acessado em 15/04/2018.<br><a href="https://www.youtube.com/watch?v=nJaQxY6yl9Y" target="_blank">» https://www.youtube.com/watch?v=nJaQxY6yl9Y</a>
+</div>
+</li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>09 Set 2019</li>
+<li>
+<strong>Data do Fascículo</strong><br>2020</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>05 Maio 2019</li>
+<li>
+<strong>Revisado</strong><br>17 Jun 2019</li>
+<li>
+<strong>Aceito</strong><br>28 Jul 2019</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body">
+<div class="info">
+<div class="tutors">
+<strong> Ivanor N. de Oliveira </strong><br><div>Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Jorge A.P. Ramos </strong><strong>
+            *
+          </strong><br><div>Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil</div>
+<ul class="md-list inline"><li><a href="http://orcid.org/0000-0001-9868-1235" class="btnContribLinks orcid">http://orcid.org/0000-0001-9868-1235</a></li></ul>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Wilton L. Silva </strong><br><div>Instituto Federal de Educação Ciência e Tecnologia da Bahia, Salvador, BA, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Valteni D. Chaves </strong><br><div>Instituto Federal Baiano, Salvador, BA, Brasil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Clênia A.O. de Melo </strong><br><div>Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil</div>
+<div class="clearfix"></div>
+</div>
+</div>
+        <div class="info">
+<sup>*</sup>Endereço de correspondência: <a href="mailto:jorge@uesb.edu.br">jorge@uesb.edu.br</a>.</div>
+      </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Tabelas | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (18)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tabelas
+                    (4)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (11)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 1</strong><br>
+          Gráfico das características I x V de um detector de carbeto de silício indicando limiar da emissão de luz <span class="ref"><strong class="xref xrefblue">[3]</strong><span class="refCtt closed"><span>[3] O.V. Losev, Philosophical Magazine 5, 39 (1928).</span></span></span>.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 2</strong><br>
+          Partes constituintes do LED.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 3</strong><br>
+          Campo elétrico interno E e barreira potencial de contato <i>eU<sub>c</sub></i>.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 4</strong><br>
+          Campos elétricos externo E, interno <math><mrow><msub><mi>E</mi><mi>c</mi></msub></mrow></math> e barreira potencial na transição p-n.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 5</strong><br>
+            Maquete experimental para a determinação da constante de Planck - primeira variante de montagem.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 6</strong><br>
+            Esquema óptico de observação do espectro de difração da emissão do LED - primeira variante de montagem da maquete.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 7</strong><br>
+            Esquema da segunda variante de montagem da maquete experimental.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 8</strong><br>
+          Segunda variante de montagem da maquete experimental para a determinação da constante de Planck.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+            Esquema óptico de observação do espectro de difração da emissão do LED - segunda variante de montagem da maquete.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 9</strong><br>
+            Esquema óptico de observação do espectro de difração da emissão do LED - segunda variante de montagem da maquete.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 10</strong><br>
+          Esquema do circuito de medição da dependência corrente x tensão.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 11</strong><br>
+          Esquema para medição de I x V <span class="ref"><strong class="xref xrefblue">[17]</strong><span class="refCtt closed"><span>[17] https://www.youtube.com/watch?v=nJaQxY6yl9Y, acessado em 15/04/2018.</span><br><a href="https://www.youtube.com/watch?v=nJaQxY6yl9Y" target="_blank">https://www.youtube.com/watch?v=nJaQxY6y...
+            </a></span></span>.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 12</strong><br>
+          Montagem do circuito eletrônico ligado ao Arduino Uno.
+        </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFig"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+                
+                  
+                  
+                
+              </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 13</strong><br>
+            Configuração utilizada no PLX-DAQ.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 14</strong><br>
+            Código para a escolha da captura de dados e envio para a planilha Excel.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 15</strong><br>
+            Código para escolha da remoção dos dados da planilha Excel.
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 16</strong><br>
+            Curva Corrente x Tensão (Planilha do Excel).
+          </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf17"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Figura 17</strong><br>
+            Curvas características de LEDs coloridos com regressões lineares obtidas com o auxílio do Excel.
+          </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables">
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 1</strong><br>
+          Parâmetros para o cálculo da constante de Planck.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 2</strong><br>
+          Determinação da constante de Planck para o LED VERMELHO.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 3</strong><br>
+          Determinação da constante de Planck para o LED VERDE.
+        </div>
+</div>
+<div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTablet4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+<strong>Tabela 4</strong><br>
+          Determinação da constante de Planck para o LED AZUL.
+        </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(1)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(2)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(3)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(4)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(5)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(6)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(7)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(8)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(9)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq10a"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(10a)</strong></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq10b"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"><strong>(10b)</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/19f54faf57729400daac5c2ff5cce8900e90e239.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 1   
+          Gráfico das características I x V de um detector de carbeto de silício indicando limiar da emissão de luz <span class="ref"><strong class="xref xrefblue">[3]</strong><span class="refCtt closed"><span>[3] O.V. Losev, Philosophical Magazine 5, 39 (1928).</span></span></span>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/19f54faf57729400daac5c2ff5cce8900e90e239.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/4d55bdfa94834e08eaac67c3895057cc257ae365.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 2   
+          Partes constituintes do LED.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/4d55bdfa94834e08eaac67c3895057cc257ae365.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/17e3c5a8ead6d03bb221deaada087000c974cd6e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 3   
+          Campo elétrico interno E e barreira potencial de contato <i>eU<sub>c</sub></i>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/17e3c5a8ead6d03bb221deaada087000c974cd6e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/f075bb3800d86fc6f315ef471fa118856fa0a252.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 4   
+          Campos elétricos externo E, interno <math><mrow><msub><mi>E</mi><mi>c</mi></msub></mrow></math> e barreira potencial na transição p-n.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/f075bb3800d86fc6f315ef471fa118856fa0a252.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/f931ecc301444af80722cedeeb6ad7af9aa32e91.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 5   
+            Maquete experimental para a determinação da constante de Planck - primeira variante de montagem.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/f931ecc301444af80722cedeeb6ad7af9aa32e91.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/4a1613288ae5057729949c2ce20f4821b5319c85.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 6   
+            Esquema óptico de observação do espectro de difração da emissão do LED - primeira variante de montagem da maquete.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/4a1613288ae5057729949c2ce20f4821b5319c85.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/db24b8fc5fb6afee8c1c470892d4d0613cee722e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 7   
+            Esquema da segunda variante de montagem da maquete experimental.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/db24b8fc5fb6afee8c1c470892d4d0613cee722e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/2f8b3b84683518f0aa6b51641ea2eaefd01762ea.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 8   
+          Segunda variante de montagem da maquete experimental para a determinação da constante de Planck.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/2f8b3b84683518f0aa6b51641ea2eaefd01762ea.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/2cb5c58a15b68d50c793a60182563d10bc84fe4e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+            Esquema óptico de observação do espectro de difração da emissão do LED - segunda variante de montagem da maquete.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/2cb5c58a15b68d50c793a60182563d10bc84fe4e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/2cb5c58a15b68d50c793a60182563d10bc84fe4e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 9   
+            Esquema óptico de observação do espectro de difração da emissão do LED - segunda variante de montagem da maquete.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/2cb5c58a15b68d50c793a60182563d10bc84fe4e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c95c666e94546e3a7582b3de868da8870d8933ba.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 10   
+          Esquema do circuito de medição da dependência corrente x tensão.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c95c666e94546e3a7582b3de868da8870d8933ba.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/ad21e12d49a84cebdf3ef2fdc8e5f119cacda81a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 11   
+          Esquema para medição de I x V <span class="ref"><strong class="xref xrefblue">[17]</strong><span class="refCtt closed"><span>[17] https://www.youtube.com/watch?v=nJaQxY6yl9Y, acessado em 15/04/2018.</span><br><a href="https://www.youtube.com/watch?v=nJaQxY6yl9Y" target="_blank">https://www.youtube.com/watch?v=nJaQxY6y...
+            </a></span></span>.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/ad21e12d49a84cebdf3ef2fdc8e5f119cacda81a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c23c7a75f6659a5f57218695a584c3f64918f855.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 12   
+          Montagem do circuito eletrônico ligado ao Arduino Uno.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c23c7a75f6659a5f57218695a584c3f64918f855.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFig" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/dd9ce6aa9b41516cbc32a700b045a72479f45517.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/dd9ce6aa9b41516cbc32a700b045a72479f45517.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c98bb2a2259484085522c4b4dc81423b33393330.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 13   
+            Configuração utilizada no PLX-DAQ.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c98bb2a2259484085522c4b4dc81423b33393330.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c315f4563983fbbfbd45a36e3be25b6e9d61071a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 14   
+            Código para a escolha da captura de dados e envio para a planilha Excel.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c315f4563983fbbfbd45a36e3be25b6e9d61071a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/436593859d878e48128301c14db8b06553ff1636.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 15   
+            Código para escolha da remoção dos dados da planilha Excel.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/436593859d878e48128301c14db8b06553ff1636.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c400c8bf9fa9709418884e3108e225eb0fd042f7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 16   
+            Curva Corrente x Tensão (Planilha do Excel).
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/c400c8bf9fa9709418884e3108e225eb0fd042f7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf17" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/abfb6ac70b805135105dc7652e108abd7a1989a4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span>Figura 17   
+            Curvas características de LEDs coloridos com regressões lineares obtidas com o auxílio do Excel.
+          <br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/tYxCGJshXSRQY5wDgZMdCqM/abfb6ac70b805135105dc7652e108abd7a1989a4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 1</strong>    
+          Parâmetros para o cálculo da constante de Planck.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="25%">
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <tbody style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <td align="left">Dist. da rede de</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">difração para régua</td>
+              <td align="center">
+                <i>x</i>
+              </td>
+              <td align="center">171</td>
+              <td align="center">mm</td>
+            </tr>
+            <tr>
+              <td align="left">graduada</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">Dist. máx.sec.</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">vermelho</td>
+              <td align="center">
+                <i>y</i>
+                <sub>1<i>vermelho</i></sub>
+              </td>
+              <td align="center">140</td>
+              <td align="center">mm</td>
+            </tr>
+            <tr>
+              <td align="left">Dist. máx sec. verde</td>
+              <td align="center">
+                <i>y</i>
+                <sub>1<i>verde</i></sub>
+              </td>
+              <td align="center">98</td>
+              <td align="center">mm</td>
+            </tr>
+            <tr>
+              <td align="left">Dist. máx. sec. azul</td>
+              <td align="center">
+                <i>y</i>
+                <sub>1<i>azul</i></sub>
+              </td>
+              <td align="center">87</td>
+              <td align="center">mm</td>
+            </tr>
+            <tr>
+              <td align="left">Angulo teta vermelho</td>
+              <td align="center">θ<sub><i>mvermelho</i></sub>
+</td>
+              <td align="center">0,6889</td>
+              <td align="center">rad</td>
+            </tr>
+            <tr>
+              <td align="left">Angulo teta verde</td>
+              <td align="center">θ<sub><i>mverde</i></sub>
+</td>
+              <td align="center">0,5229</td>
+              <td align="center">rad</td>
+            </tr>
+            <tr>
+              <td align="left">Angulo teta azul</td>
+              <td align="center">θ<sub><i>mazul</i></sub>
+</td>
+              <td align="center">0,4730</td>
+              <td align="center">rad</td>
+            </tr>
+            <tr>
+              <td align="left">Carga do elétron</td>
+              <td align="center">
+                <i>e</i>
+              </td>
+              <td align="center">1,602 × 10<sup>−19</sup>
+</td>
+              <td align="center">C</td>
+            </tr>
+            <tr>
+              <td align="left">Período da Rede</td>
+              <td align="center">
+                <i>d</i>
+              </td>
+              <td align="center">1,0 × 10<sup>−6</sup>
+</td>
+              <td align="center">m</td>
+            </tr>
+            <tr>
+              <td align="left">Ordem da difração</td>
+              <td align="center">
+                <i>m</i>
+              </td>
+              <td align="center">1</td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">Velocidade da Luz</td>
+              <td align="center">
+                <i>c</i>
+              </td>
+              <td align="center">3,0 × 10<sup>8</sup>
+</td>
+              <td align="center">m/s</td>
+            </tr>
+            <tr>
+              <td align="left">Const.Planck-valor</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">tabela</td>
+              <td align="center">
+                <i>h</i>
+              </td>
+              <td align="center">6,626 × 10<sup>−34</sup>
+</td>
+              <td align="center">J.s</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 2</strong>    
+          Determinação da constante de Planck para o LED VERMELHO.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="25%">
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <tbody style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <td align="left">Valor da tensão limiar</td>
+              <td align="center">
+                <i>U<sub>o</sub></i>
+              </td>
+              <td align="center">1,893</td>
+              <td align="center">Volt</td>
+            </tr>
+            <tr>
+              <td align="left">Coeficiente angular</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">da reta</td>
+              <td align="center">
+                <i>a</i>
+              </td>
+              <td align="center">225,47</td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">Coeficiente linear da reta</td>
+              <td align="center">b</td>
+              <td align="center">-426,77</td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">Const. de Planck</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">determinada</td>
+              <td align="center">
+                <i>h'</i>
+              </td>
+              <td align="center">6,425 × 10<sup>−34</sup>
+</td>
+              <td align="center">J.s</td>
+            </tr>
+            <tr>
+              <td align="left">Erro Percentual</td>
+              <td align="center">Erro %</td>
+              <td align="center">2,939</td>
+              <td align="center">%</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 3</strong>    
+          Determinação da constante de Planck para o LED VERDE.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="25%">
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <tbody style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <td align="left">Valor da tensão limiar</td>
+              <td align="center">
+                <i>U<sub>o</sub></i>
+              </td>
+              <td align="center">2,529</td>
+              <td align="center">Volt</td>
+            </tr>
+            <tr>
+              <td align="left">Coeficiente angular</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">da reta</td>
+              <td align="center">
+                <i>a</i>
+              </td>
+              <td align="center">40,98</td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">Coeficiente linear da reta</td>
+              <td align="center">b</td>
+              <td align="center">-103,63</td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">Const. de Planck</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">determinada</td>
+              <td align="center">
+                <i>h'</i>
+              </td>
+              <td align="center">6,744 × 10<sup>−34</sup>
+</td>
+              <td align="center">J.s</td>
+            </tr>
+            <tr>
+              <td align="left">Erro Percentual</td>
+              <td align="center">Erro %</td>
+              <td align="center">1,879</td>
+              <td align="center">%</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong>Tabela 4</strong>    
+          Determinação da constante de Planck para o LED AZUL.
+        <br>
+</h4>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+          <colgroup width="25%">
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <tbody style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <td align="left">Valor da tensão limiar</td>
+              <td align="center">
+                <i>U<sub>o</sub></i>
+              </td>
+              <td align="center">2,724</td>
+              <td align="center">Volt</td>
+            </tr>
+            <tr>
+              <td align="left">Coeficiente angular</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">da reta</td>
+              <td align="center">
+                <i>a</i>
+              </td>
+              <td align="center">41,66</td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">Coeficiente linear da reta</td>
+              <td align="center">b</td>
+              <td align="center">-113,57</td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">Const. de Planck</td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="left">determinada</td>
+              <td align="center">
+                <i>h'</i>
+              </td>
+              <td align="center">6,633 × 10<sup>−34</sup>
+</td>
+              <td align="center">J.s</td>
+            </tr>
+            <tr>
+              <td align="left">Erro Percentual</td>
+              <td align="center">Erro %</td>
+              <td align="center">0,192</td>
+              <td align="center">%</td>
+            </tr>
+          </tbody>
+        </table></div></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(1)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m1">
+          <mrow>
+            <mi>ν</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>e</mi>
+                <mi>U</mi>
+              </mrow>
+              <mi>h</mi>
+            </mfrac>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(2)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m2">
+          <mrow>
+            <mi>e</mi>
+            <msub>
+              <mi>U</mi>
+              <mi>o</mi>
+            </msub>
+            <mo>=</mo>
+            <mi>h</mi>
+            <mi>ν</mi>
+          </mrow>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(3)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m3">
+          <mi>e</mi>
+          <msub>
+            <mi>U</mi>
+            <mi>c</mi>
+          </msub>
+          <mo>=</mo>
+          <mi>h</mi>
+          <mi>ν</mi>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(4)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m4">
+            <mi>h</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>e</mi>
+                <msub>
+                  <mi>U</mi>
+                  <mi>o</mi>
+                </msub>
+              </mrow>
+              <mi>ν</mi>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(5)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m5">
+            <mi>ν</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mi>c</mi>
+              <mi>λ</mi>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(6)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m6">
+            <mi>d</mi>
+            <mi>sin</mi>
+            <mi>θ</mi>
+            <mo>=</mo>
+            <mi>m</mi>
+            <mi>λ</mi>
+            <mo>,</mo>
+            <mtext>
+						</mtext>
+            <mi>a</mi>
+            <mi>s</mi>
+            <mi>s</mi>
+            <mi>i</mi>
+            <mi>m</mi>
+            <mo>,</mo>
+            <mi>λ</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>d</mi>
+                <mi>sin</mi>
+                <msub>
+                  <mi>θ</mi>
+                  <mi>m</mi>
+                </msub>
+              </mrow>
+              <mi>m</mi>
+            </mfrac>
+            <mi>m</mi>
+            <mo>=</mo>
+            <mo>±</mo>
+            <mn>1</mn>
+            <mo>,</mo>
+            <mo>±</mo>
+            <mn>2</mn>
+            <mo>,</mo>
+            <mo>±</mo>
+            <mn>3</mn>
+            <mo>,</mo>
+            <mn>...</mn>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(7)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m7">
+            <mi>h</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mi>e</mi>
+                <msub>
+                  <mi>U</mi>
+                  <mi>o</mi>
+                </msub>
+                <mi>d</mi>
+                <mi>sin</mi>
+                <msub>
+                  <mi>θ</mi>
+                  <mi>m</mi>
+                </msub>
+              </mrow>
+              <mrow>
+                <mi>m</mi>
+                <mi>c</mi>
+              </mrow>
+            </mfrac>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(8)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m8">
+          <msub>
+            <mi>I</mi>
+            <mi>D</mi>
+          </msub>
+          <mo>×</mo>
+          <msub>
+            <mi>U</mi>
+            <mi>D</mi>
+          </msub>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(9)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m9">
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>U</mi>
+            <mrow>
+              <mi>s</mi>
+              <mi>a</mi>
+              <mi>i</mi>
+              <mi>d</mi>
+              <mi>a</mi>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mi>U</mi>
+            <mrow>
+              <mi>s</mi>
+              <mi>a</mi>
+              <mi>i</mi>
+              <mi>d</mi>
+              <mi>a</mi>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">)</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <msub>
+                <mi>R</mi>
+                <mn>1</mn>
+              </msub>
+            </mrow>
+          </mfrac>
+          <mo>×</mo>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>U</mi>
+            <mrow>
+              <mi>s</mi>
+              <mi>a</mi>
+              <mi>i</mi>
+              <mi>d</mi>
+              <mi>a</mi>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mi>U</mi>
+            <mrow>
+              <mi>s</mi>
+              <mi>a</mi>
+              <mi>i</mi>
+              <mi>d</mi>
+              <mi>a</mi>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq10a" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(10a)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m10a">
+            <mrow>
+              <mi>a</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>n</mi>
+                  <mstyle displaystyle="true">
+                    <msubsup>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>n</mi>
+                    </msubsup>
+                    <mrow>
+                      <msub>
+                        <mi>x</mi>
+                        <mi>i</mi>
+                      </msub>
+                      <msub>
+                        <mi>y</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mstyle>
+                  <mo>−</mo>
+                  <mstyle displaystyle="true">
+                    <msubsup>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>n</mi>
+                    </msubsup>
+                    <mrow>
+                      <msub>
+                        <mi>x</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mstyle>
+                  <mstyle displaystyle="true">
+                    <msubsup>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>n</mi>
+                    </msubsup>
+                    <mrow>
+                      <msub>
+                        <mi>y</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mstyle>
+                </mrow>
+                <mrow>
+                  <mi>n</mi>
+                  <mstyle displaystyle="true">
+                    <msubsup>
+                      <mo>∑</mo>
+                      <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <mi>n</mi>
+                    </msubsup>
+                    <mrow>
+                      <msubsup>
+                        <mi>x</mi>
+                        <mi>i</mi>
+                        <mn>2</mn>
+                      </msubsup>
+                    </mrow>
+                  </mstyle>
+                  <mo>−</mo>
+                  <msup>
+                    <mrow>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mstyle displaystyle="true">
+                            <msubsup>
+                              <mo>∑</mo>
+                              <mrow>
+                                <mi>i</mi>
+                                <mo>=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>n</mi>
+                            </msubsup>
+                            <mrow>
+                              <msub>
+                                <mi>x</mi>
+                                <mi>i</mi>
+                              </msub>
+                            </mrow>
+                          </mstyle>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mn>2</mn>
+                  </msup>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq10b" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">
+<span class="sci-ico-fileFormula"></span><strong>(10b)</strong>
+</h4>
+</div>
+<div class="modal-body"><math display="block" id="m10b">
+            <mi>b</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mn>1</mn>
+              <mi>n</mi>
+            </mfrac>
+            <mo stretchy="false">(</mo>
+            <mstyle displaystyle="true">
+              <munderover>
+                <mo>∑</mo>
+                <mrow>
+                  <mi>i</mi>
+                  <mo>=</mo>
+                  <mn>1</mn>
+                </mrow>
+                <mi>n</mi>
+              </munderover>
+              <mtext>
+							</mtext>
+            </mstyle>
+            <msub>
+              <mi>y</mi>
+              <mi>i</mi>
+            </msub>
+            <mo>−</mo>
+            <mi>a</mi>
+            <mstyle displaystyle="true">
+              <munderover>
+                <mo>∑</mo>
+                <mrow>
+                  <mi>i</mi>
+                  <mo>=</mo>
+                  <mn>1</mn>
+                </mrow>
+                <mi>n</mi>
+              </munderover>
+              <mtext>
+							</mtext>
+            </mstyle>
+            <msub>
+              <mi>x</mi>
+              <mi>i</mi>
+            </msub>
+            <mo stretchy="false">)</mo>
+          </math></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Oliveira, Ivanor N. de et al. Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno. Revista Brasileira de Ensino de Física [online]. 2020, v. 42 [Acessado CURRENTDATE] , e20190105. Disponível em: &lt;https://doi.org/10.1590/1806-9126-RBEF-2019-0105&gt;. Epub 09 Set 2019. ISSN 1806-9126. https://doi.org/10.1590/1806-9126-RBEF-2019-0105.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno&#34; &#34;Oliveira, Ivanor N. de&#34; &#34;Ramos, Jorge A.P.&#34; &#34;Silva, Wilton L.&#34; &#34;Chaves, Valteni D.&#34; &#34;Melo, Clênia A.O. de&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno&#34; &#34;Oliveira, Ivanor N. de&#34; &#34;Ramos, Jorge A.P.&#34; &#34;Silva, Wilton L.&#34; &#34;Chaves, Valteni D.&#34; &#34;Melo, Clênia A.O. de&#34; &#34;2019&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/tYxCGJshXSRQY5wDgZMdCqM/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172020000100401&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1806-9126-RBEF-2019-0105" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1806-9126-RBEF-2019-0105">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1806-9126-RBEF-2019-0105" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1806-9126-RBEF-2019-0105">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1806-9126-RBEF-2019-0105"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1806-9126-RBEF-2019-0105" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1806-9126-RBEF-2019-0105">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0105" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Estudo das propriedades do Diodo Emissor de Luz (LED) para a determinação da constante de Planck numa maquete automatizada com o auxílio da plataforma Arduíno
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/1806-9126-RBEF-2019-0105">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

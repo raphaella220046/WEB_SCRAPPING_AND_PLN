@@ -1,0 +1,1914 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Issues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator Issues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?format=html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Issues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator"/>
+<meta property="og:description" content="The first issue on compact neutron generator design is the definition of the plasma generation..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Araujo, Wagner Leite">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Minas Gerais">
+        
+        <meta name="citation_author" content="Campos, Tarcisio Passos Ribeiro de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Minas Gerais">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="32"></meta>
+<meta name="citation_number" content="3"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?lang=en&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?format=xml&amp;lang=en"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172010000300002"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Issues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator
+            "></meta>
+
+<meta name="citation_language" content="en"></meta>
+
+<meta name="citation_abstract" content="The first issue on compact neutron generator design is the definition of the plasma generation process following the analysis of the physical plasma state. The plasma features and the nuclear reactions of fusion involved in the operation of the generator, deuterium-deuterium or deuterium-tritium, as well as the system which determines the trajectories of the particles and the target, are decisive to predict the neutron yield from the generator. Hence, the plasma behavior analysis under established conditions becomes an important evidence. This analysis may be done by means of plasma simulation models. Particle simulation of plasmas, employed since 1960s, provides a picture of the general plasma characteristics. Plasma physics is determined in most cases by simple equations, i.e. equations of motion of electrons, ions and neutrals atoms including the effect of collisions and self-consistent electric and magnetic fields. Computer simulation of plasmas comprises two general areas based on kinetic and ﬂuid. While ﬂuids simulation proceeds by solving numerically the magnetohydrodynamic (MHD) equations, assuming approximate transport coefficients, kinetic simulation considers more detailed models of plasma involving particle interactions through the electromagnetic fields. This article is focused on the simulation and analysis of injected beam into a steady state and periodic plasma. The applied calculation model, for this simulation purpose, is referring to an electrostatic one dimension code, based on kinetic simulation, which simulates periodic plasmas illustrating various fundamental considerations of plasma simulation and make it useful in simulations of the beam optic system for neutron generators. The main goal of this research is explore the PIC code reviewing the computational and physics theory necessary to build the structure of the elementary principles intending to introduce concepts of plasma physics and the computational theory. Moreover, foundations of plasma analysis for neutron generators will be stated"></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2010-09"></meta>
+<meta name="citation_keywords" content="plasma simulation"></meta><meta name="citation_keywords" content="pic code"></meta><meta name="citation_keywords" content="compact neutron generators"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2010.v32n3/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?lang=en&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?lang=en&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (Inglês)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2010.v32n3/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?format=pdf&amp;lang=en" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?format=pdf&amp;lang=en">
+                      
+                        Download PDF (Inglês)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172010000300002 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge"></span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 32 
+                (3)
+            <span class="_separator"> • </span>Sept 2010</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172010000300002" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172010000300002</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172010000300002"><span class="sci-ico-link"></span>copy</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Issues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Considerações sobre instabilidade feixe-plasma: simulações iniciais centradas no desenvolvimento de um gerador compacto de nêutrons</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Wagner Leite Araujo </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Belo Horizonte,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Minas Gerais,  Departamento de Engenharia Nuclear ,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Tarcisio Passos Ribeiro de Campos </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Belo Horizonte,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Minas Gerais,  Departamento de Engenharia Nuclear ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">About the authors</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Abstracts"><h1 class="articleSectionTitle">Abstracts</h1></div>
+<div>
+<p>The first issue on compact neutron generator design is the definition of the plasma generation process following the analysis of the physical plasma state. The plasma features and the nuclear reactions of fusion involved in the operation of the generator, deuterium-deuterium or deuterium-tritium, as well as the system which determines the trajectories of the particles and the target, are decisive to predict the neutron yield from the generator. Hence, the plasma behavior analysis under established conditions becomes an important evidence. This analysis may be done by means of plasma simulation models. Particle simulation of plasmas, employed since 1960s, provides a picture of the general plasma characteristics. Plasma physics is determined in most cases by simple equations, i.e. equations of motion of electrons, ions and neutrals atoms including the effect of collisions and self-consistent electric and magnetic fields. Computer simulation of plasmas comprises two general areas based on kinetic and ﬂuid. While ﬂuids simulation proceeds by solving numerically the magnetohydrodynamic (MHD) equations, assuming approximate transport coefficients, kinetic simulation considers more detailed models of plasma involving particle interactions through the electromagnetic fields. This article is focused on the simulation and analysis of injected beam into a steady state and periodic plasma. The applied calculation model, for this simulation purpose, is referring to an electrostatic one dimension code, based on kinetic simulation, which simulates periodic plasmas illustrating various fundamental considerations of plasma simulation and make it useful in simulations of the beam optic system for neutron generators. The main goal of this research is explore the PIC code reviewing the computational and physics theory necessary to build the structure of the elementary principles intending to introduce concepts of plasma physics and the computational theory. Moreover, foundations of plasma analysis for neutron generators will be stated</p>
+<p>plasma simulation; pic code; compact neutron generators</p>
+</div>
+<hr>
+<div>
+<p>A primeira consideração no projeto de um gerador compacto de nêutrons é a definição do processo de produção de plasma seguido da definição da análise do estado físico desse plasma. As características do plasma e as reações nucleares de fusão envolvidas na operação do gerador, deutério-deutério ou deutério-trítio, bem como o sistema que determina as trajetórias das partículas e o alvo, são decisivos para estimar o rendimento de nêutrons do gerador. Dessa forma, a análise do comportamento do plasma sob condições estabelecidas se torna uma evidencia importante. Essa análise pode ser feita por modelos de simulação de plasma. A simulação de partículas de plasma, empregada desde a década de 1960, fornece uma descrição das características gerais do plasma. A física de plasma é determinada, na maioria dos casos, por equações simples, isto é, equações de movimento de elétrons, íons e átomos neutros incluindo o efeito das colisões e campos elétricos e magnéticos auto-consistentes. As simulações computacionais de plasma compreendem duas áreas gerais baseadas em cinética e análise ﬂuidodinâmica. Enquanto a simulação em dinâmica de ﬂuidos se procede por meio da resolução numérica de equações da magnetohidrodinâmica (MHD), assumindo coeficientes de transporte; a simulação cinética considera modelos mais detalhados de plasma, envolvendo interações das partículas com os campos eletromagnéticos. Esse artigo é focado na simulação e análise de um feixe de elétrons injetado dentro de um plasma estacionário e periódico. O modelo de cálculo empregado, para este propósito de simulação, é referente a um código unidimensional, baseado em simulação cinética, que simula plasmas periódicos ilustrando várias considerações fundamentais em simulação de plasma e se torna útil em simulações do sistema da optica de feixe para geradores de nêutrons. O objetivo principal desse estudo é explorar o código PIC revisando a teoria física e computacional necessária para construir a estrutura dos princípios elementares com intenção de introduzir conceitos da teoria física de plasma e da teoria computacional. Além disso, os fundamentos da análise de plasma para geradores de nêutrons serão declarados</p>
+<p>simulação de plasma; código pic; gerador de nêutrons compacto</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>
+      <b>Issues on beam-plasma instability - early simulations focusing on the development of a compact neutron generator</b>
+    </p>
+<p></p>
+<p>
+      <b>Considerações sobre instabilidade feixe-plasma - simulações iniciais centradas no desenvolvimento de um gerador compacto de nêutrons</b>
+    </p>
+<p></p>
+<p>Wagner Leite Araujo<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        wagnerleite@ymail.com.
+      </span></span></span>; Tarcisio Passos Ribeiro de Campos</p>
+<p></p>
+<p>Departamento de Engenharia Nuclear, Universidade Federal de Minas Gerais, Belo Horizonte, MG, Brasil</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>The first issue on compact neutron generator design is the definition of the plasma generation process following the analysis of the physical plasma state. The plasma features and the nuclear reactions of fusion involved in the operation of the generator, deuterium-deuterium or deuterium-tritium, as well as the system which determines the trajectories of the particles and the target, are decisive to predict the neutron yield from the generator. Hence, the plasma behavior analysis under established conditions becomes an important evidence. This analysis may be done by means of plasma simulation models. Particle simulation of plasmas, employed since 1960s, provides a picture of the general plasma characteristics. Plasma physics is determined in most cases by simple equations, i.e. equations of motion of electrons, ions and neutrals atoms including the effect of collisions and self-consistent electric and magnetic fields. Computer simulation of plasmas comprises two general areas based on kinetic and ﬂuid. While ﬂuids simulation proceeds by solving numerically the magnetohydrodynamic (MHD) equations, assuming approximate transport coefficients, kinetic simulation considers more detailed models of plasma involving particle interactions through the electromagnetic fields. This article is focused on the simulation and analysis of injected beam into a steady state and periodic plasma. The applied calculation model, for this simulation purpose, is referring to an electrostatic one dimension code, based on kinetic simulation, which simulates periodic plasmas illustrating various fundamental considerations of plasma simulation and make it useful in simulations of the beam optic system for neutron generators. The main goal of this research is explore the PIC code reviewing the computational and physics theory necessary to build the structure of the elementary principles intending to introduce concepts of plasma physics and the computational theory. Moreover, foundations of plasma analysis for neutron generators will be stated.</p>
+<p></p>
+<p><b>Keywords:</b> plasma simulation, pic code, compact neutron generators.</p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>A primeira consideração no projeto de um gerador compacto de nêutrons é a definição do processo de produção de plasma seguido da definição da análise do estado físico desse plasma. As características do plasma e as reações nucleares de fusão envolvidas na operação do gerador, deutério-deutério ou deutério-trítio, bem como o sistema que determina as trajetórias das partículas e o alvo, são decisivos para estimar o rendimento de nêutrons do gerador. Dessa forma, a análise do comportamento do plasma sob condições estabelecidas se torna uma evidencia importante. Essa análise pode ser feita por modelos de simulação de plasma. A simulação de partículas de plasma, empregada desde a década de 1960, fornece uma descrição das características gerais do plasma. A física de plasma é determinada, na maioria dos casos, por equações simples, isto é, equações de movimento de elétrons, íons e átomos neutros incluindo o efeito das colisões e campos elétricos e magnéticos auto-consistentes. As simulações computacionais de plasma compreendem duas áreas gerais baseadas em cinética e análise ﬂuidodinâmica. Enquanto a simulação em dinâmica de ﬂuidos se procede por meio da resolução numérica de equações da magnetohidrodinâmica (MHD), assumindo coeficientes de transporte; a simulação cinética considera modelos mais detalhados de plasma, envolvendo interações das partículas com os campos eletromagnéticos. Esse artigo é focado na simulação e análise de um feixe de elétrons injetado dentro de um plasma estacionário e periódico. O modelo de cálculo empregado, para este propósito de simulação, é referente a um código unidimensional, baseado em simulação cinética, que simula plasmas periódicos ilustrando várias considerações fundamentais em simulação de plasma e se torna útil em simulações do sistema da optica de feixe para geradores de nêutrons. O objetivo principal desse estudo é explorar o código PIC revisando a teoria física e computacional necessária para construir a estrutura dos princípios elementares com intenção de introduzir conceitos da teoria física de plasma e da teoria computacional. Além disso, os fundamentos da análise de plasma para geradores de nêutrons serão declarados.</p>
+<p></p>
+<p><b>Palavras-chave:</b> simulação de plasma, código pic, gerador de nêutrons compacto.</p>
+<p></p>
+<p>
+      <b>1. Introduction</b>
+    </p>
+<p></p>
+<p>Plasma is the fourth state of matter, consisting of free electrons, ions and atoms or molecules. It is characterized by its collective behavior. Plasmas are many-particle ensembles; the charged particles are coupled by electric and magnetic self-generated and self-consistent fields [1]. Ionization, which produces the plasma in most devices, can be introduced by extreme heat, pressure, electrostatic and magnetostatic fields or through electromagnetic discharges as commonly designed in a modern compact neutron generator [2].</p>
+<p></p>
+<p>Compact neutron generators are devices that contain linear accelerators that produce neutrons based on fusion of hydrogen isotopes. Fusion reactions take place in those devices via acceleration of deuterium or tritium ions, or the mixture of the both isotopes, towards a hybrid target of metal also composed of deuterium, tritium or a mixture of two. Neutron sources that use reactions D-D (deuterium - deuterium), D-T (deuterium tritium) offer a surprising technology, because they can supply a neutron beam of high ﬂux from a small source, pulsed-type electronically collimated. Thus, neutron generators based on those reactions can be used as a powerful tool in several fields in which there is demand of a small beam of neutrons [3]. The reaction D + D → <sup>3</sup>He + n + 3.3 MeV was first to provide mono-energetic fast neutrons. However, the most applied fusion reaction is from deuterium-tritium. This fusion reaction is the easiest to perform and also the most used in neutron generators. Reaction T + D → <sup>4</sup>He + n + 17.6 MeV occurs with more probability because the neutron in excess on the tritium nuclide increases the size of nucleus and therefore the cross section of fusion reaction.</p>
+<p></p>
+<p>The basic project of a compact neutron generator includes the design of a modern and compact accelerator, including a gas-control reservoir, plasma and ion source to generate and put the ions in a beam shape, respectively; and a target constituted of material loaded of hydride and metal. A schematic design of a neutron generator based in a work of Worpole [4] is shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig01"><span class="sci-ico-fileFigure"></span>Fig. 1</a>. A subject of study on the plasma behavior for neutron generators is the optimization of the plasma generator device to produce higher charge states and a higher number of particles. The ion source produces the ions created from the plasma through an electrode system, subsequently the ions of deuterium or tritium are accelerated toward a metal target loaded with deuterium, tritium or mixture of both, where occur the neutron generation reactions. Plasma is produced inside an ion source and its proprieties and characteristics determine to a large extent the kind of ion beam that is produced [5]. In according to the design of the neutron generator tube, it is necessary to collimate the ion beam, once the ions have same charge. The system to collimate the beam is not required since the length of the transport system is very small; in this case the ion beam is sufficiently nondiverging [6].</p>
+<div class="row fig" id="fig01">
+<a name="fig01"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A method to produce plasma in neutron generator devices is using electrostatic and magnetostatic fields. For example, Penning ions sources [7] use electrostatic fields to separate the nuclei of deuterium or tritium of its electron. The electrons are accelerated into the plasma chamber by means of the electrostatic fields generated by a cathode and an anode to produce more ionization helping to sustain the plasma. Analysis done here give an idea of the physical quantities as product of this interaction.</p>
+<p></p>
+<p>A beam of electrons interacting with a plasma will be simulated with the goal of describing the PIC code used in the beam optics simulations of particle accelerators, and in this article in our plasma simulation inside of an ion source. The idea of this code will be depicted.</p>
+<p></p>
+<p>Problems found in plasma physics encourage the planning of computational simulations that also contribute to the development of a plasma theory. Computer simulations of plasma became a great physical planning tool to provide prognosis of performance in the physical plasma applications such as neutron generator as well as fusion reactors and other equipments.</p>
+<p></p>
+<p>Based on evaluation of the plasma behavior under particular conditions defined by electron beam injected into a steady state plasma, a variety of concepts will be examined. The investigation will be done on a weak beam, generated in space and time in terms of electric field, electric potential, kinetic energy, field energy and total energy (kinetic plus energy stored in electrostatic field). In the following sections, the required concepts of the basic theory of plasma computer simulations and likewise the necessary mathematical and physical principles of the plasma physics will be discussed.</p>
+<p></p>
+<p>
+      <b>2. Preliminary concepts</b>
+    </p>
+<p></p>
+<p>Simulation of plasmas is performed by basically solving the equation of motion of the group of charged particles interacting with each other. When appropriate methods are used, relatively small systems can indeed simulate accurately the collective behavior of real plasmas.</p>
+<p></p>
+<p>
+      <b>2.1. The electrostatic model</b>
+    </p>
+<p></p>
+<p>The model predicts the behavior of charged particles motion due to forces of their own and applied fields. Physical examination is rooted in the fact that a charged particle produces a field - electric field anyway and magnetic field if it is in motion, a force is generated due to the interaction of the field(s) with other particles, this force determines the equation of motion.</p>
+<p></p>
+<p>The fields are calculated through Maxwell equations by knowing the positions of the particles and their velocities. The forces on the particles are found using the electric and magnetic fields in the Newton-Lorentz equation. Initially the fields are calculated from the first charge and current densities, then the particles are moved to small distances and subsequently the fields are recalculated due to new positions and velocities which the particles acquire; this process is repeated for many time steps. The one dimensional geometry model, treated here, is shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig02"><span class="sci-ico-fileFigure"></span>Fig. 2</a>.</p>
+<div class="row fig" id="fig02">
+<a name="fig02"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>2.2. Mathematical description and considerations</b>
+    </p>
+<p></p>
+<p>The model employed here is the Particle in Cell (PIC) [8], originated from the work of J.M. Dawson [9-11] in the late fifties. In this model, the plasma is represented by macroparticles, since each particle used in the simulation represents thousands of particles of a real experiment. The macroparticles are used to represent the system and thus include its kinetic behavior. PIC code is able to integrate in time the trajectories of a huge numbers of charged particles in their self-consistent electrostatic fields. The PIC system assumes that particles do not interact with each other directly, but through the fields which they produce according to the Maxwell's equations. Particles can be located anywhere in space; nevertheless, the field quantities are calculated on a fixed grid.</p>
+<p></p>
+<p>Computational cycle starts with the knowledge of the initial particle position <i>x<sub>i</sub></i> from which the charge density ρ(xn) is found at the grid points xn by interpolation </p>
+<p></p>
+<p>
+      <div class="row fig" id="b3feef78e45ac06df3f63cbb9f644a763a94b922">
+<a name="b3feef78e45ac06df3f63cbb9f644a763a94b922"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgb3feef78e45ac06df3f63cbb9f644a763a94b922"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/b3feef78e45ac06df3f63cbb9f644a763a94b922.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p> in which <i>S</i> is the particle shape function which replaces point charges with a finite size charge cloud to reduce close range collision effects. The particle charge is <i>q</i><sub>i</sub> with center <i>x<sub>i</sub></i> [12]. Next, the electric field <i>E</i>(<i>x<sub>n</sub></i>) is found at the grid points by solving Poisson's Equation</p>
+<p></p>
+<p>
+      <div class="row fig" id="4c60fbf4b3481debb1964b12b89b211889f0230c">
+<a name="4c60fbf4b3481debb1964b12b89b211889f0230c"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg4c60fbf4b3481debb1964b12b89b211889f0230c"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/4c60fbf4b3481debb1964b12b89b211889f0230c.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>using the Fast Fourier Transform [13]. This electric field is then used to calculate the force on each particle whose trajectories are updated by integrating Newton's Law,</p>
+<p></p>
+<p>
+      <div class="row fig" id="583c78118747c15b8e6408f641ef7a571a993e51">
+<a name="583c78118747c15b8e6408f641ef7a571a993e51"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg583c78118747c15b8e6408f641ef7a571a993e51"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/583c78118747c15b8e6408f641ef7a571a993e51.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p> The velocity and position of each particle are advanced in time using a time centered leap-frog scheme [14]</p>
+<p></p>
+<p>
+      <div class="row fig" id="94da199a8a61081094b922fc5ef2773119f31120">
+<a name="94da199a8a61081094b922fc5ef2773119f31120"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg94da199a8a61081094b922fc5ef2773119f31120"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/94da199a8a61081094b922fc5ef2773119f31120.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>This cycle then is repeated for the duration of the simulation. Diagnoses are computed along the way and all lengths are normalized to the grid spacing. These lengths are related back to physical lengths later.</p>
+<p></p>
+<p> PIC code applied in simulations of charged particle dynamics or beam optics of the transport system in particle accelerators is well discussed in the literature [15] and used in various software as CST Particle Studio [16].</p>
+<p></p>
+<p>
+      <b>2.3. Computational cycle: brief remarks</b>
+    </p>
+<p></p>
+<p>At each time step, the algorithms solve the field for the particles and then move it. This cycle is illustrated in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig03"><span class="sci-ico-fileFigure"></span>Fig. 3</a>.</p>
+<div class="row fig" id="fig03">
+<a name="fig03"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>At <i>t</i> = 0, the cycle is initiated jointly with proper initial condition of the particle position and velocity. Numbers of time steps are dictated, thus the computer runs printing out different diagnoses in form of snapshots at particular times, as kinetic energy <i>vs</i>. time, potential or field distributions, for example.</p>
+<p></p>
+<p>
+      <b>3. Instability analysis and considerations on the simulation</b>
+    </p>
+<p></p>
+<p>The Eq. (7) shows the relation of dispersion used by the code for this simulation</p>
+<p></p>
+<p>
+      <div class="row fig" id="4c78d7f6e10a0a59dc55f94340713a8cbe9dbd9f">
+<a name="4c78d7f6e10a0a59dc55f94340713a8cbe9dbd9f"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg4c78d7f6e10a0a59dc55f94340713a8cbe9dbd9f"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/4c78d7f6e10a0a59dc55f94340713a8cbe9dbd9f.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Usually the injected beam density η<i><sub>b</sub></i> is much smaller than the plasma density η<i><sub>p</sub></i>, such that <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/a5932917de855ca9404f2b3c5ae41a62ac20907b.jpg">&lt;&lt;<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/403dfc0dad69d5af2a187cdc0b7d7d5dc054f68b.jpg"> , where ω<sub>b</sub> is the beam frequency and ω<sub>p</sub> is the plasma frequency. This hypothesis is the vital principle of the called weak-beam model [17]. The interactions in weak-beam model are of type electron-electron with a static neutralizing ion background, that is <i>m</i><sub>i</sub>/<i>m</i><sub>e</sub> → infinity, where <i>m</i><sub>i</sub> and <i>m</i><sub>e</sub> are the ion and the electron mass respectively. The plasma frequency ω<sub>p</sub> is prevailing and the interesting wave numbers are close to <i>k</i> = ω<sub>p</sub>/υ<sub>0</sub>, where υ<sub>0</sub> is the electron beam velocity.</p>
+<p></p>
+<p> The instability inspected here is due to the interaction of plasma with a weak (by choosing <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/a5932917de855ca9404f2b3c5ae41a62ac20907b.jpg">/<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/403dfc0dad69d5af2a187cdc0b7d7d5dc054f68b.jpg"> = 0.001) beam, passing through it. The crucial purpose of this simulation is the understanding of general plasma behavior under the described circumstances, without interest in specific data in the graphs. Then, the more important characteristic that will be analyzed is the general behavior of the curves.</p>
+<p></p>
+<p> With <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/a5932917de855ca9404f2b3c5ae41a62ac20907b.jpg">/<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/403dfc0dad69d5af2a187cdc0b7d7d5dc054f68b.jpg"> &lt;&lt; 1, particles of the plasma could be considered as a linearized ﬂuid or assumed by a linear susceptibility. one essential observation is if the plasma frequency presents a linear response to the beam, there is freedom of choose a small value for q/m to make sure that the plasma keeps linear [18]. this permits to use a small number of plasma particles, as few as one per cell. the diagnosis studied here is obtained from xes1 one dimensional plasma simulation code [19]. simulation results will be shown in all graphs at the same time in the end of simulation, 251494 µs, by means of the characteristics of interaction of the cold plasma and cool electron beam, which will be presented in diagnoses. </p>
+<p></p>
+<p>A cold plasma is classically characterized by the situation where there is a low degree of ionization. rigorously, a cold plasma is one in which ionized electrons do not have sufficient energy to escape from the inﬂuence of its corresponding ion, and thus do not exhibit random motion [20]. a cool electron beam is drifting through cold unperturbed plasma. the low temperature of the beam avoids the non-physical cold beam instability, so the only phenomenon is the growth of the physical beam plasma instability [21]. the distribution function of the cool electrons was described by Gyergyek and Èerèek [22].</p>
+<p></p>
+<p>The parameters used in the simulation jointly with its values are listed in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalTabletab01"><span class="sci-ico-fileTable"></span>Table 1</a>. Length of the grid is referring to stage of the computational cycle. Number of particles of the plasma refers to the particles that interact with the beam, <i>i.e</i>. electrons.</p>
+<div class="row table" id="tab01">
+<a name="tab01"></a><div class="col-md-4 col-sm-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+      
+    <br>
+</div>
+</div>
+<p></p>
+<p>
+      <b>4. Simulation results</b>
+    </p>
+<p></p>
+<p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Figure 4</a> shows the electric field vs. position at a specific time. The electric field is smoother than the density of charge, since the spatial integral of the charge density is the electric field. XES1 code uses the electric field to determine the electrostatic force on particles in the mover [23]. The electric field observed in the diagnosis is periodic, as it should be according to theoretical model proposed.</p>
+<div class="row fig" id="fig04">
+<a name="fig04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>The potential diagnosis displayed in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig05"><span class="sci-ico-fileFigure"></span>Fig. 5</a> shows the value of the potential at the grid points. The potential is the double spatial integral of the density, it presents even less noise than the electric field as one can see comparing the diagnosis shown in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a>. The potential is also periodic, as expected. The profiles of electric potential and electric field vary exceedingly in space and time during each cycle. </p>
+<div class="row fig" id="fig05">
+<a name="fig05"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p><a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig06"><span class="sci-ico-fileFigure"></span>Figure 6</a> shows the time evolution of field energy (FE). One can see that the FE oscillates substantially in time, as predictable by exceeding variation observed in electric field in position (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig04"><span class="sci-ico-fileFigure"></span>Fig. 4</a>) and time (while the simulation is running). The mean behavior of FE does not vary appreciably.</p>
+<div class="row fig" id="fig06">
+<a name="fig06"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Diagnoses of kinetic energy (KE) are displayed in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig07"><span class="sci-ico-fileFigure"></span>Fig. 7</a>, these analysis are made as a function of the time history of the total kinetic energy for all species.</p>
+<div class="row fig" id="fig07">
+<a name="fig07"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Total energy (TE) is evaluated in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig08"><span class="sci-ico-fileFigure"></span>Fig. 8</a>. This diagnostic displays the time history of the total energy of all species, plasma and beam; <i>i.e</i>. total energy = kinetic + field energies. This history is a semi-log plot, calculated from log (<i>TEi</i>) = log (<i>KEi</i> + <i>FEi</i>). The total energy of a given simulation should be conserved. As showed in <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig07"><span class="sci-ico-fileFigure"></span>Fig. 7</a>, the total energy is certainly an increasing function in time, since the plasma state is being continually disturbed by the beam, and the total kinetic energy is likewise an increasing function in time.</p>
+<div class="row fig" id="fig08">
+<a name="fig08"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>An interest reader can download the code and perform by himself new simulations, experimenting with parameters. XES1 is a free software and can be downloaded in Berkeley web site indicated in Ref. [19]. A manual is available in Ref. [23].</p>
+<p></p>
+<p>
+      <b>5. Conclusion</b>
+    </p>
+<p></p>
+<p>We have studied the behavior of a plasma instabilized by an injected beam of electrons, surveying and illustrating some basic concepts of plasma physics theory and simulations. This article showed a simple one dimensional code that allows exploring some ideas of this branch of physics. The PIC code was introduced by means of simple equations of dynamics and electrodynamics, and the base of the computational design was described. Simulation results explored in the diagnosis showed an expected behavior of the analyzed physical quantities, as was reported and discussed. Analysis conducted allows a better conception of the physical parameters used for describing the essential behavior of the plasma disturbed by an electron beam. The application of the PIC in accelerator devices was stated. The review can be used for appreciating the principle of PIC code focused on the analysis of the beam optics in the transport system of a neutron generator, to have an idea of the plasma behavior submitted to beam of electrons accelerated by an electrostatic field into a plasma chamber and also for stimulating the study of the plasma physics in other types of investigations.</p>
+<p></p>
+<p>
+      <b>Acknowledgments</b>
+    </p>
+<p></p>
+<p>The authors are thankful to CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico, due to the scholarship and the financial support by CNPq process n. 134484/2009-6. We are grateful to PTSG research group due to the XES1 code.</p>
+<p></p>
+<p>Recebido em 17/9/2009; Aceito em 27/10/2009; Publicado em 15/2/2011 </p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:wagnerleite@ymail.com">wagnerleite@ymail.com</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1]  A. Dinklage, T. Klinger, G. Marx and L. Schweikhard, <i>Plasma Physics: Confinement, Transport and Collective Effects</i> (Springer, Berlin, 2005).</div></li>
+<li><div>[2]  Y. Wu, J.P. Hurley, Q. Ji, J. Kwan and K.N. Leung, in: <i>AIP Conference Proceedings</i> (Fort Worth, 2009), v. 1099, p. 614.</div></li>
+<li><div>[3]  Compact accelerator neutron generator: http://www.aip.org/tip/INPHFA/vol-9/iss-6/p22.html  (2010).</div></li>
+<li><div>[4]  I. WORPOLE Schematic Design of a Sealed-Tube Neutron Generator with a Penning Ion Source: http://www.linkedin.com/pub/ian-worpole/4/259/155 (2010).</div></li>
+<li><div>[5]  I. G. Brown, <i>The Physics and Technology of Ions Sources</i> (Wiley-VCH, Berlin, 2004).</div></li>
+<li><div>[6]  K.N. Leung, T.P. Lou and J. Reijonen, US Patent 7342988 B2, (2008).</div></li>
+<li><div>[7]  B.K. Das and A. Shyam, Review of Scientific Instruments 79, 123305 (2008).</div></li>
+<li><div>[8]  M.M. Woolfson and M.S. Woolfson, <i>Mathematics for Physics</i> (Oxford University Press, Oxford, 2006).</div></li>
+<li><div>[9]  J.M. Dawson and A.T. Lin, <i>Particle Simulation, Handbook of Plasma Physics</i> (Elsevier Science Publishers, Amsterdam, 1984), v. 2.</div></li>
+<li><div>[10]  J.M. Dawson, Reviews of Modern Physics 55, 403 (1983).</div></li>
+<li><div>[11]  R. Hockney and J. Eastwood, <i>Computer Simulation Using Particles</i> (McGraw-Hill, New York, 1981).</div></li>
+<li><div>[12]  T. Tajima, <i>Computational Plasma Physics: With Application to Fusion and Astrophysics</i> (Westview Press, Boulder, 1989).</div></li>
+<li><div>[13]  J.F. James, <i>A Student's Guide to Fourier Transforms: With Applications in Physics and Engineering</i> (Cambridge University Press, Cambridge, 2002).</div></li>
+<li><div>[14]  R.M.M. Mattheij, <i>Partial Differential Equations: Modeling, Analysis, Computation (Siam Monographs on Mathematical Modeling and Computation)</i> (Society for Industrial &amp; Applied Mathematics, Philadelphia, 2005).</div></li>
+<li><div>[15]  CTS SUITE: Charged Particle Simulation: http://www.cst.com/Content/Documents/Products/CST_Charged_Particle_Simulation_low.pdf (2010).</div></li>
+<li><div>[16]  S. Humphries, Charged Particles Beams: http://www.fieldp.com/freeware/cpb_humphries.pdf (2010).</div></li>
+<li><div>[17]  J. Büchne, C. Dum and M. Scholer, <i>Space Plasma Simulation</i> (Springer-Verlag, Berlin, 2003).</div></li>
+<li><div>[18]  C.K. Birdsall and A.B. Langdon, <i>Plasma Physics via Computer Simulation</i> (Taylor &amp; Francis, Boca Raton, 1991).</div></li>
+<li><div>[19]  9 XES1 Code: http://langmuir.nuc.berkeley.edu/pub/codes/xes1/ (2010).</div></li>
+<li><div>[20]  Plasma Dictionary: Cold Plasma: http://plasmadictionary.llnl.gov (2010).</div></li>
+<li><div>[21]  The Plasma Theory and Simulation Group: http://ptsg.eecs.berkeley.edu/ (2010).</div></li>
+<li><div>[22]  T. Gyergyek and M. Èerèek, Czechoslovak Journal of Physics 54, 431 (2004).</div></li>
+<li><div>[23]  Particle simulations of 1-D Vlasov Problems: ES1 Manual: http://w3.pppl.gov/~hammett/courses/trieste01/es1.pdf  (2010).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        wagnerleite@ymail.com.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Publication Dates">
+<h1 class="articleSectionTitle">Publication Dates</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publication in this collection</strong><br>15 Mar 2011</li>
+<li>
+<strong>Date of issue</strong><br>Sept 2010</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="History">
+<h1 class="articleSectionTitle">History</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Received</strong><br>17 Sept 2009</li>
+<li>
+<strong>Accepted</strong><br>15 Feb 2011</li>
+<li>
+<strong>Reviewed</strong><br>27 Oct 2009</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">About the authors</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Wagner Leite Araujo </strong><br><div>
+          ,  Belo Horizonte,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Minas Gerais,  Departamento de Engenharia Nuclear ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Tarcisio Passos Ribeiro de Campos </strong><br><div>
+          ,  Belo Horizonte,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Minas Gerais,  Departamento de Engenharia Nuclear ,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figures | Tables</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figures
+                    (8)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tables
+                    (1)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig02"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig03"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="tables"><div class="row table">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalTabletab01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div></div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/6b80581f203dd04f8269fc6df5d3d959276f6b5a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/6b80581f203dd04f8269fc6df5d3d959276f6b5a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/bf447138d76e05408f7e2fc6c47628b3dc50ed96.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/bf447138d76e05408f7e2fc6c47628b3dc50ed96.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/9ccaf5c445a92e0652b32900fc778c10524e2634.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/9ccaf5c445a92e0652b32900fc778c10524e2634.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/3371d52633e4b202f9db0f76d4b1b4200f5231fc.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/3371d52633e4b202f9db0f76d4b1b4200f5231fc.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/283c79be3d430f4be10b65dc93787c6314f86c30.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/283c79be3d430f4be10b65dc93787c6314f86c30.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/5f32e7b2b3e00a113db2c132547b971a7f83dc10.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/5f32e7b2b3e00a113db2c132547b971a7f83dc10.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/be06804d4c32b8d1d730bc384afeaf0047292f05.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/be06804d4c32b8d1d730bc384afeaf0047292f05.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/d5d800c642b12fbbab08ca3b46c8956378a3b206.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/d5d800c642b12fbbab08ca3b46c8956378a3b206.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTabletab01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/c9f74c0bbace32c71cf166e3ce0d45f842cb1acf.jpg" target="_blank" data-placement="left" title="Open new window"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileTable"></span><strong></strong><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/c9f74c0bbace32c71cf166e3ce0d45f842cb1acf.jpg"></div>
+<div class="modal-footer"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgb3feef78e45ac06df3f63cbb9f644a763a94b922" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/b3feef78e45ac06df3f63cbb9f644a763a94b922.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/b3feef78e45ac06df3f63cbb9f644a763a94b922.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg4c60fbf4b3481debb1964b12b89b211889f0230c" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/4c60fbf4b3481debb1964b12b89b211889f0230c.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/4c60fbf4b3481debb1964b12b89b211889f0230c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg583c78118747c15b8e6408f641ef7a571a993e51" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/583c78118747c15b8e6408f641ef7a571a993e51.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/583c78118747c15b8e6408f641ef7a571a993e51.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg94da199a8a61081094b922fc5ef2773119f31120" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/94da199a8a61081094b922fc5ef2773119f31120.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/94da199a8a61081094b922fc5ef2773119f31120.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg4c78d7f6e10a0a59dc55f94340713a8cbe9dbd9f" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/4c78d7f6e10a0a59dc55f94340713a8cbe9dbd9f.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/6JJVzvVR9nL3cryjrZc3SPD/4c78d7f6e10a0a59dc55f94340713a8cbe9dbd9f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">How to cite</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copy</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Araujo, Wagner Leite and Campos, Tarcisio Passos Ribeiro deIssues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator. Revista Brasileira de Ensino de Física [online]. 2010, v. 32, n. 3 [Accessed CURRENTDATE] , 3302. Available from: &lt;https://doi.org/10.1590/S1806-11172010000300002&gt;. Epub 15 Mar 2011. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172010000300002.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?lang=en&amp;format=pdf">
+                      
+                        Inglês
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Issues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator&#34; &#34;Araujo, Wagner Leite&#34; &#34;Campos, Tarcisio Passos Ribeiro de&#34; &#34;2010&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Issues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator&#34; &#34;Araujo, Wagner Leite&#34; &#34;Campos, Tarcisio Passos Ribeiro de&#34; &#34;2010&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/6JJVzvVR9nL3cryjrZc3SPD/?lang=en">English</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172010000300002&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172010000300002" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172010000300002">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172010000300002" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172010000300002">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172010000300002"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172010000300002" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172010000300002">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172010000300002" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Issues on beam-plasma instability: early simulations focusing on the development of a compact neutron generator
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172010000300002">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

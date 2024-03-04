@@ -1,0 +1,2651 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas"/>
+<meta property="og:description" content="Este artigo visa apresentar um algoritmo descritivo de gaps energéticos em semicondutores..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Araujo, Wagner Leite">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Minas Gerais">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="34"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_doi" content="10.1590/S1806-11172012000100011"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Este artigo visa apresentar um algoritmo descritivo de gaps energéticos em semicondutores utilizando o modelo de Kronig-Penney. O código desenvolvido proporciona uma ferramenta didática na descrição de zonas proibidas em redes cristalinas, tema comumente tratado em cursos de estrutura da materia e física de estado sólido. Os cálculos presentes no algoritmo seguem detalhados. O principal objetivo e descrever uma metodologia para se obter curvas da energia vs. número de onda, tratando o coeficiente de transmissão do material como constante, caso bem conhecido na literatura, e como função da energia"></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2012-03"></meta>
+<meta name="citation_keywords" content="modelo de Kronig-Penney"></meta><meta name="citation_keywords" content="funções de bloch"></meta><meta name="citation_keywords" content="gaps de energia"></meta><meta name="citation_keywords" content="estruturas eletrônicas em um cristal"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2012.v34n1/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2012.v34n1/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172012000100011 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos Gerais</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 34 
+                (1)
+            <span class="_separator"> • </span>Mar 2012</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172012000100011" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172012000100011</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172012000100011"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Algorithm for simulation of forbidden zones in electronic band structure</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Wagner Leite Araujo </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Belo Horizonte,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Minas Gerais,  Departamento de Engenharia Nuclear ,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre o autor</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Este artigo visa apresentar um algoritmo descritivo de gaps energéticos em semicondutores utilizando o modelo de Kronig-Penney. O código desenvolvido proporciona uma ferramenta didática na descrição de zonas proibidas em redes cristalinas, tema comumente tratado em cursos de estrutura da materia e física de estado sólido. Os cálculos presentes no algoritmo seguem detalhados. O principal objetivo e descrever uma metodologia para se obter curvas da energia vs. número de onda, tratando o coeficiente de transmissão do material como constante, caso bem conhecido na literatura, e como função da energia</p>
+<p>modelo de Kronig-Penney; funções de bloch; gaps de energia; estruturas eletrônicas em um cristal</p>
+</div>
+<hr>
+<div>
+<p>This paper presents a descriptive algorithm of energy gaps in semiconductors applying the Kronig-Penney model. The code provides a teaching tool in the description of forbidden zones in crystalline lattices, which is an issue usually treated in structure of matter and solid state physic courses. All calculations contained in the algorithm is detailed. The main goal is to describe a methodology to obtain curves of energy vs. wave number, addressing the transmission coefficient of the material as constant, well known in the literature, and as a function of energy</p>
+<p>Kronig-Penney model; bloch functions; energy gaps; electronic structures in a crystal</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>ARTIGOS GERAIS</b>
+    </p>
+<p></p>
+<p>
+      <b>Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas</b>
+    </p>
+<p></p>
+<p>
+      <b>Algorithm for simulation of forbidden zones in electronic band structure</b>
+    </p>
+<p></p>
+<p>Wagner Leite Araujo<span class="ref footnote"><sup class="xref"><b>1</b></sup><span class="refCtt closed"><span class="refCttPadding">
+        <strong class="fn-title">1</strong>
+         E-mail: 
+        
+          wagnerleite@ufmg.br
+        
+      </span></span></span></p>
+<p></p>
+<p>Departamento de Engenharia Nuclear, Universidade Federal de Minas Gerais, Belo Horizonte, MG, Brasil </p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Este artigo visa apresentar um algoritmo descritivo de <i>gaps</i> energéticos em semicondutores utilizando o modelo de Kronig-Penney. O código desenvolvido proporciona uma ferramenta didática na descrição de zonas proibidas em redes cristalinas, tema comumente tratado em cursos de estrutura da materia e física de estado sólido. Os cálculos presentes no algoritmo seguem detalhados. O principal objetivo e descrever uma metodologia para se obter curvas da energia <i>vs.</i> número de onda, tratando o coeficiente de transmissão do material como constante, caso bem conhecido na literatura, e como função da energia.</p>
+<p></p>
+<p><b>Palavras-chave:</b> modelo de Kronig-Penney, funções de bloch, gaps de energia, estruturas eletrônicas em um cristal.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>This paper presents a descriptive algorithm of energy gaps in semiconductors applying the Kronig-Penney model. The code provides a teaching tool in the description of forbidden zones in crystalline lattices, which is an issue usually treated in structure of matter and solid state physic courses. All calculations contained in the algorithm is detailed. The main goal is to describe a methodology to obtain curves of energy <i>vs.</i> wave number, addressing the transmission coefficient of the material as constant, well known in the literature, and as a function of energy.</p>
+<p></p>
+<p><b>Keywords:</b> Kronig-Penney model, bloch functions, energy gaps, electronic structures in a crystal.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>Elétrons de um único átomo ocupam orbitais que definem um ajuste discreto de energia. Quando átomos são colocados juntos em uma molecula, seus orbitais se separam como em uma oscilação acoplada. Isso produz um número de orbitais moleculares proporcional ao número de átomos [1]. Quando milhares de átomos interagem uns com os outros formando um sólido, o número de orbitais se torna excessivamente grande e a diferença de energia entre eles se torna muito pequena; assim, os níveis podem ser considerados, praticamente, bandas contínuas de energia e não níveis discretos como em átomos isolados. Contudo, alguns intervalos de energia não contém orbitais, não importando quantos átomos estejam agregados; isso da origem aos <i>gaps</i> de energia.</p>
+<p></p>
+<p>O objetivo desse artigo é descrever um algoritmo, baseado no modelo de Kronig-Penney, que conduz a curva da energia em função do número de onda para o coeficiente de transmissão constante, sendo essa, bem conhecida na literatura [2-5] e, também, dependente da energia, cujo esboço não foi encontrado em textos relacionados. Esse algoritmo pode ser facilmente modificado, possibilitando novos testes e diagnósticos. O modelo de Kronig-Penney serúa previamente abordado, após considerações sobre o teorema de Bloch [6]. O desígnio final e averiguar a presença das zonas proibidas. Os cálculos serão detalhados no Apêndice A. No Apêndice B, encontra-se um algoritmo projetado para o Scilab [7], que e um programa livre. Esse algoritmo pode ser facilmente modificado possibilitando novos testes e diagnósticos.</p>
+<p></p>
+<p>
+      <b>2. Considerações iniciais</b>
+    </p>
+<p></p>
+<p>O comportamento de elétrons transitando no interior de um cristal semicondutor pode ser comparado a partículas em uma caixa tridimensional cujo interior é demasiadamente complicado. Os átomos dessa estrutura vibram em posições específicas na rede. Em cristais reais existem defeitos estruturais que se originam, por exemplo, de átomos perdidos e impuros. Uma maneira de simplificar o modelamento matemático do problema é assumir que tais defeitos e as vibrações do núcleo do átomo conduzirão a uma perturbação de segunda ordem. De fato, essa hipótese expressa a estrutura da rede como perfeita e os átomos como fixados em posições bem determinadas.</p>
+<p></p>
+<p>O modelo de Kronig-Penney [8] será empregado para as análises tratadas nesse artigo. Este, admite soluções analíticas, permitindo simplificações algebricas. A estrutura de bandas eletrônicas está diretamente relacionada a várias propriedades macroscópicas de materiais e, por conseguinte, tem desempenhado um interesse vasto na área de semicondutores. Materiais hipoteticos são investigados por cálculos envolvendo tais estruturas [9-12]; quando esses materiais mostram propriedades atrativas, despertam interesse e, quando possível, são preparados em ensaios experimentais.</p>
+<p></p>
+<p>A teoria de Kronig-Penney é um arqétipo unidimensional da mecânica quântica na análise de redes cristalinas. Apesar das simplificações, a estrutura de bandas eletrônicas oriunda desse modelo proporciona o estudo de várias características referentes a composições de bandas que resultam de modelos mais complexos envolvendo cálculos numéricos extensos.</p>
+<p></p>
+<p>A análise reportada por este trabalho terá como base o estudo de uma partícula presente em uma estrutura unidimensional dentro de uma rede cristalina periódica. Este problema pode ser simplificado tratando uma barreira de potencial em três dimensões (uma partícula em uma caixa [13]) de forma unidimensional. O potencial que define tal barreira e causado pelos íons na estrutura periódica do cristal. Essa estrutura cria um campo elétromagnético de forma que os elétrons ficam sujeitos a um potencial regular. Isso e uma extensão do modelo do elétron livre [14], que assume um potencial nulo dentro da estrutura.</p>
+<p></p>
+<p>
+      <b>3. Formação de bandas no modelo de elétron livre</b>
+    </p>
+<p></p>
+<p>
+      <b>3.1. O teorema de Bloch</b>
+    </p>
+<p></p>
+<p>Se o potencial <i>U</i> (<i>x</i>) e uma função periódica tal que <i>U (x</i> + a) = <i>U</i> (<i>x</i>), o teorema de Bloch pode ser escrito como <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><i> (x + a) = e <sup>ika</sup></i><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg">(<i>x</i>), onde <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg">(<i>x</i>) representa a função de onda unidimensional, <i>k</i> o número de onda <sup>2</sup><i>π</i> /<i>λ</i>), <i>α</i> a distância interatômica, <i>x</i> a distância na rede cristalina e <i>i</i> = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/156d5e057d7a1b50afa05f32cb4cbb2836a9fdab.jpg"> . De forma equivalente, o teorema ainda pode ser escrito como <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"> (<i>x</i>) = <i>e<sup>ikx</sup>u</i> (<i>x</i>) , sendo que a função de onda da célula tem a mesma periodicidade do potêncial, isso siginifica que <i>u (x + a) = u</i> (<i>x</i>). Então, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"> (x + a) = <i>e<sup>ik</sup></i> (x + a) u (x + a) = <i>e<sup>ika</sup> e<sup>ikx</sup> u (x) = e <sup>ika</sup></i><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"> (<i>x</i>). A função de onda <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"> (<i>x</i>) claramente não é periódica. Ela tem a forma de uma onda plana ( <i>e</i>modulada por uma função <i>u</i> (<i>x</i>) que reflete a periodicidade da célula cristalina e a periodicidade do potencial.</p>
+<p></p>
+<p>O uso de condições de contorno periódicas em um arranjo de <i>N</i> átomos implica que <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"> (<i>x</i>) = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"> (<i>x+ Na</i>) = <i>e<sup>ikNa </sup></i><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"> (<i>x</i>), então<i> e<sup>ikNa</sup></i>= 1 =e<sup>2</sup>η<i>π</i> assim <i>k</i>=<sup>2</sup>η<i>π</i>/Na, para <i>η</i> = 0, ±1, ±2,± <sup>N</sup>/2. Para um cristal com dimensões finitas, o número de onda <i>k</i> pode assumir apenas valores inteiros limitados por ± <sup><i>π</i></sup>/a. Em um cristal real, a grande quantidade de átomos implica em valores de <i>k</i> muito próximos e, assim, definem praticamente uma continuidade na energia.</p>
+<p></p>
+<p>Vale ressaltar que razao do número de onda <i>k</i> ser proporcional a<sup><i>ηπ</i></sup>/<i>α</i> é devido a formação de ondas estacionárias para os estados nas extremidades das barreiras. As funções de onda interferem construtivamente, com diferença de fase de 2<i>π</i> com a função de onda do vizinho mais próximo como mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>. A onda <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub>1</sub> (<i>x</i>) interfere construtivamente com <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub>2</sub> (<i>x</i>). Então, pode-se dizer que <i>λ</i>= 2<i>α</i>. Com essa consideração, a interferencia será construtiva sempre que 2<i>α</i> = <i>λ</i>, 2<i>λ</i>, 3<i>λ</i>, ... = <i>πη</i>, o que implica que <i>λ</i> =<sup> 2</sup><i><sup>α</sup></i>/<i>η</i>. Porém <i>λ</i> =<sup> 2</sup><sup><i>π</i></sup>/<i>k,</i> logo, k = <i>ηπ</i>/<i>α</i>. </p>
+<div class="row fig" id="fig1">
+<a name="fig1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>3.2. O modelo de Kronig-Penney</b>
+    </p>
+<p></p>
+<p>O modelo de Kronig-Penney é fundamentado em uma rede cristalina unidimensional e infinita, onde se utiliza uma solução analítica conhecida da equação de Schrödinger para uma barreira de potencial [15]. Esta equação, originada do trabalho de Erwin Schrödinger [16], descreve a evolução espacial e/ou temporal de um sistema quântico e, quando se remove a dependência temporal, é dada pela Eq. (1).</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq01">
+<a name="eq01"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/3423b300875aafa4a5fd9d27721130f35579a3f7.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>O modelo de Kronig-Penney se basea em resolver a Eq. (1) na célula ilustrada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig2"><span class="sci-ico-fileFigure"></span>Fig. 2</a>, região <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/57e8dffca1c80cf91103ab4bbfa1c169269e78e7.jpg"> A periodicidade da rede cristalina e por conseguinte, a periodicidade dos potenciais influenciam nas funções de onda. Tal comportamento é considerado por intermédio do teorema de Bloch, onde os potenciais periódicos reais são aproximados por potenciais periódicos em forma de barreira, como descrito na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig2"><span class="sci-ico-fileFigure"></span>Fig. 2</a>.</p>
+<div class="row fig" id="fig2">
+<a name="fig2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>3.2.1 . Solução da equação de Schrödinger em uma barreira de potencial</b>
+    </p>
+<p></p>
+<p>Sejam <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><i><sub>e</sub></i> (<i>x</i>) e <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub><i>d</i></sub> (<i>x</i>) as soluções da Eq. (1), para uma onda propagante da esquerda para direita <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><i><sub>e</sub></i> (<i>x</i>) (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig3"><span class="sci-ico-fileFigure"></span>Fig. 3A</a>) e da direita para esquerda <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub><i>d</i></sub> (<i>x</i>) (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig3"><span class="sci-ico-fileFigure"></span>Fig. 3B</a>). Definem-se os números complexos <i>r</i> e <i>t</i> como o coeficiente de reflexão e de transmissão, respectiavamente. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig3"><span class="sci-ico-fileFigure"></span>Fig. 3</a>, <i>i</i> representa a onda incidente, <i>r</i> a porção refletida e <i>t</i> a parte transmitida da onda. Com isso, as soluções da Eq. (1) para os potenciais representados pelas Figs. <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig3"><span class="sci-ico-fileFigure"></span>3A</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig3"><span class="sci-ico-fileFigure"></span>3B</a> serão:</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq02_3">
+<a name="eq02_3"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1172f1937a56676d96053491f07f27c505ef8eb4.jpg">
+      </div></div>
+</div>
+    </p>
+<div class="row fig" id="fig3">
+<a name="fig3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Através do princípio da superposição, a combinação linear <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg">(<i>x</i>) = <i>α</i> <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><i><sub>e</sub></i> (<i>x</i>)+<i>B</i><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub><i>d</i></sub> (<i>x</i>) é solução da Eq. (1), já que <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><i><sub>e</sub></i> (x) e <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><i><sub>e</sub></i>(<i>x</i>) também são soluções.</p>
+<p></p>
+<p>O teorema de Bloch postula que</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq04">
+<a name="eq04"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/160954dfda7afa2759aa322ec7f02263f3d2223c.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>e que</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq05">
+<a name="eq05"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/fc94c270904023c8826a5c56251aff8943c4e60a.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Este teorema, em <div class="row formula" id="ecar04">
+<a name="car04"></a><div class="col-md-12"><div class="formula-container">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/666f14c32b763335255fdcf2b900f4f45357555e.jpg">, conduz a</div></div>
+</div></p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq06">
+<a name="eq06"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/6b1c3843e959610e824e8dcd5c8d7bc70772d31f.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Substituindo <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub><i>e</i></sub> (<i>x</i>) e <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub><i>d</i></sub> (<i>x</i>) das Eqs. (2) e (3) nas Eqs. (4) e (5), chega-se em um sistema de duas equações com duas varióveis que será resolvido para as incógnitas <i>α</i> e <i>B</i> (Eq. (6)). A solução deste sistema resulta na Eq. (7).</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq07">
+<a name="eq07"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/d177c1b50965375a731e76720ca7eed2c6c6f1eb.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Ao considerar o potencial periódico igual a zero em todo o cristal, tem-se |<i>t</i>|<sup>2</sup> = 1 e |<i>r</i>|<sup>2</sup> =0. Ou seja, a transmitância será 1 e não haverá nenhuma reflexão. De fato, a Eq. (7) é consistente com essa consideração. No limite onde não há nenhum potencial cos(<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1a697cc13f6e8bab9c5e8310f893d89a26a8cd19.jpg"><i>α</i>) = 1/2 <i>e<sup>ika</sup> + 1/2 e<sup>-ika</sup>.</i> Pontua-se que a relação: cos (<i>ax</i>) =<i>e<sup>iax</sup>+e<sup>-iax</sup></i>/2, permite escrever cos (<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1a697cc13f6e8bab9c5e8310f893d89a26a8cd19.jpg"><i>α</i>) = cos(<i>Ka</i>), isto é: <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1a697cc13f6e8bab9c5e8310f893d89a26a8cd19.jpg"><i>= k.</i> Assim, o perfil da energia será o mesmo do modelo de elétrons livres, <i>E</i>=<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/3067d7b6cc45da9ec70c553b45bb73cfe1a7aa27.jpg">; o que acontece quando se toma <i>U<sub>p</sub></i> (<i>x + Na</i>) = 0.</p>
+<p></p>
+<p>Desenvolvendo a Eq. (7), como detalhado no Apêndice 1, obtóem-se:</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq08">
+<a name="eq08"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/55a5219aaa6b8c93f5c5138e7e8107d57f7e5ea3.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <b>4. Bandas de energia e zonas de Brillouin</b>
+    </p>
+<p></p>
+<p> Através da Eq. (8), a razao matemática da formação linear de <i>gaps</i> de energia se torna clara. Nota-se que a função cos (<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1a697cc13f6e8bab9c5e8310f893d89a26a8cd19.jpg"><i>α</i>) só pode assumir valores no intervalo [-1,1], como |<i>t</i>| &lt; 1, a função <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/fc071401cd2ff3bd3c41b1b4e4c34d996203682b.jpg"> pode ser um número maior que 1. A energia em unidades de <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/355faf2cec79dd304c5df3f36d767d8919518f20.jpg"> é dada pela equação <i>E = k</i><sup>2</sup>. As zonas proibidas (os <i>gaps </i>de energia) resultam, naturalmente, deste evento, como mostra a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig4"><span class="sci-ico-fileFigure"></span>Fig. 4</a>.</p>
+<div class="row fig" id="fig4">
+<a name="fig4"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig4"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig5"><span class="sci-ico-fileFigure"></span>Fig. 5</a> mostra uma representação das bandas na zona reduzida. E possível esboçar as curvas de energia em um diagrama extendido como mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig6"><span class="sci-ico-fileFigure"></span>Fig. 6</a>. Nesse diagrama a energia <i>E</i> pode crescer indefinidamente ao longo do eixo do número de onda <i>k</i>. O esquema da zona extendida possibilita uma comparação mais prática com a curva característica do modelo do elétron livre que e definida pela parábola <i>E</i> = <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/3067d7b6cc45da9ec70c553b45bb73cfe1a7aa27.jpg">.</p>
+<div class="row fig" id="fig5">
+<a name="fig5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig6">
+<a name="fig6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig6"><span class="sci-ico-fileFigure"></span>Fig. 6</a> permite definir uma terminologia relevante em física do estado sólido, a zona de Brillouin. Tais zonas são numeradas em função de intervalos de energia ou de número de onda. Um exemplo e mostrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig4"><span class="sci-ico-fileFigure"></span>Fig. 4</a>, onde as zonas de Brillouin são definidas. Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig6"><span class="sci-ico-fileFigure"></span>Fig. 6</a>, a primeira zona de Brillouin e a região entre<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/e7d8aa995676f639c9d86d3b1a64a277adea0427.jpg"></p>
+<p></p>
+<p>
+      <b>5. O algoritmo</b>
+    </p>
+<p></p>
+<p>A construção do algoritmo se baseia na Eq. (8). Atraves desta, o algoritmo fornece a curva da energia <i>vs. ka.</i> A edificação da curva se dara em duas conjunturas:</p>
+<div><blockquote>
+      <p> A primeira com o coeficiente de transmissão <i>t</i> = 0, 8. </p>
+      <p> A segunda com a transmitancia variando com o <i>k;</i> para tal será escolhido um valor para a altura da barreira, <i>U</i><sub>0</sub>. </p>
+    </blockquote></div>
+<p></p>
+<p>O algoritmo empregara um processo interativo para gerar pares de coordenadas que esboçarão a curva pretendida. O eixo da energia será dado em unidades <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/355faf2cec79dd304c5df3f36d767d8919518f20.jpg">, possibilitando certa arbitrariedade na escolha de unidades de medida. Por exemplo, ao se escolher 2 Å para <i>α</i>, que e um valor plausível, diretamente se infere nas unidades do eixo da energia; isso significa que esse acoplamento de unidades permite que se escolha <i>α</i> = 1 m, que apesar de absurdo, não traz prejuízo qualitativo na representação gráfica.</p>
+<p></p>
+<p>O perfil da curva se dara no esquema da zona reduzida e na região positiva do produto <i>ka.</i> Para generalizarmos toda a primeira zona de Brillouin, bastaria espelhar o resultado para valores negativos de <i>ka. </i></p>
+<p></p>
+<p>Primeiramente e necessário definir linhas de comando para determinar os valores para a largura do poco de potencial a, coeficiente de transmissão <i>t,</i> fase <i>δ </i>e a acuidade do <i>plot</i> definida como <i>dk</i> (espacamento entre pares de coordenadas). Na linha seguinte, define-se o <i>k</i><sub>0</sub> para representar o valor inicial de k. Em seguida e necessário gerar um comando que impõe um processo iterativo. Tal processo faz o <i>i</i> variar entre zero e o número de iterações determinada pelo usuário. Essa operação se inicia pela Eq. (9)</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq09">
+<a name="eq09"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/0e97dd51c7b77838e5660ecffe9a87f3736c5710.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Na Eq. (10), <i>f</i> é definido para representar o lado esquerdo da Eq. (8)</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq10">
+<a name="eq10"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/73e37e772a1838962ed5cd666bd964403b8812e1.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1a697cc13f6e8bab9c5e8310f893d89a26a8cd19.jpg"> e dado por uma função arco-cosseno. Logo, torna-se necessário uma linha de comando condicional que limita o resultado de <i>f</i> entre- 1 e 1, antes da Eq. (10)</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq11">
+<a name="eq11"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/77766e8087eea463bcceec5bee6cf07fc41e86f6.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Na Eq. (11), o <i>k</i> e isolado. A Eq. (12) fornece o valor da energia</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq12">
+<a name="eq12"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/8f5ab842442610981f4b7f5b56bb5c27acf4b4ce.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Em seguida, gera-se um comando para determinar a energia em função de <i>ka</i> e/ou as coordenadas <i>E</i> e <i>k</i>. Temos assim a curva pretendida na primeira conjuntura. </p>
+<p></p>
+<p>A segunda conjuntura segue a mesma feição da primeira; contudo, deve-se definir a transmitôncia em relação à energia. Isso e realizado por meio da Eq. (13) para a energia maior que a barreira de potencial e pela Eq. (14) para a barreira maior que a energia. As Eqs. (13) e (14) são descritas por Eisberg e Resnick [15]</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq13_14">
+<a name="eq13_14"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/b2a8a5a96ecfa645d7c376f4b19c186babc8449c.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>onde <i>T</i> representa o inverso do coeficiente de transmissão.</p>
+<p></p>
+<p>Como na primeira conjuntura, e necessário gerar uma linha solicitando entradas para os parâmetros a, <i>dk, k</i><sub>o</sub>, <i>U</i><sub>o</sub>, <i>δ</i>. O mesmo comando condicional aplicado na primeira conjuntura atua na Eq. (9), depois na Eq. (12) e em seguida um novo comando condicional e requerido. Este comando seleciona as energias que serão aplicadas na Eq. (13) ou na Eq. (14), isto é , se <i>E &gt; U</i><sub>0</sub>, a energia será aplicada na Eq. (13); se <i>E &lt; U</i><sub>0</sub>, aplica-se <i>E</i> na Eq. (14). Deve ser garantido que os denominadores das Eqs. (13) e (14) não assumam valores nulos. Para resolver esse empecilho, basta coloca uma linha de comando que selecione valores diferentes de zero para o denominador dessas equações. A proxima linha de comando faz com que <i>f</i> receba o valor da transmitância, como na Eq. (10). Em seguida, calcula-se <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1a697cc13f6e8bab9c5e8310f893d89a26a8cd19.jpg"> por meio da Eq. (11) e se determina o comando para gerar a curva e/ou as coordenadas provedoras da curva.</p>
+<p></p>
+<p>
+      <b>6. Simulações e resultados</b>
+    </p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig7"><span class="sci-ico-fileFigure"></span>Fig. 7</a> mostra a curva obtida no caso da transmitância constante. Os dados de entrada foram <i>α</i> = 1, <i>dk</i> = 0, 01, <i>k</i><sub>o</sub> = 0, <i>δ</i> = 0, 2, <i>t</i> = 0, 8 e <i>i</i> variando de 0 a 500. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig8"><span class="sci-ico-fileFigure"></span>Fig. 8</a> mostra a simulação com <i>i</i> variando de 0 a 1500. Os <i>gaps</i> de energia ficaram bem evidentes.</p>
+<div class="row fig" id="fig7">
+<a name="fig7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="fig8">
+<a name="fig8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Na primeira simulação para a transmitancia variavel, a curva apresentou o perfil ilustrado na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig9"><span class="sci-ico-fileFigure"></span>Fig. 9</a>. Nesta, observa-se dois <i>gaps</i> de energia com um comportamento peculiar.</p>
+<div class="row fig" id="fig9">
+<a name="fig9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig10"><span class="sci-ico-fileFigure"></span>Fig. 10</a> apresenta um domínio maior na extensão da curva, para isso foi usado o dobro de iterações da simulação apresentada na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigfig9"><span class="sci-ico-fileFigure"></span>Fig. 9</a>. Ao aumentar o número de iterações não se observa mais zonas proibidas, isto e , a curva apresentou apenas dois <i>gaps</i> visíveis, ficando evidenciado após determinar vários intervalos iniciando de valores distintos de <i>k<sub>o</sub></i> e averiguando minuciosamente os diagnosticos.</p>
+<div class="row fig" id="fig10">
+<a name="fig10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>7. Conclusão</b>
+    </p>
+<p></p>
+<p>Nesse trabalho abordamos o teorema de Bloch e o modelo de Kronig-Penney seguido de um algoritmo que fornece curvas da energia <i>vs.</i> número de onda para a transmitância constante e variando com a energia, onde o escopo foi esboçar a existência dos <i>gaps</i> de energia em semicondutores. As zonas proibidas foram observadas em ambas as análises. A curva para o coeficiente de transmissão constante atingiu os mesmos resultados das obtidas na literatura. Para a conjuntura que utiliza o coeficiente de transmissão variavel, não foram encontrados dados na literatura para comparação. E deixado um algoritmo completo que segue a mesma id eia do descrito nesse artigo, onde o leitor pode experimentar novos paraômetros em suas proprias simulações.</p>
+<p></p>
+<p>
+      <b>Agradecimentos</b>
+    </p>
+<p></p>
+<p>Agradeço a Andre Tanus Ces ario pelo auxílo a esse trabalho, principalmente pelos c alculos apresentados no Apêndice 8.1, e aos pesquisadores Mario Sergio de Carvalho Mazzoni e Luiz Alberto Cury devido ao conhecimento e àas id eias compartilhadas.</p>
+<p></p>
+<p>Recebido em 2/3/2010; Aceito em 2/8/2011; Publicado em 2/3/2011</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+          <a href="mailto:wagnerleite@ufmg.br">wagnerleite@ufmg.br</a>
+        </div>
+      </li>
+    </p>
+<p></p>
+<p>
+      <b>8. Apêndices</b>
+    </p>
+<p></p>
+<p>
+      <b>8.1 . Apêndice: desenvolvimento analítico da Eq. (7)</b>
+    </p>
+<p></p>
+<p>Solução do sistema descrito pela Eq. (6) fornece</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq15">
+<a name="eq15"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/ba5ed0cbff037046de1c9f09b7fb0878e964cd4d.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Substituindo as equações para <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub><i>e</i></sub> (<i>x</i>) e <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a7bce6ae96a05dac4201fa48b68f07c61476ae1b.jpg"><sub><i>d</i></sub> (<i>x</i>) (Eqs. (2) e (3)) na Eq. (15), chega-se ao sistema de duas equações com duas variáveis descrito abaixo</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq16">
+<a name="eq16"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/16685d79db233b66ab017c519b2075e59a13e3f3.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Somando e subtraindo as equações acima, tem-se</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq17">
+<a name="eq17"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/50f0fc10d640ec24b0b0a867bd997b2edd4d742a.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Multiplicando a primeira equação do sistema (17) por <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/591a430a77121d094d9102aacb7386eb57fd62ed.jpg"> e a segunda equação por <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/b31314dafd5b5e546dfec7f2a6c5b7817b5cb9c7.jpg"> tem-se</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq18">
+<a name="eq18"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/2e3ccc18ccdaf0c2e1bdfdafd451397f27b629da.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Pode-se escrever a Eq. (18) da seguinte forma</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq19">
+<a name="eq19"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/3c8cda5bdb523451bab46069f066df69822b1706.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Definindo o sistema acima na forma matricial como <div class="row formula" id="ecar12">
+<a name="car12"></a><div class="col-md-12"><div class="formula-container"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/95be323d6dbff3b29c76f5fd9d57a05a00b52a49.jpg"></div></div>
+</div></p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq20_21">
+<a name="eq20_21"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/028fd5263e4e3cb639eba67e00f239975da5ba44.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Assim, o sistema linear homogêneo <div class="row formula" id="ecar12">
+<a name="car12"></a><div class="col-md-12"><div class="formula-container">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/95be323d6dbff3b29c76f5fd9d57a05a00b52a49.jpg"> pode ser escrito como</div></div>
+</div></p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq22">
+<a name="eq22"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/12540c715729af2576e93e0aba485abdc60cd1d4.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Para que um sistema de equações lineares homogêneo tenha solução não -trivial, deve-se ter det <i>(A)</i> = 0</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq23">
+<a name="eq23"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/7bcbcd069e8fcd059998801d68824d78236ff828.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Rearranjando os termos da Eq. (23), obtem-se</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq24">
+<a name="eq24"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/2fcd4143a7b8e73da04562f3fff5f016caba7eb2.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>Considerando <i>t</i> e <i>r </i>números complexos tais que <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/7b6561aec323a5ef04174a11d01f2f50b981f9fb.jpg"> com <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/0d65cbccf55227c4df282a08b0758301f47381e9.jpg"> sendo <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/0b03a07b7990d3fea3f0572c530d44ba2802f416.jpg"> e <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/0ffce2f66b5ba2a21ae759fe4bf5ba34d9387f5c.jpg"> então <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/76a9d528e93172e8fb5cd108288a5408f43787f3.jpg">. Assim, <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/10ebec931b3e827118e506052be0be359bacc3e6.jpg">, como <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/7e1ea6645d017831ee77f60cee00bd8ef3b21c08.jpg">, logo <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/220fd0cf2f80fcd533156d5ddf20bb45ef5ba420.jpg">. Finalmente, aplicando esse resultado na Eq. (24), tem-se</p>
+<p></p>
+<p>
+      <div class="row formula" id="eeq25">
+<a name="eq25"></a><div class="col-md-12"><div class="formula-container">
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/d7d7fc129e876227d9037920531921ade6291d1c.jpg">
+      </div></div>
+</div>
+    </p>
+<p></p>
+<p>A Eq. (25) equivale a Eq. (8).</p>
+<p></p>
+<p>
+      <b>8.2. Apêndice: algoritmo no Scilab</b>
+    </p>
+<p></p>
+<p>
+      <b>8.2.1. Coeficiente de transmissão constante</b>
+    </p>
+<p></p>
+<p><i></i> Notação para o algoritmo: k=<i>k</i> e Kappa=<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1a697cc13f6e8bab9c5e8310f893d89a26a8cd19.jpg">.</p>
+      <tbody>
+        <tr>
+          <td> </td>
+          <td colspan="5">a=1;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="5">dk=0.01; </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="5">k0=0; </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="5">delta=0.2;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td colspan="4">for i=0:1000 do </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="3">k=k0+i*dk;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="3">t=0.8;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="3">f=T*cos(k*a+delta);</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="2">if (abs(f)&lt;=1) then </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>Kappa=acos(f )/a;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>E=(k^2); </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>printf("%f %f \n",Kappa*a,E);</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>plot(Kappa*a,E,'.');</td>
+        </tr>
+      </tbody>
+    
+      <tbody>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td>end</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="2">end</td>
+        </tr>
+      </tbody>
+    <p></p>
+<p>
+      <b>8.2.2. Coeficiente de transmissão variável</b>
+    </p>
+<p></p>
+<p> Notação para o algoritmo: k <i>=k</i> e Kappa =<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1a697cc13f6e8bab9c5e8310f893d89a26a8cd19.jpg"></p>
+      <tbody>
+        <tr>
+          <td> </td>
+          <td colspan="6">a=1;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="6">dk=0.01; </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="6">k0=0; </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="6">U0=3; </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="6">delta=0.2;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td colspan="5"> </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td colspan="5">for i=0:350 do </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="4">k=k0+i*dk;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="4">E=(k^2);</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="4">if E&gt;U0 then </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="4">w=(sin(k*a))^2;</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="3">x=(4*(E/U0)*((E/U0)-1));</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td colspan="5">end</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="5"> </td>
+          <td>if E&lt;U0 then </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="2">T=abs(1+(w/x));</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td colspan="3">f=T*cos(k*a+delta);</td>
+        </tr>
+      </tbody>
+    
+      <tbody>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td colspan="2">if (abs(f)&lt;= 1) then </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>Kappa=(acos(f))/a;</td>
+        </tr>
+      </tbody>
+    
+      <tbody>
+        <tr>
+          <td> </td>
+          <td>printf("%f %f \n",Kappa*a,E)</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td>plot(Kappa*a,E,'.') </td>
+        </tr>
+      </tbody>
+    
+      <tbody>
+        <tr>
+          <td> </td>
+          <td>end,</td>
+        </tr>
+      </tbody>
+    
+      <tbody>
+        <tr>
+          <td> </td>
+          <td>end,</td>
+        </tr>
+      </tbody>
+    
+      <tbody>
+        <tr>
+          <td>end,</td>
+        </tr>
+      </tbody>
+    </div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1]  J.M. Bass and C.C. Matthai, Phys. Rev. B <b>52,</b> 4712 (1995).</div></li>
+<li><div>[2] C. Kittel, <i>Introduction to Solid State Physics</i> (Wiley, New York, 1996).</div></li>
+<li><div>[3] R.F. Pierret, <i>Advanced Semiconductor Fundamentals </i>(Prentice Hall, Upper Saddle River, 2002).</div></li>
+<li><div>[4] M.N. Rudden and J. Wilson, <i>Elements of Solid State Physics</i> (Wiley, New York, 1993).</div></li>
+<li><div>[5] J. Singleton, <i>Band Theory and Electronic Properties of Solids</i> (Oxford University Press, New York, 2001).</div></li>
+<li><div>[6]  F. Bloch, Zeitschrift fur Physik A Hadrons and Nuclei, <b>52,</b> 555 (1929).</div></li>
+<li><div>[7]  Scilab, The Free Software for Numerical Computation, http://www.scilab.org, accessado em 23/8/2011.</div></li>
+<li><div>[8]  R. Kronig and W.G. Penney, Proceedings of the Royal Society of London. Series A <b>130,</b> 499 (1931).</div></li>
+<li><div>[9]  A. Benzair and H. Aourag, Physica Status Solidi (B) <b>231,</b> 411 (2002).</div></li>
+<li><div>[10]  S.H. Liu, Surface Science <b>231,</b> 633 (1982).</div></li>
+<li><div>[11]  S.B. Fagan, R. Mota, R.J. Baierle, G. Paiva, A.J.R. da Silva and A. Fazzio, Journal of Molecular Structure: THEOCHEM <b>539,</b> 101 (2001).</div></li>
+<li><div>[12]  M.J. Bucknum and R. Hoffmann, Journal of the American Chemical Society <b>116,</b> 11456 (1994).</div></li>
+<li><div>[13] L.  Pauling and E.B. Wilson, <i>Introduction to Quantum Mechanics with Applications to Chemistry</i> (Dover Publications, New York, 1985).</div></li>
+<li><div>[14] S. Fujita and K. Ito, <i>Quantum Theory of Conducting Matter: Newtonian Equations of Motion for a Bloch Electron</i> (Springer, New York, 2007).</div></li>
+<li><div>[15] R. Eisberg and R. Resnick, <i>Quantum Physics ofAtoms, Molecules, Solids, Nuclei, and Particles</i> (Wiley, New York, 1985).</div></li>
+<li><div>[16]  E. Schrödinger, Journal of the American Chemical Society <b>116,</b> 11456 (1926).</div></li>
+</ul></div>
+</div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        
+          wagnerleite@ufmg.br
+        
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>16 Maio 2012</li>
+<li>
+<strong>Data do Fascículo</strong><br>Mar 2012</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>02 Mar 2010</li>
+<li>
+<strong>Aceito</strong><br>02 Ago 2011</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre o autor</h4>
+</div>
+<div class="modal-body"><div class="info"><div class="tutors">
+<strong> Wagner Leite Araujo </strong><br><div>
+          ,  Belo Horizonte,  
+          ,  Minas Gerais,  
+        ,  Universidade Federal de Minas Gerais,  Departamento de Engenharia Nuclear ,  Brazil</div>
+<div class="clearfix"></div>
+</div></div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras | Fórmulas</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist">
+<li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (10)
+                </a></li>
+<li role="presentation" class="col-md-4 col-sm-4 "><a href="#schemes" aria-controls="schemes" role="tab" data-toggle="tab">Fórmulas
+                    (25)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig4"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigfig10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane " id="schemes">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq01"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq02_3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq05"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemecar04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq06"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq07"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq08"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq09"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq13_14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq16"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq17"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq18"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq19"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemecar12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq20_21"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemecar12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq22"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq23"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq24"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalSchemeeq25"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8"></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/c62d5e205e2cd5d0ca139bfe8e0e4c14a37afb7d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/c62d5e205e2cd5d0ca139bfe8e0e4c14a37afb7d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/01d3f8840358df8a461cd2115532d5a8ae6c20ed.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/01d3f8840358df8a461cd2115532d5a8ae6c20ed.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a6f512918267e2a4882970a42e6f5d160ecf0482.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/a6f512918267e2a4882970a42e6f5d160ecf0482.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig4" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/04a031f005cb8026ee7aae5a1f8cbda065e781e8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/04a031f005cb8026ee7aae5a1f8cbda065e781e8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/adf9849e5d0564325bc6bd47aebbc14ba1b0af56.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/adf9849e5d0564325bc6bd47aebbc14ba1b0af56.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/56c28828234d60a77df8447fb34765f5f0239fd4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/56c28828234d60a77df8447fb34765f5f0239fd4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/637e633574438821231490b0b265814414c878d8.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/637e633574438821231490b0b265814414c878d8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/eb0a44d04141a0523e8f817c6423adcfe7297472.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/eb0a44d04141a0523e8f817c6423adcfe7297472.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/40a37c15350ab623c5cbe0082a6a7a4345a4ed0c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/40a37c15350ab623c5cbe0082a6a7a4345a4ed0c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigfig10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/e752f5440e626f1e4e73cbf9a1c5d0aafc6c7ea7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/e752f5440e626f1e4e73cbf9a1c5d0aafc6c7ea7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/3423b300875aafa4a5fd9d27721130f35579a3f7.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/3423b300875aafa4a5fd9d27721130f35579a3f7.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq02_3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1172f1937a56676d96053491f07f27c505ef8eb4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/1172f1937a56676d96053491f07f27c505ef8eb4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/160954dfda7afa2759aa322ec7f02263f3d2223c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/160954dfda7afa2759aa322ec7f02263f3d2223c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/fc94c270904023c8826a5c56251aff8943c4e60a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/fc94c270904023c8826a5c56251aff8943c4e60a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemecar04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/666f14c32b763335255fdcf2b900f4f45357555e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/6b1c3843e959610e824e8dcd5c8d7bc70772d31f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/6b1c3843e959610e824e8dcd5c8d7bc70772d31f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq07" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/d177c1b50965375a731e76720ca7eed2c6c6f1eb.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/d177c1b50965375a731e76720ca7eed2c6c6f1eb.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq08" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/55a5219aaa6b8c93f5c5138e7e8107d57f7e5ea3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/55a5219aaa6b8c93f5c5138e7e8107d57f7e5ea3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/0e97dd51c7b77838e5660ecffe9a87f3736c5710.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/0e97dd51c7b77838e5660ecffe9a87f3736c5710.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/73e37e772a1838962ed5cd666bd964403b8812e1.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/73e37e772a1838962ed5cd666bd964403b8812e1.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/77766e8087eea463bcceec5bee6cf07fc41e86f6.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/77766e8087eea463bcceec5bee6cf07fc41e86f6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/8f5ab842442610981f4b7f5b56bb5c27acf4b4ce.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/8f5ab842442610981f4b7f5b56bb5c27acf4b4ce.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq13_14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/b2a8a5a96ecfa645d7c376f4b19c186babc8449c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/b2a8a5a96ecfa645d7c376f4b19c186babc8449c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/ba5ed0cbff037046de1c9f09b7fb0878e964cd4d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/ba5ed0cbff037046de1c9f09b7fb0878e964cd4d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq16" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/16685d79db233b66ab017c519b2075e59a13e3f3.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/16685d79db233b66ab017c519b2075e59a13e3f3.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq17" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/50f0fc10d640ec24b0b0a867bd997b2edd4d742a.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/50f0fc10d640ec24b0b0a867bd997b2edd4d742a.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq18" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/2e3ccc18ccdaf0c2e1bdfdafd451397f27b629da.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/2e3ccc18ccdaf0c2e1bdfdafd451397f27b629da.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq19" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/3c8cda5bdb523451bab46069f066df69822b1706.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/3c8cda5bdb523451bab46069f066df69822b1706.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemecar12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/95be323d6dbff3b29c76f5fd9d57a05a00b52a49.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/95be323d6dbff3b29c76f5fd9d57a05a00b52a49.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq20_21" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/028fd5263e4e3cb639eba67e00f239975da5ba44.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/028fd5263e4e3cb639eba67e00f239975da5ba44.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemecar12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/95be323d6dbff3b29c76f5fd9d57a05a00b52a49.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq22" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/12540c715729af2576e93e0aba485abdc60cd1d4.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/12540c715729af2576e93e0aba485abdc60cd1d4.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq23" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/7bcbcd069e8fcd059998801d68824d78236ff828.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/7bcbcd069e8fcd059998801d68824d78236ff828.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq24" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/2fcd4143a7b8e73da04562f3fff5f016caba7eb2.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/2fcd4143a7b8e73da04562f3fff5f016caba7eb2.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemeeq25" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/d7d7fc129e876227d9037920531921ade6291d1c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title"><span class="sci-ico-fileFormula"></span></h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/srrWgLXJsPz5jfWmWWvGQFH/d7d7fc129e876227d9037920531921ade6291d1c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Araujo, Wagner LeiteAlgoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas. Revista Brasileira de Ensino de Física [online]. 2012, v. 34, n. 1 [Acessado CURRENTDATE] , 1311. Disponível em: &lt;https://doi.org/10.1590/S1806-11172012000100011&gt;. Epub 16 Maio 2012. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172012000100011.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas&#34; &#34;Araujo, Wagner Leite&#34; &#34;2012&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas&#34; &#34;Araujo, Wagner Leite&#34; &#34;2012&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/srrWgLXJsPz5jfWmWWvGQFH/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172012000100011&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172012000100011" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172012000100011">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172012000100011" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172012000100011">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172012000100011"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172012000100011" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172012000100011">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172012000100011" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Algoritmo para simulação de zonas proibidas em estruturas eletrônicas de bandas
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172012000100011">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>

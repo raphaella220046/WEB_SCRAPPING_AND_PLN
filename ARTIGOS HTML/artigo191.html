@@ -1,0 +1,2214 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO -  Brasil - Física com Arduino para iniciantes Física com Arduino para iniciantes </title>
+
+    
+  
+
+<!-- social share tags -->
+<meta property="og:url" content="http://www.scielo.br/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Física com Arduino para iniciantes"/>
+<meta property="og:description" content="Apresentamos neste trabalho diferentes modos de operar o Arduino para funcionar como uma..."/>
+<meta property="og:image" content="http://www.scielo.br/media/images/rbef_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Cavalcante, Marisa Almeida">
+        
+            <meta name="citation_author_affiliation" content="Pontifícia Universidade Católica de São Paulo">
+        
+        <meta name="citation_author" content="Tavolaro, Cristiane Rodrigues Caetano">
+        
+            <meta name="citation_author_affiliation" content="Pontifícia Universidade Católica de São Paulo">
+        
+        <meta name="citation_author" content="Molisani, Elio">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal do Rio Grande do Sul">
+        
+        <meta name="citation_journal_title" content="Revista Brasileira de Ensino de Física"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ensino Fís."></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ens. Fis."></meta>
+<meta name="citation_publisher" content="Sociedade Brasileira de Física"></meta>
+<meta name="citation_volume" content="33"></meta>
+<meta name="citation_number" content="4"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="4503"></meta>
+    <meta name="citation_lastpage" content="4503"></meta>
+    <meta name="citation_doi" content="10.1590/S1806-11172011000400018"></meta>
+
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+<meta name="citation_issn" content="1806-1117"></meta>
+<meta name="citation_issn" content="1806-9126"></meta>
+<meta name="citation_title" content="
+            Física com Arduino para iniciantes
+            "></meta>
+
+<meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Apresentamos neste trabalho diferentes modos de operar o Arduino para funcionar como uma interface alternativa na aquisição e automação de dados em atividades experimentais de física via porta USB do computador. Selecionamos como exemplo de aplicação o estudo de carga e descarga de um capacitor. As etapas de interação com o Arduino passam pelo processo de construção do circuito, coleta e armazenagem de dados em formato txt e visualização gráfica em tempo real através da linguagem Processing. Para cada etapa apresentamos propostas didáticas de utilização, todos os códigos fontes necessários para a interação com o Arduino, além de links para acesso a tutoriais que possibilitam a reprodução deste e outros experimentos."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2011-12"></meta>
+<meta name="citation_keywords" content="Arduino"></meta><meta name="citation_keywords" content="processing"></meta><meta name="citation_keywords" content="aquisição de dados"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="/static/css/scielo-bundle.css?v=">
+    <link rel="stylesheet" href="/static/css/scielo-bundle-print.css?v=" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+  <link rel="stylesheet" href="/static/css/scielo-article.css" type="text/css" async/>
+
+
+  </head>
+  <body class="journal article">
+    <a name="top"></a>
+
+    
+
+  <header>
+    <div class="container">
+        <div class="topFunction">
+            <div class="col-md-2 col-sm-3 mainNav">
+                <div class="mainMenu" id="mainMenu">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo"></div>
+                    </div>
+                    
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <strong>Brasil</strong>
+      </a>
+      <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre: Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Contatos
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a target="_blank" href="//www.scielo.org">
+        <strong>SciELO.org - Rede SciELO</strong>
+      </a>
+      <ul>
+        <li>
+          <a target="_blank" href="//www.scielo.org">
+            Coleções nacionais e temáticas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//search.scielo.org/">
+            Busca
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="http://analytics.scielo.org">
+            Métricas
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      
+        <a target="_blank" href="//blog.scielo.org">
+      
+          <strong>Blog SciELO em Perspectiva</strong>
+        </a>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+
+<div class="alternativeHeader hidden-xs">
+  <div class="container">
+    <div class="col-md-2 col-sm-3 mainNav">
+      <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">Abrir menu</a>
+      <h2 class="logo-svg-mini">
+        <a href="/" title="Ir para a homepage da coleção: Brasil">
+          <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+        </a>
+      </h2>
+      <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+              <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 journalInfo">
+      <ul>
+        <li>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <a href="/j/rbef/">
+                  
+                    <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 journalMenu">
+              <ul>
+                
+                  <li>
+                    <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                      <span class="glyphBtn submission"></span> Submissão de manuscritos
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="/journal/rbef/about/#about">
+                    <span class="glyphBtn about"></span> Sobre o periódico
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#editors">
+                    <span class="glyphBtn editorial"></span> Corpo Editorial
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#instructions">
+                    <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                  </a>
+                </li>
+                <li>
+                  <a href="/journal/rbef/about/#contact">
+                    <span class="glyphBtn contact"></span> Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-md-offset-2 col-sm-3 journalMenu">
+      <div class="language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alternativeHeader alternativeHeader-xs hidden-sm hidden-md hidden-lg">
+  <div class="container">
+    <div class="row no-gutter">
+      
+      <div class="col-xs-2 mainNav">
+        <a href="" class="menu" data-rel="#alternativeMainMenu" title="Abrir menu">  Abrir menu
+        </a>
+        <div class="mainMenu" id="alternativeMainMenu">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 logo logo-svg"></div>
+          </div>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xs-6 text-center">
+        
+        <h2 class="logo-svg-mini">
+          <a href="/" title="Ir para a homepage da coleção: Brasil">
+            <span class="logo-collection logo-collection-svg-mini"><strong>Brasil</strong></span>
+          </a>
+        </h2>
+
+      </div>
+      <div class="col-xs-4 language">
+        
+  <a href="/set_locale/es/" class="lang-es" lang="es">Español</a>
+  <a href="/set_locale/en/" class="lang-en" lang="en">English</a>
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 text-center journalNameMobile">
+        
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="text"><span class="truncate">Revista Brasileira de Ensino de Física </span><span class="sci-ico-arrowDown"></span></a>
+
+        <ul class="dropdown-menu" role="menu">
+            <div class="col-md-9 col-sm-8 brandLogo">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="/j/rbef/">
+                    
+                      <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+                    
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  
+                  <ul class="JournalMenuMobile">
+                    
+                      <li>
+                        <a href="http://mc04.manuscriptcentral.com/rbef-scielo" target="_blank">
+                          <span class="glyphBtn submission"></span> Submissão de manuscritos
+                        </a>
+                      </li>
+                    
+                    <li>
+                      <a href="/journal/rbef/about/#about">
+                        <span class="glyphBtn about"></span> Sobre o periódico
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#editors">
+                        <span class="glyphBtn editorial"></span> Corpo Editorial
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#instructions">
+                        <span class="glyphBtn authorInstructions"></span> Instruções aos autores
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/journal/rbef/about/#contact">
+                        <span class="glyphBtn contact"></span> Contato
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+        </ul>
+        <!--
+        <a href="/j/rbef/">
+          
+            <img src="/media/images/rbef_glogo.gif" class="image" alt="Logomarca do periódico: Revista Brasileira de Ensino de Física" />
+          
+        </a>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu hidden-xs">
+    <div class="container">
+        
+        <div class="col-lg-6 col-md-6 col-sm-5">
+
+          <div class="btn-group">
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            
+            
+            <a href="/j/rbef/i/2011.v33n4/" class="btn group">
+                sumário
+            </a>
+
+            
+              
+                <a href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?lang=pt&amp;goto=previous" class="btn group hidden-sm">
+                
+                <span class="hidden-md">&laquo; anterior</span>
+                <span class="sci-ico-arrowLeft hidden-lg"></span>
+              </a>
+
+            
+            <a href="#" class="btn group disabled hidden-sm">
+                atual
+            </a>
+
+            
+            <a href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?lang=pt&amp;goto=next" class="btn group hidden-sm">
+              <span class="hidden-md">seguinte &raquo;</span>
+              <span class="sci-ico-arrowRight hidden-lg"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-5 col-sm-6">
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+          
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                    
+            <!--
+            <a target='_blank' href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+        </div>
+
+        <div class="col-lg-2 col-md-1 col-sm-1 share">
+          <span class="hidden-sm">Compartilhe</span>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile" role="group">
+            
+            <a href="/j/rbef/" class="btn">
+              <span class="sci-ico-home"></span>
+            </a>
+            <a href="/j/rbef/i/2011.v33n4/" class="btn no-ico-util">
+              Sumário
+            </a>
+            <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="sci-ico-socialOther"></span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu menu-share-mobile" role="menu">
+              <li class="dropdown-header">
+                Compartilhe
+              </li>
+              <li>
+                <a href="#" class="share_modal_id">
+                  <span class="sci-ico-socialEmail"></span> E-mail
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareFacebook">
+                  <span class="sci-ico-socialFacebook"></span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareTwitter">
+                  <span class="sci-ico-socialTwitterSingle"></span> Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareGooglePlus">
+                  <span class="glyphBtn googlePlus"></span> Google+
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareLinkedIn">
+                  <span class="glyphBtn linkedIn"></span> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareReddit">
+                  <span class="glyphBtn reddit"></span> Reddit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareStambleUpon">
+                  <span class="glyphBtn stambleUpon"></span> StambleUpon
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareCiteULike">
+                  <span class="glyphBtn citeULike"></span> CiteULike
+                </a>
+              </li>
+              <li>
+                <a href="#" class="shareMendeley">
+                  <span class="glyphBtn mendeley"></span> Mendeley
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="btn-group btn-group-nav-mobile-content" role="group">
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Resumo
+        
+          
+        
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+          <li>
+              
+                  <a href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/abstract/?lang=pt">
+                    Resumo 
+                    
+                      (Português)
+                    
+                  </a>
+              
+          <li>
+        
+          <li>
+              
+                  <a href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/abstract/?lang=en">
+                    Resumo 
+                    
+                      (Inglês)
+                    
+                  </a>
+              
+          <li>
+        
+      </ul>
+    </div>
+
+
+            
+
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span>Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </span>
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+
+                      
+            <!--
+            <a target='_blank' href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?format=pdf&amp;lang=pt" class="btn">
+              <span class="sci-ico-filePDF"></span> PDF
+            </a>
+            -->
+
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="sci-ico-filePDF"></span>
+              <span>PDF</span>
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu menu-share-mobile">
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?format=pdf&amp;lang=pt">
+                      
+                        Download PDF (Português)
+                      
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1806-11172011000400018 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Desenvolvimento em Ensino de Física</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ensino Fís. 33 
+                (4)
+            <span class="_separator"> • </span>Dez 2011</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/S1806-11172011000400018" class="_doi" target="_blank">https://doi.org/10.1590/S1806-11172011000400018</a>
+         
+        <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172011000400018"><span class="sci-ico-link"></span>copiar</a></span>
+</div>
+<h1 class="article-title">
+<span class="sci-ico-openAccess showTooltip" data-toggle="tooltip" data-original-title="by-nc 4.0 "></span>Física com Arduino para iniciantes<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Physics with Arduino for beginners</h2>
+<div class="articleMeta"></div>
+<div class="contribGroup">
+<span class="dropdown"><a id="contribGroupTutor1" class="dropdown-toggle" data-toggle="dropdown"><span> Marisa Almeida Cavalcante </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor1">
+<strong></strong>
+          ,  Sao Paulo,  
+          ,  São Paulo,  
+        ,  Pontifícia Universidade Católica de São Paulo,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor2" class="dropdown-toggle" data-toggle="dropdown"><span> Cristiane Rodrigues Caetano Tavolaro </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor2">
+<strong></strong>
+          ,  Sao Paulo,  
+          ,  São Paulo,  
+        ,  Pontifícia Universidade Católica de São Paulo,  Brazil</ul></span><span class="dropdown"><a id="contribGroupTutor3" class="dropdown-toggle" data-toggle="dropdown"><span> Elio Molisani </span></a><ul class="dropdown-menu" role="menu" aria-labelledby="contribGrupoTutor3">
+<strong></strong>
+          ,  Porto Alegre,  
+          ,  Rio Grande do Sul,  
+        ,  Universidade Federal do Rio Grande do Sul,  Brazil</ul></span><a href="" class="outlineFadeLink" data-toggle="modal" data-target="#ModalTutors">Sobre os autores</a>
+</div>
+<div class="row">
+<ul class="col-md-2 hidden-sm articleMenu"></ul>
+<article id="articleText" class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0"><div class="articleSection" data-anchor="Resumos"><h1 class="articleSectionTitle">Resumos</h1></div>
+<div>
+<p>Apresentamos neste trabalho diferentes modos de operar o Arduino para funcionar como uma interface alternativa na aquisição e automação de dados em atividades experimentais de física via porta USB do computador. Selecionamos como exemplo de aplicação o estudo de carga e descarga de um capacitor. As etapas de interação com o Arduino passam pelo processo de construção do circuito, coleta e armazenagem de dados em formato txt e visualização gráfica em tempo real através da linguagem Processing. Para cada etapa apresentamos propostas didáticas de utilização, todos os códigos fontes necessários para a interação com o Arduino, além de links para acesso a tutoriais que possibilitam a reprodução deste e outros experimentos.</p>
+<p>Arduino; processing; aquisição de dados</p>
+</div>
+<hr>
+<div>
+<p>In this paper we present different ways of operating the Arduino to work as an alternative interface for the automation of data acquisition in physics experiments through the computer's USB port. Selected as an example of applying the study of charging and discharging a capacitor. The steps of interaction with the Arduino go through the process of building the circuit, collecting and storing data in txt format and graphic display in real time over the language Processing. For each step we present proposals for didactic use, all source code necessary to interact with the Arduino, and links to access tutorials that provide playback of this and other experiments.</p>
+<p>Arduino; processing; acquisition of data</p>
+</div>
+<hr>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>
+      <b>DESENVOLVIMENTO EM ENSINO DE FÍSICA</b>
+    </p>
+<p></p>
+<p>
+      <b>Física com Arduino para iniciantes</b>
+    </p>
+<p></p>
+<p>
+      <b>Physics with Arduino for beginners</b>
+    </p>
+<p></p>
+<p>
+      <b>Marisa Almeida Cavalcante<sup>I</sup>; Cristiane Rodrigues Caetano Tavolaro<sup>I</sup>; Elio Molisani<sup>II</sup></b>
+    </p>
+<p></p>
+<p><sup>I</sup>Grupo de Pesquisa em Ensino de Física, Pontifícia Universidade Católica, Sao Paulo, SP, Brasil </p>
+<p></p>
+<p><sup>II</sup>Universidade Federal do Rio Grande do Sul, Porto Alegre, RS, Brasil </p>
+<p></p>
+<p>
+      <b>RESUMO</b>
+    </p>
+<p></p>
+<p>Apresentamos neste trabalho diferentes modos de operar o Arduino para funcionar como uma interface alternativa na aquisição e automação de dados em atividades experimentais de física via porta USB do computador. Selecionamos como exemplo de aplicação o estudo de carga e descarga de um capacitor. As etapas de interação com o Arduino passam pelo processo de construção do circuito, coleta e armazenagem de dados em formato txt e visualização gráfica em tempo real através da linguagem <i>Processing.</i> Para cada etapa apresentamos propostas didáticas de utilização, todos os códigos fontes necessários para a interação com o Arduino, além de links para acesso a tutoriais que possibilitam a reprodução deste e outros experimentos.</p>
+<p></p>
+<p><b>Palavras-chave:</b> Arduino, processing, aquisição de dados.</p>
+<p></p>
+<p>
+      <b>ABSTRACT</b>
+    </p>
+<p></p>
+<p>In this paper we present different ways of operating the Arduino to work as an alternative interface for the automation of data acquisition in physics experiments through the computer's USB port. Selected as an example of applying the study of charging and discharging a capacitor. The steps of interaction with the Arduino go through the process of building the circuit, collecting and storing data in txt format and graphic display in real time over the language <i>Processing.</i> For each step we present proposals for didactic use, all source code necessary to interact with the Arduino, and links to access tutorials that provide playback of this and other experiments. </p>
+<p></p>
+<p><b>Keywords:</b> Arduino, processing, acquisition of data.</p>
+<p></p>
+<p>
+      <b>1. Introdução</b>
+    </p>
+<p></p>
+<p>É inegável que o computador é uma importante ferramenta cognitiva [1], isto é, permite ao estudante desenvolver habilidades, interiorizar conhecimentos e organiza-los de modo a construir uma interpretação do mundo que o cerca. Podemos exemplificar sua interatividade mediante problemas-jogo, tais como os applets, onde o estudante modifica parâmetros e verifica os resultados obtidos, e dessa forma o computador é uma ferramenta que permite organizar e sistematizar informações [2,3]. Segundo Barroso [3] estes objetos educacionais podem ser utilizados tanto presencialmente quanto à distância.</p>
+<p></p>
+<p>Outro exemplo é a modelagem computacional. O software Modellus [4,5] permite que o estudante investigue um fenômeno construindo uma animação a partir de objetos abstratos da matemática, como equações, funções, vetores e relações geométricas de um dado modelo de fenômeno físico. Ao construir seu próprio modelo e as formas de representá-lo o estudante torna-se um agente da construção do conhecimento, interpretando e internalizando a linguagem simbólica, tão importante na física.</p>
+<p></p>
+<p>A utilização do computador como agente transformador no ensino de física o ensino e aprendizagem da física, buscando diminuir esta distância tecnológica entre a escola e o estudante tem sido incansavelmente relatada também como instrumento de laboratorio [6-17] em que computadores são conectados a sensores permitindo fazer experimentos que dificilmente seriam realizados com os instrumentos usuais de um laboratório de ensino, podendo apresentar os resultados quase imediatamente.</p>
+<p></p>
+<p>A introdução da metodologia experimental de aquisição de dados por computador representa a possibilidade real de uso das técnicas de análise estatística de dados experimentais estudadas no curso de física e engenharias do primeiro período da graduação. Além da melhoria da precisão dos resultados, a redução no tempo de coleta de dados e a rápida representação dos mesmos em forma de gráficos, permitem criar no laboratório de física um ambiente de construção do conhecimento físico. O estudante pode observar o fenômeno, predizer o resultado, isto é, formular hipóteses, rapidamente comparar os resultados obtidos com os previstos pelo modelo teórico, explicar possíveis diferenças entre o previsto e o observado e ainda, reformular suas hipóteses, fazer ajustes experimentais e testa-las novamente. O dinamismo desse processo provoca a curiosidade e maior interesse dos estudantes já que a aula de laboratorio torna-se desafiadora: as antigas justificativas encontradas nas conclusões dos relatórios não são mais aceitas. Justificativas para um resultado ruim tais como: "foram obtidos poucos dados" ou, "o instrumento de medida não estava devidamente calibrado", sequer podem ser cogitadas.</p>
+<p></p>
+<p>Contudo, apesar das suas potencialidades, o computador ainda é pouco utilizado em laboratórios de física, quer pela falta de informação dos professores sobre os recursos oferecidos, quer pela dificuldade em adquirir interfaces e programas de aquisição [7], devido ao elevado custo e também por serem sistemas fechados que impossibilitam um estudo mais detalhado de suas características e modificações que permitam adaptações para outros experimentos.</p>
+<p></p>
+<p>Ao analisar as últimas publicações em revistas de ensino de física nacionais, relacionadas à aquisição de dados via computador, notamos algumas tendencias todas elas buscando desenvolver sistemas de aquisição de dados de baixo custo e totalmente livres.</p>
+<p></p>
+<p>Algumas delas [7-13] utilizam-se fotossensores e microfones conectados diretamente na entrada de microfone do PC, de modo que impulsos provenientes correspondentes à coleta de dados são lidos através de versões shareware ou freeware de programas de análise sonora disponíveis na Internet.</p>
+<p></p>
+<p>Nesses softwares, os impulsos são traduzidos em intensidade medida em decibéis em função do tempo de modo que os intervalos de tempo de passagem de objetos interrompendo a luz incidente nos fotossensores podem ser medidos diretamente na tela do microcomputador o que permite estudar tanto características cinemáticas, tais como velocidade e aceleração de objetos, quanto obter informações sobre a quantidade de movimento. Por outro lado, informações associadas às intensidades dos impulsos, como por exemplo, medidas de temperatura, pressão, intensidade de luz, etc., não podem ser avaliadas, inviabilizando um grande número de experimentos.</p>
+<p></p>
+<p>Numa outra tendência [14-17], estes sensores podem ser conectados as portas serial, paralela e USB do microcomputador, dependendo do que se pretende medir e do aparato experimental, se a medida é analógica ou digital. O principal motivo para se usar esta porta para coleta de dados em um laboratório didático é a segurança e facilidade com que podemos conectar sensores, que devem ter como característica a variação da resistência em função da grandeza física que se pretende medir. Os softwares necessários para a coleta e analise de dados, estão disponíveis na Internet (shareware ou freeware), porém, exigem que o usuário domine linguagem de programação. Alguns exemplos são linguagens de programação como Pascal, VisualBasic, Delphi, C++, LOGO e planilhas eletrônicas. Além das dificuldades com a programação, o usuario precisa construir o circuito de aquisição [17].</p>
+<p></p>
+<p>Nesta linha, mas minimizando as dificuldades com a construção do circuito e programação, a placa Arduino vem sendo utilizada com muito sucesso [18,19]. A plataforma para o desenvolvimento dos programas de controle esta disponível na <i>Internet</i> e existem diferentes versões do circuito no mercado nacional por preços acessíveis quando comparados às interfaces disponibilizadas no mercado por empresas como CIDEPE, Pasco Scientific e Phywe [20-22], por exemplo.</p>
+<p></p>
+<p>Neste trabalho mostramos mais uma aplicação do Arduino num experimento de física: carga e descarga de capacitores. Apresentamos desde o acoplamento do circuito RC à placa, os códigos de programação desenvolvidos para esta aquisição específica ate o tratamento de dados além disso mostramos como proceder à visualização dos resultados em tempo real.</p>
+<p></p>
+<p>
+      <b>1.1. A interface Arduino</b>
+    </p>
+<p></p>
+<p>O Arduino [23] é uma plataforma que foi construída para promover a interação física entre o ambiente e o computador utilizando dispositivos eletrônicos de forma simples e baseada em softwares e hardwares livres.</p>
+<p></p>
+<p>Resumidamente, a plataforma consiste em uma placa de circuitos com entradas e saídas para um microcontrolador AVR, um ambiente de desenvolvimento e o <i>bootloader</i> que já vem gravado no microcontrolador [24].</p>
+<p></p>
+<p>O microcontrolador é constituído de um microprocessador, memória e periféricos de entrada/saída e pode ser programado para funções específicas, como, por exemplo, o controle de máquinas e diferentes automações.</p>
+<p></p>
+<p>Existem outras plataformas construídas para microcontroladores, mas o Arduino tem se destacado no cenário mundial pela facilidade de programação, versatilidade e baixo custo [25]. Mesmo para os que desejam interações de alto nível, o Arduino tem atendido às expectativas.</p>
+<p></p>
+<p>Uma das versões mais difundidas [26] do um Arduino é a Duemilanove (<a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf1"><span class="sci-ico-fileFigure"></span>Fig. 1</a>) que apresenta 6 portas analógicas e permitem a medida de tensões externas, sendo possível receber informações de uma série de sensores como medidores de temperatura, pressão, umidade, distância, sensores de gases, fototransistores, etc. Existem, também, 14 portas digitais, onde é possível ler e escrever dois estados, 0/1 ou HIGH/LOW, permitindo, por exemplo, manter um LED ligado ou desligado. Quando necessário algumas dessas portas digitais podem ser configuradas para atuarem como portas de saída analógicas, através de modulação por largura de pulso ou <i>Pulse-Width Modulation</i> (PWM).</p>
+<div class="row fig" id="f1">
+<a name="f1"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>2. Proposta experimental</b>
+    </p>
+<p></p>
+<p>A proposta experimental consiste em estudar a carga e descarga em capacitores. Para isso se faz necessário uma revisão dos conceitos básicos envolvidos neste estudo.</p>
+<p></p>
+<p>Um capacitor ou condensador é um dispositivo eletrônico capaz de armazenar energia elétrica. Tal armazenamento se dá em decorrência da existência de um dielétrico que separa as suas placas condutoras. O primeiro capacitor, conhecido como garrafa de Leyden, foi inventado no século XVIII, de modo independente, pelos cientistas; Ewald Georg Van Kleist (alemão) e pelo holandês Pieter Van Musschenbroek (Leyden). A sua invenção foi de fundamental importância no estudo de fenêmenos em eletrostática, pois permitia armazenar grandes quantidades de carga em um recipiente de pequenas dimensões.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf2"><span class="sci-ico-fileFigure"></span>Fig. 2</a> mostra diferentes tipos de capacitores disponíveis</p>
+<div class="row fig" id="f2">
+<a name="f2"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Definimos capacitância de um capacitor por uma grandeza que relaciona a quantidade de carga armazenada e a diferença de potencial propiciada nos seu terminais, ou seja</p>
+<p></p>
+<p>
+      <div class="row fig" id="00aa76bc6487ec667decd1cd1f2cbeb953b15e65">
+<a name="00aa76bc6487ec667decd1cd1f2cbeb953b15e65"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg00aa76bc6487ec667decd1cd1f2cbeb953b15e65"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/00aa76bc6487ec667decd1cd1f2cbeb953b15e65.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Assim percebe-se que quanto maior o valor de capacitância maior será a sua capacidade de armazenamento de carga.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf3"><span class="sci-ico-fileFigure"></span>Fig. 3</a> mostra um esquema para o estudo da carga em um capacitor. Na posição 1 a chave K comutadora possibilita carregar o capacitor através do circuito RC série e quando na posição 2 o capacitor é descarregado instantaneamente.</p>
+<div class="row fig" id="f3">
+<a name="f3"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Considere agora o seguinte procedimento; inicialmente conectamos a chave K na posição 2 de modo a descarregar por completo o capacitor C e em seguida conectamos na posição 1. No instante em que a chave comutadora K for ligada em 1, o capacitor começa a ser carregado através da corrente i, que circula pela resistência R, com a fonte previamente ajustada a um valor de tensão nominal E.</p>
+<p></p>
+<p>Considerando <i>V<sub>C</sub></i> a tensão (ou ddp) no capacitor e <i>V<sub>R</sub></i> a diferença de potencial observada nos terminais do resistor temos pela lei de Kirchoff que</p>
+<p></p>
+<p>
+      <div class="row fig" id="7a5817e5f93f44ad608395afb846cac5cf17a019">
+<a name="7a5817e5f93f44ad608395afb846cac5cf17a019"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg7a5817e5f93f44ad608395afb846cac5cf17a019"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/7a5817e5f93f44ad608395afb846cac5cf17a019.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Substituindo-se <i>V<sub>C</sub></i> de acordo com a Eq. (1) temos que</p>
+<p></p>
+<p>
+      <div class="row fig" id="1d4330f1ad57c14d8ee1db9c864536c2fffb0833">
+<a name="1d4330f1ad57c14d8ee1db9c864536c2fffb0833"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg1d4330f1ad57c14d8ee1db9c864536c2fffb0833"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/1d4330f1ad57c14d8ee1db9c864536c2fffb0833.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Como <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/1df85baaa537c3c9505366e63e938714cd716342.jpg"> temos</p>
+<p></p>
+<p>
+      <div class="row fig" id="4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde">
+<a name="4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>ou ainda</p>
+<p></p>
+<p>
+      <div class="row fig" id="a216dcd45f53c5faeb6b1166ef89aa13b27d4681">
+<a name="a216dcd45f53c5faeb6b1166ef89aa13b27d4681"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImga216dcd45f53c5faeb6b1166ef89aa13b27d4681"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/a216dcd45f53c5faeb6b1166ef89aa13b27d4681.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Para resolver a equação diferencial de 1ª ordem, vamos separar as variáveis deixando de um lado da equação os termos que dependem de carga <i>q</i> e os termos dependentes do tempo <i>t</i> do outro lado da equação</p>
+<p></p>
+<p>
+      <div class="row fig" id="8b8346d889193d65d09da9427c8111825382bd09">
+<a name="8b8346d889193d65d09da9427c8111825382bd09"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg8b8346d889193d65d09da9427c8111825382bd09"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/8b8346d889193d65d09da9427c8111825382bd09.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>
+      <div class="row fig" id="bd24dde9d2cd0f0650d622f822308213b94d58d6">
+<a name="bd24dde9d2cd0f0650d622f822308213b94d58d6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgbd24dde9d2cd0f0650d622f822308213b94d58d6"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/bd24dde9d2cd0f0650d622f822308213b94d58d6.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>A resolução desta equação é dada por</p>
+<p></p>
+<p>
+      <div class="row fig" id="270b19380df93934cb8580057fc0dd3a00e078ae">
+<a name="270b19380df93934cb8580057fc0dd3a00e078ae"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg270b19380df93934cb8580057fc0dd3a00e078ae"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/270b19380df93934cb8580057fc0dd3a00e078ae.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>A grandeza <i>EC</i> corresponde à carga total (Q) que pode ser armazenada no capacitor. Assim teremos</p>
+<p></p>
+<p>
+      <div class="row fig" id="86f0f826d5a4f55a97470715396e4645aa0232b8">
+<a name="86f0f826d5a4f55a97470715396e4645aa0232b8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg86f0f826d5a4f55a97470715396e4645aa0232b8"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/86f0f826d5a4f55a97470715396e4645aa0232b8.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>Para encontrar o valor da corrente elétrica, basta diferenciar a expressão acima uma vez que <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/cbc7553bc0e79a69c7a769697f363ab5dc1cc614.jpg"> Desta forma teremos</p>
+<p></p>
+<p>
+      <div class="row fig" id="f6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57">
+<a name="f6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImgf6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/f6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p>A constante <i>RC</i> é definida como constante de tempo do circuito o<i>τ</i>) e corresponde ao tempo necessário para a corrente no circuito reduzir a 1/<i>e</i> do seu valor inicial <i>(E/R).</i></p>
+<p></p>
+<p><i>A</i> medida que a corrente no circuito se reduz a carga no capacitor aumenta e transcorrido o tempo <i>RC</i> esta carga atinge 63,2% do seu valor total EC. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf04"><span class="sci-ico-fileFigure"></span>Fig. 4</a> representa a carga no capacitor aumentando com o tempo enquanto a corrente no circuito cai exponencialmente.</p>
+<p></p>
+<p>
+      <div class="row fig" id="f04">
+<a name="f04"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf04"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+    </p>
+<p></p>
+<p>Utilizando a mesma linha de raciocínio, na descarga do capacitor, chegaremos a uma expressão exponencial para o decréscimo da sua carga com a constante RC.</p>
+<p></p>
+<p>Algumas aplicações importantes em circuitos, decorrentes deste processo de carga e descarga de capacitores são os filtros capacitivos conhecidos como passa-alta e passa-baixa.</p>
+<p></p>
+<p>E fácil perceber que:</p>
+<ul list-type="bullet">
+<li>
+        <p>Os capacitores devem ser dispositivos que não permitem a passagem de componentes continua de corrente elétrica, já que a corrente destes circuitos é utilizada para carregá-los.</p>
+      </li>
+<li>
+        <p>Se submetermos um capacitor a um sinal alternado a resposta de tensão nos seus terminais será tanto maior quanto menor for à freqüência do sinal aplicado e para sinais de alta freqüência o sinal obtido nos terminais do capacitor será menor.</p>
+      </li>
+</ul>
+<p></p>
+<p>Na <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Fig. 5a</a> temos a indicação de um filtro passa-baixa em que o sinal de saída é obtido nos terminais do capacitor. Já para um filtro passa-alta o sinal deve ser obtido nos terminais do resistor como indica a <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf5"><span class="sci-ico-fileFigure"></span>Fig. 5b</a>.</p>
+<div class="row fig" id="f5">
+<a name="f5"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>2.1. Estudo da carga com o Arduino em um circuito convencional</b>
+    </p>
+<p></p>
+<p>O objetivo deste experimento é mostrar como podemos incorporar o Arduino em montagens tradicionalmente utilizadas nos laboratorios didáticos.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf6"><span class="sci-ico-fileFigure"></span>Fig. 6</a> mostra um arranjo experimental simples em que um capacitor e uma resistencia estão associados em série utilizando como fonte de alimentação a tensão de saída +5 V na placa do Arduino. A tensão obtida nos terminais do capacitor em função do tempo foi analisada através da entrada analógica 0 do Arduino. Neste primeiro experimento associamos uma chave externa K, conectada aos terminais do capacitor, cuja função e descarregar totalmente o capacitor. Ao desligarmos a chave K o capacitor inicia sua carga e, sua tensão cresce exponencialmente com o tempo. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf7"><span class="sci-ico-fileFigure"></span>Fig. 7</a> mostra um esquema elétrico deste circuito.</p>
+<div class="row fig" id="f6">
+<a name="f6"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="f7">
+<a name="f7"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>O código fonte utilizado para esta aquisição no Apendice 1.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf8"><span class="sci-ico-fileFigure"></span>Fig. 8</a> mostra aquisições com diferentes valores de <i>delay</i> fixados. Consideramos que a obtenção destes gráficos, pode ser uma dentre outras tarefas propostas em sala de aula visando verificar a influencia de diferentes valores de <i>delay</i> nos resultados obtidos.</p>
+<div class="row fig" id="f8">
+<a name="f8"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Para a determinação da constante <i>RC</i> é também recomendável estudar como a corrente em um circuito RC evolui com o tempo no processo de carga de um capacitor. Para isso basta um pequeno ajuste na programação introduzindo o calculo desta corrente (valor da tensão obtida no resistor e dividido pela resistencia associada ao circuito). O código fonte utilizado para esta aquisição esta disponível no <strong>Apêndice 2</strong>.</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf9"><span class="sci-ico-fileFigure"></span>Fig. 9</a> mostra os resultados obtidos em escala logarítmica para a corrente no circuito com diferentes <i>delays.</i></p>
+<div class="row fig" id="f9">
+<a name="f9"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Os valores para a constante <i>RC</i> com respectivas incertezas foram: (0,692±0,021); (0,682±0,023) e (0,680±0,024) para os <i>delays</i> de 10, 50 e 100 ms respectivamente.</p>
+<p></p>
+<p>Observa-se que estes valores diferem essencialmente na incerteza associada à inclinação de cada uma destas retas, reduzindo com a diminuição do tempo de <i>delay.</i> Este é um estudo bastante interessante que pode ser realizado e debatido em sala de aula, contribuindo no aprendizado em analise estatística e contribuição de erros em medidas físicas.</p>
+<p></p>
+<p>
+      <b>2.2. Automação do experimento de carga e descarga</b>
+    </p>
+<p></p>
+<p>Para o estudo em um único experimento da carga e descarga em um capacitor devemos utilizar duas chaves externas A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Fig. 10</a> mostra um esquema adotado para esta medida com o Arduino e duas chaves externas.</p>
+<div class="row fig" id="f10">
+<a name="f10"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Esta montagem apesar de viável representa um risco considerável para a entrada USB do PC e da placa Arduino, tendo em vista que qualquer descuido do operador pode colocar o circuito em curto (conectando simultaneamente as duas chaves). Para viabilizar este estudo vamos recorrer a outros recursos que o Arduino pode oferecer que corresponde a possibilidade de enviarmos comandos através das portas digitais. Isso significa que estas portas podem se comportar como portas de entrada ou saída de sinais, o que abre um leque inesgotável de possibilidades de automação em experimentos. Sendo assim vamos utilizar uma de suas portas digitais como saída, comandada através de software.</p>
+<p></p>
+<p>Para a elaboração do programa vamos utilizar a função <i>digitalWrite</i> () que escreve uma informação digital, ou seja, 0 (LOW) ou 1 (HIGH). O resistor será conectado em uma porta digital que vai funcionar como uma chave comutadora. Em um dado instante de tempo estará no estado alto (HIGH) promovendo a carga do capacitor e depois de um dado intervalo de tempo irá para o estado baixo (LOW), possibilitando a descarga. Este chaveamento deve ocorrer em um intervalo de tempo controlado pelo operador. A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf11"><span class="sci-ico-fileFigure"></span>Fig. 11</a> mostra o esquema do circuito utilizado e o <strong>Apêndice 3</strong> fornecemos. O código fonte para este experimento é dado no <strong>Apêndice 3</strong></p>
+<div class="row fig" id="f11">
+<a name="f11"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf12"><span class="sci-ico-fileFigure"></span>Fig. 12</a> mostra diferentes intervalos fixados para a carga e descarga automática.</p>
+<div class="row fig" id="f12">
+<a name="f12"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf10"><span class="sci-ico-fileFigure"></span>Fig. 10</a> mostra a influencia do tempo de chaveamento nas medidas realizadas. Nota-se, como esperado, que para tempos maiores temos uma melhor visualização do processo de carga e descarga. No nosso entender esta pode ser mais uma atividade experimental proposta em sala, bastante interessante, pois possibilita ao estudante maior domínio da tecnologia e do sistema de medida utilizado.</p>
+<p></p>
+<p>Outras atividades podem ser propostas aos estudantes tais como;</p>
+<ul list-type="bullet">
+<li>
+        <p>Inserir na programação um chaveamento totalmente automatizado, ou seja, realizado a partir da leitura do valor de tensão da porta analógica. Em outras palavras, "se o valor lido de tensão lido no capacitor for maior ou igual a 95% do valor de pico (5,0 V) transite a chave para o estado baixo e neste caso, a descarga se inicia. Este processo permanece até que o valor lido seja menor ou igual a 0,05% do valor total".</p>
+      </li>
+<li>
+        <p>Transformar o Arduino em um "capacímetro" [27], em que a capacitância pode ser obtida através da medida da constante de tempo e do valor da resistência utilizada no circuito.</p>
+      </li>
+</ul>
+<p></p>
+<p>
+      <b>2.3. Gráficos em tempo real</b>
+    </p>
+<p></p>
+<p>Muitas vezes é importante visualizar os dados em tempo real em um determinado experimento. Neste item vamos apresentar de que maneira podemos visualizar gráficos representativos da grandeza estudada utilizando <i>Processing.</i></p>
+<p></p>
+<p>O <i>Processing</i> é uma linguagem/ambiente de código aberto que possibilita programar imagens, animações ou interações.</p>
+<p></p>
+<p>Foi desenvolvido inicialmente para ensinar os fundamentos da programação de computadores dentro de um contexto visual, e hoje milhares de estudantes e profissionais de todo o mundo a utilizam, em prototipagem e produção. Assim como o Arduino, apresenta uma vasta biblioteca que possibilita inúmeras aplicações.</p>
+<p></p>
+<p>Há uma comunicação muito simples que acopla o Arduino ao Processing, permitindo, por exemplo, a construção de jogos e animações interativas dentro de um contexto físico, ou seja, buscando informações através de sensores.</p>
+<p></p>
+<p>Para a observação de dados em tempo real, com apenas a instalação de algumas bibliotecas e alguns exemplos podemos observar os sinais de saída das portas digitais e analógicas do Arduino. Caso tenha interesse em saber como conseguir as visualizações gráficas em tempo real, acesse o tutorial que elaboramos disponível na Ref. [28].</p>
+<p></p>
+<p>A <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf13"><span class="sci-ico-fileFigure"></span>Fig. 13</a> mostra os gráficos obtidos para a captura simultânea de dois circuitos RC com diferentes constantes de tempo, utilizando o <i>SimpleSerialArduinoScope.</i> As portas observadas são as analógicas 0 e 1 , as demais foram mantidas em GND.</p>
+<div class="row fig" id="f13">
+<a name="f13"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>Outra possibilidade é a visualização em uma melhor resolução utilizando o <i>Osciloscópio Zoom.</i> Neste caso podemos visualizar uma única saída por vez. As <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf14"><span class="sci-ico-fileFigure"></span>Figs. 14</a> e <a href="" class="open-asset-modal" data-toggle="modal" data-target="#ModalFigf15"><span class="sci-ico-fileFigure"></span>15</a> mostram os gráficos do valor de corrente elétrica no circuito na carga do capacitor, observados para diferentes constantes <i>RC.</i></p>
+<div class="row fig" id="f14">
+<a name="f14"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<div class="row fig" id="f15">
+<a name="f15"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff"><div class="zoom"><span class="sci-ico-zoom"></span></div></div></a></div>
+<div class="col-md-8 col-sm-8"><br></div>
+</div>
+<p></p>
+<p>
+      <b>3. Considerações finais</b>
+    </p>
+<p></p>
+<p>Neste trabalho mostramos um exemplo de aquisição e automação de dados utilizando a plataforma Arduino. A carga e descarga de um circuito RC série foi realizada através de dois procedimentos: coleta de dados num circuito convencional, isto é, os circuitos didáticos de carga e descarga de capacitores podem ser acoplados ao Arduino e num circuito automatizado. Os códigos de programação são bastante simples e com pequenas modificações mostramos como podemos transitar de uma aplicação em que o Arduino se comporta apenas como uma interface de aquisição de dados, para uma aplicação em que utilizamos um chavemanto automático, explorando, portanto as potencialidades que um micro-controlador pode oferecer.</p>
+<p></p>
+<p>Mostramos também que é possível observar os resultados em tempo real através de gráficos utilizando o <i>Processing.</i> Percebemos que não há a necessidade de grandes conhecimentos em eletrônica para efetuar as conexões do circuito RC com o Arduino e que a disponibilidade de bibliotecas e códigos de programação, facilita consideravelmente a utilização da plataforma em experimentos didáticos.</p>
+<p></p>
+<p>A possibilidade de escrever e ler em portas digitais do Arduino abre uma infinidade de aplicações para a experimentação em física e consideramos que sua inserção em sala de aula representa um passo importante para uma maior apropriação da tecnologia na construção do conhecimento.</p>
+<p></p>
+<p>Toda a plataforma Arduino, tanto em <i>software,</i> quanto em <i>hardware,</i> é <i>open-source,</i> o que facilita muito o seu uso e disseminação. Ou seja, existe um número infindável de bibliotecas e tutoriais disponíveis na web para muitas aplicações.</p>
+<p></p>
+<p>Esses fatores nos permitem enfatizar a simplicidade do uso da plataforma Arduino como aquisição e au-tomaçcãao de dados, aliado ao custo relativamente baixo e bons resultados apresentados, contribuindo significativamente para tornar o laboratório didático de física um ambiente de investigação.</p>
+<p></p>
+<p>
+      <div class="row fig" id="40aaadf2dfc9c687f39986cdf08ec6360d7dc0de">
+<a name="40aaadf2dfc9c687f39986cdf08ec6360d7dc0de"></a><div class="col-md-4 col-sm-4"><a href="" data-toggle="modal" data-target="#ModalImg40aaadf2dfc9c687f39986cdf08ec6360d7dc0de"><div class="thumbImg"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/40aaadf2dfc9c687f39986cdf08ec6360d7dc0de.jpg"></div></a></div>
+</div>
+    </p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Recebido em 13/5/2011 </p>
+<p></p>
+<p> Aceito em 21/10/2011 </p>
+<p></p>
+<p> Publicado em 5/12/2011</p>
+<p></p>
+<p>
+      <li>
+        <span class="xref big">1</span>
+        <div> E-mail: </div>
+        <div>
+<a href="mailto:marisac@pucsp.br">marisac@pucsp.br</a>.</div>
+      </li>
+    </p>
+</div>
+<div>
+<h1></h1>
+<div class="ref-list"><ul class="refList">
+<li><div>[1] M.M.    Magalhães, D. Schiel, I.M. Guerrini e E. Marega Jr., Revista Brasileira    de Ensino de Física 24, 97, (2002).</div></li>
+<li><div>[2] V.    Heckler, M. de F.O. Saraiva e K. de S.F. Oliveira, Revista Brasileira de Ensino    de Física 29, 267 (2007).</div></li>
+<li><div>[3] M.F.    Barroso, G. Felipe e T. Silva, in: <i>X Encontro de Pesquisa em Ensino de Física,</i>    Londrina (2006).</div></li>
+<li><div>[4] D.M.    Aliprandini, E. Schuhmacher, e M.C. Santos, in: <i>Simpósio Nacional    de Ensino de Ciência e Tecnologia,</i> Ponta Grossa (2009).</div></li>
+<li><div>[5] P.    Dorneles, I. Araujo e E.A. Veit, Revista Brasileira de Ensino de Física    28, 487 (2006).</div></li>
+<li><div>[6] C.E.    Aguiar, <i>Computadores no Ensino de Física</i> (CEDERJ, Rio de Janeiro,    2005), disponível em http://omnis.if.ufrj.br/~marta/aprendizagememfisica/ceaguiar.pdf,    acessado em 9/5/2011.</div></li>
+<li><div>[7] E.    Montarroyos e W.C. Magno, Revista Brasileira de Ensino de Física 23,    57 (2001).</div></li>
+<li><div>[8] R.    Haag, Revista Brasileira de Ensino de Física 23, 176 (2001).</div></li>
+<li><div>[9] M.A.    Cavalcante, E. Silva, R. Prado e R. Haag, Revista Brasileira de Ensino de Física    24, 150 (2002).</div></li>
+<li><div>[10] W.C.    Magno e E. Montarroyos, Revista Brasileira de Ensino de Física 24,    497 (2002).</div></li>
+<li><div>[11] M.A.    Cavalcante, C.R.C. Tavolaro e D. Guimarães, Física na Escola 7(2),    73 (2006).</div></li>
+<li><div>[12] M.A.    Cavalcante, A.E. Bonizzia e L.C.P. Gomes, Revista Brasileira de Ensino de Física    30, 2501 (2008).</div></li>
+<li><div>[13] M.A.    Cavalcante, A.E. Bonizzia e L.C.P. Gomes, Revista Brasileira de Ensino de Física    31, 4501 (2009).</div></li>
+<li><div>[14] G.    Dionisio e W.C. Magno Revista Brasileira de Ensino de Física 29, 287 (2007).</div></li>
+<li><div>[15] M.C.R.    Pessanha, S.G. Cozendey e M. de O. Souza, Revista Brasileira de Ensino de Física    32, 4503 (2010).</div></li>
+<li><div>[16] R.R.    Soares e P. de F. Borges, Revista Brasileira de Ensino de Física 32,    2501 (2010).</div></li>
+<li><div>[17] A.B.    Vilar, A.R. Correia, L.F. Oliveira e A.L. Pereira, in: <i>XVII Simposio Nacional    de Ensino de Física,</i> São Luis (2007).</div></li>
+<li><div>[18] A.G.    Bezerra Jr., L.E. Merkle, E.S. de Souza, L.S. Spolaore, E. Ricetti, G.A. Gimenez-Lugo,    e N.C. Saavedra Filho, in: <i>XVIII Simpóosio Nacional de Ensino de Fósica,</i>    Vitoria (2009)</div></li>
+<li><div>[19] A.R.    Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte, e H.S. Amorim,    Revista Brasileira de Ensino de Física 33<b>,</b> 1702 (2011).</div></li>
+<li><div>[20] Pasco Scientific, disponível em http://www.pasco.com, acesso em 9/5/2011.<br><a href="http://http://www.pasco.com" target="_blank">» link</a>
+</div></li>
+<li><div>[21] Phywe Wysteme GMBH &amp; CO.KG, disponível em http://www.phywe.com, acesso em 9/5/2011.<br><a href="http://http://www.phywe.com" target="_blank">» link</a>
+</div></li>
+<li><div>[22] Centro Industrial de Equipamentos de Ensino e Pesquisa, disponível em http://www.cidepe.com.br, acesso em 9/5/2011.<br><a href="http://http://www.cidepe.com.br" target="_blank">» link</a>
+</div></li>
+<li><div>[23] http://arduino.cc, acessado em 9/5/2011.<br><a href="http://http://arduino.cc" target="_blank">» link</a>
+</div></li>
+<li><div>[24] http://www.sabereletronica.com.br/secoes/leitura/1307, acessado em 23/9/2011.<br><a href="http://http://www.sabereletronica.com.br/secoes/leitura/1307" target="_blank">» link</a>
+</div></li>
+<li><div>[25] http://blog.spock.com.br/2009/07/arduino-uma-plataforma-open-source.html, acessado em 23/9/2011.<br><a href="http://http://blog.spock.com.br/2009/07/arduino-uma-plataforma-open-source.html" target="_blank">» link</a>
+</div></li>
+<li><div>[26] www.vivaolinux.com.br, acessado em 23/9/2011.<br><a href="http://www.vivaolinux.com.br" target="_blank">» link</a>
+</div></li>
+<li><div>[27] http://www.arduino.cc/playground/Portugues/LearningCapacitanceMeter:    proposta de construção de um capacímetro utilizando o Arduino,    acessado em 12/5/2011</div></li>
+<li><div>[28] http://labduino.blogspot.com/p/tutoriais.html    tutoriais sobre o Arduino e Processing, acessado em 12/5/2011</div></li>
+</ul></div>
+</div>
+<div class="articleSection" data-anchor="Apêndice 2">
+<h1 class="articleSectionTitle">Apêndice 2</h1>
+        
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/eb854d1651004fe2acf13f58857bdb1975406e50.jpg">
+      </div>
+<div class="articleSection" data-anchor="Apêndice 3">
+<h1 class="articleSectionTitle">Apêndice 3</h1>
+        
+        <img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/1fbf9beb828b39d1ca531200321e3e9f311dee61.jpg">
+      </div>
+<div class="articleSection">
+<h2></h2>
+<div class="ref-list">
+        1
+         E-mail: 
+        marisac@pucsp.br.
+      </div>
+</div>
+<div class="articleSection" data-anchor="Datas de Publicação ">
+<h1 class="articleSectionTitle">Datas de Publicação </h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publicação nesta coleção</strong><br>02 Mar 2012</li>
+<li>
+<strong>Data do Fascículo</strong><br>Dez 2011</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Histórico">
+<h1 class="articleSectionTitle">Histórico</h1>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>13 Maio 2011</li>
+<li>
+<strong>Aceito</strong><br>21 Out 2011</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Sobre os autores</h4>
+</div>
+<div class="modal-body"><div class="info">
+<div class="tutors">
+<strong> Marisa Almeida Cavalcante </strong><br><div>
+          ,  Sao Paulo,  
+          ,  São Paulo,  
+        ,  Pontifícia Universidade Católica de São Paulo,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Cristiane Rodrigues Caetano Tavolaro </strong><br><div>
+          ,  Sao Paulo,  
+          ,  São Paulo,  
+        ,  Pontifícia Universidade Católica de São Paulo,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+<div class="tutors">
+<strong> Elio Molisani </strong><br><div>
+          ,  Porto Alegre,  
+          ,  Rio Grande do Sul,  
+        ,  Universidade Federal do Rio Grande do Sul,  Brazil</div>
+<div class="clearfix"></div>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Figuras</h4>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs md-tabs" role="tablist"><li role="presentation" class="col-md-4 col-sm-4 active"><a href="#figures" aria-controls="figures" role="tab" data-toggle="tab">Figuras
+                    (15)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div role="tabpanel" class="tab-pane active" id="figures">
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf04"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+        
+      </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf5"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf6"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf7"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf8"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf9"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf10"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf11"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf12"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf13"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf14"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+<div class="row fig">
+<div class="col-md-4"><a data-toggle="modal" data-target="#ModalFigf15"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8">
+      
+    </div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/bbde958f580268813d652cfe387d3f858c3e9e51.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/bbde958f580268813d652cfe387d3f858c3e9e51.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/d630a2ae2b4c5525a2a2e564f5f745ad0ac7836b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/d630a2ae2b4c5525a2a2e564f5f745ad0ac7836b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/a81afe00a0cc9d61b98bdd2e5a417f3b749e7962.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/a81afe00a0cc9d61b98bdd2e5a417f3b749e7962.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/82888a24156708ec90ebca235a7f5e10bdcf979e.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/82888a24156708ec90ebca235a7f5e10bdcf979e.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf5" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/e561b828d77119614e6f832b56b1e5ef92d3d5b0.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/e561b828d77119614e6f832b56b1e5ef92d3d5b0.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/c315de1d067c528b1b4deaba8968c48df70f311f.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/c315de1d067c528b1b4deaba8968c48df70f311f.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf7" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/8062781b959c98b08fbb48d917e77f086b2fd173.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/8062781b959c98b08fbb48d917e77f086b2fd173.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/d6562080f88d13abceefc0a3e4e45c6a6f1a9f3d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/d6562080f88d13abceefc0a3e4e45c6a6f1a9f3d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf9" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/90448c66ebda2c7b198dafe8e4315fb78fe76036.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/90448c66ebda2c7b198dafe8e4315fb78fe76036.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf10" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/3d2d8cc4d9a57c70284455843667a0f5772c8279.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/3d2d8cc4d9a57c70284455843667a0f5772c8279.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf11" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/5a729c1244b8613ba1e18498bd6ccd4eaeed763b.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/5a729c1244b8613ba1e18498bd6ccd4eaeed763b.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf12" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/ab5c128fa9dc3f4cefa6b5f10ced817739c577fa.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/ab5c128fa9dc3f4cefa6b5f10ced817739c577fa.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf13" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/9cd9cf8249ea53b52fb2c801ef481aa4a99a0c18.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/9cd9cf8249ea53b52fb2c801ef481aa4a99a0c18.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf14" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/14245959d61c4874495a62d3e8e7dc417485492c.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/14245959d61c4874495a62d3e8e7dc417485492c.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf15" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/6e3738c76b9a1583254dc4c22f0a6f9182fb210d.jpg"><span class="sci-ico-newWindow"></span></a><h4 class="modal-title">
+<span class="sci-ico-fileFigure"></span><br>
+</h4>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/6e3738c76b9a1583254dc4c22f0a6f9182fb210d.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg00aa76bc6487ec667decd1cd1f2cbeb953b15e65" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/00aa76bc6487ec667decd1cd1f2cbeb953b15e65.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/00aa76bc6487ec667decd1cd1f2cbeb953b15e65.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg7a5817e5f93f44ad608395afb846cac5cf17a019" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/7a5817e5f93f44ad608395afb846cac5cf17a019.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/7a5817e5f93f44ad608395afb846cac5cf17a019.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg1d4330f1ad57c14d8ee1db9c864536c2fffb0833" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/1d4330f1ad57c14d8ee1db9c864536c2fffb0833.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/1d4330f1ad57c14d8ee1db9c864536c2fffb0833.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImga216dcd45f53c5faeb6b1166ef89aa13b27d4681" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/a216dcd45f53c5faeb6b1166ef89aa13b27d4681.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/a216dcd45f53c5faeb6b1166ef89aa13b27d4681.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg8b8346d889193d65d09da9427c8111825382bd09" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/8b8346d889193d65d09da9427c8111825382bd09.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/8b8346d889193d65d09da9427c8111825382bd09.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgbd24dde9d2cd0f0650d622f822308213b94d58d6" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/bd24dde9d2cd0f0650d622f822308213b94d58d6.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/bd24dde9d2cd0f0650d622f822308213b94d58d6.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg270b19380df93934cb8580057fc0dd3a00e078ae" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/270b19380df93934cb8580057fc0dd3a00e078ae.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/270b19380df93934cb8580057fc0dd3a00e078ae.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg86f0f826d5a4f55a97470715396e4645aa0232b8" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/86f0f826d5a4f55a97470715396e4645aa0232b8.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/86f0f826d5a4f55a97470715396e4645aa0232b8.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImgf6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/f6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/f6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalImg40aaadf2dfc9c687f39986cdf08ec6360d7dc0de" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/40aaadf2dfc9c687f39986cdf08ec6360d7dc0de.jpg"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/40aaadf2dfc9c687f39986cdf08ec6360d7dc0de.jpg"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">Como citar</h4>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="copyLink" data-clipboard-target="#citationCut"><span class="glyphBtn copyIcon"></span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Cavalcante, Marisa Almeida, Tavolaro, Cristiane Rodrigues Caetano e Molisani, ElioFísica com Arduino para iniciantes. Revista Brasileira de Ensino de Física [online]. 2011, v. 33, n. 4 [Acessado CURRENTDATE] , pp. 4503. Disponível em: &lt;https://doi.org/10.1590/S1806-11172011000400018&gt;. Epub 02 Mar 2012. ISSN 1806-9126. https://doi.org/10.1590/S1806-11172011000400018.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      <div class="floatingMenuCtt">
+  <a class="floatingMenuItem fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+    <span class="sci-ico-top glyphFloatMenu"></span>
+  </a>
+
+  <a href="javascript:;" class="floatingMenuItem fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads">
+    <span class="sci-ico-download glyphFloatMenu"></span>
+  </a>
+
+  
+  <a href="javascript:;" data-toggle="modal" data-target="#metric_modal_id" class="floatingMenuItem fm-button-child item-metrics" data-fm-label="Métricas" target="_blank">
+    <span class="sci-ico-metrics glyphFloatMenu"></span>
+  </a>
+  
+
+  <ul class="floatingMenu fm-slidein" data-fm-toogle="hover">
+    <li class="fm-wrap">
+      <a href="javascript:;" class="fm-button-main">
+        <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+        <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+      </a>
+      <ul class="fm-list">
+        
+          
+          <li>
+            <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures">
+              <span class="sci-ico-figures glyphFloatMenu"></span>
+            </a>
+          </li>
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations">
+            <span class="sci-ico-translation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles">
+            <span class="sci-ico-citation glyphFloatMenu"></span>
+          </a>
+        </li>
+        <li>
+          <a class="fm-button-child" data-fm-label="Artigos relacionados" data-toggle="modal" data-target="#ModalRelatedArticles">
+            <span class="sci-ico-similar glyphFloatMenu"></span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- FLOATING MENU ONLY FOR IPAD-->
+<ul class="floatingMenuMobile fm-slidein" data-fm-toogle="hover">
+  <li class="fm-wrap">
+    <a href="javascript:;" class="fm-button-main">
+      <span class="sci-ico-floatingMenuDefault glyphFloatMenu"></span>
+      <span class="sci-ico-floatingMenuClose glyphFloatMenu"></span>
+    </a>
+    <ul class="fm-list">
+      <li>
+        <a class="fm-button-child item-goto" data-fm-label="Ir para o topo" href="#top">
+          <span class="sci-ico-top glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child item-download" data-fm-label="PDFs" data-toggle="modal" data-target="#ModalDownloads" href="#">
+          <span class="sci-ico-download glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#metric_modal_id" class="fm-button-child item-metrics" data-fm-label="Métricas" href="#" target="_blank">
+          <span class="sci-ico-metrics glyphFloatMenu"></span>
+        </a>
+      </li>
+      
+        
+        <li>
+          <a class="fm-button-child" data-fm-label="Figuras e tabelas" data-toggle="modal" data-target="#ModalTablesFigures" href="#">
+            <span class="sci-ico-figures glyphFloatMenu"></span>
+          </a>
+        </li>
+      
+      <li>
+        <a class="fm-button-child" data-fm-label="Versões e traduções" data-toggle="modal" data-target="#ModalVersionsTranslations" href="#">
+          <span class="sci-ico-translation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Como citar este artigo" data-toggle="modal" data-target="#ModalArticles" href="#">
+          <span class="sci-ico-citation glyphFloatMenu"></span>
+        </a>
+      </li>
+      <li>
+        <a class="fm-button-child" data-fm-label="Artigos e similares" data-toggle="modal" data-target="#ModalRelatedArticles" href="#">
+          <span class="sci-ico-similar glyphFloatMenu"></span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!-- FLOATING MENU ONLY FOR IPAD-->
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="col-md-5 col-sm-5 journalAddress">
+      <div class="col-md-1 col-sm-2">
+        <span class="glyphBtn pin"></span>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <strong>Sociedade Brasileira de Física</strong>
+        
+          Caixa Postal 66328, 05389-970 São Paulo  SP -  Brazil -
+        
+        
+          São Paulo -
+        
+        
+           SP -
+        
+        
+           Brazil <br/>
+        
+        
+        
+          <b>E-mail:</b> marcio@sbfisica.org.br
+        
+      </div>
+    </div>
+    <div id="followus" class="col-md-4 col-sm-4 journalLinks">
+      
+    </div>
+    <div class="col-md-3 col-sm-3 journalLinks">
+      <a href="/journal/rbef/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank">
+        <span class="glyphBtn bigRSS"></span>
+      </a>
+      <span class="text" style="width: 70%;">
+        Acompanhe os números deste periódico no seu leitor de RSS
+      </span>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+      
+
+
+
+  <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Versão para download de PDF</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          
+            <div class="col-md-12">
+              <span class="sci-ico-filePDF"></span>
+              <br/>
+              <strong>PDF</strong>
+              <ul class="md-list">
+              
+                
+                  <li>
+                    <a target='_blank' href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?lang=pt&amp;format=pdf">
+                      
+                        Português
+                      
+                    </a>
+                  </li>
+                
+              
+              </ul>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title">Artigos relacionados</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Física com Arduino para iniciantes&#34; &#34;Cavalcante, Marisa Almeida&#34; &#34;Tavolaro, Cristiane Rodrigues Caetano&#34; &#34;Molisani, Elio&#34; &#34;2011&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Física com Arduino para iniciantes&#34; &#34;Cavalcante, Marisa Almeida&#34; &#34;Tavolaro, Cristiane Rodrigues Caetano&#34; &#34;Molisani, Elio&#34; &#34;2011&#34; &#34;Revista Brasileira de Ensino de Física&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Versões e tradução automática</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/rbef/a/rrPFbrjsDdtkKKRPDPTJXnn/?lang=pt">Português</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  
+  <footer>
+  <div class="collectionSignature">
+    <div class="container">
+      <div class="col-md-2 col-sm-2">
+        <span class="logo-svg-footer"></span>
+      </div>
+      <div class="col-md-8 col-sm-9">
+        <strong>SciELO - Scientific Electronic Library Online</strong><br/>
+        Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+        E-mail: scielo@scielo.org 
+      </div>
+    </div>
+  </div>
+  
+    <div class="partners">
+      
+        
+          <a href="http://www.fapesp.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.capes.gov.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+            
+          </a>
+        
+      
+        
+          <a href="http://www.cnpq.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+            
+          </a>
+        
+      
+        
+          <a href="http://bvsalud.org/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+            
+          </a>
+        
+      
+        
+          <a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+            
+          </a>
+        
+      
+        
+          <a href="https://www.fapunifesp.edu.br/" target="_blank">
+            
+                <img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+            
+          </a>
+        
+      
+    </div>
+  
+
+  <div class="container collectionLicense">
+    <a href="/about/">
+      <img alt="Open Access" style="border-width:0" class="image" src="/static/img/oa_logo_32.png">
+      <span>
+        <strong>Leia</strong> a Declaração de Acesso Aberto
+      </span>
+    </a>
+  </div>
+
+</footer>
+
+  
+
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+          <h4 class="modal-title">Métricas</h4>
+        </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1806-11172011000400018&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/S1806-11172011000400018" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/S1806-11172011000400018">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/S1806-11172011000400018" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/S1806-11172011000400018">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/S1806-11172011000400018"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/S1806-11172011000400018" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/S1806-11172011000400018">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172011000400018" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+            Física com Arduino para iniciantes
+            </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="//cdn.plu.mx/widget-popup.js/?doi=10.1590/S1806-11172011000400018">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Mensagem</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <a class="floatingBtnError" href="#" id="#floatingBtnError"></a>
+    <!-- error modal -->
+
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+  <script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+  
+    <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+  
+
+  
+    <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  
+
+  
+    <script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async defer></script>
+    <script type="text/javascript" src="/static/js/scienceopen.js"></script>
+  
+
+  
+    <script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+  
+
+  
+    <script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+    <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+  
+
+  <!-- Verifica se o artigo contém artigos relacionados -->
+  
+
+  <!-- Verifica se o artigo contém suplemento -->
+  
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      moment.locale('pt_BR');
+
+      $("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+  </body>
+</html>
